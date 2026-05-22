@@ -1,142 +1,39 @@
 {
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "ETF Marketplace Edition",
-      "term_ko": "ETF 시장 판",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 시장 판",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"삼전·하닉 오르면 수익 2배\"...레버리지 ETF 시장 판 커진다",
-              "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=312505"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EC%8B%9C%EC%9E%A5%20%ED%8C%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EC%8B%9C%EC%9E%A5%20%ED%8C%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"삼전·하닉 오르면 수익 2배\"...레버리지 ETF 시장 판 커진다",
-          "summary": "",
-          "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=312505",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Tesla FSD Global",
-      "term_ko": "테슬라 FSD 글로벌",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "테슬라 FSD 글로벌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "테슬라 FSD 글로벌 전방위 확장… 자율주행 시장 독점 노린다",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=137119"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%85%8C%EC%8A%AC%EB%9D%BC%20FSD%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%85%8C%EC%8A%AC%EB%9D%BC%20FSD%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "테슬라 FSD 글로벌 전방위 확장… 자율주행 시장 독점 노린다",
-          "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=137119",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "US intraday..WTI down",
-      "term_ko": "美 장중..WTI 하락",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 장중..WTI 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%9E%A5%EC%A4%91..WTI%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%9E%A5%EC%A4%91..WTI%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "US 23-hour stock trading",
-      "term_ko": "美 23시간 주식거래",
+      "term": "S&P500 Futures Close",
+      "term_ko": "S&P500 선물 종전",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美 23시간 주식거래",
+        "query": "S&P500 선물 종전",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 23시간 주식거래 '24X' 신한증권서 7% 지분 확보",
-              "link": "https://n.news.naver.com/mnews/article/009/0005683484?sid=101"
+              "title": "S&P500 선물, 종전 낙관론·양자컴 호재 속 상승…美국채금리↑",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416362"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%2023%EC%8B%9C%EA%B0%84%20%EC%A3%BC%EC%8B%9D%EA%B1%B0%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%2023%EC%8B%9C%EA%B0%84%20%EC%A3%BC%EC%8B%9D%EA%B1%B0%EB%9E%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%84%A0%EB%AC%BC%20%EC%A2%85%EC%A0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%84%A0%EB%AC%BC%20%EC%A2%85%EC%A0%84"
       },
       "top_headlines": [
         {
-          "title": "美 23시간 주식거래 '24X' 신한증권서 7% 지분 확보",
+          "title": "S&P500 선물, 종전 낙관론·양자컴 호재 속 상승…美국채금리↑",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005683484?sid=101",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416362",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -144,34 +41,36 @@
       ]
     },
     {
-      "term": "24X Shinhan Securities 7",
-      "term_ko": "24X 신한증권서 7%",
+      "term": "Gold Price Quotes May 22",
+      "term_ko": "금값시세 5월 22일",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "24X 신한증권서 7%",
+        "query": "금값시세 5월 22일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 23시간 주식거래 '24X' 신한증권서 7% 지분 확보",
-              "link": "https://n.news.naver.com/mnews/article/009/0005683484?sid=101"
+              "title": "[금값시세] 5월 22일, 강세...백금·銀 도 상승세",
+              "link": "https://www.tournews21.com/news/articleView.html?idxno=135470"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=24X%20%EC%8B%A0%ED%95%9C%EC%A6%9D%EA%B6%8C%EC%84%9C%207%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=24X%20%EC%8B%A0%ED%95%9C%EC%A6%9D%EA%B6%8C%EC%84%9C%207%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8%205%EC%9B%94%2022%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8%205%EC%9B%94%2022%EC%9D%BC"
       },
       "top_headlines": [
         {
-          "title": "美 23시간 주식거래 '24X' 신한증권서 7% 지분 확보",
+          "title": "[금값시세] 5월 22일, 강세...백금·銀 도 상승세",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005683484?sid=101",
+          "link": "https://www.tournews21.com/news/articleView.html?idxno=135470",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -179,34 +78,36 @@
       ]
     },
     {
-      "term": "300,000 missing noxious grasses",
-      "term_ko": "사라진 노심초사 30만전자",
+      "term": "18K Gold Price May",
+      "term_ko": "18K 금시세 5월",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "사라진 노심초사 30만전자",
+        "query": "18K 금시세 5월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "노사 손잡자, 사라진 노심초사… '30만전자' 코앞까지 갔다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005361494?sid=101"
+              "title": "18K 금시세, 5월 22일 58만8700원 한국표준금거래소 상승 흐름",
+              "link": "https://www.joongangenews.com/news/articleView.html?idxno=521231"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EB%9D%BC%EC%A7%84%20%EB%85%B8%EC%8B%AC%EC%B4%88%EC%82%AC%2030%EB%A7%8C%EC%A0%84%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EB%9D%BC%EC%A7%84%20%EB%85%B8%EC%8B%AC%EC%B4%88%EC%82%AC%2030%EB%A7%8C%EC%A0%84%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%205%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%205%EC%9B%94"
       },
       "top_headlines": [
         {
-          "title": "노사 손잡자, 사라진 노심초사… '30만전자' 코앞까지 갔다",
+          "title": "18K 금시세, 5월 22일 58만8700원 한국표준금거래소 상승 흐름",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005361494?sid=101",
+          "link": "https://www.joongangenews.com/news/articleView.html?idxno=521231",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -214,34 +115,36 @@
       ]
     },
     {
-      "term": "Reignition rate 1500 KRW",
-      "term_ko": "재점화 환율 1500원",
+      "term": "KRW 587,700 on the 22nd",
+      "term_ko": "22일 58만8700원 한국표준금거래소",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "재점화 환율 1500원",
+        "query": "22일 58만8700원 한국표준금거래소",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 금리 인상론 재점화…환율 1500원 압박에 코스피 숨고르기",
-              "link": "https://www.g-enews.com/view.php?ud=202605211429405969fbbec65dfb_1"
+              "title": "18K 금시세, 5월 22일 58만8700원 한국표준금거래소 상승 흐름",
+              "link": "https://www.joongangenews.com/news/articleView.html?idxno=521231"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EC%A0%90%ED%99%94%20%ED%99%98%EC%9C%A8%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EC%A0%90%ED%99%94%20%ED%99%98%EC%9C%A8%201500%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=22%EC%9D%BC%2058%EB%A7%8C8700%EC%9B%90%20%ED%95%9C%EA%B5%AD%ED%91%9C%EC%A4%80%EA%B8%88%EA%B1%B0%EB%9E%98%EC%86%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=22%EC%9D%BC%2058%EB%A7%8C8700%EC%9B%90%20%ED%95%9C%EA%B5%AD%ED%91%9C%EC%A4%80%EA%B8%88%EA%B1%B0%EB%9E%98%EC%86%8C"
       },
       "top_headlines": [
         {
-          "title": "美 금리 인상론 재점화…환율 1500원 압박에 코스피 숨고르기",
+          "title": "18K 금시세, 5월 22일 58만8700원 한국표준금거래소 상승 흐름",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605211429405969fbbec65dfb_1",
+          "link": "https://www.joongangenews.com/news/articleView.html?idxno=521231",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -249,69 +152,36 @@
       ]
     },
     {
-      "term": "3 Things You'll Regret",
-      "term_ko": "사면 후회할 3가지",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사면 후회할 3가지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
-              "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EB%A9%B4%20%ED%9B%84%ED%9A%8C%ED%95%A0%203%EA%B0%80%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EB%A9%B4%20%ED%9B%84%ED%9A%8C%ED%95%A0%203%EA%B0%80%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "If the tristimulus rises",
-      "term_ko": "삼전 하닉 오르면",
+      "term": "Establishing a rare earth joint venture",
+      "term_ko": "희토류 합작법인 설립",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "삼전 하닉 오르면",
+        "query": "희토류 합작법인 설립",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "\"삼전·하닉 오르면 수익 2배\"...레버리지 ETF 시장 판 커진다",
-              "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=312505"
+              "title": "포스코인터내셔널, 美 리엘리먼트와 희토류 합작법인 설립… 북미 영구...",
+              "link": "https://www.mtnews.net/news/articleView.html?idxno=24866"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%A0%84%20%ED%95%98%EB%8B%89%20%EC%98%A4%EB%A5%B4%EB%A9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%A0%84%20%ED%95%98%EB%8B%89%20%EC%98%A4%EB%A5%B4%EB%A9%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9D%AC%ED%86%A0%EB%A5%98%20%ED%95%A9%EC%9E%91%EB%B2%95%EC%9D%B8%20%EC%84%A4%EB%A6%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9D%AC%ED%86%A0%EB%A5%98%20%ED%95%A9%EC%9E%91%EB%B2%95%EC%9D%B8%20%EC%84%A4%EB%A6%BD"
       },
       "top_headlines": [
         {
-          "title": "\"삼전·하닉 오르면 수익 2배\"...레버리지 ETF 시장 판 커진다",
+          "title": "포스코인터내셔널, 美 리엘리먼트와 희토류 합작법인 설립… 북미 영구...",
           "summary": "",
-          "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=312505",
+          "link": "https://www.mtnews.net/news/articleView.html?idxno=24866",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -319,34 +189,36 @@
       ]
     },
     {
-      "term": "Scalable autonomous driving",
-      "term_ko": "전방위 확장 자율주행",
+      "term": "POSCO INTERNATIONAL U.S.A.",
+      "term_ko": "포스코인터 美 내",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "전방위 확장 자율주행",
+        "query": "포스코인터 美 내",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "테슬라 FSD 글로벌 전방위 확장… 자율주행 시장 독점 노린다",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=137119"
+              "title": "포스코인터, 美 내 최초 희토류·영구자석 통합 생산 단지 구축",
+              "link": "https://www.kbmaeil.com/article/20260522500038"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%B0%A9%EC%9C%84%20%ED%99%95%EC%9E%A5%20%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%B0%A9%EC%9C%84%20%ED%99%95%EC%9E%A5%20%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%20%E7%BE%8E%20%EB%82%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%20%E7%BE%8E%20%EB%82%B4"
       },
       "top_headlines": [
         {
-          "title": "테슬라 FSD 글로벌 전방위 확장… 자율주행 시장 독점 노린다",
+          "title": "포스코인터, 美 내 최초 희토류·영구자석 통합 생산 단지 구축",
           "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=137119",
+          "link": "https://www.kbmaeil.com/article/20260522500038",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -354,34 +226,36 @@
       ]
     },
     {
-      "term": "Aim for a market monopoly",
-      "term_ko": "시장 독점 노린다",
+      "term": "First Rare Earth Permanent Magnets",
+      "term_ko": "최초 희토류 영구자석",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "시장 독점 노린다",
+        "query": "최초 희토류 영구자석",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "테슬라 FSD 글로벌 전방위 확장… 자율주행 시장 독점 노린다",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=137119"
+              "title": "포스코인터, 美 내 최초 희토류·영구자석 통합 생산 단지 구축",
+              "link": "https://www.kbmaeil.com/article/20260522500038"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%EB%8F%85%EC%A0%90%20%EB%85%B8%EB%A6%B0%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%EB%8F%85%EC%A0%90%20%EB%85%B8%EB%A6%B0%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EC%B4%88%20%ED%9D%AC%ED%86%A0%EB%A5%98%20%EC%98%81%EA%B5%AC%EC%9E%90%EC%84%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EC%B4%88%20%ED%9D%AC%ED%86%A0%EB%A5%98%20%EC%98%81%EA%B5%AC%EC%9E%90%EC%84%9D"
       },
       "top_headlines": [
         {
-          "title": "테슬라 FSD 글로벌 전방위 확장… 자율주행 시장 독점 노린다",
+          "title": "포스코인터, 美 내 최초 희토류·영구자석 통합 생산 단지 구축",
           "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=137119",
+          "link": "https://www.kbmaeil.com/article/20260522500038",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -389,34 +263,36 @@
       ]
     },
     {
-      "term": "Korean Economy Middle East Shock",
-      "term_ko": "韓경제 중동 쇼크",
+      "term": "Integrated production complexes",
+      "term_ko": "통합 생산 단지",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "韓경제 중동 쇼크",
+        "query": "통합 생산 단지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "韓경제 '중동' 쇼크 본격화… \"연내 금리인상\" 목소리 커진다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005361480?sid=101"
+              "title": "포스코인터, 美 내 최초 희토류·영구자석 통합 생산 단지 구축",
+              "link": "https://www.kbmaeil.com/article/20260522500038"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%EA%B2%BD%EC%A0%9C%20%EC%A4%91%EB%8F%99%20%EC%87%BC%ED%81%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%EA%B2%BD%EC%A0%9C%20%EC%A4%91%EB%8F%99%20%EC%87%BC%ED%81%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%B5%ED%95%A9%20%EC%83%9D%EC%82%B0%20%EB%8B%A8%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%B5%ED%95%A9%20%EC%83%9D%EC%82%B0%20%EB%8B%A8%EC%A7%80"
       },
       "top_headlines": [
         {
-          "title": "韓경제 '중동' 쇼크 본격화… \"연내 금리인상\" 목소리 커진다",
+          "title": "포스코인터, 美 내 최초 희토류·영구자석 통합 생산 단지 구축",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005361480?sid=101",
+          "link": "https://www.kbmaeil.com/article/20260522500038",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -424,34 +300,36 @@
       ]
     },
     {
-      "term": "Full-blown rate hikes within the year",
-      "term_ko": "본격화 연내 금리인상",
+      "term": "Optimism Quantum Comp Favor",
+      "term_ko": "낙관론 양자컴 호재",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "본격화 연내 금리인상",
+        "query": "낙관론 양자컴 호재",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "韓경제 '중동' 쇼크 본격화… \"연내 금리인상\" 목소리 커진다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005361480?sid=101"
+              "title": "S&P500 선물, 종전 낙관론·양자컴 호재 속 상승…美국채금리↑",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416362"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B8%EA%B2%A9%ED%99%94%20%EC%97%B0%EB%82%B4%20%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B8%EA%B2%A9%ED%99%94%20%EC%97%B0%EB%82%B4%20%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%99%EA%B4%80%EB%A1%A0%20%EC%96%91%EC%9E%90%EC%BB%B4%20%ED%98%B8%EC%9E%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%99%EA%B4%80%EB%A1%A0%20%EC%96%91%EC%9E%90%EC%BB%B4%20%ED%98%B8%EC%9E%AC"
       },
       "top_headlines": [
         {
-          "title": "韓경제 '중동' 쇼크 본격화… \"연내 금리인상\" 목소리 커진다",
+          "title": "S&P500 선물, 종전 낙관론·양자컴 호재 속 상승…美국채금리↑",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005361480?sid=101",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416362",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -459,34 +337,36 @@
       ]
     },
     {
-      "term": "Seeing the world through Wonsoon Heo's economy",
-      "term_ko": "허원순의 경제로 세상보기",
+      "term": "Rising US Treasury Rates",
+      "term_ko": "속 상승 美국채금리",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "허원순의 경제로 세상보기",
+        "query": "속 상승 美국채금리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[허원순의 경제로 세상보기] 다가오는 어두운 그림자, '빚의 산'",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870666"
+              "title": "S&P500 선물, 종전 낙관론·양자컴 호재 속 상승…美국채금리↑",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416362"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%97%88%EC%9B%90%EC%88%9C%EC%9D%98%20%EA%B2%BD%EC%A0%9C%EB%A1%9C%20%EC%84%B8%EC%83%81%EB%B3%B4%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%97%88%EC%9B%90%EC%88%9C%EC%9D%98%20%EA%B2%BD%EC%A0%9C%EB%A1%9C%20%EC%84%B8%EC%83%81%EB%B3%B4%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EC%83%81%EC%8A%B9%20%E7%BE%8E%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EC%83%81%EC%8A%B9%20%E7%BE%8E%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "[허원순의 경제로 세상보기] 다가오는 어두운 그림자, '빚의 산'",
+          "title": "S&P500 선물, 종전 낙관론·양자컴 호재 속 상승…美국채금리↑",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870666",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416362",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -494,34 +374,36 @@
       ]
     },
     {
-      "term": "Looming dark shadows",
-      "term_ko": "다가오는 어두운 그림자",
+      "term": "Insurance Review of the Day Samsung Fire",
+      "term_ko": "오늘의 보험리뷰 삼성화재",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "다가오는 어두운 그림자",
+        "query": "오늘의 보험리뷰 삼성화재",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[허원순의 경제로 세상보기] 다가오는 어두운 그림자, '빚의 산'",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870666"
+              "title": "[오늘의 보험리뷰] 삼성화재·미래에셋생명·교보생명",
+              "link": "http://www.financialreview.co.kr/news/articleView.html?idxno=42451"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EA%B0%80%EC%98%A4%EB%8A%94%20%EC%96%B4%EB%91%90%EC%9A%B4%20%EA%B7%B8%EB%A6%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EA%B0%80%EC%98%A4%EB%8A%94%20%EC%96%B4%EB%91%90%EC%9A%B4%20%EA%B7%B8%EB%A6%BC%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%B3%B4%ED%97%98%EB%A6%AC%EB%B7%B0%20%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EB%B3%B4%ED%97%98%EB%A6%AC%EB%B7%B0%20%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC"
       },
       "top_headlines": [
         {
-          "title": "[허원순의 경제로 세상보기] 다가오는 어두운 그림자, '빚의 산'",
+          "title": "[오늘의 보험리뷰] 삼성화재·미래에셋생명·교보생명",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870666",
+          "link": "http://www.financialreview.co.kr/news/articleView.html?idxno=42451",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -529,34 +411,36 @@
       ]
     },
     {
-      "term": "US interest rate hike theories",
-      "term_ko": "美 금리 인상론",
+      "term": "Stocks because I can't afford the cost of living",
+      "term_ko": "생활비 막막해서 주식",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美 금리 인상론",
+        "query": "생활비 막막해서 주식",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 금리 인상론 재점화…환율 1500원 압박에 코스피 숨고르기",
-              "link": "https://www.g-enews.com/view.php?ud=202605211429405969fbbec65dfb_1"
+              "title": "“생활비 막막해서, 주식 사려고”...카드론 43兆 시대 [나광호의 금융...",
+              "link": "https://www.ekn.kr/web/view.php?key=20260522026337023"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EB%A1%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%ED%99%9C%EB%B9%84%20%EB%A7%89%EB%A7%89%ED%95%B4%EC%84%9C%20%EC%A3%BC%EC%8B%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%ED%99%9C%EB%B9%84%20%EB%A7%89%EB%A7%89%ED%95%B4%EC%84%9C%20%EC%A3%BC%EC%8B%9D"
       },
       "top_headlines": [
         {
-          "title": "美 금리 인상론 재점화…환율 1500원 압박에 코스피 숨고르기",
+          "title": "“생활비 막막해서, 주식 사려고”...카드론 43兆 시대 [나광호의 금융...",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605211429405969fbbec65dfb_1",
+          "link": "https://www.ekn.kr/web/view.php?key=20260522026337023",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -564,34 +448,36 @@
       ]
     },
     {
-      "term": "KOSPI breathing under pressure",
-      "term_ko": "압박에 코스피 숨고르기",
+      "term": "Gold also rises",
+      "term_ko": "銀 도 상승세",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "압박에 코스피 숨고르기",
+        "query": "銀 도 상승세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 금리 인상론 재점화…환율 1500원 압박에 코스피 숨고르기",
-              "link": "https://www.g-enews.com/view.php?ud=202605211429405969fbbec65dfb_1"
+              "title": "[금값시세] 5월 22일, 강세...백금·銀 도 상승세",
+              "link": "https://www.tournews21.com/news/articleView.html?idxno=135470"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%95%EB%B0%95%EC%97%90%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%88%A8%EA%B3%A0%EB%A5%B4%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%95%EB%B0%95%EC%97%90%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%88%A8%EA%B3%A0%EB%A5%B4%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%8A%80%20%EB%8F%84%20%EC%83%81%EC%8A%B9%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%8A%80%20%EB%8F%84%20%EC%83%81%EC%8A%B9%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "美 금리 인상론 재점화…환율 1500원 압박에 코스피 숨고르기",
+          "title": "[금값시세] 5월 22일, 강세...백금·銀 도 상승세",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605211429405969fbbec65dfb_1",
+          "link": "https://www.tournews21.com/news/articleView.html?idxno=135470",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -599,34 +485,36 @@
       ]
     },
     {
-      "term": "U.S. stocks rise",
-      "term_ko": "속 미국증시 상승",
+      "term": "Newsnow nono conflict",
+      "term_ko": "뉴스나우 노노 갈등",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "속 미국증시 상승",
+        "query": "뉴스나우 노노 갈등",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608"
+              "title": "[뉴스나우] '노노 갈등' 속 삼성전자 노조 투표...주식 시장 상승세",
+              "link": "https://n.news.naver.com/mnews/article/052/0002356605?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EB%AF%B8%EA%B5%AD%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EB%AF%B8%EA%B5%AD%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%8A%B9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%8A%A4%EB%82%98%EC%9A%B0%20%EB%85%B8%EB%85%B8%20%EA%B0%88%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%8A%A4%EB%82%98%EC%9A%B0%20%EB%85%B8%EB%85%B8%20%EA%B0%88%EB%93%B1"
       },
       "top_headlines": [
         {
-          "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
+          "title": "[뉴스나우] '노노 갈등' 속 삼성전자 노조 투표...주식 시장 상승세",
           "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608",
+          "link": "https://n.news.naver.com/mnews/article/052/0002356605?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -634,34 +522,36 @@
       ]
     },
     {
-      "term": "The yen is on the rebound",
-      "term_ko": "엔화 반등 국면",
+      "term": "Samsung Electronics Union",
+      "term_ko": "속 삼성전자 노조",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "엔화 반등 국면",
+        "query": "속 삼성전자 노조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
-              "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1"
+              "title": "[뉴스나우] '노노 갈등' 속 삼성전자 노조 투표...주식 시장 상승세",
+              "link": "https://n.news.naver.com/mnews/article/052/0002356605?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%ED%99%94%20%EB%B0%98%EB%93%B1%20%EA%B5%AD%EB%A9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%ED%99%94%20%EB%B0%98%EB%93%B1%20%EA%B5%AD%EB%A9%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EB%85%B8%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%EB%85%B8%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
+          "title": "[뉴스나우] '노노 갈등' 속 삼성전자 노조 투표...주식 시장 상승세",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1",
+          "link": "https://n.news.naver.com/mnews/article/052/0002356605?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -669,34 +559,36 @@
       ]
     },
     {
-      "term": "Switch to Japan now",
-      "term_ko": "전환 지금 일본",
-      "significance_score": 322,
+      "term": "KOSDAQ Surges 5%",
+      "term_ko": "코스닥 5% 상승",
+      "significance_score": 308,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "전환 지금 일본",
+        "query": "KOSDAQ Surges 5%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
-              "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1"
+              "title": "KOSDAQ Surges 5%, Triggering Sidecar Again",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269947"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%ED%99%98%20%EC%A7%80%EA%B8%88%20%EC%9D%BC%EB%B3%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%ED%99%98%20%EC%A7%80%EA%B8%88%20%EC%9D%BC%EB%B3%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSDAQ%20Surges%205%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSDAQ%20Surges%205%25"
       },
       "top_headlines": [
         {
-          "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
+          "title": "KOSDAQ Surges 5%, Triggering Sidecar Again",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269947",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -704,69 +596,36 @@
       ]
     },
     {
-      "term": "US Anti-aging Platform",
-      "term_ko": "미국 안티에이징 플랫폼",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "US Anti-aging Platform",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Daewoong takes over US anti-aging platform in $239 mil-linked deal",
-              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=31747"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=US%20Anti-aging%20Platform",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=US%20Anti-aging%20Platform"
-      },
-      "top_headlines": [
-        {
-          "title": "Daewoong takes over US anti-aging platform in $239 mil-linked deal",
-          "summary": "",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=31747",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Investors Shift 1.2",
-      "term_ko": "투자자 시프트 1.2",
+      "term": "Despite Strong Q1",
+      "term_ko": "1분기 호조에도 불구하고",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Investors Shift 1.2",
+        "query": "Despite Strong Q1",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "Korean Retail Investors Shift 1.2 Trillion Won Back into Domestic Stocks ...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269922"
+              "title": "Walmart Stock Falls Despite Strong Q1 Revenue Beat and E-Commerce Growth",
+              "link": "https://www.econotimes.com/Walmart-Stock-Falls-Despite-Strong-Q1-Revenue-Beat-and-E-Commerce-Growth-1742366"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Shift%201.2",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Shift%201.2"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Despite%20Strong%20Q1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Despite%20Strong%20Q1"
       },
       "top_headlines": [
         {
-          "title": "Korean Retail Investors Shift 1.2 Trillion Won Back into Domestic Stocks ...",
+          "title": "Walmart Stock Falls Despite Strong Q1 Revenue Beat and E-Commerce Growth",
           "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269922",
+          "link": "https://www.econotimes.com/Walmart-Stock-Falls-Despite-Strong-Q1-Revenue-Beat-and-E-Commerce-Growth-1742366",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -774,34 +633,36 @@
       ]
     },
     {
-      "term": "Securing stakes",
-      "term_ko": "지분 확보",
+      "term": "Mirae Asset Life Kyobo Life",
+      "term_ko": "미래에셋생명 교보생명",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "지분 확보",
+        "query": "미래에셋생명 교보생명",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 23시간 주식거래 '24X' 신한증권서 7% 지분 확보",
-              "link": "https://n.news.naver.com/mnews/article/009/0005683484?sid=101"
+              "title": "[오늘의 보험리뷰] 삼성화재·미래에셋생명·교보생명",
+              "link": "http://www.financialreview.co.kr/news/articleView.html?idxno=42451"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EB%B6%84%20%ED%99%95%EB%B3%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EB%B6%84%20%ED%99%95%EB%B3%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%83%9D%EB%AA%85%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%83%9D%EB%AA%85%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85"
       },
       "top_headlines": [
         {
-          "title": "美 23시간 주식거래 '24X' 신한증권서 7% 지분 확보",
+          "title": "[오늘의 보험리뷰] 삼성화재·미래에셋생명·교보생명",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005683484?sid=101",
+          "link": "http://www.financialreview.co.kr/news/articleView.html?idxno=42451",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -809,34 +670,36 @@
       ]
     },
     {
-      "term": "Labor and management",
-      "term_ko": "노사 손잡자",
+      "term": "Market rally",
+      "term_ko": "시장 상승세",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "노사 손잡자",
+        "query": "시장 상승세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "노사 손잡자, 사라진 노심초사… '30만전자' 코앞까지 갔다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005361494?sid=101"
+              "title": "[뉴스나우] '노노 갈등' 속 삼성전자 노조 투표...주식 시장 상승세",
+              "link": "https://n.news.naver.com/mnews/article/052/0002356605?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%85%B8%EC%82%AC%20%EC%86%90%EC%9E%A1%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%85%B8%EC%82%AC%20%EC%86%90%EC%9E%A1%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%EC%83%81%EC%8A%B9%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%EC%83%81%EC%8A%B9%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "노사 손잡자, 사라진 노심초사… '30만전자' 코앞까지 갔다",
+          "title": "[뉴스나우] '노노 갈등' 속 삼성전자 노조 투표...주식 시장 상승세",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005361494?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/052/0002356605?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -844,34 +707,36 @@
       ]
     },
     {
-      "term": "I was so close",
-      "term_ko": "코앞까지 갔다",
+      "term": "Uplift Flow",
+      "term_ko": "상승 흐름",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코앞까지 갔다",
+        "query": "상승 흐름",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "노사 손잡자, 사라진 노심초사… '30만전자' 코앞까지 갔다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005361494?sid=101"
+              "title": "18K 금시세, 5월 22일 58만8700원 한국표준금거래소 상승 흐름",
+              "link": "https://www.joongangenews.com/news/articleView.html?idxno=521231"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%95%9E%EA%B9%8C%EC%A7%80%20%EA%B0%94%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%95%9E%EA%B9%8C%EC%A7%80%20%EA%B0%94%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%ED%9D%90%EB%A6%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%ED%9D%90%EB%A6%84"
       },
       "top_headlines": [
         {
-          "title": "노사 손잡자, 사라진 노심초사… '30만전자' 코앞까지 갔다",
+          "title": "18K 금시세, 5월 22일 58만8700원 한국표준금거래소 상승 흐름",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005361494?sid=101",
+          "link": "https://www.joongangenews.com/news/articleView.html?idxno=521231",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -879,34 +744,36 @@
       ]
     },
     {
-      "term": "Your voice gets louder",
-      "term_ko": "목소리 커진다",
-      "significance_score": 280,
+      "term": "Hynix Trade Lower",
+      "term_ko": "하이닉스 거래 하락",
+      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "목소리 커진다",
+        "query": "Hynix Trade Lower",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "韓경제 '중동' 쇼크 본격화… \"연내 금리인상\" 목소리 커진다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005361480?sid=101"
+              "title": "Samsung Electronics, SK hynix trade lower after previous day’s rally",
+              "link": "https://n.news.naver.com/mnews/article/009/0005683722?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A9%EC%86%8C%EB%A6%AC%20%EC%BB%A4%EC%A7%84%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A9%EC%86%8C%EB%A6%AC%20%EC%BB%A4%EC%A7%84%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hynix%20Trade%20Lower",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hynix%20Trade%20Lower"
       },
       "top_headlines": [
         {
-          "title": "韓경제 '중동' 쇼크 본격화… \"연내 금리인상\" 목소리 커진다",
+          "title": "Samsung Electronics, SK hynix trade lower after previous day’s rally",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005361480?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/009/0005683722?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -914,34 +781,36 @@
       ]
     },
     {
-      "term": "Mountains of debt",
-      "term_ko": "빚의 산",
-      "significance_score": 280,
+      "term": "Open Tad Higher",
+      "term_ko": "조금 더 높게 열기",
+      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "빚의 산",
+        "query": "Open Tad Higher",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "[허원순의 경제로 세상보기] 다가오는 어두운 그림자, '빚의 산'",
-              "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870666"
+              "title": "(LEAD) Seoul shares open tad higher on overnight Wall Street gains amid I...",
+              "link": "https://n.news.naver.com/mnews/article/001/0016093406?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%EC%9D%98%20%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%EC%9D%98%20%EC%82%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Tad%20Higher",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Tad%20Higher"
       },
       "top_headlines": [
         {
-          "title": "[허원순의 경제로 세상보기] 다가오는 어두운 그림자, '빚의 산'",
+          "title": "(LEAD) Seoul shares open tad higher on overnight Wall Street gains amid I...",
           "summary": "",
-          "link": "https://www.getnews.co.kr/news/articleView.html?idxno=870666",
+          "link": "https://n.news.naver.com/mnews/article/001/0016093406?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -949,34 +818,36 @@
       ]
     },
     {
-      "term": "Amazon Widgets",
-      "term_ko": "아마존 활짝",
-      "significance_score": 280,
+      "term": "Overnight Wall Street",
+      "term_ko": "오버나이트 월스트리트",
+      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "아마존 활짝",
+        "query": "Overnight Wall Street",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608"
+              "title": "(LEAD) Seoul shares open tad higher on overnight Wall Street gains amid I...",
+              "link": "https://n.news.naver.com/mnews/article/001/0016093406?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EB%A7%88%EC%A1%B4%20%ED%99%9C%EC%A7%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EB%A7%88%EC%A1%B4%20%ED%99%9C%EC%A7%9D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Overnight%20Wall%20Street",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Overnight%20Wall%20Street"
       },
       "top_headlines": [
         {
-          "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
+          "title": "(LEAD) Seoul shares open tad higher on overnight Wall Street gains amid I...",
           "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608",
+          "link": "https://n.news.naver.com/mnews/article/001/0016093406?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -984,34 +855,36 @@
       ]
     },
     {
-      "term": "Walmart Crash",
-      "term_ko": "월마트 추락",
-      "significance_score": 280,
+      "term": "LEAD Seoul",
+      "term_ko": "LEAD 서울",
+      "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "월마트 추락",
+        "query": "LEAD Seoul",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608"
+              "title": "(LEAD) Seoul shares open tad higher on overnight Wall Street gains amid I...",
+              "link": "https://n.news.naver.com/mnews/article/001/0016093406?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EB%A7%88%ED%8A%B8%20%EC%B6%94%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EB%A7%88%ED%8A%B8%20%EC%B6%94%EB%9D%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
       },
       "top_headlines": [
         {
-          "title": "美 장중..WTI 하락 속 미국증시 '상승', 아마존 '활짝 vs 월마트 '추락'",
+          "title": "(LEAD) Seoul shares open tad higher on overnight Wall Street gains amid I...",
           "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=165608",
+          "link": "https://n.news.naver.com/mnews/article/001/0016093406?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1019,63 +892,187 @@
       ]
     },
     {
-      "term": "In Stock",
-      "term_ko": "주식 안",
-      "significance_score": 280,
+      "term": "Triggering Sidecar",
+      "term_ko": "사이드카 트리거",
+      "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주식 안",
+        "query": "Triggering Sidecar",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-22T04:59:13+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
           "sample": [
             {
-              "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
-              "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1"
+              "title": "KOSDAQ Surges 5%, Triggering Sidecar Again",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269947"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%20%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%20%EC%95%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Triggering%20Sidecar",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Triggering%20Sidecar"
       },
       "top_headlines": [
         {
-          "title": "엔화 반등 국면 전환… 지금 일본 주식 안 사면 후회할 '3가지 이유'",
+          "title": "KOSDAQ Surges 5%, Triggering Sidecar Again",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605211418551892fbbec65dfb_1",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=269947",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
       ]
+    },
+    {
+      "term": "Revenue Beat",
+      "term_ko": "수익 비트",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Revenue Beat",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Walmart Stock Falls Despite Strong Q1 Revenue Beat and E-Commerce Growth",
+              "link": "https://www.econotimes.com/Walmart-Stock-Falls-Despite-Strong-Q1-Revenue-Beat-and-E-Commerce-Growth-1742366"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Revenue%20Beat",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Revenue%20Beat"
+      },
+      "top_headlines": [
+        {
+          "title": "Walmart Stock Falls Despite Strong Q1 Revenue Beat and E-Commerce Growth",
+          "summary": "",
+          "link": "https://www.econotimes.com/Walmart-Stock-Falls-Despite-Strong-Q1-Revenue-Beat-and-E-Commerce-Growth-1742366",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "E-Commerce Growth",
+      "term_ko": "전자상거래 성장",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "E-Commerce Growth",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Walmart Stock Falls Despite Strong Q1 Revenue Beat and E-Commerce Growth",
+              "link": "https://www.econotimes.com/Walmart-Stock-Falls-Despite-Strong-Q1-Revenue-Beat-and-E-Commerce-Growth-1742366"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=E-Commerce%20Growth",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=E-Commerce%20Growth"
+      },
+      "top_headlines": [
+        {
+          "title": "Walmart Stock Falls Despite Strong Q1 Revenue Beat and E-Commerce Growth",
+          "summary": "",
+          "link": "https://www.econotimes.com/Walmart-Stock-Falls-Despite-Strong-Q1-Revenue-Beat-and-E-Commerce-Growth-1742366",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-22T12:33:43+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-05-21T20:00:15.532Z",
+    "generated_at": "2026-05-22T03:34:46.360Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-22T04:59:13+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-05-22T12:33:43+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-05-22T04:59:13+09:00",
-      "fallback_sources": [],
+      "last_updated": "2026-05-22T12:33:43+09:00",
+      "fallback_sources": [
+        "trend_log"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-05-22T04:59:13+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2026-05-22T12:33:43+09:00",
+        "fallbackSources": [
+          "trend_log"
+        ]
       }
     }
   }
