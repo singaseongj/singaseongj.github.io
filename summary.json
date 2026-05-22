@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-05-22T23:41:07+09:00",
+  "generatedAtKST": "2026-05-23T04:46:51+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -91,6 +91,35 @@
     {
       "market": "KOSDAQ",
       "bucket": "safe",
+      "name": "에코프로비엠",
+      "ticker": "247540.KQ",
+      "sector": "소재",
+      "metrics": {
+        "ret5": 13.385826771653544,
+        "ret20": -0.9174311926605505,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **13.4%**, 20d **-0.9%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **소재**",
+        "News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0"
+      ]
+    },
+    {
+      "market": "KOSDAQ",
+      "bucket": "safe",
       "name": "티씨케이",
       "ticker": "064760.KQ",
       "sector": "정보기술",
@@ -115,35 +144,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **정보기술**",
         "News search: https://www.google.com/search?q=%ED%8B%B0%EC%94%A8%EC%BC%80%EC%9D%B4"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
-      "bucket": "safe",
-      "name": "현대바이오",
-      "ticker": "048410.KQ",
-      "sector": "헬스케어",
-      "metrics": {
-        "ret5": 20.411817367949865,
-        "ret20": -2.536231884057971,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%94%EC%9D%B4%EC%98%A4"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **20.4%**, 20d **-2.5%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **헬스케어**",
-        "News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%94%EC%9D%B4%EC%98%A4"
       ]
     },
     {
@@ -294,35 +294,6 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "HD현대일렉트릭",
-      "ticker": "267260.KS",
-      "sector": "Industrials",
-      "metrics": {
-        "ret5": -0.5089058524173028,
-        "ret20": 7.614678899082569,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 9,
-        "blogs": 10,
-        "sentiment": 0.11111111111111112,
-        "momentum": "high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD"
-      },
-      "bullets": [
-        "News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.11)**",
-        "Returns: 5d **-0.5%**, 20d **7.6%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Industrials**",
-        "News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
       "name": "SK하이닉스",
       "ticker": "000660.KS",
       "sector": "Technology",
@@ -347,6 +318,34 @@
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
+      "name": "롯데케미칼",
+      "ticker": "011170.KS",
+      "sector": null,
+      "metrics": {
+        "ret5": -4.161849710982659,
+        "ret20": -8.901098901098901,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.5000000000000001,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%BC%80%EB%AF%B8%EC%B9%BC"
+      },
+      "bullets": [
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.50)**",
+        "Returns: 5d **-4.2%**, 20d **-8.9%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%BC%80%EB%AF%B8%EC%B9%BC"
       ]
     },
     {
@@ -409,12 +408,12 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "셀트리온",
-      "ticker": "068270.KS",
-      "sector": "Healthcare",
+      "name": "현대모비스",
+      "ticker": "012330.KS",
+      "sector": null,
       "metrics": {
-        "ret5": 5.24364406779661,
-        "ret20": -2.5980392156862746,
+        "ret5": 2.7027027027027026,
+        "ret20": 41.51150054764513,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -425,14 +424,13 @@
         "momentum": "very high"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8"
+        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4"
       },
       "bullets": [
         "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**",
-        "Returns: 5d **5.2%**, 20d **-2.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **2.7%**, 20d **41.5%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Healthcare**",
-        "News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8"
+        "News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4"
       ]
     },
     {
@@ -494,34 +492,6 @@
     {
       "market": "KOSPI",
       "bucket": "aggressive",
-      "name": "아모레퍼시픽",
-      "ticker": "090430.KS",
-      "sector": null,
-      "metrics": {
-        "ret5": -1.639344262295082,
-        "ret20": -8.536585365853659,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-1.6%**, 20d **-8.5%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "aggressive",
       "name": "한화생명",
       "ticker": "088350.KS",
       "sector": null,
@@ -545,6 +515,34 @@
         "Returns: 5d **3.9%**, 20d **15.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "aggressive",
+      "name": "한화엔진",
+      "ticker": "082740.KS",
+      "sector": null,
+      "metrics": {
+        "ret5": 4.4692737430167595,
+        "ret20": 10.814814814814815,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%94%EC%A7%84"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **4.5%**, 20d **10.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%94%EC%A7%84"
       ]
     },
     {
@@ -749,14 +747,14 @@
       ]
     },
     {
-      "market": "S&P 500",
-      "bucket": "safe",
-      "name": "Intuit",
-      "ticker": "INTU",
-      "sector": "Technology",
+      "market": "NASDAQ 100",
+      "bucket": "aggressive",
+      "name": "Zscaler",
+      "ticker": "ZS",
+      "sector": null,
       "metrics": {
-        "ret5": -5.14625477329563,
-        "ret20": -17.862498807478946,
+        "ret5": -0.2684338749194442,
+        "ret20": -5.095055469485234,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -767,14 +765,13 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Intuit"
+        "searchUrl": "https://www.google.com/search?q=Zscaler"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-5.1%**, 20d **-17.9%**; volatility (20d): **unknown**",
+        "Returns: 5d **-0.3%**, 20d **-5.1%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Technology**",
-        "News search: https://www.google.com/search?q=Intuit"
+        "News search: https://www.google.com/search?q=Zscaler"
       ]
     },
     {
@@ -784,8 +781,8 @@
       "ticker": "LHX",
       "sector": "Industrials",
       "metrics": {
-        "ret5": 1.0547419278650954,
-        "ret20": -3.4392658788285617,
+        "ret5": 2.699486314115679,
+        "ret20": -1.8676649588895526,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -800,7 +797,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.1%**, 20d **-3.4%**; volatility (20d): **unknown**",
+        "Returns: 5d **2.7%**, 20d **-1.9%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Industrials**",
         "News search: https://www.google.com/search?q=L3Harris"
@@ -813,8 +810,8 @@
       "ticker": "NVDA",
       "sector": "Technology",
       "metrics": {
-        "ret5": -3.7191570257470725,
-        "ret20": 4.162864546544654,
+        "ret5": -4.407068885046577,
+        "ret20": 3.418636851744167,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -829,10 +826,97 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-3.7%**, 20d **4.2%**; volatility (20d): **unknown**",
+        "Returns: 5d **-4.4%**, 20d **3.4%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
         "News search: https://www.google.com/search?q=Nvidia"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "safe",
+      "name": "Zebra Technologies",
+      "ticker": "ZBRA",
+      "sector": "Technology",
+      "metrics": {
+        "ret5": -1.8623488403261752,
+        "ret20": 11.773745890878788,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Zebra%20Technologies"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-1.9%**, 20d **11.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=Zebra%20Technologies"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Intuit",
+      "ticker": "INTU",
+      "sector": "Technology",
+      "metrics": {
+        "ret5": -18.64249736601463,
+        "ret20": -19.24864869447662,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Intuit"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-18.6%**, 20d **-19.2%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=Intuit"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "sector": "Technology",
+      "metrics": {
+        "ret5": -0.8188796406633407,
+        "ret20": -1.4495310748609955,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Microsoft"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-0.8%**, 20d **-1.4%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=Microsoft"
       ]
     },
     {
@@ -842,8 +926,8 @@
       "ticker": "OKE",
       "sector": "Energy",
       "metrics": {
-        "ret5": 1.6356175706477225,
-        "ret20": 7.234287806919642,
+        "ret5": 1.5814548194311888,
+        "ret20": 7.177141462053571,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -871,8 +955,8 @@
       "ticker": "SNA",
       "sector": "Industrials",
       "metrics": {
-        "ret5": 1.014873893626404,
-        "ret20": -3.9955671207260415,
+        "ret5": 2.0436552838177238,
+        "ret20": -3.017814339228974,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -887,39 +971,10 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.0%**, 20d **-4.0%**; volatility (20d): **unknown**",
+        "Returns: 5d **2.0%**, 20d **-3.0%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Industrials**",
         "News search: https://www.google.com/search?q=Snap-on"
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "aggressive",
-      "name": "Zebra Technologies",
-      "ticker": "ZBRA",
-      "sector": "Technology",
-      "metrics": {
-        "ret5": -3.0672842274310836,
-        "ret20": 10.401386351174075,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Zebra%20Technologies"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-3.1%**, 20d **10.4%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Technology**",
-        "News search: https://www.google.com/search?q=Zebra%20Technologies"
       ]
     }
   ]
