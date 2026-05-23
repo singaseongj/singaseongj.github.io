@@ -160,26 +160,62 @@ function parseKosdaq100(html) {
   return rows.map(m => ({ symbol: `${six(m[2])}.KQ`, name: clean(m[1]), sector: null }));
 }
 
+function parseNaverConstituents(html, suffix) {
+  if (!html) return [];
+  const rows = [
+    ...html.matchAll(/href="\/item\/main\.naver\?code=(\d{6})"[^>]*>([^<]+)<\/a>/gi),
+  ];
+  return rows.map(m => ({ symbol: `${six(m[1])}${suffix}`, name: clean(m[2]), sector: null }));
+}
+
 async function main() {
   // Load existing file (for fallback if fetch fails)
   let current = { sp500: [], nasdaq100: [], kospi200: [], kosdaq100: [], generatedAt: null };
   try { current = JSON.parse(await fs.readFile(INDEX_PATH, 'utf8')); } catch {}
 
-  const [spTxt, nqTxt, k200Txt, kq100Txt] = await Promise.all([
+  const [
+    spTxt, nqTxt, k200Txt, kq100Txt,
+    naverK200_1, naverK200_2, naverK200_3, naverK200_4,
+    naverKQ100_1, naverKQ100_2,
+  ] = await Promise.all([
     netText('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'),
     netText('https://en.wikipedia.org/wiki/Nasdaq-100'),
     netText('https://ko.wikipedia.org/wiki/KOSPI_200'),
     netText('https://ko.wikipedia.org/wiki/KOSDAQ_100'),
+    netText('https://finance.naver.com/sise/entryJongmok.naver?page=1'),
+    netText('https://finance.naver.com/sise/entryJongmok.naver?page=2'),
+    netText('https://finance.naver.com/sise/entryJongmok.naver?page=3'),
+    netText('https://finance.naver.com/sise/entryJongmok.naver?page=4'),
+    netText('https://finance.naver.com/sise/entryJongmok.naver?type=KQ&page=1'),
+    netText('https://finance.naver.com/sise/entryJongmok.naver?type=KQ&page=2'),
   ]);
 
   let sp500 = parseSp500(spTxt);
   let nasdaq100 = parseNasdaq100(nqTxt);
   let kospi200 = parseKospi200(k200Txt);
   let kosdaq100 = parseKosdaq100(kq100Txt);
+  const kospi200FromNaver = uniqBySymbol([
+    ...parseNaverConstituents(naverK200_1, '.KS'),
+    ...parseNaverConstituents(naverK200_2, '.KS'),
+    ...parseNaverConstituents(naverK200_3, '.KS'),
+    ...parseNaverConstituents(naverK200_4, '.KS'),
+  ]);
+  const kosdaq100FromNaver = uniqBySymbol([
+    ...parseNaverConstituents(naverKQ100_1, '.KQ'),
+    ...parseNaverConstituents(naverKQ100_2, '.KQ'),
+  ]);
 
   // Sanity thresholds; fallback to current if parse looks wrong/too small
   if (sp500.length < 350) { console.log('[indexes] keep current S&P500 (parsed=', sp500.length, ')'); sp500 = current.sp500; }
   if (nasdaq100.length < 70) { console.log('[indexes] keep current Nasdaq100 (parsed=', nasdaq100.length, ')'); nasdaq100 = current.nasdaq100; }
+  if (kospi200.length < 150 && kospi200FromNaver.length >= 150) {
+    console.log('[indexes] use Naver KOSPI200 (parsed=', kospi200FromNaver.length, ')');
+    kospi200 = kospi200FromNaver;
+  }
+  if (kosdaq100.length < 80 && kosdaq100FromNaver.length >= 80) {
+    console.log('[indexes] use Naver KOSDAQ100 (parsed=', kosdaq100FromNaver.length, ')');
+    kosdaq100 = kosdaq100FromNaver;
+  }
   if (kospi200.length < 150) { console.log('[indexes] keep current KOSPI200 (parsed=', kospi200.length, ')'); kospi200 = current.kospi200; }
   if (kosdaq100.length < 80) { console.log('[indexes] keep current KOSDAQ100 (parsed=', kosdaq100.length, ')'); kosdaq100 = current.kosdaq100; }
 
