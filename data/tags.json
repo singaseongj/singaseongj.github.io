@@ -1,439 +1,1126 @@
 {
-  "generatedAt": "2026-05-23T02:50:25.311Z",
-  "timezone": "Asia/Seoul",
   "date": "2026-05-23",
   "window": "12_hours",
-  "total_phrases": 30,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Insurance Short Term Mirae Asset Life Db Indemnity",
-      "term_ko": "보험단신 미래에셋생명 DB손보"
-    },
-    {
-      "term": "Kb Life Kyobo Life Shinhan Ez Sonbo",
-      "term_ko": "KB라이프 교보생명 신한EZ손보"
-    },
-    {
-      "term": "Db Sonbo Mi Potegra",
-      "term_ko": "DB손보 美 포테그라"
-    },
-    {
-      "term": "Insurer-borne Db Losses",
-      "term_ko": "보험사 품는 DB손보"
-    },
-    {
-      "term": "Db Insurance Usa Potegra",
-      "term_ko": "DB손해보험 미국 포테그라"
-    },
-    {
-      "term": "Slightly Enlarged 1517.40",
-      "term_ko": "약간 확대 1517.40원"
-    },
-    {
-      "term": "2000 Trillion in Household Debt",
-      "term_ko": "가계 빚 2000조"
-    },
-    {
-      "term": "Bitcoin Ethereum Ripple",
-      "term_ko": "비트코인 이더리움 리플"
-    },
-    {
-      "term": "Gaining Strength Over Time",
-      "term_ko": "장기간 힘 얻지"
-    },
-    {
-      "term": "Launching a Global Strategy",
-      "term_ko": "글로벌 공략 시동"
-    },
-    {
-      "term": "Dollar-yen Fed Rate",
-      "term_ko": "달러-원 연준 금리"
-    },
-    {
-      "term": "Upside to the Likelihood of a Raise",
-      "term_ko": "인상 가능성에 상승폭"
-    },
-    {
-      "term": "Global Markets with Acquisitions",
-      "term_ko": "인수로 글로벌 시장"
-    },
-    {
-      "term": "President Lee Jae-myung Capital Markets",
-      "term_ko": "이재명 대통령 자본시장"
-    },
-    {
-      "term": "Innovation and Advanced Industries",
-      "term_ko": "혁신과 첨단 산업"
-    },
-    {
-      "term": "Tighten the Sarcomere Column",
-      "term_ko": "박근종 칼럼 긴축"
-    },
-    {
-      "term": "Fear Rate Spikes",
-      "term_ko": "공포 금리 급등"
-    },
-    {
-      "term": "Falling Oil Prices and Foreigners",
-      "term_ko": "국제유가 하락과 외국인"
-    },
-    {
-      "term": "Treasury Rates on a Buying Spree",
-      "term_ko": "매수세로 국고채 금리"
-    },
-    {
-      "term": "New Semiconductor Belt",
-      "term_ko": "신설 반도체 벨트"
-    },
-    {
-      "term": "Korean 0.5w Wireless",
-      "term_ko": "한국어 0.5W 무선"
-    },
-    {
-      "term": "Finalize the Acquisition",
-      "term_ko": "인수 마무리"
-    },
-    {
-      "term": "First Beauty",
-      "term_ko": "최초 美"
-    },
-    {
-      "term": "Accelerated Entry",
-      "term_ko": "진출 가속"
-    },
-    {
-      "term": "Emphasize Nurturing",
-      "term_ko": "육성 강조"
-    },
-    {
-      "term": "Six-figure Debt-to-income",
-      "term_ko": "육박 빚투"
-    },
-    {
-      "term": "Drops in Unison",
-      "term_ko": "일제히 하락"
-    },
-    {
-      "term": "Technology Prevents U.s",
-      "term_ko": "기술로 미국"
-    },
-    {
-      "term": "School Gunfires",
-      "term_ko": "학교 총격 사건"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
-    }
-  ],
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "Insurance Short Term Mirae Asset Life Db Indemnity",
-      "term_ko": "보험단신 미래에셋생명 DB손보"
+      "term": "Insurance Short Term Mirae Asset Life DB Indemnity",
+      "term_ko": "보험단신 미래에셋생명 DB손보",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "보험단신 미래에셋생명 DB손보",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[보험단신] 미래에셋생명·DB손보·KB라이프·교보생명·신한EZ손보·NH농...",
+              "link": "https://daily.hankooki.com/news/articleView.html?idxno=1370178"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%ED%97%98%EB%8B%A8%EC%8B%A0%20%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%83%9D%EB%AA%85%20DB%EC%86%90%EB%B3%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%ED%97%98%EB%8B%A8%EC%8B%A0%20%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%83%9D%EB%AA%85%20DB%EC%86%90%EB%B3%B4"
+      },
+      "top_headlines": [
+        {
+          "title": "[보험단신] 미래에셋생명·DB손보·KB라이프·교보생명·신한EZ손보·NH농...",
+          "summary": "",
+          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1370178",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Kb Life Kyobo Life Shinhan Ez Sonbo",
-      "term_ko": "KB라이프 교보생명 신한EZ손보"
+      "term": "KB Life Kyobo Life Shinhan EZ Sonbo",
+      "term_ko": "KB라이프 교보생명 신한EZ손보",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KB라이프 교보생명 신한EZ손보",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[보험단신] 미래에셋생명·DB손보·KB라이프·교보생명·신한EZ손보·NH농...",
+              "link": "https://daily.hankooki.com/news/articleView.html?idxno=1370178"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KB%EB%9D%BC%EC%9D%B4%ED%94%84%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85%20%EC%8B%A0%ED%95%9CEZ%EC%86%90%EB%B3%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KB%EB%9D%BC%EC%9D%B4%ED%94%84%20%EA%B5%90%EB%B3%B4%EC%83%9D%EB%AA%85%20%EC%8B%A0%ED%95%9CEZ%EC%86%90%EB%B3%B4"
+      },
+      "top_headlines": [
+        {
+          "title": "[보험단신] 미래에셋생명·DB손보·KB라이프·교보생명·신한EZ손보·NH농...",
+          "summary": "",
+          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1370178",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Db Sonbo Mi Potegra",
-      "term_ko": "DB손보 美 포테그라"
+      "term": "Can't wait KB Financial",
+      "term_ko": "못 버텨 KB금융",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "못 버텨 KB금융",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[초고령사회 금융 재편]① 예금만으론 노후 못 버텨… KB금융 양종희 등...",
+              "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3064533"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%BB%20%EB%B2%84%ED%85%A8%20KB%EA%B8%88%EC%9C%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%BB%20%EB%B2%84%ED%85%A8%20KB%EA%B8%88%EC%9C%B5"
+      },
+      "top_headlines": [
+        {
+          "title": "[초고령사회 금융 재편]① 예금만으론 노후 못 버텨… KB금융 양종희 등...",
+          "summary": "",
+          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3064533",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Insurer-borne Db Losses",
-      "term_ko": "보험사 품는 DB손보"
+      "term": "70% of revenue",
+      "term_ko": "매출의 70% 차지",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "매출의 70% 차지",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "스타링크, '로켓 회사' 스페이스X의 진짜 돈줄...전체 매출의 70% 차지",
+              "link": "https://www.g-enews.com/view.php?ud=2026052305105457612bd56fbc3c_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EC%B6%9C%EC%9D%98%2070%25%20%EC%B0%A8%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EC%B6%9C%EC%9D%98%2070%25%20%EC%B0%A8%EC%A7%80"
+      },
+      "top_headlines": [
+        {
+          "title": "스타링크, '로켓 회사' 스페이스X의 진짜 돈줄...전체 매출의 70% 차지",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=2026052305105457612bd56fbc3c_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Db Insurance Usa Potegra",
-      "term_ko": "DB손해보험 미국 포테그라"
+      "term": "Real interest rate spikes by 70",
+      "term_ko": "실질금리 급등이 70%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "실질금리 급등이 70%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"韓금리 상승에 경기개선 실질금리 급등이 70% 역할…되돌림 제한적\"",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416467"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%A7%88%EA%B8%88%EB%A6%AC%20%EA%B8%89%EB%93%B1%EC%9D%B4%2070%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%A7%88%EA%B8%88%EB%A6%AC%20%EA%B8%89%EB%93%B1%EC%9D%B4%2070%25"
+      },
+      "top_headlines": [
+        {
+          "title": "\"韓금리 상승에 경기개선 실질금리 급등이 70% 역할…되돌림 제한적\"",
+          "summary": "",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416467",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Slightly Enlarged 1517.40",
-      "term_ko": "약간 확대 1517.40원"
+      "term": "POSCO International USA Rare Earths",
+      "term_ko": "포스코인터내셔널 미국 희토류",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "포스코인터내셔널 미국 희토류",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "포스코인터내셔널, 미국 희토류 사업 본격 진출…\"핵심광물 가치사슬 구...",
+              "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4073625"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90%20%EB%AF%B8%EA%B5%AD%20%ED%9D%AC%ED%86%A0%EB%A5%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AC%EC%8A%A4%EC%BD%94%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90%20%EB%AF%B8%EA%B5%AD%20%ED%9D%AC%ED%86%A0%EB%A5%98"
+      },
+      "top_headlines": [
+        {
+          "title": "포스코인터내셔널, 미국 희토류 사업 본격 진출…\"핵심광물 가치사슬 구...",
+          "summary": "",
+          "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4073625",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "2000 Trillion in Household Debt",
-      "term_ko": "가계 빚 2000조"
+      "term": "Going live with your business",
+      "term_ko": "사업 본격 진출",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "사업 본격 진출",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "포스코인터내셔널, 미국 희토류 사업 본격 진출…\"핵심광물 가치사슬 구...",
+              "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4073625"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%97%85%20%EB%B3%B8%EA%B2%A9%20%EC%A7%84%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%97%85%20%EB%B3%B8%EA%B2%A9%20%EC%A7%84%EC%B6%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "포스코인터내셔널, 미국 희토류 사업 본격 진출…\"핵심광물 가치사슬 구...",
+          "summary": "",
+          "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4073625",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Bitcoin Ethereum Ripple",
-      "term_ko": "비트코인 이더리움 리플"
+      "term": "New York Stock Exchange U.S.",
+      "term_ko": "뉴욕 증시 미",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "뉴욕 증시 미",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "뉴욕 증시, 미·이란 협상 낙관론에 사흘째 상승…다우 이틀 연속 최고...",
+              "link": "https://n.news.naver.com/mnews/article/138/0002228784?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%20%EC%A6%9D%EC%8B%9C%20%EB%AF%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%20%EC%A6%9D%EC%8B%9C%20%EB%AF%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "뉴욕 증시, 미·이란 협상 낙관론에 사흘째 상승…다우 이틀 연속 최고...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/138/0002228784?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Gaining Strength Over Time",
-      "term_ko": "장기간 힘 얻지"
+      "term": "Dow rises on day three",
+      "term_ko": "사흘째 상승 다우",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "사흘째 상승 다우",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "뉴욕 증시, 미·이란 협상 낙관론에 사흘째 상승…다우 이틀 연속 최고...",
+              "link": "https://n.news.naver.com/mnews/article/138/0002228784?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%ED%9D%98%EC%A7%B8%20%EC%83%81%EC%8A%B9%20%EB%8B%A4%EC%9A%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%ED%9D%98%EC%A7%B8%20%EC%83%81%EC%8A%B9%20%EB%8B%A4%EC%9A%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "뉴욕 증시, 미·이란 협상 낙관론에 사흘째 상승…다우 이틀 연속 최고...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/138/0002228784?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Launching a Global Strategy",
-      "term_ko": "글로벌 공략 시동"
+      "term": "Starlink Rocket Company",
+      "term_ko": "스타링크 로켓 회사",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "스타링크 로켓 회사",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "스타링크, '로켓 회사' 스페이스X의 진짜 돈줄...전체 매출의 70% 차지",
+              "link": "https://www.g-enews.com/view.php?ud=2026052305105457612bd56fbc3c_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%83%80%EB%A7%81%ED%81%AC%20%EB%A1%9C%EC%BC%93%20%ED%9A%8C%EC%82%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%83%80%EB%A7%81%ED%81%AC%20%EB%A1%9C%EC%BC%93%20%ED%9A%8C%EC%82%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "스타링크, '로켓 회사' 스페이스X의 진짜 돈줄...전체 매출의 70% 차지",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=2026052305105457612bd56fbc3c_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Dollar-yen Fed Rate",
-      "term_ko": "달러-원 연준 금리"
+      "term": "Reimagining financing for the elderly①",
+      "term_ko": "초고령사회 금융 재편①",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "초고령사회 금융 재편①",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[초고령사회 금융 재편]① 예금만으론 노후 못 버텨… KB금융 양종희 등...",
+              "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3064533"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B4%88%EA%B3%A0%EB%A0%B9%EC%82%AC%ED%9A%8C%20%EA%B8%88%EC%9C%B5%20%EC%9E%AC%ED%8E%B8%E2%91%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B4%88%EA%B3%A0%EB%A0%B9%EC%82%AC%ED%9A%8C%20%EA%B8%88%EC%9C%B5%20%EC%9E%AC%ED%8E%B8%E2%91%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "[초고령사회 금융 재편]① 예금만으론 노후 못 버텨… KB금융 양종희 등...",
+          "summary": "",
+          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3064533",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Upside to the Likelihood of a Raise",
-      "term_ko": "인상 가능성에 상승폭"
+      "term": "Next week.",
+      "term_ko": "다음주 한은 금통위",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "다음주 한은 금통위",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "다음주 한은 금통위 주목…기준금리 동결 전망",
+              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005842099"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%9D%8C%EC%A3%BC%20%ED%95%9C%EC%9D%80%20%EA%B8%88%ED%86%B5%EC%9C%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%9D%8C%EC%A3%BC%20%ED%95%9C%EC%9D%80%20%EA%B8%88%ED%86%B5%EC%9C%84"
+      },
+      "top_headlines": [
+        {
+          "title": "다음주 한은 금통위 주목…기준금리 동결 전망",
+          "summary": "",
+          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005842099",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Global Markets with Acquisitions",
-      "term_ko": "인수로 글로벌 시장"
+      "term": "Freeze the prime rate",
+      "term_ko": "주목 기준금리 동결",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주목 기준금리 동결",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "다음주 한은 금통위 주목…기준금리 동결 전망",
+              "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005842099"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%AA%A9%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%AA%A9%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "다음주 한은 금통위 주목…기준금리 동결 전망",
+          "summary": "",
+          "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005842099",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "President Lee Jae-myung Capital Markets",
-      "term_ko": "이재명 대통령 자본시장"
+      "term": "Iran deal imminent",
+      "term_ko": "이란 합의 임박설",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "이란 합의 임박설",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "이란, 합의 임박설 부인... 미, 공습 재개 초읽기?",
+              "link": "https://n.news.naver.com/mnews/article/052/0002356968?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%20%ED%95%A9%EC%9D%98%20%EC%9E%84%EB%B0%95%EC%84%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%20%ED%95%A9%EC%9D%98%20%EC%9E%84%EB%B0%95%EC%84%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "이란, 합의 임박설 부인... 미, 공습 재개 초읽기?",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/052/0002356968?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Innovation and Advanced Industries",
-      "term_ko": "혁신과 첨단 산업"
+      "term": "Resumption of US airstrikes",
+      "term_ko": "미 공습 재개",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미 공습 재개",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "이란, 합의 임박설 부인... 미, 공습 재개 초읽기?",
+              "link": "https://n.news.naver.com/mnews/article/052/0002356968?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EA%B3%B5%EC%8A%B5%20%EC%9E%AC%EA%B0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EA%B3%B5%EC%8A%B5%20%EC%9E%AC%EA%B0%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "이란, 합의 임박설 부인... 미, 공습 재개 초읽기?",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/052/0002356968?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Tighten the Sarcomere Column",
-      "term_ko": "박근종 칼럼 긴축"
+      "term": "Yonhap news agency this time",
+      "term_ko": "연합뉴스 이 시각",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "연합뉴스 이 시각",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[연합뉴스 이 시각 헤드라인] - 10:30",
+              "link": "https://n.news.naver.com/mnews/article/001/0016095116?sid=102"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%ED%95%A9%EB%89%B4%EC%8A%A4%20%EC%9D%B4%20%EC%8B%9C%EA%B0%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%ED%95%A9%EB%89%B4%EC%8A%A4%20%EC%9D%B4%20%EC%8B%9C%EA%B0%81"
+      },
+      "top_headlines": [
+        {
+          "title": "[연합뉴스 이 시각 헤드라인] - 10:30",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016095116?sid=102",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Fear Rate Spikes",
-      "term_ko": "공포 금리 급등"
+      "term": "South Korean interest rates rise, economy improves",
+      "term_ko": "韓금리 상승에 경기개선",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "韓금리 상승에 경기개선",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"韓금리 상승에 경기개선 실질금리 급등이 70% 역할…되돌림 제한적\"",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416467"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%EC%97%90%20%EA%B2%BD%EA%B8%B0%EA%B0%9C%EC%84%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%EC%97%90%20%EA%B2%BD%EA%B8%B0%EA%B0%9C%EC%84%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "\"韓금리 상승에 경기개선 실질금리 급등이 70% 역할…되돌림 제한적\"",
+          "summary": "",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416467",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Falling Oil Prices and Foreigners",
-      "term_ko": "국제유가 하락과 외국인"
+      "term": "Limited role revert",
+      "term_ko": "역할 되돌림 제한적",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "역할 되돌림 제한적",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"韓금리 상승에 경기개선 실질금리 급등이 70% 역할…되돌림 제한적\"",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416467"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%ED%95%A0%20%EB%90%98%EB%8F%8C%EB%A6%BC%20%EC%A0%9C%ED%95%9C%EC%A0%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%ED%95%A0%20%EB%90%98%EB%8F%8C%EB%A6%BC%20%EC%A0%9C%ED%95%9C%EC%A0%81"
+      },
+      "top_headlines": [
+        {
+          "title": "\"韓금리 상승에 경기개선 실질금리 급등이 70% 역할…되돌림 제한적\"",
+          "summary": "",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416467",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Treasury Rates on a Buying Spree",
-      "term_ko": "매수세로 국고채 금리"
+      "term": "Fiat stablecoin token securities",
+      "term_ko": "원화 스테이블코인 토큰증권",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원화 스테이블코인 토큰증권",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"원화 스테이블코인·토큰증권, 한국에 글로벌자본 끌어들일 기회\"",
+              "link": "https://n.news.naver.com/mnews/article/018/0006288831?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%ED%99%94%20%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94%EC%BD%94%EC%9D%B8%20%ED%86%A0%ED%81%B0%EC%A6%9D%EA%B6%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%ED%99%94%20%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94%EC%BD%94%EC%9D%B8%20%ED%86%A0%ED%81%B0%EC%A6%9D%EA%B6%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "\"원화 스테이블코인·토큰증권, 한국에 글로벌자본 끌어들일 기회\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/018/0006288831?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "New Semiconductor Belt",
-      "term_ko": "신설 반도체 벨트"
+      "term": "Attracting global capital to Korea",
+      "term_ko": "한국에 글로벌자본 끌어들일",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국에 글로벌자본 끌어들일",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"원화 스테이블코인·토큰증권, 한국에 글로벌자본 끌어들일 기회\"",
+              "link": "https://n.news.naver.com/mnews/article/018/0006288831?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EC%97%90%20%EA%B8%80%EB%A1%9C%EB%B2%8C%EC%9E%90%EB%B3%B8%20%EB%81%8C%EC%96%B4%EB%93%A4%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EC%97%90%20%EA%B8%80%EB%A1%9C%EB%B2%8C%EC%9E%90%EB%B3%B8%20%EB%81%8C%EC%96%B4%EB%93%A4%EC%9D%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "\"원화 스테이블코인·토큰증권, 한국에 글로벌자본 끌어들일 기회\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/018/0006288831?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Korean 0.5w Wireless",
-      "term_ko": "한국어 0.5W 무선"
+      "term": "Core minerals value chain",
+      "term_ko": "핵심광물 가치사슬",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "핵심광물 가치사슬",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "포스코인터내셔널, 미국 희토류 사업 본격 진출…\"핵심광물 가치사슬 구...",
+              "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4073625"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%B5%EC%8B%AC%EA%B4%91%EB%AC%BC%20%EA%B0%80%EC%B9%98%EC%82%AC%EC%8A%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%B5%EC%8B%AC%EA%B4%91%EB%AC%BC%20%EA%B0%80%EC%B9%98%EC%82%AC%EC%8A%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "포스코인터내셔널, 미국 희토류 사업 본격 진출…\"핵심광물 가치사슬 구...",
+          "summary": "",
+          "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4073625",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Finalize the Acquisition",
-      "term_ko": "인수 마무리"
+      "term": "Two days in a row",
+      "term_ko": "이틀 연속",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "이틀 연속",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-16",
+              "timestamp": 1778857200000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "뉴욕 증시, 미·이란 협상 낙관론에 사흘째 상승…다우 이틀 연속 최고...",
+              "link": "https://n.news.naver.com/mnews/article/138/0002228784?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%8B%80%20%EC%97%B0%EC%86%8D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%8B%80%20%EC%97%B0%EC%86%8D"
+      },
+      "top_headlines": [
+        {
+          "title": "뉴욕 증시, 미·이란 협상 낙관론에 사흘째 상승…다우 이틀 연속 최고...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/138/0002228784?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 0,
+        "weekly_average_volume": 0,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 1,
+        "time_weight": 0.005559,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1778857200000
+      }
     },
     {
-      "term": "First Beauty",
-      "term_ko": "최초 美"
+      "term": "SpaceX's real",
+      "term_ko": "스페이스X의 진짜",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "스페이스X의 진짜",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "스타링크, '로켓 회사' 스페이스X의 진짜 돈줄...전체 매출의 70% 차지",
+              "link": "https://www.g-enews.com/view.php?ud=2026052305105457612bd56fbc3c_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%EC%9D%98%20%EC%A7%84%EC%A7%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%EC%9D%98%20%EC%A7%84%EC%A7%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "스타링크, '로켓 회사' 스페이스X의 진짜 돈줄...전체 매출의 70% 차지",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=2026052305105457612bd56fbc3c_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Accelerated Entry",
-      "term_ko": "진출 가속"
+      "term": "Savings alone are not enough for retirement",
+      "term_ko": "예금만으론 노후",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "예금만으론 노후",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[초고령사회 금융 재편]① 예금만으론 노후 못 버텨… KB금융 양종희 등...",
+              "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3064533"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%EA%B8%88%EB%A7%8C%EC%9C%BC%EB%A1%A0%20%EB%85%B8%ED%9B%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%EA%B8%88%EB%A7%8C%EC%9C%BC%EB%A1%A0%20%EB%85%B8%ED%9B%84"
+      },
+      "top_headlines": [
+        {
+          "title": "[초고령사회 금융 재편]① 예금만으론 노후 못 버텨… KB금융 양종희 등...",
+          "summary": "",
+          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3064533",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Emphasize Nurturing",
-      "term_ko": "육성 강조"
+      "term": "Hit Limit-Up Laggards",
+      "term_ko": "히트 리미트 업 후발주자",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Hit Limit-Up Laggards",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "4 Biopharma Stocks Hit Limit-Up…Laggards Also Draw Attention [K-Bio Pul...",
+              "link": "https://n.news.naver.com/mnews/article/018/0006288797?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hit%20Limit-Up%20Laggards",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hit%20Limit-Up%20Laggards"
+      },
+      "top_headlines": [
+        {
+          "title": "4 Biopharma Stocks Hit Limit-Up…Laggards Also Draw Attention [K-Bio Pul...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/018/0006288797?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Six-figure Debt-to-income",
-      "term_ko": "육박 빚투"
+      "term": "Also Draw Attention",
+      "term_ko": "또한 주목 받기",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Also Draw Attention",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "4 Biopharma Stocks Hit Limit-Up…Laggards Also Draw Attention [K-Bio Pul...",
+              "link": "https://n.news.naver.com/mnews/article/018/0006288797?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Also%20Draw%20Attention",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Also%20Draw%20Attention"
+      },
+      "top_headlines": [
+        {
+          "title": "4 Biopharma Stocks Hit Limit-Up…Laggards Also Draw Attention [K-Bio Pul...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/018/0006288797?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Drops in Unison",
-      "term_ko": "일제히 하락"
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Technology Prevents U.s",
-      "term_ko": "기술로 미국"
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
     },
     {
-      "term": "School Gunfires",
-      "term_ko": "학교 총격 사건"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 상승",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-05-23T11:52:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "Insurance Short Term Mirae Asset Life Db Indemnity": {
-      "en": "Insurance Short Term Mirae Asset Life Db Indemnity",
-      "ko": "보험단신 미래에셋생명 DB손보",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2026-05-23T02:53:40.555Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2026-05-23T11:52:37+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 1,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 1,
+      "too_generic": 0
     },
-    "Kb Life Kyobo Life Shinhan Ez Sonbo": {
-      "en": "Kb Life Kyobo Life Shinhan Ez Sonbo",
-      "ko": "KB라이프 교보생명 신한EZ손보",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Db Sonbo Mi Potegra": {
-      "en": "Db Sonbo Mi Potegra",
-      "ko": "DB손보 美 포테그라",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Insurer-borne Db Losses": {
-      "en": "Insurer-borne Db Losses",
-      "ko": "보험사 품는 DB손보",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Db Insurance Usa Potegra": {
-      "en": "Db Insurance Usa Potegra",
-      "ko": "DB손해보험 미국 포테그라",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Slightly Enlarged 1517.40": {
-      "en": "Slightly Enlarged 1517.40",
-      "ko": "약간 확대 1517.40원",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "2000 Trillion in Household Debt": {
-      "en": "2000 Trillion in Household Debt",
-      "ko": "가계 빚 2000조",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Bitcoin Ethereum Ripple": {
-      "en": "Bitcoin Ethereum Ripple",
-      "ko": "비트코인 이더리움 리플",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Gaining Strength Over Time": {
-      "en": "Gaining Strength Over Time",
-      "ko": "장기간 힘 얻지",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Launching a Global Strategy": {
-      "en": "Launching a Global Strategy",
-      "ko": "글로벌 공략 시동",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Dollar-yen Fed Rate": {
-      "en": "Dollar-yen Fed Rate",
-      "ko": "달러-원 연준 금리",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Upside to the Likelihood of a Raise": {
-      "en": "Upside to the Likelihood of a Raise",
-      "ko": "인상 가능성에 상승폭",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Global Markets with Acquisitions": {
-      "en": "Global Markets with Acquisitions",
-      "ko": "인수로 글로벌 시장",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "President Lee Jae-myung Capital Markets": {
-      "en": "President Lee Jae-myung Capital Markets",
-      "ko": "이재명 대통령 자본시장",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Innovation and Advanced Industries": {
-      "en": "Innovation and Advanced Industries",
-      "ko": "혁신과 첨단 산업",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Tighten the Sarcomere Column": {
-      "en": "Tighten the Sarcomere Column",
-      "ko": "박근종 칼럼 긴축",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Fear Rate Spikes": {
-      "en": "Fear Rate Spikes",
-      "ko": "공포 금리 급등",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Falling Oil Prices and Foreigners": {
-      "en": "Falling Oil Prices and Foreigners",
-      "ko": "국제유가 하락과 외국인",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Treasury Rates on a Buying Spree": {
-      "en": "Treasury Rates on a Buying Spree",
-      "ko": "매수세로 국고채 금리",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "New Semiconductor Belt": {
-      "en": "New Semiconductor Belt",
-      "ko": "신설 반도체 벨트",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Korean 0.5w Wireless": {
-      "en": "Korean 0.5w Wireless",
-      "ko": "한국어 0.5W 무선",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Finalize the Acquisition": {
-      "en": "Finalize the Acquisition",
-      "ko": "인수 마무리",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "First Beauty": {
-      "en": "First Beauty",
-      "ko": "최초 美",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Accelerated Entry": {
-      "en": "Accelerated Entry",
-      "ko": "진출 가속",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Emphasize Nurturing": {
-      "en": "Emphasize Nurturing",
-      "ko": "육성 강조",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Six-figure Debt-to-income": {
-      "en": "Six-figure Debt-to-income",
-      "ko": "육박 빚투",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Drops in Unison": {
-      "en": "Drops in Unison",
-      "ko": "일제히 하락",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Technology Prevents U.s": {
-      "en": "Technology Prevents U.s",
-      "ko": "기술로 미국",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "School Gunfires": {
-      "en": "School Gunfires",
-      "ko": "학교 총격 사건",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
-    },
-    "Ai Chip Demand Surge": {
-      "en": "Ai Chip Demand Surge",
-      "ko": "AI 칩 수요 급증",
-      "translator": "pre-collected",
-      "cachedAt": "2026-05-23T02:50:25.311Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2026-05-23T11:52:37+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2026-05-23T11:52:37+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
+      }
     }
   }
 }
