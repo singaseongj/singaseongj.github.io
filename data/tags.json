@@ -1,44 +1,75 @@
 {
   "date": "2026-05-25",
   "window": "12_hours",
-  "total_phrases": 29,
+  "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "Bitcoin Exchange Traded ETFs",
-      "term_ko": "비트코인 거래판 ETF",
+      "term": "SEC Tokenized Shares",
+      "term_ko": "SEC 토큰화 주식",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "비트코인 거래판 ETF",
+        "query": "SEC 토큰화 주식",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-23",
+              "timestamp": 1779462000000,
+              "value": 100
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "비트코인 거래판, ETF 다음은 '이것'...美 증권위, 나스닥 지수 옵션 승...",
-              "link": "http://coinreaders.com/238256"
+              "title": "SEC, '토큰화 주식' 혁신 면제안 발표 막판 보류… 거래소 업계 반발이 ...",
+              "link": "https://www.tokenpost.kr/news/policy/362957"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EA%B1%B0%EB%9E%98%ED%8C%90%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EA%B1%B0%EB%9E%98%ED%8C%90%20ETF"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SEC%20%ED%86%A0%ED%81%B0%ED%99%94%20%EC%A3%BC%EC%8B%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SEC%20%ED%86%A0%ED%81%B0%ED%99%94%20%EC%A3%BC%EC%8B%9D"
       },
       "top_headlines": [
         {
-          "title": "비트코인 거래판, ETF 다음은 '이것'...美 증권위, 나스닥 지수 옵션 승...",
+          "title": "SEC, '토큰화 주식' 혁신 면제안 발표 막판 보류… 거래소 업계 반발이 ...",
           "summary": "",
-          "link": "http://coinreaders.com/238256",
+          "link": "https://www.tokenpost.kr/news/policy/362957",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ]
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.013901,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1779462000000
+      }
     },
     {
       "term": "US Stocks May",
@@ -50,7 +81,7 @@
         "query": "美 주식 5월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -78,110 +109,36 @@
       ]
     },
     {
-      "term": "Samchendang Pharm again at 380,000 won",
-      "term_ko": "삼천당제약 다시 38만원선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼천당제약 다시 38만원선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "삼천당제약, 다시 38만원선 바라보나…중동 휴전 기류 속 바이오 투자심...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576956"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%B2%9C%EB%8B%B9%EC%A0%9C%EC%95%BD%20%EB%8B%A4%EC%8B%9C%2038%EB%A7%8C%EC%9B%90%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%B2%9C%EB%8B%B9%EC%A0%9C%EC%95%BD%20%EB%8B%A4%EC%8B%9C%2038%EB%A7%8C%EC%9B%90%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "삼천당제약, 다시 38만원선 바라보나…중동 휴전 기류 속 바이오 투자심...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576956",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Gold Captured at $4500",
-      "term_ko": "4500달러대 붙잡힌 금",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4500달러대 붙잡힌 금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "4500달러대 붙잡힌 금…다시 급등한 환율·인플레 우려에 당분간 ‘흐림...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004130564?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4500%EB%8B%AC%EB%9F%AC%EB%8C%80%20%EB%B6%99%EC%9E%A1%ED%9E%8C%20%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4500%EB%8B%AC%EB%9F%AC%EB%8C%80%20%EB%B6%99%EC%9E%A1%ED%9E%8C%20%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "4500달러대 붙잡힌 금…다시 급등한 환율·인플레 우려에 당분간 ‘흐림...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004130564?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "SecuritiesWebsite Nasdaq Indices",
-      "term_ko": "증권위 나스닥 지수",
+      "term": "Announcing the Innovation Exemption",
+      "term_ko": "혁신 면제안 발표",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증권위 나스닥 지수",
+        "query": "혁신 면제안 발표",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "비트코인 거래판, ETF 다음은 '이것'...美 증권위, 나스닥 지수 옵션 승...",
-              "link": "http://coinreaders.com/238256"
+              "title": "SEC, '토큰화 주식' 혁신 면제안 발표 막판 보류… 거래소 업계 반발이 ...",
+              "link": "https://www.tokenpost.kr/news/policy/362957"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%9C%84%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%9C%84%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%A7%80%EC%88%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%81%EC%8B%A0%20%EB%A9%B4%EC%A0%9C%EC%95%88%20%EB%B0%9C%ED%91%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%81%EC%8B%A0%20%EB%A9%B4%EC%A0%9C%EC%95%88%20%EB%B0%9C%ED%91%9C"
       },
       "top_headlines": [
         {
-          "title": "비트코인 거래판, ETF 다음은 '이것'...美 증권위, 나스닥 지수 옵션 승...",
+          "title": "SEC, '토큰화 주식' 혁신 면제안 발표 막판 보류… 거래소 업계 반발이 ...",
           "summary": "",
-          "link": "http://coinreaders.com/238256",
+          "link": "https://www.tokenpost.kr/news/policy/362957",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -189,36 +146,36 @@
       ]
     },
     {
-      "term": "The Cost of Success",
-      "term_ko": "고환율은 성공의 비용",
+      "term": "Last-minute pending exchanges",
+      "term_ko": "막판 보류 거래소",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고환율은 성공의 비용",
+        "query": "막판 보류 거래소",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "김용범, 고금리·고물가·고환율은 성공의 비용? \"여야, 경제 인식차 격...",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=296995"
+              "title": "SEC, '토큰화 주식' 혁신 면제안 발표 막판 보류… 거래소 업계 반발이 ...",
+              "link": "https://www.tokenpost.kr/news/policy/362957"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%EC%9D%98%20%EB%B9%84%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%EC%9D%98%20%EB%B9%84%EC%9A%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%89%ED%8C%90%20%EB%B3%B4%EB%A5%98%20%EA%B1%B0%EB%9E%98%EC%86%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%89%ED%8C%90%20%EB%B3%B4%EB%A5%98%20%EA%B1%B0%EB%9E%98%EC%86%8C"
       },
       "top_headlines": [
         {
-          "title": "김용범, 고금리·고물가·고환율은 성공의 비용? \"여야, 경제 인식차 격...",
+          "title": "SEC, '토큰화 주식' 혁신 면제안 발표 막판 보류… 거래소 업계 반발이 ...",
           "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=296995",
+          "link": "https://www.tokenpost.kr/news/policy/362957",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,36 +183,36 @@
       ]
     },
     {
-      "term": "Ruling and opposition economic perception gap",
-      "term_ko": "여야 경제 인식차",
+      "term": "Private Equity Cost of Success",
+      "term_ko": "사설고환율은 성공 비용",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "여야 경제 인식차",
+        "query": "사설고환율은 성공 비용",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "김용범, 고금리·고물가·고환율은 성공의 비용? \"여야, 경제 인식차 격...",
-              "link": "https://www.ppss.kr/news/articleView.html?idxno=296995"
+              "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
+              "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AC%EC%95%BC%20%EA%B2%BD%EC%A0%9C%20%EC%9D%B8%EC%8B%9D%EC%B0%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AC%EC%95%BC%20%EA%B2%BD%EC%A0%9C%20%EC%9D%B8%EC%8B%9D%EC%B0%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9"
       },
       "top_headlines": [
         {
-          "title": "김용범, 고금리·고물가·고환율은 성공의 비용? \"여야, 경제 인식차 격...",
+          "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
           "summary": "",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=296995",
+          "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -263,36 +220,36 @@
       ]
     },
     {
-      "term": "Barabona Middle East Ceasefire",
-      "term_ko": "바라보나 중동 휴전",
+      "term": "More expensive for the masses",
+      "term_ko": "서민들이 더 비싼",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "바라보나 중동 휴전",
+        "query": "서민들이 더 비싼",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "삼천당제약, 다시 38만원선 바라보나…중동 휴전 기류 속 바이오 투자심...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576956"
+              "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
+              "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%94%EB%9D%BC%EB%B3%B4%EB%82%98%20%EC%A4%91%EB%8F%99%20%ED%9C%B4%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%94%EB%9D%BC%EB%B3%B4%EB%82%98%20%EC%A4%91%EB%8F%99%20%ED%9C%B4%EC%A0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%AF%BC%EB%93%A4%EC%9D%B4%20%EB%8D%94%20%EB%B9%84%EC%8B%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%AF%BC%EB%93%A4%EC%9D%B4%20%EB%8D%94%20%EB%B9%84%EC%8B%BC"
       },
       "top_headlines": [
         {
-          "title": "삼천당제약, 다시 38만원선 바라보나…중동 휴전 기류 속 바이오 투자심...",
+          "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576956",
+          "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -300,36 +257,36 @@
       ]
     },
     {
-      "term": "Bio in the Airflow",
-      "term_ko": "기류 속 바이오",
+      "term": "The price you pay is",
+      "term_ko": "값 치르는 게",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기류 속 바이오",
+        "query": "값 치르는 게",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "삼천당제약, 다시 38만원선 바라보나…중동 휴전 기류 속 바이오 투자심...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576956"
+              "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
+              "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%A5%98%20%EC%86%8D%20%EB%B0%94%EC%9D%B4%EC%98%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%A5%98%20%EC%86%8D%20%EB%B0%94%EC%9D%B4%EC%98%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%92%20%EC%B9%98%EB%A5%B4%EB%8A%94%20%EA%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%92%20%EC%B9%98%EB%A5%B4%EB%8A%94%20%EA%B2%8C"
       },
       "top_headlines": [
         {
-          "title": "삼천당제약, 다시 38만원선 바라보나…중동 휴전 기류 속 바이오 투자심...",
+          "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=576956",
+          "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +294,36 @@
       ]
     },
     {
-      "term": "People like this",
-      "term_ko": "타요 이런 사람들",
+      "term": "Puns to hide incompetence",
+      "term_ko": "무능 감추려 말장난",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "타요 이런 사람들",
+        "query": "무능 감추려 말장난",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "“요즘 누가 경차를 타요” 이런 사람들 많았는데…고유가에 ‘모닝’...",
-              "link": "https://n.news.naver.com/mnews/article/011/0004624274?sid=101"
+              "title": "김용범 \"3고, 성공의 비용\"...야당 \"무능 감추려 말장난\"",
+              "link": "https://n.news.naver.com/mnews/article/052/0002357694?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%83%80%EC%9A%94%20%EC%9D%B4%EB%9F%B0%20%EC%82%AC%EB%9E%8C%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%83%80%EC%9A%94%20%EC%9D%B4%EB%9F%B0%20%EC%82%AC%EB%9E%8C%EB%93%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B4%EB%8A%A5%20%EA%B0%90%EC%B6%94%EB%A0%A4%20%EB%A7%90%EC%9E%A5%EB%82%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B4%EB%8A%A5%20%EA%B0%90%EC%B6%94%EB%A0%A4%20%EB%A7%90%EC%9E%A5%EB%82%9C"
       },
       "top_headlines": [
         {
-          "title": "“요즘 누가 경차를 타요” 이런 사람들 많았는데…고유가에 ‘모닝’...",
+          "title": "김용범 \"3고, 성공의 비용\"...야당 \"무능 감추려 말장난\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004624274?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/052/0002357694?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,36 +331,36 @@
       ]
     },
     {
-      "term": "Yongbum Kim on sustaining testosterone",
-      "term_ko": "고환율 지속에 김용범",
+      "term": "You're not getting fresh water, you're getting building water.",
+      "term_ko": "갓물주는커녕 빌딩푸어 신세",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고환율 지속에 김용범",
+        "query": "갓물주는커녕 빌딩푸어 신세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "고환율 지속에…김용범 \"불가피한 성공 비용\"",
-              "link": "https://n.news.naver.com/mnews/article/422/0000868214?sid=161"
+              "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
+              "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%80%EC%86%8D%EC%97%90%20%EA%B9%80%EC%9A%A9%EB%B2%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%80%EC%86%8D%EC%97%90%20%EA%B9%80%EC%9A%A9%EB%B2%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%93%EB%AC%BC%EC%A3%BC%EB%8A%94%EC%BB%A4%EB%85%95%20%EB%B9%8C%EB%94%A9%ED%91%B8%EC%96%B4%20%EC%8B%A0%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%93%EB%AC%BC%EC%A3%BC%EB%8A%94%EC%BB%A4%EB%85%95%20%EB%B9%8C%EB%94%A9%ED%91%B8%EC%96%B4%20%EC%8B%A0%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "고환율 지속에…김용범 \"불가피한 성공 비용\"",
+          "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000868214?sid=161",
+          "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -411,36 +368,36 @@
       ]
     },
     {
-      "term": "The inevitable cost of success",
-      "term_ko": "불가피한 성공 비용",
+      "term": "Bukchon Little Building Ijen",
+      "term_ko": "북촌 꼬마빌딩 이젠",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "불가피한 성공 비용",
+        "query": "북촌 꼬마빌딩 이젠",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "고환율 지속에…김용범 \"불가피한 성공 비용\"",
-              "link": "https://n.news.naver.com/mnews/article/422/0000868214?sid=161"
+              "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
+              "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EA%B0%80%ED%94%BC%ED%95%9C%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EA%B0%80%ED%94%BC%ED%95%9C%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%81%EC%B4%8C%20%EA%BC%AC%EB%A7%88%EB%B9%8C%EB%94%A9%20%EC%9D%B4%EC%A0%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%81%EC%B4%8C%20%EA%BC%AC%EB%A7%88%EB%B9%8C%EB%94%A9%20%EC%9D%B4%EC%A0%A0"
       },
       "top_headlines": [
         {
-          "title": "고환율 지속에…김용범 \"불가피한 성공 비용\"",
+          "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000868214?sid=161",
+          "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +405,36 @@
       ]
     },
     {
-      "term": "Exchange rates spike again",
-      "term_ko": "다시 급등한 환율",
+      "term": "Current Events Election Night",
+      "term_ko": "시사천국 선거 막판",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "다시 급등한 환율",
+        "query": "시사천국 선거 막판",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "4500달러대 붙잡힌 금…다시 급등한 환율·인플레 우려에 당분간 ‘흐림...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004130564?sid=101"
+              "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
+              "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%8B%9C%20%EA%B8%89%EB%93%B1%ED%95%9C%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%8B%9C%20%EA%B8%89%EB%93%B1%ED%95%9C%20%ED%99%98%EC%9C%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%82%AC%EC%B2%9C%EA%B5%AD%20%EC%84%A0%EA%B1%B0%20%EB%A7%89%ED%8C%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%82%AC%EC%B2%9C%EA%B5%AD%20%EC%84%A0%EA%B1%B0%20%EB%A7%89%ED%8C%90"
       },
       "top_headlines": [
         {
-          "title": "4500달러대 붙잡힌 금…다시 급등한 환율·인플레 우려에 당분간 ‘흐림...",
+          "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004130564?sid=101",
+          "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +442,36 @@
       ]
     },
     {
-      "term": "For the time being, due to inflation concerns",
-      "term_ko": "인플레 우려에 당분간",
+      "term": "The big bad news, but Yongnam Kim",
+      "term_ko": "대형 악재되나 김용남",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "인플레 우려에 당분간",
+        "query": "대형 악재되나 김용남",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "4500달러대 붙잡힌 금…다시 급등한 환율·인플레 우려에 당분간 ‘흐림...",
-              "link": "https://n.news.naver.com/mnews/article/022/0004130564?sid=101"
+              "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
+              "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%ED%94%8C%EB%A0%88%20%EC%9A%B0%EB%A0%A4%EC%97%90%20%EB%8B%B9%EB%B6%84%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%ED%94%8C%EB%A0%88%20%EC%9A%B0%EB%A0%A4%EC%97%90%20%EB%8B%B9%EB%B6%84%EA%B0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%ED%98%95%20%EC%95%85%EC%9E%AC%EB%90%98%EB%82%98%20%EA%B9%80%EC%9A%A9%EB%82%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%ED%98%95%20%EC%95%85%EC%9E%AC%EB%90%98%EB%82%98%20%EA%B9%80%EC%9A%A9%EB%82%A8"
       },
       "top_headlines": [
         {
-          "title": "4500달러대 붙잡힌 금…다시 급등한 환율·인플레 우려에 당분간 ‘흐림...",
+          "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/022/0004130564?sid=101",
+          "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +479,110 @@
       ]
     },
     {
-      "term": "Meta AI Push",
-      "term_ko": "메타 AI 푸시",
+      "term": "Operating under a lending name",
+      "term_ko": "대부업 차명 운영",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "대부업 차명 운영",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-25T23:55:42+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
+              "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EB%B6%80%EC%97%85%20%EC%B0%A8%EB%AA%85%20%EC%9A%B4%EC%98%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EB%B6%80%EC%97%85%20%EC%B0%A8%EB%AA%85%20%EC%9A%B4%EC%98%81"
+      },
+      "top_headlines": [
+        {
+          "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
+          "summary": "",
+          "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Back to high oil prices",
+      "term_ko": "고유가 고물가에 다시",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "고유가 고물가에 다시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-25T23:55:42+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "고유가·고물가에 다시 뜨는 '경차'",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EA%B3%A0%EB%AC%BC%EA%B0%80%EC%97%90%20%EB%8B%A4%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EA%B3%A0%EB%AC%BC%EA%B0%80%EC%97%90%20%EB%8B%A4%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "고유가·고물가에 다시 뜨는 '경차'",
+          "summary": "",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Names Top AI",
+      "term_ko": "최고의 AI 이름",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Meta AI Push",
+        "query": "Names Top AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "Meta AI Push Could Add $26 Billion in Revenue by 2027, Wolfe Research Say...",
-              "link": "https://www.econotimes.com/Meta-AI-Push-Could-Add-26-Billion-in-Revenue-by-2027-Wolfe-Research-Says-1742496"
+              "title": "Morgan Stanley Names Top AI Security and Data Center Stocks for 2026",
+              "link": "https://www.econotimes.com/Morgan-Stanley-Names-Top-AI-Security-and-Data-Center-Stocks-for-2026-1742564"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Meta%20AI%20Push",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Meta%20AI%20Push"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Names%20Top%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Names%20Top%20AI"
       },
       "top_headlines": [
         {
-          "title": "Meta AI Push Could Add $26 Billion in Revenue by 2027, Wolfe Research Say...",
+          "title": "Morgan Stanley Names Top AI Security and Data Center Stocks for 2026",
           "summary": "",
-          "link": "https://www.econotimes.com/Meta-AI-Push-Could-Add-26-Billion-in-Revenue-by-2027-Wolfe-Research-Says-1742496",
+          "link": "https://www.econotimes.com/Morgan-Stanley-Names-Top-AI-Security-and-Data-Center-Stocks-for-2026-1742564",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -615,7 +646,7 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -654,7 +685,7 @@
         "week_score": 0,
         "correction_factor": 0.165911,
         "decay_factor": 0.014787,
-        "time_weight": 0.023188,
+        "time_weight": 0.020859,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -662,36 +693,73 @@
       }
     },
     {
-      "term": "Local Force Fluidization",
-      "term_ko": "국힘 유체이탈",
+      "term": "Shifting optimism",
+      "term_ko": "낙관 전환",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "국힘 유체이탈",
+        "query": "낙관 전환",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "김용범 “고금리·고물가·고환율은 성공 비용”…국힘 “유체이탈 화법...",
-              "link": "https://n.news.naver.com/mnews/article/028/0002806626?sid=101"
+              "title": "울산 소비자심리 한달만에 '낙관' 전환",
+              "link": "https://www.ulsanpress.net/news/articleView.html?idxno=575787"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%ED%9E%98%20%EC%9C%A0%EC%B2%B4%EC%9D%B4%ED%83%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%ED%9E%98%20%EC%9C%A0%EC%B2%B4%EC%9D%B4%ED%83%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%99%EA%B4%80%20%EC%A0%84%ED%99%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%99%EA%B4%80%20%EC%A0%84%ED%99%98"
       },
       "top_headlines": [
         {
-          "title": "김용범 “고금리·고물가·고환율은 성공 비용”…국힘 “유체이탈 화법...",
+          "title": "울산 소비자심리 한달만에 '낙관' 전환",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002806626?sid=101",
+          "link": "https://www.ulsanpress.net/news/articleView.html?idxno=575787",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Floating light vehicles",
+      "term_ko": "뜨는 경차",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "뜨는 경차",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-25T23:55:42+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "고유가·고물가에 다시 뜨는 '경차'",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9C%A8%EB%8A%94%20%EA%B2%BD%EC%B0%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9C%A8%EB%8A%94%20%EA%B2%BD%EC%B0%A8"
+      },
+      "top_headlines": [
+        {
+          "title": "고유가·고물가에 다시 뜨는 '경차'",
+          "summary": "",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -708,7 +776,7 @@
         "query": "Japans Nikkei Hits",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -745,7 +813,7 @@
         "query": "Kakao Mobility Becomes",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -782,7 +850,7 @@
         "query": "Koreas Tougher Listing",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -819,7 +887,7 @@
         "query": "Wall Street Futures",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -856,7 +924,7 @@
         "query": "Oil Prices Drop",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -884,6 +952,152 @@
       ]
     },
     {
+      "term": "Morgan Stanley",
+      "term_ko": "모건 스탠리",
+      "significance_score": 224,
+      "mentions": 222,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Morgan Stanley",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-20",
+              "timestamp": 1779202800000,
+              "value": 55.55555
+            },
+            {
+              "period": "2026-05-21",
+              "timestamp": 1779289200000,
+              "value": 100
+            },
+            {
+              "period": "2026-05-22",
+              "timestamp": 1779375600000,
+              "value": 66.66666
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-25T23:55:42+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Morgan Stanley Names Top AI Security and Data Center Stocks for 2026",
+              "link": "https://www.econotimes.com/Morgan-Stanley-Names-Top-AI-Security-and-Data-Center-Stocks-for-2026-1742564"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Morgan%20Stanley",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Morgan%20Stanley"
+      },
+      "top_headlines": [
+        {
+          "title": "Morgan Stanley Names Top AI Security and Data Center Stocks for 2026",
+          "summary": "",
+          "link": "https://www.econotimes.com/Morgan-Stanley-Names-Top-AI-Security-and-Data-Center-Stocks-for-2026-1742564",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 222.2222,
+        "weekly_average_volume": 74.0741,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.023623,
+        "time_weight": 0.010423,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1779375600000
+      }
+    },
+    {
+      "term": "Data Center",
+      "term_ko": "데이터 센터",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Data Center",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-21",
+              "timestamp": 1779289200000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-25T23:55:42+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "Morgan Stanley Names Top AI Security and Data Center Stocks for 2026",
+              "link": "https://www.econotimes.com/Morgan-Stanley-Names-Top-AI-Security-and-Data-Center-Stocks-for-2026-1742564"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Data%20Center",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Data%20Center"
+      },
+      "top_headlines": [
+        {
+          "title": "Morgan Stanley Names Top AI Security and Data Center Stocks for 2026",
+          "summary": "",
+          "link": "https://www.econotimes.com/Morgan-Stanley-Names-Top-AI-Security-and-Data-Center-Stocks-for-2026-1742564",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.008337,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1779289200000
+      }
+    },
+    {
       "term": "Record High",
       "term_ko": "최고 기록",
       "significance_score": 224,
@@ -893,7 +1107,7 @@
         "query": "Record High",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -930,7 +1144,7 @@
         "query": "Early Test",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -958,80 +1172,6 @@
       ]
     },
     {
-      "term": "Could Add",
-      "term_ko": "추가 가능",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Could Add",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Meta AI Push Could Add $26 Billion in Revenue by 2027, Wolfe Research Say...",
-              "link": "https://www.econotimes.com/Meta-AI-Push-Could-Add-26-Billion-in-Revenue-by-2027-Wolfe-Research-Says-1742496"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Could%20Add",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Could%20Add"
-      },
-      "top_headlines": [
-        {
-          "title": "Meta AI Push Could Add $26 Billion in Revenue by 2027, Wolfe Research Say...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Meta-AI-Push-Could-Add-26-Billion-in-Revenue-by-2027-Wolfe-Research-Says-1742496",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Wolfe Research",
-      "term_ko": "울프 리서치",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wolfe Research",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T19:06:47+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Meta AI Push Could Add $26 Billion in Revenue by 2027, Wolfe Research Say...",
-              "link": "https://www.econotimes.com/Meta-AI-Push-Could-Add-26-Billion-in-Revenue-by-2027-Wolfe-Research-Says-1742496"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wolfe%20Research",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wolfe%20Research"
-      },
-      "top_headlines": [
-        {
-          "title": "Meta AI Push Could Add $26 Billion in Revenue by 2027, Wolfe Research Say...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Meta-AI-Push-Could-Add-26-Billion-in-Revenue-by-2027-Wolfe-Research-Says-1742496",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -1041,7 +1181,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1063,7 +1203,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1085,7 +1225,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-25T19:06:47+09:00",
+          "last_updated": "2026-05-25T23:55:42+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1101,26 +1241,26 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-05-25T10:07:45.919Z",
+    "generated_at": "2026-05-25T14:56:43.837Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-25T19:06:47+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-05-25T23:55:42+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
+    "similar_keywords_removed": 0,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 1,
+      "similar": 0,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-05-25T19:06:47+09:00",
+      "last_updated": "2026-05-25T23:55:42+09:00",
       "fallback_sources": [
         "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-05-25T19:06:47+09:00",
+        "lastUpdated": "2026-05-25T23:55:42+09:00",
         "fallbackSources": [
           "trend_log"
         ]
