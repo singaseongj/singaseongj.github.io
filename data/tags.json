@@ -1,7 +1,7 @@
 {
   "date": "2026-05-25",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "SEC Tokenized Shares",
@@ -25,9 +25,10 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -64,7 +65,7 @@
         "week_score": 0,
         "correction_factor": 0.165911,
         "decay_factor": 0.041087,
-        "time_weight": 0.013901,
+        "time_weight": 0.013064,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -72,36 +73,415 @@
       }
     },
     {
-      "term": "US Stocks May",
-      "term_ko": "美 주식 5월",
+      "term": "Acquisition first read June",
+      "term_ko": "인수 초읽기 6월",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美 주식 5월",
+        "query": "인수 초읽기 6월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[미국 증시] 美 주식 5월 25일 휴장한다, 이유는?…다음 휴장일은 언제...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575880"
+              "title": "로빈후드, 원더파이 인수 ‘초읽기’…6월 1일 전후 마무리",
+              "link": "https://www.tokenpost.kr/news/market/362974"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%A3%BC%EC%8B%9D%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%A3%BC%EC%8B%9D%205%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%88%98%20%EC%B4%88%EC%9D%BD%EA%B8%B0%206%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%88%98%20%EC%B4%88%EC%9D%BD%EA%B8%B0%206%EC%9B%94"
       },
       "top_headlines": [
         {
-          "title": "[미국 증시] 美 주식 5월 25일 휴장한다, 이유는?…다음 휴장일은 언제...",
+          "title": "로빈후드, 원더파이 인수 ‘초읽기’…6월 1일 전후 마무리",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575880",
+          "link": "https://www.tokenpost.kr/news/market/362974",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Wrap up before and after 1 day",
+      "term_ko": "1일 전후 마무리",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "1일 전후 마무리",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "로빈후드, 원더파이 인수 ‘초읽기’…6월 1일 전후 마무리",
+              "link": "https://www.tokenpost.kr/news/market/362974"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EC%9D%BC%20%EC%A0%84%ED%9B%84%20%EB%A7%88%EB%AC%B4%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EC%9D%BC%20%EC%A0%84%ED%9B%84%20%EB%A7%88%EB%AC%B4%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "로빈후드, 원더파이 인수 ‘초읽기’…6월 1일 전후 마무리",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/market/362974",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "May monetary policy freeze",
+      "term_ko": "5월 금통위 동결",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "5월 금통위 동결",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "5월 금통위 '동결' 유력… \"하반기 1~2회 인상 가능성 높다\"",
+              "link": "https://n.news.naver.com/mnews/article/008/0005362468?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9B%94%20%EA%B8%88%ED%86%B5%EC%9C%84%20%EB%8F%99%EA%B2%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9B%94%20%EA%B8%88%ED%86%B5%EC%9C%84%20%EB%8F%99%EA%B2%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "5월 금통위 '동결' 유력… \"하반기 1~2회 인상 가능성 높다\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/008/0005362468?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Likely 1-2 times in the second half of the year",
+      "term_ko": "유력 하반기 1~2회",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "유력 하반기 1~2회",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "5월 금통위 '동결' 유력… \"하반기 1~2회 인상 가능성 높다\"",
+              "link": "https://n.news.naver.com/mnews/article/008/0005362468?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EB%A0%A5%20%ED%95%98%EB%B0%98%EA%B8%B0%201~2%ED%9A%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EB%A0%A5%20%ED%95%98%EB%B0%98%EA%B8%B0%201~2%ED%9A%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "5월 금통위 '동결' 유력… \"하반기 1~2회 인상 가능성 높다\"",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/008/0005362468?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "8,000 feet up, 8,000 feet down",
+      "term_ko": "8천피 찍고 내렸다",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "8천피 찍고 내렸다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "8천피 찍고 내렸다 '반등'...\"강세장 계속 된다\" 믿는 구석은",
+              "link": "https://n.news.naver.com/mnews/article/008/0005362463?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8%EC%B2%9C%ED%94%BC%20%EC%B0%8D%EA%B3%A0%20%EB%82%B4%EB%A0%B8%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8%EC%B2%9C%ED%94%BC%20%EC%B0%8D%EA%B3%A0%20%EB%82%B4%EB%A0%B8%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "8천피 찍고 내렸다 '반등'...\"강세장 계속 된다\" 믿는 구석은",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/008/0005362463?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "The 5% interest rate era",
+      "term_ko": "금리 5% 시대",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 5% 시대",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "금리 5% 시대 개막… ‘대안정’ 붕괴가 만든 금융시장 발작",
+              "link": "https://www.g-enews.com/view.php?ud=202605251456511245fbbec65dfb_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%205%25%20%EC%8B%9C%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%205%25%20%EC%8B%9C%EB%8C%80"
+      },
+      "top_headlines": [
+        {
+          "title": "금리 5% 시대 개막… ‘대안정’ 붕괴가 만든 금융시장 발작",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=202605251456511245fbbec65dfb_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Economic Outlook Breaking through 1500 won",
+      "term_ko": "경제돋보기 1500원 돌파한",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "경제돋보기 1500원 돌파한",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[경제돋보기] 1500원 돌파한 환율, 내 지갑과 아파트값을 위협하는 진짜...",
+              "link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065546581006598"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%EB%8F%8B%EB%B3%B4%EA%B8%B0%201500%EC%9B%90%20%EB%8F%8C%ED%8C%8C%ED%95%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%EB%8F%8B%EB%B3%B4%EA%B8%B0%201500%EC%9B%90%20%EB%8F%8C%ED%8C%8C%ED%95%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "[경제돋보기] 1500원 돌파한 환율, 내 지갑과 아파트값을 위협하는 진짜...",
+          "summary": "",
+          "link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065546581006598",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "New People35 Dongkwan Kim, Hanwha Group",
+      "term_ko": "신新인물탐구35 한화그룹 김동관",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "신新인물탐구35 한화그룹 김동관",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[신(新)인물탐구(35)] 한화그룹 김동관 부회장⑦ 리스크 관리 – 위험을...",
+              "link": "https://www.news2day.co.kr/article/20260525500039"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%E6%96%B0%EC%9D%B8%EB%AC%BC%ED%83%90%EA%B5%AC35%20%ED%95%9C%ED%99%94%EA%B7%B8%EB%A3%B9%20%EA%B9%80%EB%8F%99%EA%B4%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%E6%96%B0%EC%9D%B8%EB%AC%BC%ED%83%90%EA%B5%AC35%20%ED%95%9C%ED%99%94%EA%B7%B8%EB%A3%B9%20%EA%B9%80%EB%8F%99%EA%B4%80"
+      },
+      "top_headlines": [
+        {
+          "title": "[신(新)인물탐구(35)] 한화그룹 김동관 부회장⑦ 리스크 관리 – 위험을...",
+          "summary": "",
+          "link": "https://www.news2day.co.kr/article/20260525500039",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "U.S. stock market",
+      "term_ko": "미국 주식 증시",
+      "significance_score": 322,
+      "mentions": 183,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 주식 증시",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-20",
+              "timestamp": 1779202800000,
+              "value": 83.33333
+            },
+            {
+              "period": "2026-05-21",
+              "timestamp": 1779289200000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "미국 주식·증시 시장 휴장일 및 시간…이유는?",
+              "link": "https://www.bntnews.co.kr/article/view/bnt202605260002"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%8B%9D%20%EC%A6%9D%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%8B%9D%20%EC%A6%9D%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "미국 주식·증시 시장 휴장일 및 시간…이유는?",
+          "summary": "",
+          "link": "https://www.bntnews.co.kr/article/view/bnt202605260002",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 183.3333,
+        "weekly_average_volume": 91.6667,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.026992,
+        "time_weight": 0.008029,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1779289200000
+      }
+    },
+    {
+      "term": "Market closures and",
+      "term_ko": "시장 휴장일 및",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "시장 휴장일 및",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-05-26T04:32:01+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "미국 주식·증시 시장 휴장일 및 시간…이유는?",
+              "link": "https://www.bntnews.co.kr/article/view/bnt202605260002"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%ED%9C%B4%EC%9E%A5%EC%9D%BC%20%EB%B0%8F",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%ED%9C%B4%EC%9E%A5%EC%9D%BC%20%EB%B0%8F"
+      },
+      "top_headlines": [
+        {
+          "title": "미국 주식·증시 시장 휴장일 및 시간…이유는?",
+          "summary": "",
+          "link": "https://www.bntnews.co.kr/article/view/bnt202605260002",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -118,9 +498,10 @@
         "query": "혁신 면제안 발표",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -155,9 +536,10 @@
         "query": "막판 보류 거래소",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -183,36 +565,37 @@
       ]
     },
     {
-      "term": "Private Equity Cost of Success",
-      "term_ko": "사설고환율은 성공 비용",
+      "term": "Raises are likely",
+      "term_ko": "인상 가능성 높다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "사설고환율은 성공 비용",
+        "query": "인상 가능성 높다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
-              "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110"
+              "title": "5월 금통위 '동결' 유력… \"하반기 1~2회 인상 가능성 높다\"",
+              "link": "https://n.news.naver.com/mnews/article/008/0005362468?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%20%EA%B0%80%EB%8A%A5%EC%84%B1%20%EB%86%92%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%20%EA%B0%80%EB%8A%A5%EC%84%B1%20%EB%86%92%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
+          "title": "5월 금통위 '동결' 유력… \"하반기 1~2회 인상 가능성 높다\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/008/0005362468?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -220,36 +603,37 @@
       ]
     },
     {
-      "term": "More expensive for the masses",
-      "term_ko": "서민들이 더 비싼",
+      "term": "Financial Market Seizures Created",
+      "term_ko": "만든 금융시장 발작",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서민들이 더 비싼",
+        "query": "만든 금융시장 발작",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
-              "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110"
+              "title": "금리 5% 시대 개막… ‘대안정’ 붕괴가 만든 금융시장 발작",
+              "link": "https://www.g-enews.com/view.php?ud=202605251456511245fbbec65dfb_1"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%AF%BC%EB%93%A4%EC%9D%B4%20%EB%8D%94%20%EB%B9%84%EC%8B%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%AF%BC%EB%93%A4%EC%9D%B4%20%EB%8D%94%20%EB%B9%84%EC%8B%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EB%93%A0%20%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%20%EB%B0%9C%EC%9E%91",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EB%93%A0%20%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%20%EB%B0%9C%EC%9E%91"
       },
       "top_headlines": [
         {
-          "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
+          "title": "금리 5% 시대 개막… ‘대안정’ 붕괴가 만든 금융시장 발작",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110",
+          "link": "https://www.g-enews.com/view.php?ud=202605251456511245fbbec65dfb_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -257,36 +641,37 @@
       ]
     },
     {
-      "term": "The price you pay is",
-      "term_ko": "값 치르는 게",
+      "term": "Cost of Success",
+      "term_ko": "고환율은 성공 비용",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "값 치르는 게",
+        "query": "고환율은 성공 비용",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
-              "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110"
+              "title": "김용범 “고금리·고물가·고환율은 성공 비용”… 野 “그럼 베네수엘...",
+              "link": "https://n.news.naver.com/mnews/article/023/0003978441?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%92%20%EC%B9%98%EB%A5%B4%EB%8A%94%20%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%92%20%EC%B9%98%EB%A5%B4%EB%8A%94%20%EA%B2%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%84%B1%EA%B3%B5%20%EB%B9%84%EC%9A%A9"
       },
       "top_headlines": [
         {
-          "title": "[사설]“고환율은 성공 비용”… 서민들이 더 비싼 값 치르는 게 문제",
+          "title": "김용범 “고금리·고물가·고환율은 성공 비용”… 野 “그럼 베네수엘...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003722089?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/023/0003978441?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -294,258 +679,37 @@
       ]
     },
     {
-      "term": "Puns to hide incompetence",
-      "term_ko": "무능 감추려 말장난",
+      "term": "Vice Chairman⑦ Risk Management",
+      "term_ko": "부회장⑦ 리스크 관리",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "무능 감추려 말장난",
+        "query": "부회장⑦ 리스크 관리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "김용범 \"3고, 성공의 비용\"...야당 \"무능 감추려 말장난\"",
-              "link": "https://n.news.naver.com/mnews/article/052/0002357694?sid=100"
+              "title": "[신(新)인물탐구(35)] 한화그룹 김동관 부회장⑦ 리스크 관리 – 위험을...",
+              "link": "https://www.news2day.co.kr/article/20260525500039"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%B4%EB%8A%A5%20%EA%B0%90%EC%B6%94%EB%A0%A4%20%EB%A7%90%EC%9E%A5%EB%82%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%B4%EB%8A%A5%20%EA%B0%90%EC%B6%94%EB%A0%A4%20%EB%A7%90%EC%9E%A5%EB%82%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%ED%9A%8C%EC%9E%A5%E2%91%A6%20%EB%A6%AC%EC%8A%A4%ED%81%AC%20%EA%B4%80%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%ED%9A%8C%EC%9E%A5%E2%91%A6%20%EB%A6%AC%EC%8A%A4%ED%81%AC%20%EA%B4%80%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "김용범 \"3고, 성공의 비용\"...야당 \"무능 감추려 말장난\"",
+          "title": "[신(新)인물탐구(35)] 한화그룹 김동관 부회장⑦ 리스크 관리 – 위험을...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002357694?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "You're not getting fresh water, you're getting building water.",
-      "term_ko": "갓물주는커녕 빌딩푸어 신세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "갓물주는커녕 빌딩푸어 신세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
-              "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%93%EB%AC%BC%EC%A3%BC%EB%8A%94%EC%BB%A4%EB%85%95%20%EB%B9%8C%EB%94%A9%ED%91%B8%EC%96%B4%20%EC%8B%A0%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%93%EB%AC%BC%EC%A3%BC%EB%8A%94%EC%BB%A4%EB%85%95%20%EB%B9%8C%EB%94%A9%ED%91%B8%EC%96%B4%20%EC%8B%A0%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Bukchon Little Building Ijen",
-      "term_ko": "북촌 꼬마빌딩 이젠",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "북촌 꼬마빌딩 이젠",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
-              "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%81%EC%B4%8C%20%EA%BC%AC%EB%A7%88%EB%B9%8C%EB%94%A9%20%EC%9D%B4%EC%A0%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%81%EC%B4%8C%20%EA%BC%AC%EB%A7%88%EB%B9%8C%EB%94%A9%20%EC%9D%B4%EC%A0%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "“갓물주는커녕 빌딩푸어 신세”…북촌 꼬마빌딩 이젠 웃는다는데",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005684727?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Current Events Election Night",
-      "term_ko": "시사천국 선거 막판",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시사천국 선거 막판",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
-              "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%82%AC%EC%B2%9C%EA%B5%AD%20%EC%84%A0%EA%B1%B0%20%EB%A7%89%ED%8C%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%82%AC%EC%B2%9C%EA%B5%AD%20%EC%84%A0%EA%B1%B0%20%EB%A7%89%ED%8C%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
-          "summary": "",
-          "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The big bad news, but Yongnam Kim",
-      "term_ko": "대형 악재되나 김용남",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대형 악재되나 김용남",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
-              "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%ED%98%95%20%EC%95%85%EC%9E%AC%EB%90%98%EB%82%98%20%EA%B9%80%EC%9A%A9%EB%82%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%ED%98%95%20%EC%95%85%EC%9E%AC%EB%90%98%EB%82%98%20%EA%B9%80%EC%9A%A9%EB%82%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
-          "summary": "",
-          "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Operating under a lending name",
-      "term_ko": "대부업 차명 운영",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대부업 차명 운영",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
-              "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EB%B6%80%EC%97%85%20%EC%B0%A8%EB%AA%85%20%EC%9A%B4%EC%98%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EB%B6%80%EC%97%85%20%EC%B0%A8%EB%AA%85%20%EC%9A%B4%EC%98%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[시사천국] 선거 막판 대형 악재되나…김용남 '대부업 차명 운영' 의혹",
-          "summary": "",
-          "link": "https://news.cpbc.co.kr/article/1173091?division=NAVER",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Back to high oil prices",
-      "term_ko": "고유가 고물가에 다시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고유가 고물가에 다시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "고유가·고물가에 다시 뜨는 '경차'",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EA%B3%A0%EB%AC%BC%EA%B0%80%EC%97%90%20%EB%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%9C%A0%EA%B0%80%20%EA%B3%A0%EB%AC%BC%EA%B0%80%EC%97%90%20%EB%8B%A4%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "고유가·고물가에 다시 뜨는 '경차'",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174",
+          "link": "https://www.news2day.co.kr/article/20260525500039",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -562,9 +726,10 @@
         "query": "Names Top AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -590,176 +755,37 @@
       ]
     },
     {
-      "term": "US stock markets",
-      "term_ko": "미국 증시",
-      "significance_score": 280,
-      "mentions": 437,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 증시",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-17",
-              "timestamp": 1778943600000,
-              "value": 9.83885
-            },
-            {
-              "period": "2026-05-18",
-              "timestamp": 1779030000000,
-              "value": 42.4489
-            },
-            {
-              "period": "2026-05-19",
-              "timestamp": 1779116400000,
-              "value": 98.61605
-            },
-            {
-              "period": "2026-05-20",
-              "timestamp": 1779202800000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-21",
-              "timestamp": 1779289200000,
-              "value": 95.39136
-            },
-            {
-              "period": "2026-05-22",
-              "timestamp": 1779375600000,
-              "value": 87.3549
-            },
-            {
-              "period": "2026-05-23",
-              "timestamp": 1779462000000,
-              "value": 46.77159
-            },
-            {
-              "period": "2026-05-24",
-              "timestamp": 1779548400000,
-              "value": 8.68636
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 증시] 美 주식 5월 25일 휴장한다, 이유는?…다음 휴장일은 언제...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575880"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 증시] 美 주식 5월 25일 휴장한다, 이유는?…다음 휴장일은 언제...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575880",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 436.8203,
-        "weekly_average_volume": 72.8034,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.014787,
-        "time_weight": 0.020859,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779548400000
-      }
-    },
-    {
-      "term": "Shifting optimism",
-      "term_ko": "낙관 전환",
+      "term": "野 Then",
+      "term_ko": "野 그럼",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "낙관 전환",
+        "query": "野 그럼",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "울산 소비자심리 한달만에 '낙관' 전환",
-              "link": "https://www.ulsanpress.net/news/articleView.html?idxno=575787"
+              "title": "김용범 “고금리·고물가·고환율은 성공 비용”… 野 “그럼 베네수엘...",
+              "link": "https://n.news.naver.com/mnews/article/023/0003978441?sid=100"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%99%EA%B4%80%20%EC%A0%84%ED%99%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%99%EA%B4%80%20%EC%A0%84%ED%99%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%87%8E%20%EA%B7%B8%EB%9F%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%87%8E%20%EA%B7%B8%EB%9F%BC"
       },
       "top_headlines": [
         {
-          "title": "울산 소비자심리 한달만에 '낙관' 전환",
+          "title": "김용범 “고금리·고물가·고환율은 성공 비용”… 野 “그럼 베네수엘...",
           "summary": "",
-          "link": "https://www.ulsanpress.net/news/articleView.html?idxno=575787",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Floating light vehicles",
-      "term_ko": "뜨는 경차",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뜨는 경차",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "고유가·고물가에 다시 뜨는 '경차'",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9C%A8%EB%8A%94%20%EA%B2%BD%EC%B0%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9C%A8%EB%8A%94%20%EA%B2%BD%EC%B0%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "고유가·고물가에 다시 뜨는 '경차'",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=549174",
+          "link": "https://n.news.naver.com/mnews/article/023/0003978441?sid=100",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -776,9 +802,10 @@
         "query": "Japans Nikkei Hits",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -813,9 +840,10 @@
         "query": "Kakao Mobility Becomes",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -850,9 +878,10 @@
         "query": "Koreas Tougher Listing",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -871,80 +900,6 @@
           "title": "Kakao Mobility becomes early test of Korea’s tougher listing rules",
           "summary": "",
           "link": "https://n.news.naver.com/mnews/article/044/0000284481?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Wall Street Futures",
-      "term_ko": "월스트리트 선물",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Rally as Oil Prices Drop Amid Optimism Over U.S.-Iran...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Rally-as-Oil-Prices-Drop-Amid-Optimism-Over-US-Iran-Talks-1742515"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Rally as Oil Prices Drop Amid Optimism Over U.S.-Iran...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Rally-as-Oil-Prices-Drop-Amid-Optimism-Over-US-Iran-Talks-1742515",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Oil Prices Drop",
-      "term_ko": "유가 하락",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Oil Prices Drop",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Rally as Oil Prices Drop Amid Optimism Over U.S.-Iran...",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Rally-as-Oil-Prices-Drop-Amid-Optimism-Over-US-Iran-Talks-1742515"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Oil%20Prices%20Drop",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Oil%20Prices%20Drop"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Rally as Oil Prices Drop Amid Optimism Over U.S.-Iran...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Rally-as-Oil-Prices-Drop-Amid-Optimism-Over-US-Iran-Talks-1742515",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -983,9 +938,10 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1022,7 +978,7 @@
         "week_score": 0,
         "correction_factor": 0.115911,
         "decay_factor": 0.023623,
-        "time_weight": 0.010423,
+        "time_weight": 0.009945,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -1051,9 +1007,10 @@
         },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1090,7 +1047,7 @@
         "week_score": 0,
         "correction_factor": 0.115911,
         "decay_factor": 0.041087,
-        "time_weight": 0.008337,
+        "time_weight": 0.008029,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -1107,9 +1064,10 @@
         "query": "Record High",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1144,9 +1102,10 @@
         "query": "Early Test",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1181,9 +1140,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1203,9 +1163,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1225,9 +1186,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-05-25T23:55:42+09:00",
+          "last_updated": "2026-05-26T04:32:01+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1241,28 +1203,30 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-05-25T14:56:43.837Z",
+    "generated_at": "2026-05-25T19:33:05.469Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-25T23:55:42+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-05-26T04:32:01+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-05-25T23:55:42+09:00",
+      "last_updated": "2026-05-26T04:32:01+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-05-25T23:55:42+09:00",
+        "lastUpdated": "2026-05-26T04:32:01+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
