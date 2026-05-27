@@ -1,1109 +1,425 @@
 {
+  "generatedAt": "2026-05-27T09:43:58.477Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-27",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "110,000 units supplied LH",
-      "term_ko": "11만호 공급 LH",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "11만호 공급 LH",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비아파트 11만호 공급… LH 재무부담·사업성 논란 확산",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=721391"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=11%EB%A7%8C%ED%98%B8%20%EA%B3%B5%EA%B8%89%20LH",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=11%EB%A7%8C%ED%98%B8%20%EA%B3%B5%EA%B8%89%20LH"
-      },
-      "top_headlines": [
-        {
-          "title": "비아파트 11만호 공급… LH 재무부담·사업성 논란 확산",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=721391",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "110,000 Units Supplied Lh",
+      "term_ko": "11만호 공급 LH"
     },
     {
       "term": "June Treasury Bonds",
-      "term_ko": "재경부 6월 국고채",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재경부 6월 국고채",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "재경부 \"6월 국고채 경쟁발행, 시장 기대보다도 적을 것…부총리 금리 ...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416923"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EA%B2%BD%EB%B6%80%206%EC%9B%94%20%EA%B5%AD%EA%B3%A0%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EA%B2%BD%EB%B6%80%206%EC%9B%94%20%EA%B5%AD%EA%B3%A0%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "재경부 \"6월 국고채 경쟁발행, 시장 기대보다도 적을 것…부총리 금리 ...",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416923",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "재경부 6월 국고채"
     },
     {
-      "term": "18K Gold Price May",
-      "term_ko": "18K 금시세 5월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "18K 금시세 5월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "18K 금시세, 5월 27일 순금 약세에 동반 하락세",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=521888"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%205%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 5월 27일 순금 약세에 동반 하락세",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=521888",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "18k Gold Price May",
+      "term_ko": "18K 금시세 5월"
     },
     {
-      "term": "2nd all-time in net foreign financial assets",
-      "term_ko": "순대외금융자산 역대 2위",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순대외금융자산 역대 2위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "수출 호황에 증시 뛰었는데…韓 순대외금융자산 ‘역대 2위’ 급감",
-              "link": "https://n.news.naver.com/mnews/article/123/0002383708?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EB%8C%80%EC%99%B8%EA%B8%88%EC%9C%B5%EC%9E%90%EC%82%B0%20%EC%97%AD%EB%8C%80%202%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EB%8C%80%EC%99%B8%EA%B8%88%EC%9C%B5%EC%9E%90%EC%82%B0%20%EC%97%AD%EB%8C%80%202%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "수출 호황에 증시 뛰었는데…韓 순대외금융자산 ‘역대 2위’ 급감",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002383708?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "2nd All-time in Net Foreign Financial Assets",
+      "term_ko": "순대외금융자산 역대 2위"
     },
     {
-      "term": "Net foreign financial assets sequentially",
-      "term_ko": "순대외금융자산 2분기 연속",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순대외금융자산 2분기 연속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "순대외금융자산 2분기 연속 감소…외국인 국내주식 평가액 급증 영향",
-              "link": "https://n.news.naver.com/mnews/article/008/0005363392?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EB%8C%80%EC%99%B8%EA%B8%88%EC%9C%B5%EC%9E%90%EC%82%B0%202%EB%B6%84%EA%B8%B0%20%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EB%8C%80%EC%99%B8%EA%B8%88%EC%9C%B5%EC%9E%90%EC%82%B0%202%EB%B6%84%EA%B8%B0%20%EC%97%B0%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "순대외금융자산 2분기 연속 감소…외국인 국내주식 평가액 급증 영향",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005363392?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Net Foreign Financial Assets Sequentially",
+      "term_ko": "순대외금융자산 2분기 연속"
     },
     {
       "term": "Bitcoin Nasdaq and Value",
-      "term_ko": "비트코인 나스닥과 가치",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 나스닥과 가치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 나스닥과 가치 격차 역대 최대...저평가 구간 진입",
-              "link": "http://coinreaders.com/238711"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EB%82%98%EC%8A%A4%EB%8B%A5%EA%B3%BC%20%EA%B0%80%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EB%82%98%EC%8A%A4%EB%8B%A5%EA%B3%BC%20%EA%B0%80%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 나스닥과 가치 격차 역대 최대...저평가 구간 진입",
-          "summary": "",
-          "link": "http://coinreaders.com/238711",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비트코인 나스닥과 가치"
     },
     {
       "term": "Less Deputy Prime Minister",
-      "term_ko": "적을 것 부총리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "적을 것 부총리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "재경부 \"6월 국고채 경쟁발행, 시장 기대보다도 적을 것…부총리 금리 ...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416923"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%81%EC%9D%84%20%EA%B2%83%20%EB%B6%80%EC%B4%9D%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%81%EC%9D%84%20%EA%B2%83%20%EB%B6%80%EC%B4%9D%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "재경부 \"6월 국고채 경쟁발행, 시장 기대보다도 적을 것…부총리 금리 ...",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416923",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "적을 것 부총리"
     },
     {
       "term": "Raise Fear Direct Hit",
-      "term_ko": "인상 공포 직격탄",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인상 공포 직격탄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'인상 공포 직격탄'…단기 카드채 투매 분위기 속 향방은",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416921"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%20%EA%B3%B5%ED%8F%AC%20%EC%A7%81%EA%B2%A9%ED%83%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%20%EA%B3%B5%ED%8F%AC%20%EC%A7%81%EA%B2%A9%ED%83%84"
-      },
-      "top_headlines": [
-        {
-          "title": "'인상 공포 직격탄'…단기 카드채 투매 분위기 속 향방은",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416921",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인상 공포 직격탄"
     },
     {
       "term": "Sell Short Short Term Card Debt",
-      "term_ko": "단기 카드채 투매",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "단기 카드채 투매",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'인상 공포 직격탄'…단기 카드채 투매 분위기 속 향방은",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416921"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EA%B8%B0%20%EC%B9%B4%EB%93%9C%EC%B1%84%20%ED%88%AC%EB%A7%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EA%B8%B0%20%EC%B9%B4%EB%93%9C%EC%B1%84%20%ED%88%AC%EB%A7%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'인상 공포 직격탄'…단기 카드채 투매 분위기 속 향방은",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4416921",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "단기 카드채 투매"
     },
     {
-      "term": "Financial burden business case",
-      "term_ko": "재무부담 사업성 논란",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재무부담 사업성 논란",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비아파트 11만호 공급… LH 재무부담·사업성 논란 확산",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=721391"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EB%AC%B4%EB%B6%80%EB%8B%B4%20%EC%82%AC%EC%97%85%EC%84%B1%20%EB%85%BC%EB%9E%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EB%AC%B4%EB%B6%80%EB%8B%B4%20%EC%82%AC%EC%97%85%EC%84%B1%20%EB%85%BC%EB%9E%80"
-      },
-      "top_headlines": [
-        {
-          "title": "비아파트 11만호 공급… LH 재무부담·사업성 논란 확산",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=721391",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Financial Burden Business Case",
+      "term_ko": "재무부담 사업성 논란"
     },
     {
-      "term": "Stocks on an export boom",
-      "term_ko": "수출 호황에 증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수출 호황에 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "수출 호황에 증시 뛰었는데…韓 순대외금융자산 ‘역대 2위’ 급감",
-              "link": "https://n.news.naver.com/mnews/article/123/0002383708?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%B6%9C%20%ED%98%B8%ED%99%A9%EC%97%90%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%B6%9C%20%ED%98%B8%ED%99%A9%EC%97%90%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "수출 호황에 증시 뛰었는데…韓 순대외금융자산 ‘역대 2위’ 급감",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002383708?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stocks on an Export Boom",
+      "term_ko": "수출 호황에 증시"
     },
     {
       "term": "Decrease Foreign Domestic Stock",
-      "term_ko": "감소 외국인 국내주식",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "감소 외국인 국내주식",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "순대외금융자산 2분기 연속 감소…외국인 국내주식 평가액 급증 영향",
-              "link": "https://n.news.naver.com/mnews/article/008/0005363392?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%90%EC%86%8C%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B5%AD%EB%82%B4%EC%A3%BC%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%90%EC%86%8C%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B5%AD%EB%82%B4%EC%A3%BC%EC%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "순대외금융자산 2분기 연속 감소…외국인 국내주식 평가액 급증 영향",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005363392?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "감소 외국인 국내주식"
     },
     {
-      "term": "Impact of valuation spikes",
-      "term_ko": "평가액 급증 영향",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "평가액 급증 영향",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "순대외금융자산 2분기 연속 감소…외국인 국내주식 평가액 급증 영향",
-              "link": "https://n.news.naver.com/mnews/article/008/0005363392?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%89%EA%B0%80%EC%95%A1%20%EA%B8%89%EC%A6%9D%20%EC%98%81%ED%96%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%89%EA%B0%80%EC%95%A1%20%EA%B8%89%EC%A6%9D%20%EC%98%81%ED%96%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "순대외금융자산 2분기 연속 감소…외국인 국내주식 평가액 급증 영향",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005363392?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Impact of Valuation Spikes",
+      "term_ko": "평가액 급증 영향"
     },
     {
-      "term": "AI-driven Tech Rally",
-      "term_ko": "AI 기반 기술 랠리",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI-driven Tech Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares sharply up late Wed. morning on AI-driven tech rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016101633?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI-driven%20Tech%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI-driven%20Tech%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares sharply up late Wed. morning on AI-driven tech rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016101633?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai-driven Tech Rally",
+      "term_ko": "AI 기반 기술 랠리"
     },
     {
-      "term": "SK Hynix Joins",
-      "term_ko": "SK하이닉스 합류",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix Joins",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix joins $1tn market cap club after stock soars over 10%",
-              "link": "https://n.news.naver.com/mnews/article/009/0005685515?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Joins",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Joins"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix joins $1tn market cap club after stock soars over 10%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005685515?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sk Hynix Joins",
+      "term_ko": "SK하이닉스 합류"
     },
     {
-      "term": "SK Hynix Surpasses",
-      "term_ko": "SK하이닉스가 뛰어넘다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix Surpasses",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix surpasses $1 trillion in market capitalization, becomes third As...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000089035?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Surpasses",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Surpasses"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix surpasses $1 trillion in market capitalization, becomes third As...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000089035?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sk Hynix Surpasses",
+      "term_ko": "SK하이닉스가 뛰어넘다"
     },
     {
-      "term": "AI Rally Offsets",
-      "term_ko": "AI 랠리 상쇄",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Rally Offsets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as AI Rally Offsets Middle East Tensions",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-AI-Rally-Offsets-Middle-East-Tensions-1742741"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Rally%20Offsets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Rally%20Offsets"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as AI Rally Offsets Middle East Tensions",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-AI-Rally-Offsets-Middle-East-Tensions-1742741",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Rally Offsets",
+      "term_ko": "AI 랠리 상쇄"
     },
     {
       "term": "Gap History",
-      "term_ko": "격차 역대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "격차 역대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 나스닥과 가치 격차 역대 최대...저평가 구간 진입",
-              "link": "http://coinreaders.com/238711"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%A9%EC%B0%A8%20%EC%97%AD%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%A9%EC%B0%A8%20%EC%97%AD%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 나스닥과 가치 격차 역대 최대...저평가 구간 진입",
-          "summary": "",
-          "link": "http://coinreaders.com/238711",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "격차 역대"
     },
     {
-      "term": "Entering a zone",
-      "term_ko": "구간 진입",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "구간 진입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 나스닥과 가치 격차 역대 최대...저평가 구간 진입",
-              "link": "http://coinreaders.com/238711"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EA%B0%84%20%EC%A7%84%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EA%B0%84%20%EC%A7%84%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 나스닥과 가치 격차 역대 최대...저평가 구간 진입",
-          "summary": "",
-          "link": "http://coinreaders.com/238711",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Entering a Zone",
+      "term_ko": "구간 진입"
     },
     {
-      "term": "Tandem downtrend",
-      "term_ko": "동반 하락세",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동반 하락세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "18K 금시세, 5월 27일 순금 약세에 동반 하락세",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=521888"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EB%B0%98%20%ED%95%98%EB%9D%BD%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EB%B0%98%20%ED%95%98%EB%9D%BD%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 5월 27일 순금 약세에 동반 하락세",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=521888",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tandem Downtrend",
+      "term_ko": "동반 하락세"
     },
     {
-      "term": "I ran, but 韓",
-      "term_ko": "뛰었는데 韓",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뛰었는데 韓",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "수출 호황에 증시 뛰었는데…韓 순대외금융자산 ‘역대 2위’ 급감",
-              "link": "https://n.news.naver.com/mnews/article/123/0002383708?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9B%B0%EC%97%88%EB%8A%94%EB%8D%B0%20%E9%9F%93",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9B%B0%EC%97%88%EB%8A%94%EB%8D%B0%20%E9%9F%93"
-      },
-      "top_headlines": [
-        {
-          "title": "수출 호황에 증시 뛰었는데…韓 순대외금융자산 ‘역대 2위’ 급감",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002383708?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Ran, But 韓",
+      "term_ko": "뛰었는데 韓"
     },
     {
       "term": "Nikkei Hits Record",
-      "term_ko": "닛케이 히트 기록",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nikkei Hits Record",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Nikkei Hits Record High as AI Chip Stocks Power Japan Market Rally",
-              "link": "https://www.econotimes.com/Nikkei-Hits-Record-High-as-AI-Chip-Stocks-Power-Japan-Market-Rally-1742751"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nikkei%20Hits%20Record",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nikkei%20Hits%20Record"
-      },
-      "top_headlines": [
-        {
-          "title": "Nikkei Hits Record High as AI Chip Stocks Power Japan Market Rally",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nikkei-Hits-Record-High-as-AI-Chip-Stocks-Power-Japan-Market-Rally-1742751",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "닛케이 히트 기록"
     },
     {
       "term": "Late Wed Morning",
-      "term_ko": "수요일 늦은 아침",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Late Wed Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul shares sharply up late Wed. morning on AI-driven tech rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016101633?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Late%20Wed%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Late%20Wed%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares sharply up late Wed. morning on AI-driven tech rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016101633?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수요일 늦은 아침"
     },
     {
       "term": "Capitalization Becomes Third",
-      "term_ko": "대문자 사용이 세 번째가 됨",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Capitalization Becomes Third",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix surpasses $1 trillion in market capitalization, becomes third As...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000089035?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Capitalization%20Becomes%20Third",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Capitalization%20Becomes%20Third"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix surpasses $1 trillion in market capitalization, becomes third As...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000089035?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대문자 사용이 세 번째가 됨"
     },
     {
       "term": "Wall Street Futures",
-      "term_ko": "월스트리트 선물",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Futures",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as AI Rally Offsets Middle East Tensions",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-AI-Rally-Offsets-Middle-East-Tensions-1742741"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Futures",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Futures"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as AI Rally Offsets Middle East Tensions",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-AI-Rally-Offsets-Middle-East-Tensions-1742741",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 선물"
     },
     {
       "term": "Middle East Tensions",
-      "term_ko": "중동 긴장",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Middle East Tensions",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Futures Steady as AI Rally Offsets Middle East Tensions",
-              "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-AI-Rally-Offsets-Middle-East-Tensions-1742741"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Middle%20East%20Tensions",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Middle%20East%20Tensions"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Futures Steady as AI Rally Offsets Middle East Tensions",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Futures-Steady-as-AI-Rally-Offsets-Middle-East-Tensions-1742741",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중동 긴장"
     },
     {
-      "term": "AI Chip",
-      "term_ko": "AI 칩",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Chip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Nikkei Hits Record High as AI Chip Stocks Power Japan Market Rally",
-              "link": "https://www.econotimes.com/Nikkei-Hits-Record-High-as-AI-Chip-Stocks-Power-Japan-Market-Rally-1742751"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Chip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Chip"
-      },
-      "top_headlines": [
-        {
-          "title": "Nikkei Hits Record High as AI Chip Stocks Power Japan Market Rally",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nikkei-Hits-Record-High-as-AI-Chip-Stocks-Power-Japan-Market-Rally-1742751",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Chip",
+      "term_ko": "AI 칩"
     },
     {
       "term": "Power Japan",
-      "term_ko": "파워 재팬",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Power Japan",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Nikkei Hits Record High as AI Chip Stocks Power Japan Market Rally",
-              "link": "https://www.econotimes.com/Nikkei-Hits-Record-High-as-AI-Chip-Stocks-Power-Japan-Market-Rally-1742751"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Power%20Japan",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Power%20Japan"
-      },
-      "top_headlines": [
-        {
-          "title": "Nikkei Hits Record High as AI Chip Stocks Power Japan Market Rally",
-          "summary": "",
-          "link": "https://www.econotimes.com/Nikkei-Hits-Record-High-as-AI-Chip-Stocks-Power-Japan-Market-Rally-1742751",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "파워 재팬"
     },
     {
       "term": "Cap Club",
-      "term_ko": "캡 클럽",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Cap Club",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-27T12:40:25+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix joins $1tn market cap club after stock soars over 10%",
-              "link": "https://n.news.naver.com/mnews/article/009/0005685515?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Cap%20Club",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Cap%20Club"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix joins $1tn market cap club after stock soars over 10%",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005685515?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "캡 클럽"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-27T03:41:24.553Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-27T12:40:25+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "110,000 Units Supplied Lh",
+      "term_ko": "11만호 공급 LH"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-27T12:40:25+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-27T12:40:25+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "June Treasury Bonds",
+      "term_ko": "재경부 6월 국고채"
+    },
+    {
+      "term": "18k Gold Price May",
+      "term_ko": "18K 금시세 5월"
+    },
+    {
+      "term": "2nd All-time in Net Foreign Financial Assets",
+      "term_ko": "순대외금융자산 역대 2위"
+    },
+    {
+      "term": "Net Foreign Financial Assets Sequentially",
+      "term_ko": "순대외금융자산 2분기 연속"
+    },
+    {
+      "term": "Bitcoin Nasdaq and Value",
+      "term_ko": "비트코인 나스닥과 가치"
+    },
+    {
+      "term": "Less Deputy Prime Minister",
+      "term_ko": "적을 것 부총리"
+    },
+    {
+      "term": "Raise Fear Direct Hit",
+      "term_ko": "인상 공포 직격탄"
+    },
+    {
+      "term": "Sell Short Short Term Card Debt",
+      "term_ko": "단기 카드채 투매"
+    },
+    {
+      "term": "Financial Burden Business Case",
+      "term_ko": "재무부담 사업성 논란"
+    },
+    {
+      "term": "Stocks on an Export Boom",
+      "term_ko": "수출 호황에 증시"
+    },
+    {
+      "term": "Decrease Foreign Domestic Stock",
+      "term_ko": "감소 외국인 국내주식"
+    },
+    {
+      "term": "Impact of Valuation Spikes",
+      "term_ko": "평가액 급증 영향"
+    },
+    {
+      "term": "Ai-driven Tech Rally",
+      "term_ko": "AI 기반 기술 랠리"
+    },
+    {
+      "term": "Sk Hynix Joins",
+      "term_ko": "SK하이닉스 합류"
+    },
+    {
+      "term": "Sk Hynix Surpasses",
+      "term_ko": "SK하이닉스가 뛰어넘다"
+    },
+    {
+      "term": "Ai Rally Offsets",
+      "term_ko": "AI 랠리 상쇄"
+    },
+    {
+      "term": "Gap History",
+      "term_ko": "격차 역대"
+    },
+    {
+      "term": "Entering a Zone",
+      "term_ko": "구간 진입"
+    },
+    {
+      "term": "Tandem Downtrend",
+      "term_ko": "동반 하락세"
+    },
+    {
+      "term": "I Ran, But 韓",
+      "term_ko": "뛰었는데 韓"
+    },
+    {
+      "term": "Nikkei Hits Record",
+      "term_ko": "닛케이 히트 기록"
+    },
+    {
+      "term": "Late Wed Morning",
+      "term_ko": "수요일 늦은 아침"
+    },
+    {
+      "term": "Capitalization Becomes Third",
+      "term_ko": "대문자 사용이 세 번째가 됨"
+    },
+    {
+      "term": "Wall Street Futures",
+      "term_ko": "월스트리트 선물"
+    },
+    {
+      "term": "Middle East Tensions",
+      "term_ko": "중동 긴장"
+    },
+    {
+      "term": "Ai Chip",
+      "term_ko": "AI 칩"
+    },
+    {
+      "term": "Power Japan",
+      "term_ko": "파워 재팬"
+    },
+    {
+      "term": "Cap Club",
+      "term_ko": "캡 클럽"
+    }
+  ],
+  "translations": {
+    "110,000 Units Supplied Lh": {
+      "en": "110,000 Units Supplied Lh",
+      "ko": "11만호 공급 LH",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "June Treasury Bonds": {
+      "en": "June Treasury Bonds",
+      "ko": "재경부 6월 국고채",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "18k Gold Price May": {
+      "en": "18k Gold Price May",
+      "ko": "18K 금시세 5월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "2nd All-time in Net Foreign Financial Assets": {
+      "en": "2nd All-time in Net Foreign Financial Assets",
+      "ko": "순대외금융자산 역대 2위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Net Foreign Financial Assets Sequentially": {
+      "en": "Net Foreign Financial Assets Sequentially",
+      "ko": "순대외금융자산 2분기 연속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Bitcoin Nasdaq and Value": {
+      "en": "Bitcoin Nasdaq and Value",
+      "ko": "비트코인 나스닥과 가치",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Less Deputy Prime Minister": {
+      "en": "Less Deputy Prime Minister",
+      "ko": "적을 것 부총리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Raise Fear Direct Hit": {
+      "en": "Raise Fear Direct Hit",
+      "ko": "인상 공포 직격탄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Sell Short Short Term Card Debt": {
+      "en": "Sell Short Short Term Card Debt",
+      "ko": "단기 카드채 투매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Financial Burden Business Case": {
+      "en": "Financial Burden Business Case",
+      "ko": "재무부담 사업성 논란",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Stocks on an Export Boom": {
+      "en": "Stocks on an Export Boom",
+      "ko": "수출 호황에 증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Decrease Foreign Domestic Stock": {
+      "en": "Decrease Foreign Domestic Stock",
+      "ko": "감소 외국인 국내주식",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Impact of Valuation Spikes": {
+      "en": "Impact of Valuation Spikes",
+      "ko": "평가액 급증 영향",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Ai-driven Tech Rally": {
+      "en": "Ai-driven Tech Rally",
+      "ko": "AI 기반 기술 랠리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Sk Hynix Joins": {
+      "en": "Sk Hynix Joins",
+      "ko": "SK하이닉스 합류",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Sk Hynix Surpasses": {
+      "en": "Sk Hynix Surpasses",
+      "ko": "SK하이닉스가 뛰어넘다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Ai Rally Offsets": {
+      "en": "Ai Rally Offsets",
+      "ko": "AI 랠리 상쇄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Gap History": {
+      "en": "Gap History",
+      "ko": "격차 역대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Entering a Zone": {
+      "en": "Entering a Zone",
+      "ko": "구간 진입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Tandem Downtrend": {
+      "en": "Tandem Downtrend",
+      "ko": "동반 하락세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "I Ran, But 韓": {
+      "en": "I Ran, But 韓",
+      "ko": "뛰었는데 韓",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Nikkei Hits Record": {
+      "en": "Nikkei Hits Record",
+      "ko": "닛케이 히트 기록",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Late Wed Morning": {
+      "en": "Late Wed Morning",
+      "ko": "수요일 늦은 아침",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Capitalization Becomes Third": {
+      "en": "Capitalization Becomes Third",
+      "ko": "대문자 사용이 세 번째가 됨",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Wall Street Futures": {
+      "en": "Wall Street Futures",
+      "ko": "월스트리트 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Middle East Tensions": {
+      "en": "Middle East Tensions",
+      "ko": "중동 긴장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Ai Chip": {
+      "en": "Ai Chip",
+      "ko": "AI 칩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Power Japan": {
+      "en": "Power Japan",
+      "ko": "파워 재팬",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
+    },
+    "Cap Club": {
+      "en": "Cap Club",
+      "ko": "캡 클럽",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T09:43:58.477Z"
     }
   }
 }
