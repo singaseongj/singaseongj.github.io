@@ -1,1059 +1,425 @@
 {
+  "generatedAt": "2026-05-27T20:16:00.045Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-27",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Extended Chip Rally",
-      "term_ko": "확장 칩 랠리",
-      "significance_score": 532,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Extended Chip Rally",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares scale to new peak on extended chip rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016102659?sid=104"
-            },
-            {
-              "title": "(LEAD) Seoul shares scale to new peak on extended chip rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016102515?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Extended%20Chip%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Extended%20Chip%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares scale to new peak on extended chip rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016102659?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) Seoul shares scale to new peak on extended chip rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016102515?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "확장 칩 랠리"
     },
     {
       "term": "New Peak",
-      "term_ko": "새로운 피크",
-      "significance_score": 448,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "New Peak",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares scale to new peak on extended chip rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016102659?sid=104"
-            },
-            {
-              "title": "(LEAD) Seoul shares scale to new peak on extended chip rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016102515?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=New%20Peak",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=New%20Peak"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares scale to new peak on extended chip rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016102659?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) Seoul shares scale to new peak on extended chip rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016102515?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "새로운 피크"
     },
     {
-      "term": "30 trillion in U.S. equities",
-      "term_ko": "미국 주식 30조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 주식 30조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미국 주식 30조 달러, '블록체인'으로?...SEC 혁신 면제에 월가 주도권 ...",
-              "link": "http://coinreaders.com/238754"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%8B%9D%2030%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A3%BC%EC%8B%9D%2030%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "미국 주식 30조 달러, '블록체인'으로?...SEC 혁신 면제에 월가 주도권 ...",
-          "summary": "",
-          "link": "http://coinreaders.com/238754",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "30 Trillion in U.s. Equities",
+      "term_ko": "미국 주식 30조"
     },
     {
-      "term": "Calm down KOSPI 8100 level",
-      "term_ko": "진정에 코스피 8100선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "진정에 코스피 8100선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[마감시황] 유가·금리 진정에 코스피 8100선 돌파... 또 사상 최고치",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1376192"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%84%EC%A0%95%EC%97%90%20%EC%BD%94%EC%8A%A4%ED%94%BC%208100%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%84%EC%A0%95%EC%97%90%20%EC%BD%94%EC%8A%A4%ED%94%BC%208100%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[마감시황] 유가·금리 진정에 코스피 8100선 돌파... 또 사상 최고치",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1376192",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Calm Down Kospi 8100 Level",
+      "term_ko": "진정에 코스피 8100선"
     },
     {
-      "term": "Gold price quotes for today, May 28",
-      "term_ko": "오늘의 금값시세5월 28일자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세5월 28일자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(5월 28일자) 금값 6월 전망은",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3593678"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B85%EC%9B%94%2028%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B85%EC%9B%94%2028%EC%9D%BC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(5월 28일자) 금값 6월 전망은",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3593678",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Price Quotes for Today, May 28",
+      "term_ko": "오늘의 금값시세5월 28일자"
     },
     {
-      "term": "May rate hike",
-      "term_ko": "5월 기준금리 인상",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5월 기준금리 인상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "5월 기준금리 인상 VS 동결...전문가가 본 올해 전망은?",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3593592"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9B%94%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9B%94%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "5월 기준금리 인상 VS 동결...전문가가 본 올해 전망은?",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3593592",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "May Rate Hike",
+      "term_ko": "5월 기준금리 인상"
     },
     {
-      "term": "Close market oil rates",
-      "term_ko": "마감시황 유가 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마감시황 유가 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[마감시황] 유가·금리 진정에 코스피 8100선 돌파... 또 사상 최고치",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1376192"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EA%B0%90%EC%8B%9C%ED%99%A9%20%EC%9C%A0%EA%B0%80%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EA%B0%90%EC%8B%9C%ED%99%A9%20%EC%9C%A0%EA%B0%80%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[마감시황] 유가·금리 진정에 코스피 8100선 돌파... 또 사상 최고치",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1376192",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Close Market Oil Rates",
+      "term_ko": "마감시황 유가 금리"
     },
     {
-      "term": "Another all-time high",
-      "term_ko": "또 사상 최고치",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "또 사상 최고치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[마감시황] 유가·금리 진정에 코스피 8100선 돌파... 또 사상 최고치",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1376192"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%98%90%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EA%B3%A0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%98%90%20%EC%82%AC%EC%83%81%20%EC%B5%9C%EA%B3%A0%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[마감시황] 유가·금리 진정에 코스피 8100선 돌파... 또 사상 최고치",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1376192",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Another All-time High",
+      "term_ko": "또 사상 최고치"
     },
     {
-      "term": "Interest during rate hikes",
-      "term_ko": "금리 인상기 이자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인상기 이자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금리 인상기 이자 부담 덜어내려 실수요자들 몰려드는 보금자리론",
-              "link": "https://n.news.naver.com/mnews/article/023/0003978787?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EA%B8%B0%20%EC%9D%B4%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EA%B8%B0%20%EC%9D%B4%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "금리 인상기 이자 부담 덜어내려 실수요자들 몰려드는 보금자리론",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003978787?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest During Rate Hikes",
+      "term_ko": "금리 인상기 이자"
     },
     {
-      "term": "Ease the burden for real users",
-      "term_ko": "부담 덜어내려 실수요자들",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부담 덜어내려 실수요자들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금리 인상기 이자 부담 덜어내려 실수요자들 몰려드는 보금자리론",
-              "link": "https://n.news.naver.com/mnews/article/023/0003978787?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8B%B4%20%EB%8D%9C%EC%96%B4%EB%82%B4%EB%A0%A4%20%EC%8B%A4%EC%88%98%EC%9A%94%EC%9E%90%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8B%B4%20%EB%8D%9C%EC%96%B4%EB%82%B4%EB%A0%A4%20%EC%8B%A4%EC%88%98%EC%9A%94%EC%9E%90%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "금리 인상기 이자 부담 덜어내려 실수요자들 몰려드는 보금자리론",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003978787?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ease the Burden for Real Users",
+      "term_ko": "부담 덜어내려 실수요자들"
     },
     {
-      "term": "European EV Sales",
-      "term_ko": "유럽 전기차 판매",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "European EV Sales",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "European EV Sales Surge in April 2026 as Tesla and Chinese Automakers Gai...",
-              "link": "https://www.econotimes.com/European-EV-Sales-Surge-in-April-2026-as-Tesla-and-Chinese-Automakers-Gain-Ground-1742775"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=European%20EV%20Sales",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=European%20EV%20Sales"
-      },
-      "top_headlines": [
-        {
-          "title": "European EV Sales Surge in April 2026 as Tesla and Chinese Automakers Gai...",
-          "summary": "",
-          "link": "https://www.econotimes.com/European-EV-Sales-Surge-in-April-2026-as-Tesla-and-Chinese-Automakers-Gain-Ground-1742775",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "European Ev Sales",
+      "term_ko": "유럽 전기차 판매"
     },
     {
-      "term": "Chip Rally ETF",
-      "term_ko": "칩 랠리 ETF",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Chip Rally ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Chip rally, ETF debut propel KOSPI to record close above 8,200",
-              "link": "https://www.koreatimes.co.kr/path/A2026052715060001616"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Chip%20Rally%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Chip%20Rally%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "Chip rally, ETF debut propel KOSPI to record close above 8,200",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026052715060001616",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Chip Rally Etf",
+      "term_ko": "칩 랠리 ETF"
     },
     {
-      "term": "Debut Propel KOSPI",
-      "term_ko": "데뷔 프로펠러 코스피",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Debut Propel KOSPI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Chip rally, ETF debut propel KOSPI to record close above 8,200",
-              "link": "https://www.koreatimes.co.kr/path/A2026052715060001616"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Debut%20Propel%20KOSPI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Debut%20Propel%20KOSPI"
-      },
-      "top_headlines": [
-        {
-          "title": "Chip rally, ETF debut propel KOSPI to record close above 8,200",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026052715060001616",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Debut Propel Kospi",
+      "term_ko": "데뷔 프로펠러 코스피"
     },
     {
       "term": "Kospi Jumps 2.25%",
-      "term_ko": "코스피 2.25% 상승",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Jumps 2.25%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi jumps 2.25% after Micron rockets nearly 20% on UBS projection",
-              "link": "https://n.news.naver.com/mnews/article/640/0000089077?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Jumps%202.25%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Jumps%202.25%25"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi jumps 2.25% after Micron rockets nearly 20% on UBS projection",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000089077?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 2.25% 상승"
     },
     {
       "term": "Rockets Nearly 20%",
-      "term_ko": "로켓 거의 20%",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rockets Nearly 20%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi jumps 2.25% after Micron rockets nearly 20% on UBS projection",
-              "link": "https://n.news.naver.com/mnews/article/640/0000089077?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rockets%20Nearly%2020%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rockets%20Nearly%2020%25"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi jumps 2.25% after Micron rockets nearly 20% on UBS projection",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000089077?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "로켓 거의 20%"
     },
     {
       "term": "The Greatest Rise",
-      "term_ko": "역대급 상승",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "역대급 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피 8000시대에 공포지수도 역대급 상승",
-              "link": "https://www.m-i.kr/news/articleView.html?idxno=1376566"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%8C%80%EA%B8%89%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%8C%80%EA%B8%89%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 8000시대에 공포지수도 역대급 상승",
-          "summary": "",
-          "link": "https://www.m-i.kr/news/articleView.html?idxno=1376566",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "역대급 상승"
     },
     {
       "term": "The Flocking Nest",
-      "term_ko": "몰려드는 보금자리론",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "몰려드는 보금자리론",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금리 인상기 이자 부담 덜어내려 실수요자들 몰려드는 보금자리론",
-              "link": "https://n.news.naver.com/mnews/article/023/0003978787?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%A0%A4%EB%93%9C%EB%8A%94%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%A0%A4%EB%93%9C%EB%8A%94%20%EB%B3%B4%EA%B8%88%EC%9E%90%EB%A6%AC%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "금리 인상기 이자 부담 덜어내려 실수요자들 몰려드는 보금자리론",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003978787?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "몰려드는 보금자리론"
     },
     {
       "term": "Record Close Above",
-      "term_ko": "위 기록 닫기",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Record Close Above",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Chip rally, ETF debut propel KOSPI to record close above 8,200",
-              "link": "https://www.koreatimes.co.kr/path/A2026052715060001616"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Record%20Close%20Above",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Record%20Close%20Above"
-      },
-      "top_headlines": [
-        {
-          "title": "Chip rally, ETF debut propel KOSPI to record close above 8,200",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026052715060001616",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "위 기록 닫기"
     },
     {
-      "term": "UBS Projection",
-      "term_ko": "UBS 프로젝션",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "UBS Projection",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Kospi jumps 2.25% after Micron rockets nearly 20% on UBS projection",
-              "link": "https://n.news.naver.com/mnews/article/640/0000089077?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=UBS%20Projection",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=UBS%20Projection"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi jumps 2.25% after Micron rockets nearly 20% on UBS projection",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000089077?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ubs Projection",
+      "term_ko": "UBS 프로젝션"
     },
     {
-      "term": "LD Seoul",
-      "term_ko": "LD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares scale to new peak on extended chip rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016102659?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares scale to new peak on extended chip rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016102659?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
     },
     {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares scale to new peak on extended chip rally",
-              "link": "https://n.news.naver.com/mnews/article/001/0016102515?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares scale to new peak on extended chip rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016102515?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
     },
     {
       "term": "Chinese Automakers",
-      "term_ko": "중국 자동차 제조업체",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Chinese Automakers",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "European EV Sales Surge in April 2026 as Tesla and Chinese Automakers Gai...",
-              "link": "https://www.econotimes.com/European-EV-Sales-Surge-in-April-2026-as-Tesla-and-Chinese-Automakers-Gain-Ground-1742775"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Chinese%20Automakers",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Chinese%20Automakers"
-      },
-      "top_headlines": [
-        {
-          "title": "European EV Sales Surge in April 2026 as Tesla and Chinese Automakers Gai...",
-          "summary": "",
-          "link": "https://www.econotimes.com/European-EV-Sales-Surge-in-April-2026-as-Tesla-and-Chinese-Automakers-Gain-Ground-1742775",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중국 자동차 제조업체"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     },
     {
-      "term": "Bitcoin ETF Expectations",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Dollar exchange rate spikes",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "U.S. government shutdown crisis",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
-      "term": "South Korean stocks rebound",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-05-28T00:41:44+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "South Korean Stocks Rebound",
+      "term_ko": "한국 증시 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-27T15:42:50.325Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-28T00:41:44+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Extended Chip Rally",
+      "term_ko": "확장 칩 랠리"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-28T00:41:44+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-28T00:41:44+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "New Peak",
+      "term_ko": "새로운 피크"
+    },
+    {
+      "term": "30 Trillion in U.s. Equities",
+      "term_ko": "미국 주식 30조"
+    },
+    {
+      "term": "Calm Down Kospi 8100 Level",
+      "term_ko": "진정에 코스피 8100선"
+    },
+    {
+      "term": "Gold Price Quotes for Today, May 28",
+      "term_ko": "오늘의 금값시세5월 28일자"
+    },
+    {
+      "term": "May Rate Hike",
+      "term_ko": "5월 기준금리 인상"
+    },
+    {
+      "term": "Close Market Oil Rates",
+      "term_ko": "마감시황 유가 금리"
+    },
+    {
+      "term": "Another All-time High",
+      "term_ko": "또 사상 최고치"
+    },
+    {
+      "term": "Interest During Rate Hikes",
+      "term_ko": "금리 인상기 이자"
+    },
+    {
+      "term": "Ease the Burden for Real Users",
+      "term_ko": "부담 덜어내려 실수요자들"
+    },
+    {
+      "term": "European Ev Sales",
+      "term_ko": "유럽 전기차 판매"
+    },
+    {
+      "term": "Chip Rally Etf",
+      "term_ko": "칩 랠리 ETF"
+    },
+    {
+      "term": "Debut Propel Kospi",
+      "term_ko": "데뷔 프로펠러 코스피"
+    },
+    {
+      "term": "Kospi Jumps 2.25%",
+      "term_ko": "코스피 2.25% 상승"
+    },
+    {
+      "term": "Rockets Nearly 20%",
+      "term_ko": "로켓 거의 20%"
+    },
+    {
+      "term": "The Greatest Rise",
+      "term_ko": "역대급 상승"
+    },
+    {
+      "term": "The Flocking Nest",
+      "term_ko": "몰려드는 보금자리론"
+    },
+    {
+      "term": "Record Close Above",
+      "term_ko": "위 기록 닫기"
+    },
+    {
+      "term": "Ubs Projection",
+      "term_ko": "UBS 프로젝션"
+    },
+    {
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
+    },
+    {
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
+    },
+    {
+      "term": "Chinese Automakers",
+      "term_ko": "중국 자동차 제조업체"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    },
+    {
+      "term": "Bitcoin Etf Expectations",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Dollar Exchange Rate Spikes",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "U.s. Government Shutdown Crisis",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "South Korean Stocks Rebound",
+      "term_ko": "한국 증시 반등"
+    }
+  ],
+  "translations": {
+    "Extended Chip Rally": {
+      "en": "Extended Chip Rally",
+      "ko": "확장 칩 랠리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.045Z"
+    },
+    "New Peak": {
+      "en": "New Peak",
+      "ko": "새로운 피크",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.045Z"
+    },
+    "30 Trillion in U.s. Equities": {
+      "en": "30 Trillion in U.s. Equities",
+      "ko": "미국 주식 30조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.045Z"
+    },
+    "Calm Down Kospi 8100 Level": {
+      "en": "Calm Down Kospi 8100 Level",
+      "ko": "진정에 코스피 8100선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.045Z"
+    },
+    "Gold Price Quotes for Today, May 28": {
+      "en": "Gold Price Quotes for Today, May 28",
+      "ko": "오늘의 금값시세5월 28일자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.045Z"
+    },
+    "May Rate Hike": {
+      "en": "May Rate Hike",
+      "ko": "5월 기준금리 인상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.045Z"
+    },
+    "Close Market Oil Rates": {
+      "en": "Close Market Oil Rates",
+      "ko": "마감시황 유가 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Another All-time High": {
+      "en": "Another All-time High",
+      "ko": "또 사상 최고치",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Interest During Rate Hikes": {
+      "en": "Interest During Rate Hikes",
+      "ko": "금리 인상기 이자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Ease the Burden for Real Users": {
+      "en": "Ease the Burden for Real Users",
+      "ko": "부담 덜어내려 실수요자들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "European Ev Sales": {
+      "en": "European Ev Sales",
+      "ko": "유럽 전기차 판매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Chip Rally Etf": {
+      "en": "Chip Rally Etf",
+      "ko": "칩 랠리 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Debut Propel Kospi": {
+      "en": "Debut Propel Kospi",
+      "ko": "데뷔 프로펠러 코스피",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Kospi Jumps 2.25%": {
+      "en": "Kospi Jumps 2.25%",
+      "ko": "코스피 2.25% 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Rockets Nearly 20%": {
+      "en": "Rockets Nearly 20%",
+      "ko": "로켓 거의 20%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "The Greatest Rise": {
+      "en": "The Greatest Rise",
+      "ko": "역대급 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "The Flocking Nest": {
+      "en": "The Flocking Nest",
+      "ko": "몰려드는 보금자리론",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Record Close Above": {
+      "en": "Record Close Above",
+      "ko": "위 기록 닫기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Ubs Projection": {
+      "en": "Ubs Projection",
+      "ko": "UBS 프로젝션",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Ld Seoul": {
+      "en": "Ld Seoul",
+      "ko": "LD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Lead Seoul": {
+      "en": "Lead Seoul",
+      "ko": "LEAD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Chinese Automakers": {
+      "en": "Chinese Automakers",
+      "ko": "중국 자동차 제조업체",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Bitcoin Etf Expectations": {
+      "en": "Bitcoin Etf Expectations",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "Dollar Exchange Rate Spikes": {
+      "en": "Dollar Exchange Rate Spikes",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "U.s. Government Shutdown Crisis": {
+      "en": "U.s. Government Shutdown Crisis",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
+    },
+    "South Korean Stocks Rebound": {
+      "en": "South Korean Stocks Rebound",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-27T20:16:00.046Z"
     }
   }
 }
