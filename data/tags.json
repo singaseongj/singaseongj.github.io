@@ -1,1149 +1,439 @@
 {
+  "generatedAt": "2026-05-28T15:50:11.880Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-05-28",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "KOSPI Snaps 4-day",
-      "term_ko": "코스피 4일 스냅",
-      "significance_score": 616,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Snaps 4-day",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(2nd LD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016105541?sid=104"
-            },
-            {
-              "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Snaps%204-day",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Snaps%204-day"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016105541?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Snaps 4-day",
+      "term_ko": "코스피 4일 스냅"
     },
     {
-      "term": "AI Rally Pause",
-      "term_ko": "AI 랠리 일시 중지",
-      "significance_score": 588,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Rally Pause",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(2nd LD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016105541?sid=104"
-            },
-            {
-              "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Rally%20Pause",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Rally%20Pause"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016105541?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Rally Pause",
+      "term_ko": "AI 랠리 일시 중지"
     },
     {
       "term": "Winning Streak",
-      "term_ko": "연승 행진",
-      "significance_score": 448,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Winning Streak",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-20",
-              "timestamp": 1779202800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(2nd LD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016105541?sid=104"
-            },
-            {
-              "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Winning%20Streak",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Winning%20Streak"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016105541?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.004738,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779202800000
-      }
+      "term_ko": "연승 행진"
     },
     {
-      "term": "AI while holding",
-      "term_ko": "붙잡는 동안 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "붙잡는 동안 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"코인 붙잡는 동안 AI 주식은 폭주\"...암호화폐, 역발상 투자 기회 남았...",
-              "link": "http://coinreaders.com/238992"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%99%EC%9E%A1%EB%8A%94%20%EB%8F%99%EC%95%88%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%99%EC%9E%A1%EB%8A%94%20%EB%8F%99%EC%95%88%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "\"코인 붙잡는 동안 AI 주식은 폭주\"...암호화폐, 역발상 투자 기회 남았...",
-          "summary": "",
-          "link": "http://coinreaders.com/238992",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai While Holding",
+      "term_ko": "붙잡는 동안 AI"
     },
     {
-      "term": "Middle East Risk ETF",
-      "term_ko": "중동 리스크 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중동 리스크 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[코인시황] 비트코인 일시 7만3000달러도 붕괴…중동 리스크·ETF 자금 이...",
-              "link": "https://www.newspim.com/news/view/20260528001193"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%20%EB%A6%AC%EC%8A%A4%ED%81%AC%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%20%EB%A6%AC%EC%8A%A4%ED%81%AC%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인시황] 비트코인 일시 7만3000달러도 붕괴…중동 리스크·ETF 자금 이...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260528001193",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Middle East Risk Etf",
+      "term_ko": "중동 리스크 ETF"
     },
     {
-      "term": "IRS Rate Short Term",
-      "term_ko": "IRS 금리 단기구간",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IRS 금리 단기구간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IRS 금리, 단기구간 위주로 일제히 상승…\"금통위, 예상보다 더 매파적...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417296"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IRS%20%EA%B8%88%EB%A6%AC%20%EB%8B%A8%EA%B8%B0%EA%B5%AC%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IRS%20%EA%B8%88%EB%A6%AC%20%EB%8B%A8%EA%B8%B0%EA%B5%AC%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "IRS 금리, 단기구간 위주로 일제히 상승…\"금통위, 예상보다 더 매파적...",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417296",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Irs Rate Short Term",
+      "term_ko": "IRS 금리 단기구간"
     },
     {
-      "term": "Up to 2 times per year",
-      "term_ko": "연내 최대 2회",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연내 최대 2회",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "韓銀, '연내 최대 2회 인상' 신호…신현송 \"금리 인상 당위성, 인식 같이...",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=658351"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EB%82%B4%20%EC%B5%9C%EB%8C%80%202%ED%9A%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EB%82%B4%20%EC%B5%9C%EB%8C%80%202%ED%9A%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "韓銀, '연내 최대 2회 인상' 신호…신현송 \"금리 인상 당위성, 인식 같이...",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=658351",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to 2 Times Per Year",
+      "term_ko": "연내 최대 2회"
     },
     {
-      "term": "K-Brokerage Board Inspection",
-      "term_ko": "K-증권사 이사회 점검",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "K-증권사 이사회 점검",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[K-증권사 이사회 점검] 하나증권 대표 강성묵 임추위 빠지며 독립성에...",
-              "link": "https://www.huffingtonpost.kr/article/257524"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=K-%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EC%9D%B4%EC%82%AC%ED%9A%8C%20%EC%A0%90%EA%B2%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=K-%EC%A6%9D%EA%B6%8C%EC%82%AC%20%EC%9D%B4%EC%82%AC%ED%9A%8C%20%EC%A0%90%EA%B2%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[K-증권사 이사회 점검] 하나증권 대표 강성묵 임추위 빠지며 독립성에...",
-          "summary": "",
-          "link": "https://www.huffingtonpost.kr/article/257524",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "K-brokerage Board Inspection",
+      "term_ko": "K-증권사 이사회 점검"
     },
     {
-      "term": "Sung-mook Kang, CEO of Hana Securities",
-      "term_ko": "하나증권 대표 강성묵",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나증권 대표 강성묵",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[K-증권사 이사회 점검] 하나증권 대표 강성묵 임추위 빠지며 독립성에...",
-              "link": "https://www.huffingtonpost.kr/article/257524"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EC%A6%9D%EA%B6%8C%20%EB%8C%80%ED%91%9C%20%EA%B0%95%EC%84%B1%EB%AC%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EC%A6%9D%EA%B6%8C%20%EB%8C%80%ED%91%9C%20%EA%B0%95%EC%84%B1%EB%AC%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "[K-증권사 이사회 점검] 하나증권 대표 강성묵 임추위 빠지며 독립성에...",
-          "summary": "",
-          "link": "https://www.huffingtonpost.kr/article/257524",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sung-mook Kang, Ceo of Hana Securities",
+      "term_ko": "하나증권 대표 강성묵"
     },
     {
-      "term": "Backward-looking investment opportunities",
-      "term_ko": "역발상 투자 기회",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "역발상 투자 기회",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"코인 붙잡는 동안 AI 주식은 폭주\"...암호화폐, 역발상 투자 기회 남았...",
-              "link": "http://coinreaders.com/238992"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%B0%9C%EC%83%81%20%ED%88%AC%EC%9E%90%20%EA%B8%B0%ED%9A%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%B0%9C%EC%83%81%20%ED%88%AC%EC%9E%90%20%EA%B8%B0%ED%9A%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"코인 붙잡는 동안 AI 주식은 폭주\"...암호화폐, 역발상 투자 기회 남았...",
-          "summary": "",
-          "link": "http://coinreaders.com/238992",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Backward-looking Investment Opportunities",
+      "term_ko": "역발상 투자 기회"
     },
     {
-      "term": "Extend stock market trading hours",
-      "term_ko": "증시 거래시간 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 거래시간 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'증시 거래시간 확대' 갈등 지속…\"글로벌 경쟁력\" vs \"부작용 우려\"",
-              "link": "http://www.4th.kr/news/articleView.html?idxno=2112361"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EA%B1%B0%EB%9E%98%EC%8B%9C%EA%B0%84%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EA%B1%B0%EB%9E%98%EC%8B%9C%EA%B0%84%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "'증시 거래시간 확대' 갈등 지속…\"글로벌 경쟁력\" vs \"부작용 우려\"",
-          "summary": "",
-          "link": "http://www.4th.kr/news/articleView.html?idxno=2112361",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Extend Stock Market Trading Hours",
+      "term_ko": "증시 거래시간 확대"
     },
     {
-      "term": "Conflict persistence global",
-      "term_ko": "갈등 지속 글로벌",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "갈등 지속 글로벌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'증시 거래시간 확대' 갈등 지속…\"글로벌 경쟁력\" vs \"부작용 우려\"",
-              "link": "http://www.4th.kr/news/articleView.html?idxno=2112361"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%88%EB%93%B1%20%EC%A7%80%EC%86%8D%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%88%EB%93%B1%20%EC%A7%80%EC%86%8D%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "'증시 거래시간 확대' 갈등 지속…\"글로벌 경쟁력\" vs \"부작용 우려\"",
-          "summary": "",
-          "link": "http://www.4th.kr/news/articleView.html?idxno=2112361",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Conflict Persistence Global",
+      "term_ko": "갈등 지속 글로벌"
     },
     {
-      "term": "Highly inflated home prices",
-      "term_ko": "고물가 고환율 집값",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고물가 고환율 집값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "고물가·고환율·집값 '삼중 압박'…한은 '금리 인상 명분 쌓였다' 판단",
-              "link": "https://n.news.naver.com/mnews/article/469/0000933273?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EB%AC%BC%EA%B0%80%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%91%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EB%AC%BC%EA%B0%80%20%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%A7%91%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "고물가·고환율·집값 '삼중 압박'…한은 '금리 인상 명분 쌓였다' 판단",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/469/0000933273?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Highly Inflated Home Prices",
+      "term_ko": "고물가 고환율 집값"
     },
     {
-      "term": "Rationale for rate hikes",
-      "term_ko": "금리 인상 명분",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인상 명분",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "고물가·고환율·집값 '삼중 압박'…한은 '금리 인상 명분 쌓였다' 판단",
-              "link": "https://n.news.naver.com/mnews/article/469/0000933273?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EB%AA%85%EB%B6%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EB%AA%85%EB%B6%84"
-      },
-      "top_headlines": [
-        {
-          "title": "고물가·고환율·집값 '삼중 압박'…한은 '금리 인상 명분 쌓였다' 판단",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/469/0000933273?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rationale for Rate Hikes",
+      "term_ko": "금리 인상 명분"
     },
     {
       "term": "Impression Signal Hyunsong Shin",
-      "term_ko": "인상 신호 신현송",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인상 신호 신현송",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "韓銀, '연내 최대 2회 인상' 신호…신현송 \"금리 인상 당위성, 인식 같이...",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=658351"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%20%EC%8B%A0%ED%98%B8%20%EC%8B%A0%ED%98%84%EC%86%A1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%20%EC%8B%A0%ED%98%B8%20%EC%8B%A0%ED%98%84%EC%86%A1"
-      },
-      "top_headlines": [
-        {
-          "title": "韓銀, '연내 최대 2회 인상' 신호…신현송 \"금리 인상 당위성, 인식 같이...",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=658351",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인상 신호 신현송"
     },
     {
-      "term": "Bond-Close Weakness Plotting",
-      "term_ko": "채권-마감 약세 플래트닝",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "채권-마감 약세 플래트닝",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[채권-마감] 약세 플래트닝…매파 금통위·이란 긴장 재점화",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B1%84%EA%B6%8C-%EB%A7%88%EA%B0%90%20%EC%95%BD%EC%84%B8%20%ED%94%8C%EB%9E%98%ED%8A%B8%EB%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B1%84%EA%B6%8C-%EB%A7%88%EA%B0%90%20%EC%95%BD%EC%84%B8%20%ED%94%8C%EB%9E%98%ED%8A%B8%EB%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[채권-마감] 약세 플래트닝…매파 금통위·이란 긴장 재점화",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bond-close Weakness Plotting",
+      "term_ko": "채권-마감 약세 플래트닝"
     },
     {
-      "term": "Hawkish austerity Iran",
-      "term_ko": "매파 금통위 이란",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매파 금통위 이란",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[채권-마감] 약세 플래트닝…매파 금통위·이란 긴장 재점화",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%ED%8C%8C%20%EA%B8%88%ED%86%B5%EC%9C%84%20%EC%9D%B4%EB%9E%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%ED%8C%8C%20%EA%B8%88%ED%86%B5%EC%9C%84%20%EC%9D%B4%EB%9E%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[채권-마감] 약세 플래트닝…매파 금통위·이란 긴장 재점화",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hawkish Austerity Iran",
+      "term_ko": "매파 금통위 이란"
     },
     {
       "term": "Click Stock Market",
-      "term_ko": "클릭 증시 韓",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "클릭 증시 韓",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "['클릭' 증시] 韓 반도체 호황 속 제조업 공동화",
-              "link": "http://www.00news.co.kr/news/articleView.html?idxno=104115"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%B4%EB%A6%AD%20%EC%A6%9D%EC%8B%9C%20%E9%9F%93",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%B4%EB%A6%AD%20%EC%A6%9D%EC%8B%9C%20%E9%9F%93"
-      },
-      "top_headlines": [
-        {
-          "title": "['클릭' 증시] 韓 반도체 호황 속 제조업 공동화",
-          "summary": "",
-          "link": "http://www.00news.co.kr/news/articleView.html?idxno=104115",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "클릭 증시 韓"
     },
     {
-      "term": "Amid the semiconductor boom",
-      "term_ko": "반도체 호황 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 호황 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "['클릭' 증시] 韓 반도체 호황 속 제조업 공동화",
-              "link": "http://www.00news.co.kr/news/articleView.html?idxno=104115"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%98%B8%ED%99%A9%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%98%B8%ED%99%A9%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "['클릭' 증시] 韓 반도체 호황 속 제조업 공동화",
-          "summary": "",
-          "link": "http://www.00news.co.kr/news/articleView.html?idxno=104115",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amid the Semiconductor Boom",
+      "term_ko": "반도체 호황 속"
     },
     {
-      "term": "Mainly up in unison",
-      "term_ko": "위주로 일제히 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "위주로 일제히 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IRS 금리, 단기구간 위주로 일제히 상승…\"금통위, 예상보다 더 매파적...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417296"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%EC%A3%BC%EB%A1%9C%20%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%EC%A3%BC%EB%A1%9C%20%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "IRS 금리, 단기구간 위주로 일제히 상승…\"금통위, 예상보다 더 매파적...",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417296",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mainly Up in Unison",
+      "term_ko": "위주로 일제히 상승"
     },
     {
-      "term": "More than the Fed expected",
-      "term_ko": "금통위 예상보다 더",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금통위 예상보다 더",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "IRS 금리, 단기구간 위주로 일제히 상승…\"금통위, 예상보다 더 매파적...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417296"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%ED%86%B5%EC%9C%84%20%EC%98%88%EC%83%81%EB%B3%B4%EB%8B%A4%20%EB%8D%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%ED%86%B5%EC%9C%84%20%EC%98%88%EC%83%81%EB%B3%B4%EB%8B%A4%20%EB%8D%94"
-      },
-      "top_headlines": [
-        {
-          "title": "IRS 금리, 단기구간 위주로 일제히 상승…\"금통위, 예상보다 더 매파적...",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417296",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "More Than the Fed Expected",
+      "term_ko": "금통위 예상보다 더"
     },
     {
-      "term": "Investors Chase US",
-      "term_ko": "투자자들이 미국을 쫓다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investors Chase US",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Korean investors chase US stocks despite Kospi rally",
-              "link": "https://n.news.naver.com/mnews/article/044/0000284677?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Chase%20US",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Chase%20US"
-      },
-      "top_headlines": [
-        {
-          "title": "Korean investors chase US stocks despite Kospi rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000284677?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Investors Chase Us",
+      "term_ko": "투자자들이 미국을 쫓다"
     },
     {
-      "term": "Lumbar fallout",
-      "term_ko": "임추위 빠지며",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "임추위 빠지며",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[K-증권사 이사회 점검] 하나증권 대표 강성묵 임추위 빠지며 독립성에...",
-              "link": "https://www.huffingtonpost.kr/article/257524"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%84%EC%B6%94%EC%9C%84%20%EB%B9%A0%EC%A7%80%EB%A9%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%84%EC%B6%94%EC%9C%84%20%EB%B9%A0%EC%A7%80%EB%A9%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[K-증권사 이사회 점검] 하나증권 대표 강성묵 임추위 빠지며 독립성에...",
-          "summary": "",
-          "link": "https://www.huffingtonpost.kr/article/257524",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lumbar Fallout",
+      "term_ko": "임추위 빠지며"
     },
     {
-      "term": "Concerns about side effects",
-      "term_ko": "부작용 우려",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부작용 우려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'증시 거래시간 확대' 갈등 지속…\"글로벌 경쟁력\" vs \"부작용 우려\"",
-              "link": "http://www.4th.kr/news/articleView.html?idxno=2112361"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EC%9E%91%EC%9A%A9%20%EC%9A%B0%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EC%9E%91%EC%9A%A9%20%EC%9A%B0%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "'증시 거래시간 확대' 갈등 지속…\"글로벌 경쟁력\" vs \"부작용 우려\"",
-          "summary": "",
-          "link": "http://www.4th.kr/news/articleView.html?idxno=2112361",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Concerns About Side Effects",
+      "term_ko": "부작용 우려"
     },
     {
-      "term": "Stacked judgment",
-      "term_ko": "쌓였다 판단",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "쌓였다 판단",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "고물가·고환율·집값 '삼중 압박'…한은 '금리 인상 명분 쌓였다' 판단",
-              "link": "https://n.news.naver.com/mnews/article/469/0000933273?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8C%93%EC%98%80%EB%8B%A4%20%ED%8C%90%EB%8B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8C%93%EC%98%80%EB%8B%A4%20%ED%8C%90%EB%8B%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "고물가·고환율·집값 '삼중 압박'…한은 '금리 인상 명분 쌓였다' 판단",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/469/0000933273?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stacked Judgment",
+      "term_ko": "쌓였다 판단"
     },
     {
-      "term": "Authoritative awareness",
-      "term_ko": "당위성 인식",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "당위성 인식",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "韓銀, '연내 최대 2회 인상' 신호…신현송 \"금리 인상 당위성, 인식 같이...",
-              "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=658351"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B9%EC%9C%84%EC%84%B1%20%EC%9D%B8%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B9%EC%9C%84%EC%84%B1%20%EC%9D%B8%EC%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "韓銀, '연내 최대 2회 인상' 신호…신현송 \"금리 인상 당위성, 인식 같이...",
-          "summary": "",
-          "link": "https://www.kfenews.co.kr/news/articleView.html?idxno=658351",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Authoritative Awareness",
+      "term_ko": "당위성 인식"
     },
     {
-      "term": "Reignite tension",
-      "term_ko": "긴장 재점화",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "긴장 재점화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[채권-마감] 약세 플래트닝…매파 금통위·이란 긴장 재점화",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B4%EC%9E%A5%20%EC%9E%AC%EC%A0%90%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B4%EC%9E%A5%20%EC%9E%AC%EC%A0%90%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[채권-마감] 약세 플래트닝…매파 금통위·이란 긴장 재점화",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Reignite Tension",
+      "term_ko": "긴장 재점화"
     },
     {
-      "term": "Manufacturing collaboration",
-      "term_ko": "제조업 공동화",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "제조업 공동화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "['클릭' 증시] 韓 반도체 호황 속 제조업 공동화",
-              "link": "http://www.00news.co.kr/news/articleView.html?idxno=104115"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%A1%B0%EC%97%85%20%EA%B3%B5%EB%8F%99%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%A1%B0%EC%97%85%20%EA%B3%B5%EB%8F%99%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "['클릭' 증시] 韓 반도체 호황 속 제조업 공동화",
-          "summary": "",
-          "link": "http://www.00news.co.kr/news/articleView.html?idxno=104115",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Manufacturing Collaboration",
+      "term_ko": "제조업 공동화"
     },
     {
       "term": "Despite Kospi Rally",
-      "term_ko": "코스피 랠리에도 불구하고",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Despite Kospi Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Korean investors chase US stocks despite Kospi rally",
-              "link": "https://n.news.naver.com/mnews/article/044/0000284677?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Despite%20Kospi%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Despite%20Kospi%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "Korean investors chase US stocks despite Kospi rally",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000284677?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피 랠리에도 불구하고"
     },
     {
       "term": "Renewed Iran",
-      "term_ko": "갱신된 이란",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Renewed Iran",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-05-28T19:03:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Renewed%20Iran",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Renewed%20Iran"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) KOSPI snaps 4-day winning streak on AI rally pause, renewed Iran t...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016105428?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "갱신된 이란"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-28T10:04:14.087Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-05-28T19:03:15+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Kospi Snaps 4-day",
+      "term_ko": "코스피 4일 스냅"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-05-28T19:03:15+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-05-28T19:03:15+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Ai Rally Pause",
+      "term_ko": "AI 랠리 일시 중지"
+    },
+    {
+      "term": "Winning Streak",
+      "term_ko": "연승 행진"
+    },
+    {
+      "term": "Ai While Holding",
+      "term_ko": "붙잡는 동안 AI"
+    },
+    {
+      "term": "Middle East Risk Etf",
+      "term_ko": "중동 리스크 ETF"
+    },
+    {
+      "term": "Irs Rate Short Term",
+      "term_ko": "IRS 금리 단기구간"
+    },
+    {
+      "term": "Up to 2 Times Per Year",
+      "term_ko": "연내 최대 2회"
+    },
+    {
+      "term": "K-brokerage Board Inspection",
+      "term_ko": "K-증권사 이사회 점검"
+    },
+    {
+      "term": "Sung-mook Kang, Ceo of Hana Securities",
+      "term_ko": "하나증권 대표 강성묵"
+    },
+    {
+      "term": "Backward-looking Investment Opportunities",
+      "term_ko": "역발상 투자 기회"
+    },
+    {
+      "term": "Extend Stock Market Trading Hours",
+      "term_ko": "증시 거래시간 확대"
+    },
+    {
+      "term": "Conflict Persistence Global",
+      "term_ko": "갈등 지속 글로벌"
+    },
+    {
+      "term": "Highly Inflated Home Prices",
+      "term_ko": "고물가 고환율 집값"
+    },
+    {
+      "term": "Rationale for Rate Hikes",
+      "term_ko": "금리 인상 명분"
+    },
+    {
+      "term": "Impression Signal Hyunsong Shin",
+      "term_ko": "인상 신호 신현송"
+    },
+    {
+      "term": "Bond-close Weakness Plotting",
+      "term_ko": "채권-마감 약세 플래트닝"
+    },
+    {
+      "term": "Hawkish Austerity Iran",
+      "term_ko": "매파 금통위 이란"
+    },
+    {
+      "term": "Click Stock Market",
+      "term_ko": "클릭 증시 韓"
+    },
+    {
+      "term": "Amid the Semiconductor Boom",
+      "term_ko": "반도체 호황 속"
+    },
+    {
+      "term": "Mainly Up in Unison",
+      "term_ko": "위주로 일제히 상승"
+    },
+    {
+      "term": "More Than the Fed Expected",
+      "term_ko": "금통위 예상보다 더"
+    },
+    {
+      "term": "Investors Chase Us",
+      "term_ko": "투자자들이 미국을 쫓다"
+    },
+    {
+      "term": "Lumbar Fallout",
+      "term_ko": "임추위 빠지며"
+    },
+    {
+      "term": "Concerns About Side Effects",
+      "term_ko": "부작용 우려"
+    },
+    {
+      "term": "Stacked Judgment",
+      "term_ko": "쌓였다 판단"
+    },
+    {
+      "term": "Authoritative Awareness",
+      "term_ko": "당위성 인식"
+    },
+    {
+      "term": "Reignite Tension",
+      "term_ko": "긴장 재점화"
+    },
+    {
+      "term": "Manufacturing Collaboration",
+      "term_ko": "제조업 공동화"
+    },
+    {
+      "term": "Despite Kospi Rally",
+      "term_ko": "코스피 랠리에도 불구하고"
+    },
+    {
+      "term": "Renewed Iran",
+      "term_ko": "갱신된 이란"
+    }
+  ],
+  "translations": {
+    "Kospi Snaps 4-day": {
+      "en": "Kospi Snaps 4-day",
+      "ko": "코스피 4일 스냅",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Ai Rally Pause": {
+      "en": "Ai Rally Pause",
+      "ko": "AI 랠리 일시 중지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Winning Streak": {
+      "en": "Winning Streak",
+      "ko": "연승 행진",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Ai While Holding": {
+      "en": "Ai While Holding",
+      "ko": "붙잡는 동안 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Middle East Risk Etf": {
+      "en": "Middle East Risk Etf",
+      "ko": "중동 리스크 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Irs Rate Short Term": {
+      "en": "Irs Rate Short Term",
+      "ko": "IRS 금리 단기구간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Up to 2 Times Per Year": {
+      "en": "Up to 2 Times Per Year",
+      "ko": "연내 최대 2회",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "K-brokerage Board Inspection": {
+      "en": "K-brokerage Board Inspection",
+      "ko": "K-증권사 이사회 점검",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Sung-mook Kang, Ceo of Hana Securities": {
+      "en": "Sung-mook Kang, Ceo of Hana Securities",
+      "ko": "하나증권 대표 강성묵",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Backward-looking Investment Opportunities": {
+      "en": "Backward-looking Investment Opportunities",
+      "ko": "역발상 투자 기회",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Extend Stock Market Trading Hours": {
+      "en": "Extend Stock Market Trading Hours",
+      "ko": "증시 거래시간 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Conflict Persistence Global": {
+      "en": "Conflict Persistence Global",
+      "ko": "갈등 지속 글로벌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Highly Inflated Home Prices": {
+      "en": "Highly Inflated Home Prices",
+      "ko": "고물가 고환율 집값",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Rationale for Rate Hikes": {
+      "en": "Rationale for Rate Hikes",
+      "ko": "금리 인상 명분",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Impression Signal Hyunsong Shin": {
+      "en": "Impression Signal Hyunsong Shin",
+      "ko": "인상 신호 신현송",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Bond-close Weakness Plotting": {
+      "en": "Bond-close Weakness Plotting",
+      "ko": "채권-마감 약세 플래트닝",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Hawkish Austerity Iran": {
+      "en": "Hawkish Austerity Iran",
+      "ko": "매파 금통위 이란",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Click Stock Market": {
+      "en": "Click Stock Market",
+      "ko": "클릭 증시 韓",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Amid the Semiconductor Boom": {
+      "en": "Amid the Semiconductor Boom",
+      "ko": "반도체 호황 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Mainly Up in Unison": {
+      "en": "Mainly Up in Unison",
+      "ko": "위주로 일제히 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "More Than the Fed Expected": {
+      "en": "More Than the Fed Expected",
+      "ko": "금통위 예상보다 더",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Investors Chase Us": {
+      "en": "Investors Chase Us",
+      "ko": "투자자들이 미국을 쫓다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Lumbar Fallout": {
+      "en": "Lumbar Fallout",
+      "ko": "임추위 빠지며",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Concerns About Side Effects": {
+      "en": "Concerns About Side Effects",
+      "ko": "부작용 우려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Stacked Judgment": {
+      "en": "Stacked Judgment",
+      "ko": "쌓였다 판단",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Authoritative Awareness": {
+      "en": "Authoritative Awareness",
+      "ko": "당위성 인식",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Reignite Tension": {
+      "en": "Reignite Tension",
+      "ko": "긴장 재점화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Manufacturing Collaboration": {
+      "en": "Manufacturing Collaboration",
+      "ko": "제조업 공동화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Despite Kospi Rally": {
+      "en": "Despite Kospi Rally",
+      "ko": "코스피 랠리에도 불구하고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
+    },
+    "Renewed Iran": {
+      "en": "Renewed Iran",
+      "ko": "갱신된 이란",
+      "translator": "pre-collected",
+      "cachedAt": "2026-05-28T15:50:11.880Z"
     }
   }
 }
