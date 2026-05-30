@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-05-30T22:29:42+09:00 (KST)**
+- Generated: **2026-05-31T04:14:58+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -197,7 +197,15 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Broadcom
 
-### AGGRESSIVE (3)
+### AGGRESSIVE (4)
+
+**Monster Beverage** (MNST)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-4.1%**, 20d **1.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Monster%20Beverage
 
 **ON Semiconductor** (ON)
 
