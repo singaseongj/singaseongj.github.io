@@ -1,18 +1,11 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-05-31T22:46:53+09:00 (KST)**
+- Generated: **2026-06-01T04:19:11+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
-
-**ISC** (ISCD.TA)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
-- Returns: 5d **-0.4%**, 20d **-2.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=ISC
 
 **NHN KCP** (060250.KQ)
 
@@ -21,6 +14,14 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=NHN%20KCP
+
+**더블유씨피** (393890.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.2%**, 20d **0.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EB%8D%94%EB%B8%94%EC%9C%A0%EC%94%A8%ED%94%BC
 
 **아프리카TV** (067160.KQ)
 
@@ -48,13 +49,13 @@
 
 ### AGGRESSIVE (5)
 
-**더블유씨피** (393890.KQ)
+**셀트리온헬스케어** (091990.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.2%**, 20d **0.9%**; volatility (20d): **unknown**
+- Returns: 5d **0.0%**, 20d **0.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EB%8D%94%EB%B8%94%EC%9C%A0%EC%94%A8%ED%94%BC
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4
 
 **솔브레인** (357780.KQ)
 
@@ -197,7 +198,14 @@
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Verisk%20Analytics
 
-### AGGRESSIVE (3)
+### AGGRESSIVE (5)
+
+**Mercado Libre** (MELI)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.3%**, 20d **1.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=Mercado%20Libre
 
 **Monster Beverage** (MNST)
 
@@ -214,6 +222,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Verisk%20Analytics
+
+**Xcel Energy** (XEL)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.4%**, 20d **0.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=Xcel%20Energy
 
 **Xcel Energy** (XEL)
 
