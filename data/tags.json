@@ -1,425 +1,1107 @@
 {
-  "generatedAt": "2026-06-01T17:38:15.017Z",
-  "timezone": "Asia/Seoul",
   "date": "2026-06-01",
   "window": "12_hours",
   "total_phrases": 29,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "Board of Directors Norwegian Sovereign Wealth Fund",
-      "term_ko": "이사회 노르웨이 국부펀드"
-    },
-    {
-      "term": "Chairman, Korea Exchange Wfe",
-      "term_ko": "한국거래소 이사장 WFE"
-    },
-    {
-      "term": "Eunbo Jung, Chairman Wfe",
-      "term_ko": "정은보 이사장 WFE"
-    },
-    {
-      "term": "Delivering 1 Million Per Month",
-      "term_ko": "배달하며 매달 100만"
-    },
-    {
-      "term": "300 Million in New Stock",
-      "term_ko": "신보 3억 달러"
-    },
-    {
-      "term": "Leave for an Interview",
-      "term_ko": "면담 위해 출국"
-    },
-    {
-      "term": "Youtubers Are Leaving",
-      "term_ko": "유튜버 다들 떠날"
-    },
-    {
-      "term": "Not Even on Payday Anymore",
-      "term_ko": "이젠 월급날에도 안"
-    },
-    {
-      "term": "Going Out of Business While Self-employed",
-      "term_ko": "중 자영업자 폐업"
-    },
-    {
-      "term": "Incheon Chudam University Sasang",
-      "term_ko": "인천 주담대 사상"
-    },
-    {
-      "term": "Hyunsong Shin, President",
-      "term_ko": "신현송 한은 총재"
-    },
-    {
-      "term": "Room to Raise Rates",
-      "term_ko": "금리 올릴 여건"
-    },
-    {
-      "term": "Dollar System Boundaries",
-      "term_ko": "달러 체제 경계선"
-    },
-    {
-      "term": "Successful International Bond Issuance",
-      "term_ko": "해외채권 발행 성공"
-    },
-    {
-      "term": "Weathering Global Volatility",
-      "term_ko": "글로벌 변동성 뚫고"
-    },
-    {
-      "term": "Largest Etf Manager",
-      "term_ko": "최대 ETF 매니저"
-    },
-    {
-      "term": "Global Etf Assets",
-      "term_ko": "글로벌 ETF 자산"
-    },
-    {
-      "term": "Asset Surpasses 263.7",
-      "term_ko": "자산 263.7% 초과"
-    },
-    {
-      "term": "Softbank Becomes Japans",
-      "term_ko": "소프트뱅크, 일본이 되다"
-    },
-    {
-      "term": "Most Valuable Company",
-      "term_ko": "가장 가치 있는 기업"
-    },
-    {
-      "term": "Mirae Asset Global",
-      "term_ko": "미래에셋 글로벌"
-    },
-    {
-      "term": "Ai-fueled Rally",
-      "term_ko": "AI 기반 랠리"
-    },
-    {
-      "term": "Investments Becomes",
-      "term_ko": "투자가 되다"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
-    },
-    {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "코스피, 외국인 매수세에 반등"
-    },
-    {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "금리 인하 기대감 상승"
-    },
-    {
-      "term": "Bitcoin Etf Expectations",
-      "term_ko": "비트코인 ETF 기대"
-    },
-    {
-      "term": "Dollar Exchange Rate Spikes",
-      "term_ko": "원달러 환율 급등"
-    },
-    {
-      "term": "U.s. Government Shutdown Crisis",
-      "term_ko": "미국 정부 셧다운 위기"
-    }
-  ],
   "discovered_keywords": [
     {
       "term": "Board of Directors Norwegian Sovereign Wealth Fund",
-      "term_ko": "이사회 노르웨이 국부펀드"
+      "term_ko": "이사회 노르웨이 국부펀드",
+      "significance_score": 644,
+      "mentions": 320,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "이사회 노르웨이 국부펀드",
+        "local_headlines": {
+          "matches": 2,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "정은보 한국거래소 이사장, WFE 이사회·노르웨이 국부펀드 면담",
+              "link": "http://www.bizwnews.com/news/articleView.html?idxno=137774"
+            },
+            {
+              "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담 위해 출국",
+              "link": "https://www.cstimes.com/news/articleView.html?idxno=708043"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%82%AC%ED%9A%8C%20%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%20%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%82%AC%ED%9A%8C%20%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%20%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "정은보 한국거래소 이사장, WFE 이사회·노르웨이 국부펀드 면담",
+          "summary": "",
+          "link": "http://www.bizwnews.com/news/articleView.html?idxno=137774",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담 위해 출국",
+          "summary": "",
+          "link": "https://www.cstimes.com/news/articleView.html?idxno=708043",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Chairman, Korea Exchange Wfe",
-      "term_ko": "한국거래소 이사장 WFE"
+      "term": "Chairman, Korea Exchange WFE",
+      "term_ko": "한국거래소 이사장 WFE",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국거래소 이사장 WFE",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "정은보 한국거래소 이사장, WFE 이사회·노르웨이 국부펀드 면담",
+              "link": "http://www.bizwnews.com/news/articleView.html?idxno=137774"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE"
+      },
+      "top_headlines": [
+        {
+          "title": "정은보 한국거래소 이사장, WFE 이사회·노르웨이 국부펀드 면담",
+          "summary": "",
+          "link": "http://www.bizwnews.com/news/articleView.html?idxno=137774",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Eunbo Jung, Chairman Wfe",
-      "term_ko": "정은보 이사장 WFE"
+      "term": "Eunbo Jung, Chairman WFE",
+      "term_ko": "정은보 이사장 WFE",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "정은보 이사장 WFE",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담 위해 출국",
+              "link": "https://www.cstimes.com/news/articleView.html?idxno=708043"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%9D%80%EB%B3%B4%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%9D%80%EB%B3%B4%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE"
+      },
+      "top_headlines": [
+        {
+          "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담 위해 출국",
+          "summary": "",
+          "link": "https://www.cstimes.com/news/articleView.html?idxno=708043",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Delivering 1 Million Per Month",
-      "term_ko": "배달하며 매달 100만"
+      "term": "Danshin Hana Bank World Cup Quarterfinals",
+      "term_ko": "단신하나은행 월드컵 4강",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "단신하나은행 월드컵 4강",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[단신]하나은행, 월드컵 4강 가면 연 11% ‘축구 적금’ 출시 外",
+              "link": "https://n.news.naver.com/mnews/article/020/0003723819?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EC%8B%A0%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20%EC%9B%94%EB%93%9C%EC%BB%B5%204%EA%B0%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EC%8B%A0%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20%EC%9B%94%EB%93%9C%EC%BB%B5%204%EA%B0%95"
+      },
+      "top_headlines": [
+        {
+          "title": "[단신]하나은행, 월드컵 4강 가면 연 11% ‘축구 적금’ 출시 外",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003723819?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "300 Million in New Stock",
-      "term_ko": "신보 3억 달러"
+      "term": "11% p.a. if masked",
+      "term_ko": "가면 연 11%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "가면 연 11%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[단신]하나은행, 월드컵 4강 가면 연 11% ‘축구 적금’ 출시 外",
+              "link": "https://n.news.naver.com/mnews/article/020/0003723819?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%A9%B4%20%EC%97%B0%2011%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%A9%B4%20%EC%97%B0%2011%25"
+      },
+      "top_headlines": [
+        {
+          "title": "[단신]하나은행, 월드컵 4강 가면 연 11% ‘축구 적금’ 출시 外",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003723819?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Leave for an Interview",
-      "term_ko": "면담 위해 출국"
+      "term": "Leave for an interview",
+      "term_ko": "면담 위해 출국",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "면담 위해 출국",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담 위해 출국",
+              "link": "https://www.cstimes.com/news/articleView.html?idxno=708043"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%B4%EB%8B%B4%20%EC%9C%84%ED%95%B4%20%EC%B6%9C%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%B4%EB%8B%B4%20%EC%9C%84%ED%95%B4%20%EC%B6%9C%EA%B5%AD"
+      },
+      "top_headlines": [
+        {
+          "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담 위해 출국",
+          "summary": "",
+          "link": "https://www.cstimes.com/news/articleView.html?idxno=708043",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Youtubers Are Leaving",
-      "term_ko": "유튜버 다들 떠날"
+      "term": "Iran War Risk: Global",
+      "term_ko": "이란戰 리스크에도 글로벌",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "이란戰 리스크에도 글로벌",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "이란戰 리스크에도 글로벌 증시 최고치 근접",
+              "link": "https://www.g-enews.com/view.php?ud=2026060121110728399a1f309431_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%E6%88%B0%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EC%97%90%EB%8F%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%E6%88%B0%20%EB%A6%AC%EC%8A%A4%ED%81%AC%EC%97%90%EB%8F%84%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "이란戰 리스크에도 글로벌 증시 최고치 근접",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=2026060121110728399a1f309431_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Not Even on Payday Anymore",
-      "term_ko": "이젠 월급날에도 안"
+      "term": "Stock market near record highs",
+      "term_ko": "증시 최고치 근접",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "증시 최고치 근접",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "이란戰 리스크에도 글로벌 증시 최고치 근접",
+              "link": "https://www.g-enews.com/view.php?ud=2026060121110728399a1f309431_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B7%BC%EC%A0%91",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B7%BC%EC%A0%91"
+      },
+      "top_headlines": [
+        {
+          "title": "이란戰 리스크에도 글로벌 증시 최고치 근접",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=2026060121110728399a1f309431_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Going Out of Business While Self-employed",
-      "term_ko": "중 자영업자 폐업"
+      "term": "New York stock market mixed",
+      "term_ko": "미국 뉴욕증시 혼조세",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 뉴욕증시 혼조세",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "미국 뉴욕증시 혼조세…국제유가 상승 불구 투자심리 안정",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78496"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%98%BC%EC%A1%B0%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%98%BC%EC%A1%B0%EC%84%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "미국 뉴욕증시 혼조세…국제유가 상승 불구 투자심리 안정",
+          "summary": "",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78496",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Incheon Chudam University Sasang",
-      "term_ko": "인천 주담대 사상"
+      "term": "Despite rising oil prices",
+      "term_ko": "국제유가 상승 불구",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "국제유가 상승 불구",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "미국 뉴욕증시 혼조세…국제유가 상승 불구 투자심리 안정",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78496"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EC%A0%9C%EC%9C%A0%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EB%B6%88%EA%B5%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EC%A0%9C%EC%9C%A0%EA%B0%80%20%EC%83%81%EC%8A%B9%20%EB%B6%88%EA%B5%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "미국 뉴욕증시 혼조세…국제유가 상승 불구 투자심리 안정",
+          "summary": "",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78496",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Hyunsong Shin, President",
-      "term_ko": "신현송 한은 총재"
+      "term": "Second half of the year for underperforming bank stocks",
+      "term_ko": "소외된 은행주 하반기",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "소외된 은행주 하반기",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "소외된 은행주, 하반기 금리 인상이 반등 신호탄 될까",
+              "link": "https://n.news.naver.com/mnews/article/023/0003979682?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EC%99%B8%EB%90%9C%20%EC%9D%80%ED%96%89%EC%A3%BC%20%ED%95%98%EB%B0%98%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EC%99%B8%EB%90%9C%20%EC%9D%80%ED%96%89%EC%A3%BC%20%ED%95%98%EB%B0%98%EA%B8%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "소외된 은행주, 하반기 금리 인상이 반등 신호탄 될까",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003979682?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Room to Raise Rates",
-      "term_ko": "금리 올릴 여건"
+      "term": "Rate hikes rebound",
+      "term_ko": "금리 인상이 반등",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 인상이 반등",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "소외된 은행주, 하반기 금리 인상이 반등 신호탄 될까",
+              "link": "https://n.news.naver.com/mnews/article/023/0003979682?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EC%9D%B4%20%EB%B0%98%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%EC%9D%B4%20%EB%B0%98%EB%93%B1"
+      },
+      "top_headlines": [
+        {
+          "title": "소외된 은행주, 하반기 금리 인상이 반등 신호탄 될까",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003979682?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Dollar System Boundaries",
-      "term_ko": "달러 체제 경계선"
+      "term": "Private Youth Income",
+      "term_ko": "사설 청년 소득",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "사설 청년 소득",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[사설] 청년 소득 줄고 저소득층 적자도 확대…깊어지는 양극화",
+              "link": "https://n.news.naver.com/mnews/article/015/0005293904?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%EC%B2%AD%EB%85%84%20%EC%86%8C%EB%93%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%EC%B2%AD%EB%85%84%20%EC%86%8C%EB%93%9D"
+      },
+      "top_headlines": [
+        {
+          "title": "[사설] 청년 소득 줄고 저소득층 적자도 확대…깊어지는 양극화",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/015/0005293904?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Successful International Bond Issuance",
-      "term_ko": "해외채권 발행 성공"
+      "term": "Deepening polarization",
+      "term_ko": "확대 깊어지는 양극화",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "확대 깊어지는 양극화",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[사설] 청년 소득 줄고 저소득층 적자도 확대…깊어지는 양극화",
+              "link": "https://n.news.naver.com/mnews/article/015/0005293904?sid=110"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EB%8C%80%20%EA%B9%8A%EC%96%B4%EC%A7%80%EB%8A%94%20%EC%96%91%EA%B7%B9%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EB%8C%80%20%EA%B9%8A%EC%96%B4%EC%A7%80%EB%8A%94%20%EC%96%91%EA%B7%B9%ED%99%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[사설] 청년 소득 줄고 저소득층 적자도 확대…깊어지는 양극화",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/015/0005293904?sid=110",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Weathering Global Volatility",
-      "term_ko": "글로벌 변동성 뚫고"
+      "term": "Launching Soccer Savings",
+      "term_ko": "축구 적금 출시",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "축구 적금 출시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[단신]하나은행, 월드컵 4강 가면 연 11% ‘축구 적금’ 출시 外",
+              "link": "https://n.news.naver.com/mnews/article/020/0003723819?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%95%EA%B5%AC%20%EC%A0%81%EA%B8%88%20%EC%B6%9C%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%95%EA%B5%AC%20%EC%A0%81%EA%B8%88%20%EC%B6%9C%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "[단신]하나은행, 월드컵 4강 가면 연 11% ‘축구 적금’ 출시 外",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003723819?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Largest Etf Manager",
-      "term_ko": "최대 ETF 매니저"
+      "term": "Stock expansion strategies",
+      "term_ko": "주식 확대 전략",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주식 확대 전략",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[애널리스트의 마켓뷰]국채금리 상승해도 주식 확대 전략 유효",
+              "link": "https://n.news.naver.com/mnews/article/020/0003723827?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%20%ED%99%95%EB%8C%80%20%EC%A0%84%EB%9E%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%20%ED%99%95%EB%8C%80%20%EC%A0%84%EB%9E%B5"
+      },
+      "top_headlines": [
+        {
+          "title": "[애널리스트의 마켓뷰]국채금리 상승해도 주식 확대 전략 유효",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003723827?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Global Etf Assets",
-      "term_ko": "글로벌 ETF 자산"
+      "term": "Largest ETF Manager",
+      "term_ko": "최대 ETF 매니저",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Largest ETF Manager",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Mirae Asset Global Investments becomes 12th largest ETF manager by AUM in...",
+              "link": "https://n.news.naver.com/mnews/article/640/0000089269?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Largest%20ETF%20Manager",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Largest%20ETF%20Manager"
+      },
+      "top_headlines": [
+        {
+          "title": "Mirae Asset Global Investments becomes 12th largest ETF manager by AUM in...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/640/0000089269?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Global ETF Assets",
+      "term_ko": "글로벌 ETF 자산",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Global ETF Assets",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Mirae Asset surpasses $263.7 bil. in global ETF assets",
+              "link": "https://www.koreatimes.co.kr/path/A2026060112320000311"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Global%20ETF%20Assets",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Global%20ETF%20Assets"
+      },
+      "top_headlines": [
+        {
+          "title": "Mirae Asset surpasses $263.7 bil. in global ETF assets",
+          "summary": "",
+          "link": "https://www.koreatimes.co.kr/path/A2026060112320000311",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Asset Surpasses 263.7",
-      "term_ko": "자산 263.7% 초과"
+      "term_ko": "자산 263.7% 초과",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Asset Surpasses 263.7",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Mirae Asset surpasses $263.7 bil. in global ETF assets",
+              "link": "https://www.koreatimes.co.kr/path/A2026060112320000311"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Asset%20Surpasses%20263.7",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Asset%20Surpasses%20263.7"
+      },
+      "top_headlines": [
+        {
+          "title": "Mirae Asset surpasses $263.7 bil. in global ETF assets",
+          "summary": "",
+          "link": "https://www.koreatimes.co.kr/path/A2026060112320000311",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Softbank Becomes Japans",
-      "term_ko": "소프트뱅크, 일본이 되다"
+      "term": "Stabilize investor sentiment",
+      "term_ko": "투자심리 안정",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "투자심리 안정",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "미국 뉴욕증시 혼조세…국제유가 상승 불구 투자심리 안정",
+              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78496"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%EC%8B%AC%EB%A6%AC%20%EC%95%88%EC%A0%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%EC%8B%AC%EB%A6%AC%20%EC%95%88%EC%A0%95"
+      },
+      "top_headlines": [
+        {
+          "title": "미국 뉴욕증시 혼조세…국제유가 상승 불구 투자심리 안정",
+          "summary": "",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78496",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Signalized",
+      "term_ko": "신호탄 될까",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "신호탄 될까",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "소외된 은행주, 하반기 금리 인상이 반등 신호탄 될까",
+              "link": "https://n.news.naver.com/mnews/article/023/0003979682?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%98%B8%ED%83%84%20%EB%90%A0%EA%B9%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%98%B8%ED%83%84%20%EB%90%A0%EA%B9%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "소외된 은행주, 하반기 금리 인상이 반등 신호탄 될까",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003979682?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "SoftBank Becomes Japans",
+      "term_ko": "소프트뱅크, 일본이 되다",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "SoftBank Becomes Japans",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
+              "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SoftBank%20Becomes%20Japans",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SoftBank%20Becomes%20Japans"
+      },
+      "top_headlines": [
+        {
+          "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
+          "summary": "",
+          "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Most Valuable Company",
-      "term_ko": "가장 가치 있는 기업"
+      "term_ko": "가장 가치 있는 기업",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Most Valuable Company",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
+              "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Most%20Valuable%20Company",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Most%20Valuable%20Company"
+      },
+      "top_headlines": [
+        {
+          "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
+          "summary": "",
+          "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Mirae Asset Global",
-      "term_ko": "미래에셋 글로벌"
+      "term_ko": "미래에셋 글로벌",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Mirae Asset Global",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Mirae Asset Global Investments becomes 12th largest ETF manager by AUM in...",
+              "link": "https://n.news.naver.com/mnews/article/640/0000089269?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mirae%20Asset%20Global",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mirae%20Asset%20Global"
+      },
+      "top_headlines": [
+        {
+          "title": "Mirae Asset Global Investments becomes 12th largest ETF manager by AUM in...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/640/0000089269?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ai-fueled Rally",
-      "term_ko": "AI 기반 랠리"
+      "term": "AI-Fueled Rally",
+      "term_ko": "AI 기반 랠리",
+      "significance_score": 252,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI-Fueled Rally",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
+              "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI-Fueled%20Rally",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI-Fueled%20Rally"
+      },
+      "top_headlines": [
+        {
+          "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
+          "summary": "",
+          "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Investments Becomes",
-      "term_ko": "투자가 되다"
+      "term_ko": "투자가 되다",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Investments Becomes",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Mirae Asset Global Investments becomes 12th largest ETF manager by AUM in...",
+              "link": "https://n.news.naver.com/mnews/article/640/0000089269?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investments%20Becomes",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investments%20Becomes"
+      },
+      "top_headlines": [
+        {
+          "title": "Mirae Asset Global Investments becomes 12th largest ETF manager by AUM in...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/640/0000089269?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "코스피, 외국인 매수세에 반등"
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "코스피, 외국인 매수세에 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
     },
     {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "금리 인하 기대감 상승"
-    },
-    {
-      "term": "Bitcoin Etf Expectations",
-      "term_ko": "비트코인 ETF 기대"
-    },
-    {
-      "term": "Dollar Exchange Rate Spikes",
-      "term_ko": "원달러 환율 급등"
-    },
-    {
-      "term": "U.s. Government Shutdown Crisis",
-      "term_ko": "미국 정부 셧다운 위기"
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 상승",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-02T02:40:37+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "Board of Directors Norwegian Sovereign Wealth Fund": {
-      "en": "Board of Directors Norwegian Sovereign Wealth Fund",
-      "ko": "이사회 노르웨이 국부펀드",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2026-06-01T17:41:36.402Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2026-06-02T02:40:37+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 1,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 1,
+      "too_generic": 0
     },
-    "Chairman, Korea Exchange Wfe": {
-      "en": "Chairman, Korea Exchange Wfe",
-      "ko": "한국거래소 이사장 WFE",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Eunbo Jung, Chairman Wfe": {
-      "en": "Eunbo Jung, Chairman Wfe",
-      "ko": "정은보 이사장 WFE",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Delivering 1 Million Per Month": {
-      "en": "Delivering 1 Million Per Month",
-      "ko": "배달하며 매달 100만",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "300 Million in New Stock": {
-      "en": "300 Million in New Stock",
-      "ko": "신보 3억 달러",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Leave for an Interview": {
-      "en": "Leave for an Interview",
-      "ko": "면담 위해 출국",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Youtubers Are Leaving": {
-      "en": "Youtubers Are Leaving",
-      "ko": "유튜버 다들 떠날",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Not Even on Payday Anymore": {
-      "en": "Not Even on Payday Anymore",
-      "ko": "이젠 월급날에도 안",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Going Out of Business While Self-employed": {
-      "en": "Going Out of Business While Self-employed",
-      "ko": "중 자영업자 폐업",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Incheon Chudam University Sasang": {
-      "en": "Incheon Chudam University Sasang",
-      "ko": "인천 주담대 사상",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Hyunsong Shin, President": {
-      "en": "Hyunsong Shin, President",
-      "ko": "신현송 한은 총재",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Room to Raise Rates": {
-      "en": "Room to Raise Rates",
-      "ko": "금리 올릴 여건",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Dollar System Boundaries": {
-      "en": "Dollar System Boundaries",
-      "ko": "달러 체제 경계선",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Successful International Bond Issuance": {
-      "en": "Successful International Bond Issuance",
-      "ko": "해외채권 발행 성공",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Weathering Global Volatility": {
-      "en": "Weathering Global Volatility",
-      "ko": "글로벌 변동성 뚫고",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Largest Etf Manager": {
-      "en": "Largest Etf Manager",
-      "ko": "최대 ETF 매니저",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Global Etf Assets": {
-      "en": "Global Etf Assets",
-      "ko": "글로벌 ETF 자산",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Asset Surpasses 263.7": {
-      "en": "Asset Surpasses 263.7",
-      "ko": "자산 263.7% 초과",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Softbank Becomes Japans": {
-      "en": "Softbank Becomes Japans",
-      "ko": "소프트뱅크, 일본이 되다",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Most Valuable Company": {
-      "en": "Most Valuable Company",
-      "ko": "가장 가치 있는 기업",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Mirae Asset Global": {
-      "en": "Mirae Asset Global",
-      "ko": "미래에셋 글로벌",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Ai-fueled Rally": {
-      "en": "Ai-fueled Rally",
-      "ko": "AI 기반 랠리",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Investments Becomes": {
-      "en": "Investments Becomes",
-      "ko": "투자가 되다",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Ai Chip Demand Surge": {
-      "en": "Ai Chip Demand Surge",
-      "ko": "AI 칩 수요 급증",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Kospi Rebounds on Foreign Buying": {
-      "en": "Kospi Rebounds on Foreign Buying",
-      "ko": "코스피, 외국인 매수세에 반등",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Interest Rate Cut Expectations Rise": {
-      "en": "Interest Rate Cut Expectations Rise",
-      "ko": "금리 인하 기대감 상승",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Bitcoin Etf Expectations": {
-      "en": "Bitcoin Etf Expectations",
-      "ko": "비트코인 ETF 기대",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.017Z"
-    },
-    "Dollar Exchange Rate Spikes": {
-      "en": "Dollar Exchange Rate Spikes",
-      "ko": "원달러 환율 급등",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.018Z"
-    },
-    "U.s. Government Shutdown Crisis": {
-      "en": "U.s. Government Shutdown Crisis",
-      "ko": "미국 정부 셧다운 위기",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-01T17:38:15.018Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2026-06-02T02:40:37+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2026-06-02T02:40:37+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
+      }
     }
   }
 }
