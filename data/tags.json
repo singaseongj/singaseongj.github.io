@@ -1,1167 +1,439 @@
 {
+  "generatedAt": "2026-06-01T11:31:34.151Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-01",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Eunbo Jung, Chairman WFE",
-      "term_ko": "정은보 이사장 WFE",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정은보 이사장 WFE",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담차 출국",
-              "link": "https://n.news.naver.com/mnews/article/215/0001253937?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%9D%80%EB%B3%B4%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%9D%80%EB%B3%B4%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE"
-      },
-      "top_headlines": [
-        {
-          "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담차 출국",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001253937?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Eunbo Jung, Chairman Wfe",
+      "term_ko": "정은보 이사장 WFE"
     },
     {
-      "term": "Exchange Chairman WFE",
-      "term_ko": "거래소 이사장 WFE",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "거래소 이사장 WFE",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "정은보 거래소 이사장, WFE 이사회 참석…노르웨이 국부펀드 만난다",
-              "link": "https://www.newsway.co.kr/news/view?ud=2026060111162239400"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%9D%B4%EC%82%AC%EC%9E%A5%20WFE"
-      },
-      "top_headlines": [
-        {
-          "title": "정은보 거래소 이사장, WFE 이사회 참석…노르웨이 국부펀드 만난다",
-          "summary": "",
-          "link": "https://www.newsway.co.kr/news/view?ud=2026060111162239400",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Chairman Wfe",
+      "term_ko": "거래소 이사장 WFE"
     },
     {
-      "term": "Woori Hana Bank BEST",
-      "term_ko": "기원 하나은행 BEST",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기원 하나은행 BEST",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"축구국가대표팀 선전 기원\" 하나은행, 'BEST 11 적금' 출시...최고 연 1...",
-              "link": "https://www.redian.org/news/articleView.html?idxno=256745"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%9B%90%20%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20BEST",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%9B%90%20%ED%95%98%EB%82%98%EC%9D%80%ED%96%89%20BEST"
-      },
-      "top_headlines": [
-        {
-          "title": "\"축구국가대표팀 선전 기원\" 하나은행, 'BEST 11 적금' 출시...최고 연 1...",
-          "summary": "",
-          "link": "https://www.redian.org/news/articleView.html?idxno=256745",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Woori Hana Bank Best",
+      "term_ko": "기원 하나은행 BEST"
     },
     {
-      "term": "Japanese Yen RP",
-      "term_ko": "일본 엔화 RP",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "일본 엔화 RP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한투증권, 일본 엔화 RP 상품 판매…최대 연 0.55% 수익률",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417767"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EB%B3%B8%20%EC%97%94%ED%99%94%20RP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EB%B3%B8%20%EC%97%94%ED%99%94%20RP"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권, 일본 엔화 RP 상품 판매…최대 연 0.55% 수익률",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417767",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Japanese Yen Rp",
+      "term_ko": "일본 엔화 RP"
     },
     {
-      "term": "ECB Governing Council Tokenized",
-      "term_ko": "ECB 집행이사 토큰화된",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ECB 집행이사 토큰화된",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "ECB 집행이사 \"토큰화된 세상에서도 중앙은행 화폐가 앵커돼야\"",
-              "link": "https://n.news.naver.com/mnews/article/277/0005770392?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ECB%20%EC%A7%91%ED%96%89%EC%9D%B4%EC%82%AC%20%ED%86%A0%ED%81%B0%ED%99%94%EB%90%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ECB%20%EC%A7%91%ED%96%89%EC%9D%B4%EC%82%AC%20%ED%86%A0%ED%81%B0%ED%99%94%EB%90%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "ECB 집행이사 \"토큰화된 세상에서도 중앙은행 화폐가 앵커돼야\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005770392?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ecb Governing Council Tokenized",
+      "term_ko": "ECB 집행이사 토큰화된"
     },
     {
-      "term": "Up to 0.55% per annum",
-      "term_ko": "최대 연 0.55%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최대 연 0.55%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한투증권, 일본 엔화 RP 상품 판매…최대 연 0.55% 수익률",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417767"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%20%EC%97%B0%200.55%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%20%EC%97%B0%200.55%25"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권, 일본 엔화 RP 상품 판매…최대 연 0.55% 수익률",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417767",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to 0.55% Per Annum",
+      "term_ko": "최대 연 0.55%"
     },
     {
       "term": "50,000 Accounts",
-      "term_ko": "누적 계좌수 5만좌",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "누적 계좌수 5만좌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "카카오뱅크, 전국민 생계비통장 누적 계좌수 5만좌 돌파",
-              "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=357974"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%88%84%EC%A0%81%20%EA%B3%84%EC%A2%8C%EC%88%98%205%EB%A7%8C%EC%A2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%88%84%EC%A0%81%20%EA%B3%84%EC%A2%8C%EC%88%98%205%EB%A7%8C%EC%A2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "카카오뱅크, 전국민 생계비통장 누적 계좌수 5만좌 돌파",
-          "summary": "",
-          "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=357974",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "누적 계좌수 5만좌"
     },
     {
-      "term": "S&P500 Futures Middle East",
-      "term_ko": "S&P500 선물 중동",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "S&P500 선물 중동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, 중동 합의 불확실성에도 상승…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417762"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%84%A0%EB%AC%BC%20%EC%A4%91%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%84%A0%EB%AC%BC%20%EC%A4%91%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 중동 합의 불확실성에도 상승…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417762",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "S&p500 Futures Middle East",
+      "term_ko": "S&P500 선물 중동"
     },
     {
       "term": "Board of Directors Norwegian Sovereign Wealth Fund",
-      "term_ko": "이사회 노르웨이 국부펀드",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이사회 노르웨이 국부펀드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담차 출국",
-              "link": "https://n.news.naver.com/mnews/article/215/0001253937?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%82%AC%ED%9A%8C%20%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%20%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%82%AC%ED%9A%8C%20%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%20%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담차 출국",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001253937?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이사회 노르웨이 국부펀드"
     },
     {
       "term": "Eunbo Chung, Chairman, Korea Exchange",
-      "term_ko": "정은보 한국거래소 이사장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정은보 한국거래소 이사장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "정은보 한국거래소 이사장 출장...노르웨이 국부펀드 면담 목적",
-              "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=261132"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%9D%80%EB%B3%B4%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%9D%B4%EC%82%AC%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%9D%80%EB%B3%B4%20%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EC%9D%B4%EC%82%AC%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "정은보 한국거래소 이사장 출장...노르웨이 국부펀드 면담 목적",
-          "summary": "",
-          "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=261132",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "정은보 한국거래소 이사장"
     },
     {
-      "term": "Purpose of sovereign wealth fund interview",
-      "term_ko": "국부펀드 면담 목적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국부펀드 면담 목적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "정은보 한국거래소 이사장 출장...노르웨이 국부펀드 면담 목적",
-              "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=261132"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C%20%EB%A9%B4%EB%8B%B4%20%EB%AA%A9%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C%20%EB%A9%B4%EB%8B%B4%20%EB%AA%A9%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "정은보 한국거래소 이사장 출장...노르웨이 국부펀드 면담 목적",
-          "summary": "",
-          "link": "https://www.financialpost.co.kr/news/articleView.html?idxno=261132",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Purpose of Sovereign Wealth Fund Interview",
+      "term_ko": "국부펀드 면담 목적"
     },
     {
-      "term": "Octave hexagonal injection",
-      "term_ko": "옥타브 헥사곤서 분사",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "옥타브 헥사곤서 분사",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "옥타브, 헥사곤서 분사 완료...미국 나스닥 독립 상장",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=670867"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A5%ED%83%80%EB%B8%8C%20%ED%97%A5%EC%82%AC%EA%B3%A4%EC%84%9C%20%EB%B6%84%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A5%ED%83%80%EB%B8%8C%20%ED%97%A5%EC%82%AC%EA%B3%A4%EC%84%9C%20%EB%B6%84%EC%82%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "옥타브, 헥사곤서 분사 완료...미국 나스닥 독립 상장",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=670867",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Octave Hexagonal Injection",
+      "term_ko": "옥타브 헥사곤서 분사"
     },
     {
       "term": "Nasdaq Independent Listing",
-      "term_ko": "나스닥 독립 상장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 독립 상장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "옥타브, 헥사곤서 분사 완료...미국 나스닥 독립 상장",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=670867"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%8F%85%EB%A6%BD%20%EC%83%81%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%8F%85%EB%A6%BD%20%EC%83%81%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "옥타브, 헥사곤서 분사 완료...미국 나스닥 독립 상장",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=670867",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 독립 상장"
     },
     {
-      "term": "House price one way",
-      "term_ko": "집값 한 방향",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집값 한 방향",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[현장] 신현송 한은 총재 \"성장·물가·집값 한 방향\"···인상론에 무...",
-              "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2434780"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EA%B0%92%20%ED%95%9C%20%EB%B0%A9%ED%96%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EA%B0%92%20%ED%95%9C%20%EB%B0%A9%ED%96%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[현장] 신현송 한은 총재 \"성장·물가·집값 한 방향\"···인상론에 무...",
-          "summary": "",
-          "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2434780",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "House Price One Way",
+      "term_ko": "집값 한 방향"
     },
     {
       "term": "Kakao Bank National Livelihood Savings Account",
-      "term_ko": "카카오뱅크 전국민 생계비통장",
-      "significance_score": 322,
-      "mentions": 239,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "카카오뱅크 전국민 생계비통장",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-24",
-              "timestamp": 1779548400000,
-              "value": 6.66666
-            },
-            {
-              "period": "2026-05-25",
-              "timestamp": 1779634800000,
-              "value": 9.5238
-            },
-            {
-              "period": "2026-05-26",
-              "timestamp": 1779721200000,
-              "value": 23.80952
-            },
-            {
-              "period": "2026-05-27",
-              "timestamp": 1779807600000,
-              "value": 30.47619
-            },
-            {
-              "period": "2026-05-28",
-              "timestamp": 1779894000000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-29",
-              "timestamp": 1779980400000,
-              "value": 60.95238
-            },
-            {
-              "period": "2026-05-30",
-              "timestamp": 1780066800000,
-              "value": 14.28571
-            },
-            {
-              "period": "2026-05-31",
-              "timestamp": 1780153200000,
-              "value": 9.5238
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "카카오뱅크, 전국민 생계비통장 누적 계좌수 5만좌 돌파",
-              "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=357974"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B1%85%ED%81%AC%20%EC%A0%84%EA%B5%AD%EB%AF%BC%20%EC%83%9D%EA%B3%84%EB%B9%84%ED%86%B5%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B1%85%ED%81%AC%20%EC%A0%84%EA%B5%AD%EB%AF%BC%20%EC%83%9D%EA%B3%84%EB%B9%84%ED%86%B5%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "카카오뱅크, 전국민 생계비통장 누적 계좌수 5만좌 돌파",
-          "summary": "",
-          "link": "http://www.smedaily.co.kr/news/articleView.html?idxno=357974",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 239.0476,
-        "weekly_average_volume": 39.8413,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.022457,
-        "time_weight": 0.027093,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780153200000
-      }
+      "term_ko": "카카오뱅크 전국민 생계비통장"
     },
     {
-      "term": "Rising in the face of consensus uncertainty",
-      "term_ko": "합의 불확실성에도 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "합의 불확실성에도 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, 중동 합의 불확실성에도 상승…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417762"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A9%EC%9D%98%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%97%90%EB%8F%84%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A9%EC%9D%98%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1%EC%97%90%EB%8F%84%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 중동 합의 불확실성에도 상승…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417762",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising in the Face of Consensus Uncertainty",
+      "term_ko": "합의 불확실성에도 상승"
     },
     {
-      "term": "Leave for an interview",
-      "term_ko": "면담차 출국",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "면담차 출국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담차 출국",
-              "link": "https://n.news.naver.com/mnews/article/215/0001253937?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%B4%EB%8B%B4%EC%B0%A8%20%EC%B6%9C%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%B4%EB%8B%B4%EC%B0%A8%20%EC%B6%9C%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "정은보 이사장, WFE 이사회·노르웨이 국부펀드 면담차 출국",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001253937?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Leave for an Interview",
+      "term_ko": "면담차 출국"
     },
     {
-      "term": "Meet the sovereign wealth fund",
-      "term_ko": "국부펀드 만난다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국부펀드 만난다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "정은보 거래소 이사장, WFE 이사회 참석…노르웨이 국부펀드 만난다",
-              "link": "https://www.newsway.co.kr/news/view?ud=2026060111162239400"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C%20%EB%A7%8C%EB%82%9C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%B6%80%ED%8E%80%EB%93%9C%20%EB%A7%8C%EB%82%9C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "정은보 거래소 이사장, WFE 이사회 참석…노르웨이 국부펀드 만난다",
-          "summary": "",
-          "link": "https://www.newsway.co.kr/news/view?ud=2026060111162239400",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Meet the Sovereign Wealth Fund",
+      "term_ko": "국부펀드 만난다"
     },
     {
-      "term": "Promote the national soccer team",
-      "term_ko": "축구국가대표팀 선전",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "축구국가대표팀 선전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"축구국가대표팀 선전 기원\" 하나은행, 'BEST 11 적금' 출시...최고 연 1...",
-              "link": "https://www.redian.org/news/articleView.html?idxno=256745"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%95%EA%B5%AC%EA%B5%AD%EA%B0%80%EB%8C%80%ED%91%9C%ED%8C%80%20%EC%84%A0%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%95%EA%B5%AC%EA%B5%AD%EA%B0%80%EB%8C%80%ED%91%9C%ED%8C%80%20%EC%84%A0%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "\"축구국가대표팀 선전 기원\" 하나은행, 'BEST 11 적금' 출시...최고 연 1...",
-          "summary": "",
-          "link": "https://www.redian.org/news/articleView.html?idxno=256745",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Promote the National Soccer Team",
+      "term_ko": "축구국가대표팀 선전"
     },
     {
-      "term": "Selling products",
-      "term_ko": "상품 판매",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상품 판매",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한투증권, 일본 엔화 RP 상품 판매…최대 연 0.55% 수익률",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417767"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%ED%92%88%20%ED%8C%90%EB%A7%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%ED%92%88%20%ED%8C%90%EB%A7%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "한투증권, 일본 엔화 RP 상품 판매…최대 연 0.55% 수익률",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417767",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Selling Products",
+      "term_ko": "상품 판매"
     },
     {
-      "term": "US Treasury rates",
-      "term_ko": "美 국채금리",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 국채금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, 중동 합의 불확실성에도 상승…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417762"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 중동 합의 불확실성에도 상승…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417762",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Treasury Rates",
+      "term_ko": "美 국채금리"
     },
     {
-      "term": "U.S.-Iran Peace Deal",
-      "term_ko": "미국-이란 평화 협상",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-Iran Peace Deal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Rise as Hopes Grow for U.S.-Iran Peace Deal",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-Hopes-Grow-for-US-Iran-Peace-Deal-1743115"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Peace%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Peace%20Deal"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Rise as Hopes Grow for U.S.-Iran Peace Deal",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-Hopes-Grow-for-US-Iran-Peace-Deal-1743115",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s.-iran Peace Deal",
+      "term_ko": "미국-이란 평화 협상"
     },
     {
       "term": "Tesla Keeps Graphite",
-      "term_ko": "테슬라, 흑연 유지",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tesla Keeps Graphite",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Tesla Keeps Graphite Supply Deal with Syrah Resources After Progress on Q...",
-              "link": "https://www.econotimes.com/Tesla-Keeps-Graphite-Supply-Deal-with-Syrah-Resources-After-Progress-on-Quality-Issues-1743111"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tesla%20Keeps%20Graphite",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tesla%20Keeps%20Graphite"
-      },
-      "top_headlines": [
-        {
-          "title": "Tesla Keeps Graphite Supply Deal with Syrah Resources After Progress on Q...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Tesla-Keeps-Graphite-Supply-Deal-with-Syrah-Resources-After-Progress-on-Quality-Issues-1743111",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "테슬라, 흑연 유지"
     },
     {
       "term": "Futures Rise",
-      "term_ko": "선물 상승",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Rise",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Rise as Hopes Grow for U.S.-Iran Peace Deal",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-Hopes-Grow-for-US-Iran-Peace-Deal-1743115"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Rise"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Rise as Hopes Grow for U.S.-Iran Peace Deal",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-Hopes-Grow-for-US-Iran-Peace-Deal-1743115",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선물 상승"
     },
     {
       "term": "Hopes Grow",
-      "term_ko": "희망의 성장",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hopes Grow",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Rise as Hopes Grow for U.S.-Iran Peace Deal",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-Hopes-Grow-for-US-Iran-Peace-Deal-1743115"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hopes%20Grow",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hopes%20Grow"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Rise as Hopes Grow for U.S.-Iran Peace Deal",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rise-as-Hopes-Grow-for-US-Iran-Peace-Deal-1743115",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "희망의 성장"
     },
     {
       "term": "Supply Deal",
-      "term_ko": "공급 거래",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Supply Deal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Tesla Keeps Graphite Supply Deal with Syrah Resources After Progress on Q...",
-              "link": "https://www.econotimes.com/Tesla-Keeps-Graphite-Supply-Deal-with-Syrah-Resources-After-Progress-on-Quality-Issues-1743111"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Supply%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Supply%20Deal"
-      },
-      "top_headlines": [
-        {
-          "title": "Tesla Keeps Graphite Supply Deal with Syrah Resources After Progress on Q...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Tesla-Keeps-Graphite-Supply-Deal-with-Syrah-Resources-After-Progress-on-Quality-Issues-1743111",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "공급 거래"
     },
     {
       "term": "Syrah Resources",
-      "term_ko": "시라 리소스",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Syrah Resources",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Tesla Keeps Graphite Supply Deal with Syrah Resources After Progress on Q...",
-              "link": "https://www.econotimes.com/Tesla-Keeps-Graphite-Supply-Deal-with-Syrah-Resources-After-Progress-on-Quality-Issues-1743111"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Syrah%20Resources",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Syrah%20Resources"
-      },
-      "top_headlines": [
-        {
-          "title": "Tesla Keeps Graphite Supply Deal with Syrah Resources After Progress on Q...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Tesla-Keeps-Graphite-Supply-Deal-with-Syrah-Resources-After-Progress-on-Quality-Issues-1743111",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시라 리소스"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-01T12:53:49+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-01T03:54:52.602Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-01T12:53:49+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Eunbo Jung, Chairman Wfe",
+      "term_ko": "정은보 이사장 WFE"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-01T12:53:49+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-01T12:53:49+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Exchange Chairman Wfe",
+      "term_ko": "거래소 이사장 WFE"
+    },
+    {
+      "term": "Woori Hana Bank Best",
+      "term_ko": "기원 하나은행 BEST"
+    },
+    {
+      "term": "Japanese Yen Rp",
+      "term_ko": "일본 엔화 RP"
+    },
+    {
+      "term": "Ecb Governing Council Tokenized",
+      "term_ko": "ECB 집행이사 토큰화된"
+    },
+    {
+      "term": "Up to 0.55% Per Annum",
+      "term_ko": "최대 연 0.55%"
+    },
+    {
+      "term": "50,000 Accounts",
+      "term_ko": "누적 계좌수 5만좌"
+    },
+    {
+      "term": "S&p500 Futures Middle East",
+      "term_ko": "S&P500 선물 중동"
+    },
+    {
+      "term": "Board of Directors Norwegian Sovereign Wealth Fund",
+      "term_ko": "이사회 노르웨이 국부펀드"
+    },
+    {
+      "term": "Eunbo Chung, Chairman, Korea Exchange",
+      "term_ko": "정은보 한국거래소 이사장"
+    },
+    {
+      "term": "Purpose of Sovereign Wealth Fund Interview",
+      "term_ko": "국부펀드 면담 목적"
+    },
+    {
+      "term": "Octave Hexagonal Injection",
+      "term_ko": "옥타브 헥사곤서 분사"
+    },
+    {
+      "term": "Nasdaq Independent Listing",
+      "term_ko": "나스닥 독립 상장"
+    },
+    {
+      "term": "House Price One Way",
+      "term_ko": "집값 한 방향"
+    },
+    {
+      "term": "Kakao Bank National Livelihood Savings Account",
+      "term_ko": "카카오뱅크 전국민 생계비통장"
+    },
+    {
+      "term": "Rising in the Face of Consensus Uncertainty",
+      "term_ko": "합의 불확실성에도 상승"
+    },
+    {
+      "term": "Leave for an Interview",
+      "term_ko": "면담차 출국"
+    },
+    {
+      "term": "Meet the Sovereign Wealth Fund",
+      "term_ko": "국부펀드 만난다"
+    },
+    {
+      "term": "Promote the National Soccer Team",
+      "term_ko": "축구국가대표팀 선전"
+    },
+    {
+      "term": "Selling Products",
+      "term_ko": "상품 판매"
+    },
+    {
+      "term": "Us Treasury Rates",
+      "term_ko": "美 국채금리"
+    },
+    {
+      "term": "U.s.-iran Peace Deal",
+      "term_ko": "미국-이란 평화 협상"
+    },
+    {
+      "term": "Tesla Keeps Graphite",
+      "term_ko": "테슬라, 흑연 유지"
+    },
+    {
+      "term": "Futures Rise",
+      "term_ko": "선물 상승"
+    },
+    {
+      "term": "Hopes Grow",
+      "term_ko": "희망의 성장"
+    },
+    {
+      "term": "Supply Deal",
+      "term_ko": "공급 거래"
+    },
+    {
+      "term": "Syrah Resources",
+      "term_ko": "시라 리소스"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "Eunbo Jung, Chairman Wfe": {
+      "en": "Eunbo Jung, Chairman Wfe",
+      "ko": "정은보 이사장 WFE",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Exchange Chairman Wfe": {
+      "en": "Exchange Chairman Wfe",
+      "ko": "거래소 이사장 WFE",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Woori Hana Bank Best": {
+      "en": "Woori Hana Bank Best",
+      "ko": "기원 하나은행 BEST",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Japanese Yen Rp": {
+      "en": "Japanese Yen Rp",
+      "ko": "일본 엔화 RP",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Ecb Governing Council Tokenized": {
+      "en": "Ecb Governing Council Tokenized",
+      "ko": "ECB 집행이사 토큰화된",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Up to 0.55% Per Annum": {
+      "en": "Up to 0.55% Per Annum",
+      "ko": "최대 연 0.55%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "50,000 Accounts": {
+      "en": "50,000 Accounts",
+      "ko": "누적 계좌수 5만좌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "S&p500 Futures Middle East": {
+      "en": "S&p500 Futures Middle East",
+      "ko": "S&P500 선물 중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Board of Directors Norwegian Sovereign Wealth Fund": {
+      "en": "Board of Directors Norwegian Sovereign Wealth Fund",
+      "ko": "이사회 노르웨이 국부펀드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Eunbo Chung, Chairman, Korea Exchange": {
+      "en": "Eunbo Chung, Chairman, Korea Exchange",
+      "ko": "정은보 한국거래소 이사장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Purpose of Sovereign Wealth Fund Interview": {
+      "en": "Purpose of Sovereign Wealth Fund Interview",
+      "ko": "국부펀드 면담 목적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Octave Hexagonal Injection": {
+      "en": "Octave Hexagonal Injection",
+      "ko": "옥타브 헥사곤서 분사",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Nasdaq Independent Listing": {
+      "en": "Nasdaq Independent Listing",
+      "ko": "나스닥 독립 상장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "House Price One Way": {
+      "en": "House Price One Way",
+      "ko": "집값 한 방향",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Kakao Bank National Livelihood Savings Account": {
+      "en": "Kakao Bank National Livelihood Savings Account",
+      "ko": "카카오뱅크 전국민 생계비통장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Rising in the Face of Consensus Uncertainty": {
+      "en": "Rising in the Face of Consensus Uncertainty",
+      "ko": "합의 불확실성에도 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Leave for an Interview": {
+      "en": "Leave for an Interview",
+      "ko": "면담차 출국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Meet the Sovereign Wealth Fund": {
+      "en": "Meet the Sovereign Wealth Fund",
+      "ko": "국부펀드 만난다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Promote the National Soccer Team": {
+      "en": "Promote the National Soccer Team",
+      "ko": "축구국가대표팀 선전",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Selling Products": {
+      "en": "Selling Products",
+      "ko": "상품 판매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Us Treasury Rates": {
+      "en": "Us Treasury Rates",
+      "ko": "美 국채금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "U.s.-iran Peace Deal": {
+      "en": "U.s.-iran Peace Deal",
+      "ko": "미국-이란 평화 협상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Tesla Keeps Graphite": {
+      "en": "Tesla Keeps Graphite",
+      "ko": "테슬라, 흑연 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Futures Rise": {
+      "en": "Futures Rise",
+      "ko": "선물 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Hopes Grow": {
+      "en": "Hopes Grow",
+      "ko": "희망의 성장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Supply Deal": {
+      "en": "Supply Deal",
+      "ko": "공급 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Syrah Resources": {
+      "en": "Syrah Resources",
+      "ko": "시라 리소스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T11:31:34.151Z"
     }
   }
 }
