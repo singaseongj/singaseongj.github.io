@@ -1,1118 +1,439 @@
 {
-  "date": "2026-05-31",
+  "generatedAt": "2026-06-01T03:51:33.457Z",
+  "timezone": "Asia/Seoul",
+  "date": "2026-06-01",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "7 days since IPO",
-      "term_ko": "IPO 올라탔다 7일새",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IPO 올라탔다 7일새",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "버진 갤럭틱, ‘스페이스X IPO’ 올라탔다…7일새 100% 폭등 ‘숏스퀴즈...",
-              "link": "https://www.g-enews.com/view.php?ud=20260530062959158e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IPO%20%EC%98%AC%EB%9D%BC%ED%83%94%EB%8B%A4%207%EC%9D%BC%EC%83%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IPO%20%EC%98%AC%EB%9D%BC%ED%83%94%EB%8B%A4%207%EC%9D%BC%EC%83%88"
-      },
-      "top_headlines": [
-        {
-          "title": "버진 갤럭틱, ‘스페이스X IPO’ 올라탔다…7일새 100% 폭등 ‘숏스퀴즈...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20260530062959158e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "7 Days Since Ipo",
+      "term_ko": "IPO 올라탔다 7일새"
     },
     {
-      "term": "3 ETFs to lower",
-      "term_ko": "낮출 3가지 ETF",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "낮출 3가지 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AI 쏠림에 갇힌 연금… S&P500 리스크 낮출 3가지 ETF",
-              "link": "https://www.g-enews.com/view.php?ud=202605311657143296fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%AE%EC%B6%9C%203%EA%B0%80%EC%A7%80%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%AE%EC%B6%9C%203%EA%B0%80%EC%A7%80%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 쏠림에 갇힌 연금… S&P500 리스크 낮출 3가지 ETF",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605311657143296fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3 Etfs to Lower",
+      "term_ko": "낮출 3가지 ETF"
     },
     {
-      "term": "AI drone missiles",
-      "term_ko": "AI 드론 미사일까지",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 드론 미사일까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AI·드론·미사일까지 공동개발… 미 의회, 이스라엘 방산과 협력 법제...",
-              "link": "https://www.news2day.co.kr/article/20260601500007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EB%93%9C%EB%A1%A0%20%EB%AF%B8%EC%82%AC%EC%9D%BC%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EB%93%9C%EB%A1%A0%20%EB%AF%B8%EC%82%AC%EC%9D%BC%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "AI·드론·미사일까지 공동개발… 미 의회, 이스라엘 방산과 협력 법제...",
-          "summary": "",
-          "link": "https://www.news2day.co.kr/article/20260601500007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Drone Missiles",
+      "term_ko": "AI 드론 미사일까지"
     },
     {
-      "term": "Trapped in an AI bias",
-      "term_ko": "AI 쏠림에 갇힌",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 쏠림에 갇힌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AI 쏠림에 갇힌 연금… S&P500 리스크 낮출 3가지 ETF",
-              "link": "https://www.g-enews.com/view.php?ud=202605311657143296fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EC%8F%A0%EB%A6%BC%EC%97%90%20%EA%B0%87%ED%9E%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EC%8F%A0%EB%A6%BC%EC%97%90%20%EA%B0%87%ED%9E%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 쏠림에 갇힌 연금… S&P500 리스크 낮출 3가지 ETF",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605311657143296fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trapped in an Ai Bias",
+      "term_ko": "AI 쏠림에 갇힌"
     },
     {
       "term": "Cryptocurrencies, Week 4, May",
-      "term_ko": "5월 4주차 가상화폐",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5월 4주차 가상화폐",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[5월 4주차] 가상화폐 시장 정리",
-              "link": "https://www.khgames.co.kr/news/articleView.html?idxno=304861"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EC%9B%94%204%EC%A3%BC%EC%B0%A8%20%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EC%9B%94%204%EC%A3%BC%EC%B0%A8%20%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[5월 4주차] 가상화폐 시장 정리",
-          "summary": "",
-          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=304861",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "5월 4주차 가상화폐"
     },
     {
-      "term": "Annuity S&P500 Risk",
-      "term_ko": "연금 S&P500 리스크",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연금 S&P500 리스크",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AI 쏠림에 갇힌 연금… S&P500 리스크 낮출 3가지 ETF",
-              "link": "https://www.g-enews.com/view.php?ud=202605311657143296fbbec65dfb_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EA%B8%88%20S%26P500%20%EB%A6%AC%EC%8A%A4%ED%81%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EA%B8%88%20S%26P500%20%EB%A6%AC%EC%8A%A4%ED%81%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 쏠림에 갇힌 연금… S&P500 리스크 낮출 3가지 ETF",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202605311657143296fbbec65dfb_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Annuity S&p500 Risk",
+      "term_ko": "연금 S&P500 리스크"
     },
     {
-      "term": "Top 8% of the plinth",
-      "term_ko": "주담대 상단 8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 상단 8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주담대 상단 8% 가나… 가계·자영업자 충격 불가피",
-              "link": "https://n.news.naver.com/mnews/article/005/0001852167?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EC%83%81%EB%8B%A8%208%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EC%83%81%EB%8B%A8%208%25"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 상단 8% 가나… 가계·자영업자 충격 불가피",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001852167?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Top 8% of the Plinth",
+      "term_ko": "주담대 상단 8%"
     },
     {
-      "term": "We loaned 500 million",
-      "term_ko": "우리도 대출 5억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우리도 대출 5억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“우리도 대출 5억”… 이번엔 ‘삼성 복지’가 하이닉스 흔드나",
-              "link": "https://n.news.naver.com/mnews/article/005/0001852168?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A6%AC%EB%8F%84%20%EB%8C%80%EC%B6%9C%205%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A6%AC%EB%8F%84%20%EB%8C%80%EC%B6%9C%205%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "“우리도 대출 5억”… 이번엔 ‘삼성 복지’가 하이닉스 흔드나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001852168?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "We Loaned 500 Million",
+      "term_ko": "우리도 대출 5억"
     },
     {
-      "term": "2.646 trillion in credit loans",
-      "term_ko": "신용 대출 2조6496억원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신용 대출 2조6496억원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘빚투’에… 이달 신용 대출, 2조6496억원 급증",
-              "link": "https://n.news.naver.com/mnews/article/023/0003979477?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%9A%A9%20%EB%8C%80%EC%B6%9C%202%EC%A1%B06496%EC%96%B5%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%9A%A9%20%EB%8C%80%EC%B6%9C%202%EC%A1%B06496%EC%96%B5%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "‘빚투’에… 이달 신용 대출, 2조6496억원 급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003979477?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "2.646 Trillion in Credit Loans",
+      "term_ko": "신용 대출 2조6496억원"
     },
     {
-      "term": "Over 100% of the time this year",
-      "term_ko": "올 100% 넘게",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "올 100% 넘게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "올 100% 넘게 뛴 코스피, 5월 상승률 웃돈 종목 948개중 39개뿐",
-              "link": "https://n.news.naver.com/mnews/article/020/0003723550?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%20100%25%20%EB%84%98%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%20100%25%20%EB%84%98%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "올 100% 넘게 뛴 코스피, 5월 상승률 웃돈 종목 948개중 39개뿐",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003723550?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Over 100% of the Time This Year",
+      "term_ko": "올 100% 넘게"
     },
     {
-      "term": "KOSPI jumped in May",
-      "term_ko": "뛴 코스피 5월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뛴 코스피 5월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "올 100% 넘게 뛴 코스피, 5월 상승률 웃돈 종목 948개중 39개뿐",
-              "link": "https://n.news.naver.com/mnews/article/020/0003723550?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9B%B4%20%EC%BD%94%EC%8A%A4%ED%94%BC%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9B%B4%20%EC%BD%94%EC%8A%A4%ED%94%BC%205%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "올 100% 넘게 뛴 코스피, 5월 상승률 웃돈 종목 948개중 39개뿐",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003723550?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Jumped in May",
+      "term_ko": "뛴 코스피 5월"
     },
     {
-      "term": "Out of 948 winning stocks",
-      "term_ko": "웃돈 종목 948개중",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "웃돈 종목 948개중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "올 100% 넘게 뛴 코스피, 5월 상승률 웃돈 종목 948개중 39개뿐",
-              "link": "https://n.news.naver.com/mnews/article/020/0003723550?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%83%EB%8F%88%20%EC%A2%85%EB%AA%A9%20948%EA%B0%9C%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%83%EB%8F%88%20%EC%A2%85%EB%AA%A9%20948%EA%B0%9C%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "올 100% 넘게 뛴 코스피, 5월 상승률 웃돈 종목 948개중 39개뿐",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003723550?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Out of 948 Winning Stocks",
+      "term_ko": "웃돈 종목 948개중"
     },
     {
-      "term": "Co-developed with the U.S. Congress",
-      "term_ko": "공동개발 미 의회",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "공동개발 미 의회",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AI·드론·미사일까지 공동개발… 미 의회, 이스라엘 방산과 협력 법제...",
-              "link": "https://www.news2day.co.kr/article/20260601500007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EB%8F%99%EA%B0%9C%EB%B0%9C%20%EB%AF%B8%20%EC%9D%98%ED%9A%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EB%8F%99%EA%B0%9C%EB%B0%9C%20%EB%AF%B8%20%EC%9D%98%ED%9A%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "AI·드론·미사일까지 공동개발… 미 의회, 이스라엘 방산과 협력 법제...",
-          "summary": "",
-          "link": "https://www.news2day.co.kr/article/20260601500007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Co-developed with the U.s. Congress",
+      "term_ko": "공동개발 미 의회"
     },
     {
       "term": "Working with Israeli Defense",
-      "term_ko": "이스라엘 방산과 협력",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이스라엘 방산과 협력",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "AI·드론·미사일까지 공동개발… 미 의회, 이스라엘 방산과 협력 법제...",
-              "link": "https://www.news2day.co.kr/article/20260601500007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%8A%A4%EB%9D%BC%EC%97%98%20%EB%B0%A9%EC%82%B0%EA%B3%BC%20%ED%98%91%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%8A%A4%EB%9D%BC%EC%97%98%20%EB%B0%A9%EC%82%B0%EA%B3%BC%20%ED%98%91%EB%A0%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "AI·드론·미사일까지 공동개발… 미 의회, 이스라엘 방산과 협력 법제...",
-          "summary": "",
-          "link": "https://www.news2day.co.kr/article/20260601500007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이스라엘 방산과 협력"
     },
     {
-      "term": "Investing in Bitcoin backwards",
-      "term_ko": "비트코인 역발상 투자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 역발상 투자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"외면받을 때 사라\"...폼플리아노, 비트코인 역발상 투자 시나리오 가동",
-              "link": "http://coinreaders.com/239374"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%97%AD%EB%B0%9C%EC%83%81%20%ED%88%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EC%97%AD%EB%B0%9C%EC%83%81%20%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "\"외면받을 때 사라\"...폼플리아노, 비트코인 역발상 투자 시나리오 가동",
-          "summary": "",
-          "link": "http://coinreaders.com/239374",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Investing in Bitcoin Backwards",
+      "term_ko": "비트코인 역발상 투자"
     },
     {
-      "term": "Virgin Galactic SpaceX",
-      "term_ko": "버진 갤럭틱 스페이스X",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "버진 갤럭틱 스페이스X",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "버진 갤럭틱, ‘스페이스X IPO’ 올라탔다…7일새 100% 폭등 ‘숏스퀴즈...",
-              "link": "https://www.g-enews.com/view.php?ud=20260530062959158e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B2%84%EC%A7%84%20%EA%B0%A4%EB%9F%AD%ED%8B%B1%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B2%84%EC%A7%84%20%EA%B0%A4%EB%9F%AD%ED%8B%B1%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X"
-      },
-      "top_headlines": [
-        {
-          "title": "버진 갤럭틱, ‘스페이스X IPO’ 올라탔다…7일새 100% 폭등 ‘숏스퀴즈...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20260530062959158e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Virgin Galactic Spacex",
+      "term_ko": "버진 갤럭틱 스페이스X"
     },
     {
-      "term": "Ghana Household Self-Employed",
-      "term_ko": "가나 가계 자영업자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가나 가계 자영업자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주담대 상단 8% 가나… 가계·자영업자 충격 불가피",
-              "link": "https://n.news.naver.com/mnews/article/005/0001852167?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%82%98%20%EA%B0%80%EA%B3%84%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%82%98%20%EA%B0%80%EA%B3%84%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 상단 8% 가나… 가계·자영업자 충격 불가피",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001852167?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ghana Household Self-employed",
+      "term_ko": "가나 가계 자영업자"
     },
     {
-      "term": "Money earned from stocks",
-      "term_ko": "주식으로 번 돈",
-      "significance_score": 322,
-      "mentions": 183,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주식으로 번 돈",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-27",
-              "timestamp": 1779807600000,
-              "value": 83.33333
-            },
-            {
-              "period": "2026-05-28",
-              "timestamp": 1779894000000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“주식으로 번 돈 언제 이동하느냐가 하반기 부동산 시장 결정하게 될 ...",
-              "link": "https://n.news.naver.com/mnews/article/023/0003979491?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%EC%9C%BC%EB%A1%9C%20%EB%B2%88%20%EB%8F%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%EC%9C%BC%EB%A1%9C%20%EB%B2%88%20%EB%8F%88"
-      },
-      "top_headlines": [
-        {
-          "title": "“주식으로 번 돈 언제 이동하느냐가 하반기 부동산 시장 결정하게 될 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003979491?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 183.3333,
-        "weekly_average_volume": 91.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.026992,
-        "time_weight": 0.009966,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1779894000000
-      }
+      "term": "Money Earned From Stocks",
+      "term_ko": "주식으로 번 돈"
     },
     {
-      "term": "When to move to the second half",
-      "term_ko": "언제 이동하느냐가 하반기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "언제 이동하느냐가 하반기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“주식으로 번 돈 언제 이동하느냐가 하반기 부동산 시장 결정하게 될 ...",
-              "link": "https://n.news.naver.com/mnews/article/023/0003979491?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%B8%EC%A0%9C%20%EC%9D%B4%EB%8F%99%ED%95%98%EB%8A%90%EB%83%90%EA%B0%80%20%ED%95%98%EB%B0%98%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%B8%EC%A0%9C%20%EC%9D%B4%EB%8F%99%ED%95%98%EB%8A%90%EB%83%90%EA%B0%80%20%ED%95%98%EB%B0%98%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "“주식으로 번 돈 언제 이동하느냐가 하반기 부동산 시장 결정하게 될 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003979491?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "When to Move to the Second Half",
+      "term_ko": "언제 이동하느냐가 하반기"
     },
     {
-      "term": "Let the real estate market decide",
-      "term_ko": "부동산 시장 결정하게",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 시장 결정하게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“주식으로 번 돈 언제 이동하느냐가 하반기 부동산 시장 결정하게 될 ...",
-              "link": "https://n.news.naver.com/mnews/article/023/0003979491?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%8B%9C%EC%9E%A5%20%EA%B2%B0%EC%A0%95%ED%95%98%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%8B%9C%EC%9E%A5%20%EA%B2%B0%EC%A0%95%ED%95%98%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "“주식으로 번 돈 언제 이동하느냐가 하반기 부동산 시장 결정하게 될 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003979491?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Let the Real Estate Market Decide",
+      "term_ko": "부동산 시장 결정하게"
     },
     {
-      "term": "100% spike",
-      "term_ko": "100% 폭등",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "100% 폭등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "버진 갤럭틱, ‘스페이스X IPO’ 올라탔다…7일새 100% 폭등 ‘숏스퀴즈...",
-              "link": "https://www.g-enews.com/view.php?ud=20260530062959158e250e8e188_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=100%25%20%ED%8F%AD%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=100%25%20%ED%8F%AD%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "버진 갤럭틱, ‘스페이스X IPO’ 올라탔다…7일새 100% 폭등 ‘숏스퀴즈...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20260530062959158e250e8e188_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "100% Spike",
+      "term_ko": "100% 폭등"
     },
     {
-      "term": "Marketplace cleanup",
-      "term_ko": "시장 정리",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장 정리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[5월 4주차] 가상화폐 시장 정리",
-              "link": "https://www.khgames.co.kr/news/articleView.html?idxno=304861"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%20%EC%A0%95%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%20%EC%A0%95%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[5월 4주차] 가상화폐 시장 정리",
-          "summary": "",
-          "link": "https://www.khgames.co.kr/news/articleView.html?idxno=304861",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Marketplace Cleanup",
+      "term_ko": "시장 정리"
     },
     {
-      "term": "When you're rejected",
-      "term_ko": "외면받을 때",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외면받을 때",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"외면받을 때 사라\"...폼플리아노, 비트코인 역발상 투자 시나리오 가동",
-              "link": "http://coinreaders.com/239374"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EB%A9%B4%EB%B0%9B%EC%9D%84%20%EB%95%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EB%A9%B4%EB%B0%9B%EC%9D%84%20%EB%95%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"외면받을 때 사라\"...폼플리아노, 비트코인 역발상 투자 시나리오 가동",
-          "summary": "",
-          "link": "http://coinreaders.com/239374",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "When You're Rejected",
+      "term_ko": "외면받을 때"
     },
     {
-      "term": "Run a scenario",
-      "term_ko": "시나리오 가동",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시나리오 가동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "\"외면받을 때 사라\"...폼플리아노, 비트코인 역발상 투자 시나리오 가동",
-              "link": "http://coinreaders.com/239374"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%20%EA%B0%80%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4%20%EA%B0%80%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "\"외면받을 때 사라\"...폼플리아노, 비트코인 역발상 투자 시나리오 가동",
-          "summary": "",
-          "link": "http://coinreaders.com/239374",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Run a Scenario",
+      "term_ko": "시나리오 가동"
     },
     {
-      "term": "Impact is inevitable",
-      "term_ko": "충격 불가피",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "충격 불가피",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "주담대 상단 8% 가나… 가계·자영업자 충격 불가피",
-              "link": "https://n.news.naver.com/mnews/article/005/0001852167?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%A9%EA%B2%A9%20%EB%B6%88%EA%B0%80%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%A9%EA%B2%A9%20%EB%B6%88%EA%B0%80%ED%94%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 상단 8% 가나… 가계·자영업자 충격 불가피",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001852167?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Impact Is Inevitable",
+      "term_ko": "충격 불가피"
     },
     {
       "term": "Hynix Shakna",
-      "term_ko": "하이닉스 흔드나",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하이닉스 흔드나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "“우리도 대출 5억”… 이번엔 ‘삼성 복지’가 하이닉스 흔드나",
-              "link": "https://n.news.naver.com/mnews/article/005/0001852168?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4%20%ED%9D%94%EB%93%9C%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4%20%ED%9D%94%EB%93%9C%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "“우리도 대출 5억”… 이번엔 ‘삼성 복지’가 하이닉스 흔드나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001852168?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하이닉스 흔드나"
     },
     {
-      "term": "Debt-to-Earn This Month",
-      "term_ko": "빚투에 이달",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚투에 이달",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "‘빚투’에… 이달 신용 대출, 2조6496억원 급증",
-              "link": "https://n.news.naver.com/mnews/article/023/0003979477?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%EC%97%90%20%EC%9D%B4%EB%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%EC%97%90%20%EC%9D%B4%EB%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "‘빚투’에… 이달 신용 대출, 2조6496억원 급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003979477?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Debt-to-earn This Month",
+      "term_ko": "빚투에 이달"
     },
     {
       "term": "Wall Street Reaches",
-      "term_ko": "월스트리트 도달 범위",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Reaches",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Reaches New Record Highs as AI Boom and Iran Ceasefire Hopes ...",
-              "link": "https://www.econotimes.com/Wall-Street-Reaches-New-Record-Highs-as-AI-Boom-and-Iran-Ceasefire-Hopes-Boost-Markets-1743055"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Reaches",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Reaches"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Reaches New Record Highs as AI Boom and Iran Ceasefire Hopes ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Reaches-New-Record-Highs-as-AI-Boom-and-Iran-Ceasefire-Hopes-Boost-Markets-1743055",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 도달 범위"
     },
     {
       "term": "New Record Highs",
-      "term_ko": "사상 최고치 경신",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "New Record Highs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Reaches New Record Highs as AI Boom and Iran Ceasefire Hopes ...",
-              "link": "https://www.econotimes.com/Wall-Street-Reaches-New-Record-Highs-as-AI-Boom-and-Iran-Ceasefire-Hopes-Boost-Markets-1743055"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=New%20Record%20Highs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=New%20Record%20Highs"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Reaches New Record Highs as AI Boom and Iran Ceasefire Hopes ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Reaches-New-Record-Highs-as-AI-Boom-and-Iran-Ceasefire-Hopes-Boost-Markets-1743055",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사상 최고치 경신"
     },
     {
       "term": "Iran Ceasefire Hopes",
-      "term_ko": "이란 휴전 희망",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Iran Ceasefire Hopes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-01T04:19:30+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Wall Street Reaches New Record Highs as AI Boom and Iran Ceasefire Hopes ...",
-              "link": "https://www.econotimes.com/Wall-Street-Reaches-New-Record-Highs-as-AI-Boom-and-Iran-Ceasefire-Hopes-Boost-Markets-1743055"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Ceasefire%20Hopes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Ceasefire%20Hopes"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Reaches New Record Highs as AI Boom and Iran Ceasefire Hopes ...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Reaches-New-Record-Highs-as-AI-Boom-and-Iran-Ceasefire-Hopes-Boost-Markets-1743055",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이란 휴전 희망"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-05-31T19:20:33.624Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-01T04:19:30+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "7 Days Since Ipo",
+      "term_ko": "IPO 올라탔다 7일새"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-01T04:19:30+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-01T04:19:30+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "3 Etfs to Lower",
+      "term_ko": "낮출 3가지 ETF"
+    },
+    {
+      "term": "Ai Drone Missiles",
+      "term_ko": "AI 드론 미사일까지"
+    },
+    {
+      "term": "Trapped in an Ai Bias",
+      "term_ko": "AI 쏠림에 갇힌"
+    },
+    {
+      "term": "Cryptocurrencies, Week 4, May",
+      "term_ko": "5월 4주차 가상화폐"
+    },
+    {
+      "term": "Annuity S&p500 Risk",
+      "term_ko": "연금 S&P500 리스크"
+    },
+    {
+      "term": "Top 8% of the Plinth",
+      "term_ko": "주담대 상단 8%"
+    },
+    {
+      "term": "We Loaned 500 Million",
+      "term_ko": "우리도 대출 5억"
+    },
+    {
+      "term": "2.646 Trillion in Credit Loans",
+      "term_ko": "신용 대출 2조6496억원"
+    },
+    {
+      "term": "Over 100% of the Time This Year",
+      "term_ko": "올 100% 넘게"
+    },
+    {
+      "term": "Kospi Jumped in May",
+      "term_ko": "뛴 코스피 5월"
+    },
+    {
+      "term": "Out of 948 Winning Stocks",
+      "term_ko": "웃돈 종목 948개중"
+    },
+    {
+      "term": "Co-developed with the U.s. Congress",
+      "term_ko": "공동개발 미 의회"
+    },
+    {
+      "term": "Working with Israeli Defense",
+      "term_ko": "이스라엘 방산과 협력"
+    },
+    {
+      "term": "Investing in Bitcoin Backwards",
+      "term_ko": "비트코인 역발상 투자"
+    },
+    {
+      "term": "Virgin Galactic Spacex",
+      "term_ko": "버진 갤럭틱 스페이스X"
+    },
+    {
+      "term": "Ghana Household Self-employed",
+      "term_ko": "가나 가계 자영업자"
+    },
+    {
+      "term": "Money Earned From Stocks",
+      "term_ko": "주식으로 번 돈"
+    },
+    {
+      "term": "When to Move to the Second Half",
+      "term_ko": "언제 이동하느냐가 하반기"
+    },
+    {
+      "term": "Let the Real Estate Market Decide",
+      "term_ko": "부동산 시장 결정하게"
+    },
+    {
+      "term": "100% Spike",
+      "term_ko": "100% 폭등"
+    },
+    {
+      "term": "Marketplace Cleanup",
+      "term_ko": "시장 정리"
+    },
+    {
+      "term": "When You're Rejected",
+      "term_ko": "외면받을 때"
+    },
+    {
+      "term": "Run a Scenario",
+      "term_ko": "시나리오 가동"
+    },
+    {
+      "term": "Impact Is Inevitable",
+      "term_ko": "충격 불가피"
+    },
+    {
+      "term": "Hynix Shakna",
+      "term_ko": "하이닉스 흔드나"
+    },
+    {
+      "term": "Debt-to-earn This Month",
+      "term_ko": "빚투에 이달"
+    },
+    {
+      "term": "Wall Street Reaches",
+      "term_ko": "월스트리트 도달 범위"
+    },
+    {
+      "term": "New Record Highs",
+      "term_ko": "사상 최고치 경신"
+    },
+    {
+      "term": "Iran Ceasefire Hopes",
+      "term_ko": "이란 휴전 희망"
+    }
+  ],
+  "translations": {
+    "7 Days Since Ipo": {
+      "en": "7 Days Since Ipo",
+      "ko": "IPO 올라탔다 7일새",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "3 Etfs to Lower": {
+      "en": "3 Etfs to Lower",
+      "ko": "낮출 3가지 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Ai Drone Missiles": {
+      "en": "Ai Drone Missiles",
+      "ko": "AI 드론 미사일까지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Trapped in an Ai Bias": {
+      "en": "Trapped in an Ai Bias",
+      "ko": "AI 쏠림에 갇힌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Cryptocurrencies, Week 4, May": {
+      "en": "Cryptocurrencies, Week 4, May",
+      "ko": "5월 4주차 가상화폐",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Annuity S&p500 Risk": {
+      "en": "Annuity S&p500 Risk",
+      "ko": "연금 S&P500 리스크",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Top 8% of the Plinth": {
+      "en": "Top 8% of the Plinth",
+      "ko": "주담대 상단 8%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "We Loaned 500 Million": {
+      "en": "We Loaned 500 Million",
+      "ko": "우리도 대출 5억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "2.646 Trillion in Credit Loans": {
+      "en": "2.646 Trillion in Credit Loans",
+      "ko": "신용 대출 2조6496억원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Over 100% of the Time This Year": {
+      "en": "Over 100% of the Time This Year",
+      "ko": "올 100% 넘게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Kospi Jumped in May": {
+      "en": "Kospi Jumped in May",
+      "ko": "뛴 코스피 5월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Out of 948 Winning Stocks": {
+      "en": "Out of 948 Winning Stocks",
+      "ko": "웃돈 종목 948개중",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Co-developed with the U.s. Congress": {
+      "en": "Co-developed with the U.s. Congress",
+      "ko": "공동개발 미 의회",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Working with Israeli Defense": {
+      "en": "Working with Israeli Defense",
+      "ko": "이스라엘 방산과 협력",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Investing in Bitcoin Backwards": {
+      "en": "Investing in Bitcoin Backwards",
+      "ko": "비트코인 역발상 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Virgin Galactic Spacex": {
+      "en": "Virgin Galactic Spacex",
+      "ko": "버진 갤럭틱 스페이스X",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Ghana Household Self-employed": {
+      "en": "Ghana Household Self-employed",
+      "ko": "가나 가계 자영업자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Money Earned From Stocks": {
+      "en": "Money Earned From Stocks",
+      "ko": "주식으로 번 돈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "When to Move to the Second Half": {
+      "en": "When to Move to the Second Half",
+      "ko": "언제 이동하느냐가 하반기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Let the Real Estate Market Decide": {
+      "en": "Let the Real Estate Market Decide",
+      "ko": "부동산 시장 결정하게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "100% Spike": {
+      "en": "100% Spike",
+      "ko": "100% 폭등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Marketplace Cleanup": {
+      "en": "Marketplace Cleanup",
+      "ko": "시장 정리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "When You're Rejected": {
+      "en": "When You're Rejected",
+      "ko": "외면받을 때",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Run a Scenario": {
+      "en": "Run a Scenario",
+      "ko": "시나리오 가동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.457Z"
+    },
+    "Impact Is Inevitable": {
+      "en": "Impact Is Inevitable",
+      "ko": "충격 불가피",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.458Z"
+    },
+    "Hynix Shakna": {
+      "en": "Hynix Shakna",
+      "ko": "하이닉스 흔드나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.458Z"
+    },
+    "Debt-to-earn This Month": {
+      "en": "Debt-to-earn This Month",
+      "ko": "빚투에 이달",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.458Z"
+    },
+    "Wall Street Reaches": {
+      "en": "Wall Street Reaches",
+      "ko": "월스트리트 도달 범위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.458Z"
+    },
+    "New Record Highs": {
+      "en": "New Record Highs",
+      "ko": "사상 최고치 경신",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.458Z"
+    },
+    "Iran Ceasefire Hopes": {
+      "en": "Iran Ceasefire Hopes",
+      "ko": "이란 휴전 희망",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-01T03:51:33.458Z"
     }
   }
 }
