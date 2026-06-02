@@ -13,7 +13,7 @@
         "query": "AI 등 12개사",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -51,7 +51,7 @@
         "query": "로보스트래티지 나스닥 BOT",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -80,37 +80,37 @@
       ]
     },
     {
-      "term": "Thrive Auto Stocks AI",
-      "term_ko": "잘나간다 자동차株 AI",
+      "term": "Korea Investment Trust Management Samsung Electronics SK Hynix",
+      "term_ko": "한국투자신탁운용 삼성전자 SK하이닉스",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "잘나간다 자동차株 AI",
+        "query": "한국투자신탁운용 삼성전자 SK하이닉스",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "\"삼전닉스 말고 우리도 잘나간다\"…자동차株, AI 훈풍 타고 '훨훨'",
-              "link": "https://n.news.naver.com/mnews/article/088/0001012679?sid=101"
+              "title": "한국투자신탁운용, 삼성전자·SK하이닉스 담은 고배당 커버드콜 ETF 출시",
+              "link": "https://www.tokenpost.kr/news/market/365483"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%98%EB%82%98%EA%B0%84%EB%8B%A4%20%EC%9E%90%EB%8F%99%EC%B0%A8%E6%A0%AA%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%98%EB%82%98%EA%B0%84%EB%8B%A4%20%EC%9E%90%EB%8F%99%EC%B0%A8%E6%A0%AA%20AI"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%8B%A0%ED%83%81%EC%9A%B4%EC%9A%A9%20%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%8B%A0%ED%83%81%EC%9A%B4%EC%9A%A9%20%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4"
       },
       "top_headlines": [
         {
-          "title": "\"삼전닉스 말고 우리도 잘나간다\"…자동차株, AI 훈풍 타고 '훨훨'",
+          "title": "한국투자신탁운용, 삼성전자·SK하이닉스 담은 고배당 커버드콜 ETF 출시",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0001012679?sid=101",
+          "link": "https://www.tokenpost.kr/news/market/365483",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -118,37 +118,131 @@
       ]
     },
     {
-      "term": "Hongmyeong Protection 4 Power → Savings Interest Rate",
-      "term_ko": "홍명보호 4강→적금 이자율",
-      "significance_score": 336,
-      "mentions": 160,
+      "term": "High Dividend Covered Call ETFs",
+      "term_ko": "고배당 커버드콜 ETF",
+      "significance_score": 350,
+      "mentions": 272,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "홍명보호 4강→적금 이자율",
+        "query": "고배당 커버드콜 ETF",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-25",
+              "timestamp": 1779634800000,
+              "value": 24
+            },
+            {
+              "period": "2026-05-26",
+              "timestamp": 1779721200000,
+              "value": 76
+            },
+            {
+              "period": "2026-05-27",
+              "timestamp": 1779807600000,
+              "value": 64
+            },
+            {
+              "period": "2026-05-28",
+              "timestamp": 1779894000000,
+              "value": 68
+            },
+            {
+              "period": "2026-05-29",
+              "timestamp": 1779980400000,
+              "value": 40
+            },
+            {
+              "period": "2026-05-30",
+              "timestamp": 1780066800000,
+              "value": 100
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "홍명보호 4강→적금 이자율 연11.0%?…\"삼성전자 주가 50만원이 확률 더...",
-              "link": "https://m.sports.naver.com/kfootball/article/311/0002017884"
+              "title": "한국투자신탁운용, 삼성전자·SK하이닉스 담은 고배당 커버드콜 ETF 출시",
+              "link": "https://www.tokenpost.kr/news/market/365483"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%8D%EB%AA%85%EB%B3%B4%ED%98%B8%204%EA%B0%95%E2%86%92%EC%A0%81%EA%B8%88%20%EC%9D%B4%EC%9E%90%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%8D%EB%AA%85%EB%B3%B4%ED%98%B8%204%EA%B0%95%E2%86%92%EC%A0%81%EA%B8%88%20%EC%9D%B4%EC%9E%90%EC%9C%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EB%B0%B0%EB%8B%B9%20%EC%BB%A4%EB%B2%84%EB%93%9C%EC%BD%9C%20ETF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EB%B0%B0%EB%8B%B9%20%EC%BB%A4%EB%B2%84%EB%93%9C%EC%BD%9C%20ETF"
       },
       "top_headlines": [
         {
-          "title": "홍명보호 4강→적금 이자율 연11.0%?…\"삼성전자 주가 50만원이 확률 더...",
+          "title": "한국투자신탁운용, 삼성전자·SK하이닉스 담은 고배당 커버드콜 ETF 출시",
           "summary": "",
-          "link": "https://m.sports.naver.com/kfootball/article/311/0002017884",
+          "link": "https://www.tokenpost.kr/news/market/365483",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 272,
+        "weekly_average_volume": 68,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.020535,
+        "time_weight": 0.010939,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1780066800000
+      }
+    },
+    {
+      "term": "LH Unsold Purchase",
+      "term_ko": "LH 미분양 매입",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "LH 미분양 매입",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T19:24:28+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "LH 미분양 매입 효과…포항 아파트 182세대 소화",
+              "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4074500"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LH%20%EB%AF%B8%EB%B6%84%EC%96%91%20%EB%A7%A4%EC%9E%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LH%20%EB%AF%B8%EB%B6%84%EC%96%91%20%EB%A7%A4%EC%9E%85"
+      },
+      "top_headlines": [
+        {
+          "title": "LH 미분양 매입 효과…포항 아파트 182세대 소화",
+          "summary": "",
+          "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4074500",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -156,37 +250,37 @@
       ]
     },
     {
-      "term": "Inflation July",
-      "term_ko": "웃돈 물가 7월",
+      "term": "The $70,000 collapse",
+      "term_ko": "7만 달러 붕괴",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "웃돈 물가 7월",
+        "query": "7만 달러 붕괴",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[물가 충격] 스테이트스트리트 \"예상 웃돈 물가…7월 금리인상 기대 높...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417988"
+              "title": "주식은 고공행진인데...비트코인(BTC), 7만 달러 붕괴 가시화",
+              "link": "http://coinreaders.com/239809"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%83%EB%8F%88%20%EB%AC%BC%EA%B0%80%207%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%83%EB%8F%88%20%EB%AC%BC%EA%B0%80%207%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=7%EB%A7%8C%20%EB%8B%AC%EB%9F%AC%20%EB%B6%95%EA%B4%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=7%EB%A7%8C%20%EB%8B%AC%EB%9F%AC%20%EB%B6%95%EA%B4%B4"
       },
       "top_headlines": [
         {
-          "title": "[물가 충격] 스테이트스트리트 \"예상 웃돈 물가…7월 금리인상 기대 높...",
+          "title": "주식은 고공행진인데...비트코인(BTC), 7만 달러 붕괴 가시화",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417988",
+          "link": "http://coinreaders.com/239809",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -194,37 +288,37 @@
       ]
     },
     {
-      "term": "Gold Quote of the Day June",
-      "term_ko": "오늘의 금시세 6월",
+      "term": "182 apartments in Pohang",
+      "term_ko": "포항 아파트 182세대",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "오늘의 금시세 6월",
+        "query": "포항 아파트 182세대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[오늘의 금시세] 6월 2일, 안전자산 수요 속 금값 강보합 흐름",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078236"
+              "title": "LH 미분양 매입 효과…포항 아파트 182세대 소화",
+              "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4074500"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%206%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%206%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AC%ED%95%AD%20%EC%95%84%ED%8C%8C%ED%8A%B8%20182%EC%84%B8%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AC%ED%95%AD%20%EC%95%84%ED%8C%8C%ED%8A%B8%20182%EC%84%B8%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "[오늘의 금시세] 6월 2일, 안전자산 수요 속 금값 강보합 흐름",
+          "title": "LH 미분양 매입 효과…포항 아파트 182세대 소화",
           "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078236",
+          "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4074500",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -232,37 +326,113 @@
       ]
     },
     {
-      "term": "2-day safe haven demand",
-      "term_ko": "2일 안전자산 수요",
+      "term": "Exchange rate prolonged at 1500 won",
+      "term_ko": "환율 1500원대 장기화",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "2일 안전자산 수요",
+        "query": "환율 1500원대 장기화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[오늘의 금시세] 6월 2일, 안전자산 수요 속 금값 강보합 흐름",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078236"
+              "title": "환율 1500원대 장기화…금융권 환헤지 부담 가중",
+              "link": "https://www.sentv.co.kr/article/view/sentv202606020074"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EC%9D%BC%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0%20%EC%88%98%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EC%9D%BC%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0%20%EC%88%98%EC%9A%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%201500%EC%9B%90%EB%8C%80%20%EC%9E%A5%EA%B8%B0%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%201500%EC%9B%90%EB%8C%80%20%EC%9E%A5%EA%B8%B0%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "[오늘의 금시세] 6월 2일, 안전자산 수요 속 금값 강보합 흐름",
+          "title": "환율 1500원대 장기화…금융권 환헤지 부담 가중",
           "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078236",
+          "link": "https://www.sentv.co.kr/article/view/sentv202606020074",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Asset Tokenization US",
+      "term_ko": "자산 토큰화 미국",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "자산 토큰화 미국",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T19:24:28+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "자산 토큰화, 미국 자본시장의 배선도를 바꾸다 [크립토인사이트]",
+              "link": "https://n.news.naver.com/mnews/article/016/0002651383?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%82%B0%20%ED%86%A0%ED%81%B0%ED%99%94%20%EB%AF%B8%EA%B5%AD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%82%B0%20%ED%86%A0%ED%81%B0%ED%99%94%20%EB%AF%B8%EA%B5%AD"
+      },
+      "top_headlines": [
+        {
+          "title": "자산 토큰화, 미국 자본시장의 배선도를 바꾸다 [크립토인사이트]",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/016/0002651383?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Changing the wiring diagram of capital markets",
+      "term_ko": "자본시장의 배선도를 바꾸다",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "자본시장의 배선도를 바꾸다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T19:24:28+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "자산 토큰화, 미국 자본시장의 배선도를 바꾸다 [크립토인사이트]",
+              "link": "https://n.news.naver.com/mnews/article/016/0002651383?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%B3%B8%EC%8B%9C%EC%9E%A5%EC%9D%98%20%EB%B0%B0%EC%84%A0%EB%8F%84%EB%A5%BC%20%EB%B0%94%EA%BE%B8%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%B3%B8%EC%8B%9C%EC%9E%A5%EC%9D%98%20%EB%B0%B0%EC%84%A0%EB%8F%84%EB%A5%BC%20%EB%B0%94%EA%BE%B8%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "자산 토큰화, 미국 자본시장의 배선도를 바꾸다 [크립토인사이트]",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/016/0002651383?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -279,7 +449,7 @@
         "query": "티커로 직상장 피규어",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -308,37 +478,37 @@
       ]
     },
     {
-      "term": "Shock State Street Estimates",
-      "term_ko": "충격 스테이트스트리트 예상",
+      "term": "Financial institution currency hedging burden",
+      "term_ko": "금융권 환헤지 부담",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "충격 스테이트스트리트 예상",
+        "query": "금융권 환헤지 부담",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[물가 충격] 스테이트스트리트 \"예상 웃돈 물가…7월 금리인상 기대 높...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417988"
+              "title": "환율 1500원대 장기화…금융권 환헤지 부담 가중",
+              "link": "https://www.sentv.co.kr/article/view/sentv202606020074"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%A9%EA%B2%A9%20%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8%20%EC%98%88%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%A9%EA%B2%A9%20%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8%20%EC%98%88%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%ED%99%98%ED%97%A4%EC%A7%80%20%EB%B6%80%EB%8B%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%ED%99%98%ED%97%A4%EC%A7%80%20%EB%B6%80%EB%8B%B4"
       },
       "top_headlines": [
         {
-          "title": "[물가 충격] 스테이트스트리트 \"예상 웃돈 물가…7월 금리인상 기대 높...",
+          "title": "환율 1500원대 장기화…금융권 환헤지 부담 가중",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417988",
+          "link": "https://www.sentv.co.kr/article/view/sentv202606020074",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -346,37 +516,37 @@
       ]
     },
     {
-      "term": "Whirlwind",
-      "term_ko": "훈풍 타고 훨훨",
+      "term": "Because of the war in the Middle East, more",
+      "term_ko": "중동전쟁 때문에 더",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "훈풍 타고 훨훨",
+        "query": "중동전쟁 때문에 더",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "\"삼전닉스 말고 우리도 잘나간다\"…자동차株, AI 훈풍 타고 '훨훨'",
-              "link": "https://n.news.naver.com/mnews/article/088/0001012679?sid=101"
+              "title": "“중동전쟁 때문에 더 팍팍”…고물가·고금리·고환율 ‘삼중고’ 오나",
+              "link": "https://n.news.naver.com/mnews/article/009/0005688599?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%88%ED%92%8D%20%ED%83%80%EA%B3%A0%20%ED%9B%A8%ED%9B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%88%ED%92%8D%20%ED%83%80%EA%B3%A0%20%ED%9B%A8%ED%9B%A8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%EC%A0%84%EC%9F%81%20%EB%95%8C%EB%AC%B8%EC%97%90%20%EB%8D%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%EC%A0%84%EC%9F%81%20%EB%95%8C%EB%AC%B8%EC%97%90%20%EB%8D%94"
       },
       "top_headlines": [
         {
-          "title": "\"삼전닉스 말고 우리도 잘나간다\"…자동차株, AI 훈풍 타고 '훨훨'",
+          "title": "“중동전쟁 때문에 더 팍팍”…고물가·고금리·고환율 ‘삼중고’ 오나",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0001012679?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/009/0005688599?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -384,37 +554,37 @@
       ]
     },
     {
-      "term": "Korea Exchange gold price drops",
-      "term_ko": "한국거래소 금시세 하락",
+      "term": "Higher interest rates",
+      "term_ko": "팍팍 고물가 고금리",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한국거래소 금시세 하락",
+        "query": "팍팍 고물가 고금리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "한국거래소 금시세, 하락 한국금거래소 순금 한돈은 상승",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078241"
+              "title": "“중동전쟁 때문에 더 팍팍”…고물가·고금리·고환율 ‘삼중고’ 오나",
+              "link": "https://n.news.naver.com/mnews/article/009/0005688599?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%ED%95%98%EB%9D%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%8D%ED%8C%8D%20%EA%B3%A0%EB%AC%BC%EA%B0%80%20%EA%B3%A0%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%8D%ED%8C%8D%20%EA%B3%A0%EB%AC%BC%EA%B0%80%20%EA%B3%A0%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "한국거래소 금시세, 하락 한국금거래소 순금 한돈은 상승",
+          "title": "“중동전쟁 때문에 더 팍팍”…고물가·고금리·고환율 ‘삼중고’ 오나",
           "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078241",
+          "link": "https://n.news.naver.com/mnews/article/009/0005688599?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -422,37 +592,113 @@
       ]
     },
     {
-      "term": "Gold Price Bullish",
-      "term_ko": "속 금값 강보합",
+      "term": "Hypertrophy triplets ona",
+      "term_ko": "고환율 삼중고 오나",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "속 금값 강보합",
+        "query": "고환율 삼중고 오나",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[오늘의 금시세] 6월 2일, 안전자산 수요 속 금값 강보합 흐름",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078236"
+              "title": "“중동전쟁 때문에 더 팍팍”…고물가·고금리·고환율 ‘삼중고’ 오나",
+              "link": "https://n.news.naver.com/mnews/article/009/0005688599?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%EA%B8%88%EA%B0%92%20%EA%B0%95%EB%B3%B4%ED%95%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%EA%B8%88%EA%B0%92%20%EA%B0%95%EB%B3%B4%ED%95%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%82%BC%EC%A4%91%EA%B3%A0%20%EC%98%A4%EB%82%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%ED%99%98%EC%9C%A8%20%EC%82%BC%EC%A4%91%EA%B3%A0%20%EC%98%A4%EB%82%98"
       },
       "top_headlines": [
         {
-          "title": "[오늘의 금시세] 6월 2일, 안전자산 수요 속 금값 강보합 흐름",
+          "title": "“중동전쟁 때문에 더 팍팍”…고물가·고금리·고환율 ‘삼중고’ 오나",
           "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16078236",
+          "link": "https://n.news.naver.com/mnews/article/009/0005688599?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Junseo YangJojun JungHeungmin Son",
+      "term_ko": "양준서의 정조준 손흥민",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "양준서의 정조준 손흥민",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T19:24:28+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[양준서의 정조준] 손흥민 비유로 조선일보 때린 이 대통령…증권가의...",
+              "link": "https://www.pennmike.com/news/articleView.html?idxno=121485"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%91%EC%A4%80%EC%84%9C%EC%9D%98%20%EC%A0%95%EC%A1%B0%EC%A4%80%20%EC%86%90%ED%9D%A5%EB%AF%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%91%EC%A4%80%EC%84%9C%EC%9D%98%20%EC%A0%95%EC%A1%B0%EC%A4%80%20%EC%86%90%ED%9D%A5%EB%AF%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "[양준서의 정조준] 손흥민 비유로 조선일보 때린 이 대통령…증권가의...",
+          "summary": "",
+          "link": "https://www.pennmike.com/news/articleView.html?idxno=121485",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Chosun Ilbo slapped with analogy",
+      "term_ko": "비유로 조선일보 때린",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비유로 조선일보 때린",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T19:24:28+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[양준서의 정조준] 손흥민 비유로 조선일보 때린 이 대통령…증권가의...",
+              "link": "https://www.pennmike.com/news/articleView.html?idxno=121485"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%EC%9C%A0%EB%A1%9C%20%EC%A1%B0%EC%84%A0%EC%9D%BC%EB%B3%B4%20%EB%95%8C%EB%A6%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%EC%9C%A0%EB%A1%9C%20%EC%A1%B0%EC%84%A0%EC%9D%BC%EB%B3%B4%20%EB%95%8C%EB%A6%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "[양준서의 정조준] 손흥민 비유로 조선일보 때린 이 대통령…증권가의...",
+          "summary": "",
+          "link": "https://www.pennmike.com/news/articleView.html?idxno=121485",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -469,7 +715,7 @@
         "query": "KOSPI Spikes Past",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -498,113 +744,141 @@
       ]
     },
     {
-      "term": "AI-Fueled Tech Rally",
-      "term_ko": "AI 기반 기술 랠리",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI-Fueled Tech Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Slip as Iran Tensions Rise and AI-Fueled Tech Rally Lose...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-Rise-and-AI-Fueled-Tech-Rally-Loses-Steam-1743225"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI-Fueled%20Tech%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI-Fueled%20Tech%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Slip as Iran Tensions Rise and AI-Fueled Tech Rally Lose...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-Rise-and-AI-Fueled-Tech-Rally-Loses-Steam-1743225",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Chances of winning $500,000",
-      "term_ko": "50만원이 확률",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "50만원이 확률",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "홍명보호 4강→적금 이자율 연11.0%?…\"삼성전자 주가 50만원이 확률 더...",
-              "link": "https://m.sports.naver.com/kfootball/article/311/0002017884"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=50%EB%A7%8C%EC%9B%90%EC%9D%B4%20%ED%99%95%EB%A5%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=50%EB%A7%8C%EC%9B%90%EC%9D%B4%20%ED%99%95%EB%A5%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "홍명보호 4강→적금 이자율 연11.0%?…\"삼성전자 주가 50만원이 확률 더...",
-          "summary": "",
-          "link": "https://m.sports.naver.com/kfootball/article/311/0002017884",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Crowds of car owners",
-      "term_ko": "몰리는 차주들",
+      "term": "This President",
+      "term_ko": "이 대통령",
       "significance_score": 280,
-      "mentions": 160,
+      "mentions": 486,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "몰리는 차주들",
+        "query": "이 대통령",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-25",
+              "timestamp": 1779634800000,
+              "value": 63.11475
+            },
+            {
+              "period": "2026-05-26",
+              "timestamp": 1779721200000,
+              "value": 81.14754
+            },
+            {
+              "period": "2026-05-27",
+              "timestamp": 1779807600000,
+              "value": 85.2459
+            },
+            {
+              "period": "2026-05-28",
+              "timestamp": 1779894000000,
+              "value": 75.40983
+            },
+            {
+              "period": "2026-05-29",
+              "timestamp": 1779980400000,
+              "value": 94.26229
+            },
+            {
+              "period": "2026-05-30",
+              "timestamp": 1780066800000,
+              "value": 81.14754
+            },
+            {
+              "period": "2026-05-31",
+              "timestamp": 1780153200000,
+              "value": 50
+            },
+            {
+              "period": "2026-06-01",
+              "timestamp": 1780239600000,
+              "value": 100
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "주담대 갈아탈까…보험사로 몰리는 차주들",
-              "link": "https://m.skyedaily.com/news_view.html?ID=305157"
+              "title": "[양준서의 정조준] 손흥민 비유로 조선일보 때린 이 대통령…증권가의...",
+              "link": "https://www.pennmike.com/news/articleView.html?idxno=121485"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B0%EB%A6%AC%EB%8A%94%20%EC%B0%A8%EC%A3%BC%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B0%EB%A6%AC%EB%8A%94%20%EC%B0%A8%EC%A3%BC%EB%93%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%20%EB%8C%80%ED%86%B5%EB%A0%B9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%20%EB%8C%80%ED%86%B5%EB%A0%B9"
       },
       "top_headlines": [
         {
-          "title": "주담대 갈아탈까…보험사로 몰리는 차주들",
+          "title": "[양준서의 정조준] 손흥민 비유로 조선일보 때린 이 대통령…증권가의...",
           "summary": "",
-          "link": "https://m.skyedaily.com/news_view.html?ID=305157",
+          "link": "https://www.pennmike.com/news/articleView.html?idxno=121485",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 486.0656,
+        "weekly_average_volume": 81.0109,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.013732,
+        "time_weight": 0.02303,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1780239600000
+      }
+    },
+    {
+      "term": "Trump Says Israel-Hezbollah",
+      "term_ko": "트럼프, 이스라엘-헤즈볼라에 대해 말하다",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Trump Says Israel-Hezbollah",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T19:24:28+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Trump says Israel-Hezbollah halted fire, defusing Iran talk crisis",
+              "link": "https://en.asiatoday.co.kr/view.php?key=20260602000918421"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Says%20Israel-Hezbollah",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Says%20Israel-Hezbollah"
+      },
+      "top_headlines": [
+        {
+          "title": "Trump says Israel-Hezbollah halted fire, defusing Iran talk crisis",
+          "summary": "",
+          "link": "https://en.asiatoday.co.kr/view.php?key=20260602000918421",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -612,37 +886,75 @@
       ]
     },
     {
-      "term": "Rate hike expectations",
-      "term_ko": "금리인상 기대",
-      "significance_score": 280,
+      "term": "Halted Fire Defusing",
+      "term_ko": "중단된 화재 진압",
+      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리인상 기대",
+        "query": "Halted Fire Defusing",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[물가 충격] 스테이트스트리트 \"예상 웃돈 물가…7월 금리인상 기대 높...",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417988"
+              "title": "Trump says Israel-Hezbollah halted fire, defusing Iran talk crisis",
+              "link": "https://en.asiatoday.co.kr/view.php?key=20260602000918421"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EA%B8%B0%EB%8C%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Halted%20Fire%20Defusing",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Halted%20Fire%20Defusing"
       },
       "top_headlines": [
         {
-          "title": "[물가 충격] 스테이트스트리트 \"예상 웃돈 물가…7월 금리인상 기대 높...",
+          "title": "Trump says Israel-Hezbollah halted fire, defusing Iran talk crisis",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4417988",
+          "link": "https://en.asiatoday.co.kr/view.php?key=20260602000918421",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Iran Talk Crisis",
+      "term_ko": "이란 핵 협상 위기",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Iran Talk Crisis",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-02T19:24:28+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Trump says Israel-Hezbollah halted fire, defusing Iran talk crisis",
+              "link": "https://en.asiatoday.co.kr/view.php?key=20260602000918421"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Talk%20Crisis",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Talk%20Crisis"
+      },
+      "top_headlines": [
+        {
+          "title": "Trump says Israel-Hezbollah halted fire, defusing Iran talk crisis",
+          "summary": "",
+          "link": "https://en.asiatoday.co.kr/view.php?key=20260602000918421",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -659,7 +971,7 @@
         "query": "Huang Signals Support",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -688,158 +1000,6 @@
       ]
     },
     {
-      "term": "Iran Tensions Rise",
-      "term_ko": "이란 긴장 고조",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Iran Tensions Rise",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Slip as Iran Tensions Rise and AI-Fueled Tech Rally Lose...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-Rise-and-AI-Fueled-Tech-Rally-Loses-Steam-1743225"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Tensions%20Rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Tensions%20Rise"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Slip as Iran Tensions Rise and AI-Fueled Tech Rally Lose...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-Rise-and-AI-Fueled-Tech-Rally-Loses-Steam-1743225",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "SoftBank Becomes Japans",
-      "term_ko": "소프트뱅크, 일본이 되다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SoftBank Becomes Japans",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
-              "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SoftBank%20Becomes%20Japans",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SoftBank%20Becomes%20Japans"
-      },
-      "top_headlines": [
-        {
-          "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
-          "summary": "",
-          "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Most Valuable Company",
-      "term_ko": "가장 가치 있는 기업",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Most Valuable Company",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
-              "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Most%20Valuable%20Company",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Most%20Valuable%20Company"
-      },
-      "top_headlines": [
-        {
-          "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
-          "summary": "",
-          "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "AI-Fueled Rally",
-      "term_ko": "AI 기반 랠리",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI-Fueled Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
-              "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI-Fueled%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI-Fueled%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "SoftBank Becomes Japan’s Most Valuable Company as AI-Fueled Rally Drive...",
-          "summary": "",
-          "link": "https://www.econotimes.com/SoftBank-Becomes-Japans-Most-Valuable-Company-as-AI-Fueled-Rally-Drives-Shares-to-Record-High-1743139",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Koreas Robotics",
       "term_ko": "코리아 로보틱스",
       "significance_score": 224,
@@ -849,7 +1009,7 @@
         "query": "Koreas Robotics",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -878,44 +1038,6 @@
       ]
     },
     {
-      "term": "Futures Slip",
-      "term_ko": "선물 전표",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Slip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-02T12:48:33+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Slip as Iran Tensions Rise and AI-Fueled Tech Rally Lose...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-Rise-and-AI-Fueled-Tech-Rally-Loses-Steam-1743225"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Slip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Slip"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Slip as Iran Tensions Rise and AI-Fueled Tech Rally Lose...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-Iran-Tensions-Rise-and-AI-Fueled-Tech-Rally-Loses-Steam-1743225",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -925,7 +1047,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -948,7 +1070,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -971,7 +1093,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -994,7 +1116,7 @@
         "query": "비트코인 ETF 기대",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1017,7 +1139,7 @@
         "query": "원달러 환율 급등",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-02T12:48:33+09:00",
+          "last_updated": "2026-06-02T19:24:28+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1034,10 +1156,10 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-02T03:49:31.026Z",
+    "generated_at": "2026-06-02T10:25:27.100Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-02T12:48:33+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-02T19:24:28+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 1,
     "removal_breakdown": {
@@ -1047,14 +1169,14 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-02T12:48:33+09:00",
+      "last_updated": "2026-06-02T19:24:28+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-02T12:48:33+09:00",
+        "lastUpdated": "2026-06-02T19:24:28+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
