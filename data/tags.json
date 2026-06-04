@@ -1,1148 +1,439 @@
 {
+  "generatedAt": "2026-06-04T09:56:24.255Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-04",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "18K Gold Price June",
-      "term_ko": "18K 금시세 6월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "18K 금시세 6월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "18K 금시세, 6월 4일 국제 금값 변동성에 투자자 관심",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=523640"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%206%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=18K%20%EA%B8%88%EC%8B%9C%EC%84%B8%206%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 6월 4일 국제 금값 변동성에 투자자 관심",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=523640",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "18k Gold Price June",
+      "term_ko": "18K 금시세 6월"
     },
     {
-      "term": "4-day international gold price",
-      "term_ko": "4일 국제 금값",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4일 국제 금값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "18K 금시세, 6월 4일 국제 금값 변동성에 투자자 관심",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=523640"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4%EC%9D%BC%20%EA%B5%AD%EC%A0%9C%20%EA%B8%88%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4%EC%9D%BC%20%EA%B5%AD%EC%A0%9C%20%EA%B8%88%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 6월 4일 국제 금값 변동성에 투자자 관심",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=523640",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4-day International Gold Price",
+      "term_ko": "4일 국제 금값"
     },
     {
       "term": "Gold Price Quote June 4",
-      "term_ko": "금값시세 6월 4일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값시세 6월 4일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금값시세] 6월 4일, 안전자산 수요 속 숨 고르기",
-              "link": "https://www.tournews21.com/news/articleView.html?idxno=136052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8%206%EC%9B%94%204%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B8%206%EC%9B%94%204%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[금값시세] 6월 4일, 안전자산 수요 속 숨 고르기",
-          "summary": "",
-          "link": "https://www.tournews21.com/news/articleView.html?idxno=136052",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금값시세 6월 4일"
     },
     {
       "term": "Raoul Pal Bitcoin",
-      "term_ko": "라울 팔 비트코인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "라울 팔 비트코인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "라울 팔 \"비트코인, 급락장이지만 나스닥 100 앞질렀다\"",
-              "link": "http://coinreaders.com/240255"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9D%BC%EC%9A%B8%20%ED%8C%94%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9D%BC%EC%9A%B8%20%ED%8C%94%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "라울 팔 \"비트코인, 급락장이지만 나스닥 100 앞질렀다\"",
-          "summary": "",
-          "link": "http://coinreaders.com/240255",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "라울 팔 비트코인"
     },
     {
       "term": "Crypto Insights Assets",
-      "term_ko": "크립토 인사이트 자산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "크립토 인사이트 자산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[크립토 인사이트] 자산 토큰화, 美 자본시장 지형을 바꾸다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002651983?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%AC%EB%A6%BD%ED%86%A0%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EC%9E%90%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%AC%EB%A6%BD%ED%86%A0%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EC%9E%90%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[크립토 인사이트] 자산 토큰화, 美 자본시장 지형을 바꾸다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002651983?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "크립토 인사이트 자산"
     },
     {
-      "term": "Tokenization US Capital Markets",
-      "term_ko": "토큰화 美 자본시장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "토큰화 美 자본시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[크립토 인사이트] 자산 토큰화, 美 자본시장 지형을 바꾸다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002651983?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%ED%81%B0%ED%99%94%20%E7%BE%8E%20%EC%9E%90%EB%B3%B8%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%ED%81%B0%ED%99%94%20%E7%BE%8E%20%EC%9E%90%EB%B3%B8%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[크립토 인사이트] 자산 토큰화, 美 자본시장 지형을 바꾸다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002651983?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tokenization Us Capital Markets",
+      "term_ko": "토큰화 美 자본시장"
     },
     {
-      "term": "Japanese stocks rebound",
-      "term_ko": "日 증시 반락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "日 증시 반락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "중동 긴장 재연에 日 증시 반락·엔화 약세… 한·미·일, 동시 '금리 인...",
-              "link": "https://www.g-enews.com/view.php?ud=202606041215036348e7e8286d56_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%97%A5%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%97%A5%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "중동 긴장 재연에 日 증시 반락·엔화 약세… 한·미·일, 동시 '금리 인...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202606041215036348e7e8286d56_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Japanese Stocks Rebound",
+      "term_ko": "日 증시 반락"
     },
     {
-      "term": "Yen weakened",
-      "term_ko": "엔화 약세 한",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔화 약세 한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "중동 긴장 재연에 日 증시 반락·엔화 약세… 한·미·일, 동시 '금리 인...",
-              "link": "https://www.g-enews.com/view.php?ud=202606041215036348e7e8286d56_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%ED%99%94%20%EC%95%BD%EC%84%B8%20%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%ED%99%94%20%EC%95%BD%EC%84%B8%20%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "중동 긴장 재연에 日 증시 반락·엔화 약세… 한·미·일, 동시 '금리 인...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202606041215036348e7e8286d56_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Yen Weakened",
+      "term_ko": "엔화 약세 한"
     },
     {
       "term": "Unsynchronized",
-      "term_ko": "미 일 동시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미 일 동시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "중동 긴장 재연에 日 증시 반락·엔화 약세… 한·미·일, 동시 '금리 인...",
-              "link": "https://www.g-enews.com/view.php?ud=202606041215036348e7e8286d56_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EC%9D%BC%20%EB%8F%99%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EC%9D%BC%20%EB%8F%99%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "중동 긴장 재연에 日 증시 반락·엔화 약세… 한·미·일, 동시 '금리 인...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202606041215036348e7e8286d56_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미 일 동시"
     },
     {
-      "term": "Investor interest in volatility",
-      "term_ko": "변동성에 투자자 관심",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "변동성에 투자자 관심",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "18K 금시세, 6월 4일 국제 금값 변동성에 투자자 관심",
-              "link": "https://www.joongangenews.com/news/articleView.html?idxno=523640"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EB%8F%99%EC%84%B1%EC%97%90%20%ED%88%AC%EC%9E%90%EC%9E%90%20%EA%B4%80%EC%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EB%8F%99%EC%84%B1%EC%97%90%20%ED%88%AC%EC%9E%90%EC%9E%90%20%EA%B4%80%EC%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "18K 금시세, 6월 4일 국제 금값 변동성에 투자자 관심",
-          "summary": "",
-          "link": "https://www.joongangenews.com/news/articleView.html?idxno=523640",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Investor Interest in Volatility",
+      "term_ko": "변동성에 투자자 관심"
     },
     {
-      "term": "Safe haven demand genus",
-      "term_ko": "안전자산 수요 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안전자산 수요 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금값시세] 6월 4일, 안전자산 수요 속 숨 고르기",
-              "link": "https://www.tournews21.com/news/articleView.html?idxno=136052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0%20%EC%88%98%EC%9A%94%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0%20%EC%88%98%EC%9A%94%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "[금값시세] 6월 4일, 안전자산 수요 속 숨 고르기",
-          "summary": "",
-          "link": "https://www.tournews21.com/news/articleView.html?idxno=136052",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Safe Haven Demand Genus",
+      "term_ko": "안전자산 수요 속"
     },
     {
-      "term": "Hahn on the Middle East situation",
-      "term_ko": "한은 중동 상황",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 중동 상황",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은 \"중동 상황 따라 주요국 통화정책 기대 빠르게 조정 가능성\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4418277"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EC%A4%91%EB%8F%99%20%EC%83%81%ED%99%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EC%A4%91%EB%8F%99%20%EC%83%81%ED%99%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"중동 상황 따라 주요국 통화정책 기대 빠르게 조정 가능성\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4418277",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hahn on the Middle East Situation",
+      "term_ko": "한은 중동 상황"
     },
     {
-      "term": "Depending on the monetary policy of the major countries",
-      "term_ko": "따라 주요국 통화정책",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "따라 주요국 통화정책",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은 \"중동 상황 따라 주요국 통화정책 기대 빠르게 조정 가능성\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4418277"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%B0%EB%9D%BC%20%EC%A3%BC%EC%9A%94%EA%B5%AD%20%ED%86%B5%ED%99%94%EC%A0%95%EC%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%B0%EB%9D%BC%20%EC%A3%BC%EC%9A%94%EA%B5%AD%20%ED%86%B5%ED%99%94%EC%A0%95%EC%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"중동 상황 따라 주요국 통화정책 기대 빠르게 조정 가능성\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4418277",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Depending on the Monetary Policy of the Major Countries",
+      "term_ko": "따라 주요국 통화정책"
     },
     {
-      "term": "Adjust expectations quickly",
-      "term_ko": "기대 빠르게 조정",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기대 빠르게 조정",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은 \"중동 상황 따라 주요국 통화정책 기대 빠르게 조정 가능성\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4418277"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%20%EB%B9%A0%EB%A5%B4%EA%B2%8C%20%EC%A1%B0%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%20%EB%B9%A0%EB%A5%B4%EA%B2%8C%20%EC%A1%B0%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"중동 상황 따라 주요국 통화정책 기대 빠르게 조정 가능성\"",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4418277",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Adjust Expectations Quickly",
+      "term_ko": "기대 빠르게 조정"
     },
     {
       "term": "Bank Imosomo Kookmin Bank",
-      "term_ko": "은행 이모저모 국민은행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "은행 이모저모 국민은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[은행 이모저모] 국민은행·우리은행·광주은행 등",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=137966"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%ED%96%89%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8%20%EA%B5%AD%EB%AF%BC%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%ED%96%89%20%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8%20%EA%B5%AD%EB%AF%BC%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "[은행 이모저모] 국민은행·우리은행·광주은행 등",
-          "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=137966",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "은행 이모저모 국민은행"
     },
     {
-      "term": "Woori Bank Gwangju Bank, etc.",
-      "term_ko": "우리은행 광주은행 등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우리은행 광주은행 등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[은행 이모저모] 국민은행·우리은행·광주은행 등",
-              "link": "http://www.bizwnews.com/news/articleView.html?idxno=137966"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89%20%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89%20%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89%20%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89%20%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "[은행 이모저모] 국민은행·우리은행·광주은행 등",
-          "summary": "",
-          "link": "http://www.bizwnews.com/news/articleView.html?idxno=137966",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Woori Bank Gwangju Bank, Etc.",
+      "term_ko": "우리은행 광주은행 등"
     },
     {
       "term": "Korea Exchange Gold Price Adjustment",
-      "term_ko": "한국거래소 금시세 조정",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국거래소 금시세 조정",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국거래소 금시세 조정 국면 실물 거래 가격도 내려",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16079686"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%EC%A1%B0%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%EA%B8%88%EC%8B%9C%EC%84%B8%20%EC%A1%B0%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소 금시세 조정 국면 실물 거래 가격도 내려",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16079686",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국거래소 금시세 조정"
     },
     {
-      "term": "Phase physical trading",
-      "term_ko": "국면 실물 거래",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국면 실물 거래",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국거래소 금시세 조정 국면 실물 거래 가격도 내려",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16079686"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%A9%B4%20%EC%8B%A4%EB%AC%BC%20%EA%B1%B0%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%A9%B4%20%EC%8B%A4%EB%AC%BC%20%EA%B1%B0%EB%9E%98"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소 금시세 조정 국면 실물 거래 가격도 내려",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16079686",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Phase Physical Trading",
+      "term_ko": "국면 실물 거래"
     },
     {
-      "term": "SpaceX IPO AI-related",
-      "term_ko": "SpaceX IPO AI 관련",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX IPO AI-related",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "With launch of SpaceX IPO, AI-related stock rally may lose momentum",
-              "link": "https://n.news.naver.com/mnews/article/640/0000089434?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20IPO%20AI-related",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20IPO%20AI-related"
-      },
-      "top_headlines": [
-        {
-          "title": "With launch of SpaceX IPO, AI-related stock rally may lose momentum",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000089434?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex Ipo Ai-related",
+      "term_ko": "SpaceX IPO AI 관련"
     },
     {
-      "term": "Samsung Elec SK",
-      "term_ko": "삼성 일렉 SK",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Elec SK",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix slide as Broadcom disappoints investors",
-              "link": "https://n.news.naver.com/mnews/article/009/0005689214?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Elec%20SK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Elec%20SK"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix slide as Broadcom disappoints investors",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005689214?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Elec Sk",
+      "term_ko": "삼성 일렉 SK"
     },
     {
-      "term": "Won-Dollar Rate Surpassing1530",
-      "term_ko": "원-달러 환율 1530 돌파",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Won-Dollar Rate Surpassing1530",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KOSPI Slides On Middle East Jitters Amid Won-Dollar Rate Surpassing1,530 ...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270628"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Won-Dollar%20Rate%20Surpassing1530",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Won-Dollar%20Rate%20Surpassing1530"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Slides On Middle East Jitters Amid Won-Dollar Rate Surpassing1,530 ...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270628",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Won-dollar Rate Surpassing1530",
+      "term_ko": "원-달러 환율 1530 돌파"
     },
     {
-      "term": "It's a plunging market, but the Nasdaq",
-      "term_ko": "급락장이지만 나스닥",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급락장이지만 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "라울 팔 \"비트코인, 급락장이지만 나스닥 100 앞질렀다\"",
-              "link": "http://coinreaders.com/240255"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%9D%BD%EC%9E%A5%EC%9D%B4%EC%A7%80%EB%A7%8C%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%9D%BD%EC%9E%A5%EC%9D%B4%EC%A7%80%EB%A7%8C%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "라울 팔 \"비트코인, 급락장이지만 나스닥 100 앞질렀다\"",
-          "summary": "",
-          "link": "http://coinreaders.com/240255",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It's a Plunging Market, But the Nasdaq",
+      "term_ko": "급락장이지만 나스닥"
     },
     {
-      "term": "Change the terrain",
-      "term_ko": "지형을 바꾸다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지형을 바꾸다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[크립토 인사이트] 자산 토큰화, 美 자본시장 지형을 바꾸다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002651983?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%ED%98%95%EC%9D%84%20%EB%B0%94%EA%BE%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%ED%98%95%EC%9D%84%20%EB%B0%94%EA%BE%B8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[크립토 인사이트] 자산 토큰화, 美 자본시장 지형을 바꾸다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002651983?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Change the Terrain",
+      "term_ko": "지형을 바꾸다"
     },
     {
       "term": "Pause",
-      "term_ko": "숨 고르기",
-      "significance_score": 280,
-      "mentions": 441,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "숨 고르기",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-27",
-              "timestamp": 1779807600000,
-              "value": 95.45454
-            },
-            {
-              "period": "2026-05-28",
-              "timestamp": 1779894000000,
-              "value": 100
-            },
-            {
-              "period": "2026-05-29",
-              "timestamp": 1779980400000,
-              "value": 68.18181
-            },
-            {
-              "period": "2026-05-30",
-              "timestamp": 1780066800000,
-              "value": 77.27272
-            },
-            {
-              "period": "2026-05-31",
-              "timestamp": 1780153200000,
-              "value": 77.27272
-            },
-            {
-              "period": "2026-06-01",
-              "timestamp": 1780239600000,
-              "value": 77.27272
-            },
-            {
-              "period": "2026-06-02",
-              "timestamp": 1780326000000,
-              "value": 77.27272
-            },
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 63.63636
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[금값시세] 6월 4일, 안전자산 수요 속 숨 고르기",
-              "link": "https://www.tournews21.com/news/articleView.html?idxno=136052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%A8%20%EA%B3%A0%EB%A5%B4%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%A8%20%EA%B3%A0%EB%A5%B4%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[금값시세] 6월 4일, 안전자산 수요 속 숨 고르기",
-          "summary": "",
-          "link": "https://www.tournews21.com/news/articleView.html?idxno=136052",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 440.9091,
-        "weekly_average_volume": 73.4848,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.014692,
-        "time_weight": 0.027127,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780412400000
-      }
+      "term_ko": "숨 고르기"
     },
     {
-      "term": "Lower prices",
-      "term_ko": "가격도 내려",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가격도 내려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국거래소 금시세 조정 국면 실물 거래 가격도 내려",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16079686"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B2%A9%EB%8F%84%20%EB%82%B4%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B2%A9%EB%8F%84%20%EB%82%B4%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "한국거래소 금시세 조정 국면 실물 거래 가격도 내려",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16079686",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lower Prices",
+      "term_ko": "가격도 내려"
     },
     {
       "term": "Rally May Lose",
-      "term_ko": "랠리 패배 가능성",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rally May Lose",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "With launch of SpaceX IPO, AI-related stock rally may lose momentum",
-              "link": "https://n.news.naver.com/mnews/article/640/0000089434?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rally%20May%20Lose",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rally%20May%20Lose"
-      },
-      "top_headlines": [
-        {
-          "title": "With launch of SpaceX IPO, AI-related stock rally may lose momentum",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000089434?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "랠리 패배 가능성"
     },
     {
       "term": "Broadcom Disappoints Investors",
-      "term_ko": "투자자들을 실망시킨 브로드컴",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Broadcom Disappoints Investors",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix slide as Broadcom disappoints investors",
-              "link": "https://n.news.naver.com/mnews/article/009/0005689214?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Broadcom%20Disappoints%20Investors",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Broadcom%20Disappoints%20Investors"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix slide as Broadcom disappoints investors",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005689214?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자자들을 실망시킨 브로드컴"
     },
     {
       "term": "Middle East Jitters",
-      "term_ko": "중동 불안",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Middle East Jitters",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KOSPI Slides On Middle East Jitters Amid Won-Dollar Rate Surpassing1,530 ...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270628"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Middle%20East%20Jitters",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Middle%20East%20Jitters"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Slides On Middle East Jitters Amid Won-Dollar Rate Surpassing1,530 ...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270628",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중동 불안"
     },
     {
       "term": "Open Sharply Lower",
-      "term_ko": "급격히 낮게 열기",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Sharply Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on Wall Street losses, renewed Ira...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016118707?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Sharply%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Sharply%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on Wall Street losses, renewed Ira...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016118707?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "급격히 낮게 열기"
     },
     {
       "term": "Wall Street Losses",
-      "term_ko": "월스트리트 손실",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Losses",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-04T12:51:00+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on Wall Street losses, renewed Ira...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016118707?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Losses",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Losses"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on Wall Street losses, renewed Ira...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016118707?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 손실"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-04T03:51:58.152Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-04T12:51:00+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "18k Gold Price June",
+      "term_ko": "18K 금시세 6월"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-04T12:51:00+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-04T12:51:00+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "4-day International Gold Price",
+      "term_ko": "4일 국제 금값"
+    },
+    {
+      "term": "Gold Price Quote June 4",
+      "term_ko": "금값시세 6월 4일"
+    },
+    {
+      "term": "Raoul Pal Bitcoin",
+      "term_ko": "라울 팔 비트코인"
+    },
+    {
+      "term": "Crypto Insights Assets",
+      "term_ko": "크립토 인사이트 자산"
+    },
+    {
+      "term": "Tokenization Us Capital Markets",
+      "term_ko": "토큰화 美 자본시장"
+    },
+    {
+      "term": "Japanese Stocks Rebound",
+      "term_ko": "日 증시 반락"
+    },
+    {
+      "term": "Yen Weakened",
+      "term_ko": "엔화 약세 한"
+    },
+    {
+      "term": "Unsynchronized",
+      "term_ko": "미 일 동시"
+    },
+    {
+      "term": "Investor Interest in Volatility",
+      "term_ko": "변동성에 투자자 관심"
+    },
+    {
+      "term": "Safe Haven Demand Genus",
+      "term_ko": "안전자산 수요 속"
+    },
+    {
+      "term": "Hahn on the Middle East Situation",
+      "term_ko": "한은 중동 상황"
+    },
+    {
+      "term": "Depending on the Monetary Policy of the Major Countries",
+      "term_ko": "따라 주요국 통화정책"
+    },
+    {
+      "term": "Adjust Expectations Quickly",
+      "term_ko": "기대 빠르게 조정"
+    },
+    {
+      "term": "Bank Imosomo Kookmin Bank",
+      "term_ko": "은행 이모저모 국민은행"
+    },
+    {
+      "term": "Woori Bank Gwangju Bank, Etc.",
+      "term_ko": "우리은행 광주은행 등"
+    },
+    {
+      "term": "Korea Exchange Gold Price Adjustment",
+      "term_ko": "한국거래소 금시세 조정"
+    },
+    {
+      "term": "Phase Physical Trading",
+      "term_ko": "국면 실물 거래"
+    },
+    {
+      "term": "Spacex Ipo Ai-related",
+      "term_ko": "SpaceX IPO AI 관련"
+    },
+    {
+      "term": "Samsung Elec Sk",
+      "term_ko": "삼성 일렉 SK"
+    },
+    {
+      "term": "Won-dollar Rate Surpassing1530",
+      "term_ko": "원-달러 환율 1530 돌파"
+    },
+    {
+      "term": "It's a Plunging Market, But the Nasdaq",
+      "term_ko": "급락장이지만 나스닥"
+    },
+    {
+      "term": "Change the Terrain",
+      "term_ko": "지형을 바꾸다"
+    },
+    {
+      "term": "Pause",
+      "term_ko": "숨 고르기"
+    },
+    {
+      "term": "Lower Prices",
+      "term_ko": "가격도 내려"
+    },
+    {
+      "term": "Rally May Lose",
+      "term_ko": "랠리 패배 가능성"
+    },
+    {
+      "term": "Broadcom Disappoints Investors",
+      "term_ko": "투자자들을 실망시킨 브로드컴"
+    },
+    {
+      "term": "Middle East Jitters",
+      "term_ko": "중동 불안"
+    },
+    {
+      "term": "Open Sharply Lower",
+      "term_ko": "급격히 낮게 열기"
+    },
+    {
+      "term": "Wall Street Losses",
+      "term_ko": "월스트리트 손실"
+    }
+  ],
+  "translations": {
+    "18k Gold Price June": {
+      "en": "18k Gold Price June",
+      "ko": "18K 금시세 6월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "4-day International Gold Price": {
+      "en": "4-day International Gold Price",
+      "ko": "4일 국제 금값",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Gold Price Quote June 4": {
+      "en": "Gold Price Quote June 4",
+      "ko": "금값시세 6월 4일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Raoul Pal Bitcoin": {
+      "en": "Raoul Pal Bitcoin",
+      "ko": "라울 팔 비트코인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Crypto Insights Assets": {
+      "en": "Crypto Insights Assets",
+      "ko": "크립토 인사이트 자산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Tokenization Us Capital Markets": {
+      "en": "Tokenization Us Capital Markets",
+      "ko": "토큰화 美 자본시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Japanese Stocks Rebound": {
+      "en": "Japanese Stocks Rebound",
+      "ko": "日 증시 반락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Yen Weakened": {
+      "en": "Yen Weakened",
+      "ko": "엔화 약세 한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Unsynchronized": {
+      "en": "Unsynchronized",
+      "ko": "미 일 동시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Investor Interest in Volatility": {
+      "en": "Investor Interest in Volatility",
+      "ko": "변동성에 투자자 관심",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Safe Haven Demand Genus": {
+      "en": "Safe Haven Demand Genus",
+      "ko": "안전자산 수요 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Hahn on the Middle East Situation": {
+      "en": "Hahn on the Middle East Situation",
+      "ko": "한은 중동 상황",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Depending on the Monetary Policy of the Major Countries": {
+      "en": "Depending on the Monetary Policy of the Major Countries",
+      "ko": "따라 주요국 통화정책",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Adjust Expectations Quickly": {
+      "en": "Adjust Expectations Quickly",
+      "ko": "기대 빠르게 조정",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Bank Imosomo Kookmin Bank": {
+      "en": "Bank Imosomo Kookmin Bank",
+      "ko": "은행 이모저모 국민은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Woori Bank Gwangju Bank, Etc.": {
+      "en": "Woori Bank Gwangju Bank, Etc.",
+      "ko": "우리은행 광주은행 등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Korea Exchange Gold Price Adjustment": {
+      "en": "Korea Exchange Gold Price Adjustment",
+      "ko": "한국거래소 금시세 조정",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Phase Physical Trading": {
+      "en": "Phase Physical Trading",
+      "ko": "국면 실물 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Spacex Ipo Ai-related": {
+      "en": "Spacex Ipo Ai-related",
+      "ko": "SpaceX IPO AI 관련",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Samsung Elec Sk": {
+      "en": "Samsung Elec Sk",
+      "ko": "삼성 일렉 SK",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Won-dollar Rate Surpassing1530": {
+      "en": "Won-dollar Rate Surpassing1530",
+      "ko": "원-달러 환율 1530 돌파",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "It's a Plunging Market, But the Nasdaq": {
+      "en": "It's a Plunging Market, But the Nasdaq",
+      "ko": "급락장이지만 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Change the Terrain": {
+      "en": "Change the Terrain",
+      "ko": "지형을 바꾸다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Pause": {
+      "en": "Pause",
+      "ko": "숨 고르기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Lower Prices": {
+      "en": "Lower Prices",
+      "ko": "가격도 내려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Rally May Lose": {
+      "en": "Rally May Lose",
+      "ko": "랠리 패배 가능성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Broadcom Disappoints Investors": {
+      "en": "Broadcom Disappoints Investors",
+      "ko": "투자자들을 실망시킨 브로드컴",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Middle East Jitters": {
+      "en": "Middle East Jitters",
+      "ko": "중동 불안",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Open Sharply Lower": {
+      "en": "Open Sharply Lower",
+      "ko": "급격히 낮게 열기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
+    },
+    "Wall Street Losses": {
+      "en": "Wall Street Losses",
+      "ko": "월스트리트 손실",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-04T09:56:24.255Z"
     }
   }
 }
