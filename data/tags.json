@@ -1,1210 +1,439 @@
 {
+  "generatedAt": "2026-06-05T19:55:45.998Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-05",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "Tech Losses",
-      "term_ko": "기술주 하락",
-      "significance_score": 448,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Losses",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares sink over 5 pct on tech losses amid Iran uncertaint...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016122330?sid=104"
-            },
-            {
-              "title": "(LEAD) Seoul shares sink over 5 pct on tech losses amid Iran uncertainty;...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016122095?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Losses",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Losses"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares sink over 5 pct on tech losses amid Iran uncertaint...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016122330?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) Seoul shares sink over 5 pct on tech losses amid Iran uncertainty;...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016122095?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기술주 하락"
     },
     {
-      "term": "Decoding the \"Foreign Investor Ants\" ETF",
-      "term_ko": "서학개미 ETF 디코딩",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서학개미 ETF 디코딩",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서학개미 ETF 디코딩] 매달 통장에 찍히는 달러 배당 JEPQ·JEPI",
-              "link": "https://www.newspim.com/news/view/20260605000785"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20ETF%20%EB%94%94%EC%BD%94%EB%94%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20ETF%20%EB%94%94%EC%BD%94%EB%94%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "[서학개미 ETF 디코딩] 매달 통장에 찍히는 달러 배당 JEPQ·JEPI",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260605000785",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Decoding the \"foreign Investor Ants\" Etf",
+      "term_ko": "서학개미 ETF 디코딩"
     },
     {
-      "term": "Dollar Dividend JEPQ",
-      "term_ko": "달러 배당 JEPQ",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 배당 JEPQ",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서학개미 ETF 디코딩] 매달 통장에 찍히는 달러 배당 JEPQ·JEPI",
-              "link": "https://www.newspim.com/news/view/20260605000785"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EB%B0%B0%EB%8B%B9%20JEPQ",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EB%B0%B0%EB%8B%B9%20JEPQ"
-      },
-      "top_headlines": [
-        {
-          "title": "[서학개미 ETF 디코딩] 매달 통장에 찍히는 달러 배당 JEPQ·JEPI",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260605000785",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Dollar Dividend Jepq",
+      "term_ko": "달러 배당 JEPQ"
     },
     {
-      "term": "QQQ Shakes Up the Nasdaq",
-      "term_ko": "나스닥 흔들 QQQ",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 흔들 QQQ",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 고용쇼크에 나스닥 흔들…QQQ·AI반도체 시험대",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16081113"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%ED%9D%94%EB%93%A4%20QQQ",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%ED%9D%94%EB%93%A4%20QQQ"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 고용쇼크에 나스닥 흔들…QQQ·AI반도체 시험대",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16081113",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Qqq Shakes Up the Nasdaq",
+      "term_ko": "나스닥 흔들 QQQ"
     },
     {
-      "term": "AI down for the second day",
-      "term_ko": "이틀째 하락 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이틀째 하락 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "닛케이지수, 단기 과열 경계감에 이틀째 하락… AI·반도체주 약세 속 소...",
-              "link": "https://www.g-enews.com/view.php?ud=20260605214005183e7e8286d56_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%8B%80%EC%A7%B8%20%ED%95%98%EB%9D%BD%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%8B%80%EC%A7%B8%20%ED%95%98%EB%9D%BD%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "닛케이지수, 단기 과열 경계감에 이틀째 하락… AI·반도체주 약세 속 소...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20260605214005183e7e8286d56_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Down for the Second Day",
+      "term_ko": "이틀째 하락 AI"
     },
     {
-      "term": "New York Stock Market Preview AI",
-      "term_ko": "뉴욕증시 프리뷰 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, AI 반도체 랠리 주춤에 나스닥 선물 하락…美 고용지...",
-              "link": "https://www.newspim.com/news/view/20260605000925"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, AI 반도체 랠리 주춤에 나스닥 선물 하락…美 고용지...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260605000925",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "New York Stock Market Preview Ai",
+      "term_ko": "뉴욕증시 프리뷰 AI"
     },
     {
-      "term": "1,550 won in after-hours trading",
-      "term_ko": "야간 거래서 1550원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "야간 거래서 1550원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "달러·원 환율 야간 거래서 1550원 돌파…\"금융위기 이후 최고치\"",
-              "link": "https://n.news.naver.com/mnews/article/421/0008988439?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%BC%EA%B0%84%20%EA%B1%B0%EB%9E%98%EC%84%9C%201550%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%BC%EA%B0%84%20%EA%B1%B0%EB%9E%98%EC%84%9C%201550%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "달러·원 환율 야간 거래서 1550원 돌파…\"금융위기 이후 최고치\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008988439?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1,550 Won in After-hours Trading",
+      "term_ko": "야간 거래서 1550원"
     },
     {
-      "term": "U.S. employment for the third consecutive month",
-      "term_ko": "美 고용 3달째",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 고용 3달째",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 고용 3달째 ‘깜짝 증가’... 연준, 금리 올리나",
-              "link": "https://n.news.naver.com/mnews/article/023/0003980461?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B3%A0%EC%9A%A9%203%EB%8B%AC%EC%A7%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B3%A0%EC%9A%A9%203%EB%8B%AC%EC%A7%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "美 고용 3달째 ‘깜짝 증가’... 연준, 금리 올리나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003980461?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Employment for the Third Consecutive Month",
+      "term_ko": "美 고용 3달째"
     },
     {
-      "term": "New York stock markets fall across the board",
-      "term_ko": "뉴욕증시 일제히 하락세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 일제히 하락세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 뉴욕증시 일제히 하락세 기술주 흔들리며 낙폭 확대…나스닥 1....",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=579973"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9D%BC%EC%A0%9C%ED%9E%88%20%ED%95%98%EB%9D%BD%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EC%9D%BC%EC%A0%9C%ED%9E%88%20%ED%95%98%EB%9D%BD%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 뉴욕증시 일제히 하락세 기술주 흔들리며 낙폭 확대…나스닥 1....",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=579973",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "New York Stock Markets Fall Across the Board",
+      "term_ko": "뉴욕증시 일제히 하락세"
     },
     {
-      "term": "Tech stocks waver, leading to a decline",
-      "term_ko": "기술주 흔들리며 낙폭",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기술주 흔들리며 낙폭",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 뉴욕증시 일제히 하락세 기술주 흔들리며 낙폭 확대…나스닥 1....",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=579973"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%88%A0%EC%A3%BC%20%ED%9D%94%EB%93%A4%EB%A6%AC%EB%A9%B0%20%EB%82%99%ED%8F%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%88%A0%EC%A3%BC%20%ED%9D%94%EB%93%A4%EB%A6%AC%EB%A9%B0%20%EB%82%99%ED%8F%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 뉴욕증시 일제히 하락세 기술주 흔들리며 낙폭 확대…나스닥 1....",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=579973",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tech Stocks Waver, Leading to a Decline",
+      "term_ko": "기술주 흔들리며 낙폭"
     },
     {
-      "term": "USD/KRW exchange rate",
-      "term_ko": "달러 원 환율",
-      "significance_score": 322,
-      "mentions": 308,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 원 환율",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-05-28",
-              "timestamp": 1779894000000,
-              "value": 50.45146
-            },
-            {
-              "period": "2026-05-29",
-              "timestamp": 1779980400000,
-              "value": 51.3544
-            },
-            {
-              "period": "2026-05-30",
-              "timestamp": 1780066800000,
-              "value": 17.72009
-            },
-            {
-              "period": "2026-05-31",
-              "timestamp": 1780153200000,
-              "value": 11.85101
-            },
-            {
-              "period": "2026-06-01",
-              "timestamp": 1780239600000,
-              "value": 53.49887
-            },
-            {
-              "period": "2026-06-02",
-              "timestamp": 1780326000000,
-              "value": 61.73814
-            },
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 62.97968
-            },
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "달러·원 환율 야간 거래서 1550원 돌파…\"금융위기 이후 최고치\"",
-              "link": "https://n.news.naver.com/mnews/article/421/0008988439?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EC%9B%90%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EC%9B%90%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "달러·원 환율 야간 거래서 1550원 돌파…\"금융위기 이후 최고치\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008988439?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 307.7878,
-        "weekly_average_volume": 51.298,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.018848,
-        "time_weight": 0.020888,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780498800000
-      }
+      "term": "Usd/krw Exchange Rate",
+      "term_ko": "달러 원 환율"
     },
     {
-      "term": "Will the Fed raise interest rates?",
-      "term_ko": "연준 금리 올리나",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연준 금리 올리나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 고용 3달째 ‘깜짝 증가’... 연준, 금리 올리나",
-              "link": "https://n.news.naver.com/mnews/article/023/0003980461?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%A4%80%20%EA%B8%88%EB%A6%AC%20%EC%98%AC%EB%A6%AC%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%A4%80%20%EA%B8%88%EB%A6%AC%20%EC%98%AC%EB%A6%AC%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "美 고용 3달째 ‘깜짝 증가’... 연준, 금리 올리나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003980461?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Will the Fed Raise Interest Rates?",
+      "term_ko": "연준 금리 올리나"
     },
     {
-      "term": "Nikkei Index: Short-Term Overheating",
-      "term_ko": "닛케이지수 단기 과열",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "닛케이지수 단기 과열",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "닛케이지수, 단기 과열 경계감에 이틀째 하락… AI·반도체주 약세 속 소...",
-              "link": "https://www.g-enews.com/view.php?ud=20260605214005183e7e8286d56_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%9B%EC%BC%80%EC%9D%B4%EC%A7%80%EC%88%98%20%EB%8B%A8%EA%B8%B0%20%EA%B3%BC%EC%97%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%9B%EC%BC%80%EC%9D%B4%EC%A7%80%EC%88%98%20%EB%8B%A8%EA%B8%B0%20%EA%B3%BC%EC%97%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "닛케이지수, 단기 과열 경계감에 이틀째 하락… AI·반도체주 약세 속 소...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20260605214005183e7e8286d56_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nikkei Index: Short-term Overheating",
+      "term_ko": "닛케이지수 단기 과열"
     },
     {
-      "term": "Amid a downturn in semiconductor stocks",
-      "term_ko": "반도체주 약세 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체주 약세 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "닛케이지수, 단기 과열 경계감에 이틀째 하락… AI·반도체주 약세 속 소...",
-              "link": "https://www.g-enews.com/view.php?ud=20260605214005183e7e8286d56_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EC%95%BD%EC%84%B8%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EC%95%BD%EC%84%B8%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "닛케이지수, 단기 과열 경계감에 이틀째 하락… AI·반도체주 약세 속 소...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=20260605214005183e7e8286d56_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amid a Downturn in Semiconductor Stocks",
+      "term_ko": "반도체주 약세 속"
     },
     {
-      "term": "Nasdaq futures fall",
-      "term_ko": "나스닥 선물 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 선물 하락",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, AI 반도체 랠리 주춤에 나스닥 선물 하락…美 고용지...",
-              "link": "https://www.newspim.com/news/view/20260605000925"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%A0%EB%AC%BC%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%A0%EB%AC%BC%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, AI 반도체 랠리 주춤에 나스닥 선물 하락…美 고용지...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260605000925",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.020888,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780498800000
-      }
+      "term": "Nasdaq Futures Fall",
+      "term_ko": "나스닥 선물 하락"
     },
     {
-      "term": "The Test Bed for AI Semiconductors",
-      "term_ko": "AI반도체 시험대",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI반도체 시험대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 고용쇼크에 나스닥 흔들…QQQ·AI반도체 시험대",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16081113"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%8B%9C%ED%97%98%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%8B%9C%ED%97%98%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 고용쇼크에 나스닥 흔들…QQQ·AI반도체 시험대",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16081113",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Test Bed for Ai Semiconductors",
+      "term_ko": "AI반도체 시험대"
     },
     {
       "term": "Your 401k Whether",
-      "term_ko": "귀하의 401k, 만약",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Your 401k Whether",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX Is About to Be in Your 401(k) Whether You Like It or Not",
-              "link": "https://www.nytimes.com/2026/06/05/technology/spacex-indexes-401k.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Your%20401k%20Whether",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Your%20401k%20Whether"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX Is About to Be in Your 401(k) Whether You Like It or Not",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/technology/spacex-indexes-401k.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "귀하의 401k, 만약"
     },
     {
       "term": "Zoom in on the Nasdaq",
-      "term_ko": "확대 나스닥",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확대 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 뉴욕증시 일제히 하락세 기술주 흔들리며 낙폭 확대…나스닥 1....",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=579973"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EB%8C%80%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EB%8C%80%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 뉴욕증시 일제히 하락세 기술주 흔들리며 낙폭 확대…나스닥 1....",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=579973",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "확대 나스닥"
     },
     {
       "term": "Overcoming the Financial Crisis",
-      "term_ko": "돌파 금융위기",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 금융위기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "달러·원 환율 야간 거래서 1550원 돌파…\"금융위기 이후 최고치\"",
-              "link": "https://n.news.naver.com/mnews/article/421/0008988439?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "달러·원 환율 야간 거래서 1550원 돌파…\"금융위기 이후 최고치\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/421/0008988439?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "돌파 금융위기"
     },
     {
-      "term": "SpaceX Is About",
-      "term_ko": "스페이스X는",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX Is About",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX Is About to Be in Your 401(k) Whether You Like It or Not",
-              "link": "https://www.nytimes.com/2026/06/05/technology/spacex-indexes-401k.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20Is%20About",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20Is%20About"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX Is About to Be in Your 401(k) Whether You Like It or Not",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/technology/spacex-indexes-401k.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex Is About",
+      "term_ko": "스페이스X는"
     },
     {
       "term": "Massive Foreign Selling",
-      "term_ko": "대규모 외국인 매도",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Massive Foreign Selling",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul stocks, won hammered by massive foreign selling",
-              "link": "https://www.koreatimes.co.kr/path/A2026060515250004608"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Massive%20Foreign%20Selling",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Massive%20Foreign%20Selling"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul stocks, won hammered by massive foreign selling",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026060515250004608",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대규모 외국인 매도"
     },
     {
-      "term": "LD Seoul",
-      "term_ko": "LD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares sink over 5 pct on tech losses amid Iran uncertaint...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016122330?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares sink over 5 pct on tech losses amid Iran uncertaint...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016122330?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
     },
     {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares sink over 5 pct on tech losses amid Iran uncertainty;...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016122095?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares sink over 5 pct on tech losses amid Iran uncertainty;...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016122095?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
     },
     {
       "term": "You Like",
-      "term_ko": "좋아요",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "You Like",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX Is About to Be in Your 401(k) Whether You Like It or Not",
-              "link": "https://www.nytimes.com/2026/06/05/technology/spacex-indexes-401k.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=You%20Like",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=You%20Like"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX Is About to Be in Your 401(k) Whether You Like It or Not",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/technology/spacex-indexes-401k.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "좋아요"
     },
     {
       "term": "Anthropics Call",
-      "term_ko": "앤트로픽스 콜",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Anthropics Call",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Anthropic’s Call for A.I. Nonproliferation",
-              "link": "https://www.nytimes.com/2026/06/05/business/dealbook/anthropic-ai-nonproliferation.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Anthropics%20Call",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Anthropics%20Call"
-      },
-      "top_headlines": [
-        {
-          "title": "Anthropic’s Call for A.I. Nonproliferation",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/business/dealbook/anthropic-ai-nonproliferation.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "앤트로픽스 콜"
     },
     {
-      "term": "A.I Nonproliferation",
-      "term_ko": "인공지능 비확산",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "A.I Nonproliferation",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Anthropic’s Call for A.I. Nonproliferation",
-              "link": "https://www.nytimes.com/2026/06/05/business/dealbook/anthropic-ai-nonproliferation.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=A.I%20Nonproliferation",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=A.I%20Nonproliferation"
-      },
-      "top_headlines": [
-        {
-          "title": "Anthropic’s Call for A.I. Nonproliferation",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/business/dealbook/anthropic-ai-nonproliferation.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A.i Nonproliferation",
+      "term_ko": "인공지능 비확산"
     },
     {
       "term": "Won Hammered",
-      "term_ko": "원 해머드",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Won Hammered",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Seoul stocks, won hammered by massive foreign selling",
-              "link": "https://www.koreatimes.co.kr/path/A2026060515250004608"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Won%20Hammered",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Won%20Hammered"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul stocks, won hammered by massive foreign selling",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026060515250004608",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "원 해머드"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-05T23:51:48+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-05T14:52:47.143Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-05T23:51:48+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Tech Losses",
+      "term_ko": "기술주 하락"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-05T23:51:48+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-05T23:51:48+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Decoding the \"foreign Investor Ants\" Etf",
+      "term_ko": "서학개미 ETF 디코딩"
+    },
+    {
+      "term": "Dollar Dividend Jepq",
+      "term_ko": "달러 배당 JEPQ"
+    },
+    {
+      "term": "Qqq Shakes Up the Nasdaq",
+      "term_ko": "나스닥 흔들 QQQ"
+    },
+    {
+      "term": "Ai Down for the Second Day",
+      "term_ko": "이틀째 하락 AI"
+    },
+    {
+      "term": "New York Stock Market Preview Ai",
+      "term_ko": "뉴욕증시 프리뷰 AI"
+    },
+    {
+      "term": "1,550 Won in After-hours Trading",
+      "term_ko": "야간 거래서 1550원"
+    },
+    {
+      "term": "U.s. Employment for the Third Consecutive Month",
+      "term_ko": "美 고용 3달째"
+    },
+    {
+      "term": "New York Stock Markets Fall Across the Board",
+      "term_ko": "뉴욕증시 일제히 하락세"
+    },
+    {
+      "term": "Tech Stocks Waver, Leading to a Decline",
+      "term_ko": "기술주 흔들리며 낙폭"
+    },
+    {
+      "term": "Usd/krw Exchange Rate",
+      "term_ko": "달러 원 환율"
+    },
+    {
+      "term": "Will the Fed Raise Interest Rates?",
+      "term_ko": "연준 금리 올리나"
+    },
+    {
+      "term": "Nikkei Index: Short-term Overheating",
+      "term_ko": "닛케이지수 단기 과열"
+    },
+    {
+      "term": "Amid a Downturn in Semiconductor Stocks",
+      "term_ko": "반도체주 약세 속"
+    },
+    {
+      "term": "Nasdaq Futures Fall",
+      "term_ko": "나스닥 선물 하락"
+    },
+    {
+      "term": "The Test Bed for Ai Semiconductors",
+      "term_ko": "AI반도체 시험대"
+    },
+    {
+      "term": "Your 401k Whether",
+      "term_ko": "귀하의 401k, 만약"
+    },
+    {
+      "term": "Zoom in on the Nasdaq",
+      "term_ko": "확대 나스닥"
+    },
+    {
+      "term": "Overcoming the Financial Crisis",
+      "term_ko": "돌파 금융위기"
+    },
+    {
+      "term": "Spacex Is About",
+      "term_ko": "스페이스X는"
+    },
+    {
+      "term": "Massive Foreign Selling",
+      "term_ko": "대규모 외국인 매도"
+    },
+    {
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
+    },
+    {
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
+    },
+    {
+      "term": "You Like",
+      "term_ko": "좋아요"
+    },
+    {
+      "term": "Anthropics Call",
+      "term_ko": "앤트로픽스 콜"
+    },
+    {
+      "term": "A.i Nonproliferation",
+      "term_ko": "인공지능 비확산"
+    },
+    {
+      "term": "Won Hammered",
+      "term_ko": "원 해머드"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    }
+  ],
+  "translations": {
+    "Tech Losses": {
+      "en": "Tech Losses",
+      "ko": "기술주 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Decoding the \"foreign Investor Ants\" Etf": {
+      "en": "Decoding the \"foreign Investor Ants\" Etf",
+      "ko": "서학개미 ETF 디코딩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Dollar Dividend Jepq": {
+      "en": "Dollar Dividend Jepq",
+      "ko": "달러 배당 JEPQ",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Qqq Shakes Up the Nasdaq": {
+      "en": "Qqq Shakes Up the Nasdaq",
+      "ko": "나스닥 흔들 QQQ",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Ai Down for the Second Day": {
+      "en": "Ai Down for the Second Day",
+      "ko": "이틀째 하락 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "New York Stock Market Preview Ai": {
+      "en": "New York Stock Market Preview Ai",
+      "ko": "뉴욕증시 프리뷰 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "1,550 Won in After-hours Trading": {
+      "en": "1,550 Won in After-hours Trading",
+      "ko": "야간 거래서 1550원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "U.s. Employment for the Third Consecutive Month": {
+      "en": "U.s. Employment for the Third Consecutive Month",
+      "ko": "美 고용 3달째",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "New York Stock Markets Fall Across the Board": {
+      "en": "New York Stock Markets Fall Across the Board",
+      "ko": "뉴욕증시 일제히 하락세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Tech Stocks Waver, Leading to a Decline": {
+      "en": "Tech Stocks Waver, Leading to a Decline",
+      "ko": "기술주 흔들리며 낙폭",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Usd/krw Exchange Rate": {
+      "en": "Usd/krw Exchange Rate",
+      "ko": "달러 원 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Will the Fed Raise Interest Rates?": {
+      "en": "Will the Fed Raise Interest Rates?",
+      "ko": "연준 금리 올리나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Nikkei Index: Short-term Overheating": {
+      "en": "Nikkei Index: Short-term Overheating",
+      "ko": "닛케이지수 단기 과열",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Amid a Downturn in Semiconductor Stocks": {
+      "en": "Amid a Downturn in Semiconductor Stocks",
+      "ko": "반도체주 약세 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Nasdaq Futures Fall": {
+      "en": "Nasdaq Futures Fall",
+      "ko": "나스닥 선물 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "The Test Bed for Ai Semiconductors": {
+      "en": "The Test Bed for Ai Semiconductors",
+      "ko": "AI반도체 시험대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Your 401k Whether": {
+      "en": "Your 401k Whether",
+      "ko": "귀하의 401k, 만약",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Zoom in on the Nasdaq": {
+      "en": "Zoom in on the Nasdaq",
+      "ko": "확대 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Overcoming the Financial Crisis": {
+      "en": "Overcoming the Financial Crisis",
+      "ko": "돌파 금융위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Spacex Is About": {
+      "en": "Spacex Is About",
+      "ko": "스페이스X는",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Massive Foreign Selling": {
+      "en": "Massive Foreign Selling",
+      "ko": "대규모 외국인 매도",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Ld Seoul": {
+      "en": "Ld Seoul",
+      "ko": "LD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Lead Seoul": {
+      "en": "Lead Seoul",
+      "ko": "LEAD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "You Like": {
+      "en": "You Like",
+      "ko": "좋아요",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Anthropics Call": {
+      "en": "Anthropics Call",
+      "ko": "앤트로픽스 콜",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "A.i Nonproliferation": {
+      "en": "A.i Nonproliferation",
+      "ko": "인공지능 비확산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Won Hammered": {
+      "en": "Won Hammered",
+      "ko": "원 해머드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T19:55:45.999Z"
     }
   }
 }
