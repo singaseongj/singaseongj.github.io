@@ -1,19 +1,19 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-06-05T18:48:11+09:00 (KST)**
+- Generated: **2026-06-05T23:51:33+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
 
-**동진쎄미켐** (005290.KQ)
+**네이처셀** (007390.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.3%**, 20d **-4.6%**; volatility (20d): **unknown**
+- Returns: 5d **5.1%**, 20d **70.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EB%8F%99%EC%A7%84%EC%8E%84%EB%AF%B8%EC%BC%90
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EB%84%A4%EC%9D%B4%EC%B2%98%EC%85%80
 
 **유진테크** (084370.KQ)
 
@@ -23,21 +23,21 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%9C%A0%EC%A7%84%ED%85%8C%ED%81%AC
 
-**정보기술** (218410.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.8%**, 20d **-0.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
-
 **주성엔지니어링** (036930.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.4%**, 20d **0.6%**; volatility (20d): **unknown**
+- Returns: 5d **1.0%**, 20d **64.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%A3%BC%EC%84%B1%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81
+
+**카페24** (042000.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.4%**, 20d **-23.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%B9%B4%ED%8E%9824
 
 **피에스케이** (319660.KQ)
 
@@ -49,13 +49,13 @@
 
 ### AGGRESSIVE (5)
 
-**성일하이텍** (365340.KQ)
+**솔브레인** (357780.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.4%**, 20d **-4.5%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **-8.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%84%B1%EC%9D%BC%ED%95%98%EC%9D%B4%ED%85%8D
+- News search: https://www.google.com/search?q=%EC%86%94%EB%B8%8C%EB%A0%88%EC%9D%B8
 
 **엔켐** (348370.KQ)
 
@@ -93,13 +93,6 @@
 
 ### SAFE (5)
 
-**LG이노텍** (011070.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **7.7%**, 20d **93.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG%EC%9D%B4%EB%85%B8%ED%85%8D
-
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
@@ -108,12 +101,12 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
-**삼성전기** (009150.KS)
+**두산** (000150.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **-2.6%**, 20d **97.5%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **4.8%**, 20d **-2.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0
+- News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼성전자** (005930.KS)
 
@@ -130,6 +123,13 @@
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
+
+**하이트진로** (000080.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-2.2%**, 20d **-4.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
 
 ### AGGRESSIVE (5)
 
@@ -196,7 +196,7 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Broadcom
 
-### AGGRESSIVE (3)
+### AGGRESSIVE (4)
 
 **Airbnb** (ABNB)
 
@@ -213,6 +213,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Costco
+
+**Monster Beverage** (MNST)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-4.1%**, 20d **1.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Monster%20Beverage
 
 **Monster Beverage** (MNST)
 
@@ -271,7 +279,7 @@
 **Tyler Technologies** (TYL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.7%**, 20d **-3.9%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **-6.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Tyler%20Technologies
