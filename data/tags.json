@@ -1,1101 +1,439 @@
 {
-  "date": "2026-06-04",
+  "generatedAt": "2026-06-05T03:36:48.271Z",
+  "timezone": "Asia/Seoul",
+  "date": "2026-06-05",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "On Semi Nvidia MGX",
-      "term_ko": "온세미 엔비디아 MGX",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "온세미 엔비디아 MGX",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-              "link": "https://www.hellot.net/news/article.html?no=113007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A8%EC%84%B8%EB%AF%B8%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20MGX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A8%EC%84%B8%EB%AF%B8%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20MGX"
-      },
-      "top_headlines": [
-        {
-          "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-          "summary": "",
-          "link": "https://www.hellot.net/news/article.html?no=113007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "On Semi Nvidia Mgx",
+      "term_ko": "온세미 엔비디아 MGX"
     },
     {
-      "term": "AI Factory in the ecosystem",
-      "term_ko": "생태계서 AI 팩토리",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "생태계서 AI 팩토리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-              "link": "https://www.hellot.net/news/article.html?no=113007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%9D%ED%83%9C%EA%B3%84%EC%84%9C%20AI%20%ED%8C%A9%ED%86%A0%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%9D%ED%83%9C%EA%B3%84%EC%84%9C%20AI%20%ED%8C%A9%ED%86%A0%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-          "summary": "",
-          "link": "https://www.hellot.net/news/article.html?no=113007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Factory in the Ecosystem",
+      "term_ko": "생태계서 AI 팩토리"
     },
     {
-      "term": "FIs in Concern",
-      "term_ko": "우려 속 FI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "우려 속 FI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-              "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EB%A0%A4%20%EC%86%8D%20FI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EB%A0%A4%20%EC%86%8D%20FI"
-      },
-      "top_headlines": [
-        {
-          "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Fis in Concern",
+      "term_ko": "우려 속 FI"
     },
     {
-      "term": "Possible increase in real estate PF",
-      "term_ko": "인상 가능성에 부동산PF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인상 가능성에 부동산PF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "기준금리 인상 가능성에… 부동산PF 걱정 커지는 2금융권",
-              "link": "https://n.news.naver.com/mnews/article/008/0005367403?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%20%EA%B0%80%EB%8A%A5%EC%84%B1%EC%97%90%20%EB%B6%80%EB%8F%99%EC%82%B0PF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%20%EA%B0%80%EB%8A%A5%EC%84%B1%EC%97%90%20%EB%B6%80%EB%8F%99%EC%82%B0PF"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 인상 가능성에… 부동산PF 걱정 커지는 2금융권",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005367403?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Possible Increase in Real Estate Pf",
+      "term_ko": "인상 가능성에 부동산PF"
     },
     {
-      "term": "2700 trillion if you live to see it",
-      "term_ko": "꿈 산다면 2700조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "꿈 산다면 2700조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "머스크 꿈 산다면 2700조…리스크도 감안 땐 1200조",
-              "link": "https://n.news.naver.com/mnews/article/025/0003528174?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%BF%88%20%EC%82%B0%EB%8B%A4%EB%A9%B4%202700%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%BF%88%20%EC%82%B0%EB%8B%A4%EB%A9%B4%202700%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "머스크 꿈 산다면 2700조…리스크도 감안 땐 1200조",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003528174?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "2700 Trillion If You Live to See It",
+      "term_ko": "꿈 산다면 2700조"
     },
     {
-      "term": "Given that 1200 trillion",
-      "term_ko": "감안 땐 1200조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "감안 땐 1200조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "머스크 꿈 산다면 2700조…리스크도 감안 땐 1200조",
-              "link": "https://n.news.naver.com/mnews/article/025/0003528174?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%90%EC%95%88%20%EB%95%90%201200%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%90%EC%95%88%20%EB%95%90%201200%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "머스크 꿈 산다면 2700조…리스크도 감안 땐 1200조",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003528174?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Given That 1200 Trillion",
+      "term_ko": "감안 땐 1200조"
     },
     {
       "term": "1% Nasdaq Futures",
-      "term_ko": "나스닥 선물 1%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 선물 1%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 브로드컴 쇼크에 반도체주 급락…나스닥 선물 1%↓·다...",
-              "link": "https://www.newspim.com/news/view/20260604001297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%A0%EB%AC%BC%201%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%A0%EB%AC%BC%201%25"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 브로드컴 쇼크에 반도체주 급락…나스닥 선물 1%↓·다...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260604001297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 선물 1%"
     },
     {
-      "term": "Exchange rates stuck in the 1500s",
-      "term_ko": "1500원대에 갇힌 환율",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1500원대에 갇힌 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "1500원대에 갇힌 환율… 외환위기 공포와 달랐다",
-              "link": "https://n.news.naver.com/mnews/article/081/0003649819?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1500%EC%9B%90%EB%8C%80%EC%97%90%20%EA%B0%87%ED%9E%8C%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1500%EC%9B%90%EB%8C%80%EC%97%90%20%EA%B0%87%ED%9E%8C%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "1500원대에 갇힌 환율… 외환위기 공포와 달랐다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003649819?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rates Stuck in the 1500s",
+      "term_ko": "1500원대에 갇힌 환율"
     },
     {
-      "term": "9% of K-Bank listed shares",
-      "term_ko": "케이뱅크 상장주식 9%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "케이뱅크 상장주식 9%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-              "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EC%83%81%EC%9E%A5%EC%A3%BC%EC%8B%9D%209%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EC%83%81%EC%9E%A5%EC%A3%BC%EC%8B%9D%209%25"
-      },
-      "top_headlines": [
-        {
-          "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "9% of K-bank Listed Shares",
+      "term_ko": "케이뱅크 상장주식 9%"
     },
     {
-      "term": "Money Today Offline Headlines - 5 days",
-      "term_ko": "머니투데이 오프라인 헤드라인-5일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "머니투데이 오프라인 헤드라인-5일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "머니투데이 오프라인 헤드라인-5일",
-              "link": "https://n.news.naver.com/mnews/article/008/0005367419?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%20%EC%98%A4%ED%94%84%EB%9D%BC%EC%9D%B8%20%ED%97%A4%EB%93%9C%EB%9D%BC%EC%9D%B8-5%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A8%B8%EB%8B%88%ED%88%AC%EB%8D%B0%EC%9D%B4%20%EC%98%A4%ED%94%84%EB%9D%BC%EC%9D%B8%20%ED%97%A4%EB%93%9C%EB%9D%BC%EC%9D%B8-5%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "머니투데이 오프라인 헤드라인-5일",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005367419?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Money Today Offline Headlines - 5 Days",
+      "term_ko": "머니투데이 오프라인 헤드라인-5일"
     },
     {
-      "term": "Secondary market worries grow",
-      "term_ko": "걱정 커지는 2금융권",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "걱정 커지는 2금융권",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "기준금리 인상 가능성에… 부동산PF 걱정 커지는 2금융권",
-              "link": "https://n.news.naver.com/mnews/article/008/0005367403?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B1%EC%A0%95%20%EC%BB%A4%EC%A7%80%EB%8A%94%202%EA%B8%88%EC%9C%B5%EA%B6%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B1%EC%A0%95%20%EC%BB%A4%EC%A7%80%EB%8A%94%202%EA%B8%88%EC%9C%B5%EA%B6%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "기준금리 인상 가능성에… 부동산PF 걱정 커지는 2금융권",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005367403?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Secondary Market Worries Grow",
+      "term_ko": "걱정 커지는 2금융권"
     },
     {
-      "term": "NYSE Preview Broadcom",
-      "term_ko": "뉴욕증시 프리뷰 브로드컴",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 브로드컴",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 브로드컴 쇼크에 반도체주 급락…나스닥 선물 1%↓·다...",
-              "link": "https://www.newspim.com/news/view/20260604001297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 브로드컴 쇼크에 반도체주 급락…나스닥 선물 1%↓·다...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260604001297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nyse Preview Broadcom",
+      "term_ko": "뉴욕증시 프리뷰 브로드컴"
     },
     {
       "term": "Semiconductor Stocks Plunge on Shock",
-      "term_ko": "쇼크에 반도체주 급락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "쇼크에 반도체주 급락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 브로드컴 쇼크에 반도체주 급락…나스닥 선물 1%↓·다...",
-              "link": "https://www.newspim.com/news/view/20260604001297"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%87%BC%ED%81%AC%EC%97%90%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%87%BC%ED%81%AC%EC%97%90%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 브로드컴 쇼크에 반도체주 급락…나스닥 선물 1%↓·다...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260604001297",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쇼크에 반도체주 급락"
     },
     {
-      "term": "Autonomous driving reads black ice",
-      "term_ko": "블랙아이스까지 읽는 자율주행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "블랙아이스까지 읽는 자율주행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“블랙아이스까지 읽는 자율주행”…모바휠, 美 나스닥 상장사 AEye와 기...",
-              "link": "https://www.venturesquare.net/1088935/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B8%94%EB%9E%99%EC%95%84%EC%9D%B4%EC%8A%A4%EA%B9%8C%EC%A7%80%20%EC%9D%BD%EB%8A%94%20%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B8%94%EB%9E%99%EC%95%84%EC%9D%B4%EC%8A%A4%EA%B9%8C%EC%A7%80%20%EC%9D%BD%EB%8A%94%20%EC%9E%90%EC%9C%A8%EC%A3%BC%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "“블랙아이스까지 읽는 자율주행”…모바휠, 美 나스닥 상장사 AEye와 기...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1088935/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Autonomous Driving Reads Black Ice",
+      "term_ko": "블랙아이스까지 읽는 자율주행"
     },
     {
       "term": "Power Solutions Support",
-      "term_ko": "전력 솔루션 지원",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전력 솔루션 지원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-              "link": "https://www.hellot.net/news/article.html?no=113007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A0%A5%20%EC%86%94%EB%A3%A8%EC%85%98%20%EC%A7%80%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A0%A5%20%EC%86%94%EB%A3%A8%EC%85%98%20%EC%A7%80%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-          "summary": "",
-          "link": "https://www.hellot.net/news/article.html?no=113007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전력 솔루션 지원"
     },
     {
       "term": "Matt Hogan Cryptocurrency",
-      "term_ko": "매트 호건 암호화폐",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매트 호건 암호화폐",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "매트 호건 \"암호화폐, 인공지능에 주도권 빼앗겼다\"",
-              "link": "http://coinreaders.com/240292"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%ED%8A%B8%20%ED%98%B8%EA%B1%B4%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%ED%8A%B8%20%ED%98%B8%EA%B1%B4%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90"
-      },
-      "top_headlines": [
-        {
-          "title": "매트 호건 \"암호화폐, 인공지능에 주도권 빼앗겼다\"",
-          "summary": "",
-          "link": "http://coinreaders.com/240292",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "매트 호건 암호화폐"
     },
     {
-      "term": "AI has taken over",
-      "term_ko": "인공지능에 주도권 빼앗겼다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인공지능에 주도권 빼앗겼다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "매트 호건 \"암호화폐, 인공지능에 주도권 빼앗겼다\"",
-              "link": "http://coinreaders.com/240292"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%97%90%20%EC%A3%BC%EB%8F%84%EA%B6%8C%20%EB%B9%BC%EC%95%97%EA%B2%BC%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%97%90%20%EC%A3%BC%EB%8F%84%EA%B6%8C%20%EB%B9%BC%EC%95%97%EA%B2%BC%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "매트 호건 \"암호화폐, 인공지능에 주도권 빼앗겼다\"",
-          "summary": "",
-          "link": "http://coinreaders.com/240292",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Has Taken Over",
+      "term_ko": "인공지능에 주도권 빼앗겼다"
     },
     {
-      "term": "The FX Crisis Wasn't What We Fear",
-      "term_ko": "외환위기 공포와 달랐다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외환위기 공포와 달랐다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "1500원대에 갇힌 환율… 외환위기 공포와 달랐다",
-              "link": "https://n.news.naver.com/mnews/article/081/0003649819?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%ED%99%98%EC%9C%84%EA%B8%B0%20%EA%B3%B5%ED%8F%AC%EC%99%80%20%EB%8B%AC%EB%9E%90%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%ED%99%98%EC%9C%84%EA%B8%B0%20%EA%B3%B5%ED%8F%AC%EC%99%80%20%EB%8B%AC%EB%9E%90%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "1500원대에 갇힌 환율… 외환위기 공포와 달랐다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003649819?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Fx Crisis Wasn't What We Fear",
+      "term_ko": "외환위기 공포와 달랐다"
     },
     {
       "term": "Unprotect Overhang",
-      "term_ko": "보호예수 해제 오버행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보호예수 해제 오버행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-              "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%ED%98%B8%EC%98%88%EC%88%98%20%ED%95%B4%EC%A0%9C%20%EC%98%A4%EB%B2%84%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%ED%98%B8%EC%98%88%EC%88%98%20%ED%95%B4%EC%A0%9C%20%EC%98%A4%EB%B2%84%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "보호예수 해제 오버행"
     },
     {
-      "term": "U.S. markets open...amid crashing oil prices",
-      "term_ko": "美장중..유가 추락 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美장중..유가 추락 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美장중..유가 '추락' 속, 금값·美증시 '상승' vs CRYPTO '뚝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166154"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%EC%9E%A5%EC%A4%91..%EC%9C%A0%EA%B0%80%20%EC%B6%94%EB%9D%BD%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%EC%9E%A5%EC%A4%91..%EC%9C%A0%EA%B0%80%20%EC%B6%94%EB%9D%BD%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "美장중..유가 '추락' 속, 금값·美증시 '상승' vs CRYPTO '뚝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166154",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Markets Open...amid Crashing Oil Prices",
+      "term_ko": "美장중..유가 추락 속"
     },
     {
-      "term": "Gold Price US Stocks Rise",
-      "term_ko": "금값 美증시 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값 美증시 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美장중..유가 '추락' 속, 금값·美증시 '상승' vs CRYPTO '뚝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166154"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%E7%BE%8E%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%E7%BE%8E%EC%A6%9D%EC%8B%9C%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "美장중..유가 '추락' 속, 금값·美증시 '상승' vs CRYPTO '뚝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166154",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gold Price Us Stocks Rise",
+      "term_ko": "금값 美증시 상승"
     },
     {
-      "term": "A hawkish Fed",
-      "term_ko": "매파 날아든 연준",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매파 날아든 연준",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "매파 날아든 연준… 금리인상론 고개 든다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005367393?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%ED%8C%8C%20%EB%82%A0%EC%95%84%EB%93%A0%20%EC%97%B0%EC%A4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%ED%8C%8C%20%EB%82%A0%EC%95%84%EB%93%A0%20%EC%97%B0%EC%A4%80"
-      },
-      "top_headlines": [
-        {
-          "title": "매파 날아든 연준… 금리인상론 고개 든다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005367393?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Hawkish Fed",
+      "term_ko": "매파 날아든 연준"
     },
     {
-      "term": "Rising interest rates raise their heads",
-      "term_ko": "금리인상론 고개 든다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리인상론 고개 든다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "매파 날아든 연준… 금리인상론 고개 든다",
-              "link": "https://n.news.naver.com/mnews/article/008/0005367393?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%EB%A1%A0%20%EA%B3%A0%EA%B0%9C%20%EB%93%A0%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%EB%A1%A0%20%EA%B3%A0%EA%B0%9C%20%EB%93%A0%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "매파 날아든 연준… 금리인상론 고개 든다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005367393?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rising Interest Rates Raise Their Heads",
+      "term_ko": "금리인상론 고개 든다"
     },
     {
-      "term": "CRYPTO Tuk",
-      "term_ko": "CRYPTO 뚝",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "CRYPTO 뚝",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美장중..유가 '추락' 속, 금값·美증시 '상승' vs CRYPTO '뚝'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166154"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CRYPTO%20%EB%9A%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CRYPTO%20%EB%9A%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "美장중..유가 '추락' 속, 금값·美증시 '상승' vs CRYPTO '뚝'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166154",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Crypto Tuk",
+      "term_ko": "CRYPTO 뚝"
     },
     {
       "term": "Mobawheel 美",
-      "term_ko": "모바휠 美",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "모바휠 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“블랙아이스까지 읽는 자율주행”…모바휠, 美 나스닥 상장사 AEye와 기...",
-              "link": "https://www.venturesquare.net/1088935/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%A8%EB%B0%94%ED%9C%A0%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%A8%EB%B0%94%ED%9C%A0%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "“블랙아이스까지 읽는 자율주행”…모바휠, 美 나스닥 상장사 AEye와 기...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1088935/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "모바휠 美"
     },
     {
-      "term": "Enrichment announcements",
-      "term_ko": "강화 발표",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강화 발표",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-              "link": "https://www.hellot.net/news/article.html?no=113007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%ED%99%94%20%EB%B0%9C%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%ED%99%94%20%EB%B0%9C%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "온세미, 엔비디아 MGX 생태계서 AI 팩토리 전력 솔루션 지원 강화 발표",
-          "summary": "",
-          "link": "https://www.hellot.net/news/article.html?no=113007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Enrichment Announcements",
+      "term_ko": "강화 발표"
     },
     {
-      "term": "Exit haptics",
-      "term_ko": "엑시트 촉각",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엑시트 촉각",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-              "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%91%EC%8B%9C%ED%8A%B8%20%EC%B4%89%EA%B0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%91%EC%8B%9C%ED%8A%B8%20%EC%B4%89%EA%B0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "케이뱅크 상장주식 9% 보호예수 해제…오버행 우려 속 FI 엑시트 '촉각'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/417/0001146185?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exit Haptics",
+      "term_ko": "엑시트 촉각"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "코스피, 외국인 매수세에 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 상승",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-05T05:08:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-04T20:09:03.477Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-05T05:08:01+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "On Semi Nvidia Mgx",
+      "term_ko": "온세미 엔비디아 MGX"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-05T05:08:01+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-05T05:08:01+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Ai Factory in the Ecosystem",
+      "term_ko": "생태계서 AI 팩토리"
+    },
+    {
+      "term": "Fis in Concern",
+      "term_ko": "우려 속 FI"
+    },
+    {
+      "term": "Possible Increase in Real Estate Pf",
+      "term_ko": "인상 가능성에 부동산PF"
+    },
+    {
+      "term": "2700 Trillion If You Live to See It",
+      "term_ko": "꿈 산다면 2700조"
+    },
+    {
+      "term": "Given That 1200 Trillion",
+      "term_ko": "감안 땐 1200조"
+    },
+    {
+      "term": "1% Nasdaq Futures",
+      "term_ko": "나스닥 선물 1%"
+    },
+    {
+      "term": "Exchange Rates Stuck in the 1500s",
+      "term_ko": "1500원대에 갇힌 환율"
+    },
+    {
+      "term": "9% of K-bank Listed Shares",
+      "term_ko": "케이뱅크 상장주식 9%"
+    },
+    {
+      "term": "Money Today Offline Headlines - 5 Days",
+      "term_ko": "머니투데이 오프라인 헤드라인-5일"
+    },
+    {
+      "term": "Secondary Market Worries Grow",
+      "term_ko": "걱정 커지는 2금융권"
+    },
+    {
+      "term": "Nyse Preview Broadcom",
+      "term_ko": "뉴욕증시 프리뷰 브로드컴"
+    },
+    {
+      "term": "Semiconductor Stocks Plunge on Shock",
+      "term_ko": "쇼크에 반도체주 급락"
+    },
+    {
+      "term": "Autonomous Driving Reads Black Ice",
+      "term_ko": "블랙아이스까지 읽는 자율주행"
+    },
+    {
+      "term": "Power Solutions Support",
+      "term_ko": "전력 솔루션 지원"
+    },
+    {
+      "term": "Matt Hogan Cryptocurrency",
+      "term_ko": "매트 호건 암호화폐"
+    },
+    {
+      "term": "Ai Has Taken Over",
+      "term_ko": "인공지능에 주도권 빼앗겼다"
+    },
+    {
+      "term": "The Fx Crisis Wasn't What We Fear",
+      "term_ko": "외환위기 공포와 달랐다"
+    },
+    {
+      "term": "Unprotect Overhang",
+      "term_ko": "보호예수 해제 오버행"
+    },
+    {
+      "term": "U.s. Markets Open...amid Crashing Oil Prices",
+      "term_ko": "美장중..유가 추락 속"
+    },
+    {
+      "term": "Gold Price Us Stocks Rise",
+      "term_ko": "금값 美증시 상승"
+    },
+    {
+      "term": "A Hawkish Fed",
+      "term_ko": "매파 날아든 연준"
+    },
+    {
+      "term": "Rising Interest Rates Raise Their Heads",
+      "term_ko": "금리인상론 고개 든다"
+    },
+    {
+      "term": "Crypto Tuk",
+      "term_ko": "CRYPTO 뚝"
+    },
+    {
+      "term": "Mobawheel 美",
+      "term_ko": "모바휠 美"
+    },
+    {
+      "term": "Enrichment Announcements",
+      "term_ko": "강화 발표"
+    },
+    {
+      "term": "Exit Haptics",
+      "term_ko": "엑시트 촉각"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "코스피, 외국인 매수세에 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 상승"
+    }
+  ],
+  "translations": {
+    "On Semi Nvidia Mgx": {
+      "en": "On Semi Nvidia Mgx",
+      "ko": "온세미 엔비디아 MGX",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Ai Factory in the Ecosystem": {
+      "en": "Ai Factory in the Ecosystem",
+      "ko": "생태계서 AI 팩토리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Fis in Concern": {
+      "en": "Fis in Concern",
+      "ko": "우려 속 FI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Possible Increase in Real Estate Pf": {
+      "en": "Possible Increase in Real Estate Pf",
+      "ko": "인상 가능성에 부동산PF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "2700 Trillion If You Live to See It": {
+      "en": "2700 Trillion If You Live to See It",
+      "ko": "꿈 산다면 2700조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Given That 1200 Trillion": {
+      "en": "Given That 1200 Trillion",
+      "ko": "감안 땐 1200조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "1% Nasdaq Futures": {
+      "en": "1% Nasdaq Futures",
+      "ko": "나스닥 선물 1%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Exchange Rates Stuck in the 1500s": {
+      "en": "Exchange Rates Stuck in the 1500s",
+      "ko": "1500원대에 갇힌 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "9% of K-bank Listed Shares": {
+      "en": "9% of K-bank Listed Shares",
+      "ko": "케이뱅크 상장주식 9%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Money Today Offline Headlines - 5 Days": {
+      "en": "Money Today Offline Headlines - 5 Days",
+      "ko": "머니투데이 오프라인 헤드라인-5일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Secondary Market Worries Grow": {
+      "en": "Secondary Market Worries Grow",
+      "ko": "걱정 커지는 2금융권",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Nyse Preview Broadcom": {
+      "en": "Nyse Preview Broadcom",
+      "ko": "뉴욕증시 프리뷰 브로드컴",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Semiconductor Stocks Plunge on Shock": {
+      "en": "Semiconductor Stocks Plunge on Shock",
+      "ko": "쇼크에 반도체주 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Autonomous Driving Reads Black Ice": {
+      "en": "Autonomous Driving Reads Black Ice",
+      "ko": "블랙아이스까지 읽는 자율주행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Power Solutions Support": {
+      "en": "Power Solutions Support",
+      "ko": "전력 솔루션 지원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Matt Hogan Cryptocurrency": {
+      "en": "Matt Hogan Cryptocurrency",
+      "ko": "매트 호건 암호화폐",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Ai Has Taken Over": {
+      "en": "Ai Has Taken Over",
+      "ko": "인공지능에 주도권 빼앗겼다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "The Fx Crisis Wasn't What We Fear": {
+      "en": "The Fx Crisis Wasn't What We Fear",
+      "ko": "외환위기 공포와 달랐다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Unprotect Overhang": {
+      "en": "Unprotect Overhang",
+      "ko": "보호예수 해제 오버행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "U.s. Markets Open...amid Crashing Oil Prices": {
+      "en": "U.s. Markets Open...amid Crashing Oil Prices",
+      "ko": "美장중..유가 추락 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Gold Price Us Stocks Rise": {
+      "en": "Gold Price Us Stocks Rise",
+      "ko": "금값 美증시 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "A Hawkish Fed": {
+      "en": "A Hawkish Fed",
+      "ko": "매파 날아든 연준",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Rising Interest Rates Raise Their Heads": {
+      "en": "Rising Interest Rates Raise Their Heads",
+      "ko": "금리인상론 고개 든다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Crypto Tuk": {
+      "en": "Crypto Tuk",
+      "ko": "CRYPTO 뚝",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Mobawheel 美": {
+      "en": "Mobawheel 美",
+      "ko": "모바휠 美",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Enrichment Announcements": {
+      "en": "Enrichment Announcements",
+      "ko": "강화 발표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Exit Haptics": {
+      "en": "Exit Haptics",
+      "ko": "엑시트 촉각",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "코스피, 외국인 매수세에 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-05T03:36:48.271Z"
     }
   }
 }
