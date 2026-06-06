@@ -1,1101 +1,425 @@
 {
+  "generatedAt": "2026-06-06T08:34:14.191Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-06",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
       "term": "President Lee's Task Force on Exchange Rate Measures",
-      "term_ko": "李대통령에 환율 대책TF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "李대통령에 환율 대책TF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "안철수 “李대통령에 ‘환율 대책TF’ 요구… 코스피 수치만 올리면 되...",
-              "link": "https://n.news.naver.com/mnews/article/366/0001169836?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EF%A7%A1%EB%8C%80%ED%86%B5%EB%A0%B9%EC%97%90%20%ED%99%98%EC%9C%A8%20%EB%8C%80%EC%B1%85TF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EF%A7%A1%EB%8C%80%ED%86%B5%EB%A0%B9%EC%97%90%20%ED%99%98%EC%9C%A8%20%EB%8C%80%EC%B1%85TF"
-      },
-      "top_headlines": [
-        {
-          "title": "안철수 “李대통령에 ‘환율 대책TF’ 요구… 코스피 수치만 올리면 되...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001169836?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "李대통령에 환율 대책TF"
     },
     {
-      "term": "Variables: Exchange rate, CPI",
-      "term_ko": "변수는 환율 CPI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "변수는 환율 CPI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "9천 포인트 눈앞서 급락한 코스피…다음주 변수는 환율·CPI·스페이스X",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=741712"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EC%88%98%EB%8A%94%20%ED%99%98%EC%9C%A8%20CPI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EC%88%98%EB%8A%94%20%ED%99%98%EC%9C%A8%20CPI"
-      },
-      "top_headlines": [
-        {
-          "title": "9천 포인트 눈앞서 급락한 코스피…다음주 변수는 환율·CPI·스페이스X",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=741712",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Variables: Exchange Rate, Cpi",
+      "term_ko": "변수는 환율 CPI"
     },
     {
       "term": "Today's Stock Market News, June 5",
-      "term_ko": "오늘의 증권소식6월 5일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증권소식6월 5일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 증권소식(6월 5일)",
-              "link": "https://www.radiokorea.com/news/article.php?uid=496954"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D6%EC%9B%94%205%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D6%EC%9B%94%205%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증권소식(6월 5일)",
-          "summary": "",
-          "link": "https://www.radiokorea.com/news/article.php?uid=496954",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 증권소식6월 5일"
     },
     {
-      "term": "$100 billion current account surplus with foreign countries",
-      "term_ko": "외국인 경상흑자 1000억달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외국인 경상흑자 1000억달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "자금 빼는 외국인, 경상흑자 1000억달러 돌파에도 원·달러 환율 1560원 ...",
-              "link": "https://n.news.naver.com/mnews/article/243/0000098781?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B2%BD%EC%83%81%ED%9D%91%EC%9E%90%201000%EC%96%B5%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B2%BD%EC%83%81%ED%9D%91%EC%9E%90%201000%EC%96%B5%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "자금 빼는 외국인, 경상흑자 1000억달러 돌파에도 원·달러 환율 1560원 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/243/0000098781?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "$100 Billion Current Account Surplus with Foreign Countries",
+      "term_ko": "외국인 경상흑자 1000억달러"
     },
     {
-      "term": "Exchange rate: 1,560 won per dollar",
-      "term_ko": "달러 환율 1560원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 환율 1560원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "자금 빼는 외국인, 경상흑자 1000억달러 돌파에도 원·달러 환율 1560원 ...",
-              "link": "https://n.news.naver.com/mnews/article/243/0000098781?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%201560%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%201560%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "자금 빼는 외국인, 경상흑자 1000억달러 돌파에도 원·달러 환율 1560원 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/243/0000098781?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rate: 1,560 Won Per Dollar",
+      "term_ko": "달러 환율 1560원"
     },
     {
-      "term": "Lee Ho-yeon's D-Tox: KOSPI Hits 8,000",
-      "term_ko": "이호연의D톡스 코스피 8천피",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이호연의D톡스 코스피 8천피",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이호연의D톡스] 코스피 8천피 찍고 급락…빚투 폭증했는데 어쩌나",
-              "link": "https://n.news.naver.com/mnews/article/138/0002230059?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%98%B8%EC%97%B0%EC%9D%98D%ED%86%A1%EC%8A%A4%20%EC%BD%94%EC%8A%A4%ED%94%BC%208%EC%B2%9C%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%98%B8%EC%97%B0%EC%9D%98D%ED%86%A1%EC%8A%A4%20%EC%BD%94%EC%8A%A4%ED%94%BC%208%EC%B2%9C%ED%94%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[이호연의D톡스] 코스피 8천피 찍고 급락…빚투 폭증했는데 어쩌나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002230059?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lee Ho-yeon's D-tox: Kospi Hits 8,000",
+      "term_ko": "이호연의D톡스 코스피 8천피"
     },
     {
-      "term": "Don't fight —",
-      "term_ko": "싸우지 마라 ㅡ",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "싸우지 마라 ㅡ",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[토큰명언] \"시장에 맞서 싸우지 마라\" ㅡ Day 81",
-              "link": "https://www.tokenpost.kr/news/insights/366538"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%B8%EC%9A%B0%EC%A7%80%20%EB%A7%88%EB%9D%BC%20%E3%85%A1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%B8%EC%9A%B0%EC%A7%80%20%EB%A7%88%EB%9D%BC%20%E3%85%A1"
-      },
-      "top_headlines": [
-        {
-          "title": "[토큰명언] \"시장에 맞서 싸우지 마라\" ㅡ Day 81",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/366538",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Don't Fight —",
+      "term_ko": "싸우지 마라 ㅡ"
     },
     {
-      "term": "U.S. interest rate hike",
-      "term_ko": "美 금리 인상",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 금리 인상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 금리 인상 전망에 증시 하락···삼전·닉스 주가도 '촉각'",
-              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421565"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "美 금리 인상 전망에 증시 하락···삼전·닉스 주가도 '촉각'",
-          "summary": "",
-          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421565",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Interest Rate Hike",
+      "term_ko": "美 금리 인상"
     },
     {
-      "term": "Stock market declines on economic outlook",
-      "term_ko": "전망에 증시 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전망에 증시 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 금리 인상 전망에 증시 하락···삼전·닉스 주가도 '촉각'",
-              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421565"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EB%A7%9D%EC%97%90%20%EC%A6%9D%EC%8B%9C%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EB%A7%9D%EC%97%90%20%EC%A6%9D%EC%8B%9C%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "美 금리 인상 전망에 증시 하락···삼전·닉스 주가도 '촉각'",
-          "summary": "",
-          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421565",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Market Declines on Economic Outlook",
+      "term_ko": "전망에 증시 하락"
     },
     {
-      "term": "Only the KOSPI figures requested",
-      "term_ko": "요구 코스피 수치만",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "요구 코스피 수치만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "안철수 “李대통령에 ‘환율 대책TF’ 요구… 코스피 수치만 올리면 되...",
-              "link": "https://n.news.naver.com/mnews/article/366/0001169836?sid=100"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%94%EA%B5%AC%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%88%98%EC%B9%98%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%94%EA%B5%AC%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%88%98%EC%B9%98%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "안철수 “李대통령에 ‘환율 대책TF’ 요구… 코스피 수치만 올리면 되...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001169836?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Only the Kospi Figures Requested",
+      "term_ko": "요구 코스피 수치만"
     },
     {
-      "term": "Bought at the peak and saw a sharp drop—investing with borrowed money",
-      "term_ko": "찍고 급락 빚투",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "찍고 급락 빚투",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이호연의D톡스] 코스피 8천피 찍고 급락…빚투 폭증했는데 어쩌나",
-              "link": "https://n.news.naver.com/mnews/article/138/0002230059?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B0%8D%EA%B3%A0%20%EA%B8%89%EB%9D%BD%20%EB%B9%9A%ED%88%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B0%8D%EA%B3%A0%20%EA%B8%89%EB%9D%BD%20%EB%B9%9A%ED%88%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[이호연의D톡스] 코스피 8천피 찍고 급락…빚투 폭증했는데 어쩌나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002230059?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bought at the Peak and Saw a Sharp Drop—investing with Borrowed Money",
+      "term_ko": "찍고 급락 빚투"
     },
     {
       "term": "Employment Trends to Be Released Next Week",
-      "term_ko": "다음주 고용동향 발표",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "다음주 고용동향 발표",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "다음주 고용동향 발표… 취업자 얼마나 늘었을까",
-              "link": "https://www.newscj.com/news/articleView.html?idxno=3407141"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%9D%8C%EC%A3%BC%20%EA%B3%A0%EC%9A%A9%EB%8F%99%ED%96%A5%20%EB%B0%9C%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%9D%8C%EC%A3%BC%20%EA%B3%A0%EC%9A%A9%EB%8F%99%ED%96%A5%20%EB%B0%9C%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "다음주 고용동향 발표… 취업자 얼마나 늘었을까",
-          "summary": "",
-          "link": "https://www.newscj.com/news/articleView.html?idxno=3407141",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "다음주 고용동향 발표"
     },
     {
-      "term": "How much has the number of employed people increased?",
-      "term_ko": "취업자 얼마나 늘었을까",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "취업자 얼마나 늘었을까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "다음주 고용동향 발표… 취업자 얼마나 늘었을까",
-              "link": "https://www.newscj.com/news/articleView.html?idxno=3407141"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B7%A8%EC%97%85%EC%9E%90%20%EC%96%BC%EB%A7%88%EB%82%98%20%EB%8A%98%EC%97%88%EC%9D%84%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B7%A8%EC%97%85%EC%9E%90%20%EC%96%BC%EB%A7%88%EB%82%98%20%EB%8A%98%EC%97%88%EC%9D%84%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "다음주 고용동향 발표… 취업자 얼마나 늘었을까",
-          "summary": "",
-          "link": "https://www.newscj.com/news/articleView.html?idxno=3407141",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "How Much Has the Number of Employed People Increased?",
+      "term_ko": "취업자 얼마나 늘었을까"
     },
     {
-      "term": "The KOSPI, which has plummeted, next week",
-      "term_ko": "급락한 코스피 다음주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급락한 코스피 다음주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "9천 포인트 눈앞서 급락한 코스피…다음주 변수는 환율·CPI·스페이스X",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=741712"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%9D%BD%ED%95%9C%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%8B%A4%EC%9D%8C%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%9D%BD%ED%95%9C%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%8B%A4%EC%9D%8C%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "9천 포인트 눈앞서 급락한 코스피…다음주 변수는 환율·CPI·스페이스X",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=741712",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Kospi, Which Has Plummeted, Next Week",
+      "term_ko": "급락한 코스피 다음주"
     },
     {
-      "term": "Billion Anthropic AI",
-      "term_ko": "빌리언 앤트로픽 AI",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Billion Anthropic AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Apollo and Blackstone Complete $35 Billion Anthropic AI Infrastructure Fi...",
-              "link": "https://www.econotimes.com/Apollo-and-Blackstone-Complete-35-Billion-Anthropic-AI-Infrastructure-Financing-Deal-1743665"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Billion%20Anthropic%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Billion%20Anthropic%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Apollo and Blackstone Complete $35 Billion Anthropic AI Infrastructure Fi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Apollo-and-Blackstone-Complete-35-Billion-Anthropic-AI-Infrastructure-Financing-Deal-1743665",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Billion Anthropic Ai",
+      "term_ko": "빌리언 앤트로픽 AI"
     },
     {
-      "term": "Epaselect USA SPACEX",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Epaselect USA SPACEX",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "epaselect USA SPACEX IPO PROTEST",
-              "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Epaselect%20USA%20SPACEX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Epaselect%20USA%20SPACEX"
-      },
-      "top_headlines": [
-        {
-          "title": "epaselect USA SPACEX IPO PROTEST",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Epaselect Usa Spacex",
+      "term_ko": "Epaselect Usa Spacex"
     },
     {
-      "term": "Even in a breakthrough, the circle",
-      "term_ko": "돌파에도 원",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파에도 원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "자금 빼는 외국인, 경상흑자 1000억달러 돌파에도 원·달러 환율 1560원 ...",
-              "link": "https://n.news.naver.com/mnews/article/243/0000098781?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%EC%97%90%EB%8F%84%20%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%EC%97%90%EB%8F%84%20%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "자금 빼는 외국인, 경상흑자 1000억달러 돌파에도 원·달러 환율 1560원 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/243/0000098781?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Even in a Breakthrough, the Circle",
+      "term_ko": "돌파에도 원"
     },
     {
-      "term": "It's skyrocketed—what should I do?",
-      "term_ko": "폭증했는데 어쩌나",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "폭증했는데 어쩌나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이호연의D톡스] 코스피 8천피 찍고 급락…빚투 폭증했는데 어쩌나",
-              "link": "https://n.news.naver.com/mnews/article/138/0002230059?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EC%A6%9D%ED%96%88%EB%8A%94%EB%8D%B0%20%EC%96%B4%EC%A9%8C%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EC%A6%9D%ED%96%88%EB%8A%94%EB%8D%B0%20%EC%96%B4%EC%A9%8C%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[이호연의D톡스] 코스피 8천피 찍고 급락…빚투 폭증했는데 어쩌나",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002230059?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It's Skyrocketed—what Should I Do?",
+      "term_ko": "폭증했는데 어쩌나"
     },
     {
       "term": "Trumps Immigration Policies",
-      "term_ko": "트럼프의 이민 정책",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trumps Immigration Policies",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Judge Strikes Down a Slate of Trump’s Immigration Policies",
-              "link": "https://www.nytimes.com/2026/06/05/briefing/judge-trump-immigration-policies.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trumps%20Immigration%20Policies",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trumps%20Immigration%20Policies"
-      },
-      "top_headlines": [
-        {
-          "title": "Judge Strikes Down a Slate of Trump’s Immigration Policies",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/briefing/judge-trump-immigration-policies.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "트럼프의 이민 정책"
     },
     {
-      "term": "IPO PROTEST",
-      "term_ko": "IPO 반대 시위",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IPO PROTEST",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "epaselect USA SPACEX IPO PROTEST",
-              "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IPO%20PROTEST",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IPO%20PROTEST"
-      },
-      "top_headlines": [
-        {
-          "title": "epaselect USA SPACEX IPO PROTEST",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ipo Protest",
+      "term_ko": "IPO 반대 시위"
     },
     {
       "term": "Blackstone Complete",
-      "term_ko": "블랙스톤 컴플리트",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Blackstone Complete",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Apollo and Blackstone Complete $35 Billion Anthropic AI Infrastructure Fi...",
-              "link": "https://www.econotimes.com/Apollo-and-Blackstone-Complete-35-Billion-Anthropic-AI-Infrastructure-Financing-Deal-1743665"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Blackstone%20Complete",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Blackstone%20Complete"
-      },
-      "top_headlines": [
-        {
-          "title": "Apollo and Blackstone Complete $35 Billion Anthropic AI Infrastructure Fi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Apollo-and-Blackstone-Complete-35-Billion-Anthropic-AI-Infrastructure-Financing-Deal-1743665",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "블랙스톤 컴플리트"
     },
     {
       "term": "Lead Massive",
-      "term_ko": "리드 매시브",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Lead Massive",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Market Tumbles as Tech and Semiconductor Stocks Lead Massive Sel...",
-              "link": "https://www.econotimes.com/US-Stock-Market-Tumbles-as-Tech-and-Semiconductor-Stocks-Lead-Massive-Selloff-1743660"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Lead%20Massive",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Lead%20Massive"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Market Tumbles as Tech and Semiconductor Stocks Lead Massive Sel...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Market-Tumbles-as-Tech-and-Semiconductor-Stocks-Lead-Massive-Selloff-1743660",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "리드 매시브"
     },
     {
       "term": "Judge Strikes",
-      "term_ko": "판사가 기각하다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Judge Strikes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Judge Strikes Down a Slate of Trump’s Immigration Policies",
-              "link": "https://www.nytimes.com/2026/06/05/briefing/judge-trump-immigration-policies.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Judge%20Strikes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Judge%20Strikes"
-      },
-      "top_headlines": [
-        {
-          "title": "Judge Strikes Down a Slate of Trump’s Immigration Policies",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/briefing/judge-trump-immigration-policies.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "판사가 기각하다"
     },
     {
       "term": "A Slate",
-      "term_ko": "슬레이트",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "A Slate",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Judge Strikes Down a Slate of Trump’s Immigration Policies",
-              "link": "https://www.nytimes.com/2026/06/05/briefing/judge-trump-immigration-policies.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=A%20Slate",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=A%20Slate"
-      },
-      "top_headlines": [
-        {
-          "title": "Judge Strikes Down a Slate of Trump’s Immigration Policies",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/05/briefing/judge-trump-immigration-policies.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "슬레이트"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Anticipation for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 200,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-06T11:59:43+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 200,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.025413,
-        "time_weight": 0.016662,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780498800000
-      }
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-06T03:01:02.493Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-06T11:59:43+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "President Lee's Task Force on Exchange Rate Measures",
+      "term_ko": "李대통령에 환율 대책TF"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-06T11:59:43+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-06T11:59:43+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Variables: Exchange Rate, Cpi",
+      "term_ko": "변수는 환율 CPI"
+    },
+    {
+      "term": "Today's Stock Market News, June 5",
+      "term_ko": "오늘의 증권소식6월 5일"
+    },
+    {
+      "term": "$100 Billion Current Account Surplus with Foreign Countries",
+      "term_ko": "외국인 경상흑자 1000억달러"
+    },
+    {
+      "term": "Exchange Rate: 1,560 Won Per Dollar",
+      "term_ko": "달러 환율 1560원"
+    },
+    {
+      "term": "Lee Ho-yeon's D-tox: Kospi Hits 8,000",
+      "term_ko": "이호연의D톡스 코스피 8천피"
+    },
+    {
+      "term": "Don't Fight —",
+      "term_ko": "싸우지 마라 ㅡ"
+    },
+    {
+      "term": "U.s. Interest Rate Hike",
+      "term_ko": "美 금리 인상"
+    },
+    {
+      "term": "Stock Market Declines on Economic Outlook",
+      "term_ko": "전망에 증시 하락"
+    },
+    {
+      "term": "Only the Kospi Figures Requested",
+      "term_ko": "요구 코스피 수치만"
+    },
+    {
+      "term": "Bought at the Peak and Saw a Sharp Drop—investing with Borrowed Money",
+      "term_ko": "찍고 급락 빚투"
+    },
+    {
+      "term": "Employment Trends to Be Released Next Week",
+      "term_ko": "다음주 고용동향 발표"
+    },
+    {
+      "term": "How Much Has the Number of Employed People Increased?",
+      "term_ko": "취업자 얼마나 늘었을까"
+    },
+    {
+      "term": "The Kospi, Which Has Plummeted, Next Week",
+      "term_ko": "급락한 코스피 다음주"
+    },
+    {
+      "term": "Billion Anthropic Ai",
+      "term_ko": "빌리언 앤트로픽 AI"
+    },
+    {
+      "term": "Epaselect Usa Spacex",
+      "term_ko": "Epaselect Usa Spacex"
+    },
+    {
+      "term": "Even in a Breakthrough, the Circle",
+      "term_ko": "돌파에도 원"
+    },
+    {
+      "term": "It's Skyrocketed—what Should I Do?",
+      "term_ko": "폭증했는데 어쩌나"
+    },
+    {
+      "term": "Trumps Immigration Policies",
+      "term_ko": "트럼프의 이민 정책"
+    },
+    {
+      "term": "Ipo Protest",
+      "term_ko": "IPO 반대 시위"
+    },
+    {
+      "term": "Blackstone Complete",
+      "term_ko": "블랙스톤 컴플리트"
+    },
+    {
+      "term": "Lead Massive",
+      "term_ko": "리드 매시브"
+    },
+    {
+      "term": "Judge Strikes",
+      "term_ko": "판사가 기각하다"
+    },
+    {
+      "term": "A Slate",
+      "term_ko": "슬레이트"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "President Lee's Task Force on Exchange Rate Measures": {
+      "en": "President Lee's Task Force on Exchange Rate Measures",
+      "ko": "李대통령에 환율 대책TF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Variables: Exchange Rate, Cpi": {
+      "en": "Variables: Exchange Rate, Cpi",
+      "ko": "변수는 환율 CPI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Today's Stock Market News, June 5": {
+      "en": "Today's Stock Market News, June 5",
+      "ko": "오늘의 증권소식6월 5일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "$100 Billion Current Account Surplus with Foreign Countries": {
+      "en": "$100 Billion Current Account Surplus with Foreign Countries",
+      "ko": "외국인 경상흑자 1000억달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Exchange Rate: 1,560 Won Per Dollar": {
+      "en": "Exchange Rate: 1,560 Won Per Dollar",
+      "ko": "달러 환율 1560원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Lee Ho-yeon's D-tox: Kospi Hits 8,000": {
+      "en": "Lee Ho-yeon's D-tox: Kospi Hits 8,000",
+      "ko": "이호연의D톡스 코스피 8천피",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Don't Fight —": {
+      "en": "Don't Fight —",
+      "ko": "싸우지 마라 ㅡ",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "U.s. Interest Rate Hike": {
+      "en": "U.s. Interest Rate Hike",
+      "ko": "美 금리 인상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Stock Market Declines on Economic Outlook": {
+      "en": "Stock Market Declines on Economic Outlook",
+      "ko": "전망에 증시 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Only the Kospi Figures Requested": {
+      "en": "Only the Kospi Figures Requested",
+      "ko": "요구 코스피 수치만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Bought at the Peak and Saw a Sharp Drop—investing with Borrowed Money": {
+      "en": "Bought at the Peak and Saw a Sharp Drop—investing with Borrowed Money",
+      "ko": "찍고 급락 빚투",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Employment Trends to Be Released Next Week": {
+      "en": "Employment Trends to Be Released Next Week",
+      "ko": "다음주 고용동향 발표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "How Much Has the Number of Employed People Increased?": {
+      "en": "How Much Has the Number of Employed People Increased?",
+      "ko": "취업자 얼마나 늘었을까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "The Kospi, Which Has Plummeted, Next Week": {
+      "en": "The Kospi, Which Has Plummeted, Next Week",
+      "ko": "급락한 코스피 다음주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Billion Anthropic Ai": {
+      "en": "Billion Anthropic Ai",
+      "ko": "빌리언 앤트로픽 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Epaselect Usa Spacex": {
+      "en": "Epaselect Usa Spacex",
+      "ko": "Epaselect Usa Spacex",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Even in a Breakthrough, the Circle": {
+      "en": "Even in a Breakthrough, the Circle",
+      "ko": "돌파에도 원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "It's Skyrocketed—what Should I Do?": {
+      "en": "It's Skyrocketed—what Should I Do?",
+      "ko": "폭증했는데 어쩌나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Trumps Immigration Policies": {
+      "en": "Trumps Immigration Policies",
+      "ko": "트럼프의 이민 정책",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Ipo Protest": {
+      "en": "Ipo Protest",
+      "ko": "IPO 반대 시위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Blackstone Complete": {
+      "en": "Blackstone Complete",
+      "ko": "블랙스톤 컴플리트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Lead Massive": {
+      "en": "Lead Massive",
+      "ko": "리드 매시브",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Judge Strikes": {
+      "en": "Judge Strikes",
+      "ko": "판사가 기각하다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "A Slate": {
+      "en": "A Slate",
+      "ko": "슬레이트",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Anticipation for a Bitcoin Etf": {
+      "en": "Anticipation for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
+    },
+    "Korean Won-u.s. Dollar Exchange Rate Surges": {
+      "en": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-06T08:34:14.191Z"
     }
   }
 }
