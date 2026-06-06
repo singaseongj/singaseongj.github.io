@@ -1,7 +1,7 @@
 {
   "date": "2026-06-06",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "Today's Stock Market News, June 5",
@@ -13,9 +13,10 @@
         "query": "오늘의 증권소식6월 5일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -41,36 +42,37 @@
       ]
     },
     {
-      "term": "Philadelphia Semiconductor Index Plummets 10.3%",
-      "term_ko": "필라반도체지수 10.3% 폭락",
+      "term": "The Era of 3 Million Self-Employed Workers",
+      "term_ko": "자영업자 300만 시대",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "필라반도체지수 10.3% 폭락",
+        "query": "자영업자 300만 시대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "필라반도체지수 10.3% 폭락, 환율 1,560원대 폭등",
-              "link": "https://www.viewsnnews.com/article?q=236329"
+              "title": "자영업자 300만 시대, 소상공인 사각지대 여전… 민생·상생 손길 나서",
+              "link": "http://www.rightknow.co.kr/news/articleView.html?idxno=34203"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%84%EB%9D%BC%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A7%80%EC%88%98%2010.3%25%20%ED%8F%AD%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%84%EB%9D%BC%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A7%80%EC%88%98%2010.3%25%20%ED%8F%AD%EB%9D%BD"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20300%EB%A7%8C%20%EC%8B%9C%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20300%EB%A7%8C%20%EC%8B%9C%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "필라반도체지수 10.3% 폭락, 환율 1,560원대 폭등",
+          "title": "자영업자 300만 시대, 소상공인 사각지대 여전… 민생·상생 손길 나서",
           "summary": "",
-          "link": "https://www.viewsnnews.com/article?q=236329",
+          "link": "http://www.rightknow.co.kr/news/articleView.html?idxno=34203",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -78,36 +80,37 @@
       ]
     },
     {
-      "term": "Exchange rate surges to the 1,560 won range",
-      "term_ko": "환율 1560원대 폭등",
+      "term": "Amid growing anticipation, on June 5",
+      "term_ko": "기대감 등에 6월5일",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "환율 1560원대 폭등",
+        "query": "기대감 등에 6월5일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "필라반도체지수 10.3% 폭락, 환율 1,560원대 폭등",
-              "link": "https://www.viewsnnews.com/article?q=236329"
+              "title": "미-이란 갈등 완화 기대감 등에 6월5일 국제유가 하락",
+              "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225898"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%201560%EC%9B%90%EB%8C%80%20%ED%8F%AD%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%201560%EC%9B%90%EB%8C%80%20%ED%8F%AD%EB%93%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%EA%B0%90%20%EB%93%B1%EC%97%90%206%EC%9B%945%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%EA%B0%90%20%EB%93%B1%EC%97%90%206%EC%9B%945%EC%9D%BC"
       },
       "top_headlines": [
         {
-          "title": "필라반도체지수 10.3% 폭락, 환율 1,560원대 폭등",
+          "title": "미-이란 갈등 완화 기대감 등에 6월5일 국제유가 하락",
           "summary": "",
-          "link": "https://www.viewsnnews.com/article?q=236329",
+          "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225898",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -115,147 +118,37 @@
       ]
     },
     {
-      "term": "U.S. Semiconductor Index on the 5th",
-      "term_ko": "美반도체 지수 5일",
+      "term": "Shock Exchange Rate 2017",
+      "term_ko": "쇼크 환율 17년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美반도체 지수 5일",
+        "query": "쇼크 환율 17년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美반도체 지수 5일 하루에만 10% 폭락.. 삼전닉스 괜찮을까",
-              "link": "https://n.news.naver.com/mnews/article/009/0005690126?sid=101"
+              "title": "예상 밖 '고용 훈풍'에 쇼크…환율 17년 만 최고치",
+              "link": "https://n.news.naver.com/mnews/article/055/0001362239?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%A7%80%EC%88%98%205%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%A7%80%EC%88%98%205%EC%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%87%BC%ED%81%AC%20%ED%99%98%EC%9C%A8%2017%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%87%BC%ED%81%AC%20%ED%99%98%EC%9C%A8%2017%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "美반도체 지수 5일 하루에만 10% 폭락.. 삼전닉스 괜찮을까",
+          "title": "예상 밖 '고용 훈풍'에 쇼크…환율 17년 만 최고치",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005690126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "A 10% plunge in a single day",
-      "term_ko": "하루에만 10% 폭락",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하루에만 10% 폭락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美반도체 지수 5일 하루에만 10% 폭락.. 삼전닉스 괜찮을까",
-              "link": "https://n.news.naver.com/mnews/article/009/0005690126?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%A3%A8%EC%97%90%EB%A7%8C%2010%25%20%ED%8F%AD%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%A3%A8%EC%97%90%EB%A7%8C%2010%25%20%ED%8F%AD%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "美반도체 지수 5일 하루에만 10% 폭락.. 삼전닉스 괜찮을까",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005690126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "20% when going up",
-      "term_ko": "오를 때 20%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오를 때 20%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스피 오를 때 20% 빠진 '이 종목'…\"하반기 희소식 있다\" [종목+]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295662?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%A5%BC%20%EB%95%8C%2020%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%A5%BC%20%EB%95%8C%2020%25"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 오를 때 20% 빠진 '이 종목'…\"하반기 희소식 있다\" [종목+]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295662?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Hot Review 9,000",
-      "term_ko": "핫 리뷰 9000피",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "핫 리뷰 9000피",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%AB%20%EB%A6%AC%EB%B7%B0%209000%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%AB%20%EB%A6%AC%EB%B7%B0%209000%ED%94%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052",
+          "link": "https://n.news.naver.com/mnews/article/055/0001362239?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -272,9 +165,10 @@
         "query": "싸우지 마라 ㅡ",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -300,36 +194,37 @@
       ]
     },
     {
-      "term": "Kim Nam-hyun's Bond Scandal: Bad News",
-      "term_ko": "김남현의 채권썰 악재",
+      "term": "Gaps in support for small business owners remain",
+      "term_ko": "소상공인 사각지대 여전",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "김남현의 채권썰 악재",
+        "query": "소상공인 사각지대 여전",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[김남현의 채권썰] 악재 쓰나미 “나 떨고 있니”..feat. 월드컵 개막",
-              "link": "https://www.etoday.co.kr/news/view/2591044"
+              "title": "자영업자 300만 시대, 소상공인 사각지대 여전… 민생·상생 손길 나서",
+              "link": "http://www.rightknow.co.kr/news/articleView.html?idxno=34203"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EB%82%A8%ED%98%84%EC%9D%98%20%EC%B1%84%EA%B6%8C%EC%8D%B0%20%EC%95%85%EC%9E%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EB%82%A8%ED%98%84%EC%9D%98%20%EC%B1%84%EA%B6%8C%EC%8D%B0%20%EC%95%85%EC%9E%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EC%82%AC%EA%B0%81%EC%A7%80%EB%8C%80%20%EC%97%AC%EC%A0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EC%82%AC%EA%B0%81%EC%A7%80%EB%8C%80%20%EC%97%AC%EC%A0%84"
       },
       "top_headlines": [
         {
-          "title": "[김남현의 채권썰] 악재 쓰나미 “나 떨고 있니”..feat. 월드컵 개막",
+          "title": "자영업자 300만 시대, 소상공인 사각지대 여전… 민생·상생 손길 나서",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2591044",
+          "link": "http://www.rightknow.co.kr/news/articleView.html?idxno=34203",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +232,37 @@
       ]
     },
     {
-      "term": "Tsunami, I'm shaking",
-      "term_ko": "쓰나미 나 떨고",
+      "term": "A Helping Hand for People's Livelihoods",
+      "term_ko": "민생 상생 손길",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "쓰나미 나 떨고",
+        "query": "민생 상생 손길",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[김남현의 채권썰] 악재 쓰나미 “나 떨고 있니”..feat. 월드컵 개막",
-              "link": "https://www.etoday.co.kr/news/view/2591044"
+              "title": "자영업자 300만 시대, 소상공인 사각지대 여전… 민생·상생 손길 나서",
+              "link": "http://www.rightknow.co.kr/news/articleView.html?idxno=34203"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%93%B0%EB%82%98%EB%AF%B8%20%EB%82%98%20%EB%96%A8%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%93%B0%EB%82%98%EB%AF%B8%20%EB%82%98%20%EB%96%A8%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%BC%EC%83%9D%20%EC%83%81%EC%83%9D%20%EC%86%90%EA%B8%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%BC%EC%83%9D%20%EC%83%81%EC%83%9D%20%EC%86%90%EA%B8%B8"
       },
       "top_headlines": [
         {
-          "title": "[김남현의 채권썰] 악재 쓰나미 “나 떨고 있니”..feat. 월드컵 개막",
+          "title": "자영업자 300만 시대, 소상공인 사각지대 여전… 민생·상생 손길 나서",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2591044",
+          "link": "http://www.rightknow.co.kr/news/articleView.html?idxno=34203",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -374,36 +270,37 @@
       ]
     },
     {
-      "term": "Is there... feat. World Cup Kickoff",
-      "term_ko": "있니..feat 월드컵 개막",
+      "term": "Highest Exchange Rate at a Given Time",
+      "term_ko": "최고 환율 일시",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "있니..feat 월드컵 개막",
+        "query": "최고 환율 일시",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[김남현의 채권썰] 악재 쓰나미 “나 떨고 있니”..feat. 월드컵 개막",
-              "link": "https://www.etoday.co.kr/news/view/2591044"
+              "title": "금융위기 이후 최고 환율…일시 충격인가 구조적 불안인가",
+              "link": "https://sateconomy.co.kr/news/view/1065617479954796"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%88%EB%8B%88..feat%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B0%9C%EB%A7%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%88%EB%8B%88..feat%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B0%9C%EB%A7%89"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%20%ED%99%98%EC%9C%A8%20%EC%9D%BC%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%20%ED%99%98%EC%9C%A8%20%EC%9D%BC%EC%8B%9C"
       },
       "top_headlines": [
         {
-          "title": "[김남현의 채권썰] 악재 쓰나미 “나 떨고 있니”..feat. 월드컵 개막",
+          "title": "금융위기 이후 최고 환율…일시 충격인가 구조적 불안인가",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2591044",
+          "link": "https://sateconomy.co.kr/news/view/1065617479954796",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -411,36 +308,37 @@
       ]
     },
     {
-      "term": "Ahn Cheol-soo after the financial crisis",
-      "term_ko": "안철수 금융위기 후",
+      "term": "Easing of U.S.-Iran Tensions",
+      "term_ko": "미-이란 갈등 완화",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "안철수 금융위기 후",
+        "query": "미-이란 갈등 완화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
-              "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100"
+              "title": "미-이란 갈등 완화 기대감 등에 6월5일 국제유가 하락",
+              "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225898"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EC%B2%A0%EC%88%98%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%20%ED%9B%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EC%B2%A0%EC%88%98%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0%20%ED%9B%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8-%EC%9D%B4%EB%9E%80%20%EA%B0%88%EB%93%B1%20%EC%99%84%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8-%EC%9D%B4%EB%9E%80%20%EA%B0%88%EB%93%B1%20%EC%99%84%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
+          "title": "미-이란 갈등 완화 기대감 등에 6월5일 국제유가 하락",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100",
+          "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225898",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +346,37 @@
       ]
     },
     {
-      "term": "Record-high exchange rate",
-      "term_ko": "환율 최고 수준",
+      "term": "Unexpected Employment",
+      "term_ko": "예상 밖 고용",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "환율 최고 수준",
+        "query": "예상 밖 고용",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
-              "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100"
+              "title": "예상 밖 '고용 훈풍'에 쇼크…환율 17년 만 최고치",
+              "link": "https://n.news.naver.com/mnews/article/055/0001362239?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%B5%9C%EA%B3%A0%20%EC%88%98%EC%A4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%B5%9C%EA%B3%A0%20%EC%88%98%EC%A4%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%EC%83%81%20%EB%B0%96%20%EA%B3%A0%EC%9A%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%EC%83%81%20%EB%B0%96%20%EA%B3%A0%EC%9A%A9"
       },
       "top_headlines": [
         {
-          "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
+          "title": "예상 밖 '고용 훈풍'에 쇼크…환율 17년 만 최고치",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100",
+          "link": "https://n.news.naver.com/mnews/article/055/0001362239?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +384,37 @@
       ]
     },
     {
-      "term": "Lee is throwing money around",
-      "term_ko": "李 돈 퍼부어",
+      "term": "Sharp Rise... Is \"Black Monday\" Coming?",
+      "term_ko": "급등‥검은 월요일 오나",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "李 돈 퍼부어",
+        "query": "급등‥검은 월요일 오나",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
-              "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100"
+              "title": "반도체주 폭락에 환율도 급등‥'검은 월요일' 오나",
+              "link": "https://n.news.naver.com/mnews/article/214/0001503816?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%9D%8E%20%EB%8F%88%20%ED%8D%BC%EB%B6%80%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%9D%8E%20%EB%8F%88%20%ED%8D%BC%EB%B6%80%EC%96%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%E2%80%A5%EA%B2%80%EC%9D%80%20%EC%9B%94%EC%9A%94%EC%9D%BC%20%EC%98%A4%EB%82%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%E2%80%A5%EA%B2%80%EC%9D%80%20%EC%9B%94%EC%9A%94%EC%9D%BC%20%EC%98%A4%EB%82%98"
       },
       "top_headlines": [
         {
-          "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
+          "title": "반도체주 폭락에 환율도 급등‥'검은 월요일' 오나",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100",
+          "link": "https://n.news.naver.com/mnews/article/214/0001503816?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +422,37 @@
       ]
     },
     {
-      "term": "This missing item",
-      "term_ko": "빠진 이 종목",
+      "term": "Semiconductor Stocks Surge on Sharp Rise in Exchange Rate",
+      "term_ko": "환율 급등 반도체주",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "빠진 이 종목",
+        "query": "환율 급등 반도체주",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "코스피 오를 때 20% 빠진 '이 종목'…\"하반기 희소식 있다\" [종목+]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295662?sid=101"
+              "title": "환율 급등·반도체주 폭락 '이중 악재'…월요일 증시에 무슨 일이 벌어...",
+              "link": "https://www.rapportian.com/news/articleView.html?idxno=236776"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%A0%EC%A7%84%20%EC%9D%B4%20%EC%A2%85%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%A0%EC%A7%84%20%EC%9D%B4%20%EC%A2%85%EB%AA%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC"
       },
       "top_headlines": [
         {
-          "title": "코스피 오를 때 20% 빠진 '이 종목'…\"하반기 희소식 있다\" [종목+]",
+          "title": "환율 급등·반도체주 폭락 '이중 악재'…월요일 증시에 무슨 일이 벌어...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295662?sid=101",
+          "link": "https://www.rapportian.com/news/articleView.html?idxno=236776",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,36 +460,37 @@
       ]
     },
     {
-      "term": "There's good news coming in the second half of the year",
-      "term_ko": "하반기 희소식 있다",
+      "term": "Plunge Amid Double Whammy",
+      "term_ko": "폭락 이중 악재",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "하반기 희소식 있다",
+        "query": "폭락 이중 악재",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "코스피 오를 때 20% 빠진 '이 종목'…\"하반기 희소식 있다\" [종목+]",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295662?sid=101"
+              "title": "환율 급등·반도체주 폭락 '이중 악재'…월요일 증시에 무슨 일이 벌어...",
+              "link": "https://www.rapportian.com/news/articleView.html?idxno=236776"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%B0%98%EA%B8%B0%20%ED%9D%AC%EC%86%8C%EC%8B%9D%20%EC%9E%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%B0%98%EA%B8%B0%20%ED%9D%AC%EC%86%8C%EC%8B%9D%20%EC%9E%88%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EB%9D%BD%20%EC%9D%B4%EC%A4%91%20%EC%95%85%EC%9E%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EB%9D%BD%20%EC%9D%B4%EC%A4%91%20%EC%95%85%EC%9E%AC"
       },
       "top_headlines": [
         {
-          "title": "코스피 오를 때 20% 빠진 '이 종목'…\"하반기 희소식 있다\" [종목+]",
+          "title": "환율 급등·반도체주 폭락 '이중 악재'…월요일 증시에 무슨 일이 벌어...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295662?sid=101",
+          "link": "https://www.rapportian.com/news/articleView.html?idxno=236776",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -596,36 +498,37 @@
       ]
     },
     {
-      "term": "KOSPI Falls Short of Expectations",
-      "term_ko": "기대 꺾인 코스피",
+      "term": "What's happening in the stock market on Monday?",
+      "term_ko": "월요일 증시에 무슨",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기대 꺾인 코스피",
+        "query": "월요일 증시에 무슨",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052"
+              "title": "환율 급등·반도체주 폭락 '이중 악재'…월요일 증시에 무슨 일이 벌어...",
+              "link": "https://www.rapportian.com/news/articleView.html?idxno=236776"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%20%EA%BA%BE%EC%9D%B8%20%EC%BD%94%EC%8A%A4%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%20%EA%BA%BE%EC%9D%B8%20%EC%BD%94%EC%8A%A4%ED%94%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EC%9A%94%EC%9D%BC%20%EC%A6%9D%EC%8B%9C%EC%97%90%20%EB%AC%B4%EC%8A%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EC%9A%94%EC%9D%BC%20%EC%A6%9D%EC%8B%9C%EC%97%90%20%EB%AC%B4%EC%8A%A8"
       },
       "top_headlines": [
         {
-          "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
+          "title": "환율 급등·반도체주 폭락 '이중 악재'…월요일 증시에 무슨 일이 벌어...",
           "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052",
+          "link": "https://www.rapportian.com/news/articleView.html?idxno=236776",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -642,9 +545,10 @@
         "query": "Billion Anthropic AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -670,36 +574,121 @@
       ]
     },
     {
-      "term": "Epaselect USA SPACEX",
-      "term_ko": "",
-      "significance_score": 294,
-      "mentions": 160,
+      "term": "Decline in international oil prices",
+      "term_ko": "국제유가 하락",
+      "significance_score": 280,
+      "mentions": 162,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Epaselect USA SPACEX",
+        "query": "국제유가 하락",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-05-29",
+              "timestamp": 1779980400000,
+              "value": 100
+            },
+            {
+              "period": "2026-05-30",
+              "timestamp": 1780066800000,
+              "value": 84.61538
+            },
+            {
+              "period": "2026-06-01",
+              "timestamp": 1780239600000,
+              "value": 84.61538
+            },
+            {
+              "period": "2026-06-05",
+              "timestamp": 1780585200000,
+              "value": 76.92307
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "epaselect USA SPACEX IPO PROTEST",
-              "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104"
+              "title": "미-이란 갈등 완화 기대감 등에 6월5일 국제유가 하락",
+              "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225898"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Epaselect%20USA%20SPACEX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Epaselect%20USA%20SPACEX"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EC%A0%9C%EC%9C%A0%EA%B0%80%20%ED%95%98%EB%9D%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EC%A0%9C%EC%9C%A0%EA%B0%80%20%ED%95%98%EB%9D%BD"
       },
       "top_headlines": [
         {
-          "title": "epaselect USA SPACEX IPO PROTEST",
+          "title": "미-이란 갈등 완화 기대감 등에 6월5일 국제유가 하락",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104",
+          "link": "https://www.energy-news.co.kr/news/articleView.html?idxno=225898",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 161.5385,
+        "weekly_average_volume": 80.7692,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.029467,
+        "time_weight": 0.021473,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1780585200000
+      }
+    },
+    {
+      "term": "all-time high",
+      "term_ko": "만 최고치",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "만 최고치",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-06T22:33:25+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "예상 밖 '고용 훈풍'에 쇼크…환율 17년 만 최고치",
+              "link": "https://n.news.naver.com/mnews/article/055/0001362239?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%20%EC%B5%9C%EA%B3%A0%EC%B9%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%20%EC%B5%9C%EA%B3%A0%EC%B9%98"
+      },
+      "top_headlines": [
+        {
+          "title": "예상 밖 '고용 훈풍'에 쇼크…환율 17년 만 최고치",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/055/0001362239?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -707,147 +696,37 @@
       ]
     },
     {
-      "term": "If only the KOSPI would go up",
-      "term_ko": "코스피만 올리면",
-      "significance_score": 280,
+      "term": "Sorry Im Not",
+      "term_ko": "미안해요, 전 아니에요",
+      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스피만 올리면",
+        "query": "Sorry Im Not",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
-              "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100"
+              "title": "Sorry, I’m Not Available. Talk to the A.I. Me.",
+              "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%EB%A7%8C%20%EC%98%AC%EB%A6%AC%EB%A9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%EB%A7%8C%20%EC%98%AC%EB%A6%AC%EB%A9%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sorry%20Im%20Not",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sorry%20Im%20Not"
       },
       "top_headlines": [
         {
-          "title": "안철수 \"금융위기 후 환율 최고 수준…李, 돈 퍼부어 코스피만 올리면 ...",
+          "title": "Sorry, I’m Not Available. Talk to the A.I. Me.",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/119/0003098379?sid=100",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Is Samjeonix any good?",
-      "term_ko": "삼전닉스 괜찮을까",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼전닉스 괜찮을까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美반도체 지수 5일 하루에만 10% 폭락.. 삼전닉스 괜찮을까",
-              "link": "https://n.news.naver.com/mnews/article/009/0005690126?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%EA%B4%9C%EC%B0%AE%EC%9D%84%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%EA%B4%9C%EC%B0%AE%EC%9D%84%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "美반도체 지수 5일 하루에만 10% 폭락.. 삼전닉스 괜찮을까",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005690126?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Weekly Stock Market Report",
-      "term_ko": "증시 주간",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 주간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%A3%BC%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%A3%BC%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The semiconductor industry is in turmoil",
-      "term_ko": "반도체 흔들리고",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 흔들리고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%9D%94%EB%93%A4%EB%A6%AC%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%9D%94%EB%93%A4%EB%A6%AC%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[증시 주간 핫 리뷰] '9000피' 기대 꺾인 코스피…반도체 흔들리고 은행...",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=722052",
+          "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -864,9 +743,10 @@
         "query": "Trumps Immigration Policies",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -892,36 +772,75 @@
       ]
     },
     {
-      "term": "IPO PROTEST",
-      "term_ko": "IPO 반대 시위",
-      "significance_score": 252,
+      "term": "Available Talk",
+      "term_ko": "청강 가능",
+      "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "IPO PROTEST",
+        "query": "Available Talk",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "epaselect USA SPACEX IPO PROTEST",
-              "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104"
+              "title": "Sorry, I’m Not Available. Talk to the A.I. Me.",
+              "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IPO%20PROTEST",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IPO%20PROTEST"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Available%20Talk",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Available%20Talk"
       },
       "top_headlines": [
         {
-          "title": "epaselect USA SPACEX IPO PROTEST",
+          "title": "Sorry, I’m Not Available. Talk to the A.I. Me.",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010224217?sid=104",
+          "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "A.I Me",
+      "term_ko": "A.I. 미",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "A.I Me",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-06T22:33:25+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Sorry, I’m Not Available. Talk to the A.I. Me.",
+              "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=A.I%20Me",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=A.I%20Me"
+      },
+      "top_headlines": [
+        {
+          "title": "Sorry, I’m Not Available. Talk to the A.I. Me.",
+          "summary": "",
+          "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -938,9 +857,10 @@
         "query": "Blackstone Complete",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -975,9 +895,10 @@
         "query": "Lead Massive",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1012,9 +933,10 @@
         "query": "Judge Strikes",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1049,9 +971,10 @@
         "query": "A Slate",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1086,9 +1009,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-06T17:36:24+09:00",
+          "last_updated": "2026-06-06T22:33:25+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1097,33 +1021,104 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
       "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-06T22:33:25+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-06T22:33:25+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Anticipation for a Bitcoin ETF",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-06T22:33:25+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-06T08:37:24.739Z",
+    "generated_at": "2026-06-06T13:34:26.566Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-06T17:36:24+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-06T22:33:25+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-06T17:36:24+09:00",
+      "last_updated": "2026-06-06T22:33:25+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-06T17:36:24+09:00",
+        "lastUpdated": "2026-06-06T22:33:25+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
