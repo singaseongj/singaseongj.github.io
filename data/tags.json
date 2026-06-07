@@ -1,1113 +1,439 @@
 {
+  "generatedAt": "2026-06-07T13:52:02.331Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-07",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Growing Fears of the \"Three Highs\"",
-      "term_ko": "커진 3고 공포",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "커진 3고 공포",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 5% 급락에 커진 ‘3고’ 공포…금융·내수·원자재 대안주 부각",
-              "link": "https://www.betanews.net/article/view/beta202606070005"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BB%A4%EC%A7%84%203%EA%B3%A0%20%EA%B3%B5%ED%8F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BB%A4%EC%A7%84%203%EA%B3%A0%20%EA%B3%B5%ED%8F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 5% 급락에 커진 ‘3고’ 공포…금융·내수·원자재 대안주 부각",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202606070005",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Growing Fears of the \"three Highs\"",
+      "term_ko": "커진 3고 공포"
     },
     {
-      "term": "Exchange rate heading toward 1,600 won",
-      "term_ko": "1600원 향하는 환율",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1600원 향하는 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1600원 향하는 환율…2분기 원·달러, 외환위기 후 최고",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295772?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1600%EC%9B%90%20%ED%96%A5%ED%95%98%EB%8A%94%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1600%EC%9B%90%20%ED%96%A5%ED%95%98%EB%8A%94%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "1600원 향하는 환율…2분기 원·달러, 외환위기 후 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295772?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rate Heading Toward 1,600 Won",
+      "term_ko": "1600원 향하는 환율"
     },
     {
-      "term": "Q2 KRW/USD",
-      "term_ko": "2분기 원 달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2분기 원 달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1600원 향하는 환율…2분기 원·달러, 외환위기 후 최고",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295772?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EB%B6%84%EA%B8%B0%20%EC%9B%90%20%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EB%B6%84%EA%B8%B0%20%EC%9B%90%20%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "1600원 향하는 환율…2분기 원·달러, 외환위기 후 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295772?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Q2 Krw/usd",
+      "term_ko": "2분기 원 달러"
     },
     {
-      "term": "Banks putting pressure on appraisers",
-      "term_ko": "감평사 압박하는 은행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "감평사 압박하는 은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "감평사 압박하는 은행…“빌라 가격 높게 평가하지 마라”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004628466?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%90%ED%8F%89%EC%82%AC%20%EC%95%95%EB%B0%95%ED%95%98%EB%8A%94%20%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%90%ED%8F%89%EC%82%AC%20%EC%95%95%EB%B0%95%ED%95%98%EB%8A%94%20%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "감평사 압박하는 은행…“빌라 가격 높게 평가하지 마라”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004628466?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Banks Putting Pressure on Appraisers",
+      "term_ko": "감평사 압박하는 은행"
     },
     {
-      "term": "High villa prices",
-      "term_ko": "빌라 가격 높게",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빌라 가격 높게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "감평사 압박하는 은행…“빌라 가격 높게 평가하지 마라”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004628466?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%8C%EB%9D%BC%20%EA%B0%80%EA%B2%A9%20%EB%86%92%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%8C%EB%9D%BC%20%EA%B0%80%EA%B2%A9%20%EB%86%92%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "감평사 압박하는 은행…“빌라 가격 높게 평가하지 마라”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004628466?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "High Villa Prices",
+      "term_ko": "빌라 가격 높게"
     },
     {
-      "term": "More for the average family",
-      "term_ko": "서민 살림 더",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서민 살림 더",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "서민 살림 더 팍팍…지출 43%가 밥값·집세",
-              "link": "https://n.news.naver.com/mnews/article/009/0005690413?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%AF%BC%20%EC%82%B4%EB%A6%BC%20%EB%8D%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%AF%BC%20%EC%82%B4%EB%A6%BC%20%EB%8D%94"
-      },
-      "top_headlines": [
-        {
-          "title": "서민 살림 더 팍팍…지출 43%가 밥값·집세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005690413?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "More for the Average Family",
+      "term_ko": "서민 살림 더"
     },
     {
       "term": "Finance, Domestic Demand, Raw Materials",
-      "term_ko": "금융 내수 원자재",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융 내수 원자재",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 5% 급락에 커진 ‘3고’ 공포…금융·내수·원자재 대안주 부각",
-              "link": "https://www.betanews.net/article/view/beta202606070005"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EB%82%B4%EC%88%98%20%EC%9B%90%EC%9E%90%EC%9E%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EB%82%B4%EC%88%98%20%EC%9B%90%EC%9E%90%EC%9E%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 5% 급락에 커진 ‘3고’ 공포…금융·내수·원자재 대안주 부각",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202606070005",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융 내수 원자재"
     },
     {
-      "term": "Even though it's money set aside for investment,",
-      "term_ko": "투자 대기 자금이라지만",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자 대기 자금이라지만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "투자 대기 자금이라지만…당국 “기업 수출대금 환전 안 해” 경고",
-              "link": "https://n.news.naver.com/mnews/article/011/0004628464?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EB%8C%80%EA%B8%B0%20%EC%9E%90%EA%B8%88%EC%9D%B4%EB%9D%BC%EC%A7%80%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EB%8C%80%EA%B8%B0%20%EC%9E%90%EA%B8%88%EC%9D%B4%EB%9D%BC%EC%A7%80%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "투자 대기 자금이라지만…당국 “기업 수출대금 환전 안 해” 경고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004628464?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Even Though It's Money Set Aside for Investment,",
+      "term_ko": "투자 대기 자금이라지만"
     },
     {
-      "term": "Export proceeds of state-owned enterprises",
-      "term_ko": "당국 기업 수출대금",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "당국 기업 수출대금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "투자 대기 자금이라지만…당국 “기업 수출대금 환전 안 해” 경고",
-              "link": "https://n.news.naver.com/mnews/article/011/0004628464?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B9%EA%B5%AD%20%EA%B8%B0%EC%97%85%20%EC%88%98%EC%B6%9C%EB%8C%80%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B9%EA%B5%AD%20%EA%B8%B0%EC%97%85%20%EC%88%98%EC%B6%9C%EB%8C%80%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "투자 대기 자금이라지만…당국 “기업 수출대금 환전 안 해” 경고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004628464?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Export Proceeds of State-owned Enterprises",
+      "term_ko": "당국 기업 수출대금"
     },
     {
-      "term": "I'm not exchanging money",
-      "term_ko": "환전 안 해",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환전 안 해",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "투자 대기 자금이라지만…당국 “기업 수출대금 환전 안 해” 경고",
-              "link": "https://n.news.naver.com/mnews/article/011/0004628464?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%A0%84%20%EC%95%88%20%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%A0%84%20%EC%95%88%20%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "투자 대기 자금이라지만…당국 “기업 수출대금 환전 안 해” 경고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004628464?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I'm Not Exchanging Money",
+      "term_ko": "환전 안 해"
     },
     {
-      "term": "Highest since the foreign exchange crisis",
-      "term_ko": "외환위기 후 최고",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외환위기 후 최고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1600원 향하는 환율…2분기 원·달러, 외환위기 후 최고",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295772?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%ED%99%98%EC%9C%84%EA%B8%B0%20%ED%9B%84%20%EC%B5%9C%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%ED%99%98%EC%9C%84%EA%B8%B0%20%ED%9B%84%20%EC%B5%9C%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "1600원 향하는 환율…2분기 원·달러, 외환위기 후 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295772?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Highest Since the Foreign Exchange Crisis",
+      "term_ko": "외환위기 후 최고"
     },
     {
       "term": "Panda Exchange Rate Skew",
-      "term_ko": "판다 환율 쏠림",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "판다 환율 쏠림",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "韓주식 보유하지만 원화는 판다…환율 쏠림 키우는 '외국인 환헤지'",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295769?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%90%EB%8B%A4%20%ED%99%98%EC%9C%A8%20%EC%8F%A0%EB%A6%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%90%EB%8B%A4%20%ED%99%98%EC%9C%A8%20%EC%8F%A0%EB%A6%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "韓주식 보유하지만 원화는 판다…환율 쏠림 키우는 '외국인 환헤지'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295769?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "판다 환율 쏠림"
     },
     {
       "term": "Foreign Currency Hedging for Investors",
-      "term_ko": "키우는 외국인 환헤지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "키우는 외국인 환헤지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "韓주식 보유하지만 원화는 판다…환율 쏠림 키우는 '외국인 환헤지'",
-              "link": "https://n.news.naver.com/mnews/article/015/0005295769?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%A4%EC%9A%B0%EB%8A%94%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%99%98%ED%97%A4%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%A4%EC%9A%B0%EB%8A%94%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%99%98%ED%97%A4%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "韓주식 보유하지만 원화는 판다…환율 쏠림 키우는 '외국인 환헤지'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005295769?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "키우는 외국인 환헤지"
     },
     {
-      "term": "Todays Signal AI",
-      "term_ko": "오늘의 Signal AI",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Todays Signal AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Todays%20Signal%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Todays%20Signal%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Todays Signal Ai",
+      "term_ko": "오늘의 Signal AI"
     },
     {
-      "term": "Money Watch KOSPI",
-      "term_ko": "머니워치 코스피",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Money Watch KOSPI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Park Su-jin's Money Watch] KOSPI plunges amid U.S. semiconductor shock…t...",
-              "link": "http://www.newswatch.kr/news/articleView.html?idxno=80011"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Money%20Watch%20KOSPI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Money%20Watch%20KOSPI"
-      },
-      "top_headlines": [
-        {
-          "title": "[Park Su-jin's Money Watch] KOSPI plunges amid U.S. semiconductor shock…t...",
-          "summary": "",
-          "link": "http://www.newswatch.kr/news/articleView.html?idxno=80011",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Money Watch Kospi",
+      "term_ko": "머니워치 코스피"
     },
     {
-      "term": "Billion Anthropic AI",
-      "term_ko": "빌리언 앤트로픽 AI",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Billion Anthropic AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Apollo and Blackstone Complete $35 Billion Anthropic AI Infrastructure Fi...",
-              "link": "https://www.econotimes.com/Apollo-and-Blackstone-Complete-35-Billion-Anthropic-AI-Infrastructure-Financing-Deal-1743665"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Billion%20Anthropic%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Billion%20Anthropic%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "Apollo and Blackstone Complete $35 Billion Anthropic AI Infrastructure Fi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Apollo-and-Blackstone-Complete-35-Billion-Anthropic-AI-Infrastructure-Financing-Deal-1743665",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Billion Anthropic Ai",
+      "term_ko": "빌리언 앤트로픽 AI"
     },
     {
-      "term": "Don't judge",
-      "term_ko": "평가하지 마라",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "평가하지 마라",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "감평사 압박하는 은행…“빌라 가격 높게 평가하지 마라”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004628466?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%89%EA%B0%80%ED%95%98%EC%A7%80%20%EB%A7%88%EB%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%89%EA%B0%80%ED%95%98%EC%A7%80%20%EB%A7%88%EB%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "감평사 압박하는 은행…“빌라 가격 높게 평가하지 마라”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004628466?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Don't Judge",
+      "term_ko": "평가하지 마라"
     },
     {
-      "term": "Food and rent",
-      "term_ko": "밥값 집세",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "밥값 집세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "서민 살림 더 팍팍…지출 43%가 밥값·집세",
-              "link": "https://n.news.naver.com/mnews/article/009/0005690413?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%A5%EA%B0%92%20%EC%A7%91%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%A5%EA%B0%92%20%EC%A7%91%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "서민 살림 더 팍팍…지출 43%가 밥값·집세",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005690413?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Food and Rent",
+      "term_ko": "밥값 집세"
     },
     {
       "term": "Alternative Stocks in the Spotlight",
-      "term_ko": "대안주 부각",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대안주 부각",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "코스피 5% 급락에 커진 ‘3고’ 공포…금융·내수·원자재 대안주 부각",
-              "link": "https://www.betanews.net/article/view/beta202606070005"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%95%88%EC%A3%BC%20%EB%B6%80%EA%B0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%95%88%EC%A3%BC%20%EB%B6%80%EA%B0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 5% 급락에 커진 ‘3고’ 공포…금융·내수·원자재 대안주 부각",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202606070005",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "대안주 부각"
     },
     {
       "term": "Data Centers Redraw",
-      "term_ko": "데이터 센터 재구상",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Data Centers Redraw",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Data%20Centers%20Redraw",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Data%20Centers%20Redraw"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "데이터 센터 재구상"
     },
     {
       "term": "S Korean Retail",
-      "term_ko": "한국 소매업",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "S Korean Retail",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S. Korean retail investors sell over 1 tln won in overseas stocks in 1st ...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016123820?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%20Korean%20Retail",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%20Korean%20Retail"
-      },
-      "top_headlines": [
-        {
-          "title": "S. Korean retail investors sell over 1 tln won in overseas stocks in 1st ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016123820?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 소매업"
     },
     {
-      "term": "U.S Semiconductor Shock",
-      "term_ko": "미국 반도체 충격",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Semiconductor Shock",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Park Su-jin's Money Watch] KOSPI plunges amid U.S. semiconductor shock…t...",
-              "link": "http://www.newswatch.kr/news/articleView.html?idxno=80011"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Semiconductor%20Shock",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Semiconductor%20Shock"
-      },
-      "top_headlines": [
-        {
-          "title": "[Park Su-jin's Money Watch] KOSPI plunges amid U.S. semiconductor shock…t...",
-          "summary": "",
-          "link": "http://www.newswatch.kr/news/articleView.html?idxno=80011",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s Semiconductor Shock",
+      "term_ko": "미국 반도체 충격"
     },
     {
       "term": "Sorry Im Not",
-      "term_ko": "미안해요, 전 아니에요",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sorry Im Not",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Sorry, I’m Not Available. Talk to the A.I. Version of Me.",
-              "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sorry%20Im%20Not",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sorry%20Im%20Not"
-      },
-      "top_headlines": [
-        {
-          "title": "Sorry, I’m Not Available. Talk to the A.I. Version of Me.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/06/business/dealbook/ai-digital-twin.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미안해요, 전 아니에요"
     },
     {
       "term": "National Growth Fund",
-      "term_ko": "국가성장기금",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "National Growth Fund",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'FuriosaAI,' Backed by the National Growth Fund, Valued at 522 Times Reve...",
-              "link": "https://it.chosun.com/news/articleView.html?idxno=2023092163405"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=National%20Growth%20Fund",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=National%20Growth%20Fund"
-      },
-      "top_headlines": [
-        {
-          "title": "'FuriosaAI,' Backed by the National Growth Fund, Valued at 522 Times Reve...",
-          "summary": "",
-          "link": "https://it.chosun.com/news/articleView.html?idxno=2023092163405",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "국가성장기금"
     },
     {
-      "term": "FuriosaAI Backed",
-      "term_ko": "FuriosaAI가 후원",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "FuriosaAI Backed",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "'FuriosaAI,' Backed by the National Growth Fund, Valued at 522 Times Reve...",
-              "link": "https://it.chosun.com/news/articleView.html?idxno=2023092163405"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=FuriosaAI%20Backed",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=FuriosaAI%20Backed"
-      },
-      "top_headlines": [
-        {
-          "title": "'FuriosaAI,' Backed by the National Growth Fund, Valued at 522 Times Reve...",
-          "summary": "",
-          "link": "https://it.chosun.com/news/articleView.html?idxno=2023092163405",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Furiosaai Backed",
+      "term_ko": "FuriosaAI가 후원"
     },
     {
       "term": "Power Map",
-      "term_ko": "파워 맵",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Power Map",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-06",
-              "timestamp": 1780671600000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Power%20Map",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Power%20Map"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.023815,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780671600000
-      }
+      "term_ko": "파워 맵"
     },
     {
       "term": "Billions Flow",
-      "term_ko": "수십억 달러가 쏟아지다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Billions Flow",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Billions%20Flow",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Billions%20Flow"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] AI Data Centers Redraw the Power Map as Billions Flow In...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154269",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수십억 달러가 쏟아지다"
     },
     {
       "term": "Investors Sell",
-      "term_ko": "투자자들이 매도하고 있다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investors Sell",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S. Korean retail investors sell over 1 tln won in overseas stocks in 1st ...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016123820?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Sell",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Sell"
-      },
-      "top_headlines": [
-        {
-          "title": "S. Korean retail investors sell over 1 tln won in overseas stocks in 1st ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016123820?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자자들이 매도하고 있다"
     },
     {
       "term": "Tln Won",
-      "term_ko": "Tln 원",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tln Won",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S. Korean retail investors sell over 1 tln won in overseas stocks in 1st ...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016123820?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tln%20Won",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tln%20Won"
-      },
-      "top_headlines": [
-        {
-          "title": "S. Korean retail investors sell over 1 tln won in overseas stocks in 1st ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016123820?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "Tln 원"
     },
     {
       "term": "Park Su-jins",
-      "term_ko": "박수진",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Park Su-jins",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-07T17:58:24+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Park Su-jin's Money Watch] KOSPI plunges amid U.S. semiconductor shock…t...",
-              "link": "http://www.newswatch.kr/news/articleView.html?idxno=80011"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Park%20Su-jins",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Park%20Su-jins"
-      },
-      "top_headlines": [
-        {
-          "title": "[Park Su-jin's Money Watch] KOSPI plunges amid U.S. semiconductor shock…t...",
-          "summary": "",
-          "link": "http://www.newswatch.kr/news/articleView.html?idxno=80011",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "박수진"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-07T08:59:28.135Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-07T17:58:24+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Growing Fears of the \"three Highs\"",
+      "term_ko": "커진 3고 공포"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-07T17:58:24+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-07T17:58:24+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Exchange Rate Heading Toward 1,600 Won",
+      "term_ko": "1600원 향하는 환율"
+    },
+    {
+      "term": "Q2 Krw/usd",
+      "term_ko": "2분기 원 달러"
+    },
+    {
+      "term": "Banks Putting Pressure on Appraisers",
+      "term_ko": "감평사 압박하는 은행"
+    },
+    {
+      "term": "High Villa Prices",
+      "term_ko": "빌라 가격 높게"
+    },
+    {
+      "term": "More for the Average Family",
+      "term_ko": "서민 살림 더"
+    },
+    {
+      "term": "Finance, Domestic Demand, Raw Materials",
+      "term_ko": "금융 내수 원자재"
+    },
+    {
+      "term": "Even Though It's Money Set Aside for Investment,",
+      "term_ko": "투자 대기 자금이라지만"
+    },
+    {
+      "term": "Export Proceeds of State-owned Enterprises",
+      "term_ko": "당국 기업 수출대금"
+    },
+    {
+      "term": "I'm Not Exchanging Money",
+      "term_ko": "환전 안 해"
+    },
+    {
+      "term": "Highest Since the Foreign Exchange Crisis",
+      "term_ko": "외환위기 후 최고"
+    },
+    {
+      "term": "Panda Exchange Rate Skew",
+      "term_ko": "판다 환율 쏠림"
+    },
+    {
+      "term": "Foreign Currency Hedging for Investors",
+      "term_ko": "키우는 외국인 환헤지"
+    },
+    {
+      "term": "Todays Signal Ai",
+      "term_ko": "오늘의 Signal AI"
+    },
+    {
+      "term": "Money Watch Kospi",
+      "term_ko": "머니워치 코스피"
+    },
+    {
+      "term": "Billion Anthropic Ai",
+      "term_ko": "빌리언 앤트로픽 AI"
+    },
+    {
+      "term": "Don't Judge",
+      "term_ko": "평가하지 마라"
+    },
+    {
+      "term": "Food and Rent",
+      "term_ko": "밥값 집세"
+    },
+    {
+      "term": "Alternative Stocks in the Spotlight",
+      "term_ko": "대안주 부각"
+    },
+    {
+      "term": "Data Centers Redraw",
+      "term_ko": "데이터 센터 재구상"
+    },
+    {
+      "term": "S Korean Retail",
+      "term_ko": "한국 소매업"
+    },
+    {
+      "term": "U.s Semiconductor Shock",
+      "term_ko": "미국 반도체 충격"
+    },
+    {
+      "term": "Sorry Im Not",
+      "term_ko": "미안해요, 전 아니에요"
+    },
+    {
+      "term": "National Growth Fund",
+      "term_ko": "국가성장기금"
+    },
+    {
+      "term": "Furiosaai Backed",
+      "term_ko": "FuriosaAI가 후원"
+    },
+    {
+      "term": "Power Map",
+      "term_ko": "파워 맵"
+    },
+    {
+      "term": "Billions Flow",
+      "term_ko": "수십억 달러가 쏟아지다"
+    },
+    {
+      "term": "Investors Sell",
+      "term_ko": "투자자들이 매도하고 있다"
+    },
+    {
+      "term": "Tln Won",
+      "term_ko": "Tln 원"
+    },
+    {
+      "term": "Park Su-jins",
+      "term_ko": "박수진"
+    }
+  ],
+  "translations": {
+    "Growing Fears of the \"three Highs\"": {
+      "en": "Growing Fears of the \"three Highs\"",
+      "ko": "커진 3고 공포",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Exchange Rate Heading Toward 1,600 Won": {
+      "en": "Exchange Rate Heading Toward 1,600 Won",
+      "ko": "1600원 향하는 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Q2 Krw/usd": {
+      "en": "Q2 Krw/usd",
+      "ko": "2분기 원 달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Banks Putting Pressure on Appraisers": {
+      "en": "Banks Putting Pressure on Appraisers",
+      "ko": "감평사 압박하는 은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "High Villa Prices": {
+      "en": "High Villa Prices",
+      "ko": "빌라 가격 높게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "More for the Average Family": {
+      "en": "More for the Average Family",
+      "ko": "서민 살림 더",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Finance, Domestic Demand, Raw Materials": {
+      "en": "Finance, Domestic Demand, Raw Materials",
+      "ko": "금융 내수 원자재",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Even Though It's Money Set Aside for Investment,": {
+      "en": "Even Though It's Money Set Aside for Investment,",
+      "ko": "투자 대기 자금이라지만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Export Proceeds of State-owned Enterprises": {
+      "en": "Export Proceeds of State-owned Enterprises",
+      "ko": "당국 기업 수출대금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "I'm Not Exchanging Money": {
+      "en": "I'm Not Exchanging Money",
+      "ko": "환전 안 해",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Highest Since the Foreign Exchange Crisis": {
+      "en": "Highest Since the Foreign Exchange Crisis",
+      "ko": "외환위기 후 최고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Panda Exchange Rate Skew": {
+      "en": "Panda Exchange Rate Skew",
+      "ko": "판다 환율 쏠림",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Foreign Currency Hedging for Investors": {
+      "en": "Foreign Currency Hedging for Investors",
+      "ko": "키우는 외국인 환헤지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Todays Signal Ai": {
+      "en": "Todays Signal Ai",
+      "ko": "오늘의 Signal AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Money Watch Kospi": {
+      "en": "Money Watch Kospi",
+      "ko": "머니워치 코스피",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Billion Anthropic Ai": {
+      "en": "Billion Anthropic Ai",
+      "ko": "빌리언 앤트로픽 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Don't Judge": {
+      "en": "Don't Judge",
+      "ko": "평가하지 마라",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Food and Rent": {
+      "en": "Food and Rent",
+      "ko": "밥값 집세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Alternative Stocks in the Spotlight": {
+      "en": "Alternative Stocks in the Spotlight",
+      "ko": "대안주 부각",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Data Centers Redraw": {
+      "en": "Data Centers Redraw",
+      "ko": "데이터 센터 재구상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "S Korean Retail": {
+      "en": "S Korean Retail",
+      "ko": "한국 소매업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "U.s Semiconductor Shock": {
+      "en": "U.s Semiconductor Shock",
+      "ko": "미국 반도체 충격",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Sorry Im Not": {
+      "en": "Sorry Im Not",
+      "ko": "미안해요, 전 아니에요",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "National Growth Fund": {
+      "en": "National Growth Fund",
+      "ko": "국가성장기금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Furiosaai Backed": {
+      "en": "Furiosaai Backed",
+      "ko": "FuriosaAI가 후원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Power Map": {
+      "en": "Power Map",
+      "ko": "파워 맵",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Billions Flow": {
+      "en": "Billions Flow",
+      "ko": "수십억 달러가 쏟아지다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Investors Sell": {
+      "en": "Investors Sell",
+      "ko": "투자자들이 매도하고 있다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Tln Won": {
+      "en": "Tln Won",
+      "ko": "Tln 원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
+    },
+    "Park Su-jins": {
+      "en": "Park Su-jins",
+      "ko": "박수진",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-07T13:52:02.331Z"
     }
   }
 }
