@@ -1,1142 +1,425 @@
 {
+  "generatedAt": "2026-06-08T15:48:02.497Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-08",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Tech Hemorrhage U.S",
-      "term_ko": "미국 기술 업계의 인재 유출",
-      "significance_score": 798,
-      "mentions": 480,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Hemorrhage U.S",
-        "local_headlines": {
-          "matches": 3,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016126634?sid=104"
-            },
-            {
-              "title": "(LEAD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won r...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016126533?sid=104"
-            },
-            {
-              "title": "KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes",
-              "link": "https://n.news.naver.com/mnews/article/001/0016126378?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Hemorrhage%20U.S",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Hemorrhage%20U.S"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016126634?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won r...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016126533?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016126378?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tech Hemorrhage U.s",
+      "term_ko": "미국 기술 업계의 인재 유출"
     },
     {
       "term": "Rate Woes",
-      "term_ko": "금리 문제",
-      "significance_score": 448,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Rate Woes",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016126634?sid=104"
-            },
-            {
-              "title": "KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes",
-              "link": "https://n.news.naver.com/mnews/article/001/0016126378?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate%20Woes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate%20Woes"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016126634?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016126378?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리 문제"
     },
     {
-      "term": "U.S. ETFs to Watch",
-      "term_ko": "보는 미국 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보는 미국 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[테마로 보는 미국 ETF] ⑳ AI 시대 필수 인프라는 사이버 보안",
-              "link": "https://www.newspim.com/news/view/20260608000834"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EB%8A%94%20%EB%AF%B8%EA%B5%AD%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EB%8A%94%20%EB%AF%B8%EA%B5%AD%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "[테마로 보는 미국 ETF] ⑳ AI 시대 필수 인프라는 사이버 보안",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608000834",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Etfs to Watch",
+      "term_ko": "보는 미국 ETF"
     },
     {
-      "term": "⑳ The Age of AI",
-      "term_ko": "⑳ AI 시대",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "⑳ AI 시대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[테마로 보는 미국 ETF] ⑳ AI 시대 필수 인프라는 사이버 보안",
-              "link": "https://www.newspim.com/news/view/20260608000834"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E2%91%B3%20AI%20%EC%8B%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E2%91%B3%20AI%20%EC%8B%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[테마로 보는 미국 ETF] ⑳ AI 시대 필수 인프라는 사이버 보안",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608000834",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "⑳ the Age of Ai",
+      "term_ko": "⑳ AI 시대"
     },
     {
-      "term": "A rally to $92,630",
-      "term_ko": "9만 2630달러 반격",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "9만 2630달러 반격",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-              "link": "http://coinreaders.com/240998"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9%EB%A7%8C%202630%EB%8B%AC%EB%9F%AC%20%EB%B0%98%EA%B2%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9%EB%A7%8C%202630%EB%8B%AC%EB%9F%AC%20%EB%B0%98%EA%B2%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-          "summary": "",
-          "link": "http://coinreaders.com/240998",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Rally to $92,630",
+      "term_ko": "9만 2630달러 반격"
     },
     {
-      "term": "Plunged 8% to the 8,000 level",
-      "term_ko": "8% 급락 8000선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "8% 급락 8000선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "겹악재에 '블랙먼데이'...코스피, 8% 급락 8000선 내줘",
-              "link": "https://www.betanews.net/article/view/beta202606080135"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8%25%20%EA%B8%89%EB%9D%BD%208000%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8%25%20%EA%B8%89%EB%9D%BD%208000%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "겹악재에 '블랙먼데이'...코스피, 8% 급락 8000선 내줘",
-          "summary": "",
-          "link": "https://www.betanews.net/article/view/beta202606080135",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Plunged 8% to the 8,000 Level",
+      "term_ko": "8% 급락 8000선"
     },
     {
-      "term": "Samsung's market capitalization of 550 trillion won",
-      "term_ko": "550조 삼전 시총",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "550조 삼전 시총",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 급락 시가총액 6131조원으로 550조↓…삼전 시총, 글로벌 11위로...",
-              "link": "https://www.livebiz.today/news/articleView.html?idxno=202503"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=550%EC%A1%B0%20%EC%82%BC%EC%A0%84%20%EC%8B%9C%EC%B4%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=550%EC%A1%B0%20%EC%82%BC%EC%A0%84%20%EC%8B%9C%EC%B4%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 급락 시가총액 6131조원으로 550조↓…삼전 시총, 글로벌 11위로...",
-          "summary": "",
-          "link": "https://www.livebiz.today/news/articleView.html?idxno=202503",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung's Market Capitalization of 550 Trillion Won",
+      "term_ko": "550조 삼전 시총"
     },
     {
       "term": "Shock: Foreign Investors, 70.21 Trading Days",
-      "term_ko": "쇼크 외인 70조21거래일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "쇼크 외인 70조21거래일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "‘반도체 쇼크’ 외인 70조(21거래일 누적 규모) 매도…단기과열·금리...",
-              "link": "https://n.news.naver.com/mnews/article/658/0000146134?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%87%BC%ED%81%AC%20%EC%99%B8%EC%9D%B8%2070%EC%A1%B021%EA%B1%B0%EB%9E%98%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%87%BC%ED%81%AC%20%EC%99%B8%EC%9D%B8%2070%EC%A1%B021%EA%B1%B0%EB%9E%98%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "‘반도체 쇼크’ 외인 70조(21거래일 누적 규모) 매도…단기과열·금리...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/658/0000146134?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "쇼크 외인 70조21거래일"
     },
     {
-      "term": "The Nasdaq crash has actually",
-      "term_ko": "나스닥 붕괴가 오히려",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 붕괴가 오히려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-              "link": "http://coinreaders.com/240998"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B6%95%EA%B4%B4%EA%B0%80%20%EC%98%A4%ED%9E%88%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B6%95%EA%B4%B4%EA%B0%80%20%EC%98%A4%ED%9E%88%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-          "summary": "",
-          "link": "http://coinreaders.com/240998",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Nasdaq Crash Has Actually",
+      "term_ko": "나스닥 붕괴가 오히려"
     },
     {
-      "term": "Critical infrastructure is cyber",
-      "term_ko": "필수 인프라는 사이버",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "필수 인프라는 사이버",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[테마로 보는 미국 ETF] ⑳ AI 시대 필수 인프라는 사이버 보안",
-              "link": "https://www.newspim.com/news/view/20260608000834"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%84%EC%88%98%20%EC%9D%B8%ED%94%84%EB%9D%BC%EB%8A%94%20%EC%82%AC%EC%9D%B4%EB%B2%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%84%EC%88%98%20%EC%9D%B8%ED%94%84%EB%9D%BC%EB%8A%94%20%EC%82%AC%EC%9D%B4%EB%B2%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[테마로 보는 미국 ETF] ⑳ AI 시대 필수 인프라는 사이버 보안",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608000834",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Critical Infrastructure Is Cyber",
+      "term_ko": "필수 인프라는 사이버"
     },
     {
-      "term": "I'm not into SpaceX",
-      "term_ko": "스페이스X 나는 안",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스페이스X 나는 안",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"스페이스X, 나는 안 사\"…'밸류 분석 대가'가 거부한 이유",
-              "link": "https://n.news.naver.com/mnews/article/277/0005773380?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%98%EB%8A%94%20%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%98%EB%8A%94%20%EC%95%88"
-      },
-      "top_headlines": [
-        {
-          "title": "\"스페이스X, 나는 안 사\"…'밸류 분석 대가'가 거부한 이유",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005773380?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I'm Not Into Spacex",
+      "term_ko": "스페이스X 나는 안"
     },
     {
-      "term": "SA Value Analysis",
-      "term_ko": "사 밸류 분석",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사 밸류 분석",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"스페이스X, 나는 안 사\"…'밸류 분석 대가'가 거부한 이유",
-              "link": "https://n.news.naver.com/mnews/article/277/0005773380?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%20%EB%B0%B8%EB%A5%98%20%EB%B6%84%EC%84%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%20%EB%B0%B8%EB%A5%98%20%EB%B6%84%EC%84%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "\"스페이스X, 나는 안 사\"…'밸류 분석 대가'가 거부한 이유",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005773380?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sa Value Analysis",
+      "term_ko": "사 밸류 분석"
     },
     {
-      "term": "The reason the master refused",
-      "term_ko": "대가가 거부한 이유",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "대가가 거부한 이유",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"스페이스X, 나는 안 사\"…'밸류 분석 대가'가 거부한 이유",
-              "link": "https://n.news.naver.com/mnews/article/277/0005773380?sid=105"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EA%B0%80%EA%B0%80%20%EA%B1%B0%EB%B6%80%ED%95%9C%20%EC%9D%B4%EC%9C%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EA%B0%80%EA%B0%80%20%EA%B1%B0%EB%B6%80%ED%95%9C%20%EC%9D%B4%EC%9C%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "\"스페이스X, 나는 안 사\"…'밸류 분석 대가'가 거부한 이유",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005773380?sid=105",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Reason the Master Refused",
+      "term_ko": "대가가 거부한 이유"
     },
     {
       "term": "Asian Stock Markets on Monday",
-      "term_ko": "아시아 월요 주식시장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "아시아 월요 주식시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "아시아 월요 주식시장 큰폭 하락…직전 월스트리트의 내림세 심화",
-              "link": "https://n.news.naver.com/mnews/article/003/0013994517?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%8B%9C%EC%95%84%20%EC%9B%94%EC%9A%94%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%8B%9C%EC%95%84%20%EC%9B%94%EC%9A%94%20%EC%A3%BC%EC%8B%9D%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "아시아 월요 주식시장 큰폭 하락…직전 월스트리트의 내림세 심화",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013994517?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "아시아 월요 주식시장"
     },
     {
-      "term": "Just before a sharp drop",
-      "term_ko": "큰폭 하락 직전",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "큰폭 하락 직전",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "아시아 월요 주식시장 큰폭 하락…직전 월스트리트의 내림세 심화",
-              "link": "https://n.news.naver.com/mnews/article/003/0013994517?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%81%B0%ED%8F%AD%20%ED%95%98%EB%9D%BD%20%EC%A7%81%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%81%B0%ED%8F%AD%20%ED%95%98%EB%9D%BD%20%EC%A7%81%EC%A0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "아시아 월요 주식시장 큰폭 하락…직전 월스트리트의 내림세 심화",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013994517?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Just Before a Sharp Drop",
+      "term_ko": "큰폭 하락 직전"
     },
     {
-      "term": "Wall Street's decline deepens",
-      "term_ko": "월스트리트의 내림세 심화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "월스트리트의 내림세 심화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "아시아 월요 주식시장 큰폭 하락…직전 월스트리트의 내림세 심화",
-              "link": "https://n.news.naver.com/mnews/article/003/0013994517?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8%EC%9D%98%20%EB%82%B4%EB%A6%BC%EC%84%B8%20%EC%8B%AC%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8%EC%9D%98%20%EB%82%B4%EB%A6%BC%EC%84%B8%20%EC%8B%AC%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "아시아 월요 주식시장 큰폭 하락…직전 월스트리트의 내림세 심화",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0013994517?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Wall Street's Decline Deepens",
+      "term_ko": "월스트리트의 내림세 심화"
     },
     {
-      "term": "Soaring exchange rates: non-statistical",
-      "term_ko": "환율 치솟는 비통계적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 치솟는 비통계적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "환율 치솟는 비통계적 이유: 자본유출만큼 심각한 '사회 갈등'",
-              "link": "https://n.news.naver.com/mnews/article/665/0000007518?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%B9%98%EC%86%9F%EB%8A%94%20%EB%B9%84%ED%86%B5%EA%B3%84%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%B9%98%EC%86%9F%EB%8A%94%20%EB%B9%84%ED%86%B5%EA%B3%84%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 치솟는 비통계적 이유: 자본유출만큼 심각한 '사회 갈등'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/665/0000007518?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Soaring Exchange Rates: Non-statistical",
+      "term_ko": "환율 치솟는 비통계적"
     },
     {
-      "term": "Just as serious as capital flight",
-      "term_ko": "이유 자본유출만큼 심각한",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이유 자본유출만큼 심각한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "환율 치솟는 비통계적 이유: 자본유출만큼 심각한 '사회 갈등'",
-              "link": "https://n.news.naver.com/mnews/article/665/0000007518?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9C%A0%20%EC%9E%90%EB%B3%B8%EC%9C%A0%EC%B6%9C%EB%A7%8C%ED%81%BC%20%EC%8B%AC%EA%B0%81%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9C%A0%20%EC%9E%90%EB%B3%B8%EC%9C%A0%EC%B6%9C%EB%A7%8C%ED%81%BC%20%EC%8B%AC%EA%B0%81%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 치솟는 비통계적 이유: 자본유출만큼 심각한 '사회 갈등'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/665/0000007518?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Just As Serious As Capital Flight",
+      "term_ko": "이유 자본유출만큼 심각한"
     },
     {
       "term": "Cryptocurrency Market: Bitcoin",
-      "term_ko": "코인 시황 비트코인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코인 시황 비트코인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인, 중동 긴장 재고조에 급락 후 반등…공매도 8287억...",
-              "link": "https://www.newspim.com/news/view/20260608000985"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%9D%B8%20%EC%8B%9C%ED%99%A9%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인, 중동 긴장 재고조에 급락 후 반등…공매도 8287억...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608000985",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코인 시황 비트코인"
     },
     {
-      "term": "Rebound after a sharp drop",
-      "term_ko": "급락 후 반등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급락 후 반등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[코인 시황] 비트코인, 중동 긴장 재고조에 급락 후 반등…공매도 8287억...",
-              "link": "https://www.newspim.com/news/view/20260608000985"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%9D%BD%20%ED%9B%84%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%9D%BD%20%ED%9B%84%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "[코인 시황] 비트코인, 중동 긴장 재고조에 급락 후 반등…공매도 8287억...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608000985",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rebound After a Sharp Drop",
+      "term_ko": "급락 후 반등"
     },
     {
-      "term": "LD KOSPI Crashes",
-      "term_ko": "LD 코스피 급락",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LD KOSPI Crashes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016126634?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20KOSPI%20Crashes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20KOSPI%20Crashes"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016126634?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ld Kospi Crashes",
+      "term_ko": "LD 코스피 급락"
     },
     {
-      "term": "LEAD KOSPI Crashes",
-      "term_ko": "LEAD 코스피 급락",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD KOSPI Crashes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won r...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016126533?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20KOSPI%20Crashes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20KOSPI%20Crashes"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) KOSPI crashes over 8 pct on tech hemorrhage, U.S. rate woes; won r...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016126533?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Kospi Crashes",
+      "term_ko": "LEAD 코스피 급락"
     },
     {
       "term": "Social Conflict",
-      "term_ko": "사회 갈등",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사회 갈등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-01",
-              "timestamp": 1780239600000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-02",
-              "timestamp": 1780326000000,
-              "value": 41.66666
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "환율 치솟는 비통계적 이유: 자본유출만큼 심각한 '사회 갈등'",
-              "link": "https://n.news.naver.com/mnews/article/665/0000007518?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%ED%9A%8C%20%EA%B0%88%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%ED%9A%8C%20%EA%B0%88%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 치솟는 비통계적 이유: 자본유출만큼 심각한 '사회 갈등'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/665/0000007518?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 41.6667,
-        "weekly_average_volume": 41.6667,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.075379,
-        "time_weight": 0.0061,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780326000000
-      }
+      "term_ko": "사회 갈등"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Anticipation for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-08T19:54:30+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 200,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 200,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.025413,
-        "time_weight": 0.008626,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780498800000
-      }
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "Threat of a U.S. Government Shutdown",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-08T10:55:35.026Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-08T19:54:30+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Tech Hemorrhage U.s",
+      "term_ko": "미국 기술 업계의 인재 유출"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-08T19:54:30+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-08T19:54:30+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Rate Woes",
+      "term_ko": "금리 문제"
+    },
+    {
+      "term": "U.s. Etfs to Watch",
+      "term_ko": "보는 미국 ETF"
+    },
+    {
+      "term": "⑳ the Age of Ai",
+      "term_ko": "⑳ AI 시대"
+    },
+    {
+      "term": "A Rally to $92,630",
+      "term_ko": "9만 2630달러 반격"
+    },
+    {
+      "term": "Plunged 8% to the 8,000 Level",
+      "term_ko": "8% 급락 8000선"
+    },
+    {
+      "term": "Samsung's Market Capitalization of 550 Trillion Won",
+      "term_ko": "550조 삼전 시총"
+    },
+    {
+      "term": "Shock: Foreign Investors, 70.21 Trading Days",
+      "term_ko": "쇼크 외인 70조21거래일"
+    },
+    {
+      "term": "The Nasdaq Crash Has Actually",
+      "term_ko": "나스닥 붕괴가 오히려"
+    },
+    {
+      "term": "Critical Infrastructure Is Cyber",
+      "term_ko": "필수 인프라는 사이버"
+    },
+    {
+      "term": "I'm Not Into Spacex",
+      "term_ko": "스페이스X 나는 안"
+    },
+    {
+      "term": "Sa Value Analysis",
+      "term_ko": "사 밸류 분석"
+    },
+    {
+      "term": "The Reason the Master Refused",
+      "term_ko": "대가가 거부한 이유"
+    },
+    {
+      "term": "Asian Stock Markets on Monday",
+      "term_ko": "아시아 월요 주식시장"
+    },
+    {
+      "term": "Just Before a Sharp Drop",
+      "term_ko": "큰폭 하락 직전"
+    },
+    {
+      "term": "Wall Street's Decline Deepens",
+      "term_ko": "월스트리트의 내림세 심화"
+    },
+    {
+      "term": "Soaring Exchange Rates: Non-statistical",
+      "term_ko": "환율 치솟는 비통계적"
+    },
+    {
+      "term": "Just As Serious As Capital Flight",
+      "term_ko": "이유 자본유출만큼 심각한"
+    },
+    {
+      "term": "Cryptocurrency Market: Bitcoin",
+      "term_ko": "코인 시황 비트코인"
+    },
+    {
+      "term": "Rebound After a Sharp Drop",
+      "term_ko": "급락 후 반등"
+    },
+    {
+      "term": "Ld Kospi Crashes",
+      "term_ko": "LD 코스피 급락"
+    },
+    {
+      "term": "Lead Kospi Crashes",
+      "term_ko": "LEAD 코스피 급락"
+    },
+    {
+      "term": "Social Conflict",
+      "term_ko": "사회 갈등"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    }
+  ],
+  "translations": {
+    "Tech Hemorrhage U.s": {
+      "en": "Tech Hemorrhage U.s",
+      "ko": "미국 기술 업계의 인재 유출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Rate Woes": {
+      "en": "Rate Woes",
+      "ko": "금리 문제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "U.s. Etfs to Watch": {
+      "en": "U.s. Etfs to Watch",
+      "ko": "보는 미국 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "⑳ the Age of Ai": {
+      "en": "⑳ the Age of Ai",
+      "ko": "⑳ AI 시대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "A Rally to $92,630": {
+      "en": "A Rally to $92,630",
+      "ko": "9만 2630달러 반격",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Plunged 8% to the 8,000 Level": {
+      "en": "Plunged 8% to the 8,000 Level",
+      "ko": "8% 급락 8000선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Samsung's Market Capitalization of 550 Trillion Won": {
+      "en": "Samsung's Market Capitalization of 550 Trillion Won",
+      "ko": "550조 삼전 시총",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Shock: Foreign Investors, 70.21 Trading Days": {
+      "en": "Shock: Foreign Investors, 70.21 Trading Days",
+      "ko": "쇼크 외인 70조21거래일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "The Nasdaq Crash Has Actually": {
+      "en": "The Nasdaq Crash Has Actually",
+      "ko": "나스닥 붕괴가 오히려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Critical Infrastructure Is Cyber": {
+      "en": "Critical Infrastructure Is Cyber",
+      "ko": "필수 인프라는 사이버",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "I'm Not Into Spacex": {
+      "en": "I'm Not Into Spacex",
+      "ko": "스페이스X 나는 안",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Sa Value Analysis": {
+      "en": "Sa Value Analysis",
+      "ko": "사 밸류 분석",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "The Reason the Master Refused": {
+      "en": "The Reason the Master Refused",
+      "ko": "대가가 거부한 이유",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Asian Stock Markets on Monday": {
+      "en": "Asian Stock Markets on Monday",
+      "ko": "아시아 월요 주식시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Just Before a Sharp Drop": {
+      "en": "Just Before a Sharp Drop",
+      "ko": "큰폭 하락 직전",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Wall Street's Decline Deepens": {
+      "en": "Wall Street's Decline Deepens",
+      "ko": "월스트리트의 내림세 심화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Soaring Exchange Rates: Non-statistical": {
+      "en": "Soaring Exchange Rates: Non-statistical",
+      "ko": "환율 치솟는 비통계적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Just As Serious As Capital Flight": {
+      "en": "Just As Serious As Capital Flight",
+      "ko": "이유 자본유출만큼 심각한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Cryptocurrency Market: Bitcoin": {
+      "en": "Cryptocurrency Market: Bitcoin",
+      "ko": "코인 시황 비트코인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Rebound After a Sharp Drop": {
+      "en": "Rebound After a Sharp Drop",
+      "ko": "급락 후 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Ld Kospi Crashes": {
+      "en": "Ld Kospi Crashes",
+      "ko": "LD 코스피 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Lead Kospi Crashes": {
+      "en": "Lead Kospi Crashes",
+      "ko": "LEAD 코스피 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Social Conflict": {
+      "en": "Social Conflict",
+      "ko": "사회 갈등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Anticipation for a Bitcoin Etf": {
+      "en": "Anticipation for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Korean Won-u.s. Dollar Exchange Rate Surges": {
+      "en": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
+    },
+    "Threat of a U.s. Government Shutdown": {
+      "en": "Threat of a U.s. Government Shutdown",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T15:48:02.498Z"
     }
   }
 }
