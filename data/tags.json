@@ -1,1069 +1,411 @@
 {
+  "generatedAt": "2026-06-08T20:14:46.056Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-08",
   "window": "12_hours",
   "total_phrases": 28,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "The Money-Guzzling Hippo IPO",
-      "term_ko": "돈먹는 하마 IPO",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돈먹는 하마 IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[김대호 진단] 뉴욕증시 돈먹는 하마 \"IPO 흑역사\" ... 스페이스X vs 아람...",
-              "link": "https://www.g-enews.com/view.php?ud=202606081937037539906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%88%EB%A8%B9%EB%8A%94%20%ED%95%98%EB%A7%88%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%88%EB%A8%B9%EB%8A%94%20%ED%95%98%EB%A7%88%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "[김대호 진단] 뉴욕증시 돈먹는 하마 \"IPO 흑역사\" ... 스페이스X vs 아람...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202606081937037539906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Money-guzzling Hippo Ipo",
+      "term_ko": "돈먹는 하마 IPO"
     },
     {
-      "term": "KB Online Variable-Rate",
-      "term_ko": "KB 비대면 변동형",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KB 비대면 변동형",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KB, 비대면 변동형 주담대 우대금리 0.2%p 축소",
-              "link": "https://n.news.naver.com/mnews/article/023/0003980912?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KB%20%EB%B9%84%EB%8C%80%EB%A9%B4%20%EB%B3%80%EB%8F%99%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KB%20%EB%B9%84%EB%8C%80%EB%A9%B4%20%EB%B3%80%EB%8F%99%ED%98%95"
-      },
-      "top_headlines": [
-        {
-          "title": "KB, 비대면 변동형 주담대 우대금리 0.2%p 축소",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003980912?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kb Online Variable-rate",
+      "term_ko": "KB 비대면 변동형"
     },
     {
-      "term": "Mabel's S&P 500",
-      "term_ko": "찍은 마벨 S&P500",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "찍은 마벨 S&P500",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "젠슨 황이 찍은 마벨, S&P500 편입 소식에 개장 전 주가 8%↑",
-              "link": "https://www.newspim.com/news/view/20260608001063"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B0%8D%EC%9D%80%20%EB%A7%88%EB%B2%A8%20S%26P500",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B0%8D%EC%9D%80%20%EB%A7%88%EB%B2%A8%20S%26P500"
-      },
-      "top_headlines": [
-        {
-          "title": "젠슨 황이 찍은 마벨, S&P500 편입 소식에 개장 전 주가 8%↑",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608001063",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mabel's S&p 500",
+      "term_ko": "찍은 마벨 S&P500"
     },
     {
-      "term": "8% from the previous week",
-      "term_ko": "전 주가 8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전 주가 8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "젠슨 황이 찍은 마벨, S&P500 편입 소식에 개장 전 주가 8%↑",
-              "link": "https://www.newspim.com/news/view/20260608001063"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%20%EC%A3%BC%EA%B0%80%208%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%20%EC%A3%BC%EA%B0%80%208%25"
-      },
-      "top_headlines": [
-        {
-          "title": "젠슨 황이 찍은 마벨, S&P500 편입 소식에 개장 전 주가 8%↑",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608001063",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "8% From the Previous Week",
+      "term_ko": "전 주가 8%"
     },
     {
-      "term": "A rally to $92,630",
-      "term_ko": "9만 2630달러 반격",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "9만 2630달러 반격",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-              "link": "http://coinreaders.com/240998"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9%EB%A7%8C%202630%EB%8B%AC%EB%9F%AC%20%EB%B0%98%EA%B2%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9%EB%A7%8C%202630%EB%8B%AC%EB%9F%AC%20%EB%B0%98%EA%B2%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-          "summary": "",
-          "link": "http://coinreaders.com/240998",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Rally to $92,630",
+      "term_ko": "9만 2630달러 반격"
     },
     {
-      "term": "0.2 percentage point discount on mortgage rates",
-      "term_ko": "주담대 우대금리 0.2%p",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 우대금리 0.2%p",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "KB, 비대면 변동형 주담대 우대금리 0.2%p 축소",
-              "link": "https://n.news.naver.com/mnews/article/023/0003980912?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EC%9A%B0%EB%8C%80%EA%B8%88%EB%A6%AC%200.2%25p",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EC%9A%B0%EB%8C%80%EA%B8%88%EB%A6%AC%200.2%25p"
-      },
-      "top_headlines": [
-        {
-          "title": "KB, 비대면 변동형 주담대 우대금리 0.2%p 축소",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003980912?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "0.2 Percentage Point Discount on Mortgage Rates",
+      "term_ko": "주담대 우대금리 0.2%p"
     },
     {
-      "term": "Seven companies",
-      "term_ko": "단독 7개 업체",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "단독 7개 업체",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[단독] 7개 업체 ‘밀가루 담합’ 과징금 끝이 아니다… 정부 보조금 환...",
-              "link": "https://n.news.naver.com/mnews/article/005/0001853778?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EB%8F%85%207%EA%B0%9C%20%EC%97%85%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EB%8F%85%207%EA%B0%9C%20%EC%97%85%EC%B2%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[단독] 7개 업체 ‘밀가루 담합’ 과징금 끝이 아니다… 정부 보조금 환...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001853778?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Seven Companies",
+      "term_ko": "단독 7개 업체"
     },
     {
       "term": "Kim Dae-ho's Analysis of the New York Stock Market",
-      "term_ko": "김대호 진단 뉴욕증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김대호 진단 뉴욕증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[김대호 진단] 뉴욕증시 돈먹는 하마 \"IPO 흑역사\" ... 스페이스X vs 아람...",
-              "link": "https://www.g-enews.com/view.php?ud=202606081937037539906806b77b_1"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EB%8C%80%ED%98%B8%20%EC%A7%84%EB%8B%A8%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EB%8C%80%ED%98%B8%20%EC%A7%84%EB%8B%A8%20%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[김대호 진단] 뉴욕증시 돈먹는 하마 \"IPO 흑역사\" ... 스페이스X vs 아람...",
-          "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202606081937037539906806b77b_1",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "김대호 진단 뉴욕증시"
     },
     {
-      "term": "Market opens on news of the acquisition",
-      "term_ko": "편입 소식에 개장",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "편입 소식에 개장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "젠슨 황이 찍은 마벨, S&P500 편입 소식에 개장 전 주가 8%↑",
-              "link": "https://www.newspim.com/news/view/20260608001063"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8E%B8%EC%9E%85%20%EC%86%8C%EC%8B%9D%EC%97%90%20%EA%B0%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8E%B8%EC%9E%85%20%EC%86%8C%EC%8B%9D%EC%97%90%20%EA%B0%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "젠슨 황이 찍은 마벨, S&P500 편입 소식에 개장 전 주가 8%↑",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260608001063",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Market Opens on News of the Acquisition",
+      "term_ko": "편입 소식에 개장"
     },
     {
-      "term": "The Nasdaq crash, on the contrary,",
-      "term_ko": "나스닥 붕괴가 오히려",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 붕괴가 오히려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-              "link": "http://coinreaders.com/240998"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B6%95%EA%B4%B4%EA%B0%80%20%EC%98%A4%ED%9E%88%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EB%B6%95%EA%B4%B4%EA%B0%80%20%EC%98%A4%ED%9E%88%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥 붕괴가 오히려 기회?...비트코인(BTC), 9만 2,630달러 반격 시그...",
-          "summary": "",
-          "link": "http://coinreaders.com/240998",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Nasdaq Crash, on the Contrary,",
+      "term_ko": "나스닥 붕괴가 오히려"
     },
     {
       "term": "Black Monday Nail",
-      "term_ko": "검은 월요일 못",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "검은 월요일 못",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "‘검은 월요일’ 못 피했다… 코스피, 7400대로 밀려",
-              "link": "https://n.news.naver.com/mnews/article/023/0003980900?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%80%EC%9D%80%20%EC%9B%94%EC%9A%94%EC%9D%BC%20%EB%AA%BB",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%80%EC%9D%80%20%EC%9B%94%EC%9A%94%EC%9D%BC%20%EB%AA%BB"
-      },
-      "top_headlines": [
-        {
-          "title": "‘검은 월요일’ 못 피했다… 코스피, 7400대로 밀려",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003980900?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "검은 월요일 못"
     },
     {
-      "term": "The artificially high exchange rate is temporary",
-      "term_ko": "사설 고환율은 일시적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사설 고환율은 일시적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 고환율은 일시적, 전세난은 정상화라는 대통령의 경제 인식",
-              "link": "https://n.news.naver.com/mnews/article/025/0003528978?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%9D%BC%EC%8B%9C%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%EA%B3%A0%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%9D%BC%EC%8B%9C%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 고환율은 일시적, 전세난은 정상화라는 대통령의 경제 인식",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003528978?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Artificially High Exchange Rate Is Temporary",
+      "term_ko": "사설 고환율은 일시적"
     },
     {
-      "term": "Fines for flour price-fixing",
-      "term_ko": "밀가루 담합 과징금",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "밀가루 담합 과징금",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-01",
-              "timestamp": 1780239600000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-02",
-              "timestamp": 1780326000000,
-              "value": 42.85714
-            },
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 42.85714
-            },
-            {
-              "period": "2026-06-05",
-              "timestamp": 1780585200000,
-              "value": 42.85714
-            },
-            {
-              "period": "2026-06-07",
-              "timestamp": 1780758000000,
-              "value": 35.71428
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[단독] 7개 업체 ‘밀가루 담합’ 과징금 끝이 아니다… 정부 보조금 환...",
-              "link": "https://n.news.naver.com/mnews/article/005/0001853778?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%80%EA%B0%80%EB%A3%A8%20%EB%8B%B4%ED%95%A9%20%EA%B3%BC%EC%A7%95%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%80%EA%B0%80%EB%A3%A8%20%EB%8B%B4%ED%95%A9%20%EA%B3%BC%EC%A7%95%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[단독] 7개 업체 ‘밀가루 담합’ 과징금 끝이 아니다… 정부 보조금 환...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001853778?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 121.4286,
-        "weekly_average_volume": 40.4762,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.035914,
-        "time_weight": 0.020471,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780758000000
-      }
+      "term": "Fines for Flour Price-fixing",
+      "term_ko": "밀가루 담합 과징금"
     },
     {
-      "term": "It's not over yet, government",
-      "term_ko": "끝이 아니다 정부",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "끝이 아니다 정부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[단독] 7개 업체 ‘밀가루 담합’ 과징금 끝이 아니다… 정부 보조금 환...",
-              "link": "https://n.news.naver.com/mnews/article/005/0001853778?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%81%9D%EC%9D%B4%20%EC%95%84%EB%8B%88%EB%8B%A4%20%EC%A0%95%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%81%9D%EC%9D%B4%20%EC%95%84%EB%8B%88%EB%8B%A4%20%EC%A0%95%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[단독] 7개 업체 ‘밀가루 담합’ 과징금 끝이 아니다… 정부 보조금 환...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001853778?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It's Not Over Yet, Government",
+      "term_ko": "끝이 아니다 정부"
     },
     {
       "term": "The President's Private Real Estate",
-      "term_ko": "사설 대통령의 부동산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사설 대통령의 부동산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 대통령의 부동산·금융시장 인식, 너무 낙관적 아닌가",
-              "link": "https://n.news.naver.com/mnews/article/469/0000935287?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%EB%8C%80%ED%86%B5%EB%A0%B9%EC%9D%98%20%EB%B6%80%EB%8F%99%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%EB%8C%80%ED%86%B5%EB%A0%B9%EC%9D%98%20%EB%B6%80%EB%8F%99%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 대통령의 부동산·금융시장 인식, 너무 낙관적 아닌가",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/469/0000935287?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사설 대통령의 부동산"
     },
     {
-      "term": "Perceptions of the financial market are too",
-      "term_ko": "금융시장 인식 너무",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융시장 인식 너무",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 대통령의 부동산·금융시장 인식, 너무 낙관적 아닌가",
-              "link": "https://n.news.naver.com/mnews/article/469/0000935287?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%20%EC%9D%B8%EC%8B%9D%20%EB%84%88%EB%AC%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%8B%9C%EC%9E%A5%20%EC%9D%B8%EC%8B%9D%20%EB%84%88%EB%AC%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 대통령의 부동산·금융시장 인식, 너무 낙관적 아닌가",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/469/0000935287?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Perceptions of the Financial Market Are Too",
+      "term_ko": "금융시장 인식 너무"
     },
     {
       "term": "Economic Perceptions",
-      "term_ko": "경제 인식",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경제 인식",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 고환율은 일시적, 전세난은 정상화라는 대통령의 경제 인식",
-              "link": "https://n.news.naver.com/mnews/article/025/0003528978?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%20%EC%9D%B8%EC%8B%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%20%EC%9D%B8%EC%8B%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 고환율은 일시적, 전세난은 정상화라는 대통령의 경제 인식",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003528978?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "경제 인식"
     },
     {
       "term": "Iran Eases Military",
-      "term_ko": "이란, 군사 조치 완화",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Iran Eases Military",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stocks Rebound as Iran Eases Military Operations; Tech Shares Lead Wal...",
-              "link": "https://www.econotimes.com/US-Stocks-Rebound-as-Iran-Eases-Military-Operations-Tech-Shares-Lead-Wall-Street-Recovery-1743769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Iran%20Eases%20Military",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Iran%20Eases%20Military"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stocks Rebound as Iran Eases Military Operations; Tech Shares Lead Wal...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rebound-as-Iran-Eases-Military-Operations-Tech-Shares-Lead-Wall-Street-Recovery-1743769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이란, 군사 조치 완화"
     },
     {
-      "term": "Trump Eyes A",
-      "term_ko": "트럼프, A를 노린다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Eyes A",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Trump Eyes a Piece of A.I.",
-              "link": "https://www.nytimes.com/2026/06/08/business/dealbook/trump-ai-stakes.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Eyes%20A",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Eyes%20A"
-      },
-      "top_headlines": [
-        {
-          "title": "Trump Eyes a Piece of A.I.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/08/business/dealbook/trump-ai-stakes.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump Eyes a",
+      "term_ko": "트럼프, A를 노린다"
     },
     {
       "term": "Operations Tech",
-      "term_ko": "운영 기술자",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Operations Tech",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US Stocks Rebound as Iran Eases Military Operations; Tech Shares Lead Wal...",
-              "link": "https://www.econotimes.com/US-Stocks-Rebound-as-Iran-Eases-Military-Operations-Tech-Shares-Lead-Wall-Street-Recovery-1743769"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Operations%20Tech",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Operations%20Tech"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stocks Rebound as Iran Eases Military Operations; Tech Shares Lead Wal...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stocks-Rebound-as-Iran-Eases-Military-Operations-Tech-Shares-Lead-Wall-Street-Recovery-1743769",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "운영 기술자"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Anticipation for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 200,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 200,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.025413,
-        "time_weight": 0.008274,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780498800000
-      }
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "Threat of a U.S. Government Shutdown",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
       "term": "South Korean Stock Market Rebounds",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "한국 증시 반등"
     },
     {
-      "term": "Expansion of semiconductor investment",
-      "term_ko": "반도체 투자 확대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 투자 확대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-09T00:50:10+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Expansion of Semiconductor Investment",
+      "term_ko": "반도체 투자 확대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-08T15:51:16.686Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-09T00:50:10+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 2,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "The Money-guzzling Hippo Ipo",
+      "term_ko": "돈먹는 하마 IPO"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-09T00:50:10+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-09T00:50:10+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Kb Online Variable-rate",
+      "term_ko": "KB 비대면 변동형"
+    },
+    {
+      "term": "Mabel's S&p 500",
+      "term_ko": "찍은 마벨 S&P500"
+    },
+    {
+      "term": "8% From the Previous Week",
+      "term_ko": "전 주가 8%"
+    },
+    {
+      "term": "A Rally to $92,630",
+      "term_ko": "9만 2630달러 반격"
+    },
+    {
+      "term": "0.2 Percentage Point Discount on Mortgage Rates",
+      "term_ko": "주담대 우대금리 0.2%p"
+    },
+    {
+      "term": "Seven Companies",
+      "term_ko": "단독 7개 업체"
+    },
+    {
+      "term": "Kim Dae-ho's Analysis of the New York Stock Market",
+      "term_ko": "김대호 진단 뉴욕증시"
+    },
+    {
+      "term": "Market Opens on News of the Acquisition",
+      "term_ko": "편입 소식에 개장"
+    },
+    {
+      "term": "The Nasdaq Crash, on the Contrary,",
+      "term_ko": "나스닥 붕괴가 오히려"
+    },
+    {
+      "term": "Black Monday Nail",
+      "term_ko": "검은 월요일 못"
+    },
+    {
+      "term": "The Artificially High Exchange Rate Is Temporary",
+      "term_ko": "사설 고환율은 일시적"
+    },
+    {
+      "term": "Fines for Flour Price-fixing",
+      "term_ko": "밀가루 담합 과징금"
+    },
+    {
+      "term": "It's Not Over Yet, Government",
+      "term_ko": "끝이 아니다 정부"
+    },
+    {
+      "term": "The President's Private Real Estate",
+      "term_ko": "사설 대통령의 부동산"
+    },
+    {
+      "term": "Perceptions of the Financial Market Are Too",
+      "term_ko": "금융시장 인식 너무"
+    },
+    {
+      "term": "Economic Perceptions",
+      "term_ko": "경제 인식"
+    },
+    {
+      "term": "Iran Eases Military",
+      "term_ko": "이란, 군사 조치 완화"
+    },
+    {
+      "term": "Trump Eyes a",
+      "term_ko": "트럼프, A를 노린다"
+    },
+    {
+      "term": "Operations Tech",
+      "term_ko": "운영 기술자"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "South Korean Stock Market Rebounds",
+      "term_ko": "한국 증시 반등"
+    },
+    {
+      "term": "Expansion of Semiconductor Investment",
+      "term_ko": "반도체 투자 확대"
+    }
+  ],
+  "translations": {
+    "The Money-guzzling Hippo Ipo": {
+      "en": "The Money-guzzling Hippo Ipo",
+      "ko": "돈먹는 하마 IPO",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "Kb Online Variable-rate": {
+      "en": "Kb Online Variable-rate",
+      "ko": "KB 비대면 변동형",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "Mabel's S&p 500": {
+      "en": "Mabel's S&p 500",
+      "ko": "찍은 마벨 S&P500",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "8% From the Previous Week": {
+      "en": "8% From the Previous Week",
+      "ko": "전 주가 8%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "A Rally to $92,630": {
+      "en": "A Rally to $92,630",
+      "ko": "9만 2630달러 반격",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "0.2 Percentage Point Discount on Mortgage Rates": {
+      "en": "0.2 Percentage Point Discount on Mortgage Rates",
+      "ko": "주담대 우대금리 0.2%p",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "Seven Companies": {
+      "en": "Seven Companies",
+      "ko": "단독 7개 업체",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "Kim Dae-ho's Analysis of the New York Stock Market": {
+      "en": "Kim Dae-ho's Analysis of the New York Stock Market",
+      "ko": "김대호 진단 뉴욕증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "Market Opens on News of the Acquisition": {
+      "en": "Market Opens on News of the Acquisition",
+      "ko": "편입 소식에 개장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "The Nasdaq Crash, on the Contrary,": {
+      "en": "The Nasdaq Crash, on the Contrary,",
+      "ko": "나스닥 붕괴가 오히려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.056Z"
+    },
+    "Black Monday Nail": {
+      "en": "Black Monday Nail",
+      "ko": "검은 월요일 못",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "The Artificially High Exchange Rate Is Temporary": {
+      "en": "The Artificially High Exchange Rate Is Temporary",
+      "ko": "사설 고환율은 일시적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Fines for Flour Price-fixing": {
+      "en": "Fines for Flour Price-fixing",
+      "ko": "밀가루 담합 과징금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "It's Not Over Yet, Government": {
+      "en": "It's Not Over Yet, Government",
+      "ko": "끝이 아니다 정부",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "The President's Private Real Estate": {
+      "en": "The President's Private Real Estate",
+      "ko": "사설 대통령의 부동산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Perceptions of the Financial Market Are Too": {
+      "en": "Perceptions of the Financial Market Are Too",
+      "ko": "금융시장 인식 너무",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Economic Perceptions": {
+      "en": "Economic Perceptions",
+      "ko": "경제 인식",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Iran Eases Military": {
+      "en": "Iran Eases Military",
+      "ko": "이란, 군사 조치 완화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Trump Eyes a": {
+      "en": "Trump Eyes a",
+      "ko": "트럼프, A를 노린다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Operations Tech": {
+      "en": "Operations Tech",
+      "ko": "운영 기술자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Anticipation for a Bitcoin Etf": {
+      "en": "Anticipation for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Korean Won-u.s. Dollar Exchange Rate Surges": {
+      "en": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Threat of a U.s. Government Shutdown": {
+      "en": "Threat of a U.s. Government Shutdown",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "South Korean Stock Market Rebounds": {
+      "en": "South Korean Stock Market Rebounds",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
+    },
+    "Expansion of Semiconductor Investment": {
+      "en": "Expansion of Semiconductor Investment",
+      "ko": "반도체 투자 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-08T20:14:46.057Z"
     }
   }
 }
