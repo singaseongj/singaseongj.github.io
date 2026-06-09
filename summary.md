@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-06-09T23:51:53+09:00 (KST)**
+- Generated: **2026-06-10T05:10:28+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,12 +93,12 @@
 
 ### SAFE (5)
 
-**LG이노텍** (011070.KS)
+**LG** (LGND)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **7.7%**, 20d **93.2%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **1.7%**, 20d **21.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG%EC%9D%B4%EB%85%B8%ED%85%8D
+- News search: https://www.google.com/search?q=LG
 
 **SK하이닉스** (000660.KS)
 
@@ -108,12 +108,12 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
-**삼성전기** (009150.KS)
+**대한항공** (003490.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **-2.6%**, 20d **97.5%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-3.7%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0
+- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
 
 **삼성전자** (005930.KS)
 
@@ -140,12 +140,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85
 
-**SK아이이테크놀로지** (361610.KS)
+**SK스퀘어** (402340.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-9.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **1.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=SK%EC%95%84%EC%9D%B4%EC%9D%B4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
+- News search: https://www.google.com/search?q=SK%EC%8A%A4%ED%80%98%EC%96%B4
 
 **두산로보틱스** (454910.KS)
 
@@ -198,13 +198,13 @@
 
 ### AGGRESSIVE (4)
 
-**Apple Inc.** (AAPL)
+**Monster Beverage** (MNST)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
+- Returns: 5d **-4.1%**, 20d **1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Apple%20Inc.
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Monster%20Beverage
 
 **Ross Stores** (ROST)
 
@@ -252,7 +252,7 @@
 **Mastercard** (MA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.8%**, 20d **-1.4%**; volatility (20d): **unknown**
+- Returns: 5d **3.7%**, 20d **-0.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Mastercard
@@ -267,14 +267,6 @@
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Allstate
 
-**Apple Inc.** (AAPL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Apple%20Inc.
-
 **Chubb Limited** (CB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -286,8 +278,16 @@
 **Stryker Corporation** (SYK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.2%**, 20d **9.2%**; volatility (20d): **unknown**
+- Returns: 5d **7.1%**, 20d **11.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Stryker%20Corporation
+
+**T-Mobile US** (TMUS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-5.0%**, 20d **-6.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=T-Mobile%20US
 
