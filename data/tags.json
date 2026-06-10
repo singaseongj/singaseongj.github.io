@@ -1,1113 +1,439 @@
 {
+  "generatedAt": "2026-06-10T09:58:02.565Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-10",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Bitcoin (BTC) at $58,000",
-      "term_ko": "비트코인BTC 5만 8000달러",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인BTC 5만 8000달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 5만 8000달러 바닥 뚫고 전멸?...글로벌 위험자산 경고 ...",
-              "link": "http://coinreaders.com/241377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%205%EB%A7%8C%208000%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%205%EB%A7%8C%208000%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 5만 8000달러 바닥 뚫고 전멸?...글로벌 위험자산 경고 ...",
-          "summary": "",
-          "link": "http://coinreaders.com/241377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bitcoin (btc) at $58,000",
+      "term_ko": "비트코인BTC 5만 8000달러"
     },
     {
-      "term": "Nominal GDP for the first quarter",
-      "term_ko": "1분기 명목 GDP",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1분기 명목 GDP",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-09",
-              "timestamp": 1780930800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-              "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EB%B6%84%EA%B8%B0%20%EB%AA%85%EB%AA%A9%20GDP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EB%B6%84%EA%B8%B0%20%EB%AA%85%EB%AA%A9%20GDP"
-      },
-      "top_headlines": [
-        {
-          "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.027319,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780930800000
-      }
+      "term": "Nominal Gdp for the First Quarter",
+      "term_ko": "1분기 명목 GDP"
     },
     {
-      "term": "Timefolio U.S. Nasdaq 100 Bond & Stock ETF",
-      "term_ko": "타임폴리오 美나스닥100채권혼합 ETF",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "타임폴리오 美나스닥100채권혼합 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "타임폴리오 美나스닥100채권혼합 ETF, 해외 채권혼합형 1년 수익률 1위",
-              "link": "https://n.news.naver.com/mnews/article/018/0006302167?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%83%80%EC%9E%84%ED%8F%B4%EB%A6%AC%EC%98%A4%20%E7%BE%8E%EB%82%98%EC%8A%A4%EB%8B%A5100%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%83%80%EC%9E%84%ED%8F%B4%EB%A6%AC%EC%98%A4%20%E7%BE%8E%EB%82%98%EC%8A%A4%EB%8B%A5100%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "타임폴리오 美나스닥100채권혼합 ETF, 해외 채권혼합형 1년 수익률 1위",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006302167?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Timefolio U.s. Nasdaq 100 Bond & Stock Etf",
+      "term_ko": "타임폴리오 美나스닥100채권혼합 ETF"
     },
     {
-      "term": "S&P 500 Futures: Middle East",
-      "term_ko": "S&P500 선물 중동",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "S&P500 선물 중동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S&P500 선물, 중동 긴장 재고조에 하락…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4419280"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%84%A0%EB%AC%BC%20%EC%A4%91%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%84%A0%EB%AC%BC%20%EC%A4%91%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 중동 긴장 재고조에 하락…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4419280",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "S&p 500 Futures: Middle East",
+      "term_ko": "S&P500 선물 중동"
     },
     {
-      "term": "The highest in 31 years",
-      "term_ko": "31년 만에 최대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "31년 만에 최대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-              "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=31%EB%85%84%20%EB%A7%8C%EC%97%90%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=31%EB%85%84%20%EB%A7%8C%EC%97%90%20%EC%B5%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Highest in 31 Years",
+      "term_ko": "31년 만에 최대"
     },
     {
-      "term": "1-Year Overseas Bond and Equity Fund",
-      "term_ko": "해외 채권혼합형 1년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "해외 채권혼합형 1년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "타임폴리오 美나스닥100채권혼합 ETF, 해외 채권혼합형 1년 수익률 1위",
-              "link": "https://n.news.naver.com/mnews/article/018/0006302167?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%B4%EC%99%B8%20%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%201%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%B4%EC%99%B8%20%EC%B1%84%EA%B6%8C%ED%98%BC%ED%95%A9%ED%98%95%201%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "타임폴리오 美나스닥100채권혼합 ETF, 해외 채권혼합형 1년 수익률 1위",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006302167?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1-year Overseas Bond and Equity Fund",
+      "term_ko": "해외 채권혼합형 1년"
     },
     {
       "term": "Expanding Inclusive Finance in the Financial Sector",
-      "term_ko": "금융권 포용금융 확대",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융권 포용금융 확대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "금융권, 포용금융 확대 나서",
-              "link": "http://www.wsobi.com/news/articleView.html?idxno=313483"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%ED%8F%AC%EC%9A%A9%EA%B8%88%EC%9C%B5%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EA%B6%8C%20%ED%8F%AC%EC%9A%A9%EA%B8%88%EC%9C%B5%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "금융권, 포용금융 확대 나서",
-          "summary": "",
-          "link": "http://www.wsobi.com/news/articleView.html?idxno=313483",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금융권 포용금융 확대"
     },
     {
       "term": "Prices Fall Amid Renewed Tensions",
-      "term_ko": "긴장 재고조에 하락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "긴장 재고조에 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S&P500 선물, 중동 긴장 재고조에 하락…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4419280"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B4%EC%9E%A5%20%EC%9E%AC%EA%B3%A0%EC%A1%B0%EC%97%90%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B4%EC%9E%A5%20%EC%9E%AC%EA%B3%A0%EC%A1%B0%EC%97%90%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 중동 긴장 재고조에 하락…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4419280",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "긴장 재고조에 하락"
     },
     {
-      "term": "Increase in the second half of the year",
-      "term_ko": "증가 정부 하반기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증가 정부 하반기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-              "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B0%80%20%EC%A0%95%EB%B6%80%20%ED%95%98%EB%B0%98%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B0%80%20%EC%A0%95%EB%B6%80%20%ED%95%98%EB%B0%98%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Increase in the Second Half of the Year",
+      "term_ko": "증가 정부 하반기"
     },
     {
-      "term": "Strengthening the fiscal role",
-      "term_ko": "재정 역할 강화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재정 역할 강화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-              "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EC%A0%95%20%EC%97%AD%ED%95%A0%20%EA%B0%95%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EC%A0%95%20%EC%97%AD%ED%95%A0%20%EA%B0%95%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "1분기 명목 GDP, 31년 만에 최대 증가…정부 \"하반기 재정 역할 강화\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/088/0001013896?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Strengthening the Fiscal Role",
+      "term_ko": "재정 역할 강화"
     },
     {
       "term": "Koo Yoon-cheol: Increased Revenue",
-      "term_ko": "구윤철 늘어난 세입",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "구윤철 늘어난 세입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "구윤철 \"늘어난 세입, 미래 투자에 활용…잠재성장률 높여야\"",
-              "link": "http://www.seouleconews.com/news/articleView.html?idxno=91729"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EB%8A%98%EC%96%B4%EB%82%9C%20%EC%84%B8%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%9C%A4%EC%B2%A0%20%EB%8A%98%EC%96%B4%EB%82%9C%20%EC%84%B8%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "구윤철 \"늘어난 세입, 미래 투자에 활용…잠재성장률 높여야\"",
-          "summary": "",
-          "link": "http://www.seouleconews.com/news/articleView.html?idxno=91729",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "구윤철 늘어난 세입"
     },
     {
-      "term": "Use for future investments",
-      "term_ko": "미래 투자에 활용",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래 투자에 활용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "구윤철 \"늘어난 세입, 미래 투자에 활용…잠재성장률 높여야\"",
-              "link": "http://www.seouleconews.com/news/articleView.html?idxno=91729"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%20%ED%88%AC%EC%9E%90%EC%97%90%20%ED%99%9C%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%20%ED%88%AC%EC%9E%90%EC%97%90%20%ED%99%9C%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "구윤철 \"늘어난 세입, 미래 투자에 활용…잠재성장률 높여야\"",
-          "summary": "",
-          "link": "http://www.seouleconews.com/news/articleView.html?idxno=91729",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Use for Future Investments",
+      "term_ko": "미래 투자에 활용"
     },
     {
-      "term": "Launch of the Expanded Macro-Fiscal and Financial Policy Roundtable",
-      "term_ko": "확대 거시재정금융간담회 출범",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확대 거시재정금융간담회 출범",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "확대 거시재정금융간담회 출범…정부·한은 정책 공조 강화",
-              "link": "https://www.m-economynews.com/news/article.html?no=67818"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EB%8C%80%20%EA%B1%B0%EC%8B%9C%EC%9E%AC%EC%A0%95%EA%B8%88%EC%9C%B5%EA%B0%84%EB%8B%B4%ED%9A%8C%20%EC%B6%9C%EB%B2%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EB%8C%80%20%EA%B1%B0%EC%8B%9C%EC%9E%AC%EC%A0%95%EA%B8%88%EC%9C%B5%EA%B0%84%EB%8B%B4%ED%9A%8C%20%EC%B6%9C%EB%B2%94"
-      },
-      "top_headlines": [
-        {
-          "title": "확대 거시재정금융간담회 출범…정부·한은 정책 공조 강화",
-          "summary": "",
-          "link": "https://www.m-economynews.com/news/article.html?no=67818",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Launch of the Expanded Macro-fiscal and Financial Policy Roundtable",
+      "term_ko": "확대 거시재정금융간담회 출범"
     },
     {
       "term": "Government and Bank of Korea Policies",
-      "term_ko": "정부 한은 정책",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정부 한은 정책",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "확대 거시재정금융간담회 출범…정부·한은 정책 공조 강화",
-              "link": "https://www.m-economynews.com/news/article.html?no=67818"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EB%B6%80%20%ED%95%9C%EC%9D%80%20%EC%A0%95%EC%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EB%B6%80%20%ED%95%9C%EC%9D%80%20%EC%A0%95%EC%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "확대 거시재정금융간담회 출범…정부·한은 정책 공조 강화",
-          "summary": "",
-          "link": "https://www.m-economynews.com/news/article.html?no=67818",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "정부 한은 정책"
     },
     {
-      "term": "KOSPI Falls Below",
-      "term_ko": "코스피, ○○선 아래로 하락",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Falls Below",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KOSPI Falls Below 8000 on Foreign Selling Amid Stronger US Dollar",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270974"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Falls%20Below",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Falls%20Below"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls Below 8000 on Foreign Selling Amid Stronger US Dollar",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270974",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Falls Below",
+      "term_ko": "코스피, ○○선 아래로 하락"
     },
     {
-      "term": "Stronger US Dollar",
-      "term_ko": "강세 달러",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Stronger US Dollar",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KOSPI Falls Below 8000 on Foreign Selling Amid Stronger US Dollar",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270974"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Stronger%20US%20Dollar",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Stronger%20US%20Dollar"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls Below 8000 on Foreign Selling Amid Stronger US Dollar",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270974",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stronger Us Dollar",
+      "term_ko": "강세 달러"
     },
     {
       "term": "Top Return",
-      "term_ko": "수익률 1위",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수익률 1위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "타임폴리오 美나스닥100채권혼합 ETF, 해외 채권혼합형 1년 수익률 1위",
-              "link": "https://n.news.naver.com/mnews/article/018/0006302167?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%9D%B5%EB%A5%A0%201%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%9D%B5%EB%A5%A0%201%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "타임폴리오 美나스닥100채권혼합 ETF, 해외 채권혼합형 1년 수익률 1위",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006302167?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수익률 1위"
     },
     {
-      "term": "Breaking through the floor",
-      "term_ko": "바닥 뚫고",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "바닥 뚫고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 5만 8000달러 바닥 뚫고 전멸?...글로벌 위험자산 경고 ...",
-              "link": "http://coinreaders.com/241377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%94%EB%8B%A5%20%EB%9A%AB%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%94%EB%8B%A5%20%EB%9A%AB%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 5만 8000달러 바닥 뚫고 전멸?...글로벌 위험자산 경고 ...",
-          "summary": "",
-          "link": "http://coinreaders.com/241377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Breaking Through the Floor",
+      "term_ko": "바닥 뚫고"
     },
     {
       "term": "Warning on Risky Assets",
-      "term_ko": "위험자산 경고",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "위험자산 경고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 5만 8000달러 바닥 뚫고 전멸?...글로벌 위험자산 경고 ...",
-              "link": "http://coinreaders.com/241377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%ED%97%98%EC%9E%90%EC%82%B0%20%EA%B2%BD%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%ED%97%98%EC%9E%90%EC%82%B0%20%EA%B2%BD%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 5만 8000달러 바닥 뚫고 전멸?...글로벌 위험자산 경고 ...",
-          "summary": "",
-          "link": "http://coinreaders.com/241377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "위험자산 경고"
     },
     {
-      "term": "U.S. Treasury yields",
-      "term_ko": "美 국채금리",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 국채금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "S&P500 선물, 중동 긴장 재고조에 하락…美 국채금리↑",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4419280"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, 중동 긴장 재고조에 하락…美 국채금리↑",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4419280",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Treasury Yields",
+      "term_ko": "美 국채금리"
     },
     {
-      "term": "We need to raise the potential growth rate",
-      "term_ko": "잠재성장률 높여야",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "잠재성장률 높여야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "구윤철 \"늘어난 세입, 미래 투자에 활용…잠재성장률 높여야\"",
-              "link": "http://www.seouleconews.com/news/articleView.html?idxno=91729"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A0%EC%9E%AC%EC%84%B1%EC%9E%A5%EB%A5%A0%20%EB%86%92%EC%97%AC%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A0%EC%9E%AC%EC%84%B1%EC%9E%A5%EB%A5%A0%20%EB%86%92%EC%97%AC%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "구윤철 \"늘어난 세입, 미래 투자에 활용…잠재성장률 높여야\"",
-          "summary": "",
-          "link": "http://www.seouleconews.com/news/articleView.html?idxno=91729",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "We Need to Raise the Potential Growth Rate",
+      "term_ko": "잠재성장률 높여야"
     },
     {
-      "term": "Strengthening cooperation",
-      "term_ko": "공조 강화",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "공조 강화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "확대 거시재정금융간담회 출범…정부·한은 정책 공조 강화",
-              "link": "https://www.m-economynews.com/news/article.html?no=67818"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EC%A1%B0%20%EA%B0%95%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EC%A1%B0%20%EA%B0%95%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "확대 거시재정금융간담회 출범…정부·한은 정책 공조 강화",
-          "summary": "",
-          "link": "https://www.m-economynews.com/news/article.html?no=67818",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Strengthening Cooperation",
+      "term_ko": "공조 강화"
     },
     {
       "term": "Pct Late Wed",
-      "term_ko": "수요일 늦은 밤",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Pct Late Wed",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares down over 3 pct late Wed. morning amid U.S.-Iran tensions, t...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016130306?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Pct%20Late%20Wed",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Pct%20Late%20Wed"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares down over 3 pct late Wed. morning amid U.S.-Iran tensions, t...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016130306?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수요일 늦은 밤"
     },
     {
       "term": "New Iran Strikes",
-      "term_ko": "이란의 새로운 공격",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "New Iran Strikes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "US Stock Futures Slip as New Iran Strikes Weigh on Market Sentiment Ahead...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-New-Iran-Strikes-Weigh-on-Market-Sentiment-Ahead-of-Inflation-Data-1743942"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=New%20Iran%20Strikes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=New%20Iran%20Strikes"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Slip as New Iran Strikes Weigh on Market Sentiment Ahead...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Slip-as-New-Iran-Strikes-Weigh-on-Market-Sentiment-Ahead-of-Inflation-Data-1743942",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이란의 새로운 공격"
     },
     {
       "term": "Open Sharply Lower",
-      "term_ko": "개장 초반 급락",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Sharply Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on renewed Iran tensions, U.S. tec...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016129716?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Sharply%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Sharply%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on renewed Iran tensions, U.S. tec...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016129716?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "개장 초반 급락"
     },
     {
       "term": "Renewed Iran Tensions",
-      "term_ko": "이란과의 긴장 고조",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Renewed Iran Tensions",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on renewed Iran tensions, U.S. tec...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016129716?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Renewed%20Iran%20Tensions",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Renewed%20Iran%20Tensions"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on renewed Iran tensions, U.S. tec...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016129716?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이란과의 긴장 고조"
     },
     {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on renewed Iran tensions, U.S. tec...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016129716?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on renewed Iran tensions, U.S. tec...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016129716?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
     },
     {
-      "term": "U.S.-Iran Tensions",
-      "term_ko": "미국과 이란 간의 긴장",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-Iran Tensions",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares down over 3 pct late Wed. morning amid U.S.-Iran tensions, t...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016130306?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Tensions",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Tensions"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares down over 3 pct late Wed. morning amid U.S.-Iran tensions, t...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016130306?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s.-iran Tensions",
+      "term_ko": "미국과 이란 간의 긴장"
     },
     {
       "term": "Korean Biotech",
-      "term_ko": "한국 바이오테크",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Korean Biotech",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Korean biotech stocks struggle for direction after Monday's market rout",
-              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=31962"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korean%20Biotech",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korean%20Biotech"
-      },
-      "top_headlines": [
-        {
-          "title": "Korean biotech stocks struggle for direction after Monday's market rout",
-          "summary": "",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=31962",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 바이오테크"
     },
     {
       "term": "Foreign Selling",
-      "term_ko": "해외 판매",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Foreign Selling",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T12:35:42+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "KOSPI Falls Below 8000 on Foreign Selling Amid Stronger US Dollar",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270974"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Foreign%20Selling",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Foreign%20Selling"
-      },
-      "top_headlines": [
-        {
-          "title": "KOSPI Falls Below 8000 on Foreign Selling Amid Stronger US Dollar",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=270974",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "해외 판매"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-10T03:36:44.079Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-10T12:35:42+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Bitcoin (btc) at $58,000",
+      "term_ko": "비트코인BTC 5만 8000달러"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-10T12:35:42+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-10T12:35:42+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Nominal Gdp for the First Quarter",
+      "term_ko": "1분기 명목 GDP"
+    },
+    {
+      "term": "Timefolio U.s. Nasdaq 100 Bond & Stock Etf",
+      "term_ko": "타임폴리오 美나스닥100채권혼합 ETF"
+    },
+    {
+      "term": "S&p 500 Futures: Middle East",
+      "term_ko": "S&P500 선물 중동"
+    },
+    {
+      "term": "The Highest in 31 Years",
+      "term_ko": "31년 만에 최대"
+    },
+    {
+      "term": "1-year Overseas Bond and Equity Fund",
+      "term_ko": "해외 채권혼합형 1년"
+    },
+    {
+      "term": "Expanding Inclusive Finance in the Financial Sector",
+      "term_ko": "금융권 포용금융 확대"
+    },
+    {
+      "term": "Prices Fall Amid Renewed Tensions",
+      "term_ko": "긴장 재고조에 하락"
+    },
+    {
+      "term": "Increase in the Second Half of the Year",
+      "term_ko": "증가 정부 하반기"
+    },
+    {
+      "term": "Strengthening the Fiscal Role",
+      "term_ko": "재정 역할 강화"
+    },
+    {
+      "term": "Koo Yoon-cheol: Increased Revenue",
+      "term_ko": "구윤철 늘어난 세입"
+    },
+    {
+      "term": "Use for Future Investments",
+      "term_ko": "미래 투자에 활용"
+    },
+    {
+      "term": "Launch of the Expanded Macro-fiscal and Financial Policy Roundtable",
+      "term_ko": "확대 거시재정금융간담회 출범"
+    },
+    {
+      "term": "Government and Bank of Korea Policies",
+      "term_ko": "정부 한은 정책"
+    },
+    {
+      "term": "Kospi Falls Below",
+      "term_ko": "코스피, ○○선 아래로 하락"
+    },
+    {
+      "term": "Stronger Us Dollar",
+      "term_ko": "강세 달러"
+    },
+    {
+      "term": "Top Return",
+      "term_ko": "수익률 1위"
+    },
+    {
+      "term": "Breaking Through the Floor",
+      "term_ko": "바닥 뚫고"
+    },
+    {
+      "term": "Warning on Risky Assets",
+      "term_ko": "위험자산 경고"
+    },
+    {
+      "term": "U.s. Treasury Yields",
+      "term_ko": "美 국채금리"
+    },
+    {
+      "term": "We Need to Raise the Potential Growth Rate",
+      "term_ko": "잠재성장률 높여야"
+    },
+    {
+      "term": "Strengthening Cooperation",
+      "term_ko": "공조 강화"
+    },
+    {
+      "term": "Pct Late Wed",
+      "term_ko": "수요일 늦은 밤"
+    },
+    {
+      "term": "New Iran Strikes",
+      "term_ko": "이란의 새로운 공격"
+    },
+    {
+      "term": "Open Sharply Lower",
+      "term_ko": "개장 초반 급락"
+    },
+    {
+      "term": "Renewed Iran Tensions",
+      "term_ko": "이란과의 긴장 고조"
+    },
+    {
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
+    },
+    {
+      "term": "U.s.-iran Tensions",
+      "term_ko": "미국과 이란 간의 긴장"
+    },
+    {
+      "term": "Korean Biotech",
+      "term_ko": "한국 바이오테크"
+    },
+    {
+      "term": "Foreign Selling",
+      "term_ko": "해외 판매"
+    }
+  ],
+  "translations": {
+    "Bitcoin (btc) at $58,000": {
+      "en": "Bitcoin (btc) at $58,000",
+      "ko": "비트코인BTC 5만 8000달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Nominal Gdp for the First Quarter": {
+      "en": "Nominal Gdp for the First Quarter",
+      "ko": "1분기 명목 GDP",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Timefolio U.s. Nasdaq 100 Bond & Stock Etf": {
+      "en": "Timefolio U.s. Nasdaq 100 Bond & Stock Etf",
+      "ko": "타임폴리오 美나스닥100채권혼합 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "S&p 500 Futures: Middle East": {
+      "en": "S&p 500 Futures: Middle East",
+      "ko": "S&P500 선물 중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "The Highest in 31 Years": {
+      "en": "The Highest in 31 Years",
+      "ko": "31년 만에 최대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "1-year Overseas Bond and Equity Fund": {
+      "en": "1-year Overseas Bond and Equity Fund",
+      "ko": "해외 채권혼합형 1년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Expanding Inclusive Finance in the Financial Sector": {
+      "en": "Expanding Inclusive Finance in the Financial Sector",
+      "ko": "금융권 포용금융 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Prices Fall Amid Renewed Tensions": {
+      "en": "Prices Fall Amid Renewed Tensions",
+      "ko": "긴장 재고조에 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Increase in the Second Half of the Year": {
+      "en": "Increase in the Second Half of the Year",
+      "ko": "증가 정부 하반기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Strengthening the Fiscal Role": {
+      "en": "Strengthening the Fiscal Role",
+      "ko": "재정 역할 강화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Koo Yoon-cheol: Increased Revenue": {
+      "en": "Koo Yoon-cheol: Increased Revenue",
+      "ko": "구윤철 늘어난 세입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Use for Future Investments": {
+      "en": "Use for Future Investments",
+      "ko": "미래 투자에 활용",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Launch of the Expanded Macro-fiscal and Financial Policy Roundtable": {
+      "en": "Launch of the Expanded Macro-fiscal and Financial Policy Roundtable",
+      "ko": "확대 거시재정금융간담회 출범",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Government and Bank of Korea Policies": {
+      "en": "Government and Bank of Korea Policies",
+      "ko": "정부 한은 정책",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Kospi Falls Below": {
+      "en": "Kospi Falls Below",
+      "ko": "코스피, ○○선 아래로 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Stronger Us Dollar": {
+      "en": "Stronger Us Dollar",
+      "ko": "강세 달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Top Return": {
+      "en": "Top Return",
+      "ko": "수익률 1위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Breaking Through the Floor": {
+      "en": "Breaking Through the Floor",
+      "ko": "바닥 뚫고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Warning on Risky Assets": {
+      "en": "Warning on Risky Assets",
+      "ko": "위험자산 경고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "U.s. Treasury Yields": {
+      "en": "U.s. Treasury Yields",
+      "ko": "美 국채금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "We Need to Raise the Potential Growth Rate": {
+      "en": "We Need to Raise the Potential Growth Rate",
+      "ko": "잠재성장률 높여야",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Strengthening Cooperation": {
+      "en": "Strengthening Cooperation",
+      "ko": "공조 강화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Pct Late Wed": {
+      "en": "Pct Late Wed",
+      "ko": "수요일 늦은 밤",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "New Iran Strikes": {
+      "en": "New Iran Strikes",
+      "ko": "이란의 새로운 공격",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Open Sharply Lower": {
+      "en": "Open Sharply Lower",
+      "ko": "개장 초반 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Renewed Iran Tensions": {
+      "en": "Renewed Iran Tensions",
+      "ko": "이란과의 긴장 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Lead Seoul": {
+      "en": "Lead Seoul",
+      "ko": "LEAD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "U.s.-iran Tensions": {
+      "en": "U.s.-iran Tensions",
+      "ko": "미국과 이란 간의 긴장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Korean Biotech": {
+      "en": "Korean Biotech",
+      "ko": "한국 바이오테크",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
+    },
+    "Foreign Selling": {
+      "en": "Foreign Selling",
+      "ko": "해외 판매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T09:58:02.565Z"
     }
   }
 }
