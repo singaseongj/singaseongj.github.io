@@ -1,1086 +1,425 @@
 {
-  "date": "2026-06-09",
+  "generatedAt": "2026-06-10T03:33:35.522Z",
+  "timezone": "Asia/Seoul",
+  "date": "2026-06-10",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "TON, a Nasdaq-listed company",
-      "term_ko": "나스닥 상장사 톤코인TON",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 상장사 톤코인TON",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "나스닥 상장사, 톤코인(TON) 몰빵...\"보유 물량 99% 스테이킹으로\"",
-              "link": "http://coinreaders.com/241344"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EC%82%AC%20%ED%86%A4%EC%BD%94%EC%9D%B8TON",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%83%81%EC%9E%A5%EC%82%AC%20%ED%86%A4%EC%BD%94%EC%9D%B8TON"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥 상장사, 톤코인(TON) 몰빵...\"보유 물량 99% 스테이킹으로\"",
-          "summary": "",
-          "link": "http://coinreaders.com/241344",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ton, a Nasdaq-listed Company",
+      "term_ko": "나스닥 상장사 톤코인TON"
     },
     {
       "term": "Asset Markets in 2030",
-      "term_ko": "자산 시장 2030년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자산 시장 2030년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이슈+] 미국 시티 \"토큰화 자산 시장, 2030년 최대 5조5000억달러 규모...",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=354567"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%82%B0%20%EC%8B%9C%EC%9E%A5%202030%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%82%B0%20%EC%8B%9C%EC%9E%A5%202030%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[이슈+] 미국 시티 \"토큰화 자산 시장, 2030년 최대 5조5000억달러 규모...",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=354567",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자산 시장 2030년"
     },
     {
-      "term": "Selling shares in the 1,500 won range",
-      "term_ko": "주식 팔자 1500원대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주식 팔자 1500원대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피 호황에 외국인 “주식 팔자”…‘1500원대 환율’ 물가 압박",
-              "link": "https://n.news.naver.com/mnews/article/662/0000096940?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EC%8B%9D%20%ED%8C%94%EC%9E%90%201500%EC%9B%90%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EC%8B%9D%20%ED%8C%94%EC%9E%90%201500%EC%9B%90%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 호황에 외국인 “주식 팔자”…‘1500원대 환율’ 물가 압박",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/662/0000096940?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Selling Shares in the 1,500 Won Range",
+      "term_ko": "주식 팔자 1500원대"
     },
     {
       "term": "The Illusion of 10% Nominal Growth",
-      "term_ko": "명목성장 10% 착시",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "명목성장 10% 착시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "명목성장 10% 착시…3고의 조용한 수탈 경계하라 [더롱뷰]",
-              "link": "https://n.news.naver.com/mnews/article/025/0003529328?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%85%EB%AA%A9%EC%84%B1%EC%9E%A5%2010%25%20%EC%B0%A9%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%85%EB%AA%A9%EC%84%B1%EC%9E%A5%2010%25%20%EC%B0%A9%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "명목성장 10% 착시…3고의 조용한 수탈 경계하라 [더롱뷰]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003529328?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "명목성장 10% 착시"
     },
     {
       "term": "The Silent Exploitation of the Three Gos",
-      "term_ko": "3고의 조용한 수탈",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3고의 조용한 수탈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "명목성장 10% 착시…3고의 조용한 수탈 경계하라 [더롱뷰]",
-              "link": "https://n.news.naver.com/mnews/article/025/0003529328?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EA%B3%A0%EC%9D%98%20%EC%A1%B0%EC%9A%A9%ED%95%9C%20%EC%88%98%ED%83%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EA%B3%A0%EC%9D%98%20%EC%A1%B0%EC%9A%A9%ED%95%9C%20%EC%88%98%ED%83%88"
-      },
-      "top_headlines": [
-        {
-          "title": "명목성장 10% 착시…3고의 조용한 수탈 경계하라 [더롱뷰]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003529328?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "3고의 조용한 수탈"
     },
     {
-      "term": "Issue: U.S. City",
-      "term_ko": "이슈 미국 시티",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이슈 미국 시티",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이슈+] 미국 시티 \"토큰화 자산 시장, 2030년 최대 5조5000억달러 규모...",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=354567"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%8A%88%20%EB%AF%B8%EA%B5%AD%20%EC%8B%9C%ED%8B%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%8A%88%20%EB%AF%B8%EA%B5%AD%20%EC%8B%9C%ED%8B%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[이슈+] 미국 시티 \"토큰화 자산 시장, 2030년 최대 5조5000억달러 규모...",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=354567",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Issue: U.s. City",
+      "term_ko": "이슈 미국 시티"
     },
     {
       "term": "Interest Rates Amid Currency Crisis",
-      "term_ko": "환율 비상에 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 비상에 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "환율 비상에 금리 ‘빅스텝’ 거론… 당국, 팔 걷어붙이자 일단 진정",
-              "link": "https://n.news.naver.com/mnews/article/081/0003651086?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EB%B9%84%EC%83%81%EC%97%90%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EB%B9%84%EC%83%81%EC%97%90%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 비상에 금리 ‘빅스텝’ 거론… 당국, 팔 걷어붙이자 일단 진정",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003651086?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "환율 비상에 금리"
     },
     {
-      "term": "Authorities considering a big step",
-      "term_ko": "빅스텝 거론 당국",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빅스텝 거론 당국",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "환율 비상에 금리 ‘빅스텝’ 거론… 당국, 팔 걷어붙이자 일단 진정",
-              "link": "https://n.news.naver.com/mnews/article/081/0003651086?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%85%EC%8A%A4%ED%85%9D%20%EA%B1%B0%EB%A1%A0%20%EB%8B%B9%EA%B5%AD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%85%EC%8A%A4%ED%85%9D%20%EA%B1%B0%EB%A1%A0%20%EB%8B%B9%EA%B5%AD"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 비상에 금리 ‘빅스텝’ 거론… 당국, 팔 걷어붙이자 일단 진정",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003651086?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Authorities Considering a Big Step",
+      "term_ko": "빅스텝 거론 당국"
     },
     {
-      "term": "Let's roll up our sleeves and get started",
-      "term_ko": "팔 걷어붙이자 일단",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "팔 걷어붙이자 일단",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "환율 비상에 금리 ‘빅스텝’ 거론… 당국, 팔 걷어붙이자 일단 진정",
-              "link": "https://n.news.naver.com/mnews/article/081/0003651086?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%94%20%EA%B1%B7%EC%96%B4%EB%B6%99%EC%9D%B4%EC%9E%90%20%EC%9D%BC%EB%8B%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%94%20%EA%B1%B7%EC%96%B4%EB%B6%99%EC%9D%B4%EC%9E%90%20%EC%9D%BC%EB%8B%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "환율 비상에 금리 ‘빅스텝’ 거론… 당국, 팔 걷어붙이자 일단 진정",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003651086?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Let's Roll Up Our Sleeves and Get Started",
+      "term_ko": "팔 걷어붙이자 일단"
     },
     {
-      "term": "If prices soar, this is what will happen to those who borrowed heavily to buy",
-      "term_ko": "날아오르면 영끌족에게 벌어질",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "날아오르면 영끌족에게 벌어질",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "발톱 세운 매파가 7월에 날아오르면 영끌족에게 벌어질 일들",
-              "link": "https://n.news.naver.com/mnews/article/079/0004156056?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%A0%EC%95%84%EC%98%A4%EB%A5%B4%EB%A9%B4%20%EC%98%81%EB%81%8C%EC%A1%B1%EC%97%90%EA%B2%8C%20%EB%B2%8C%EC%96%B4%EC%A7%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%A0%EC%95%84%EC%98%A4%EB%A5%B4%EB%A9%B4%20%EC%98%81%EB%81%8C%EC%A1%B1%EC%97%90%EA%B2%8C%20%EB%B2%8C%EC%96%B4%EC%A7%88"
-      },
-      "top_headlines": [
-        {
-          "title": "발톱 세운 매파가 7월에 날아오르면 영끌족에게 벌어질 일들",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/079/0004156056?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "If Prices Soar, This Is What Will Happen to Those Who Borrowed Heavily to Buy",
+      "term_ko": "날아오르면 영끌족에게 벌어질"
     },
     {
       "term": "Editorial: Modernizing the Foreign Exchange Market",
-      "term_ko": "시론 외환시장 선진화",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시론 외환시장 선진화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시론] 외환시장 선진화 더이상 미룰 수 없다",
-              "link": "https://n.news.naver.com/mnews/article/011/0004629403?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%A1%A0%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5%20%EC%84%A0%EC%A7%84%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%A1%A0%20%EC%99%B8%ED%99%98%EC%8B%9C%EC%9E%A5%20%EC%84%A0%EC%A7%84%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[시론] 외환시장 선진화 더이상 미룰 수 없다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004629403?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "시론 외환시장 선진화"
     },
     {
-      "term": "I can't put it off any longer",
-      "term_ko": "더이상 미룰 수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "더이상 미룰 수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[시론] 외환시장 선진화 더이상 미룰 수 없다",
-              "link": "https://n.news.naver.com/mnews/article/011/0004629403?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%EC%9D%B4%EC%83%81%20%EB%AF%B8%EB%A3%B0%20%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%EC%9D%B4%EC%83%81%20%EB%AF%B8%EB%A3%B0%20%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[시론] 외환시장 선진화 더이상 미룰 수 없다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004629403?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Can't Put It Off Any Longer",
+      "term_ko": "더이상 미룰 수"
     },
     {
-      "term": "Foreign investors amid the KOSPI boom",
-      "term_ko": "코스피 호황에 외국인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 호황에 외국인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피 호황에 외국인 “주식 팔자”…‘1500원대 환율’ 물가 압박",
-              "link": "https://n.news.naver.com/mnews/article/662/0000096940?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%ED%98%B8%ED%99%A9%EC%97%90%20%EC%99%B8%EA%B5%AD%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%ED%98%B8%ED%99%A9%EC%97%90%20%EC%99%B8%EA%B5%AD%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 호황에 외국인 “주식 팔자”…‘1500원대 환율’ 물가 압박",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/662/0000096940?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Foreign Investors Amid the Kospi Boom",
+      "term_ko": "코스피 호황에 외국인"
     },
     {
-      "term": "Exchange rate and inflationary pressures",
-      "term_ko": "환율 물가 압박",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 물가 압박",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피 호황에 외국인 “주식 팔자”…‘1500원대 환율’ 물가 압박",
-              "link": "https://n.news.naver.com/mnews/article/662/0000096940?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EB%AC%BC%EA%B0%80%20%EC%95%95%EB%B0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EB%AC%BC%EA%B0%80%20%EC%95%95%EB%B0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 호황에 외국인 “주식 팔자”…‘1500원대 환율’ 물가 압박",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/662/0000096940?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rate and Inflationary Pressures",
+      "term_ko": "환율 물가 압박"
     },
     {
       "term": "Park Geun-jong Column: Gross National Income",
-      "term_ko": "박근종 칼럼 국민총소득",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "박근종 칼럼 국민총소득",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 국민총소득 사상 최대에도 가계처분소득은 제자리, 경제...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=749858"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EA%B5%AD%EB%AF%BC%EC%B4%9D%EC%86%8C%EB%93%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EA%B5%AD%EB%AF%BC%EC%B4%9D%EC%86%8C%EB%93%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 국민총소득 사상 최대에도 가계처분소득은 제자리, 경제...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=749858",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "박근종 칼럼 국민총소득"
     },
     {
-      "term": "AI Confidence Iran-Israel",
-      "term_ko": "AI 신뢰도: 이란-이스라엘",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Confidence Iran-Israel",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares surge over 8 pct on AI confidence, Iran-Israel ceas...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016128972?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Confidence%20Iran-Israel",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Confidence%20Iran-Israel"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares surge over 8 pct on AI confidence, Iran-Israel ceas...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016128972?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Confidence Iran-israel",
+      "term_ko": "AI 신뢰도: 이란-이스라엘"
     },
     {
-      "term": "Up to $5.5 trillion",
-      "term_ko": "최대 5조5000억달러",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최대 5조5000억달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이슈+] 미국 시티 \"토큰화 자산 시장, 2030년 최대 5조5000억달러 규모...",
-              "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=354567"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8C%80%205%EC%A1%B05000%EC%96%B5%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8C%80%205%EC%A1%B05000%EC%96%B5%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[이슈+] 미국 시티 \"토큰화 자산 시장, 2030년 최대 5조5000억달러 규모...",
-          "summary": "",
-          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=354567",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to $5.5 Trillion",
+      "term_ko": "최대 5조5000억달러"
     },
     {
-      "term": "Beware of The Long View",
-      "term_ko": "경계하라 더롱뷰",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경계하라 더롱뷰",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "명목성장 10% 착시…3고의 조용한 수탈 경계하라 [더롱뷰]",
-              "link": "https://n.news.naver.com/mnews/article/025/0003529328?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B3%84%ED%95%98%EB%9D%BC%20%EB%8D%94%EB%A1%B1%EB%B7%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B3%84%ED%95%98%EB%9D%BC%20%EB%8D%94%EB%A1%B1%EB%B7%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "명목성장 10% 착시…3고의 조용한 수탈 경계하라 [더롱뷰]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/025/0003529328?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Beware of the Long View",
+      "term_ko": "경계하라 더롱뷰"
     },
     {
       "term": "Wall Street Holds",
-      "term_ko": "월스트리트, 강세 유지",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Holds",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street holds steadier as AI stocks recover some of their sell-off",
-              "link": "https://www.arirang.com/news/view?id=297013"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Holds",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Holds"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street holds steadier as AI stocks recover some of their sell-off",
-          "summary": "",
-          "link": "https://www.arirang.com/news/view?id=297013",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트, 강세 유지"
     },
     {
-      "term": "BRITAIN TECHNOLOGY",
-      "term_ko": "영국 기술",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "BRITAIN TECHNOLOGY",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "BRITAIN TECHNOLOGY",
-              "link": "https://n.news.naver.com/mnews/article/091/0010227343?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=BRITAIN%20TECHNOLOGY",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=BRITAIN%20TECHNOLOGY"
-      },
-      "top_headlines": [
-        {
-          "title": "BRITAIN TECHNOLOGY",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010227343?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Britain Technology",
+      "term_ko": "영국 기술"
     },
     {
-      "term": "LD Seoul",
-      "term_ko": "LD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares surge over 8 pct on AI confidence, Iran-Israel ceas...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016128972?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares surge over 8 pct on AI confidence, Iran-Israel ceas...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016128972?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
     },
     {
       "term": "Recover Some",
-      "term_ko": "일부 복구",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Recover Some",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street holds steadier as AI stocks recover some of their sell-off",
-              "link": "https://www.arirang.com/news/view?id=297013"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Recover%20Some",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Recover%20Some"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street holds steadier as AI stocks recover some of their sell-off",
-          "summary": "",
-          "link": "https://www.arirang.com/news/view?id=297013",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "일부 복구"
     },
     {
       "term": "Their Sell-off",
-      "term_ko": "그들의 매도 물량",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Their Sell-off",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street holds steadier as AI stocks recover some of their sell-off",
-              "link": "https://www.arirang.com/news/view?id=297013"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Their%20Sell-off",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Their%20Sell-off"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street holds steadier as AI stocks recover some of their sell-off",
-          "summary": "",
-          "link": "https://www.arirang.com/news/view?id=297013",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "그들의 매도 물량"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Anticipation for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.006703,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780498800000
-      }
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "Threat of a U.S. Government Shutdown",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-10T05:10:46+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-09T20:11:48.500Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-10T05:10:46+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ton, a Nasdaq-listed Company",
+      "term_ko": "나스닥 상장사 톤코인TON"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-10T05:10:46+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-10T05:10:46+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Asset Markets in 2030",
+      "term_ko": "자산 시장 2030년"
+    },
+    {
+      "term": "Selling Shares in the 1,500 Won Range",
+      "term_ko": "주식 팔자 1500원대"
+    },
+    {
+      "term": "The Illusion of 10% Nominal Growth",
+      "term_ko": "명목성장 10% 착시"
+    },
+    {
+      "term": "The Silent Exploitation of the Three Gos",
+      "term_ko": "3고의 조용한 수탈"
+    },
+    {
+      "term": "Issue: U.s. City",
+      "term_ko": "이슈 미국 시티"
+    },
+    {
+      "term": "Interest Rates Amid Currency Crisis",
+      "term_ko": "환율 비상에 금리"
+    },
+    {
+      "term": "Authorities Considering a Big Step",
+      "term_ko": "빅스텝 거론 당국"
+    },
+    {
+      "term": "Let's Roll Up Our Sleeves and Get Started",
+      "term_ko": "팔 걷어붙이자 일단"
+    },
+    {
+      "term": "If Prices Soar, This Is What Will Happen to Those Who Borrowed Heavily to Buy",
+      "term_ko": "날아오르면 영끌족에게 벌어질"
+    },
+    {
+      "term": "Editorial: Modernizing the Foreign Exchange Market",
+      "term_ko": "시론 외환시장 선진화"
+    },
+    {
+      "term": "I Can't Put It Off Any Longer",
+      "term_ko": "더이상 미룰 수"
+    },
+    {
+      "term": "Foreign Investors Amid the Kospi Boom",
+      "term_ko": "코스피 호황에 외국인"
+    },
+    {
+      "term": "Exchange Rate and Inflationary Pressures",
+      "term_ko": "환율 물가 압박"
+    },
+    {
+      "term": "Park Geun-jong Column: Gross National Income",
+      "term_ko": "박근종 칼럼 국민총소득"
+    },
+    {
+      "term": "Ai Confidence Iran-israel",
+      "term_ko": "AI 신뢰도: 이란-이스라엘"
+    },
+    {
+      "term": "Up to $5.5 Trillion",
+      "term_ko": "최대 5조5000억달러"
+    },
+    {
+      "term": "Beware of the Long View",
+      "term_ko": "경계하라 더롱뷰"
+    },
+    {
+      "term": "Wall Street Holds",
+      "term_ko": "월스트리트, 강세 유지"
+    },
+    {
+      "term": "Britain Technology",
+      "term_ko": "영국 기술"
+    },
+    {
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
+    },
+    {
+      "term": "Recover Some",
+      "term_ko": "일부 복구"
+    },
+    {
+      "term": "Their Sell-off",
+      "term_ko": "그들의 매도 물량"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    }
+  ],
+  "translations": {
+    "Ton, a Nasdaq-listed Company": {
+      "en": "Ton, a Nasdaq-listed Company",
+      "ko": "나스닥 상장사 톤코인TON",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Asset Markets in 2030": {
+      "en": "Asset Markets in 2030",
+      "ko": "자산 시장 2030년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Selling Shares in the 1,500 Won Range": {
+      "en": "Selling Shares in the 1,500 Won Range",
+      "ko": "주식 팔자 1500원대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "The Illusion of 10% Nominal Growth": {
+      "en": "The Illusion of 10% Nominal Growth",
+      "ko": "명목성장 10% 착시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "The Silent Exploitation of the Three Gos": {
+      "en": "The Silent Exploitation of the Three Gos",
+      "ko": "3고의 조용한 수탈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Issue: U.s. City": {
+      "en": "Issue: U.s. City",
+      "ko": "이슈 미국 시티",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Interest Rates Amid Currency Crisis": {
+      "en": "Interest Rates Amid Currency Crisis",
+      "ko": "환율 비상에 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Authorities Considering a Big Step": {
+      "en": "Authorities Considering a Big Step",
+      "ko": "빅스텝 거론 당국",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Let's Roll Up Our Sleeves and Get Started": {
+      "en": "Let's Roll Up Our Sleeves and Get Started",
+      "ko": "팔 걷어붙이자 일단",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "If Prices Soar, This Is What Will Happen to Those Who Borrowed Heavily to Buy": {
+      "en": "If Prices Soar, This Is What Will Happen to Those Who Borrowed Heavily to Buy",
+      "ko": "날아오르면 영끌족에게 벌어질",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Editorial: Modernizing the Foreign Exchange Market": {
+      "en": "Editorial: Modernizing the Foreign Exchange Market",
+      "ko": "시론 외환시장 선진화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "I Can't Put It Off Any Longer": {
+      "en": "I Can't Put It Off Any Longer",
+      "ko": "더이상 미룰 수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Foreign Investors Amid the Kospi Boom": {
+      "en": "Foreign Investors Amid the Kospi Boom",
+      "ko": "코스피 호황에 외국인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Exchange Rate and Inflationary Pressures": {
+      "en": "Exchange Rate and Inflationary Pressures",
+      "ko": "환율 물가 압박",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Park Geun-jong Column: Gross National Income": {
+      "en": "Park Geun-jong Column: Gross National Income",
+      "ko": "박근종 칼럼 국민총소득",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Ai Confidence Iran-israel": {
+      "en": "Ai Confidence Iran-israel",
+      "ko": "AI 신뢰도: 이란-이스라엘",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Up to $5.5 Trillion": {
+      "en": "Up to $5.5 Trillion",
+      "ko": "최대 5조5000억달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Beware of the Long View": {
+      "en": "Beware of the Long View",
+      "ko": "경계하라 더롱뷰",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Wall Street Holds": {
+      "en": "Wall Street Holds",
+      "ko": "월스트리트, 강세 유지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Britain Technology": {
+      "en": "Britain Technology",
+      "ko": "영국 기술",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Ld Seoul": {
+      "en": "Ld Seoul",
+      "ko": "LD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Recover Some": {
+      "en": "Recover Some",
+      "ko": "일부 복구",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Their Sell-off": {
+      "en": "Their Sell-off",
+      "ko": "그들의 매도 물량",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Anticipation for a Bitcoin Etf": {
+      "en": "Anticipation for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Korean Won-u.s. Dollar Exchange Rate Surges": {
+      "en": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
+    },
+    "Threat of a U.s. Government Shutdown": {
+      "en": "Threat of a U.s. Government Shutdown",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-10T03:33:35.522Z"
     }
   }
 }
