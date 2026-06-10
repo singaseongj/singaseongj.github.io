@@ -15,9 +15,16 @@ const NAME_PATTERN = /^[A-Za-z\u3131-\u318E\uAC00-\uD7A3\s]+$/;
 // Google Apps Script URL for leaderboard
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIcVsfDX3bOZzWf9FjsYLx7oIS3HKVshr-EbmtdIBM67GdcXhoc7JFZ8MpXSIogz4p/exec';
 
-// Initialize game elements
-window.onload = function() {
+// Initialize game elements as soon as the DOM is ready. Waiting for window.onload
+// can block game startup behind slow third-party resources such as ads or fonts.
+let gameInitialized = false;
+
+function initBubbleGame() {
+    if (gameInitialized) return;
+
     canvas = document.getElementById('gameCanvas');
+    if (!canvas) return;
+
     ctx = canvas.getContext('2d');
     nameInput = document.getElementById('playerName');
     nameError = document.getElementById('nameError');
@@ -29,7 +36,14 @@ window.onload = function() {
     fetchLeaderboard();
     setupEventListeners();
     setupNameValidation();
-};
+    gameInitialized = true;
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBubbleGame);
+} else {
+    initBubbleGame();
+}
 
 function resizeCanvas() {
     const gameScreen = document.getElementById('gameScreen');
@@ -190,10 +204,14 @@ function createBubble(x, y, size) {
 }
 
 function startGame() {
+    initBubbleGame();
+    if (!canvas || !ctx) return;
+
     document.getElementById('gameMenu').style.display = 'none';
     canvas.style.display = 'block';
     document.getElementById('gameStats').style.display = 'flex';
     document.getElementById('gameBackBtn').style.display = 'block';
+    resizeCanvas();
 
     bubbles = [];
     score = 0;
