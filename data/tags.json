@@ -1,19 +1,19 @@
 {
   "date": "2026-06-11",
   "window": "12_hours",
-  "total_phrases": 28,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "AI Woes Ease",
       "term_ko": "AI 관련 우려 완화",
-      "significance_score": 882,
-      "mentions": 480,
+      "significance_score": 588,
+      "mentions": 320,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "AI Woes Ease",
         "local_headlines": {
-          "matches": 3,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "matches": 2,
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -26,10 +26,6 @@
             {
               "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
               "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104"
-            },
-            {
-              "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104"
             }
           ]
         }
@@ -54,28 +50,20 @@
           "timeAgo": null,
           "pubDate": null,
           "source": null
-        },
-        {
-          "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
         }
       ]
     },
     {
       "term": "Close Higher",
       "term_ko": "전일 대비 상승 마감",
-      "significance_score": 672,
-      "mentions": 480,
+      "significance_score": 448,
+      "mentions": 320,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "Close Higher",
         "local_headlines": {
-          "matches": 3,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "matches": 2,
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -88,10 +76,6 @@
             {
               "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
               "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104"
-            },
-            {
-              "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104"
             }
           ]
         }
@@ -116,14 +100,6 @@
           "timeAgo": null,
           "pubDate": null,
           "source": null
-        },
-        {
-          "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
         }
       ]
     },
@@ -131,7 +107,7 @@
       "term": "Middle East",
       "term_ko": "중동",
       "significance_score": 448,
-      "mentions": 386,
+      "mentions": 359,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "Middle East",
@@ -140,11 +116,6 @@
           "time_unit": "date",
           "bucket_size_hours": 24,
           "rows": [
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 31.81818
-            },
             {
               "period": "2026-06-04",
               "timestamp": 1780498800000,
@@ -184,7 +155,7 @@
         },
         "local_headlines": {
           "matches": 2,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -230,13 +201,13 @@
         "medium_window_hours": 72,
         "long_window_hours": 168,
         "recent_hour_volume": 0,
-        "weekly_search_volume": 386.3636,
-        "weekly_average_volume": 64.3939,
+        "weekly_search_volume": 359.0909,
+        "weekly_average_volume": 71.8182,
         "day_score": 0,
         "week_score": 0,
         "correction_factor": 0.115911,
-        "decay_factor": 0.0161,
-        "time_weight": 0.023031,
+        "decay_factor": 0.016938,
+        "time_weight": 0.020391,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
@@ -244,37 +215,144 @@
       }
     },
     {
-      "term": "Increase policy funding by 34 trillion won",
-      "term_ko": "정책자금 34조 늘려",
+      "term": "U.S. May PPI",
+      "term_ko": "미국 5월 PPI",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 5월 PPI",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-06-10",
+              "timestamp": 1781017200000,
+              "value": 100
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[마켓인사이드] 미국 5월 PPI 급등, 인플레이션 재점화 신호인가",
+              "link": "https://www.news2day.co.kr/article/20260612500001"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%205%EC%9B%94%20PPI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%205%EC%9B%94%20PPI"
+      },
+      "top_headlines": [
+        {
+          "title": "[마켓인사이드] 미국 5월 PPI 급등, 인플레이션 재점화 신호인가",
+          "summary": "",
+          "link": "https://www.news2day.co.kr/article/20260612500001",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 100,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.041087,
+        "time_weight": 0.020391,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1781017200000
+      }
+    },
+    {
+      "term": "WB World This Year",
+      "term_ko": "WB 올해 세계",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "WB 올해 세계",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "WB, 올해 세계 경제성장률 2.5% 전망…코로나19 이후 최저수준",
+              "link": "https://www.tfmedia.co.kr/news/article.html?no=205090"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=WB%20%EC%98%AC%ED%95%B4%20%EC%84%B8%EA%B3%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=WB%20%EC%98%AC%ED%95%B4%20%EC%84%B8%EA%B3%84"
+      },
+      "top_headlines": [
+        {
+          "title": "WB, 올해 세계 경제성장률 2.5% 전망…코로나19 이후 최저수준",
+          "summary": "",
+          "link": "https://www.tfmedia.co.kr/news/article.html?no=205090",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Up 4.2% in 2023",
+      "term_ko": "4.2% 올라 2023년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "정책자금 34조 늘려",
+        "query": "4.2% 올라 2023년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
-              "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101"
+              "title": "美 5월 소비자물가 4.2% 올라… 2023년 이후 최고",
+              "link": "https://n.news.naver.com/mnews/article/023/0003981562?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%2034%EC%A1%B0%20%EB%8A%98%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%2034%EC%A1%B0%20%EB%8A%98%EB%A0%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4.2%25%20%EC%98%AC%EB%9D%BC%202023%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4.2%25%20%EC%98%AC%EB%9D%BC%202023%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
+          "title": "美 5월 소비자물가 4.2% 올라… 2023년 이후 최고",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/023/0003981562?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -282,37 +360,37 @@
       ]
     },
     {
-      "term": "50 billion won New Growth Fund",
-      "term_ko": "신성장 펀드 500억",
+      "term": "Supply of 164 trillion won in policy funds",
+      "term_ko": "정책자금 164조 공급",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "신성장 펀드 500억",
+        "query": "정책자금 164조 공급",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
-              "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927"
+              "title": "금융위장 “2028년 지방에 정책자금 164조 공급”",
+              "link": "https://n.news.naver.com/mnews/article/020/0003726271?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%84%B1%EC%9E%A5%20%ED%8E%80%EB%93%9C%20500%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%84%B1%EC%9E%A5%20%ED%8E%80%EB%93%9C%20500%EC%96%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%20164%EC%A1%B0%20%EA%B3%B5%EA%B8%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%20164%EC%A1%B0%20%EA%B3%B5%EA%B8%89"
       },
       "top_headlines": [
         {
-          "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
+          "title": "금융위장 “2028년 지방에 정책자금 164조 공급”",
           "summary": "",
-          "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927",
+          "link": "https://n.news.naver.com/mnews/article/020/0003726271?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -320,37 +398,37 @@
       ]
     },
     {
-      "term": "Interest payments on excess reserve funds: 6 months",
-      "term_ko": "초과지급준비금 이자지급 6개월",
+      "term": "Today's Gold Prices: June 12",
+      "term_ko": "오늘의 금값시세6월 12일자",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "초과지급준비금 이자지급 6개월",
+        "query": "오늘의 금값시세6월 12일자",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
-              "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101"
+              "title": "오늘의 금값시세(6월 12일자) 금값 하락세 \"6월말 반등하나\"",
+              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3606463"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B4%88%EA%B3%BC%EC%A7%80%EA%B8%89%EC%A4%80%EB%B9%84%EA%B8%88%20%EC%9D%B4%EC%9E%90%EC%A7%80%EA%B8%89%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B4%88%EA%B3%BC%EC%A7%80%EA%B8%89%EC%A4%80%EB%B9%84%EA%B8%88%20%EC%9D%B4%EC%9E%90%EC%A7%80%EA%B8%89%206%EA%B0%9C%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B86%EC%9B%94%2012%EC%9D%BC%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B86%EC%9B%94%2012%EC%9D%BC%EC%9E%90"
       },
       "top_headlines": [
         {
-          "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
+          "title": "오늘의 금값시세(6월 12일자) 금값 하락세 \"6월말 반등하나\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3606463",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -358,37 +436,37 @@
       ]
     },
     {
-      "term": "High-interest mortgage: 8%",
-      "term_ko": "부담 주담대 8%",
+      "term": "Gold Prices on a Downward Trend at the End of June",
+      "term_ko": "금값 하락세 6월말",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "부담 주담대 8%",
+        "query": "금값 하락세 6월말",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101"
+              "title": "오늘의 금값시세(6월 12일자) 금값 하락세 \"6월말 반등하나\"",
+              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3606463"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80%208%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80%208%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD%EC%84%B8%206%EC%9B%94%EB%A7%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD%EC%84%B8%206%EC%9B%94%EB%A7%90"
       },
       "top_headlines": [
         {
-          "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
+          "title": "오늘의 금값시세(6월 12일자) 금값 하락세 \"6월말 반등하나\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3606463",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -396,75 +474,37 @@
       ]
     },
     {
-      "term": "Personal Loan at 7% Interest",
-      "term_ko": "신용대출 7% 코",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신용대출 7% 코",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%207%25%20%EC%BD%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%207%25%20%EC%BD%94"
-      },
-      "top_headlines": [
-        {
-          "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Future Asset Overcomes Skepticism",
-      "term_ko": "회의론 딛은 미래에셋",
+      "term": "Surge in inflation reignites",
+      "term_ko": "급등 인플레이션 재점화",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "회의론 딛은 미래에셋",
+        "query": "급등 인플레이션 재점화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "회의론 딛은 미래에셋 박현주의 ‘뚝심’…스페이스X와 날아오르다",
-              "link": "http://www.segyebiz.com/newsView/20260611513242?OutUrl=naver"
+              "title": "[마켓인사이드] 미국 5월 PPI 급등, 인플레이션 재점화 신호인가",
+              "link": "https://www.news2day.co.kr/article/20260612500001"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%9D%98%EB%A1%A0%20%EB%94%9B%EC%9D%80%20%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%9D%98%EB%A1%A0%20%EB%94%9B%EC%9D%80%20%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%20%EC%9D%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%85%98%20%EC%9E%AC%EC%A0%90%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%20%EC%9D%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%85%98%20%EC%9E%AC%EC%A0%90%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "회의론 딛은 미래에셋 박현주의 ‘뚝심’…스페이스X와 날아오르다",
+          "title": "[마켓인사이드] 미국 5월 PPI 급등, 인플레이션 재점화 신호인가",
           "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260611513242?OutUrl=naver",
+          "link": "https://www.news2day.co.kr/article/20260612500001",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -472,37 +512,37 @@
       ]
     },
     {
-      "term": "European stock futures decline",
-      "term_ko": "위축 유럽증시 선물",
+      "term": "Resumption of monetary tightening: Korean won",
+      "term_ko": "긴축 재개 원화",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "위축 유럽증시 선물",
+        "query": "긴축 재개 원화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451"
+              "title": "ECB, 3년 만에 긴축 재개…원화·수출시장 변수 커진다",
+              "link": "https://n.news.naver.com/mnews/article/119/0003100280?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%EC%B6%95%20%EC%9C%A0%EB%9F%BD%EC%A6%9D%EC%8B%9C%20%EC%84%A0%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%EC%B6%95%20%EC%9C%A0%EB%9F%BD%EC%A6%9D%EC%8B%9C%20%EC%84%A0%EB%AC%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B4%EC%B6%95%20%EC%9E%AC%EA%B0%9C%20%EC%9B%90%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B4%EC%B6%95%20%EC%9E%AC%EA%B0%9C%20%EC%9B%90%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
+          "title": "ECB, 3년 만에 긴축 재개…원화·수출시장 변수 커진다",
           "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451",
+          "link": "https://n.news.naver.com/mnews/article/119/0003100280?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -510,37 +550,37 @@
       ]
     },
     {
-      "term": "Now is the time for the economy",
-      "term_ko": "이제는 경제의 시간",
+      "term": "Uncertainties in export markets are growing",
+      "term_ko": "수출시장 변수 커진다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "이제는 경제의 시간",
+        "query": "수출시장 변수 커진다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
-              "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702"
+              "title": "ECB, 3년 만에 긴축 재개…원화·수출시장 변수 커진다",
+              "link": "https://n.news.naver.com/mnews/article/119/0003100280?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%A0%9C%EB%8A%94%20%EA%B2%BD%EC%A0%9C%EC%9D%98%20%EC%8B%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%A0%9C%EB%8A%94%20%EA%B2%BD%EC%A0%9C%EC%9D%98%20%EC%8B%9C%EA%B0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%B6%9C%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EC%88%98%20%EC%BB%A4%EC%A7%84%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%B6%9C%EC%8B%9C%EC%9E%A5%20%EB%B3%80%EC%88%98%20%EC%BB%A4%EC%A7%84%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
+          "title": "ECB, 3년 만에 긴축 재개…원화·수출시장 변수 커진다",
           "summary": "",
-          "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702",
+          "link": "https://n.news.naver.com/mnews/article/119/0003100280?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -548,151 +588,37 @@
       ]
     },
     {
-      "term": "Factors Affecting Growth ②",
-      "term_ko": "성장세의 변수 ②",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "성장세의 변수 ②",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
-              "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EC%9E%A5%EC%84%B8%EC%9D%98%20%EB%B3%80%EC%88%98%20%E2%91%A1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EC%9E%A5%EC%84%B8%EC%9D%98%20%EB%B3%80%EC%88%98%20%E2%91%A1"
-      },
-      "top_headlines": [
-        {
-          "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
-          "summary": "",
-          "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Samsung Electronics Smiled Even as the Market Plummeted",
-      "term_ko": "삼전닉스 폭락장에도 웃었다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼전닉스 폭락장에도 웃었다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-              "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%ED%8F%AD%EB%9D%BD%EC%9E%A5%EC%97%90%EB%8F%84%20%EC%9B%83%EC%97%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%ED%8F%AD%EB%9D%BD%EC%9E%A5%EC%97%90%EB%8F%84%20%EC%9B%83%EC%97%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "I mixed this, and it turned out great",
-      "term_ko": "이것 섞었더니 방어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이것 섞었더니 방어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-              "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EA%B2%83%20%EC%84%9E%EC%97%88%EB%8D%94%EB%8B%88%20%EB%B0%A9%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EA%B2%83%20%EC%84%9E%EC%97%88%EB%8D%94%EB%8B%88%20%EB%B0%A9%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "164 trillion won in funding",
-      "term_ko": "164조 공급",
+      "term": "Economic growth rate of 2.5%",
+      "term_ko": "경제성장률 2.5%",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "164조 공급",
+        "query": "경제성장률 2.5%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
-              "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101"
+              "title": "WB, 올해 세계 경제성장률 2.5% 전망…코로나19 이후 최저수준",
+              "link": "https://www.tfmedia.co.kr/news/article.html?no=205090"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=164%EC%A1%B0%20%EA%B3%B5%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=164%EC%A1%B0%20%EA%B3%B5%EA%B8%89"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%EC%84%B1%EC%9E%A5%EB%A5%A0%202.5%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%EC%84%B1%EC%9E%A5%EB%A5%A0%202.5%25"
       },
       "top_headlines": [
         {
-          "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
+          "title": "WB, 올해 세계 경제성장률 2.5% 전망…코로나19 이후 최저수준",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101",
+          "link": "https://www.tfmedia.co.kr/news/article.html?no=205090",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -700,37 +626,37 @@
       ]
     },
     {
-      "term": "U.S. stock market declines",
-      "term_ko": "하락 美증시",
-      "significance_score": 280,
+      "term": "Dramatic V-Shaped Rebound",
+      "term_ko": "극적인 V자형 반등",
+      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "하락 美증시",
+        "query": "Dramatic V-Shaped Rebound",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451"
+              "title": "KOSPI Closed with Dramatic V-Shaped Rebound to Settle Above 7,760 Amid Wo...",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271125"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%E7%BE%8E%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%E7%BE%8E%EC%A6%9D%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Dramatic%20V-Shaped%20Rebound",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Dramatic%20V-Shaped%20Rebound"
       },
       "top_headlines": [
         {
-          "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
+          "title": "KOSPI Closed with Dramatic V-Shaped Rebound to Settle Above 7,760 Amid Wo...",
           "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271125",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -738,113 +664,37 @@
       ]
     },
     {
-      "term": "Hana Financial Industrial Complex",
-      "term_ko": "하나금융 산업단지",
-      "significance_score": 280,
+      "term": "U.S.-Iran Peace Talks",
+      "term_ko": "미국-이란 평화 회담",
+      "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "하나금융 산업단지",
+        "query": "U.S.-Iran Peace Talks",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
-              "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927"
+              "title": "US Stock Futures Rally as U.S.-Iran Peace Talks Boost Market Sentiment De...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Rally-as-US-Iran-Peace-Talks-Boost-Market-Sentiment-Despite-Ongoing-Strikes-1744094"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20%EC%82%B0%EC%97%85%EB%8B%A8%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20%EC%82%B0%EC%97%85%EB%8B%A8%EC%A7%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Peace%20Talks",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Peace%20Talks"
       },
       "top_headlines": [
         {
-          "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
+          "title": "US Stock Futures Rally as U.S.-Iran Peace Talks Boost Market Sentiment De...",
           "summary": "",
-          "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Bank of Korea Foreign Currency Deposits",
-      "term_ko": "한은 외화예금",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 외화예금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
-              "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EC%99%B8%ED%99%94%EC%98%88%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EC%99%B8%ED%99%94%EC%98%88%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Borrowing to invest",
-      "term_ko": "빚투 영끌",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚투 영끌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%20%EC%98%81%EB%81%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%20%EC%98%81%EB%81%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Rally-as-US-Iran-Peace-Talks-Boost-Market-Sentiment-Despite-Ongoing-Strikes-1744094",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -861,7 +711,7 @@
         "query": "Enabled SpaceXs I.P.O",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -890,6 +740,44 @@
       ]
     },
     {
+      "term": "KOSPI Closed",
+      "term_ko": "코스피 장 마감",
+      "significance_score": 252,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI Closed",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KOSPI Closed with Dramatic V-Shaped Rebound to Settle Above 7,760 Amid Wo...",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271125"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Closed",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Closed"
+      },
+      "top_headlines": [
+        {
+          "title": "KOSPI Closed with Dramatic V-Shaped Rebound to Settle Above 7,760 Amid Wo...",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271125",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "LD Seoul",
       "term_ko": "LD 서울",
       "significance_score": 252,
@@ -899,7 +787,7 @@
         "query": "LD Seoul",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -937,7 +825,7 @@
         "query": "LEAD Seoul",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -966,6 +854,82 @@
       ]
     },
     {
+      "term": "Settle Above",
+      "term_ko": "위쪽에 정산하기",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Settle Above",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KOSPI Closed with Dramatic V-Shaped Rebound to Settle Above 7,760 Amid Wo...",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271125"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Settle%20Above",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Settle%20Above"
+      },
+      "top_headlines": [
+        {
+          "title": "KOSPI Closed with Dramatic V-Shaped Rebound to Settle Above 7,760 Amid Wo...",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271125",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Futures Rally",
+      "term_ko": "선물 시장 급등",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Futures Rally",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "US Stock Futures Rally as U.S.-Iran Peace Talks Boost Market Sentiment De...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Rally-as-US-Iran-Peace-Talks-Boost-Market-Sentiment-Despite-Ongoing-Strikes-1744094"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Rally",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Rally"
+      },
+      "top_headlines": [
+        {
+          "title": "US Stock Futures Rally as U.S.-Iran Peace Talks Boost Market Sentiment De...",
+          "summary": "",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Rally-as-US-Iran-Peace-Talks-Boost-Market-Sentiment-Despite-Ongoing-Strikes-1744094",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "How Teslas",
       "term_ko": "테슬라는 어떻게",
       "significance_score": 224,
@@ -975,7 +939,7 @@
         "query": "How Teslas",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1013,7 +977,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1036,7 +1000,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1059,7 +1023,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1082,7 +1046,7 @@
         "query": "비트코인 ETF 기대",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
+          "last_updated": "2026-06-12T01:01:59+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1098,8 +1062,8 @@
     {
       "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
       "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 0,
+      "significance_score": 120,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
         "query": "원달러 환율 급등",
@@ -1109,15 +1073,18 @@
           "bucket_size_hours": 24,
           "rows": [
             {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 100
-            },
-            {
               "period": "2026-06-04",
               "timestamp": 1780498800000,
               "value": 100
             }
+          ]
+        },
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1139,38 +1106,84 @@
         "week_score": 0,
         "correction_factor": 0.115911,
         "decay_factor": 1,
-        "time_weight": 0.005335,
+        "time_weight": 0.00518,
         "raw_score": 0,
         "scaled_score": 0,
         "total_score": 0,
         "last_observation": 1780498800000
       }
+    },
+    {
+      "term": "Threat of a U.S. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "South Korean Stock Market Rebounds",
+      "term_ko": "한국 증시 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "한국 증시 반등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-12T01:01:59+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-11T10:25:39.533Z",
+    "generated_at": "2026-06-11T16:02:58.891Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-11T19:24:32+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-12T01:01:59+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 2,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-11T19:24:32+09:00",
+      "last_updated": "2026-06-12T01:01:59+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-11T19:24:32+09:00",
+        "lastUpdated": "2026-06-12T01:01:59+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
