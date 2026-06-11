@@ -1,1082 +1,439 @@
 {
+  "generatedAt": "2026-06-11T10:22:27.414Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-11",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "10,000 people at the xAI data center",
-      "term_ko": "xAI 데이터센터로 1만명",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "xAI 데이터센터로 1만명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "머스크 AI기업 xAI, 데이터센터로 1만명 집단소송 당했다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19197"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=xAI%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EB%A1%9C%201%EB%A7%8C%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=xAI%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%BC%ED%84%B0%EB%A1%9C%201%EB%A7%8C%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "머스크 AI기업 xAI, 데이터센터로 1만명 집단소송 당했다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19197",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "10,000 People at the Xai Data Center",
+      "term_ko": "xAI 데이터센터로 1만명"
     },
     {
-      "term": "CME Nasdaq Cryptocurrency",
-      "term_ko": "CME 나스닥 암호화폐",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "CME 나스닥 암호화폐",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인부터 XRP까지 한번에…CME·나스닥, 암호화폐 지수 선물 개시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=CME%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=CME%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%95%94%ED%98%B8%ED%99%94%ED%8F%90"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인부터 XRP까지 한번에…CME·나스닥, 암호화폐 지수 선물 개시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cme Nasdaq Cryptocurrency",
+      "term_ko": "CME 나스닥 암호화폐"
     },
     {
       "term": "The Paradox of the 1,500 Won Exchange Rate",
-      "term_ko": "1500원 환율의 역설",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1500원 환율의 역설",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1500원 환율의 역설…17년 전 금융위기 때와 체력이 다르다",
-              "link": "https://www.viva100.com/article/20260610500217"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1500%EC%9B%90%20%ED%99%98%EC%9C%A8%EC%9D%98%20%EC%97%AD%EC%84%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1500%EC%9B%90%20%ED%99%98%EC%9C%A8%EC%9D%98%20%EC%97%AD%EC%84%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "1500원 환율의 역설…17년 전 금융위기 때와 체력이 다르다",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20260610500217",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "1500원 환율의 역설"
     },
     {
-      "term": "The financial crisis 17 years ago",
-      "term_ko": "17년 전 금융위기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "17년 전 금융위기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1500원 환율의 역설…17년 전 금융위기 때와 체력이 다르다",
-              "link": "https://www.viva100.com/article/20260610500217"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=17%EB%85%84%20%EC%A0%84%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=17%EB%85%84%20%EC%A0%84%20%EA%B8%88%EC%9C%B5%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "1500원 환율의 역설…17년 전 금융위기 때와 체력이 다르다",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20260610500217",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Financial Crisis 17 Years Ago",
+      "term_ko": "17년 전 금융위기"
     },
     {
-      "term": "Domestic gold price per gram",
-      "term_ko": "국내 금값 1g당",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국내 금값 1g당",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국내 금값, 1g당 20만원선 아래로…6개월 만에 처음",
-              "link": "https://n.news.naver.com/mnews/article/586/0000131275?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%201g%EB%8B%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%201g%EB%8B%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 금값, 1g당 20만원선 아래로…6개월 만에 처음",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/586/0000131275?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Domestic Gold Price Per Gram",
+      "term_ko": "국내 금값 1g당"
     },
     {
-      "term": "Below the 200,000 won mark for 6 months",
-      "term_ko": "20만원선 아래로 6개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "20만원선 아래로 6개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국내 금값, 1g당 20만원선 아래로…6개월 만에 처음",
-              "link": "https://n.news.naver.com/mnews/article/586/0000131275?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=20%EB%A7%8C%EC%9B%90%EC%84%A0%20%EC%95%84%EB%9E%98%EB%A1%9C%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=20%EB%A7%8C%EC%9B%90%EC%84%A0%20%EC%95%84%EB%9E%98%EB%A1%9C%206%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 금값, 1g당 20만원선 아래로…6개월 만에 처음",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/586/0000131275?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Below the 200,000 Won Mark for 6 Months",
+      "term_ko": "20만원선 아래로 6개월"
     },
     {
-      "term": "D.Camp, 24th, Finance",
-      "term_ko": "디캠프 24일 금융",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "디캠프 24일 금융",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "디캠프, 24일 금융 서비스와 연계한 5개 스타트업 사례 공유",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674118"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%94%EC%BA%A0%ED%94%84%2024%EC%9D%BC%20%EA%B8%88%EC%9C%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%94%EC%BA%A0%ED%94%84%2024%EC%9D%BC%20%EA%B8%88%EC%9C%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "디캠프, 24일 금융 서비스와 연계한 5개 스타트업 사례 공유",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674118",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "D.camp, 24th, Finance",
+      "term_ko": "디캠프 24일 금융"
     },
     {
-      "term": "5 services",
-      "term_ko": "서비스와 연계한 5개",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서비스와 연계한 5개",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "디캠프, 24일 금융 서비스와 연계한 5개 스타트업 사례 공유",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674118"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%B9%84%EC%8A%A4%EC%99%80%20%EC%97%B0%EA%B3%84%ED%95%9C%205%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%B9%84%EC%8A%A4%EC%99%80%20%EC%97%B0%EA%B3%84%ED%95%9C%205%EA%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "디캠프, 24일 금융 서비스와 연계한 5개 스타트업 사례 공유",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674118",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "5 Services",
+      "term_ko": "서비스와 연계한 5개"
     },
     {
-      "term": "Interest payments for 6 months",
-      "term_ko": "이자 지급 6개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이자 지급 6개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국은행, 외화예금 초과지준 이자 지급 6개월 연장",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365075?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%9E%90%20%EC%A7%80%EA%B8%89%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%9E%90%20%EC%A7%80%EA%B8%89%206%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "한국은행, 외화예금 초과지준 이자 지급 6개월 연장",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365075?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Payments for 6 Months",
+      "term_ko": "이자 지급 6개월"
     },
     {
       "term": "Launch of Index Futures",
-      "term_ko": "지수 선물 개시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지수 선물 개시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "비트코인부터 XRP까지 한번에…CME·나스닥, 암호화폐 지수 선물 개시",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%88%98%20%EC%84%A0%EB%AC%BC%20%EA%B0%9C%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%88%98%20%EC%84%A0%EB%AC%BC%20%EA%B0%9C%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인부터 XRP까지 한번에…CME·나스닥, 암호화폐 지수 선물 개시",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "지수 선물 개시"
     },
     {
-      "term": "Pacific M&A Specialists",
-      "term_ko": "태평양 M&A 전문",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "태평양 M&A 전문",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "태평양, M&A 전문 인력 강화…강형석·이진욱 변호사 영입 [시그널]",
-              "link": "https://n.news.naver.com/mnews/article/011/0004629937?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%83%9C%ED%8F%89%EC%96%91%20M%26A%20%EC%A0%84%EB%AC%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%83%9C%ED%8F%89%EC%96%91%20M%26A%20%EC%A0%84%EB%AC%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "태평양, M&A 전문 인력 강화…강형석·이진욱 변호사 영입 [시그널]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004629937?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Pacific M&a Specialists",
+      "term_ko": "태평양 M&A 전문"
     },
     {
       "term": "Strengthening the Workforce: Kang Hyung-seok",
-      "term_ko": "인력 강화 강형석",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인력 강화 강형석",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "태평양, M&A 전문 인력 강화…강형석·이진욱 변호사 영입 [시그널]",
-              "link": "https://n.news.naver.com/mnews/article/011/0004629937?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EB%A0%A5%20%EA%B0%95%ED%99%94%20%EA%B0%95%ED%98%95%EC%84%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EB%A0%A5%20%EA%B0%95%ED%99%94%20%EA%B0%95%ED%98%95%EC%84%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "태평양, M&A 전문 인력 강화…강형석·이진욱 변호사 영입 [시그널]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004629937?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인력 강화 강형석"
     },
     {
       "term": "Recruitment of Attorney Lee Jin-wook",
-      "term_ko": "이진욱 변호사 영입",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이진욱 변호사 영입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "태평양, M&A 전문 인력 강화…강형석·이진욱 변호사 영입 [시그널]",
-              "link": "https://n.news.naver.com/mnews/article/011/0004629937?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%A7%84%EC%9A%B1%20%EB%B3%80%ED%98%B8%EC%82%AC%20%EC%98%81%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%A7%84%EC%9A%B1%20%EB%B3%80%ED%98%B8%EC%82%AC%20%EC%98%81%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "태평양, M&A 전문 인력 강화…강형석·이진욱 변호사 영입 [시그널]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004629937?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "이진욱 변호사 영입"
     },
     {
-      "term": "It depends on the time and your stamina",
-      "term_ko": "때와 체력이 다르다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "때와 체력이 다르다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "1500원 환율의 역설…17년 전 금융위기 때와 체력이 다르다",
-              "link": "https://www.viva100.com/article/20260610500217"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%95%8C%EC%99%80%20%EC%B2%B4%EB%A0%A5%EC%9D%B4%20%EB%8B%A4%EB%A5%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%95%8C%EC%99%80%20%EC%B2%B4%EB%A0%A5%EC%9D%B4%20%EB%8B%A4%EB%A5%B4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "1500원 환율의 역설…17년 전 금융위기 때와 체력이 다르다",
-          "summary": "",
-          "link": "https://www.viva100.com/article/20260610500217",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It Depends on the Time and Your Stamina",
+      "term_ko": "때와 체력이 다르다"
     },
     {
       "term": "Sharing Startup Case Studies",
-      "term_ko": "스타트업 사례 공유",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스타트업 사례 공유",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "디캠프, 24일 금융 서비스와 연계한 5개 스타트업 사례 공유",
-              "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674118"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EC%82%AC%EB%A1%80%20%EA%B3%B5%EC%9C%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%EC%82%AC%EB%A1%80%20%EA%B3%B5%EC%9C%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "디캠프, 24일 금융 서비스와 연계한 5개 스타트업 사례 공유",
-          "summary": "",
-          "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=674118",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "스타트업 사례 공유"
     },
     {
-      "term": "Inbang's Cherry-Picking Controversy",
-      "term_ko": "체리피킹 논란 인뱅",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "체리피킹 논란 인뱅",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "체리피킹 논란 인뱅, 비금융자료로 중·저신용자 더 품었다",
-              "link": "https://www.mediapen.com/news/view/1103857"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%B4%EB%A6%AC%ED%94%BC%ED%82%B9%20%EB%85%BC%EB%9E%80%20%EC%9D%B8%EB%B1%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%B4%EB%A6%AC%ED%94%BC%ED%82%B9%20%EB%85%BC%EB%9E%80%20%EC%9D%B8%EB%B1%85"
-      },
-      "top_headlines": [
-        {
-          "title": "체리피킹 논란 인뱅, 비금융자료로 중·저신용자 더 품었다",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1103857",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Inbang's Cherry-picking Controversy",
+      "term_ko": "체리피킹 논란 인뱅"
     },
     {
-      "term": "Borrowers with low to medium credit scores based on non-financial data",
-      "term_ko": "비금융자료로 중 저신용자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비금융자료로 중 저신용자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "체리피킹 논란 인뱅, 비금융자료로 중·저신용자 더 품었다",
-              "link": "https://www.mediapen.com/news/view/1103857"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%EA%B8%88%EC%9C%B5%EC%9E%90%EB%A3%8C%EB%A1%9C%20%EC%A4%91%20%EC%A0%80%EC%8B%A0%EC%9A%A9%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%EA%B8%88%EC%9C%B5%EC%9E%90%EB%A3%8C%EB%A1%9C%20%EC%A4%91%20%EC%A0%80%EC%8B%A0%EC%9A%A9%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "체리피킹 논란 인뱅, 비금융자료로 중·저신용자 더 품었다",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1103857",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Borrowers with Low to Medium Credit Scores Based on Non-financial Data",
+      "term_ko": "비금융자료로 중 저신용자"
     },
     {
       "term": "Bank of Korea Foreign Exchange Reserves",
-      "term_ko": "한은 외화지준 부리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 외화지준 부리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 외화지준 부리 연말까지 연장…환율 안정 총력",
-              "link": "https://www.ajunews.com/view/20260611113043313"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EC%99%B8%ED%99%94%EC%A7%80%EC%A4%80%20%EB%B6%80%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EC%99%B8%ED%99%94%EC%A7%80%EC%A4%80%20%EB%B6%80%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 외화지준 부리 연말까지 연장…환율 안정 총력",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260611113043313",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한은 외화지준 부리"
     },
     {
-      "term": "Exchange rate extended through the end of the year",
-      "term_ko": "연말까지 연장 환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연말까지 연장 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 외화지준 부리 연말까지 연장…환율 안정 총력",
-              "link": "https://www.ajunews.com/view/20260611113043313"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EB%A7%90%EA%B9%8C%EC%A7%80%20%EC%97%B0%EC%9E%A5%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EB%A7%90%EA%B9%8C%EC%A7%80%20%EC%97%B0%EC%9E%A5%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 외화지준 부리 연말까지 연장…환율 안정 총력",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260611113043313",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Exchange Rate Extended Through the End of the Year",
+      "term_ko": "연말까지 연장 환율"
     },
     {
       "term": "Bank of Korea's Excess Reserve Requirement for Foreign Currency Deposits",
-      "term_ko": "한국은행 외화예금 초과지준",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국은행 외화예금 초과지준",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한국은행, 외화예금 초과지준 이자 지급 6개월 연장",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365075?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%20%EC%99%B8%ED%99%94%EC%98%88%EA%B8%88%20%EC%B4%88%EA%B3%BC%EC%A7%80%EC%A4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%EC%9D%80%ED%96%89%20%EC%99%B8%ED%99%94%EC%98%88%EA%B8%88%20%EC%B4%88%EA%B3%BC%EC%A7%80%EC%A4%80"
-      },
-      "top_headlines": [
-        {
-          "title": "한국은행, 외화예금 초과지준 이자 지급 6개월 연장",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365075?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국은행 외화예금 초과지준"
     },
     {
-      "term": "Musk's AI company",
-      "term_ko": "머스크 AI기업",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "머스크 AI기업",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "머스크 AI기업 xAI, 데이터센터로 1만명 집단소송 당했다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19197"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A8%B8%EC%8A%A4%ED%81%AC%20AI%EA%B8%B0%EC%97%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A8%B8%EC%8A%A4%ED%81%AC%20AI%EA%B8%B0%EC%97%85"
-      },
-      "top_headlines": [
-        {
-          "title": "머스크 AI기업 xAI, 데이터센터로 1만명 집단소송 당했다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19197",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Musk's Ai Company",
+      "term_ko": "머스크 AI기업"
     },
     {
-      "term": "I'm facing a class-action lawsuit",
-      "term_ko": "집단소송 당했다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집단소송 당했다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "머스크 AI기업 xAI, 데이터센터로 1만명 집단소송 당했다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19197"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%EB%8B%A8%EC%86%8C%EC%86%A1%20%EB%8B%B9%ED%96%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%EB%8B%A8%EC%86%8C%EC%86%A1%20%EB%8B%B9%ED%96%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "머스크 AI기업 xAI, 데이터센터로 1만명 집단소송 당했다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19197",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I'm Facing a Class-action Lawsuit",
+      "term_ko": "집단소송 당했다"
     },
     {
-      "term": "For the first time in a long time",
-      "term_ko": "만에 처음",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 처음",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "국내 금값, 1g당 20만원선 아래로…6개월 만에 처음",
-              "link": "https://n.news.naver.com/mnews/article/586/0000131275?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%B2%98%EC%9D%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%B2%98%EC%9D%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 금값, 1g당 20만원선 아래로…6개월 만에 처음",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/586/0000131275?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "For the First Time in a Long Time",
+      "term_ko": "만에 처음"
     },
     {
-      "term": "embraced even more",
-      "term_ko": "더 품었다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "더 품었다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "체리피킹 논란 인뱅, 비금융자료로 중·저신용자 더 품었다",
-              "link": "https://www.mediapen.com/news/view/1103857"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%20%ED%92%88%EC%97%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%20%ED%92%88%EC%97%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "체리피킹 논란 인뱅, 비금융자료로 중·저신용자 더 품었다",
-          "summary": "",
-          "link": "https://www.mediapen.com/news/view/1103857",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Embraced Even More",
+      "term_ko": "더 품었다"
     },
     {
       "term": "All-out Efforts for Stability",
-      "term_ko": "안정 총력",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안정 총력",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "한은, 외화지준 부리 연말까지 연장…환율 안정 총력",
-              "link": "https://www.ajunews.com/view/20260611113043313"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EC%A0%95%20%EC%B4%9D%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EC%A0%95%20%EC%B4%9D%EB%A0%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "한은, 외화지준 부리 연말까지 연장…환율 안정 총력",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260611113043313",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "안정 총력"
     },
     {
       "term": "Late Thu Morning",
-      "term_ko": "목요일 늦은 오전",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Late Thu Morning",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares down late Thu. morning on tech slump, U.S.-Iran conflict",
-              "link": "https://n.news.naver.com/mnews/article/001/0016132903?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Late%20Thu%20Morning",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Late%20Thu%20Morning"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares down late Thu. morning on tech slump, U.S.-Iran conflict",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016132903?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "목요일 늦은 오전"
     },
     {
-      "term": "Tech Slump U.S.-Iran",
-      "term_ko": "기술 침체: 미국-이란",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Slump U.S.-Iran",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Seoul shares down late Thu. morning on tech slump, U.S.-Iran conflict",
-              "link": "https://n.news.naver.com/mnews/article/001/0016132903?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Slump%20U.S.-Iran",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Slump%20U.S.-Iran"
-      },
-      "top_headlines": [
-        {
-          "title": "Seoul shares down late Thu. morning on tech slump, U.S.-Iran conflict",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016132903?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tech Slump U.s.-iran",
+      "term_ko": "기술 침체: 미국-이란"
     },
     {
       "term": "Contribution Demystifying Chinese",
-      "term_ko": "‘중국어 해부’ 기고문",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Contribution Demystifying Chinese",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Contribution] Demystifying Chinese tech equities’ lagging performance",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285328?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Contribution%20Demystifying%20Chinese",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Contribution%20Demystifying%20Chinese"
-      },
-      "top_headlines": [
-        {
-          "title": "[Contribution] Demystifying Chinese tech equities’ lagging performance",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285328?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "‘중국어 해부’ 기고문"
     },
     {
       "term": "Tech Equities Lagging",
-      "term_ko": "기술주 부진",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tech Equities Lagging",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[Contribution] Demystifying Chinese tech equities’ lagging performance",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285328?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Equities%20Lagging",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Equities%20Lagging"
-      },
-      "top_headlines": [
-        {
-          "title": "[Contribution] Demystifying Chinese tech equities’ lagging performance",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285328?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기술주 부진"
     },
     {
       "term": "Open Sharply Lower",
-      "term_ko": "개장 초반 급락",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Open Sharply Lower",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T12:48:15+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares open sharply lower on U.S. tech slide, Iran tensions",
-              "link": "https://n.news.naver.com/mnews/article/001/0016132325?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Open%20Sharply%20Lower",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Open%20Sharply%20Lower"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares open sharply lower on U.S. tech slide, Iran tensions",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016132325?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "개장 초반 급락"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-11T03:49:14.969Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-11T12:48:15+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "10,000 People at the Xai Data Center",
+      "term_ko": "xAI 데이터센터로 1만명"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-11T12:48:15+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-11T12:48:15+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Cme Nasdaq Cryptocurrency",
+      "term_ko": "CME 나스닥 암호화폐"
+    },
+    {
+      "term": "The Paradox of the 1,500 Won Exchange Rate",
+      "term_ko": "1500원 환율의 역설"
+    },
+    {
+      "term": "The Financial Crisis 17 Years Ago",
+      "term_ko": "17년 전 금융위기"
+    },
+    {
+      "term": "Domestic Gold Price Per Gram",
+      "term_ko": "국내 금값 1g당"
+    },
+    {
+      "term": "Below the 200,000 Won Mark for 6 Months",
+      "term_ko": "20만원선 아래로 6개월"
+    },
+    {
+      "term": "D.camp, 24th, Finance",
+      "term_ko": "디캠프 24일 금융"
+    },
+    {
+      "term": "5 Services",
+      "term_ko": "서비스와 연계한 5개"
+    },
+    {
+      "term": "Interest Payments for 6 Months",
+      "term_ko": "이자 지급 6개월"
+    },
+    {
+      "term": "Launch of Index Futures",
+      "term_ko": "지수 선물 개시"
+    },
+    {
+      "term": "Pacific M&a Specialists",
+      "term_ko": "태평양 M&A 전문"
+    },
+    {
+      "term": "Strengthening the Workforce: Kang Hyung-seok",
+      "term_ko": "인력 강화 강형석"
+    },
+    {
+      "term": "Recruitment of Attorney Lee Jin-wook",
+      "term_ko": "이진욱 변호사 영입"
+    },
+    {
+      "term": "It Depends on the Time and Your Stamina",
+      "term_ko": "때와 체력이 다르다"
+    },
+    {
+      "term": "Sharing Startup Case Studies",
+      "term_ko": "스타트업 사례 공유"
+    },
+    {
+      "term": "Inbang's Cherry-picking Controversy",
+      "term_ko": "체리피킹 논란 인뱅"
+    },
+    {
+      "term": "Borrowers with Low to Medium Credit Scores Based on Non-financial Data",
+      "term_ko": "비금융자료로 중 저신용자"
+    },
+    {
+      "term": "Bank of Korea Foreign Exchange Reserves",
+      "term_ko": "한은 외화지준 부리"
+    },
+    {
+      "term": "Exchange Rate Extended Through the End of the Year",
+      "term_ko": "연말까지 연장 환율"
+    },
+    {
+      "term": "Bank of Korea's Excess Reserve Requirement for Foreign Currency Deposits",
+      "term_ko": "한국은행 외화예금 초과지준"
+    },
+    {
+      "term": "Musk's Ai Company",
+      "term_ko": "머스크 AI기업"
+    },
+    {
+      "term": "I'm Facing a Class-action Lawsuit",
+      "term_ko": "집단소송 당했다"
+    },
+    {
+      "term": "For the First Time in a Long Time",
+      "term_ko": "만에 처음"
+    },
+    {
+      "term": "Embraced Even More",
+      "term_ko": "더 품었다"
+    },
+    {
+      "term": "All-out Efforts for Stability",
+      "term_ko": "안정 총력"
+    },
+    {
+      "term": "Late Thu Morning",
+      "term_ko": "목요일 늦은 오전"
+    },
+    {
+      "term": "Tech Slump U.s.-iran",
+      "term_ko": "기술 침체: 미국-이란"
+    },
+    {
+      "term": "Contribution Demystifying Chinese",
+      "term_ko": "‘중국어 해부’ 기고문"
+    },
+    {
+      "term": "Tech Equities Lagging",
+      "term_ko": "기술주 부진"
+    },
+    {
+      "term": "Open Sharply Lower",
+      "term_ko": "개장 초반 급락"
+    }
+  ],
+  "translations": {
+    "10,000 People at the Xai Data Center": {
+      "en": "10,000 People at the Xai Data Center",
+      "ko": "xAI 데이터센터로 1만명",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Cme Nasdaq Cryptocurrency": {
+      "en": "Cme Nasdaq Cryptocurrency",
+      "ko": "CME 나스닥 암호화폐",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "The Paradox of the 1,500 Won Exchange Rate": {
+      "en": "The Paradox of the 1,500 Won Exchange Rate",
+      "ko": "1500원 환율의 역설",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "The Financial Crisis 17 Years Ago": {
+      "en": "The Financial Crisis 17 Years Ago",
+      "ko": "17년 전 금융위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Domestic Gold Price Per Gram": {
+      "en": "Domestic Gold Price Per Gram",
+      "ko": "국내 금값 1g당",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Below the 200,000 Won Mark for 6 Months": {
+      "en": "Below the 200,000 Won Mark for 6 Months",
+      "ko": "20만원선 아래로 6개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "D.camp, 24th, Finance": {
+      "en": "D.camp, 24th, Finance",
+      "ko": "디캠프 24일 금융",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "5 Services": {
+      "en": "5 Services",
+      "ko": "서비스와 연계한 5개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Interest Payments for 6 Months": {
+      "en": "Interest Payments for 6 Months",
+      "ko": "이자 지급 6개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Launch of Index Futures": {
+      "en": "Launch of Index Futures",
+      "ko": "지수 선물 개시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Pacific M&a Specialists": {
+      "en": "Pacific M&a Specialists",
+      "ko": "태평양 M&A 전문",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Strengthening the Workforce: Kang Hyung-seok": {
+      "en": "Strengthening the Workforce: Kang Hyung-seok",
+      "ko": "인력 강화 강형석",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Recruitment of Attorney Lee Jin-wook": {
+      "en": "Recruitment of Attorney Lee Jin-wook",
+      "ko": "이진욱 변호사 영입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "It Depends on the Time and Your Stamina": {
+      "en": "It Depends on the Time and Your Stamina",
+      "ko": "때와 체력이 다르다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Sharing Startup Case Studies": {
+      "en": "Sharing Startup Case Studies",
+      "ko": "스타트업 사례 공유",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Inbang's Cherry-picking Controversy": {
+      "en": "Inbang's Cherry-picking Controversy",
+      "ko": "체리피킹 논란 인뱅",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Borrowers with Low to Medium Credit Scores Based on Non-financial Data": {
+      "en": "Borrowers with Low to Medium Credit Scores Based on Non-financial Data",
+      "ko": "비금융자료로 중 저신용자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Bank of Korea Foreign Exchange Reserves": {
+      "en": "Bank of Korea Foreign Exchange Reserves",
+      "ko": "한은 외화지준 부리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Exchange Rate Extended Through the End of the Year": {
+      "en": "Exchange Rate Extended Through the End of the Year",
+      "ko": "연말까지 연장 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Bank of Korea's Excess Reserve Requirement for Foreign Currency Deposits": {
+      "en": "Bank of Korea's Excess Reserve Requirement for Foreign Currency Deposits",
+      "ko": "한국은행 외화예금 초과지준",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Musk's Ai Company": {
+      "en": "Musk's Ai Company",
+      "ko": "머스크 AI기업",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "I'm Facing a Class-action Lawsuit": {
+      "en": "I'm Facing a Class-action Lawsuit",
+      "ko": "집단소송 당했다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "For the First Time in a Long Time": {
+      "en": "For the First Time in a Long Time",
+      "ko": "만에 처음",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Embraced Even More": {
+      "en": "Embraced Even More",
+      "ko": "더 품었다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "All-out Efforts for Stability": {
+      "en": "All-out Efforts for Stability",
+      "ko": "안정 총력",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Late Thu Morning": {
+      "en": "Late Thu Morning",
+      "ko": "목요일 늦은 오전",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Tech Slump U.s.-iran": {
+      "en": "Tech Slump U.s.-iran",
+      "ko": "기술 침체: 미국-이란",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Contribution Demystifying Chinese": {
+      "en": "Contribution Demystifying Chinese",
+      "ko": "‘중국어 해부’ 기고문",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Tech Equities Lagging": {
+      "en": "Tech Equities Lagging",
+      "ko": "기술주 부진",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
+    },
+    "Open Sharply Lower": {
+      "en": "Open Sharply Lower",
+      "ko": "개장 초반 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T10:22:27.415Z"
     }
   }
 }
