@@ -1,1181 +1,411 @@
 {
+  "generatedAt": "2026-06-11T15:59:44.095Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-11",
   "window": "12_hours",
   "total_phrases": 28,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "AI Woes Ease",
-      "term_ko": "AI 관련 우려 완화",
-      "significance_score": 882,
-      "mentions": 480,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Woes Ease",
-        "local_headlines": {
-          "matches": 3,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104"
-            },
-            {
-              "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104"
-            },
-            {
-              "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Woes%20Ease",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Woes%20Ease"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Woes Ease",
+      "term_ko": "AI 관련 우려 완화"
     },
     {
       "term": "Close Higher",
-      "term_ko": "전일 대비 상승 마감",
-      "significance_score": 672,
-      "mentions": 480,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Close Higher",
-        "local_headlines": {
-          "matches": 3,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104"
-            },
-            {
-              "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104"
-            },
-            {
-              "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Close%20Higher",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Close%20Higher"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Seoul shares close higher as AI woes ease amid Middle East uncertainties",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133634?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전일 대비 상승 마감"
     },
     {
       "term": "Middle East",
-      "term_ko": "중동",
-      "significance_score": 448,
-      "mentions": 386,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Middle East",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 31.81818
-            },
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 77.27272
-            },
-            {
-              "period": "2026-06-05",
-              "timestamp": 1780585200000,
-              "value": 27.27272
-            },
-            {
-              "period": "2026-06-06",
-              "timestamp": 1780671600000,
-              "value": 50
-            },
-            {
-              "period": "2026-06-07",
-              "timestamp": 1780758000000,
-              "value": 45.45454
-            },
-            {
-              "period": "2026-06-08",
-              "timestamp": 1780844400000,
-              "value": 86.36363
-            },
-            {
-              "period": "2026-06-09",
-              "timestamp": 1780930800000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-10",
-              "timestamp": 1781017200000,
-              "value": 77.27272
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104"
-            },
-            {
-              "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Middle%20East",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Middle%20East"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 386.3636,
-        "weekly_average_volume": 64.3939,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.0161,
-        "time_weight": 0.023031,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781017200000
-      }
+      "term_ko": "중동"
     },
     {
-      "term": "Increase policy funding by 34 trillion won",
-      "term_ko": "정책자금 34조 늘려",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정책자금 34조 늘려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
-              "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%2034%EC%A1%B0%20%EB%8A%98%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%2034%EC%A1%B0%20%EB%8A%98%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Increase Policy Funding by 34 Trillion Won",
+      "term_ko": "정책자금 34조 늘려"
     },
     {
-      "term": "50 billion won New Growth Fund",
-      "term_ko": "신성장 펀드 500억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신성장 펀드 500억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
-              "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%84%B1%EC%9E%A5%20%ED%8E%80%EB%93%9C%20500%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%84%B1%EC%9E%A5%20%ED%8E%80%EB%93%9C%20500%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
-          "summary": "",
-          "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "50 Billion Won New Growth Fund",
+      "term_ko": "신성장 펀드 500억"
     },
     {
-      "term": "Interest payments on excess reserve funds: 6 months",
-      "term_ko": "초과지급준비금 이자지급 6개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "초과지급준비금 이자지급 6개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
-              "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B4%88%EA%B3%BC%EC%A7%80%EA%B8%89%EC%A4%80%EB%B9%84%EA%B8%88%20%EC%9D%B4%EC%9E%90%EC%A7%80%EA%B8%89%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B4%88%EA%B3%BC%EC%A7%80%EA%B8%89%EC%A4%80%EB%B9%84%EA%B8%88%20%EC%9D%B4%EC%9E%90%EC%A7%80%EA%B8%89%206%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Payments on Excess Reserve Funds: 6 Months",
+      "term_ko": "초과지급준비금 이자지급 6개월"
     },
     {
-      "term": "High-interest mortgage: 8%",
-      "term_ko": "부담 주담대 8%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부담 주담대 8%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80%208%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8B%B4%20%EC%A3%BC%EB%8B%B4%EB%8C%80%208%25"
-      },
-      "top_headlines": [
-        {
-          "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "High-interest Mortgage: 8%",
+      "term_ko": "부담 주담대 8%"
     },
     {
       "term": "Personal Loan at 7% Interest",
-      "term_ko": "신용대출 7% 코",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "신용대출 7% 코",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%207%25%20%EC%BD%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C%207%25%20%EC%BD%94"
-      },
-      "top_headlines": [
-        {
-          "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "신용대출 7% 코"
     },
     {
       "term": "Future Asset Overcomes Skepticism",
-      "term_ko": "회의론 딛은 미래에셋",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회의론 딛은 미래에셋",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "회의론 딛은 미래에셋 박현주의 ‘뚝심’…스페이스X와 날아오르다",
-              "link": "http://www.segyebiz.com/newsView/20260611513242?OutUrl=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%9D%98%EB%A1%A0%20%EB%94%9B%EC%9D%80%20%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%9D%98%EB%A1%A0%20%EB%94%9B%EC%9D%80%20%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B"
-      },
-      "top_headlines": [
-        {
-          "title": "회의론 딛은 미래에셋 박현주의 ‘뚝심’…스페이스X와 날아오르다",
-          "summary": "",
-          "link": "http://www.segyebiz.com/newsView/20260611513242?OutUrl=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "회의론 딛은 미래에셋"
     },
     {
-      "term": "European stock futures decline",
-      "term_ko": "위축 유럽증시 선물",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "위축 유럽증시 선물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%84%EC%B6%95%20%EC%9C%A0%EB%9F%BD%EC%A6%9D%EC%8B%9C%20%EC%84%A0%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%84%EC%B6%95%20%EC%9C%A0%EB%9F%BD%EC%A6%9D%EC%8B%9C%20%EC%84%A0%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "European Stock Futures Decline",
+      "term_ko": "위축 유럽증시 선물"
     },
     {
-      "term": "Now is the time for the economy",
-      "term_ko": "이제는 경제의 시간",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이제는 경제의 시간",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
-              "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%A0%9C%EB%8A%94%20%EA%B2%BD%EC%A0%9C%EC%9D%98%20%EC%8B%9C%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%A0%9C%EB%8A%94%20%EA%B2%BD%EC%A0%9C%EC%9D%98%20%EC%8B%9C%EA%B0%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
-          "summary": "",
-          "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Now Is the Time for the Economy",
+      "term_ko": "이제는 경제의 시간"
     },
     {
       "term": "Factors Affecting Growth ②",
-      "term_ko": "성장세의 변수 ②",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "성장세의 변수 ②",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
-              "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EC%9E%A5%EC%84%B8%EC%9D%98%20%EB%B3%80%EC%88%98%20%E2%91%A1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EC%9E%A5%EC%84%B8%EC%9D%98%20%EB%B3%80%EC%88%98%20%E2%91%A1"
-      },
-      "top_headlines": [
-        {
-          "title": "[이제는 경제의 시간 - 중동 사태, 충북경제 성장세의 변수 ②] 유가·금...",
-          "summary": "",
-          "link": "https://www.ccdn.co.kr/news/articleView.html?idxno=1082702",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "성장세의 변수 ②"
     },
     {
-      "term": "Samsung Electronics Smiled Even as the Market Plummeted",
-      "term_ko": "삼전닉스 폭락장에도 웃었다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼전닉스 폭락장에도 웃었다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-              "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%ED%8F%AD%EB%9D%BD%EC%9E%A5%EC%97%90%EB%8F%84%20%EC%9B%83%EC%97%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%ED%8F%AD%EB%9D%BD%EC%9E%A5%EC%97%90%EB%8F%84%20%EC%9B%83%EC%97%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Electronics Smiled Even As the Market Plummeted",
+      "term_ko": "삼전닉스 폭락장에도 웃었다"
     },
     {
-      "term": "I mixed this, and it turned out great",
-      "term_ko": "이것 섞었더니 방어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이것 섞었더니 방어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-              "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EA%B2%83%20%EC%84%9E%EC%97%88%EB%8D%94%EB%8B%88%20%EB%B0%A9%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EA%B2%83%20%EC%84%9E%EC%97%88%EB%8D%94%EB%8B%88%20%EB%B0%A9%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "삼전닉스 폭락장에도 웃었다…‘이것’ 섞었더니 방어 제대로네",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005692717?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Mixed This, and It Turned Out Great",
+      "term_ko": "이것 섞었더니 방어"
     },
     {
-      "term": "164 trillion won in funding",
-      "term_ko": "164조 공급",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "164조 공급",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
-              "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=164%EC%A1%B0%20%EA%B3%B5%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=164%EC%A1%B0%20%EA%B3%B5%EA%B8%89"
-      },
-      "top_headlines": [
-        {
-          "title": "금융위 \"2028년 지방에 정책자금 34조 늘려 164조 공급\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005533930?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "164 Trillion Won in Funding",
+      "term_ko": "164조 공급"
     },
     {
-      "term": "U.S. stock market declines",
-      "term_ko": "하락 美증시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락 美증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
-              "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%E7%BE%8E%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%E7%BE%8E%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "장중...亞증시 '위축', 유럽증시 선물 '하락', 美증시 선물 '상승'",
-          "summary": "",
-          "link": "http://www.choicenews.co.kr/news/articleView.html?idxno=166451",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Stock Market Declines",
+      "term_ko": "하락 美증시"
     },
     {
       "term": "Hana Financial Industrial Complex",
-      "term_ko": "하나금융 산업단지",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하나금융 산업단지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
-              "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20%EC%82%B0%EC%97%85%EB%8B%A8%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%20%EC%82%B0%EC%97%85%EB%8B%A8%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "하나금융, 산업단지 신성장 펀드 500억 조성",
-          "summary": "",
-          "link": "https://www.safetynews.co.kr/news/articleView.html?idxno=248927",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하나금융 산업단지"
     },
     {
       "term": "Bank of Korea Foreign Currency Deposits",
-      "term_ko": "한은 외화예금",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한은 외화예금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
-              "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EC%9D%80%20%EC%99%B8%ED%99%94%EC%98%88%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EC%9D%80%20%EC%99%B8%ED%99%94%EC%98%88%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "한은 \"외화예금 초과지급준비금 이자지급 6개월 연장\"",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001504915?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한은 외화예금"
     },
     {
-      "term": "Borrowing to invest",
-      "term_ko": "빚투 영끌",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚투 영끌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-              "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%20%EC%98%81%EB%81%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%20%EC%98%81%EB%81%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "“빚투·영끌 부담↑”…주담대 8%·신용대출 7% 코 앞이다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002655447?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Borrowing to Invest",
+      "term_ko": "빚투 영끌"
     },
     {
-      "term": "Enabled SpaceXs I.P.O",
-      "term_ko": "스페이스X의 기업공개(IPO)를 가능하게 했다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Enabled SpaceXs I.P.O",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "How Tesla’s Stock Listing in 2010 Enabled SpaceX’s I.P.O.",
-              "link": "https://www.nytimes.com/2026/06/11/business/spacex-tesla-ipo-elon-musk.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Enabled%20SpaceXs%20I.P.O",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Enabled%20SpaceXs%20I.P.O"
-      },
-      "top_headlines": [
-        {
-          "title": "How Tesla’s Stock Listing in 2010 Enabled SpaceX’s I.P.O.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/11/business/spacex-tesla-ipo-elon-musk.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Enabled Spacexs I.p.o",
+      "term_ko": "스페이스X의 기업공개(IPO)를 가능하게 했다"
     },
     {
-      "term": "LD Seoul",
-      "term_ko": "LD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(2nd LD) Seoul shares close higher as AI woes ease amid Middle East uncer...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133872?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
     },
     {
-      "term": "LEAD Seoul",
-      "term_ko": "LEAD 서울",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "LEAD Seoul",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-              "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
-      },
-      "top_headlines": [
-        {
-          "title": "(LEAD) Seoul shares close higher as AI woes ease amid Middle East uncerta...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/001/0016133741?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
     },
     {
       "term": "How Teslas",
-      "term_ko": "테슬라는 어떻게",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "How Teslas",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "How Tesla’s Stock Listing in 2010 Enabled SpaceX’s I.P.O.",
-              "link": "https://www.nytimes.com/2026/06/11/business/spacex-tesla-ipo-elon-musk.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=How%20Teslas",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=How%20Teslas"
-      },
-      "top_headlines": [
-        {
-          "title": "How Tesla’s Stock Listing in 2010 Enabled SpaceX’s I.P.O.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/11/business/spacex-tesla-ipo-elon-musk.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "테슬라는 어떻게"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Anticipation for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-11T19:24:32+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-03",
-              "timestamp": 1780412400000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-04",
-              "timestamp": 1780498800000,
-              "value": 100
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 0,
-        "weekly_average_volume": 0,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 1,
-        "time_weight": 0.005335,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1780498800000
-      }
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-11T10:25:39.533Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-11T19:24:32+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 2,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ai Woes Ease",
+      "term_ko": "AI 관련 우려 완화"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-11T19:24:32+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-11T19:24:32+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Close Higher",
+      "term_ko": "전일 대비 상승 마감"
+    },
+    {
+      "term": "Middle East",
+      "term_ko": "중동"
+    },
+    {
+      "term": "Increase Policy Funding by 34 Trillion Won",
+      "term_ko": "정책자금 34조 늘려"
+    },
+    {
+      "term": "50 Billion Won New Growth Fund",
+      "term_ko": "신성장 펀드 500억"
+    },
+    {
+      "term": "Interest Payments on Excess Reserve Funds: 6 Months",
+      "term_ko": "초과지급준비금 이자지급 6개월"
+    },
+    {
+      "term": "High-interest Mortgage: 8%",
+      "term_ko": "부담 주담대 8%"
+    },
+    {
+      "term": "Personal Loan at 7% Interest",
+      "term_ko": "신용대출 7% 코"
+    },
+    {
+      "term": "Future Asset Overcomes Skepticism",
+      "term_ko": "회의론 딛은 미래에셋"
+    },
+    {
+      "term": "European Stock Futures Decline",
+      "term_ko": "위축 유럽증시 선물"
+    },
+    {
+      "term": "Now Is the Time for the Economy",
+      "term_ko": "이제는 경제의 시간"
+    },
+    {
+      "term": "Factors Affecting Growth ②",
+      "term_ko": "성장세의 변수 ②"
+    },
+    {
+      "term": "Samsung Electronics Smiled Even As the Market Plummeted",
+      "term_ko": "삼전닉스 폭락장에도 웃었다"
+    },
+    {
+      "term": "I Mixed This, and It Turned Out Great",
+      "term_ko": "이것 섞었더니 방어"
+    },
+    {
+      "term": "164 Trillion Won in Funding",
+      "term_ko": "164조 공급"
+    },
+    {
+      "term": "U.s. Stock Market Declines",
+      "term_ko": "하락 美증시"
+    },
+    {
+      "term": "Hana Financial Industrial Complex",
+      "term_ko": "하나금융 산업단지"
+    },
+    {
+      "term": "Bank of Korea Foreign Currency Deposits",
+      "term_ko": "한은 외화예금"
+    },
+    {
+      "term": "Borrowing to Invest",
+      "term_ko": "빚투 영끌"
+    },
+    {
+      "term": "Enabled Spacexs I.p.o",
+      "term_ko": "스페이스X의 기업공개(IPO)를 가능하게 했다"
+    },
+    {
+      "term": "Ld Seoul",
+      "term_ko": "LD 서울"
+    },
+    {
+      "term": "Lead Seoul",
+      "term_ko": "LEAD 서울"
+    },
+    {
+      "term": "How Teslas",
+      "term_ko": "테슬라는 어떻게"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "Ai Woes Ease": {
+      "en": "Ai Woes Ease",
+      "ko": "AI 관련 우려 완화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Close Higher": {
+      "en": "Close Higher",
+      "ko": "전일 대비 상승 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Middle East": {
+      "en": "Middle East",
+      "ko": "중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Increase Policy Funding by 34 Trillion Won": {
+      "en": "Increase Policy Funding by 34 Trillion Won",
+      "ko": "정책자금 34조 늘려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "50 Billion Won New Growth Fund": {
+      "en": "50 Billion Won New Growth Fund",
+      "ko": "신성장 펀드 500억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Interest Payments on Excess Reserve Funds: 6 Months": {
+      "en": "Interest Payments on Excess Reserve Funds: 6 Months",
+      "ko": "초과지급준비금 이자지급 6개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "High-interest Mortgage: 8%": {
+      "en": "High-interest Mortgage: 8%",
+      "ko": "부담 주담대 8%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Personal Loan at 7% Interest": {
+      "en": "Personal Loan at 7% Interest",
+      "ko": "신용대출 7% 코",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Future Asset Overcomes Skepticism": {
+      "en": "Future Asset Overcomes Skepticism",
+      "ko": "회의론 딛은 미래에셋",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "European Stock Futures Decline": {
+      "en": "European Stock Futures Decline",
+      "ko": "위축 유럽증시 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Now Is the Time for the Economy": {
+      "en": "Now Is the Time for the Economy",
+      "ko": "이제는 경제의 시간",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Factors Affecting Growth ②": {
+      "en": "Factors Affecting Growth ②",
+      "ko": "성장세의 변수 ②",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Samsung Electronics Smiled Even As the Market Plummeted": {
+      "en": "Samsung Electronics Smiled Even As the Market Plummeted",
+      "ko": "삼전닉스 폭락장에도 웃었다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "I Mixed This, and It Turned Out Great": {
+      "en": "I Mixed This, and It Turned Out Great",
+      "ko": "이것 섞었더니 방어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "164 Trillion Won in Funding": {
+      "en": "164 Trillion Won in Funding",
+      "ko": "164조 공급",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "U.s. Stock Market Declines": {
+      "en": "U.s. Stock Market Declines",
+      "ko": "하락 美증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Hana Financial Industrial Complex": {
+      "en": "Hana Financial Industrial Complex",
+      "ko": "하나금융 산업단지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Bank of Korea Foreign Currency Deposits": {
+      "en": "Bank of Korea Foreign Currency Deposits",
+      "ko": "한은 외화예금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Borrowing to Invest": {
+      "en": "Borrowing to Invest",
+      "ko": "빚투 영끌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Enabled Spacexs I.p.o": {
+      "en": "Enabled Spacexs I.p.o",
+      "ko": "스페이스X의 기업공개(IPO)를 가능하게 했다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Ld Seoul": {
+      "en": "Ld Seoul",
+      "ko": "LD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Lead Seoul": {
+      "en": "Lead Seoul",
+      "ko": "LEAD 서울",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "How Teslas": {
+      "en": "How Teslas",
+      "ko": "테슬라는 어떻게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Anticipation for a Bitcoin Etf": {
+      "en": "Anticipation for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
+    },
+    "Korean Won-u.s. Dollar Exchange Rate Surges": {
+      "en": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-11T15:59:44.095Z"
     }
   }
 }
