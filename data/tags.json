@@ -1,1211 +1,425 @@
 {
+  "generatedAt": "2026-06-12T20:10:36.328Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-12",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "USA SPACE X",
-      "term_ko": "미국 스페이스X",
-      "significance_score": 546,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "USA SPACE X",
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "USA SPACE X NASDAQ MAEKET",
-              "link": "https://n.news.naver.com/mnews/article/091/0010230071?sid=104"
-            },
-            {
-              "title": "USA SPACEX",
-              "link": "https://n.news.naver.com/mnews/article/091/0010230031?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=USA%20SPACE%20X",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=USA%20SPACE%20X"
-      },
-      "top_headlines": [
-        {
-          "title": "USA SPACE X NASDAQ MAEKET",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010230071?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "USA SPACEX",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010230031?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Usa Space X",
+      "term_ko": "미국 스페이스X"
     },
     {
-      "term": "SpaceX IPO",
-      "term_ko": "스페이스X 기업공개",
-      "significance_score": 504,
-      "mentions": 320,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX IPO",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-05",
-              "timestamp": 1780585200000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-06",
-              "timestamp": 1780671600000,
-              "value": 37.96296
-            },
-            {
-              "period": "2026-06-07",
-              "timestamp": 1780758000000,
-              "value": 22.22222
-            },
-            {
-              "period": "2026-06-08",
-              "timestamp": 1780844400000,
-              "value": 52.77777
-            },
-            {
-              "period": "2026-06-09",
-              "timestamp": 1780930800000,
-              "value": 43.51851
-            },
-            {
-              "period": "2026-06-10",
-              "timestamp": 1781017200000,
-              "value": 63.88888
-            },
-            {
-              "period": "2026-06-11",
-              "timestamp": 1781103600000,
-              "value": 83.33333
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "APTOPIX Finacial Markets SpaceX IPO",
-              "link": "https://n.news.naver.com/mnews/article/077/0007043268?sid=104"
-            },
-            {
-              "title": "Finacial Markets SpaceX IPO",
-              "link": "https://n.news.naver.com/mnews/article/077/0007043258?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "APTOPIX Finacial Markets SpaceX IPO",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/077/0007043268?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "Finacial Markets SpaceX IPO",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/077/0007043258?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 265.7407,
-        "weekly_average_volume": 53.1481,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.020869,
-        "time_weight": 0.020831,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781103600000
-      }
+      "term": "Spacex Ipo",
+      "term_ko": "스페이스X 기업공개"
     },
     {
-      "term": "Secondary Financial News Briefing: OK Savings Bank",
-      "term_ko": "2금융 뉴스브리핑 OK저축은행",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2금융 뉴스브리핑 OK저축은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[2금융 뉴스브리핑] OK저축은행 예금금리 '인상' 결정",
-              "link": "https://www.asiatime.co.kr/article/20260612500335"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EA%B8%88%EC%9C%B5%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20OK%EC%A0%80%EC%B6%95%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EA%B8%88%EC%9C%B5%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20OK%EC%A0%80%EC%B6%95%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "[2금융 뉴스브리핑] OK저축은행 예금금리 '인상' 결정",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260612500335",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Secondary Financial News Briefing: Ok Savings Bank",
+      "term_ko": "2금융 뉴스브리핑 OK저축은행"
     },
     {
-      "term": "AI with reduced names",
-      "term_ko": "명 감소 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "명 감소 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 반도체 호황에도 청년층 고용 25만 5천 명 감소, 'AI 충격...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750194"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%85%20%EA%B0%90%EC%86%8C%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%85%20%EA%B0%90%EC%86%8C%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 반도체 호황에도 청년층 고용 25만 5천 명 감소, 'AI 충격...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750194",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai with Reduced Names",
+      "term_ko": "명 감소 AI"
     },
     {
-      "term": "Editorial: EU Interest Rate Hike",
-      "term_ko": "사설EU 금리 인상",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사설EU 금리 인상",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설]EU 금리 인상, 韓日도 예고… ‘긴축’은 곧 닥칠 미래",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726504?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4EU%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4EU%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설]EU 금리 인상, 韓日도 예고… ‘긴축’은 곧 닥칠 미래",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726504?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Editorial: Eu Interest Rate Hike",
+      "term_ko": "사설EU 금리 인상"
     },
     {
-      "term": "250,000 youth jobs",
-      "term_ko": "청년층 고용 25만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청년층 고용 25만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 반도체 호황에도 청년층 고용 25만 5천 명 감소, 'AI 충격...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750194"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EB%85%84%EC%B8%B5%20%EA%B3%A0%EC%9A%A9%2025%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EB%85%84%EC%B8%B5%20%EA%B3%A0%EC%9A%A9%2025%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 반도체 호황에도 청년층 고용 25만 5천 명 감소, 'AI 충격...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750194",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "250,000 Youth Jobs",
+      "term_ko": "청년층 고용 25만"
     },
     {
-      "term": "Market shifts to net buying, breaking through the 8,000 mark",
-      "term_ko": "순매수 전환에 8000선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순매수 전환에 8000선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 외국인 순매수 전환에 8,000선 재돌파… 하루 만에 4.63% 급등",
-              "link": "https://www.tokenpost.kr/news/market/368716"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EB%A7%A4%EC%88%98%20%EC%A0%84%ED%99%98%EC%97%90%208000%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EB%A7%A4%EC%88%98%20%EC%A0%84%ED%99%98%EC%97%90%208000%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 외국인 순매수 전환에 8,000선 재돌파… 하루 만에 4.63% 급등",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/368716",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Market Shifts to Net Buying, Breaking Through the 8,000 Mark",
+      "term_ko": "순매수 전환에 8000선"
     },
     {
-      "term": "4.63% in a single day",
-      "term_ko": "하루 만에 4.63%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하루 만에 4.63%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 외국인 순매수 전환에 8,000선 재돌파… 하루 만에 4.63% 급등",
-              "link": "https://www.tokenpost.kr/news/market/368716"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%A3%A8%20%EB%A7%8C%EC%97%90%204.63%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%A3%A8%20%EB%A7%8C%EC%97%90%204.63%25"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 외국인 순매수 전환에 8,000선 재돌파… 하루 만에 4.63% 급등",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/368716",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "4.63% in a Single Day",
+      "term_ko": "하루 만에 4.63%"
     },
     {
       "term": "Park Geun-jong Column: Semiconductors",
-      "term_ko": "박근종 칼럼 반도체",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "박근종 칼럼 반도체",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 반도체 호황에도 청년층 고용 25만 5천 명 감소, 'AI 충격...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750194"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EB%B0%98%EB%8F%84%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%95%EA%B7%BC%EC%A2%85%20%EC%B9%BC%EB%9F%BC%20%EB%B0%98%EB%8F%84%EC%B2%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 반도체 호황에도 청년층 고용 25만 5천 명 감소, 'AI 충격...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750194",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "박근종 칼럼 반도체"
     },
     {
       "term": "The Near Future",
-      "term_ko": "곧 닥칠 미래",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "곧 닥칠 미래",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설]EU 금리 인상, 韓日도 예고… ‘긴축’은 곧 닥칠 미래",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726504?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A7%20%EB%8B%A5%EC%B9%A0%20%EB%AF%B8%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A7%20%EB%8B%A5%EC%B9%A0%20%EB%AF%B8%EB%9E%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설]EU 금리 인상, 韓日도 예고… ‘긴축’은 곧 닥칠 미래",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726504?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "곧 닥칠 미래"
     },
     {
-      "term": "In response to warnings about debt-fueled investments, the market...",
-      "term_ko": "빚투 경고에 시중",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚투 경고에 시중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'빚투' 경고에 시중 은행, 일제히 신용대출 '조이기'",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365860?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%A0%EC%97%90%20%EC%8B%9C%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%A0%EC%97%90%20%EC%8B%9C%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "'빚투' 경고에 시중 은행, 일제히 신용대출 '조이기'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365860?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "In Response to Warnings About Debt-fueled Investments, the Market...",
+      "term_ko": "빚투 경고에 시중"
     },
     {
-      "term": "Banks are simultaneously offering personal loans",
-      "term_ko": "은행 일제히 신용대출",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "은행 일제히 신용대출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'빚투' 경고에 시중 은행, 일제히 신용대출 '조이기'",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365860?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%ED%96%89%20%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%ED%96%89%20%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "'빚투' 경고에 시중 은행, 일제히 신용대출 '조이기'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365860?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Banks Are Simultaneously Offering Personal Loans",
+      "term_ko": "은행 일제히 신용대출"
     },
     {
       "term": "Decision to Raise Deposit Interest Rates",
-      "term_ko": "예금금리 인상 결정",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "예금금리 인상 결정",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[2금융 뉴스브리핑] OK저축은행 예금금리 '인상' 결정",
-              "link": "https://www.asiatime.co.kr/article/20260612500335"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%EA%B8%88%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EA%B2%B0%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%EA%B8%88%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EA%B2%B0%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "[2금융 뉴스브리핑] OK저축은행 예금금리 '인상' 결정",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260612500335",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "예금금리 인상 결정"
     },
     {
       "term": "New York Stock Market Preview: Middle East",
-      "term_ko": "뉴욕증시 프리뷰 중동",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 중동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 중동 평화 기대에 美 주가 선물 급등…스페이스X IPO도...",
-              "link": "https://www.newspim.com/news/view/20260612001192"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%A4%91%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EC%A4%91%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 중동 평화 기대에 美 주가 선물 급등…스페이스X IPO도...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260612001192",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕증시 프리뷰 중동"
     },
     {
-      "term": "The U.S. Holds Out Hope for Peace",
-      "term_ko": "평화 기대에 美",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "평화 기대에 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 중동 평화 기대에 美 주가 선물 급등…스페이스X IPO도...",
-              "link": "https://www.newspim.com/news/view/20260612001192"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%89%ED%99%94%20%EA%B8%B0%EB%8C%80%EC%97%90%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%89%ED%99%94%20%EA%B8%B0%EB%8C%80%EC%97%90%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 중동 평화 기대에 美 주가 선물 급등…스페이스X IPO도...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260612001192",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The U.s. Holds Out Hope for Peace",
+      "term_ko": "평화 기대에 美"
     },
     {
-      "term": "Stock futures surge",
-      "term_ko": "주가 선물 급등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주가 선물 급등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 중동 평화 기대에 美 주가 선물 급등…스페이스X IPO도...",
-              "link": "https://www.newspim.com/news/view/20260612001192"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%20%EC%84%A0%EB%AC%BC%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 중동 평화 기대에 美 주가 선물 급등…스페이스X IPO도...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260612001192",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Futures Surge",
+      "term_ko": "주가 선물 급등"
     },
     {
-      "term": "Space Tech ETFs",
-      "term_ko": "우주 기술 ETF",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Space Tech ETFs",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "South Korean Space Tech ETFs Soar After SpaceX Listing",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271218"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Space%20Tech%20ETFs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Space%20Tech%20ETFs"
-      },
-      "top_headlines": [
-        {
-          "title": "South Korean Space Tech ETFs Soar After SpaceX Listing",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271218",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Space Tech Etfs",
+      "term_ko": "우주 기술 ETF"
     },
     {
-      "term": "Foreign Investors on the KOSPI",
-      "term_ko": "코스피 외국인",
-      "significance_score": 280,
-      "mentions": 338,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 외국인",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-05",
-              "timestamp": 1780585200000,
-              "value": 73.0337
-            },
-            {
-              "period": "2026-06-06",
-              "timestamp": 1780671600000,
-              "value": 14.2322
-            },
-            {
-              "period": "2026-06-07",
-              "timestamp": 1780758000000,
-              "value": 5.61797
-            },
-            {
-              "period": "2026-06-08",
-              "timestamp": 1780844400000,
-              "value": 97.7528
-            },
-            {
-              "period": "2026-06-09",
-              "timestamp": 1780930800000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-10",
-              "timestamp": 1781017200000,
-              "value": 67.79026
-            },
-            {
-              "period": "2026-06-11",
-              "timestamp": 1781103600000,
-              "value": 67.04119
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피, 외국인 순매수 전환에 8,000선 재돌파… 하루 만에 4.63% 급등",
-              "link": "https://www.tokenpost.kr/news/market/368716"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%99%B8%EA%B5%AD%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%99%B8%EA%B5%AD%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피, 외국인 순매수 전환에 8,000선 재돌파… 하루 만에 4.63% 급등",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/368716",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 338.2022,
-        "weekly_average_volume": 67.6404,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.017657,
-        "time_weight": 0.020829,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781103600000
-      }
+      "term": "Foreign Investors on the Kospi",
+      "term_ko": "코스피 외국인"
     },
     {
-      "term": "When Will SpaceX",
-      "term_ko": "스페이스X는 언제",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "When Will SpaceX",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "When will SpaceX start trading?",
-              "link": "https://www.nytimes.com/live/2026/06/12/business/spacex-ipo-elon-musk/when-will-spacex-start-trading?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=When%20Will%20SpaceX",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=When%20Will%20SpaceX"
-      },
-      "top_headlines": [
-        {
-          "title": "When will SpaceX start trading?",
-          "summary": "",
-          "link": "https://www.nytimes.com/live/2026/06/12/business/spacex-ipo-elon-musk/when-will-spacex-start-trading?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "When Will Spacex",
+      "term_ko": "스페이스X는 언제"
     },
     {
-      "term": "APTOPIX Finacial",
-      "term_ko": "APTOPIX 금융",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "APTOPIX Finacial",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "APTOPIX Finacial Markets SpaceX IPO",
-              "link": "https://n.news.naver.com/mnews/article/077/0007043268?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=APTOPIX%20Finacial",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=APTOPIX%20Finacial"
-      },
-      "top_headlines": [
-        {
-          "title": "APTOPIX Finacial Markets SpaceX IPO",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/077/0007043268?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Aptopix Finacial",
+      "term_ko": "APTOPIX 금융"
     },
     {
-      "term": "NASDAQ MAEKET",
-      "term_ko": "나스닥 시장",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "NASDAQ MAEKET",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "USA SPACE X NASDAQ MAEKET",
-              "link": "https://n.news.naver.com/mnews/article/091/0010230071?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NASDAQ%20MAEKET",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NASDAQ%20MAEKET"
-      },
-      "top_headlines": [
-        {
-          "title": "USA SPACE X NASDAQ MAEKET",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/091/0010230071?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nasdaq Maeket",
+      "term_ko": "나스닥 시장"
     },
     {
       "term": "South Korean",
-      "term_ko": "한국의",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "South Korean",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "South Korean Space Tech ETFs Soar After SpaceX Listing",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271218"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=South%20Korean",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=South%20Korean"
-      },
-      "top_headlines": [
-        {
-          "title": "South Korean Space Tech ETFs Soar After SpaceX Listing",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271218",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국의"
     },
     {
-      "term": "SpaceX Listing",
-      "term_ko": "스페이스X 상장",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX Listing",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "South Korean Space Tech ETFs Soar After SpaceX Listing",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271218"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20Listing",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20Listing"
-      },
-      "top_headlines": [
-        {
-          "title": "South Korean Space Tech ETFs Soar After SpaceX Listing",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271218",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex Listing",
+      "term_ko": "스페이스X 상장"
     },
     {
       "term": "Start Trading",
-      "term_ko": "거래 시작하기",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Start Trading",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "When will SpaceX start trading?",
-              "link": "https://www.nytimes.com/live/2026/06/12/business/spacex-ipo-elon-musk/when-will-spacex-start-trading?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Start%20Trading",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Start%20Trading"
-      },
-      "top_headlines": [
-        {
-          "title": "When will SpaceX start trading?",
-          "summary": "",
-          "link": "https://www.nytimes.com/live/2026/06/12/business/spacex-ipo-elon-musk/when-will-spacex-start-trading?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "거래 시작하기"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Anticipation for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-12T23:59:40+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-12T15:00:46.892Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-12T23:59:40+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Usa Space X",
+      "term_ko": "미국 스페이스X"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-12T23:59:40+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-12T23:59:40+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Spacex Ipo",
+      "term_ko": "스페이스X 기업공개"
+    },
+    {
+      "term": "Secondary Financial News Briefing: Ok Savings Bank",
+      "term_ko": "2금융 뉴스브리핑 OK저축은행"
+    },
+    {
+      "term": "Ai with Reduced Names",
+      "term_ko": "명 감소 AI"
+    },
+    {
+      "term": "Editorial: Eu Interest Rate Hike",
+      "term_ko": "사설EU 금리 인상"
+    },
+    {
+      "term": "250,000 Youth Jobs",
+      "term_ko": "청년층 고용 25만"
+    },
+    {
+      "term": "Market Shifts to Net Buying, Breaking Through the 8,000 Mark",
+      "term_ko": "순매수 전환에 8000선"
+    },
+    {
+      "term": "4.63% in a Single Day",
+      "term_ko": "하루 만에 4.63%"
+    },
+    {
+      "term": "Park Geun-jong Column: Semiconductors",
+      "term_ko": "박근종 칼럼 반도체"
+    },
+    {
+      "term": "The Near Future",
+      "term_ko": "곧 닥칠 미래"
+    },
+    {
+      "term": "In Response to Warnings About Debt-fueled Investments, the Market...",
+      "term_ko": "빚투 경고에 시중"
+    },
+    {
+      "term": "Banks Are Simultaneously Offering Personal Loans",
+      "term_ko": "은행 일제히 신용대출"
+    },
+    {
+      "term": "Decision to Raise Deposit Interest Rates",
+      "term_ko": "예금금리 인상 결정"
+    },
+    {
+      "term": "New York Stock Market Preview: Middle East",
+      "term_ko": "뉴욕증시 프리뷰 중동"
+    },
+    {
+      "term": "The U.s. Holds Out Hope for Peace",
+      "term_ko": "평화 기대에 美"
+    },
+    {
+      "term": "Stock Futures Surge",
+      "term_ko": "주가 선물 급등"
+    },
+    {
+      "term": "Space Tech Etfs",
+      "term_ko": "우주 기술 ETF"
+    },
+    {
+      "term": "Foreign Investors on the Kospi",
+      "term_ko": "코스피 외국인"
+    },
+    {
+      "term": "When Will Spacex",
+      "term_ko": "스페이스X는 언제"
+    },
+    {
+      "term": "Aptopix Finacial",
+      "term_ko": "APTOPIX 금융"
+    },
+    {
+      "term": "Nasdaq Maeket",
+      "term_ko": "나스닥 시장"
+    },
+    {
+      "term": "South Korean",
+      "term_ko": "한국의"
+    },
+    {
+      "term": "Spacex Listing",
+      "term_ko": "스페이스X 상장"
+    },
+    {
+      "term": "Start Trading",
+      "term_ko": "거래 시작하기"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "Usa Space X": {
+      "en": "Usa Space X",
+      "ko": "미국 스페이스X",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Spacex Ipo": {
+      "en": "Spacex Ipo",
+      "ko": "스페이스X 기업공개",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Secondary Financial News Briefing: Ok Savings Bank": {
+      "en": "Secondary Financial News Briefing: Ok Savings Bank",
+      "ko": "2금융 뉴스브리핑 OK저축은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Ai with Reduced Names": {
+      "en": "Ai with Reduced Names",
+      "ko": "명 감소 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Editorial: Eu Interest Rate Hike": {
+      "en": "Editorial: Eu Interest Rate Hike",
+      "ko": "사설EU 금리 인상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "250,000 Youth Jobs": {
+      "en": "250,000 Youth Jobs",
+      "ko": "청년층 고용 25만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Market Shifts to Net Buying, Breaking Through the 8,000 Mark": {
+      "en": "Market Shifts to Net Buying, Breaking Through the 8,000 Mark",
+      "ko": "순매수 전환에 8000선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "4.63% in a Single Day": {
+      "en": "4.63% in a Single Day",
+      "ko": "하루 만에 4.63%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Park Geun-jong Column: Semiconductors": {
+      "en": "Park Geun-jong Column: Semiconductors",
+      "ko": "박근종 칼럼 반도체",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "The Near Future": {
+      "en": "The Near Future",
+      "ko": "곧 닥칠 미래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "In Response to Warnings About Debt-fueled Investments, the Market...": {
+      "en": "In Response to Warnings About Debt-fueled Investments, the Market...",
+      "ko": "빚투 경고에 시중",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Banks Are Simultaneously Offering Personal Loans": {
+      "en": "Banks Are Simultaneously Offering Personal Loans",
+      "ko": "은행 일제히 신용대출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Decision to Raise Deposit Interest Rates": {
+      "en": "Decision to Raise Deposit Interest Rates",
+      "ko": "예금금리 인상 결정",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "New York Stock Market Preview: Middle East": {
+      "en": "New York Stock Market Preview: Middle East",
+      "ko": "뉴욕증시 프리뷰 중동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "The U.s. Holds Out Hope for Peace": {
+      "en": "The U.s. Holds Out Hope for Peace",
+      "ko": "평화 기대에 美",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Stock Futures Surge": {
+      "en": "Stock Futures Surge",
+      "ko": "주가 선물 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Space Tech Etfs": {
+      "en": "Space Tech Etfs",
+      "ko": "우주 기술 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Foreign Investors on the Kospi": {
+      "en": "Foreign Investors on the Kospi",
+      "ko": "코스피 외국인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "When Will Spacex": {
+      "en": "When Will Spacex",
+      "ko": "스페이스X는 언제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Aptopix Finacial": {
+      "en": "Aptopix Finacial",
+      "ko": "APTOPIX 금융",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Nasdaq Maeket": {
+      "en": "Nasdaq Maeket",
+      "ko": "나스닥 시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "South Korean": {
+      "en": "South Korean",
+      "ko": "한국의",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Spacex Listing": {
+      "en": "Spacex Listing",
+      "ko": "스페이스X 상장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Start Trading": {
+      "en": "Start Trading",
+      "ko": "거래 시작하기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Anticipation for a Bitcoin Etf": {
+      "en": "Anticipation for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
+    },
+    "Korean Won-u.s. Dollar Exchange Rate Surges": {
+      "en": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-12T20:10:36.328Z"
     }
   }
 }
