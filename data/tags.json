@@ -1,1055 +1,411 @@
 {
+  "generatedAt": "2026-06-13T13:58:05.696Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-13",
   "window": "12_hours",
   "total_phrases": 28,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "June FOMC Interest Rate",
-      "term_ko": "6월 FOMC 금리",
-      "significance_score": 364,
-      "mentions": 163,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "6월 FOMC 금리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-09",
-              "timestamp": 1780930800000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-11",
-              "timestamp": 1781103600000,
-              "value": 62.5
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6월 FOMC 금리 유지에 무게…관건은 케빈 워시 의장의 입",
-              "link": "https://n.news.naver.com/mnews/article/374/0000515882?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%EC%9B%94%20FOMC%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%EC%9B%94%20FOMC%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "6월 FOMC 금리 유지에 무게…관건은 케빈 워시 의장의 입",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/374/0000515882?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 162.5,
-        "weekly_average_volume": 81.25,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.029346,
-        "time_weight": 0.015147,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781103600000
-      }
+      "term": "June Fomc Interest Rate",
+      "term_ko": "6월 FOMC 금리"
     },
     {
-      "term": "Shiba Inu (SHIB) Derivatives Trading",
-      "term_ko": "시바이누SHIB 파생상품 거래",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시바이누SHIB 파생상품 거래",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
-              "link": "http://coinreaders.com/242134"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%B0%94%EC%9D%B4%EB%88%84SHIB%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%20%EA%B1%B0%EB%9E%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%B0%94%EC%9D%B4%EB%88%84SHIB%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%20%EA%B1%B0%EB%9E%98"
-      },
-      "top_headlines": [
-        {
-          "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
-          "summary": "",
-          "link": "http://coinreaders.com/242134",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Shiba Inu (shib) Derivatives Trading",
+      "term_ko": "시바이누SHIB 파생상품 거래"
     },
     {
-      "term": "ETF Money Flow: Samsung Asset Management",
-      "term_ko": "ETF 머니플로우 삼성자산운용",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ETF 머니플로우 삼성자산운용",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
-              "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EB%A8%B8%EB%8B%88%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%82%BC%EC%84%B1%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EB%A8%B8%EB%8B%88%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%82%BC%EC%84%B1%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
-          "summary": "",
-          "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Etf Money Flow: Samsung Asset Management",
+      "term_ko": "ETF 머니플로우 삼성자산운용"
     },
     {
-      "term": "$140.09 million",
-      "term_ko": "1억 4009만 달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "1억 4009만 달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
-              "link": "http://coinreaders.com/242134"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EC%96%B5%204009%EB%A7%8C%20%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EC%96%B5%204009%EB%A7%8C%20%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
-          "summary": "",
-          "link": "http://coinreaders.com/242134",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "$140.09 Million",
+      "term_ko": "1억 4009만 달러"
     },
     {
-      "term": "SanDisk Expands to $2,000",
-      "term_ko": "확산 샌디스크 2000달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확산 샌디스크 2000달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EC%82%B0%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%202000%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EC%82%B0%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%202000%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sandisk Expands to $2,000",
+      "term_ko": "확산 샌디스크 2000달러"
     },
     {
       "term": "Key Financial Events in Korea: June 15–19",
-      "term_ko": "국내 주요 금융일정6.15~6.19",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국내 주요 금융일정6.15~6.19",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이번주 국내 주요 금융일정(6.15~6.19)",
-              "link": "https://www.newspim.com/news/view/20260612001140"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.15~6.19",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.15~6.19"
-      },
-      "top_headlines": [
-        {
-          "title": "이번주 국내 주요 금융일정(6.15~6.19)",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260612001140",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "국내 주요 금융일정6.15~6.19"
     },
     {
-      "term": "Don't be fooled, 100,000 ants",
-      "term_ko": "속지 마라 10만개미",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속지 마라 10만개미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
-              "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%EC%A7%80%20%EB%A7%88%EB%9D%BC%2010%EB%A7%8C%EA%B0%9C%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%EC%A7%80%20%EB%A7%88%EB%9D%BC%2010%EB%A7%8C%EA%B0%9C%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Don't Be Fooled, 100,000 Ants",
+      "term_ko": "속지 마라 10만개미"
     },
     {
-      "term": "Mentor's 15% annual rate",
-      "term_ko": "멘토의 연 15%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "멘토의 연 15%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
-              "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%98%ED%86%A0%EC%9D%98%20%EC%97%B0%2015%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%98%ED%86%A0%EC%9D%98%20%EC%97%B0%2015%25"
-      },
-      "top_headlines": [
-        {
-          "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mentor's 15% Annual Rate",
+      "term_ko": "멘토의 연 15%"
     },
     {
       "term": "Subtitled News: Gold Prices Over the Past 6 Months",
-      "term_ko": "자막뉴스 금값 6개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자막뉴스 금값 6개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
-              "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자막뉴스 금값 6개월"
     },
     {
-      "term": "900,000 won per tael",
-      "term_ko": "한 돈에 90만",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한 돈에 90만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
-              "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%20%EB%8F%88%EC%97%90%2090%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%20%EB%8F%88%EC%97%90%2090%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "900,000 Won Per Tael",
+      "term_ko": "한 돈에 90만"
     },
     {
       "term": "The Plunge in Gold Prices",
-      "term_ko": "나가던 금값 추락",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나가던 금값 추락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
-              "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EA%B0%80%EB%8D%98%20%EA%B8%88%EA%B0%92%20%EC%B6%94%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EA%B0%80%EB%8D%98%20%EA%B8%88%EA%B0%92%20%EC%B6%94%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나가던 금값 추락"
     },
     {
-      "term": "Retail investors with the highest net buying volume",
-      "term_ko": "최다 순매수 개미들",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최다 순매수 개미들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
-              "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8B%A4%20%EC%88%9C%EB%A7%A4%EC%88%98%20%EA%B0%9C%EB%AF%B8%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8B%A4%20%EC%88%9C%EB%A7%A4%EC%88%98%20%EA%B0%9C%EB%AF%B8%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
-          "summary": "",
-          "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Retail Investors with the Highest Net Buying Volume",
+      "term_ko": "최다 순매수 개미들"
     },
     {
-      "term": "Signal SpaceX IPO",
-      "term_ko": "스페이스X의 기업공개(IPO)",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Signal SpaceX IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Signal%20SpaceX%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Signal%20SpaceX%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Signal Spacex Ipo",
+      "term_ko": "스페이스X의 기업공개(IPO)"
     },
     {
-      "term": "DOJ Clears Paramount",
-      "term_ko": "미 법무부, 파라마운트에 무혐의 처분",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "DOJ Clears Paramount",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-              "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=DOJ%20Clears%20Paramount",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=DOJ%20Clears%20Paramount"
-      },
-      "top_headlines": [
-        {
-          "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Doj Clears Paramount",
+      "term_ko": "미 법무부, 파라마운트에 무혐의 처분"
     },
     {
-      "term": "Even the little guys have 200 billion",
-      "term_ko": "개미들도 2천억",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "개미들도 2천억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
-              "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EB%AF%B8%EB%93%A4%EB%8F%84%202%EC%B2%9C%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EB%AF%B8%EB%93%A4%EB%8F%84%202%EC%B2%9C%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Even the Little Guys Have 200 Billion",
+      "term_ko": "개미들도 2천억"
     },
     {
       "term": "Valuation Tops 2.2",
-      "term_ko": "기업 가치가 2.2를 넘어섰다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Valuation Tops 2.2",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-              "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Valuation%20Tops%202.2",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Valuation%20Tops%202.2"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-          "summary": "",
-          "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기업 가치가 2.2를 넘어섰다"
     },
     {
-      "term": "Wall Street optimism",
-      "term_ko": "월가 낙관론",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "월가 낙관론",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EA%B0%80%20%EB%82%99%EA%B4%80%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EA%B0%80%20%EB%82%99%EA%B4%80%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Wall Street Optimism",
+      "term_ko": "월가 낙관론"
     },
     {
-      "term": "Is it possible to break through?",
-      "term_ko": "돌파 가능할까",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 가능할까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Is It Possible to Break Through?",
+      "term_ko": "돌파 가능할까"
     },
     {
       "term": "A Surefire Investment Strategy",
-      "term_ko": "필승 투자법",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "필승 투자법",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
-              "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%84%EC%8A%B9%20%ED%88%AC%EC%9E%90%EB%B2%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%84%EC%8A%B9%20%ED%88%AC%EC%9E%90%EB%B2%95"
-      },
-      "top_headlines": [
-        {
-          "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "필승 투자법"
     },
     {
-      "term": "Skydance-Warner Bros Discovery",
-      "term_ko": "스카이댄스-워너 브라더스 디스커버리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Skydance-Warner Bros Discovery",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-              "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Skydance-Warner%20Bros%20Discovery",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Skydance-Warner%20Bros%20Discovery"
-      },
-      "top_headlines": [
-        {
-          "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Skydance-warner Bros Discovery",
+      "term_ko": "스카이댄스-워너 브라더스 디스커버리"
     },
     {
-      "term": "Sends A",
-      "term_ko": "A를 보냅니다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sends A",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sends%20A",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sends%20A"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sends a",
+      "term_ko": "A를 보냅니다"
     },
     {
       "term": "Capital Bets",
-      "term_ko": "자본 베팅",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Capital Bets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Capital%20Bets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Capital%20Bets"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자본 베팅"
     },
     {
       "term": "Explosive Debut",
-      "term_ko": "화려한 데뷔",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Explosive Debut",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-              "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Explosive%20Debut",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Explosive%20Debut"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-          "summary": "",
-          "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "화려한 데뷔"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Anticipation for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-13T18:00:35+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-13T09:01:34.187Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-13T18:00:35+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 2,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "June Fomc Interest Rate",
+      "term_ko": "6월 FOMC 금리"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-13T18:00:35+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-13T18:00:35+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Shiba Inu (shib) Derivatives Trading",
+      "term_ko": "시바이누SHIB 파생상품 거래"
+    },
+    {
+      "term": "Etf Money Flow: Samsung Asset Management",
+      "term_ko": "ETF 머니플로우 삼성자산운용"
+    },
+    {
+      "term": "$140.09 Million",
+      "term_ko": "1억 4009만 달러"
+    },
+    {
+      "term": "Sandisk Expands to $2,000",
+      "term_ko": "확산 샌디스크 2000달러"
+    },
+    {
+      "term": "Key Financial Events in Korea: June 15–19",
+      "term_ko": "국내 주요 금융일정6.15~6.19"
+    },
+    {
+      "term": "Don't Be Fooled, 100,000 Ants",
+      "term_ko": "속지 마라 10만개미"
+    },
+    {
+      "term": "Mentor's 15% Annual Rate",
+      "term_ko": "멘토의 연 15%"
+    },
+    {
+      "term": "Subtitled News: Gold Prices Over the Past 6 Months",
+      "term_ko": "자막뉴스 금값 6개월"
+    },
+    {
+      "term": "900,000 Won Per Tael",
+      "term_ko": "한 돈에 90만"
+    },
+    {
+      "term": "The Plunge in Gold Prices",
+      "term_ko": "나가던 금값 추락"
+    },
+    {
+      "term": "Retail Investors with the Highest Net Buying Volume",
+      "term_ko": "최다 순매수 개미들"
+    },
+    {
+      "term": "Signal Spacex Ipo",
+      "term_ko": "스페이스X의 기업공개(IPO)"
+    },
+    {
+      "term": "Doj Clears Paramount",
+      "term_ko": "미 법무부, 파라마운트에 무혐의 처분"
+    },
+    {
+      "term": "Even the Little Guys Have 200 Billion",
+      "term_ko": "개미들도 2천억"
+    },
+    {
+      "term": "Valuation Tops 2.2",
+      "term_ko": "기업 가치가 2.2를 넘어섰다"
+    },
+    {
+      "term": "Wall Street Optimism",
+      "term_ko": "월가 낙관론"
+    },
+    {
+      "term": "Is It Possible to Break Through?",
+      "term_ko": "돌파 가능할까"
+    },
+    {
+      "term": "A Surefire Investment Strategy",
+      "term_ko": "필승 투자법"
+    },
+    {
+      "term": "Skydance-warner Bros Discovery",
+      "term_ko": "스카이댄스-워너 브라더스 디스커버리"
+    },
+    {
+      "term": "Sends a",
+      "term_ko": "A를 보냅니다"
+    },
+    {
+      "term": "Capital Bets",
+      "term_ko": "자본 베팅"
+    },
+    {
+      "term": "Explosive Debut",
+      "term_ko": "화려한 데뷔"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Anticipation for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "June Fomc Interest Rate": {
+      "en": "June Fomc Interest Rate",
+      "ko": "6월 FOMC 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Shiba Inu (shib) Derivatives Trading": {
+      "en": "Shiba Inu (shib) Derivatives Trading",
+      "ko": "시바이누SHIB 파생상품 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Etf Money Flow: Samsung Asset Management": {
+      "en": "Etf Money Flow: Samsung Asset Management",
+      "ko": "ETF 머니플로우 삼성자산운용",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "$140.09 Million": {
+      "en": "$140.09 Million",
+      "ko": "1억 4009만 달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Sandisk Expands to $2,000": {
+      "en": "Sandisk Expands to $2,000",
+      "ko": "확산 샌디스크 2000달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Key Financial Events in Korea: June 15–19": {
+      "en": "Key Financial Events in Korea: June 15–19",
+      "ko": "국내 주요 금융일정6.15~6.19",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Don't Be Fooled, 100,000 Ants": {
+      "en": "Don't Be Fooled, 100,000 Ants",
+      "ko": "속지 마라 10만개미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Mentor's 15% Annual Rate": {
+      "en": "Mentor's 15% Annual Rate",
+      "ko": "멘토의 연 15%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Subtitled News: Gold Prices Over the Past 6 Months": {
+      "en": "Subtitled News: Gold Prices Over the Past 6 Months",
+      "ko": "자막뉴스 금값 6개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "900,000 Won Per Tael": {
+      "en": "900,000 Won Per Tael",
+      "ko": "한 돈에 90만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "The Plunge in Gold Prices": {
+      "en": "The Plunge in Gold Prices",
+      "ko": "나가던 금값 추락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Retail Investors with the Highest Net Buying Volume": {
+      "en": "Retail Investors with the Highest Net Buying Volume",
+      "ko": "최다 순매수 개미들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Signal Spacex Ipo": {
+      "en": "Signal Spacex Ipo",
+      "ko": "스페이스X의 기업공개(IPO)",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Doj Clears Paramount": {
+      "en": "Doj Clears Paramount",
+      "ko": "미 법무부, 파라마운트에 무혐의 처분",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Even the Little Guys Have 200 Billion": {
+      "en": "Even the Little Guys Have 200 Billion",
+      "ko": "개미들도 2천억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Valuation Tops 2.2": {
+      "en": "Valuation Tops 2.2",
+      "ko": "기업 가치가 2.2를 넘어섰다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Wall Street Optimism": {
+      "en": "Wall Street Optimism",
+      "ko": "월가 낙관론",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Is It Possible to Break Through?": {
+      "en": "Is It Possible to Break Through?",
+      "ko": "돌파 가능할까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "A Surefire Investment Strategy": {
+      "en": "A Surefire Investment Strategy",
+      "ko": "필승 투자법",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Skydance-warner Bros Discovery": {
+      "en": "Skydance-warner Bros Discovery",
+      "ko": "스카이댄스-워너 브라더스 디스커버리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Sends a": {
+      "en": "Sends a",
+      "ko": "A를 보냅니다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Capital Bets": {
+      "en": "Capital Bets",
+      "ko": "자본 베팅",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Explosive Debut": {
+      "en": "Explosive Debut",
+      "ko": "화려한 데뷔",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Anticipation for a Bitcoin Etf": {
+      "en": "Anticipation for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
+    },
+    "Korean Won-u.s. Dollar Exchange Rate Surges": {
+      "en": "Korean Won-u.s. Dollar Exchange Rate Surges",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T13:58:05.696Z"
     }
   }
 }
