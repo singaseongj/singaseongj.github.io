@@ -1308,6 +1308,7 @@ const rawRows = [
   ...(indexes.nasdaq100 || []),
   ...(indexes.kospi200 || []),
   ...(indexes.kosdaq100 || []),
+  ...(indexes.nasdaqTrader || []),
 ];
 
 // Build robust maps from index data that may have swapped fields
@@ -1745,6 +1746,23 @@ function dedupeMarketBuckets(marketData = {}) {
   return marketData;
 }
 
+
+function dedupeResolvedMarketTickers(marketData = {}) {
+  const seen = new Set();
+  for (const bucket of ['safe', 'aggressive']) {
+    const entries = Array.isArray(marketData[bucket]) ? marketData[bucket] : [];
+    const deduped = [];
+    for (const entry of entries) {
+      const key = entry?.ticker ? normalizeMetricKey(canonSymbol(entry.ticker)) : normalizeMetricKey(entry?.name || '');
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      deduped.push(entry);
+    }
+    marketData[bucket] = deduped;
+  }
+  return marketData;
+}
+
 // Main data fetching function
 async function tryFetchAndEnrich() {
   const POOLS = await loadPools();
@@ -1972,6 +1990,7 @@ async function tryFetchAndEnrich() {
 
       data[market][group] = updated;
     }
+    dedupeResolvedMarketTickers(data[market]);
   }
 
   try {
