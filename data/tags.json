@@ -1,39 +1,190 @@
 {
   "date": "2026-06-13",
   "window": "12_hours",
-  "total_phrases": 29,
+  "total_phrases": 28,
   "discovered_keywords": [
     {
-      "term": "ABC AI Financial Era = Hong Won-hak, Samsung Life Insurance",
-      "term_ko": "ABC AI금융시대=홍원학 삼성생명",
-      "significance_score": 350,
-      "mentions": 160,
+      "term": "June FOMC Interest Rate",
+      "term_ko": "6월 FOMC 금리",
+      "significance_score": 364,
+      "mentions": 163,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "ABC AI금융시대=홍원학 삼성생명",
+        "query": "6월 FOMC 금리",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-06-09",
+              "timestamp": 1780930800000,
+              "value": 100
+            },
+            {
+              "period": "2026-06-11",
+              "timestamp": 1781103600000,
+              "value": 62.5
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-              "link": "https://www.ajunews.com/view/20260612093240668"
+              "title": "6월 FOMC 금리 유지에 무게…관건은 케빈 워시 의장의 입",
+              "link": "https://n.news.naver.com/mnews/article/374/0000515882?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ABC%20AI%EA%B8%88%EC%9C%B5%EC%8B%9C%EB%8C%80%3D%ED%99%8D%EC%9B%90%ED%95%99%20%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ABC%20AI%EA%B8%88%EC%9C%B5%EC%8B%9C%EB%8C%80%3D%ED%99%8D%EC%9B%90%ED%95%99%20%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%EC%9B%94%20FOMC%20%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%EC%9B%94%20FOMC%20%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
+          "title": "6월 FOMC 금리 유지에 무게…관건은 케빈 워시 의장의 입",
           "summary": "",
-          "link": "https://www.ajunews.com/view/20260612093240668",
+          "link": "https://n.news.naver.com/mnews/article/374/0000515882?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 162.5,
+        "weekly_average_volume": 81.25,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.029346,
+        "time_weight": 0.015147,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1781103600000
+      }
+    },
+    {
+      "term": "Shiba Inu (SHIB) Derivatives Trading",
+      "term_ko": "시바이누SHIB 파생상품 거래",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "시바이누SHIB 파생상품 거래",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-13T18:00:35+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
+              "link": "http://coinreaders.com/242134"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EB%B0%94%EC%9D%B4%EB%88%84SHIB%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%20%EA%B1%B0%EB%9E%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EB%B0%94%EC%9D%B4%EB%88%84SHIB%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%20%EA%B1%B0%EB%9E%98"
+      },
+      "top_headlines": [
+        {
+          "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
+          "summary": "",
+          "link": "http://coinreaders.com/242134",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "ETF Money Flow: Samsung Asset Management",
+      "term_ko": "ETF 머니플로우 삼성자산운용",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "ETF 머니플로우 삼성자산운용",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-13T18:00:35+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
+              "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ETF%20%EB%A8%B8%EB%8B%88%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%82%BC%EC%84%B1%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ETF%20%EB%A8%B8%EB%8B%88%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%82%BC%EC%84%B1%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
+          "summary": "",
+          "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "$140.09 million",
+      "term_ko": "1억 4009만 달러",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "1억 4009만 달러",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-13T18:00:35+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
+              "link": "http://coinreaders.com/242134"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EC%96%B5%204009%EB%A7%8C%20%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EC%96%B5%204009%EB%A7%8C%20%EB%8B%AC%EB%9F%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "시바이누(SHIB), 파생상품 거래 1억 4,009만 달러 폭주...고래가 반등에...",
+          "summary": "",
+          "link": "http://coinreaders.com/242134",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -50,9 +201,10 @@
         "query": "확산 샌디스크 2000달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -78,36 +230,37 @@
       ]
     },
     {
-      "term": "Domestic gold prices over the past 6 months",
-      "term_ko": "국내 금값 6개월",
+      "term": "Key Financial Events in Korea: June 15–19",
+      "term_ko": "국내 주요 금융일정6.15~6.19",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "국내 금값 6개월",
+        "query": "국내 주요 금융일정6.15~6.19",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "국내 금값, 6개월 만에 20만원선 붕괴",
-              "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101"
+              "title": "이번주 국내 주요 금융일정(6.15~6.19)",
+              "link": "https://www.newspim.com/news/view/20260612001140"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.15~6.19",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.15~6.19"
       },
       "top_headlines": [
         {
-          "title": "국내 금값, 6개월 만에 20만원선 붕괴",
+          "title": "이번주 국내 주요 금융일정(6.15~6.19)",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101",
+          "link": "https://www.newspim.com/news/view/20260612001140",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -115,36 +268,37 @@
       ]
     },
     {
-      "term": "The 200,000 won mark has been breached",
-      "term_ko": "만에 20만원선 붕괴",
+      "term": "Don't be fooled, 100,000 ants",
+      "term_ko": "속지 마라 10만개미",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만에 20만원선 붕괴",
+        "query": "속지 마라 10만개미",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "국내 금값, 6개월 만에 20만원선 붕괴",
-              "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101"
+              "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
+              "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%2020%EB%A7%8C%EC%9B%90%EC%84%A0%20%EB%B6%95%EA%B4%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%2020%EB%A7%8C%EC%9B%90%EC%84%A0%20%EB%B6%95%EA%B4%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%EC%A7%80%20%EB%A7%88%EB%9D%BC%2010%EB%A7%8C%EA%B0%9C%EB%AF%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%EC%A7%80%20%EB%A7%88%EB%9D%BC%2010%EB%A7%8C%EA%B0%9C%EB%AF%B8"
       },
       "top_headlines": [
         {
-          "title": "국내 금값, 6개월 만에 20만원선 붕괴",
+          "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -152,36 +306,37 @@
       ]
     },
     {
-      "term": "It's just Maniya Samjeonix Group 2",
-      "term_ko": "만이야 삼전닉스 2조",
+      "term": "Mentor's 15% annual rate",
+      "term_ko": "멘토의 연 15%",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만이야 삼전닉스 2조",
+        "query": "멘토의 연 15%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
-              "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101"
+              "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
+              "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%9D%B4%EC%95%BC%20%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%202%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%9D%B4%EC%95%BC%20%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%202%EC%A1%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%98%ED%86%A0%EC%9D%98%20%EC%97%B0%2015%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%98%ED%86%A0%EC%9D%98%20%EC%97%B0%2015%25"
       },
       "top_headlines": [
         {
-          "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
+          "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -189,36 +344,37 @@
       ]
     },
     {
-      "term": "Today's gold price on the 13th: 3,000 won",
-      "term_ko": "오늘13일의 금시세 3000원",
+      "term": "Subtitled News: Gold Prices Over the Past 6 Months",
+      "term_ko": "자막뉴스 금값 6개월",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "오늘13일의 금시세 3000원",
+        "query": "자막뉴스 금값 6개월",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414"
+              "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
+              "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%9813%EC%9D%BC%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%203000%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%9813%EC%9D%BC%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%203000%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94"
       },
       "top_headlines": [
         {
-          "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
+          "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
           "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414",
+          "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,114 +382,37 @@
       ]
     },
     {
-      "term": "24K Pure Gold Price",
-      "term_ko": "순금 24K 시세",
+      "term": "900,000 won per tael",
+      "term_ko": "한 돈에 90만",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "순금 24K 시세",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-06",
-              "timestamp": 1780671600000,
-              "value": 58.33333
-            },
-            {
-              "period": "2026-06-08",
-              "timestamp": 1780844400000,
-              "value": 41.66666
-            },
-            {
-              "period": "2026-06-12",
-              "timestamp": 1781190000000,
-              "value": 100
-            }
-          ]
-        },
+        "query": "한 돈에 90만",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414"
+              "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
+              "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EA%B8%88%2024K%20%EC%8B%9C%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EA%B8%88%2024K%20%EC%8B%9C%EC%84%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%20%EB%8F%88%EC%97%90%2090%EB%A7%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%20%EB%8F%88%EC%97%90%2090%EB%A7%8C"
       },
       "top_headlines": [
         {
-          "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
+          "title": "[자막뉴스] 금값 6개월 만에 최저..그래도 한 돈에 '90만 원'",
           "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 141.6667,
-        "weekly_average_volume": 70.8333,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.032274,
-        "time_weight": 0.027316,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781190000000
-      }
-    },
-    {
-      "term": "Reporter's Notebook: Exchange Rate in the 1,500 Won Range",
-      "term_ko": "기자수첩 1500원대 환율",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기자수첩 1500원대 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%9E%90%EC%88%98%EC%B2%A9%201500%EC%9B%90%EB%8C%80%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%9E%90%EC%88%98%EC%B2%A9%201500%EC%9B%90%EB%8C%80%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377",
+          "link": "https://n.news.naver.com/mnews/article/055/0001364099?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -341,73 +420,37 @@
       ]
     },
     {
-      "term": "Up to 100 million, regardless",
-      "term_ko": "관계없이 최대 1억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "관계없이 최대 1억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%B4%20%EC%B5%9C%EB%8C%80%201%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%B4%20%EC%B5%9C%EB%8C%80%201%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Pay attention to the warning sounds",
-      "term_ko": "경고음에 귀 기울여야",
+      "term": "The Plunge in Gold Prices",
+      "term_ko": "나가던 금값 추락",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "경고음에 귀 기울여야",
+        "query": "나가던 금값 추락",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377"
+              "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
+              "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B3%A0%EC%9D%8C%EC%97%90%20%EA%B7%80%20%EA%B8%B0%EC%9A%B8%EC%97%AC%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B3%A0%EC%9D%8C%EC%97%90%20%EA%B7%80%20%EA%B8%B0%EC%9A%B8%EC%97%AC%EC%95%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EA%B0%80%EB%8D%98%20%EA%B8%88%EA%B0%92%20%EC%B6%94%EB%9D%BD",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EA%B0%80%EB%8D%98%20%EA%B8%88%EA%B0%92%20%EC%B6%94%EB%9D%BD"
       },
       "top_headlines": [
         {
-          "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
+          "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
           "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377",
+          "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -415,36 +458,37 @@
       ]
     },
     {
-      "term": "Beyond CEO Insurance",
-      "term_ko": "사장 보험을 넘어",
+      "term": "Retail investors with the highest net buying volume",
+      "term_ko": "최다 순매수 개미들",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "사장 보험을 넘어",
+        "query": "최다 순매수 개미들",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-              "link": "https://www.ajunews.com/view/20260612093240668"
+              "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
+              "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%9E%A5%20%EB%B3%B4%ED%97%98%EC%9D%84%20%EB%84%98%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%9E%A5%20%EB%B3%B4%ED%97%98%EC%9D%84%20%EB%84%98%EC%96%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EB%8B%A4%20%EC%88%9C%EB%A7%A4%EC%88%98%20%EA%B0%9C%EB%AF%B8%EB%93%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EB%8B%A4%20%EC%88%9C%EB%A7%A4%EC%88%98%20%EA%B0%9C%EB%AF%B8%EB%93%A4"
       },
       "top_headlines": [
         {
-          "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
+          "title": "[ETF 머니플로우] 삼성자산운용 KODEX 200 '최다 순매수'…개미들, 코스...",
           "summary": "",
-          "link": "https://www.ajunews.com/view/20260612093240668",
+          "link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5030038",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -461,9 +505,10 @@
         "query": "Signal SpaceX IPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -498,9 +543,10 @@
         "query": "DOJ Clears Paramount",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -526,36 +572,37 @@
       ]
     },
     {
-      "term": "SpaceX IPO Soars",
-      "term_ko": "스페이스X 기업공개(IPO)가 급등",
+      "term": "Even the little guys have 200 billion",
+      "term_ko": "개미들도 2천억",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "SpaceX IPO Soars",
+        "query": "개미들도 2천억",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-              "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249"
+              "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
+              "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20IPO%20Soars",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20IPO%20Soars"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%9C%EB%AF%B8%EB%93%A4%EB%8F%84%202%EC%B2%9C%EC%96%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%9C%EB%AF%B8%EB%93%A4%EB%8F%84%202%EC%B2%9C%EC%96%B5"
       },
       "top_headlines": [
         {
-          "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
+          "title": "개미들도 2천억 팔았다...잘 나가던 금값 '추락'",
           "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249",
+          "link": "https://n.news.naver.com/mnews/article/215/0001255276?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -572,9 +619,10 @@
         "query": "Valuation Tops 2.2",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -609,9 +657,10 @@
         "query": "월가 낙관론",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -646,9 +695,10 @@
         "query": "돌파 가능할까",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -674,147 +724,37 @@
       ]
     },
     {
-      "term": "Just how much?",
-      "term_ko": "도대체 얼마",
+      "term": "A Surefire Investment Strategy",
+      "term_ko": "필승 투자법",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "도대체 얼마",
+        "query": "필승 투자법",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
-              "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101"
+              "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
+              "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EB%8C%80%EC%B2%B4%20%EC%96%BC%EB%A7%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EB%8C%80%EC%B2%B4%20%EC%96%BC%EB%A7%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%84%EC%8A%B9%20%ED%88%AC%EC%9E%90%EB%B2%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%84%EC%8A%B9%20%ED%88%AC%EC%9E%90%EB%B2%95"
       },
       "top_headlines": [
         {
-          "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
+          "title": "[인터뷰] \"AI 거품론에 속지 마라\" 10만개미 멘토의 '연 15%' 필승 투자법",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Subtitled News: Annual Income",
-      "term_ko": "자막뉴스 연소득",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자막뉴스 연소득",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EC%97%B0%EC%86%8C%EB%93%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EC%97%B0%EC%86%8C%EB%93%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Banks that lock their doors",
-      "term_ko": "걸어잠그는 은행들",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "걸어잠그는 은행들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B8%EC%96%B4%EC%9E%A0%EA%B7%B8%EB%8A%94%20%EC%9D%80%ED%96%89%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B8%EC%96%B4%EC%9E%A0%EA%B7%B8%EB%8A%94%20%EC%9D%80%ED%96%89%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Planning Your Life",
-      "term_ko": "인생을 설계하다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인생을 설계하다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-              "link": "https://www.ajunews.com/view/20260612093240668"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%9D%EC%9D%84%20%EC%84%A4%EA%B3%84%ED%95%98%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%9D%EC%9D%84%20%EC%84%A4%EA%B3%84%ED%95%98%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260612093240668",
+          "link": "https://n.news.naver.com/mnews/article/293/0000086226?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -831,9 +771,10 @@
         "query": "Skydance-Warner Bros Discovery",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -859,80 +800,6 @@
       ]
     },
     {
-      "term": "Wall Street Rallies",
-      "term_ko": "월가 주가 급등",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Rallies",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-              "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Rallies",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Rallies"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "U.S.-Iran Peace Deal",
-      "term_ko": "미국-이란 평화 협정",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-Iran Peace Deal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-              "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Peace%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Peace%20Deal"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Sends A",
       "term_ko": "A를 보냅니다",
       "significance_score": 224,
@@ -942,9 +809,10 @@
         "query": "Sends A",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -979,9 +847,10 @@
         "query": "Capital Bets",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1016,9 +885,10 @@
         "query": "Explosive Debut",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1053,9 +923,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-13T12:35:57+09:00",
+          "last_updated": "2026-06-13T18:00:35+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1066,17 +937,86 @@
       "top_headlines": []
     },
     {
-      "term": "Expectations of an interest rate cut",
-      "term_ko": "금리 인하 기대감",
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "외국인 매수에 힘입어 코스피 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-13T18:00:35+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-13T18:00:35+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Anticipation for a Bitcoin ETF",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-13T18:00:35+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등",
       "significance_score": 0,
       "mentions": 0,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
+        "query": "원달러 환율 급등"
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
       },
       "top_headlines": []
     }
@@ -1084,28 +1024,30 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-13T03:36:55.561Z",
+    "generated_at": "2026-06-13T09:01:34.187Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-13T12:35:57+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-13T18:00:35+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
+    "similar_keywords_removed": 2,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 1,
+      "similar": 2,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-13T12:35:57+09:00",
+      "last_updated": "2026-06-13T18:00:35+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-13T12:35:57+09:00",
+        "lastUpdated": "2026-06-13T18:00:35+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
