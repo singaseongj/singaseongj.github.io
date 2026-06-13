@@ -38,6 +38,7 @@ async function netText(url) {
   return null;
 }
 
+const US_SYMBOL_PATTERN = /^[A-Z]{1,5}(\.[A-Z]{1,2})?$/;
 const canonUS = s => s.toUpperCase().replace('/', '.').replace('-', '.');
 const six = s => (s || '').replace(/\D/g, '').padStart(6, '0');
 
@@ -201,7 +202,7 @@ function parseNasdaqTraderSymbolDirectory(txt) {
       marketCap: null,
     }))
     .filter(row => row.symbol && row.name)
-    .filter(row => /^[A-Z0-9.]+$/.test(row.symbol))
+    .filter(row => US_SYMBOL_PATTERN.test(row.symbol))
     .filter(row => !/(warrants?|units?|rights?|preferred|depositary|notes?|bonds?|debentures?)/i.test(row.name));
 }
 
