@@ -1,19 +1,18 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-06-13T22:59:59+09:00 (KST)**
+- Generated: **2026-06-14T04:27:21+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
 
-**가온칩스** (399720.KQ)
+**ISC** (ISCD.TA)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.6%**, 20d **-3.0%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **-0.4%**, 20d **-2.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EA%B0%80%EC%98%A8%EC%B9%A9%EC%8A%A4
+- News search: https://www.google.com/search?q=ISC
 
 **네이처셀** (007390.KQ)
 
@@ -49,6 +48,14 @@
 
 ### AGGRESSIVE (5)
 
+**데브시스터즈** (194480.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.4%**, 20d **-22.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **커뮤니케이션서비스**
+- News search: https://www.google.com/search?q=%EB%8D%B0%EB%B8%8C%EC%8B%9C%EC%8A%A4%ED%84%B0%EC%A6%88
+
 **오로스테크놀로지** (322310.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -64,14 +71,6 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%9B%90%ED%85%8D
-
-**이녹스첨단소재** (272290.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.0%**, 20d **-15.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%9D%B4%EB%85%B9%EC%8A%A4%EC%B2%A8%EB%8B%A8%EC%86%8C%EC%9E%AC
 
 **피에스케이** (319660.KQ)
 
@@ -101,6 +100,13 @@
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD
 
+**HMM** (HMMR)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **unknown**
+- Returns: 5d **15.4%**, 20d **-16.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HMM
+
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
@@ -108,13 +114,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
-
-**삼성전기** (009150.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **-0.4%**, 20d **100.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0
 
 **삼성전자** (005930.KS)
 
@@ -134,19 +133,19 @@
 
 ### AGGRESSIVE (5)
 
+**JB금융지주** (175330.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **6.9%**, 20d **-2.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=JB%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
+
 **SK케미칼** (285130.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-2.6%**, 20d **-23.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%EC%BC%80%EB%AF%B8%EC%B9%BC
-
-**아모레퍼시픽** (090430.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.3%**, 20d **-12.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD
 
 **한화엔진** (082740.KS)
 
@@ -243,7 +242,15 @@
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=The%20Cigna%20Group%20Common%20Stock
 
-### AGGRESSIVE (2)
+### AGGRESSIVE (3)
+
+**KLA Corporation** (KLAC)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.2%**, 20d **-3.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=KLA%20Corporation
 
 **Stryker Corporation Common Stock** (SYK)
 
