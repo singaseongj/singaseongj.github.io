@@ -1,1113 +1,425 @@
 {
+  "generatedAt": "2026-06-13T08:58:03.509Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-13",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "ABC AI Financial Era = Hong Won-hak, Samsung Life Insurance",
-      "term_ko": "ABC AI금융시대=홍원학 삼성생명",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ABC AI금융시대=홍원학 삼성생명",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-              "link": "https://www.ajunews.com/view/20260612093240668"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ABC%20AI%EA%B8%88%EC%9C%B5%EC%8B%9C%EB%8C%80%3D%ED%99%8D%EC%9B%90%ED%95%99%20%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ABC%20AI%EA%B8%88%EC%9C%B5%EC%8B%9C%EB%8C%80%3D%ED%99%8D%EC%9B%90%ED%95%99%20%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85"
-      },
-      "top_headlines": [
-        {
-          "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260612093240668",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Abc Ai Financial Era = Hong Won-hak, Samsung Life Insurance",
+      "term_ko": "ABC AI금융시대=홍원학 삼성생명"
     },
     {
-      "term": "SanDisk Expands to $2,000",
-      "term_ko": "확산 샌디스크 2000달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확산 샌디스크 2000달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EC%82%B0%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%202000%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EC%82%B0%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%202000%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sandisk Expands to $2,000",
+      "term_ko": "확산 샌디스크 2000달러"
     },
     {
-      "term": "Domestic gold prices over the past 6 months",
-      "term_ko": "국내 금값 6개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국내 금값 6개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국내 금값, 6개월 만에 20만원선 붕괴",
-              "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EA%B8%88%EA%B0%92%206%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 금값, 6개월 만에 20만원선 붕괴",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Domestic Gold Prices Over the Past 6 Months",
+      "term_ko": "국내 금값 6개월"
     },
     {
-      "term": "The 200,000 won mark has been breached",
-      "term_ko": "만에 20만원선 붕괴",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 20만원선 붕괴",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "국내 금값, 6개월 만에 20만원선 붕괴",
-              "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%2020%EB%A7%8C%EC%9B%90%EC%84%A0%20%EB%B6%95%EA%B4%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%2020%EB%A7%8C%EC%9B%90%EC%84%A0%20%EB%B6%95%EA%B4%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "국내 금값, 6개월 만에 20만원선 붕괴",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/050/0000107269?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The 200,000 Won Mark Has Been Breached",
+      "term_ko": "만에 20만원선 붕괴"
     },
     {
-      "term": "It's just Maniya Samjeonix Group 2",
-      "term_ko": "만이야 삼전닉스 2조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만이야 삼전닉스 2조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
-              "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%9D%B4%EC%95%BC%20%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%202%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%9D%B4%EC%95%BC%20%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%202%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It's Just Maniya Samjeonix Group 2",
+      "term_ko": "만이야 삼전닉스 2조"
     },
     {
-      "term": "Today's gold price on the 13th: 3,000 won",
-      "term_ko": "오늘13일의 금시세 3000원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘13일의 금시세 3000원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%9813%EC%9D%BC%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%203000%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%9813%EC%9D%BC%EC%9D%98%20%EA%B8%88%EC%8B%9C%EC%84%B8%203000%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Today's Gold Price on the 13th: 3,000 Won",
+      "term_ko": "오늘13일의 금시세 3000원"
     },
     {
-      "term": "24K Pure Gold Price",
-      "term_ko": "순금 24K 시세",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "순금 24K 시세",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-06",
-              "timestamp": 1780671600000,
-              "value": 58.33333
-            },
-            {
-              "period": "2026-06-08",
-              "timestamp": 1780844400000,
-              "value": 41.66666
-            },
-            {
-              "period": "2026-06-12",
-              "timestamp": 1781190000000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%9C%EA%B8%88%2024K%20%EC%8B%9C%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%9C%EA%B8%88%2024K%20%EC%8B%9C%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘(13일)의 금시세 3000원 상승...금값시세 순금 24K 시세 90.3만원",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79414",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 141.6667,
-        "weekly_average_volume": 70.8333,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.032274,
-        "time_weight": 0.027316,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781190000000
-      }
+      "term": "24k Pure Gold Price",
+      "term_ko": "순금 24K 시세"
     },
     {
       "term": "Reporter's Notebook: Exchange Rate in the 1,500 Won Range",
-      "term_ko": "기자수첩 1500원대 환율",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기자수첩 1500원대 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%9E%90%EC%88%98%EC%B2%A9%201500%EC%9B%90%EB%8C%80%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%9E%90%EC%88%98%EC%B2%A9%201500%EC%9B%90%EB%8C%80%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기자수첩 1500원대 환율"
     },
     {
-      "term": "Up to 100 million, regardless",
-      "term_ko": "관계없이 최대 1억",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "관계없이 최대 1억",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%B4%20%EC%B5%9C%EB%8C%80%201%EC%96%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%B4%20%EC%B5%9C%EB%8C%80%201%EC%96%B5"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Up to 100 Million, Regardless",
+      "term_ko": "관계없이 최대 1억"
     },
     {
-      "term": "Pay attention to the warning sounds",
-      "term_ko": "경고음에 귀 기울여야",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경고음에 귀 기울여야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
-              "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EA%B3%A0%EC%9D%8C%EC%97%90%20%EA%B7%80%20%EA%B8%B0%EC%9A%B8%EC%97%AC%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EA%B3%A0%EC%9D%8C%EC%97%90%20%EA%B7%80%20%EA%B8%B0%EC%9A%B8%EC%97%AC%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[기자수첩] '1500원대 환율' 경고음에 귀 기울여야",
-          "summary": "",
-          "link": "https://www.ezyeconomy.com/news/articleView.html?idxno=236377",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Pay Attention to the Warning Sounds",
+      "term_ko": "경고음에 귀 기울여야"
     },
     {
-      "term": "Beyond CEO Insurance",
-      "term_ko": "사장 보험을 넘어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사장 보험을 넘어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-              "link": "https://www.ajunews.com/view/20260612093240668"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%9E%A5%20%EB%B3%B4%ED%97%98%EC%9D%84%20%EB%84%98%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%9E%A5%20%EB%B3%B4%ED%97%98%EC%9D%84%20%EB%84%98%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260612093240668",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Beyond Ceo Insurance",
+      "term_ko": "사장 보험을 넘어"
     },
     {
-      "term": "Signal SpaceX IPO",
-      "term_ko": "스페이스X의 기업공개(IPO)",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Signal SpaceX IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Signal%20SpaceX%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Signal%20SpaceX%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Signal Spacex Ipo",
+      "term_ko": "스페이스X의 기업공개(IPO)"
     },
     {
-      "term": "DOJ Clears Paramount",
-      "term_ko": "미 법무부, 파라마운트에 무혐의 처분",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "DOJ Clears Paramount",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-              "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=DOJ%20Clears%20Paramount",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=DOJ%20Clears%20Paramount"
-      },
-      "top_headlines": [
-        {
-          "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Doj Clears Paramount",
+      "term_ko": "미 법무부, 파라마운트에 무혐의 처분"
     },
     {
-      "term": "SpaceX IPO Soars",
-      "term_ko": "스페이스X 기업공개(IPO)가 급등",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX IPO Soars",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-              "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20IPO%20Soars",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20IPO%20Soars"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex Ipo Soars",
+      "term_ko": "스페이스X 기업공개(IPO)가 급등"
     },
     {
       "term": "Valuation Tops 2.2",
-      "term_ko": "기업 가치가 2.2를 넘어섰다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Valuation Tops 2.2",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-              "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Valuation%20Tops%202.2",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Valuation%20Tops%202.2"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-          "summary": "",
-          "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기업 가치가 2.2를 넘어섰다"
     },
     {
-      "term": "Wall Street optimism",
-      "term_ko": "월가 낙관론",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "월가 낙관론",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EA%B0%80%20%EB%82%99%EA%B4%80%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EA%B0%80%20%EB%82%99%EA%B4%80%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Wall Street Optimism",
+      "term_ko": "월가 낙관론"
     },
     {
-      "term": "Is it possible to break through?",
-      "term_ko": "돌파 가능할까",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 가능할까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Is It Possible to Break Through?",
+      "term_ko": "돌파 가능할까"
     },
     {
-      "term": "Just how much?",
-      "term_ko": "도대체 얼마",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "도대체 얼마",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
-              "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EB%8C%80%EC%B2%B4%20%EC%96%BC%EB%A7%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EB%8C%80%EC%B2%B4%20%EC%96%BC%EB%A7%88"
-      },
-      "top_headlines": [
-        {
-          "title": "'도대체 얼마 만이야'…삼전닉스 2조 쓸어담았다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/215/0001255264?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Just How Much?",
+      "term_ko": "도대체 얼마"
     },
     {
       "term": "Subtitled News: Annual Income",
-      "term_ko": "자막뉴스 연소득",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자막뉴스 연소득",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EC%97%B0%EC%86%8C%EB%93%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EB%A7%89%EB%89%B4%EC%8A%A4%20%EC%97%B0%EC%86%8C%EB%93%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자막뉴스 연소득"
     },
     {
-      "term": "Banks that lock their doors",
-      "term_ko": "걸어잠그는 은행들",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "걸어잠그는 은행들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-              "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B8%EC%96%B4%EC%9E%A0%EA%B7%B8%EB%8A%94%20%EC%9D%80%ED%96%89%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B8%EC%96%B4%EC%9E%A0%EA%B7%B8%EB%8A%94%20%EC%9D%80%ED%96%89%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[자막뉴스] 연소득 관계없이 '최대 1억 원'...줄줄이 걸어잠그는 은행들",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002365982?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Banks That Lock Their Doors",
+      "term_ko": "걸어잠그는 은행들"
     },
     {
       "term": "Planning Your Life",
-      "term_ko": "인생을 설계하다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인생을 설계하다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-              "link": "https://www.ajunews.com/view/20260612093240668"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%9D%EC%9D%84%20%EC%84%A4%EA%B3%84%ED%95%98%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%9D%EC%9D%84%20%EC%84%A4%EA%B3%84%ED%95%98%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[ABC AI금융시대=홍원학 삼성생명 사장] 보험을 넘어 인생을 설계하다, ...",
-          "summary": "",
-          "link": "https://www.ajunews.com/view/20260612093240668",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인생을 설계하다"
     },
     {
-      "term": "Skydance-Warner Bros Discovery",
-      "term_ko": "스카이댄스-워너 브라더스 디스커버리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Skydance-Warner Bros Discovery",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-              "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Skydance-Warner%20Bros%20Discovery",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Skydance-Warner%20Bros%20Discovery"
-      },
-      "top_headlines": [
-        {
-          "title": "DOJ Clears Paramount Skydance-Warner Bros. Discovery Merger Without Condi...",
-          "summary": "",
-          "link": "https://www.econotimes.com/DOJ-Clears-Paramount-Skydance-Warner-Bros-Discovery-Merger-Without-Conditions-1744257",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Skydance-warner Bros Discovery",
+      "term_ko": "스카이댄스-워너 브라더스 디스커버리"
     },
     {
       "term": "Wall Street Rallies",
-      "term_ko": "월가 주가 급등",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Rallies",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-              "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Rallies",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Rallies"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월가 주가 급등"
     },
     {
-      "term": "U.S.-Iran Peace Deal",
-      "term_ko": "미국-이란 평화 협정",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S.-Iran Peace Deal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-              "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S.-Iran%20Peace%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S.-Iran%20Peace%20Deal"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Rallies as SpaceX IPO Soars and U.S.-Iran Peace Deal Hopes Gr...",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Rallies-as-SpaceX-IPO-Soars-and-US-Iran-Peace-Deal-Hopes-Grow-1744249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s.-iran Peace Deal",
+      "term_ko": "미국-이란 평화 협정"
     },
     {
-      "term": "Sends A",
-      "term_ko": "A를 보냅니다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sends A",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sends%20A",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sends%20A"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sends a",
+      "term_ko": "A를 보냅니다"
     },
     {
       "term": "Capital Bets",
-      "term_ko": "자본 베팅",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Capital Bets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Capital%20Bets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Capital%20Bets"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자본 베팅"
     },
     {
       "term": "Explosive Debut",
-      "term_ko": "화려한 데뷔",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Explosive Debut",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-              "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Explosive%20Debut",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Explosive%20Debut"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX IPO Set for Explosive Debut as Valuation Tops $2.2 Trillion",
-          "summary": "",
-          "link": "https://www.econotimes.com/SpaceX-IPO-Set-for-Explosive-Debut-as-Valuation-Tops-22-Trillion-1744254",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "화려한 데뷔"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-13T12:35:57+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "Expectations of an interest rate cut",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term": "Expectations of an Interest Rate Cut",
+      "term_ko": "금리 인하 기대감"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-13T03:36:55.561Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-13T12:35:57+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Abc Ai Financial Era = Hong Won-hak, Samsung Life Insurance",
+      "term_ko": "ABC AI금융시대=홍원학 삼성생명"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-13T12:35:57+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-13T12:35:57+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Sandisk Expands to $2,000",
+      "term_ko": "확산 샌디스크 2000달러"
+    },
+    {
+      "term": "Domestic Gold Prices Over the Past 6 Months",
+      "term_ko": "국내 금값 6개월"
+    },
+    {
+      "term": "The 200,000 Won Mark Has Been Breached",
+      "term_ko": "만에 20만원선 붕괴"
+    },
+    {
+      "term": "It's Just Maniya Samjeonix Group 2",
+      "term_ko": "만이야 삼전닉스 2조"
+    },
+    {
+      "term": "Today's Gold Price on the 13th: 3,000 Won",
+      "term_ko": "오늘13일의 금시세 3000원"
+    },
+    {
+      "term": "24k Pure Gold Price",
+      "term_ko": "순금 24K 시세"
+    },
+    {
+      "term": "Reporter's Notebook: Exchange Rate in the 1,500 Won Range",
+      "term_ko": "기자수첩 1500원대 환율"
+    },
+    {
+      "term": "Up to 100 Million, Regardless",
+      "term_ko": "관계없이 최대 1억"
+    },
+    {
+      "term": "Pay Attention to the Warning Sounds",
+      "term_ko": "경고음에 귀 기울여야"
+    },
+    {
+      "term": "Beyond Ceo Insurance",
+      "term_ko": "사장 보험을 넘어"
+    },
+    {
+      "term": "Signal Spacex Ipo",
+      "term_ko": "스페이스X의 기업공개(IPO)"
+    },
+    {
+      "term": "Doj Clears Paramount",
+      "term_ko": "미 법무부, 파라마운트에 무혐의 처분"
+    },
+    {
+      "term": "Spacex Ipo Soars",
+      "term_ko": "스페이스X 기업공개(IPO)가 급등"
+    },
+    {
+      "term": "Valuation Tops 2.2",
+      "term_ko": "기업 가치가 2.2를 넘어섰다"
+    },
+    {
+      "term": "Wall Street Optimism",
+      "term_ko": "월가 낙관론"
+    },
+    {
+      "term": "Is It Possible to Break Through?",
+      "term_ko": "돌파 가능할까"
+    },
+    {
+      "term": "Just How Much?",
+      "term_ko": "도대체 얼마"
+    },
+    {
+      "term": "Subtitled News: Annual Income",
+      "term_ko": "자막뉴스 연소득"
+    },
+    {
+      "term": "Banks That Lock Their Doors",
+      "term_ko": "걸어잠그는 은행들"
+    },
+    {
+      "term": "Planning Your Life",
+      "term_ko": "인생을 설계하다"
+    },
+    {
+      "term": "Skydance-warner Bros Discovery",
+      "term_ko": "스카이댄스-워너 브라더스 디스커버리"
+    },
+    {
+      "term": "Wall Street Rallies",
+      "term_ko": "월가 주가 급등"
+    },
+    {
+      "term": "U.s.-iran Peace Deal",
+      "term_ko": "미국-이란 평화 협정"
+    },
+    {
+      "term": "Sends a",
+      "term_ko": "A를 보냅니다"
+    },
+    {
+      "term": "Capital Bets",
+      "term_ko": "자본 베팅"
+    },
+    {
+      "term": "Explosive Debut",
+      "term_ko": "화려한 데뷔"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Expectations of an Interest Rate Cut",
+      "term_ko": "금리 인하 기대감"
+    }
+  ],
+  "translations": {
+    "Abc Ai Financial Era = Hong Won-hak, Samsung Life Insurance": {
+      "en": "Abc Ai Financial Era = Hong Won-hak, Samsung Life Insurance",
+      "ko": "ABC AI금융시대=홍원학 삼성생명",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.509Z"
+    },
+    "Sandisk Expands to $2,000": {
+      "en": "Sandisk Expands to $2,000",
+      "ko": "확산 샌디스크 2000달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.509Z"
+    },
+    "Domestic Gold Prices Over the Past 6 Months": {
+      "en": "Domestic Gold Prices Over the Past 6 Months",
+      "ko": "국내 금값 6개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.509Z"
+    },
+    "The 200,000 Won Mark Has Been Breached": {
+      "en": "The 200,000 Won Mark Has Been Breached",
+      "ko": "만에 20만원선 붕괴",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.509Z"
+    },
+    "It's Just Maniya Samjeonix Group 2": {
+      "en": "It's Just Maniya Samjeonix Group 2",
+      "ko": "만이야 삼전닉스 2조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.509Z"
+    },
+    "Today's Gold Price on the 13th: 3,000 Won": {
+      "en": "Today's Gold Price on the 13th: 3,000 Won",
+      "ko": "오늘13일의 금시세 3000원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "24k Pure Gold Price": {
+      "en": "24k Pure Gold Price",
+      "ko": "순금 24K 시세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Reporter's Notebook: Exchange Rate in the 1,500 Won Range": {
+      "en": "Reporter's Notebook: Exchange Rate in the 1,500 Won Range",
+      "ko": "기자수첩 1500원대 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Up to 100 Million, Regardless": {
+      "en": "Up to 100 Million, Regardless",
+      "ko": "관계없이 최대 1억",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Pay Attention to the Warning Sounds": {
+      "en": "Pay Attention to the Warning Sounds",
+      "ko": "경고음에 귀 기울여야",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Beyond Ceo Insurance": {
+      "en": "Beyond Ceo Insurance",
+      "ko": "사장 보험을 넘어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Signal Spacex Ipo": {
+      "en": "Signal Spacex Ipo",
+      "ko": "스페이스X의 기업공개(IPO)",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Doj Clears Paramount": {
+      "en": "Doj Clears Paramount",
+      "ko": "미 법무부, 파라마운트에 무혐의 처분",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Spacex Ipo Soars": {
+      "en": "Spacex Ipo Soars",
+      "ko": "스페이스X 기업공개(IPO)가 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Valuation Tops 2.2": {
+      "en": "Valuation Tops 2.2",
+      "ko": "기업 가치가 2.2를 넘어섰다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Wall Street Optimism": {
+      "en": "Wall Street Optimism",
+      "ko": "월가 낙관론",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Is It Possible to Break Through?": {
+      "en": "Is It Possible to Break Through?",
+      "ko": "돌파 가능할까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Just How Much?": {
+      "en": "Just How Much?",
+      "ko": "도대체 얼마",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Subtitled News: Annual Income": {
+      "en": "Subtitled News: Annual Income",
+      "ko": "자막뉴스 연소득",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Banks That Lock Their Doors": {
+      "en": "Banks That Lock Their Doors",
+      "ko": "걸어잠그는 은행들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Planning Your Life": {
+      "en": "Planning Your Life",
+      "ko": "인생을 설계하다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Skydance-warner Bros Discovery": {
+      "en": "Skydance-warner Bros Discovery",
+      "ko": "스카이댄스-워너 브라더스 디스커버리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Wall Street Rallies": {
+      "en": "Wall Street Rallies",
+      "ko": "월가 주가 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "U.s.-iran Peace Deal": {
+      "en": "U.s.-iran Peace Deal",
+      "ko": "미국-이란 평화 협정",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Sends a": {
+      "en": "Sends a",
+      "ko": "A를 보냅니다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Capital Bets": {
+      "en": "Capital Bets",
+      "ko": "자본 베팅",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Explosive Debut": {
+      "en": "Explosive Debut",
+      "ko": "화려한 데뷔",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
+    },
+    "Expectations of an Interest Rate Cut": {
+      "en": "Expectations of an Interest Rate Cut",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-13T08:58:03.510Z"
     }
   }
 }
