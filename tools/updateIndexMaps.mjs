@@ -75,6 +75,12 @@ function exchangesFor(sym){
   return ['NASDAQ','NYSE','NYSEARCA','NYSEAMERICAN'];
 }
 
+const NASDAQ_TRADER_URLS = [
+  'https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt',
+  'https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt',
+];
+
+
 async function fetchCap(sym){
   const exs = exchangesFor(sym);
   const base = sym.replace(/\.KS$|\.KQ$/,'');
@@ -168,13 +174,45 @@ function parseNaverConstituents(html, suffix) {
   return rows.map(m => ({ symbol: `${six(m[1])}${suffix}`, name: clean(m[2]), sector: null }));
 }
 
+function parseNasdaqTraderSymbolDirectory(txt) {
+  if (!txt) return [];
+  const lines = txt.split(/\r?\n/).filter(Boolean);
+  const headerLine = lines.shift();
+  if (!headerLine || !headerLine.includes('|')) return [];
+  const headers = headerLine.split('|').map(h => h.trim());
+  const lower = headers.map(h => h.toLowerCase());
+  const idx = (...names) => names.map(n => lower.indexOf(n.toLowerCase())).find(i => i >= 0) ?? -1;
+  const symbolIdx = idx('Symbol', 'ACT Symbol');
+  const nameIdx = idx('Security Name');
+  const testIdx = idx('Test Issue');
+  const etfIdx = idx('ETF');
+  if (symbolIdx < 0 || nameIdx < 0) return [];
+
+  return lines
+    .filter(line => line && !/^File Creation Time:/i.test(line))
+    .map(line => line.split('|'))
+    .filter(cols => cols.length >= headers.length)
+    .filter(cols => testIdx < 0 || cols[testIdx] === 'N')
+    .filter(cols => etfIdx < 0 || cols[etfIdx] !== 'Y')
+    .map(cols => ({
+      symbol: canonUS(clean(cols[symbolIdx])),
+      name: clean(cols[nameIdx]).replace(/\s+-\s+Common Stock$/i, '').trim(),
+      sector: null,
+      marketCap: null,
+    }))
+    .filter(row => row.symbol && row.name)
+    .filter(row => /^[A-Z0-9.]+$/.test(row.symbol))
+    .filter(row => !/(warrants?|units?|rights?|preferred|depositary|notes?|bonds?|debentures?)/i.test(row.name));
+}
+
 async function main() {
   // Load existing file (for fallback if fetch fails)
-  let current = { sp500: [], nasdaq100: [], kospi200: [], kosdaq100: [], generatedAt: null };
+  let current = { sp500: [], nasdaq100: [], kospi200: [], kosdaq100: [], nasdaqTrader: [], generatedAt: null };
   try { current = JSON.parse(await fs.readFile(INDEX_PATH, 'utf8')); } catch {}
 
   const [
     spTxt, nqTxt, k200Txt, kq100Txt,
+    nasdaqListedTxt, otherListedTxt,
     naverK200_1, naverK200_2, naverK200_3, naverK200_4,
     naverKQ100_1, naverKQ100_2,
   ] = await Promise.all([
@@ -182,6 +220,7 @@ async function main() {
     netText('https://en.wikipedia.org/wiki/Nasdaq-100'),
     netText('https://ko.wikipedia.org/wiki/KOSPI_200'),
     netText('https://ko.wikipedia.org/wiki/KOSDAQ_100'),
+    ...NASDAQ_TRADER_URLS.map(url => netText(url)),
     netText('https://finance.naver.com/sise/entryJongmok.naver?page=1'),
     netText('https://finance.naver.com/sise/entryJongmok.naver?page=2'),
     netText('https://finance.naver.com/sise/entryJongmok.naver?page=3'),
@@ -194,6 +233,10 @@ async function main() {
   let nasdaq100 = parseNasdaq100(nqTxt);
   let kospi200 = parseKospi200(k200Txt);
   let kosdaq100 = parseKosdaq100(kq100Txt);
+  let nasdaqTrader = uniqBySymbol([
+    ...parseNasdaqTraderSymbolDirectory(nasdaqListedTxt),
+    ...parseNasdaqTraderSymbolDirectory(otherListedTxt),
+  ]);
   const kospi200FromNaver = uniqBySymbol([
     ...parseNaverConstituents(naverK200_1, '.KS'),
     ...parseNaverConstituents(naverK200_2, '.KS'),
@@ -208,6 +251,7 @@ async function main() {
   // Sanity thresholds; fallback to current if parse looks wrong/too small
   if (sp500.length < 350) { console.log('[indexes] keep current S&P500 (parsed=', sp500.length, ')'); sp500 = current.sp500; }
   if (nasdaq100.length < 70) { console.log('[indexes] keep current Nasdaq100 (parsed=', nasdaq100.length, ')'); nasdaq100 = current.nasdaq100; }
+  if (nasdaqTrader.length < 1000) { console.log('[indexes] keep current NasdaqTrader (parsed=', nasdaqTrader.length, ')'); nasdaqTrader = current.nasdaqTrader || []; }
   if (kospi200.length < 150 && kospi200FromNaver.length >= 150) {
     console.log('[indexes] use Naver KOSPI200 (parsed=', kospi200FromNaver.length, ')');
     kospi200 = kospi200FromNaver;
@@ -232,6 +276,7 @@ async function main() {
   nasdaq100 = uniqBySymbol(applyOverrides(nasdaq100));
   kospi200  = uniqBySymbol(applyOverrides(kospi200));
   kosdaq100 = uniqBySymbol(applyOverrides(kosdaq100));
+  nasdaqTrader = uniqBySymbol(applyOverrides(nasdaqTrader));
 
   const allSymbols = Array.from(new Set([
     ...sp500,
@@ -242,7 +287,7 @@ async function main() {
 
   const caps = OFFLINE ? {} : await fetchMarketCaps(allSymbols);
   const oldCaps = new Map();
-  for (const key of ['sp500','nasdaq100','kospi200','kosdaq100']) {
+  for (const key of ['sp500','nasdaq100','kospi200','kosdaq100','nasdaqTrader']) {
     for (const r of current[key] || []) {
       if (typeof r.marketCap === 'number') oldCaps.set(r.symbol, r.marketCap);
     }
@@ -263,19 +308,23 @@ async function main() {
   attachCaps(nasdaq100);
   attachCaps(kospi200);
   attachCaps(kosdaq100);
+  // Nasdaq Trader carries the broad listing directory. Avoid thousands of
+  // Google Finance lookups here; quote enrichment can fill pricing later.
+  nasdaqTrader = nasdaqTrader.map(r => ({ ...r, marketCap: oldCaps.get(r.symbol) ?? null }));
 
   const next = {
     sp500,
     nasdaq100,
     kospi200,
     kosdaq100,
+    nasdaqTrader,
     generatedAt: new Date().toISOString(),
   };
 
   await fs.mkdir('src', { recursive: true });
   await fs.writeFile(INDEX_PATH, JSON.stringify(next, null, 2));
   console.log('[indexes] updated',
-    `(S&P500=${sp500.length}, N100=${nasdaq100.length}, K200=${kospi200.length}, KQ100=${kosdaq100.length})`,
+    `(S&P500=${sp500.length}, N100=${nasdaq100.length}, K200=${kospi200.length}, KQ100=${kosdaq100.length}, NasdaqTrader=${nasdaqTrader.length})`,
     OFFLINE ? '[OFFLINE mode]' : ''
   );
 }

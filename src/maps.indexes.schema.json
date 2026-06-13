@@ -7,6 +7,7 @@
     "nasdaq100": { "$ref": "#/$defs/listUS" },
     "kospi200": { "$ref": "#/$defs/listKR" },
     "kosdaq100": { "$ref": "#/$defs/listKR" },
+    "nasdaqTrader": { "$ref": "#/$defs/listUS" },
     "generatedAt": { "type": "string", "format": "date-time" }
   },
   "required": ["sp500", "nasdaq100", "kospi200", "kosdaq100"],
