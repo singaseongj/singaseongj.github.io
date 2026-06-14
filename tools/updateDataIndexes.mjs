@@ -73,8 +73,17 @@ function uniqBySymbol(rows) {
 
 function parseSp500(html) {
   if (!html) return [];
-  const rows = [...html.matchAll(/<tr>\s*<td[^>]*>\s*(?:<a[^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)>/gi)];
-  return rows.map(m => ({ symbol: canonUS(m[1]), name: clean(m[2]), sector: clean(m[3]) }));
+  const part = html.split(/id=\"constituents\"/i)[1] || html;
+  const tableBody = part.split(/<\/table>/i)[0] || part;
+  const rows = tableBody.split(/<tr>/i).slice(1);
+  const out = [];
+  for (const row of rows) {
+    const match = row.match(/^\s*<td[^>]*>\s*(?:<a[^>]*>)?([A-Z.\-]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)>[\s\S]*?<td[^>]*>\s*(?:<a[^>]*>)?([^<]+)<\/(?:a|td)/i);
+    if (match) {
+      out.push({ symbol: canonUS(match[1]), name: clean(match[2]), sector: clean(match[3]) });
+    }
+  }
+  return out;
 }
 
 function parseNasdaq100(html) {
@@ -99,7 +108,7 @@ function parseNasdaqTrader(txt) {
   if (symbolIdx < 0 || nameIdx < 0) return [];
   return lines
     .filter(line => !/^File Creation Time:/i.test(line))
-    .map(line => line.split('|'))
+    .map(line => line.split('|').map(c => c.trim()))
     .filter(cols => cols.length >= headers.length)
     .filter(cols => testIdx < 0 || cols[testIdx] === 'N')
     .filter(cols => etfIdx < 0 || cols[etfIdx] !== 'Y')
