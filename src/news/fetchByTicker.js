@@ -276,16 +276,43 @@ function loadIndexSymbols(...relPaths) {
   return out;
 }
 
-const SP500_MEMBERS = loadIndexSymbols(
-  'data/indexes/sp500.json',
-  'data/indexes/sp500.offline.json',
-  'data/index-constituents/sp500.json'
+function loadIndexMapMembers(...keys) {
+  const out = new Set();
+  try {
+    const idx = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'src/maps.indexes.json'), 'utf8'));
+    for (const key of keys) {
+      const rows = Array.isArray(idx?.[key]) ? idx[key] : [];
+      for (const item of rows) {
+        const symbol = typeof item === 'string' ? item : item?.symbol;
+        if (symbol) out.add(String(symbol).trim().toUpperCase());
+      }
+    }
+  } catch {}
+  return out;
+}
+
+function unionSets(...sets) {
+  const out = new Set();
+  for (const set of sets) for (const item of set) out.add(item);
+  return out;
+}
+
+const SP500_MEMBERS = unionSets(
+  loadIndexMapMembers('sp500'),
+  loadIndexSymbols(
+    'data/indexes/sp500.json',
+    'data/indexes/sp500.offline.json',
+    'data/index-constituents/sp500.json'
+  )
 );
 
-const NASDAQ100_MEMBERS = loadIndexSymbols(
-  'data/indexes/nasdaq100.json',
-  'data/indexes/nasdaq100.offline.json',
-  'data/index-constituents/nasdaq100.json'
+const NASDAQ100_MEMBERS = unionSets(
+  loadIndexMapMembers('nasdaq100'),
+  loadIndexSymbols(
+    'data/indexes/nasdaq100.json',
+    'data/indexes/nasdaq100.offline.json',
+    'data/index-constituents/nasdaq100.json'
+  )
 );
 
 function isUSIndexHeavyweight(sym) {
