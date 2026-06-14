@@ -558,9 +558,19 @@ const INDEX_ROWS = (() => {
 })();
 
 const INDEX_SECTOR = {};
-for (const r of INDEX_ROWS) {
-  const sym = normIndexKey(r.symbol || r.ticker || '');
-  if (sym) INDEX_SECTOR[sym] = r.sector || r.gicsSector || r.industry || null;
+const INDEX_NAME = {};
+const INDEX_MARKET = {};
+const INDEX_NAME_TO_SYMBOL = {};
+const INDEX_MARKET_KEYS = { sp500: 'S&P 500', nasdaq100: 'NASDAQ 100', kospi200: 'KOSPI', kosdaq100: 'KOSDAQ' };
+for (const [idxKey, marketName] of Object.entries(INDEX_MARKET_KEYS)) {
+  for (const r of (INDEX_RAW?.[idxKey] || [])) {
+    const sym = normIndexKey(r.symbol || r.ticker || '');
+    if (!sym) continue;
+    INDEX_NAME[sym] = r.name || r.companyName || sym;
+    if (INDEX_NAME[sym]) INDEX_NAME_TO_SYMBOL[normalizeKey(INDEX_NAME[sym])] = sym;
+    INDEX_SECTOR[sym] = r.sector || r.gicsSector || r.industry || null;
+    INDEX_MARKET[sym] = marketName;
+  }
 }
 
 const SP500 = new Map((INDEX_RAW.sp500 || []).map(r => [r.symbol || r.ticker, r.name]));
@@ -852,6 +862,30 @@ function mergeIndexNames(base, idxMap) {
   return Array.from(out);
 }
 
+function buildTrendyPools(pools, metricsOut = {}) {
+  const out = { lastUpdated: new Date().toISOString(), markets: {} };
+  for (const market of MARKETS) {
+    const buckets = pools?.[market] || {};
+    out.markets[market] = {};
+    for (const bucket of ['safe', 'aggressive']) {
+      out.markets[market][bucket] = (buckets[bucket] || []).map(entry => {
+        const rawName = typeof entry === 'string' ? entry : entry?.name;
+        const sym = (typeof entry === 'object' && entry?.ticker) || nameToSymbol(rawName) || fallbackSymbolFromRaw(rawName);
+        const canon = normIndexKey(sym || '');
+        const metrics = metricsOut?.[market]?.[rawName] || metricsOut?.[market]?.[INDEX_NAME[canon]] || metricsOut?.[market]?.[canon] || null;
+        return {
+          name: INDEX_NAME[canon] || rawName,
+          ticker: sym || null,
+          sector: INDEX_SECTOR[canon] || metrics?.sector || null,
+          score: Number.isFinite(metrics?.score) ? metrics.score : (Number.isFinite(metrics?.score?.total) ? metrics.score.total : null),
+          index: INDEX_MARKET[canon] || market
+        };
+      });
+    }
+  }
+  return out;
+}
+
 const PROVIDER_SCORE_FILE = path.join(CACHE_DIR, 'provider-score.json');
 function loadProviderScore() {
   const txt = tryRead(PROVIDER_SCORE_FILE);
@@ -888,6 +922,7 @@ const TWELVE = process.env.TWELVEDATA_API_KEY || '';
 const FMP = !!FMP_API_KEY;
 
 const POOLS_FILE = 'pools.json';
+const POOLS_TRENDY_FILE = 'pools-trendy.json';
 const METRICS_FILE = 'pools-metrics.json';
 const FEEDBACK_FILE = 'feedback.json';
 const NEWS_FEATURES_FILE = 'data/news-features.json';
@@ -1146,7 +1181,7 @@ function nameToSymbol(name){
   const learned = lookupLearnedMapping(name);
   if (learned) return learned;
 
-  const dict = NAME_TO_SYMBOL[name] || TICKER_MAP[name];
+  const dict = NAME_TO_SYMBOL[name] || TICKER_MAP[name] || INDEX_NAME_TO_SYMBOL[name];
   if (dict) return dict;
 
   // Normalize BRK-B / BRK.B / BRK/B styles
@@ -3078,7 +3113,8 @@ async function main(){
   if (OFFLINE) {
     console.warn(`[buildPools] offline mode, leaving pools.json unchanged`);
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
-    console.log('[buildPools] wrote pools-metrics.json (pools.json unchanged)');
+    await writeAtomic(POOLS_TRENDY_FILE, JSON.stringify(buildTrendyPools(pools, metricsOut), null, 2));
+    console.log('[buildPools] wrote pools-metrics.json and pools-trendy.json (pools.json unchanged)');
     return;
   }
   if (DRY_RUN) {
@@ -3098,6 +3134,7 @@ async function main(){
     const lastGood = loadLastGoodPools();
     const outPools = lastGood ?? namesOnlyRank(universe, NEWS_FEATURES) ?? pools;
     await writeAtomic(POOLS_FILE, JSON.stringify(outPools, null, 2));
+    await writeAtomic(POOLS_TRENDY_FILE, JSON.stringify(buildTrendyPools(outPools, metricsOut), null, 2));
     await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
     if (lastGood) console.log('[buildPools] wrote pools.json from last good snapshot');
     else if (outPools !== pools) console.log('[buildPools] wrote pools.json and pools-metrics.json :: names-only');
@@ -3113,6 +3150,7 @@ async function main(){
 
   // Write outputs
   await writeAtomic(POOLS_FILE, JSON.stringify(pools, null, 2));
+  await writeAtomic(POOLS_TRENDY_FILE, JSON.stringify(buildTrendyPools(pools, metricsOut), null, 2));
   await writeAtomic(METRICS_FILE, JSON.stringify(metricsOut, null, 2));
   // Small sanity log so it's obvious scores are present
   try {
@@ -3120,7 +3158,7 @@ async function main(){
       metricsOut['S&P 500']?.['Microsoft']?.score ?? '(missing)');
   } catch {}
   snapshotPools(pools);
-  console.log('[buildPools] wrote pools.json and pools-metrics.json :: done');
+  console.log('[buildPools] wrote pools.json, pools-trendy.json and pools-metrics.json :: done');
 }
 
 main()
