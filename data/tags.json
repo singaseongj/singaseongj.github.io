@@ -1,7 +1,7 @@
 {
   "date": "2026-06-14",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 28,
   "discovered_keywords": [
     {
       "term": "Three BNK ETFs",
@@ -13,9 +13,10 @@
         "query": "BNK ETF 3종",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -50,9 +51,10 @@
         "query": "카르다노ADA 73% 추락",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -78,80 +80,6 @@
       ]
     },
     {
-      "term": "AI for Assisting",
-      "term_ko": "보조 맞추는 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "보조 맞추는 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“로봇, 주도주로 볼 수 없어…반도체·배터리와 보조 맞추는 AI 짝꿍”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004630967?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EC%A1%B0%20%EB%A7%9E%EC%B6%94%EB%8A%94%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EC%A1%B0%20%EB%A7%9E%EC%B6%94%EB%8A%94%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "“로봇, 주도주로 볼 수 없어…반도체·배터리와 보조 맞추는 AI 짝꿍”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004630967?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Wash's First FOMC",
-      "term_ko": "워시의 첫 FOMC",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "워시의 첫 FOMC",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "변동성 커진 증시…케빈 워시의 첫 FOMC '주목'",
-              "link": "https://n.news.naver.com/mnews/article/008/0005371599?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%8C%EC%8B%9C%EC%9D%98%20%EC%B2%AB%20FOMC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%8C%EC%8B%9C%EC%9D%98%20%EC%B2%AB%20FOMC"
-      },
-      "top_headlines": [
-        {
-          "title": "변동성 커진 증시…케빈 워시의 첫 FOMC '주목'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005371599?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Stock market bubble: 28%",
       "term_ko": "주가 거품 28%",
       "significance_score": 336,
@@ -161,9 +89,10 @@
         "query": "주가 거품 28%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -198,9 +127,10 @@
         "query": "스페이스X의 13억 달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -226,36 +156,37 @@
       ]
     },
     {
-      "term": "Stock Market: KOSPI 192",
-      "term_ko": "증시 코스피 192개",
+      "term": "Preview: 10 E-Daily Newspapers",
+      "term_ko": "미리보는 이데일리 신문10곳",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "증시 코스피 192개",
+        "query": "미리보는 이데일리 신문10곳",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "역대급 널뛰기 증시…코스피 192개 종목 52주 신고가·신저가 동시 기록",
-              "link": "https://n.news.naver.com/mnews/article/016/0002656299?sid=101"
+              "title": "[미리보는 이데일리 신문]10곳 중 7곳 없앤 日처럼…단위농협 통폐합",
+              "link": "https://n.news.naver.com/mnews/article/018/0006306163?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%BD%94%EC%8A%A4%ED%94%BC%20192%EA%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%BD%94%EC%8A%A4%ED%94%BC%20192%EA%B0%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B810%EA%B3%B3",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B810%EA%B3%B3"
       },
       "top_headlines": [
         {
-          "title": "역대급 널뛰기 증시…코스피 192개 종목 52주 신고가·신저가 동시 기록",
+          "title": "[미리보는 이데일리 신문]10곳 중 7곳 없앤 日처럼…단위농협 통폐합",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002656299?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/018/0006306163?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -263,36 +194,37 @@
       ]
     },
     {
-      "term": "20% below the high",
-      "term_ko": "고점 대비 20%",
+      "term": "Closed 7 locations",
+      "term_ko": "중 7곳 없앤",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "고점 대비 20%",
+        "query": "중 7곳 없앤",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "고점 대비 20% 가까이 떨어진 금값…소비 심리도 들썩",
-              "link": "https://www.joongboo.com/news/articleView.html?idxno=363728707"
+              "title": "[미리보는 이데일리 신문]10곳 중 7곳 없앤 日처럼…단위농협 통폐합",
+              "link": "https://n.news.naver.com/mnews/article/018/0006306163?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%A0%90%20%EB%8C%80%EB%B9%84%2020%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%A0%90%20%EB%8C%80%EB%B9%84%2020%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%207%EA%B3%B3%20%EC%97%86%EC%95%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%207%EA%B3%B3%20%EC%97%86%EC%95%A4"
       },
       "top_headlines": [
         {
-          "title": "고점 대비 20% 가까이 떨어진 금값…소비 심리도 들썩",
+          "title": "[미리보는 이데일리 신문]10곳 중 7곳 없앤 日처럼…단위농협 통폐합",
           "summary": "",
-          "link": "https://www.joongboo.com/news/articleView.html?idxno=363728707",
+          "link": "https://n.news.naver.com/mnews/article/018/0006306163?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -300,36 +232,37 @@
       ]
     },
     {
-      "term": "9.5% per year",
-      "term_ko": "돈에 연 9.5%",
+      "term": "Deposit interest rates back in the 3% range",
+      "term_ko": "예금금리 다시 3%대",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "돈에 연 9.5%",
+        "query": "예금금리 다시 3%대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "이틀 앞당겨 쓰는 돈에 연 9.5%…키움증권, 수백억 ‘이자장사’ 비판(...",
-              "link": "https://n.news.naver.com/mnews/article/082/0001385332?sid=101"
+              "title": "은행 예금금리 다시 3%대 진입",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=551003"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%88%EC%97%90%20%EC%97%B0%209.5%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%88%EC%97%90%20%EC%97%B0%209.5%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%EA%B8%88%EA%B8%88%EB%A6%AC%20%EB%8B%A4%EC%8B%9C%203%25%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%EA%B8%88%EA%B8%88%EB%A6%AC%20%EB%8B%A4%EC%8B%9C%203%25%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "이틀 앞당겨 쓰는 돈에 연 9.5%…키움증권, 수백억 ‘이자장사’ 비판(...",
+          "title": "은행 예금금리 다시 3%대 진입",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001385332?sid=101",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=551003",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -346,9 +279,10 @@
         "query": "한국거래소 신한 키움",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -383,9 +317,10 @@
         "query": "비트코인 독이 든",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -411,36 +346,37 @@
       ]
     },
     {
-      "term": "New low set simultaneously",
-      "term_ko": "신저가 동시 기록",
+      "term": "Kim Jeong-sik Column: The Dilemma of Monetary Policy",
+      "term_ko": "김정식칼럼 금리정책의 딜레마",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "신저가 동시 기록",
+        "query": "김정식칼럼 금리정책의 딜레마",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "역대급 널뛰기 증시…코스피 192개 종목 52주 신고가·신저가 동시 기록",
-              "link": "https://n.news.naver.com/mnews/article/016/0002656299?sid=101"
+              "title": "[김정식칼럼] 금리정책의 딜레마",
+              "link": "https://n.news.naver.com/mnews/article/022/0004135414?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%EC%A0%80%EA%B0%80%20%EB%8F%99%EC%8B%9C%20%EA%B8%B0%EB%A1%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%EC%A0%80%EA%B0%80%20%EB%8F%99%EC%8B%9C%20%EA%B8%B0%EB%A1%9D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%A0%95%EC%8B%9D%EC%B9%BC%EB%9F%BC%20%EA%B8%88%EB%A6%AC%EC%A0%95%EC%B1%85%EC%9D%98%20%EB%94%9C%EB%A0%88%EB%A7%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%A0%95%EC%8B%9D%EC%B9%BC%EB%9F%BC%20%EA%B8%88%EB%A6%AC%EC%A0%95%EC%B1%85%EC%9D%98%20%EB%94%9C%EB%A0%88%EB%A7%88"
       },
       "top_headlines": [
         {
-          "title": "역대급 널뛰기 증시…코스피 192개 종목 52주 신고가·신저가 동시 기록",
+          "title": "[김정식칼럼] 금리정책의 딜레마",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002656299?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/022/0004135414?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +384,37 @@
       ]
     },
     {
-      "term": "Gold prices have fallen",
-      "term_ko": "가까이 떨어진 금값",
+      "term": "Consolidation of local agricultural cooperatives, as in Japan",
+      "term_ko": "日처럼 단위농협 통폐합",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "가까이 떨어진 금값",
+        "query": "日처럼 단위농협 통폐합",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "고점 대비 20% 가까이 떨어진 금값…소비 심리도 들썩",
-              "link": "https://www.joongboo.com/news/articleView.html?idxno=363728707"
+              "title": "[미리보는 이데일리 신문]10곳 중 7곳 없앤 日처럼…단위농협 통폐합",
+              "link": "https://n.news.naver.com/mnews/article/018/0006306163?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B9%8C%EC%9D%B4%20%EB%96%A8%EC%96%B4%EC%A7%84%20%EA%B8%88%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B9%8C%EC%9D%B4%20%EB%96%A8%EC%96%B4%EC%A7%84%20%EA%B8%88%EA%B0%92"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E6%97%A5%EC%B2%98%EB%9F%BC%20%EB%8B%A8%EC%9C%84%EB%86%8D%ED%98%91%20%ED%86%B5%ED%8F%90%ED%95%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E6%97%A5%EC%B2%98%EB%9F%BC%20%EB%8B%A8%EC%9C%84%EB%86%8D%ED%98%91%20%ED%86%B5%ED%8F%90%ED%95%A9"
       },
       "top_headlines": [
         {
-          "title": "고점 대비 20% 가까이 떨어진 금값…소비 심리도 들썩",
+          "title": "[미리보는 이데일리 신문]10곳 중 7곳 없앤 日처럼…단위농협 통폐합",
           "summary": "",
-          "link": "https://www.joongboo.com/news/articleView.html?idxno=363728707",
+          "link": "https://n.news.naver.com/mnews/article/018/0006306163?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +422,37 @@
       ]
     },
     {
-      "term": "Consumer sentiment is also on the rise",
-      "term_ko": "소비 심리도 들썩",
+      "term": "Deepening polarization and volatility",
+      "term_ko": "양극화 변동성 심화",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "소비 심리도 들썩",
+        "query": "양극화 변동성 심화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "고점 대비 20% 가까이 떨어진 금값…소비 심리도 들썩",
-              "link": "https://www.joongboo.com/news/articleView.html?idxno=363728707"
+              "title": "증시 역대급 불장에 양극화·변동성 심화",
+              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=550941"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8C%EB%B9%84%20%EC%8B%AC%EB%A6%AC%EB%8F%84%20%EB%93%A4%EC%8D%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8C%EB%B9%84%20%EC%8B%AC%EB%A6%AC%EB%8F%84%20%EB%93%A4%EC%8D%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%91%EA%B7%B9%ED%99%94%20%EB%B3%80%EB%8F%99%EC%84%B1%20%EC%8B%AC%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%91%EA%B7%B9%ED%99%94%20%EB%B3%80%EB%8F%99%EC%84%B1%20%EC%8B%AC%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "고점 대비 20% 가까이 떨어진 금값…소비 심리도 들썩",
+          "title": "증시 역대급 불장에 양극화·변동성 심화",
           "summary": "",
-          "link": "https://www.joongboo.com/news/articleView.html?idxno=363728707",
+          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=550941",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +460,37 @@
       ]
     },
     {
-      "term": "The Yuan, Bolstered by Low Interest Rates",
-      "term_ko": "저금리 앞세운 위안화",
+      "term": "Column: Don't End Up Like Russia",
+      "term_ko": "칼럼 러시아처럼 되지",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "저금리 앞세운 위안화",
+        "query": "칼럼 러시아처럼 되지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "저금리 앞세운 위안화 김치본드…국내 채권시장 침투",
-              "link": "https://n.news.naver.com/mnews/article/015/0005298524?sid=101"
+              "title": "[칼럼] 러시아처럼 되지 않으려는 세계, 비트코인이 던지는 질문",
+              "link": "https://www.tokenpost.kr/news/insights/369193"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%80%EA%B8%88%EB%A6%AC%20%EC%95%9E%EC%84%B8%EC%9A%B4%20%EC%9C%84%EC%95%88%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%80%EA%B8%88%EB%A6%AC%20%EC%95%9E%EC%84%B8%EC%9A%B4%20%EC%9C%84%EC%95%88%ED%99%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%BC%EB%9F%BC%20%EB%9F%AC%EC%8B%9C%EC%95%84%EC%B2%98%EB%9F%BC%20%EB%90%98%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%BC%EB%9F%BC%20%EB%9F%AC%EC%8B%9C%EC%95%84%EC%B2%98%EB%9F%BC%20%EB%90%98%EC%A7%80"
       },
       "top_headlines": [
         {
-          "title": "저금리 앞세운 위안화 김치본드…국내 채권시장 침투",
+          "title": "[칼럼] 러시아처럼 되지 않으려는 세계, 비트코인이 던지는 질문",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005298524?sid=101",
+          "link": "https://www.tokenpost.kr/news/insights/369193",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,36 +498,37 @@
       ]
     },
     {
-      "term": "Kimchi Bond: The Domestic Bond Market",
-      "term_ko": "김치본드 국내 채권시장",
+      "term": "soaring endlessly",
+      "term_ko": "끝 모르고 치솟아",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "김치본드 국내 채권시장",
+        "query": "끝 모르고 치솟아",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "저금리 앞세운 위안화 김치본드…국내 채권시장 침투",
-              "link": "https://n.news.naver.com/mnews/article/015/0005298524?sid=101"
+              "title": "끝 모르고 치솟아…\"너무 오른다\" 곳곳 곡소리",
+              "link": "https://n.news.naver.com/mnews/article/055/0001364243?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EA%B5%AD%EB%82%B4%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%B9%98%EB%B3%B8%EB%93%9C%20%EA%B5%AD%EB%82%B4%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%81%9D%20%EB%AA%A8%EB%A5%B4%EA%B3%A0%20%EC%B9%98%EC%86%9F%EC%95%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%81%9D%20%EB%AA%A8%EB%A5%B4%EA%B3%A0%20%EC%B9%98%EC%86%9F%EC%95%84"
       },
       "top_headlines": [
         {
-          "title": "저금리 앞세운 위안화 김치본드…국내 채권시장 침투",
+          "title": "끝 모르고 치솟아…\"너무 오른다\" 곳곳 곡소리",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005298524?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/055/0001364243?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -596,147 +536,37 @@
       ]
     },
     {
-      "term": "Kiwoom Securities Rakes in Billions in Interest Income",
-      "term_ko": "키움증권 수백억 이자장사",
+      "term": "Prices are skyrocketing everywhere",
+      "term_ko": "너무 오른다 곳곳",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "키움증권 수백억 이자장사",
+        "query": "너무 오른다 곳곳",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "이틀 앞당겨 쓰는 돈에 연 9.5%…키움증권, 수백억 ‘이자장사’ 비판(...",
-              "link": "https://n.news.naver.com/mnews/article/082/0001385332?sid=101"
+              "title": "끝 모르고 치솟아…\"너무 오른다\" 곳곳 곡소리",
+              "link": "https://n.news.naver.com/mnews/article/055/0001364243?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%20%EC%88%98%EB%B0%B1%EC%96%B5%20%EC%9D%B4%EC%9E%90%EC%9E%A5%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C%20%EC%88%98%EB%B0%B1%EC%96%B5%20%EC%9D%B4%EC%9E%90%EC%9E%A5%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%88%EB%AC%B4%20%EC%98%A4%EB%A5%B8%EB%8B%A4%20%EA%B3%B3%EA%B3%B3",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%88%EB%AC%B4%20%EC%98%A4%EB%A5%B8%EB%8B%A4%20%EA%B3%B3%EA%B3%B3"
       },
       "top_headlines": [
         {
-          "title": "이틀 앞당겨 쓰는 돈에 연 9.5%…키움증권, 수백억 ‘이자장사’ 비판(...",
+          "title": "끝 모르고 치솟아…\"너무 오른다\" 곳곳 곡소리",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/082/0001385332?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Consider it a leading stock in the robotics sector",
-      "term_ko": "로봇 주도주로 볼",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "로봇 주도주로 볼",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“로봇, 주도주로 볼 수 없어…반도체·배터리와 보조 맞추는 AI 짝꿍”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004630967?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A1%9C%EB%B4%87%20%EC%A3%BC%EB%8F%84%EC%A3%BC%EB%A1%9C%20%EB%B3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A1%9C%EB%B4%87%20%EC%A3%BC%EB%8F%84%EC%A3%BC%EB%A1%9C%20%EB%B3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "“로봇, 주도주로 볼 수 없어…반도체·배터리와 보조 맞추는 AI 짝꿍”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004630967?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Countless semiconductors",
-      "term_ko": "수 없어 반도체",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수 없어 반도체",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“로봇, 주도주로 볼 수 없어…반도체·배터리와 보조 맞추는 AI 짝꿍”",
-              "link": "https://n.news.naver.com/mnews/article/011/0004630967?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%20%EC%97%86%EC%96%B4%20%EB%B0%98%EB%8F%84%EC%B2%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%20%EC%97%86%EC%96%B4%20%EB%B0%98%EB%8F%84%EC%B2%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "“로봇, 주도주로 볼 수 없어…반도체·배터리와 보조 맞추는 AI 짝꿍”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004630967?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Stock Market Volatility on the Rise",
-      "term_ko": "변동성 커진 증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "변동성 커진 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "변동성 커진 증시…케빈 워시의 첫 FOMC '주목'",
-              "link": "https://n.news.naver.com/mnews/article/008/0005371599?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%80%EB%8F%99%EC%84%B1%20%EC%BB%A4%EC%A7%84%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%80%EB%8F%99%EC%84%B1%20%EC%BB%A4%EC%A7%84%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "변동성 커진 증시…케빈 워시의 첫 FOMC '주목'",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005371599?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/055/0001364243?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -745,7 +575,7 @@
     },
     {
       "term": "SpaceXs Blockbuster IPO",
-      "term_ko": "스페이스X의 대박 IPO",
+      "term_ko": "스페이스X의 대성공적인 기업공개",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
@@ -753,9 +583,10 @@
         "query": "SpaceXs Blockbuster IPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -781,43 +612,6 @@
       ]
     },
     {
-      "term": "Secure SpaceX IPO",
-      "term_ko": "스페이스X의 성공적인 기업공개",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Secure SpaceX IPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Mirae Asset Securities fails to secure SpaceX IPO shares, frustrating Kor...",
-              "link": "https://www.koreatimes.co.kr/path/A2026061413580004007"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Secure%20SpaceX%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Secure%20SpaceX%20IPO"
-      },
-      "top_headlines": [
-        {
-          "title": "Mirae Asset Securities fails to secure SpaceX IPO shares, frustrating Kor...",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026061413580004007",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "Counterattack",
       "term_ko": "뒤 반격",
       "significance_score": 280,
@@ -827,9 +621,10 @@
         "query": "뒤 반격",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -864,9 +659,10 @@
         "query": "돌파 시그널",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -901,9 +697,10 @@
         "query": "성배 될까",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -929,36 +726,37 @@
       ]
     },
     {
-      "term": "A record-breaking roller coaster ride",
-      "term_ko": "역대급 널뛰기",
+      "term": "A thought-provoking question",
+      "term_ko": "던지는 질문",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "역대급 널뛰기",
+        "query": "던지는 질문",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "역대급 널뛰기 증시…코스피 192개 종목 52주 신고가·신저가 동시 기록",
-              "link": "https://n.news.naver.com/mnews/article/016/0002656299?sid=101"
+              "title": "[칼럼] 러시아처럼 되지 않으려는 세계, 비트코인이 던지는 질문",
+              "link": "https://www.tokenpost.kr/news/insights/369193"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%8C%80%EA%B8%89%20%EB%84%90%EB%9B%B0%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%8C%80%EA%B8%89%20%EB%84%90%EB%9B%B0%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%98%EC%A7%80%EB%8A%94%20%EC%A7%88%EB%AC%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%98%EC%A7%80%EB%8A%94%20%EC%A7%88%EB%AC%B8"
       },
       "top_headlines": [
         {
-          "title": "역대급 널뛰기 증시…코스피 192개 종목 52주 신고가·신저가 동시 기록",
+          "title": "[칼럼] 러시아처럼 되지 않으려는 세계, 비트코인이 던지는 질문",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/016/0002656299?sid=101",
+          "link": "https://www.tokenpost.kr/news/insights/369193",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -975,9 +773,10 @@
         "query": "Korea Misses Out",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1012,9 +811,10 @@
         "query": "Mirae Asset Securities",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1049,9 +849,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1071,9 +872,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-14T18:36:01+09:00",
+          "last_updated": "2026-06-14T23:03:00+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1082,33 +884,127 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-14T23:03:00+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Anticipation for a Bitcoin ETF",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-14T23:03:00+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Korean Won-U.S. Dollar Exchange Rate Surges",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-14T23:03:00+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Threat of a U.S. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-14T23:03:00+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-14T09:37:05.434Z",
+    "generated_at": "2026-06-14T14:04:03.398Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-14T18:36:01+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-14T23:03:00+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 2,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 2,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-14T18:36:01+09:00",
+      "last_updated": "2026-06-14T23:03:00+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-14T18:36:01+09:00",
+        "lastUpdated": "2026-06-14T23:03:00+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
