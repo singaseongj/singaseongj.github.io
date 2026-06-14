@@ -4,6 +4,7 @@ import { execFile } from 'node:child_process';
 
 const OFFLINE = process.env.OFFLINE === '1' || process.env.NO_NET === '1';
 const INDEX_PATH = 'src/maps.indexes.json';
+const DATA_INDEX_DIR = 'data/indexes';
 const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36';
 
 function execFileText(cmd, args) {
@@ -60,6 +61,30 @@ function uniqBySymbol(arr){
     out.push(r);
   }
   return out.sort((a,b)=>a.symbol.localeCompare(b.symbol));
+}
+
+
+async function readDataIndex(name) {
+  const candidates = [
+    `${DATA_INDEX_DIR}/${name}.json`,
+    `${DATA_INDEX_DIR}/${name}.offline.json`,
+  ];
+  for (const file of candidates) {
+    try {
+      const raw = JSON.parse(await fs.readFile(file, 'utf8'));
+      if (!Array.isArray(raw)) continue;
+      return raw.map(item => {
+        if (typeof item === 'string') return { symbol: canonUS(item), name: canonUS(item), sector: null };
+        return {
+          symbol: canonUS(item.symbol || item.ticker || ''),
+          name: item.name || item.symbol || item.ticker || '',
+          sector: item.sector || null,
+          marketCap: typeof item.marketCap === 'number' ? item.marketCap : null,
+        };
+      }).filter(row => row.symbol);
+    } catch {}
+  }
+  return [];
 }
 
 function parseCap(str){
@@ -211,6 +236,14 @@ async function main() {
   let current = { sp500: [], nasdaq100: [], kospi200: [], kosdaq100: [], nasdaqTrader: [], generatedAt: null };
   try { current = JSON.parse(await fs.readFile(INDEX_PATH, 'utf8')); } catch {}
 
+  const dataIndexes = {
+    sp500: await readDataIndex('sp500'),
+    nasdaq100: await readDataIndex('nasdaq100'),
+    kospi200: await readDataIndex('kospi200'),
+    kosdaq100: await readDataIndex('kosdaq100'),
+    nasdaqTrader: await readDataIndex('nasdaq-trader'),
+  };
+
   const [
     spTxt, nqTxt, k200Txt, kq100Txt,
     nasdaqListedTxt, otherListedTxt,
@@ -250,8 +283,11 @@ async function main() {
   ]);
 
   // Sanity thresholds; fallback to current if parse looks wrong/too small
+  if (sp500.length < 350 && dataIndexes.sp500.length >= 350) { console.log('[indexes] use data/indexes S&P500 (parsed=', dataIndexes.sp500.length, ')'); sp500 = dataIndexes.sp500; }
   if (sp500.length < 350) { console.log('[indexes] keep current S&P500 (parsed=', sp500.length, ')'); sp500 = current.sp500; }
+  if (nasdaq100.length < 70 && dataIndexes.nasdaq100.length >= 70) { console.log('[indexes] use data/indexes Nasdaq100 (parsed=', dataIndexes.nasdaq100.length, ')'); nasdaq100 = dataIndexes.nasdaq100; }
   if (nasdaq100.length < 70) { console.log('[indexes] keep current Nasdaq100 (parsed=', nasdaq100.length, ')'); nasdaq100 = current.nasdaq100; }
+  if (nasdaqTrader.length < 1000 && dataIndexes.nasdaqTrader.length >= 1000) { console.log('[indexes] use data/indexes NasdaqTrader (parsed=', dataIndexes.nasdaqTrader.length, ')'); nasdaqTrader = dataIndexes.nasdaqTrader; }
   if (nasdaqTrader.length < 1000) { console.log('[indexes] keep current NasdaqTrader (parsed=', nasdaqTrader.length, ')'); nasdaqTrader = current.nasdaqTrader || []; }
   if (kospi200.length < 150 && kospi200FromNaver.length >= 150) {
     console.log('[indexes] use Naver KOSPI200 (parsed=', kospi200FromNaver.length, ')');
@@ -261,7 +297,9 @@ async function main() {
     console.log('[indexes] use Naver KOSDAQ100 (parsed=', kosdaq100FromNaver.length, ')');
     kosdaq100 = kosdaq100FromNaver;
   }
+  if (kospi200.length < 150 && dataIndexes.kospi200.length >= 150) { console.log('[indexes] use data/indexes KOSPI200 (parsed=', dataIndexes.kospi200.length, ')'); kospi200 = dataIndexes.kospi200; }
   if (kospi200.length < 150) { console.log('[indexes] keep current KOSPI200 (parsed=', kospi200.length, ')'); kospi200 = current.kospi200; }
+  if (kosdaq100.length < 80 && dataIndexes.kosdaq100.length >= 80) { console.log('[indexes] use data/indexes KOSDAQ100 (parsed=', dataIndexes.kosdaq100.length, ')'); kosdaq100 = dataIndexes.kosdaq100; }
   if (kosdaq100.length < 80) { console.log('[indexes] keep current KOSDAQ100 (parsed=', kosdaq100.length, ')'); kosdaq100 = current.kosdaq100; }
 
   const NAME_OVERRIDES = {
