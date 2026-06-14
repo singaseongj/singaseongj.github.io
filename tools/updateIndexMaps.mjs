@@ -77,8 +77,8 @@ async function readDataIndex(name) {
         if (typeof item === 'string') return { symbol: canonUS(item), name: canonUS(item), sector: null };
         return {
           symbol: canonUS(item.symbol || item.ticker || ''),
-          name: clean(item.name || item.symbol || item.ticker || ''),
-          sector: item.sector ? clean(item.sector) : null,
+          name: item.name || item.symbol || item.ticker || '',
+          sector: item.sector || null,
           marketCap: typeof item.marketCap === 'number' ? item.marketCap : null,
         };
       }).filter(row => row.symbol);
