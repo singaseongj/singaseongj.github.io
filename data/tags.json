@@ -1,7 +1,7 @@
 {
-  "date": "2026-06-13",
+  "date": "2026-06-14",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "Finance: SpaceX IPO",
@@ -13,7 +13,7 @@
         "query": "파이낸스 스페이스X IPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -50,7 +50,7 @@
         "query": "시바이누SHIB 파생상품 거래",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -78,36 +78,147 @@
       ]
     },
     {
-      "term": "Will there be a U.S. FOMC meeting?",
-      "term_ko": "있을까 미 FOMC",
+      "term": "The Market Is on a Roller Coaster Ride",
+      "term_ko": "마켓 ING롤러코스터 탄",
       "significance_score": 350,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "있을까 미 FOMC",
+        "query": "마켓 ING롤러코스터 탄",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "'9천피' 도달할 수 있을까? 미 FOMC 결과가 변수",
-              "link": "https://n.news.naver.com/mnews/article/052/0002366148?sid=101"
+              "title": "[마켓 ING]롤러코스터 탄 코스피, FOMC에 주목",
+              "link": "https://n.news.naver.com/mnews/article/277/0005775996?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%88%EC%9D%84%EA%B9%8C%20%EB%AF%B8%20FOMC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%88%EC%9D%84%EA%B9%8C%20%EB%AF%B8%20FOMC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%BC%93%20ING%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%ED%83%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%BC%93%20ING%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0%20%ED%83%84"
       },
       "top_headlines": [
         {
-          "title": "'9천피' 도달할 수 있을까? 미 FOMC 결과가 변수",
+          "title": "[마켓 ING]롤러코스터 탄 코스피, FOMC에 주목",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002366148?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/277/0005775996?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "KOSPI Keeps an Eye on the FOMC",
+      "term_ko": "코스피 FOMC에 주목",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "코스피 FOMC에 주목",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-14T12:51:17+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[마켓 ING]롤러코스터 탄 코스피, FOMC에 주목",
+              "link": "https://n.news.naver.com/mnews/article/277/0005775996?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20FOMC%EC%97%90%20%EC%A3%BC%EB%AA%A9",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20FOMC%EC%97%90%20%EC%A3%BC%EB%AA%A9"
+      },
+      "top_headlines": [
+        {
+          "title": "[마켓 ING]롤러코스터 탄 코스피, FOMC에 주목",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/277/0005775996?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Stock market bubble: 28%",
+      "term_ko": "주가 거품 28%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주가 거품 28%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-14T12:51:17+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "주가 거품 28% 폭락 예고? 월가 전문가가 폭로한 스페이스X의 위험한 재...",
+              "link": "http://coinreaders.com/242201"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%80%20%EA%B1%B0%ED%92%88%2028%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%80%20%EA%B1%B0%ED%92%88%2028%25"
+      },
+      "top_headlines": [
+        {
+          "title": "주가 거품 28% 폭락 예고? 월가 전문가가 폭로한 스페이스X의 위험한 재...",
+          "summary": "",
+          "link": "http://coinreaders.com/242201",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "SpaceX's $1.3 billion",
+      "term_ko": "스페이스X의 13억 달러",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "스페이스X의 13억 달러",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-14T12:51:17+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "스페이스X의 13억 달러 비트코인, 독이 든 성배 될까?",
+              "link": "http://coinreaders.com/242197"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%EC%9D%98%2013%EC%96%B5%20%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%EC%9D%98%2013%EC%96%B5%20%EB%8B%AC%EB%9F%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "스페이스X의 13억 달러 비트코인, 독이 든 성배 될까?",
+          "summary": "",
+          "link": "http://coinreaders.com/242197",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -124,7 +235,7 @@
         "query": "1억 4009만 달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -152,36 +263,36 @@
       ]
     },
     {
-      "term": "SanDisk Expands to $2,000",
-      "term_ko": "확산 샌디스크 2000달러",
+      "term": "Year-end tax revenue surplus of 15 trillion to 20 trillion won",
+      "term_ko": "연말 초과세수 15조~20조원",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "확산 샌디스크 2000달러",
+        "query": "연말 초과세수 15조~20조원",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
+              "title": "정부 곳간 '빵빵'…연말 초과세수 15조~20조원 전망",
+              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=304733"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EC%82%B0%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%202000%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EC%82%B0%20%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%202000%EB%8B%AC%EB%9F%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EB%A7%90%20%EC%B4%88%EA%B3%BC%EC%84%B8%EC%88%98%2015%EC%A1%B0~20%EC%A1%B0%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EB%A7%90%20%EC%B4%88%EA%B3%BC%EC%84%B8%EC%88%98%2015%EC%A1%B0~20%EC%A1%B0%EC%9B%90"
       },
       "top_headlines": [
         {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
+          "title": "정부 곳간 '빵빵'…연말 초과세수 15조~20조원 전망",
           "summary": "",
-          "link": "http://coinreaders.com/242093",
+          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=304733",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -189,36 +300,36 @@
       ]
     },
     {
-      "term": "Today's Gold Prices: June 14",
-      "term_ko": "오늘의 금값시세6월 14일자",
+      "term": "12-month high",
+      "term_ko": "12개월 최고 연",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "오늘의 금값시세6월 14일자",
+        "query": "12개월 최고 연",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "오늘의 금값시세(6월 14일자) 금값 하락세이유",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3607697"
+              "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026061216350065011b5a221379_18"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B86%EC%9B%94%2014%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B86%EC%9B%94%2014%EC%9D%BC%EC%9E%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=12%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=12%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0"
       },
       "top_headlines": [
         {
-          "title": "오늘의 금값시세(6월 14일자) 금값 하락세이유",
+          "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
           "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3607697",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026061216350065011b5a221379_18",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,36 +337,36 @@
       ]
     },
     {
-      "term": "Weekly Gold Price: 3.01%",
-      "term_ko": "주간 금시세 3.01%",
+      "term": "8.00% K Bank My Kids",
+      "term_ko": "8.00% 케이뱅크 마이키즈",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "주간 금시세 3.01%",
+        "query": "8.00% 케이뱅크 마이키즈",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "주간 금시세 3.01% 하락…금리 인상 가능성 영향",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79416"
+              "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026061216350065011b5a221379_18"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EA%B0%84%20%EA%B8%88%EC%8B%9C%EC%84%B8%203.01%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EA%B0%84%20%EA%B8%88%EC%8B%9C%EC%84%B8%203.01%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8.00%25%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EB%A7%88%EC%9D%B4%ED%82%A4%EC%A6%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8.00%25%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EB%A7%88%EC%9D%B4%ED%82%A4%EC%A6%88"
       },
       "top_headlines": [
         {
-          "title": "주간 금시세 3.01% 하락…금리 인상 가능성 영향",
+          "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
           "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79416",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026061216350065011b5a221379_18",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -263,36 +374,36 @@
       ]
     },
     {
-      "term": "can reach 9,000 feet",
-      "term_ko": "9천피 도달할 수",
+      "term": "24-month maximum term",
+      "term_ko": "24개월 최고 연",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "9천피 도달할 수",
+        "query": "24개월 최고 연",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "'9천피' 도달할 수 있을까? 미 FOMC 결과가 변수",
-              "link": "https://n.news.naver.com/mnews/article/052/0002366148?sid=101"
+              "title": "24개월 최고 연 3.54%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026061216333019291b5a221379_18"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9%EC%B2%9C%ED%94%BC%20%EB%8F%84%EB%8B%AC%ED%95%A0%20%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9%EC%B2%9C%ED%94%BC%20%EB%8F%84%EB%8B%AC%ED%95%A0%20%EC%88%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=24%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=24%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0"
       },
       "top_headlines": [
         {
-          "title": "'9천피' 도달할 수 있을까? 미 FOMC 결과가 변수",
+          "title": "24개월 최고 연 3.54%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002366148?sid=101",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026061216333019291b5a221379_18",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -300,36 +411,36 @@
       ]
     },
     {
-      "term": "KOSPI Surges Past 8,400",
-      "term_ko": "질주 코스피 8400선",
+      "term": "3.54% Gwangju Bank Mizwool Compound Interest Time Deposit",
+      "term_ko": "3.54% 광주은행 미즈월복리정기예금",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "질주 코스피 8400선",
+        "query": "3.54% 광주은행 미즈월복리정기예금",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "미국 증시 훈풍에 한국 증시 질주…코스피 8400선·코스닥 1000선 돌파",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=581838"
+              "title": "24개월 최고 연 3.54%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026061216333019291b5a221379_18"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%88%EC%A3%BC%20%EC%BD%94%EC%8A%A4%ED%94%BC%208400%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%88%EC%A3%BC%20%EC%BD%94%EC%8A%A4%ED%94%BC%208400%EC%84%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3.54%25%20%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89%20%EB%AF%B8%EC%A6%88%EC%9B%94%EB%B3%B5%EB%A6%AC%EC%A0%95%EA%B8%B0%EC%98%88%EA%B8%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3.54%25%20%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89%20%EB%AF%B8%EC%A6%88%EC%9B%94%EB%B3%B5%EB%A6%AC%EC%A0%95%EA%B8%B0%EC%98%88%EA%B8%88"
       },
       "top_headlines": [
         {
-          "title": "미국 증시 훈풍에 한국 증시 질주…코스피 8400선·코스닥 1000선 돌파",
+          "title": "24개월 최고 연 3.54%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=581838",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026061216333019291b5a221379_18",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -337,36 +448,36 @@
       ]
     },
     {
-      "term": "KOSDAQ Breaks Through the 1,000 Mark",
-      "term_ko": "코스닥 1000선 돌파",
-      "significance_score": 336,
+      "term": "Bitcoin's poison",
+      "term_ko": "비트코인 독이 든",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스닥 1000선 돌파",
+        "query": "비트코인 독이 든",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "미국 증시 훈풍에 한국 증시 질주…코스피 8400선·코스닥 1000선 돌파",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=581838"
+              "title": "스페이스X의 13억 달러 비트코인, 독이 든 성배 될까?",
+              "link": "http://coinreaders.com/242197"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%EB%8B%A5%201000%EC%84%A0%20%EB%8F%8C%ED%8C%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%EB%8B%A5%201000%EC%84%A0%20%EB%8F%8C%ED%8C%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EB%8F%85%EC%9D%B4%20%EB%93%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20%EB%8F%85%EC%9D%B4%20%EB%93%A0"
       },
       "top_headlines": [
         {
-          "title": "미국 증시 훈풍에 한국 증시 질주…코스피 8400선·코스닥 1000선 돌파",
+          "title": "스페이스X의 13억 달러 비트코인, 독이 든 성배 될까?",
           "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=581838",
+          "link": "http://coinreaders.com/242197",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -383,7 +494,7 @@
         "query": "증시 암호화폐 시장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -420,7 +531,7 @@
         "query": "간 대규모 자금",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -448,36 +559,36 @@
       ]
     },
     {
-      "term": "Circuit Sidecar Life",
-      "term_ko": "서킷 사이드카 일상",
+      "term": "The government's coffers are full",
+      "term_ko": "정부 곳간 빵빵",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서킷 사이드카 일상",
+        "query": "정부 곳간 빵빵",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "[비즈토크<상>] -8%, 8%, -4% '롤러코스피'에 서킷·사이드카 일상…9·11...",
-              "link": "https://n.news.naver.com/mnews/article/629/0000507384?sid=101"
+              "title": "정부 곳간 '빵빵'…연말 초과세수 15조~20조원 전망",
+              "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=304733"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%82%B7%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4%20%EC%9D%BC%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%82%B7%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4%20%EC%9D%BC%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EB%B6%80%20%EA%B3%B3%EA%B0%84%20%EB%B9%B5%EB%B9%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EB%B6%80%20%EA%B3%B3%EA%B0%84%20%EB%B9%B5%EB%B9%B5"
       },
       "top_headlines": [
         {
-          "title": "[비즈토크<상>] -8%, 8%, -4% '롤러코스피'에 서킷·사이드카 일상…9·11...",
+          "title": "정부 곳간 '빵빵'…연말 초과세수 15조~20조원 전망",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/629/0000507384?sid=101",
+          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=304733",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +596,36 @@
       ]
     },
     {
-      "term": "Interest Rate Cut",
-      "term_ko": "하락 금리 인상",
+      "term": "Weakness in Asian Currencies",
+      "term_ko": "아시아 통화 약세",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "하락 금리 인상",
+        "query": "아시아 통화 약세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "주간 금시세 3.01% 하락…금리 인상 가능성 영향",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79416"
+              "title": "AI 투자 붐에도 아시아 통화 약세…전쟁·미 금리 상승 등 영향",
+              "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260614010004592"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%84%EC%8B%9C%EC%95%84%20%ED%86%B5%ED%99%94%20%EC%95%BD%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%84%EC%8B%9C%EC%95%84%20%ED%86%B5%ED%99%94%20%EC%95%BD%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "주간 금시세 3.01% 하락…금리 인상 가능성 영향",
+          "title": "AI 투자 붐에도 아시아 통화 약세…전쟁·미 금리 상승 등 영향",
           "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79416",
+          "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260614010004592",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +633,36 @@
       ]
     },
     {
-      "term": "If loan interest rates rise",
-      "term_ko": "대출 이자 오르면",
+      "term": "War U.S. Interest Rates",
+      "term_ko": "전쟁 미 금리",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "대출 이자 오르면",
+        "query": "전쟁 미 금리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "대출 이자 오르면 집값 떨어진다?...부동산의 '역설'",
-              "link": "https://www.ajunews.com/view/20260613204507836"
+              "title": "AI 투자 붐에도 아시아 통화 약세…전쟁·미 금리 상승 등 영향",
+              "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260614010004592"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8C%80%EC%B6%9C%20%EC%9D%B4%EC%9E%90%20%EC%98%A4%EB%A5%B4%EB%A9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8C%80%EC%B6%9C%20%EC%9D%B4%EC%9E%90%20%EC%98%A4%EB%A5%B4%EB%A9%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%9F%81%20%EB%AF%B8%20%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%9F%81%20%EB%AF%B8%20%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "대출 이자 오르면 집값 떨어진다?...부동산의 '역설'",
+          "title": "AI 투자 붐에도 아시아 통화 약세…전쟁·미 금리 상승 등 영향",
           "summary": "",
-          "link": "https://www.ajunews.com/view/20260613204507836",
+          "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260614010004592",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,36 +670,36 @@
       ]
     },
     {
-      "term": "Signal SpaceX IPO",
-      "term_ko": "스페이스X의 기업공개(IPO)",
-      "significance_score": 294,
+      "term": "due to factors such as the rise",
+      "term_ko": "상승 등 영향",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Signal SpaceX IPO",
+        "query": "상승 등 영향",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
+              "title": "AI 투자 붐에도 아시아 통화 약세…전쟁·미 금리 상승 등 영향",
+              "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260614010004592"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Signal%20SpaceX%20IPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Signal%20SpaceX%20IPO"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%8A%B9%20%EB%93%B1%20%EC%98%81%ED%96%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%8A%B9%20%EB%93%B1%20%EC%98%81%ED%96%A5"
       },
       "top_headlines": [
         {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
+          "title": "AI 투자 붐에도 아시아 통화 약세…전쟁·미 금리 상승 등 영향",
           "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
+          "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260614010004592",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -596,184 +707,110 @@
       ]
     },
     {
-      "term": "Wall Street optimism",
-      "term_ko": "월가 낙관론",
+      "term": "Bitcoin Recovers from the Shock",
+      "term_ko": "충격 넘긴 비트코인",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "충격 넘긴 비트코인",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-14T12:51:17+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[가상자산 나침반] 물가 충격 넘긴 비트코인…이번 주 ‘워시의 첫 FOMC...",
+              "link": "https://n.news.naver.com/mnews/article/029/0003031588?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%A9%EA%B2%A9%20%EB%84%98%EA%B8%B4%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%A9%EA%B2%A9%20%EB%84%98%EA%B8%B4%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "[가상자산 나침반] 물가 충격 넘긴 비트코인…이번 주 ‘워시의 첫 FOMC...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/029/0003031588?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Bank of the Week for Savings Accounts",
+      "term_ko": "적금 이주의 은행",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "적금 이주의 은행",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-14T12:51:17+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026061216350065011b5a221379_18"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%81%EA%B8%88%20%EC%9D%B4%EC%A3%BC%EC%9D%98%20%EC%9D%80%ED%96%89",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%81%EA%B8%88%20%EC%9D%B4%EC%A3%BC%EC%9D%98%20%EC%9D%80%ED%96%89"
+      },
+      "top_headlines": [
+        {
+          "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
+          "summary": "",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026061216350065011b5a221379_18",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Will it become the Holy Grail?",
+      "term_ko": "성배 될까",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "월가 낙관론",
+        "query": "성배 될까",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
+              "title": "스페이스X의 13억 달러 비트코인, 독이 든 성배 될까?",
+              "link": "http://coinreaders.com/242197"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EA%B0%80%20%EB%82%99%EA%B4%80%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EA%B0%80%20%EB%82%99%EA%B4%80%EB%A1%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%B1%EB%B0%B0%20%EB%90%A0%EA%B9%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%B1%EB%B0%B0%20%EB%90%A0%EA%B9%8C"
       },
       "top_headlines": [
         {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
+          "title": "스페이스X의 13억 달러 비트코인, 독이 든 성배 될까?",
           "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Is it possible to break through?",
-      "term_ko": "돌파 가능할까",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 가능할까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-              "link": "http://coinreaders.com/242093"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "월가 낙관론 확산…샌디스크 2,000달러 돌파 가능할까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242093",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Reasons for the decline in gold prices",
-      "term_ko": "금값 하락세이유",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금값 하락세이유",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(6월 14일자) 금값 하락세이유",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3607697"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD%EC%84%B8%EC%9D%B4%EC%9C%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EA%B0%92%20%ED%95%98%EB%9D%BD%EC%84%B8%EC%9D%B4%EC%9C%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(6월 14일자) 금값 하락세이유",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3607697",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Impact of Possibility",
-      "term_ko": "가능성 영향",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가능성 영향",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주간 금시세 3.01% 하락…금리 인상 가능성 영향",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79416"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%8A%A5%EC%84%B1%20%EC%98%81%ED%96%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%8A%A5%EC%84%B1%20%EC%98%81%ED%96%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "주간 금시세 3.01% 하락…금리 인상 가능성 영향",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=79416",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The result is a variable",
-      "term_ko": "결과가 변수",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "결과가 변수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "'9천피' 도달할 수 있을까? 미 FOMC 결과가 변수",
-              "link": "https://n.news.naver.com/mnews/article/052/0002366148?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%B0%EA%B3%BC%EA%B0%80%20%EB%B3%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%B0%EA%B3%BC%EA%B0%80%20%EB%B3%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "'9천피' 도달할 수 있을까? 미 FOMC 결과가 변수",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002366148?sid=101",
+          "link": "http://coinreaders.com/242197",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -790,7 +827,7 @@
         "query": "Kick SpaceX Out",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -827,7 +864,7 @@
         "query": "Mega I.P.O Frenzy",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -864,7 +901,7 @@
         "query": "Could Be A",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -901,7 +938,7 @@
         "query": "Your 401k",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -929,80 +966,6 @@
       ]
     },
     {
-      "term": "Sends A",
-      "term_ko": "A를 보냅니다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Sends A",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Sends%20A",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Sends%20A"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Capital Bets",
-      "term_ko": "자본 베팅",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Capital Bets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-14T04:27:36+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-              "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Capital%20Bets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Capital%20Bets"
-      },
-      "top_headlines": [
-        {
-          "title": "[Today's Signal] SpaceX IPO Sends a Signal… Capital Bets on Power and S...",
-          "summary": "",
-          "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154432",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -1012,7 +975,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1034,7 +997,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1056,7 +1019,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-14T04:27:36+09:00",
+          "last_updated": "2026-06-14T12:51:17+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1072,26 +1035,26 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-13T19:28:36.877Z",
+    "generated_at": "2026-06-14T03:52:21.206Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-14T04:27:36+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-14T12:51:17+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-14T04:27:36+09:00",
+      "last_updated": "2026-06-14T12:51:17+09:00",
       "fallback_sources": [
         "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-14T04:27:36+09:00",
+        "lastUpdated": "2026-06-14T12:51:17+09:00",
         "fallbackSources": [
           "trend_log"
         ]

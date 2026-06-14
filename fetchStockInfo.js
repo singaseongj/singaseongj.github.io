@@ -90,6 +90,7 @@ const SKIP_FRESH = ARGS.has('--skip-fresh');
 const DELAY_ARG = Number((process.argv.find(a => a.startsWith('--delay=')) || '').split('=')[1]);
 const CACHE_FILE = path.resolve(process.cwd(), 'ticker-cache.json');
 const POOLS_PATH = path.resolve(process.cwd(), 'pools.json');
+const POOLS_TRENDY_PATH = path.resolve(process.cwd(), 'pools-trendy.json');
 const POOLS_CACHE = path.resolve(process.cwd(), 'pools-cache.json');
 const POOLS_TTL_MS = Number(process.env.POOLS_TTL_MS || 24 * 60 * 60 * 1000); // default 24h
 const POOLS_URL = process.env.POOLS_URL || ''; // optional remote JSON endpoint
@@ -1059,6 +1060,7 @@ async function isFreshPath(p, ttlMs) { try { const s = await fs.stat(p); return 
 function validatePoolsSchema(pools) {
   if (!pools || typeof pools !== 'object') throw new Error('pools not object');
   for (const [m, b] of Object.entries(pools)) {
+    if (m === 'lastUpdated') continue;
     if (!b || !Array.isArray(b.safe) || !Array.isArray(b.aggressive)) {
       throw new Error(`invalid pools schema at ${m}`);
     }
@@ -1085,6 +1087,13 @@ async function loadPools() {
     const remote = await fetchPoolsRemote();
     if (remote) return remote;
   }
+  if (POOLS_URL && await isFreshPath(POOLS_CACHE, POOLS_TTL_MS)) {
+    const cached = await loadJsonSafe(POOLS_CACHE);
+    if (cached) { try { validatePoolsSchema(cached); return cached; } catch {} }
+  }
+  const trendy = await loadJsonSafe(POOLS_TRENDY_PATH);
+  if (trendy?.markets) { try { validatePoolsSchema(trendy.markets); return trendy.markets; } catch {} }
+  if (trendy) { try { validatePoolsSchema(trendy); return trendy; } catch {} }
   const cached = await loadJsonSafe(POOLS_CACHE);
   if (cached) { try { validatePoolsSchema(cached); return cached; } catch {} }
   const local = await loadJsonSafe(POOLS_PATH);
@@ -1878,21 +1887,27 @@ async function tryFetchAndEnrich() {
       const updated = [];
       for (const entry of entries) {
         const rawName = typeof entry === 'string' ? entry : entry.name;
+        const providedTicker = typeof entry === 'object' ? entry.ticker : null;
+        const providedSector = typeof entry === 'object' ? entry.sector : null;
+        let ticker = providedTicker ? canonSymbol(providedTicker) : null;
+        let sector = providedSector || null;
+        let displayName = rawName;
 
         try {
-          const sym = canonSymbol(rawName);
-          let ticker = null;
-          let sector = null;
-          let displayName = rawName;
+          const sym = canonSymbol(providedTicker || rawName);
 
           if (INDEX_NAME[sym] || INDEX_SECTOR[sym]) {
-            ticker = sym;
+            ticker = ticker || sym;
             displayName = INDEX_NAME[sym] || rawName;
-            sector = INDEX_SECTOR[sym] || null;
+            sector = sector || INDEX_SECTOR[sym] || null;
           } else {
-            const res = await fetchSector(rawName, cache);
-            ticker = res.ticker;
-            sector = INDEX_SECTOR[ticker] || res.sector;
+            if (ticker) {
+              sector = sector || await fetchSectorByTicker(ticker, cache);
+            } else {
+              const res = await fetchSector(rawName, cache);
+              ticker = res.ticker;
+              sector = sector || INDEX_SECTOR[ticker] || res.sector;
+            }
             displayName = INDEX_NAME[ticker] || (!looksLikeTicker(rawName) ? rawName : undefined) || rawName;
           }
 
@@ -1905,7 +1920,7 @@ async function tryFetchAndEnrich() {
 
           const news = ticker ? (newsFeatures[ticker] || {}) : {};
           const trend = ticker ? (naverTrends[ticker] || {}) : {};
-          const metrics = getMetricsForEntry(market, rawName);
+          const metrics = getMetricsForEntry(market, ticker || rawName) || getMetricsForEntry(market, rawName);
           const enrichedMetrics = {
             ...metrics,
             ...(newsFeatures[ticker] || {}),
@@ -1956,7 +1971,7 @@ async function tryFetchAndEnrich() {
           if (sector) successCount++;
         } catch (err) {
           console.error(`[ERROR] ${rawName}: ${err.message}`);
-          const metrics = getMetricsForEntry(market, rawName);
+          const metrics = getMetricsForEntry(market, ticker || rawName) || getMetricsForEntry(market, rawName);
           const enrichedMetrics = {
             ...metrics,
             ...(newsFeatures[ticker] || {}),
