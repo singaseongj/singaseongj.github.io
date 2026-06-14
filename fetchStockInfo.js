@@ -1087,6 +1087,10 @@ async function loadPools() {
     const remote = await fetchPoolsRemote();
     if (remote) return remote;
   }
+  if (POOLS_URL && await isFreshPath(POOLS_CACHE, POOLS_TTL_MS)) {
+    const cached = await loadJsonSafe(POOLS_CACHE);
+    if (cached) { try { validatePoolsSchema(cached); return cached; } catch {} }
+  }
   const trendy = await loadJsonSafe(POOLS_TRENDY_PATH);
   if (trendy?.markets) { try { validatePoolsSchema(trendy.markets); return trendy.markets; } catch {} }
   if (trendy) { try { validatePoolsSchema(trendy); return trendy; } catch {} }
@@ -1897,9 +1901,13 @@ async function tryFetchAndEnrich() {
             displayName = INDEX_NAME[sym] || rawName;
             sector = sector || INDEX_SECTOR[sym] || null;
           } else {
-            const res = await fetchSector(rawName, cache);
-            ticker = ticker || res.ticker;
-            sector = sector || INDEX_SECTOR[ticker] || res.sector;
+            if (ticker) {
+              sector = sector || await fetchSectorByTicker(ticker, cache);
+            } else {
+              const res = await fetchSector(rawName, cache);
+              ticker = res.ticker;
+              sector = sector || INDEX_SECTOR[ticker] || res.sector;
+            }
             displayName = INDEX_NAME[ticker] || (!looksLikeTicker(rawName) ? rawName : undefined) || rawName;
           }
 
