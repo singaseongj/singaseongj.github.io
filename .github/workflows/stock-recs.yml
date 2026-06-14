@@ -202,6 +202,12 @@ jobs:
           node --version
           node --test tests/*.test.js
 
+      - name: Update data index JSON files
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          node tools/updateDataIndexes.mjs
+
       - name: Refresh index ticker maps (src/maps.indexes.json)
         shell: bash
         run: |
