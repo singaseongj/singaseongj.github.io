@@ -1,7 +1,7 @@
 {
   "date": "2026-06-15",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "GoIPO to be held in September",
@@ -13,9 +13,10 @@
         "query": "9월 개최 GoIPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -41,6 +42,44 @@
       ]
     },
     {
+      "term": "Why AI Still",
+      "term_ko": "왜 여전히 AI",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "왜 여전히 AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "AMD 목표가 재확인에도 주가 논란…월가는 왜 여전히 AI 성장성에 주목...",
+              "link": "http://coinreaders.com/242398"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%9C%20%EC%97%AC%EC%A0%84%ED%9E%88%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%9C%20%EC%97%AC%EC%A0%84%ED%9E%88%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "AMD 목표가 재확인에도 주가 논란…월가는 왜 여전히 AI 성장성에 주목...",
+          "summary": "",
+          "link": "http://coinreaders.com/242398",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "C-Lab Outside, 9th Cohort",
       "term_ko": "C랩 아웃사이드 9기",
       "significance_score": 336,
@@ -50,9 +89,10 @@
         "query": "C랩 아웃사이드 9기",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -78,36 +118,37 @@
       ]
     },
     {
-      "term": "Q1 revenue reached 138.1 billion won",
-      "term_ko": "1분기 1381억 달성",
+      "term": "26 years as a regular employee",
+      "term_ko": "상용 근로자 26년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "1분기 1381억 달성",
+        "query": "상용 근로자 26년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "신한은행, 해외서 독보적 존재감으로 호실적 기록... 1분기 1381억 달성",
-              "link": "https://www.dongponews.net/news/articleView.html?idxno=58742"
+              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
+              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%EB%B6%84%EA%B8%B0%201381%EC%96%B5%20%EB%8B%AC%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%EB%B6%84%EA%B8%B0%201381%EC%96%B5%20%EB%8B%AC%EC%84%B1"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9A%A9%20%EA%B7%BC%EB%A1%9C%EC%9E%90%2026%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9A%A9%20%EA%B7%BC%EB%A1%9C%EC%9E%90%2026%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "신한은행, 해외서 독보적 존재감으로 호실적 기록... 1분기 1381억 달성",
+          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
           "summary": "",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=58742",
+          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -115,258 +156,37 @@
       ]
     },
     {
-      "term": "1% of the permitted volume",
-      "term_ko": "허가 물량 1%",
+      "term": "The number of people in their 30s decreased by about 190,000",
+      "term_ko": "30대 19만여명 줄어",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "허가 물량 1%",
+        "query": "30대 19만여명 줄어",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
-              "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101"
+              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
+              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%97%88%EA%B0%80%20%EB%AC%BC%EB%9F%89%201%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%97%88%EA%B0%80%20%EB%AC%BC%EB%9F%89%201%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=30%EB%8C%80%2019%EB%A7%8C%EC%97%AC%EB%AA%85%20%EC%A4%84%EC%96%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=30%EB%8C%80%2019%EB%A7%8C%EC%97%AC%EB%AA%85%20%EC%A4%84%EC%96%B4"
       },
       "top_headlines": [
         {
-          "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
+          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The exchange rate reached 1,504 won during the trading session",
-      "term_ko": "환율 장중 1504원까지",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 장중 1504원까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "종전 합의에 환율 장중 1504원까지 하락…“당분간 1500원 안팎 오르내릴...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726939?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%EC%9E%A5%EC%A4%91%201504%EC%9B%90%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%EC%9E%A5%EC%A4%91%201504%EC%9B%90%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "종전 합의에 환율 장중 1504원까지 하락…“당분간 1500원 안팎 오르내릴...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726939?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "The price is expected to remain around 1,500 won for the time being",
-      "term_ko": "하락 당분간 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락 당분간 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "종전 합의에 환율 장중 1504원까지 하락…“당분간 1500원 안팎 오르내릴...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726939?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EB%8B%B9%EB%B6%84%EA%B0%84%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EB%8B%B9%EB%B6%84%EA%B0%84%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "종전 합의에 환율 장중 1504원까지 하락…“당분간 1500원 안팎 오르내릴...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726939?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "May COFIX Benchmark",
-      "term_ko": "기준 코픽스 5월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기준 코픽스 5월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 변동금리 기준 코픽스 5월 2.90%…두 달 연속↑",
-              "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7169562"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%20%EC%BD%94%ED%94%BD%EC%8A%A4%205%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%20%EC%BD%94%ED%94%BD%EC%8A%A4%205%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 변동금리 기준 코픽스 5월 2.90%…두 달 연속↑",
-          "summary": "",
-          "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7169562",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "2.90% over two months",
-      "term_ko": "2.90% 두 달",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2.90% 두 달",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 변동금리 기준 코픽스 5월 2.90%…두 달 연속↑",
-              "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7169562"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.90%25%20%EB%91%90%20%EB%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.90%25%20%EB%91%90%20%EB%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 변동금리 기준 코픽스 5월 2.90%…두 달 연속↑",
-          "summary": "",
-          "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7169562",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "As the clouds cleared, the rate rose to the 5% range",
-      "term_ko": "먹구름 걷히자 5%대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "먹구름 걷히자 5%대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "전쟁 먹구름 걷히자 5%대 급등‥코스피 랠리 다시 재개?",
-              "link": "https://n.news.naver.com/mnews/article/214/0001505630?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A8%B9%EA%B5%AC%EB%A6%84%20%EA%B1%B7%ED%9E%88%EC%9E%90%205%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A8%B9%EA%B5%AC%EB%A6%84%20%EA%B1%B7%ED%9E%88%EC%9E%90%205%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "전쟁 먹구름 걷히자 5%대 급등‥코스피 랠리 다시 재개?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001505630?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Closing: KOSPI down 5.2%",
-      "term_ko": "끝난다 코스피 5.2%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "끝난다 코스피 5.2%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"전쟁 끝난다\" 코스피 5.2%↑…'물가 압박' 여전",
-              "link": "https://n.news.naver.com/mnews/article/055/0001364572?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%81%9D%EB%82%9C%EB%8B%A4%20%EC%BD%94%EC%8A%A4%ED%94%BC%205.2%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%81%9D%EB%82%9C%EB%8B%A4%20%EC%BD%94%EC%8A%A4%ED%94%BC%205.2%25"
-      },
-      "top_headlines": [
-        {
-          "title": "\"전쟁 끝난다\" 코스피 5.2%↑…'물가 압박' 여전",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001364572?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -383,9 +203,10 @@
         "query": "샌디스크 역사적 과열",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -420,9 +241,10 @@
         "query": "나스닥 세미나 선착순",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -457,9 +279,10 @@
         "query": "미래 혁신 이끈다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -485,36 +308,37 @@
       ]
     },
     {
-      "term": "Shinhan Bank Stands Out Abroad",
-      "term_ko": "신한은행 해외서 독보적",
+      "term": "A boost from the news of the end of the war",
+      "term_ko": "종전 소식에 탄력",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "신한은행 해외서 독보적",
+        "query": "종전 소식에 탄력",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "신한은행, 해외서 독보적 존재감으로 호실적 기록... 1분기 1381억 달성",
-              "link": "https://www.dongponews.net/news/articleView.html?idxno=58742"
+              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
+              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89%20%ED%95%B4%EC%99%B8%EC%84%9C%20%EB%8F%85%EB%B3%B4%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89%20%ED%95%B4%EC%99%B8%EC%84%9C%20%EB%8F%85%EB%B3%B4%EC%A0%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A2%85%EC%A0%84%20%EC%86%8C%EC%8B%9D%EC%97%90%20%ED%83%84%EB%A0%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A2%85%EC%A0%84%20%EC%86%8C%EC%8B%9D%EC%97%90%20%ED%83%84%EB%A0%A5"
       },
       "top_headlines": [
         {
-          "title": "신한은행, 해외서 독보적 존재감으로 호실적 기록... 1분기 1381억 달성",
+          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
           "summary": "",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=58742",
+          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +346,37 @@
       ]
     },
     {
-      "term": "Logistics supply chain infrastructure",
-      "term_ko": "보급 공급망 인프라",
+      "term": "The KOSPI I received just now",
+      "term_ko": "받은 코스피 이제",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "보급 공급망 인프라",
+        "query": "받은 코스피 이제",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
-              "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101"
+              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
+              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B3%B4%EA%B8%89%20%EA%B3%B5%EA%B8%89%EB%A7%9D%20%EC%9D%B8%ED%94%84%EB%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B3%B4%EA%B8%89%20%EA%B3%B5%EA%B8%89%EB%A7%9D%20%EC%9D%B8%ED%94%84%EB%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9B%EC%9D%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%9D%B4%EC%A0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9B%EC%9D%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%9D%B4%EC%A0%9C"
       },
       "top_headlines": [
         {
-          "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
+          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,36 +384,37 @@
       ]
     },
     {
-      "term": "Sharp Rise... KOSPI Rally Resumes",
-      "term_ko": "급등‥코스피 랠리 다시",
+      "term": "Just Kevin Wash's mouth",
+      "term_ko": "케빈 워시 입만",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "급등‥코스피 랠리 다시",
+        "query": "케빈 워시 입만",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "전쟁 먹구름 걷히자 5%대 급등‥코스피 랠리 다시 재개?",
-              "link": "https://n.news.naver.com/mnews/article/214/0001505630?sid=101"
+              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
+              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%E2%80%A5%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%9E%A0%EB%A6%AC%20%EB%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%E2%80%A5%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%9E%A0%EB%A6%AC%20%EB%8B%A4%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C%20%EC%9E%85%EB%A7%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C%20%EC%9E%85%EB%A7%8C"
       },
       "top_headlines": [
         {
-          "title": "전쟁 먹구름 걷히자 5%대 급등‥코스피 랠리 다시 재개?",
+          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001505630?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -596,36 +422,227 @@
       ]
     },
     {
-      "term": "Inflationary pressures persist",
-      "term_ko": "물가 압박 여전",
+      "term": "The Postwar World",
+      "term_ko": "전쟁 이후의 세계",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "물가 압박 여전",
+        "query": "전쟁 이후의 세계",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "\"전쟁 끝난다\" 코스피 5.2%↑…'물가 압박' 여전",
-              "link": "https://n.news.naver.com/mnews/article/055/0001364572?sid=101"
+              "title": "전쟁 이후의 세계, 투자는 어디로 향하는가",
+              "link": "https://www.abcn.kr/news/articleView.html?idxno=88708"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%BC%EA%B0%80%20%EC%95%95%EB%B0%95%20%EC%97%AC%EC%A0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%BC%EA%B0%80%20%EC%95%95%EB%B0%95%20%EC%97%AC%EC%A0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%9F%81%20%EC%9D%B4%ED%9B%84%EC%9D%98%20%EC%84%B8%EA%B3%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%9F%81%20%EC%9D%B4%ED%9B%84%EC%9D%98%20%EC%84%B8%EA%B3%84"
       },
       "top_headlines": [
         {
-          "title": "\"전쟁 끝난다\" 코스피 5.2%↑…'물가 압박' 여전",
+          "title": "전쟁 이후의 세계, 투자는 어디로 향하는가",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/055/0001364572?sid=101",
+          "link": "https://www.abcn.kr/news/articleView.html?idxno=88708",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "It's hard to get down",
+      "term_ko": "쉽게 못 내려올",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "쉽게 못 내려올",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "“전쟁 끝나도, 한국경제 3高서 쉽게 못 내려올 것”",
+              "link": "https://n.news.naver.com/mnews/article/023/0003982235?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%89%BD%EA%B2%8C%20%EB%AA%BB%20%EB%82%B4%EB%A0%A4%EC%98%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%89%BD%EA%B2%8C%20%EB%AA%BB%20%EB%82%B4%EB%A0%A4%EC%98%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "“전쟁 끝나도, 한국경제 3高서 쉽게 못 내려올 것”",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/023/0003982235?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Business is slow, but interest rates on loans...",
+      "term_ko": "장사 안되는데 대출금리",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "장사 안되는데 대출금리",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
+              "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%82%AC%20%EC%95%88%EB%90%98%EB%8A%94%EB%8D%B0%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%82%AC%20%EC%95%88%EB%90%98%EB%8A%94%EB%8D%B0%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Surge in Delinquencies Among Self-Employed Individuals",
+      "term_ko": "올라 자영업자 연체급증",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "올라 자영업자 연체급증",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
+              "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%EB%9D%BC%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%97%B0%EC%B2%B4%EA%B8%89%EC%A6%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%EB%9D%BC%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%97%B0%EC%B2%B4%EA%B8%89%EC%A6%9D"
+      },
+      "top_headlines": [
+        {
+          "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Seoul Bond Market: Government Bonds",
+      "term_ko": "서울 채권시장 국고채",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "서울 채권시장 국고채",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
+              "link": "https://www.tokenpost.kr/news/economy/369589"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84"
+      },
+      "top_headlines": [
+        {
+          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/economy/369589",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Falling interest rates and safe-haven assets",
+      "term_ko": "금리 하락세 안전자산",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 하락세 안전자산",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
+              "link": "https://www.tokenpost.kr/news/economy/369589"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/economy/369589",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -642,9 +659,10 @@
         "query": "Global IPO Race",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -679,9 +697,10 @@
         "query": "US-Iran Peace Deal",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -716,9 +735,10 @@
         "query": "수 있을까",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -753,9 +773,10 @@
         "query": "사전 접수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -781,36 +802,37 @@
       ]
     },
     {
-      "term": "Strong performance driven by a strong presence",
-      "term_ko": "존재감으로 호실적",
+      "term": "decrease of",
+      "term_ko": "만에 감소",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "존재감으로 호실적",
+        "query": "만에 감소",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "신한은행, 해외서 독보적 존재감으로 호실적 기록... 1분기 1381억 달성",
-              "link": "https://www.dongponews.net/news/articleView.html?idxno=58742"
+              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
+              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A1%B4%EC%9E%AC%EA%B0%90%EC%9C%BC%EB%A1%9C%20%ED%98%B8%EC%8B%A4%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A1%B4%EC%9E%AC%EA%B0%90%EC%9C%BC%EB%A1%9C%20%ED%98%B8%EC%8B%A4%EC%A0%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C"
       },
       "top_headlines": [
         {
-          "title": "신한은행, 해외서 독보적 존재감으로 호실적 기록... 1분기 1381억 달성",
+          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
           "summary": "",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=58742",
+          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -818,181 +840,42 @@
       ]
     },
     {
-      "term": "Slow Progress in Offshore Wind Power",
-      "term_ko": "더딘 해상풍력",
+      "term": "Preference Enhancement",
+      "term_ko": "선호 강화",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "더딘 해상풍력",
+        "query": "선호 강화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
-              "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101"
+              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
+              "link": "https://www.tokenpost.kr/news/economy/369589"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8D%94%EB%94%98%20%ED%95%B4%EC%83%81%ED%92%8D%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8D%94%EB%94%98%20%ED%95%B4%EC%83%81%ED%92%8D%EB%A0%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%ED%98%B8%20%EA%B0%95%ED%99%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%ED%98%B8%20%EA%B0%95%ED%99%94"
       },
       "top_headlines": [
         {
-          "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
+          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101",
+          "link": "https://www.tokenpost.kr/news/economy/369589",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
       ]
-    },
-    {
-      "term": "The Three Pillars of Cost",
-      "term_ko": "비용 삼박자",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비용 삼박자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
-              "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%EC%9A%A9%20%EC%82%BC%EB%B0%95%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%EC%9A%A9%20%EC%82%BC%EB%B0%95%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "더딘 해상풍력, 허가 물량 1% 보급…공급망·인프라·비용 삼박자 맞춰...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/028/0002809805?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Variable-rate mortgage",
-      "term_ko": "주담대 변동금리",
-      "significance_score": 280,
-      "mentions": 398,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대 변동금리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-07",
-              "timestamp": 1780758000000,
-              "value": 40.81632
-            },
-            {
-              "period": "2026-06-08",
-              "timestamp": 1780844400000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-09",
-              "timestamp": 1780930800000,
-              "value": 95.91836
-            },
-            {
-              "period": "2026-06-10",
-              "timestamp": 1781017200000,
-              "value": 67.34693
-            },
-            {
-              "period": "2026-06-11",
-              "timestamp": 1781103600000,
-              "value": 91.83673
-            },
-            {
-              "period": "2026-06-12",
-              "timestamp": 1781190000000,
-              "value": 61.22448
-            },
-            {
-              "period": "2026-06-13",
-              "timestamp": 1781276400000,
-              "value": 22.44897
-            },
-            {
-              "period": "2026-06-14",
-              "timestamp": 1781362800000,
-              "value": 59.18367
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "주담대 변동금리 기준 코픽스 5월 2.90%…두 달 연속↑",
-              "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7169562"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%20%EB%B3%80%EB%8F%99%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "주담대 변동금리 기준 코픽스 5월 2.90%…두 달 연속↑",
-          "summary": "",
-          "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7169562",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 397.9591,
-        "weekly_average_volume": 66.3265,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.015774,
-        "time_weight": 0.022169,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781362800000
-      }
     },
     {
       "term": "SpaceX Miss Exposes",
@@ -1004,9 +887,10 @@
         "query": "SpaceX Miss Exposes",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1041,9 +925,10 @@
         "query": "Koreas Weak Hand",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1078,9 +963,10 @@
         "query": "Trump Lifts Hormuz",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1106,43 +992,6 @@
       ]
     },
     {
-      "term": "Futures Rally",
-      "term_ko": "선물 시장 급등",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Futures Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-15T21:05:26+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "US Stock Futures Rally as US-Iran Peace Deal Boosts Market Sentiment Ahea...",
-              "link": "https://www.econotimes.com/US-Stock-Futures-Rally-as-US-Iran-Peace-Deal-Boosts-Market-Sentiment-Ahead-of-Fed-Meeting-1744311"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "US Stock Futures Rally as US-Iran Peace Deal Boosts Market Sentiment Ahea...",
-          "summary": "",
-          "link": "https://www.econotimes.com/US-Stock-Futures-Rally-as-US-Iran-Peace-Deal-Boosts-Market-Sentiment-Ahead-of-Fed-Meeting-1744311",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -1152,9 +1001,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-15T21:05:26+09:00",
+          "last_updated": "2026-06-16T02:27:17+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1163,33 +1013,81 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
       "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-16T02:27:17+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-15T12:06:31.637Z",
+    "generated_at": "2026-06-15T17:28:19.140Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-15T21:05:26+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-16T02:27:17+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-15T21:05:26+09:00",
+      "last_updated": "2026-06-16T02:27:17+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-15T21:05:26+09:00",
+        "lastUpdated": "2026-06-16T02:27:17+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
