@@ -1,7 +1,7 @@
 {
   "date": "2026-06-15",
   "window": "12_hours",
-  "total_phrases": 29,
+  "total_phrases": 30,
   "discovered_keywords": [
     {
       "term": "GoIPO to be held in September",
@@ -13,10 +13,9 @@
         "query": "9월 개최 GoIPO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -42,6 +41,43 @@
       ]
     },
     {
+      "term": "Avoiding the Dogecoin (DOGE) Rally",
+      "term_ko": "도지코인DOGE 랠리 피할",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "도지코인DOGE 랠리 피할",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "\"도지코인(DOGE) 랠리, 피할 수 없다\"...일론 머스크 2년 전 발언 재조명",
+              "link": "http://coinreaders.com/242450"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%84%EC%A7%80%EC%BD%94%EC%9D%B8DOGE%20%EB%9E%A0%EB%A6%AC%20%ED%94%BC%ED%95%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%84%EC%A7%80%EC%BD%94%EC%9D%B8DOGE%20%EB%9E%A0%EB%A6%AC%20%ED%94%BC%ED%95%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "\"도지코인(DOGE) 랠리, 피할 수 없다\"...일론 머스크 2년 전 발언 재조명",
+          "summary": "",
+          "link": "http://coinreaders.com/242450",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "Why AI Still",
       "term_ko": "왜 여전히 AI",
       "significance_score": 350,
@@ -51,10 +87,9 @@
         "query": "왜 여전히 AI",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -80,37 +115,36 @@
       ]
     },
     {
-      "term": "C-Lab Outside, 9th Cohort",
-      "term_ko": "C랩 아웃사이드 9기",
+      "term": "Today's Stock Market News, June 15",
+      "term_ko": "오늘의 증권소식6월 15일",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "C랩 아웃사이드 9기",
+        "query": "오늘의 증권소식6월 15일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
-              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471"
+              "title": "오늘의 증권소식(6월 15일)",
+              "link": "https://www.radiokorea.com/news/article.php?uid=497452"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=C%EB%9E%A9%20%EC%95%84%EC%9B%83%EC%82%AC%EC%9D%B4%EB%93%9C%209%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=C%EB%9E%A9%20%EC%95%84%EC%9B%83%EC%82%AC%EC%9D%B4%EB%93%9C%209%EA%B8%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D6%EC%9B%94%2015%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EA%B6%8C%EC%86%8C%EC%8B%9D6%EC%9B%94%2015%EC%9D%BC"
       },
       "top_headlines": [
         {
-          "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
+          "title": "오늘의 증권소식(6월 15일)",
           "summary": "",
-          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471",
+          "link": "https://www.radiokorea.com/news/article.php?uid=497452",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -118,37 +152,36 @@
       ]
     },
     {
-      "term": "26 years as a regular employee",
-      "term_ko": "상용 근로자 26년",
+      "term": "Venture capital over the past year",
+      "term_ko": "벤처 자금 1년새",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "상용 근로자 26년",
+        "query": "벤처 자금 1년새",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
+              "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
+              "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9A%A9%20%EA%B7%BC%EB%A1%9C%EC%9E%90%2026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9A%A9%20%EA%B7%BC%EB%A1%9C%EC%9E%90%2026%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B2%A4%EC%B2%98%20%EC%9E%90%EA%B8%88%201%EB%85%84%EC%83%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B2%A4%EC%B2%98%20%EC%9E%90%EA%B8%88%201%EB%85%84%EC%83%88"
       },
       "top_headlines": [
         {
-          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
+          "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
+          "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -156,37 +189,425 @@
       ]
     },
     {
-      "term": "The number of people in their 30s decreased by about 190,000",
-      "term_ko": "30대 19만여명 줄어",
+      "term": "Musk, two years ago",
+      "term_ko": "머스크 2년 전",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "30대 19만여명 줄어",
+        "query": "머스크 2년 전",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
+              "title": "\"도지코인(DOGE) 랠리, 피할 수 없다\"...일론 머스크 2년 전 발언 재조명",
+              "link": "http://coinreaders.com/242450"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=30%EB%8C%80%2019%EB%A7%8C%EC%97%AC%EB%AA%85%20%EC%A4%84%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=30%EB%8C%80%2019%EB%A7%8C%EC%97%AC%EB%AA%85%20%EC%A4%84%EC%96%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A8%B8%EC%8A%A4%ED%81%AC%202%EB%85%84%20%EC%A0%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A8%B8%EC%8A%A4%ED%81%AC%202%EB%85%84%20%EC%A0%84"
       },
       "top_headlines": [
         {
-          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
+          "title": "\"도지코인(DOGE) 랠리, 피할 수 없다\"...일론 머스크 2년 전 발언 재조명",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
+          "link": "http://coinreaders.com/242450",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "N2 Insights: U.S.-Iran",
+      "term_ko": "N2 인사이트 미-이란",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "N2 인사이트 미-이란",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[N2 인사이트] 미-이란 전쟁 종료… 6대 승자, 6대 패자",
+              "link": "https://www.news2day.co.kr/article/20260616500011"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=N2%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%AF%B8-%EC%9D%B4%EB%9E%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=N2%20%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%AF%B8-%EC%9D%B4%EB%9E%80"
+      },
+      "top_headlines": [
+        {
+          "title": "[N2 인사이트] 미-이란 전쟁 종료… 6대 승자, 6대 패자",
+          "summary": "",
+          "link": "https://www.news2day.co.kr/article/20260616500011",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Six Years Since the End of the War",
+      "term_ko": "전쟁 종료 6대",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "전쟁 종료 6대",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[N2 인사이트] 미-이란 전쟁 종료… 6대 승자, 6대 패자",
+              "link": "https://www.news2day.co.kr/article/20260616500011"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%9F%81%20%EC%A2%85%EB%A3%8C%206%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%9F%81%20%EC%A2%85%EB%A3%8C%206%EB%8C%80"
+      },
+      "top_headlines": [
+        {
+          "title": "[N2 인사이트] 미-이란 전쟁 종료… 6대 승자, 6대 패자",
+          "summary": "",
+          "link": "https://www.news2day.co.kr/article/20260616500011",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "The 340.4 billion won levy that was supposed to be abolished",
+      "term_ko": "폐지한다던 부담금 3404억",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "폐지한다던 부담금 3404억",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "학생 줄었는데 아파트엔 교육 준조세…폐지한다던 부담금 3404억 걷혔다...",
+              "link": "https://n.news.naver.com/mnews/article/011/0004631443?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%90%EC%A7%80%ED%95%9C%EB%8B%A4%EB%8D%98%20%EB%B6%80%EB%8B%B4%EA%B8%88%203404%EC%96%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%90%EC%A7%80%ED%95%9C%EB%8B%A4%EB%8D%98%20%EB%B6%80%EB%8B%B4%EA%B8%88%203404%EC%96%B5"
+      },
+      "top_headlines": [
+        {
+          "title": "학생 줄었는데 아파트엔 교육 준조세…폐지한다던 부담금 3404억 걷혔다...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/011/0004631443?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Mortgage loans at 7% and credit loans",
+      "term_ko": "주담대 7%대 신용대출",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "주담대 7%대 신용대출",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
+              "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%207%25%EB%8C%80%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%207%25%EB%8C%80%20%EC%8B%A0%EC%9A%A9%EB%8C%80%EC%B6%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Deposits with interest rates in the 6% range vs. those in the 3% range",
+      "term_ko": "6%대 예금 3%대",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "6%대 예금 3%대",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
+              "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%25%EB%8C%80%20%EC%98%88%EA%B8%88%203%25%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%25%EB%8C%80%20%EC%98%88%EA%B8%88%203%25%EB%8C%80"
+      },
+      "top_headlines": [
+        {
+          "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "As 4 million Nix and 610,000 Electronics were released",
+      "term_ko": "400만닉스 61만전자 나오자",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "400만닉스 61만전자 나오자",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "'400만닉스·61만전자' 나오자…외국인 2.7조 몰렸다",
+              "link": "https://n.news.naver.com/mnews/article/014/0005535283?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=400%EB%A7%8C%EB%8B%89%EC%8A%A4%2061%EB%A7%8C%EC%A0%84%EC%9E%90%20%EB%82%98%EC%98%A4%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=400%EB%A7%8C%EB%8B%89%EC%8A%A4%2061%EB%A7%8C%EC%A0%84%EC%9E%90%20%EB%82%98%EC%98%A4%EC%9E%90"
+      },
+      "top_headlines": [
+        {
+          "title": "'400만닉스·61만전자' 나오자…외국인 2.7조 몰렸다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/014/0005535283?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Foreign investors poured in 2.7 trillion won",
+      "term_ko": "외국인 2.7조 몰렸다",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "외국인 2.7조 몰렸다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "'400만닉스·61만전자' 나오자…외국인 2.7조 몰렸다",
+              "link": "https://n.news.naver.com/mnews/article/014/0005535283?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%EA%B5%AD%EC%9D%B8%202.7%EC%A1%B0%20%EB%AA%B0%EB%A0%B8%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%EA%B5%AD%EC%9D%B8%202.7%EC%A1%B0%20%EB%AA%B0%EB%A0%B8%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "'400만닉스·61만전자' 나오자…외국인 2.7조 몰렸다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/014/0005535283?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "After SpaceX's IPO",
+      "term_ko": "스페이스X 상장 후",
+      "significance_score": 322,
+      "mentions": 243,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "스페이스X 상장 후",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-06-08",
+              "timestamp": 1780844400000,
+              "value": 27.5
+            },
+            {
+              "period": "2026-06-09",
+              "timestamp": 1780930800000,
+              "value": 30
+            },
+            {
+              "period": "2026-06-10",
+              "timestamp": 1781017200000,
+              "value": 17.5
+            },
+            {
+              "period": "2026-06-11",
+              "timestamp": 1781103600000,
+              "value": 85
+            },
+            {
+              "period": "2026-06-12",
+              "timestamp": 1781190000000,
+              "value": 100
+            },
+            {
+              "period": "2026-06-13",
+              "timestamp": 1781276400000,
+              "value": 40
+            }
+          ]
+        },
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
+              "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EC%83%81%EC%9E%A5%20%ED%9B%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EC%83%81%EC%9E%A5%20%ED%9B%84"
+      },
+      "top_headlines": [
+        {
+          "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 242.5,
+        "weekly_average_volume": 60.625,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.165911,
+        "decay_factor": 0.022235,
+        "time_weight": 0.012817,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1781276400000
+      }
+    },
+    {
+      "term": "The space stock market is expanding",
+      "term_ko": "우주株 판 커진다",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "우주株 판 커진다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-16T06:00:32+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
+              "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B0%EC%A3%BC%E6%A0%AA%20%ED%8C%90%20%EC%BB%A4%EC%A7%84%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B0%EC%A3%BC%E6%A0%AA%20%ED%8C%90%20%EC%BB%A4%EC%A7%84%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
+          "summary": "",
+          "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -203,10 +624,9 @@
         "query": "샌디스크 역사적 과열",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -241,10 +661,9 @@
         "query": "나스닥 세미나 선착순",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -270,37 +689,36 @@
       ]
     },
     {
-      "term": "Leading Future Innovation",
-      "term_ko": "미래 혁신 이끈다",
+      "term": "Shin Hyun-song: The Bank of Korea Is Changing",
+      "term_ko": "신현송 한은 달라진다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "미래 혁신 이끈다",
+        "query": "신현송 한은 달라진다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
-              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471"
+              "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
+              "link": "https://n.news.naver.com/mnews/article/001/0016140353?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%20%ED%98%81%EC%8B%A0%20%EC%9D%B4%EB%81%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%20%ED%98%81%EC%8B%A0%20%EC%9D%B4%EB%81%88%EB%8B%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A0%ED%98%84%EC%86%A1%20%ED%95%9C%EC%9D%80%20%EB%8B%AC%EB%9D%BC%EC%A7%84%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A0%ED%98%84%EC%86%A1%20%ED%95%9C%EC%9D%80%20%EB%8B%AC%EB%9D%BC%EC%A7%84%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
+          "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
           "summary": "",
-          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471",
+          "link": "https://n.news.naver.com/mnews/article/001/0016140353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -308,37 +726,36 @@
       ]
     },
     {
-      "term": "A boost from the news of the end of the war",
-      "term_ko": "종전 소식에 탄력",
+      "term": "A Bold Message on Interest Rates",
+      "term_ko": "금리 메시지 과감하게",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "종전 소식에 탄력",
+        "query": "금리 메시지 과감하게",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
+              "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
+              "link": "https://n.news.naver.com/mnews/article/001/0016140353?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A2%85%EC%A0%84%20%EC%86%8C%EC%8B%9D%EC%97%90%20%ED%83%84%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A2%85%EC%A0%84%20%EC%86%8C%EC%8B%9D%EC%97%90%20%ED%83%84%EB%A0%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EB%A9%94%EC%8B%9C%EC%A7%80%20%EA%B3%BC%EA%B0%90%ED%95%98%EA%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EB%A9%94%EC%8B%9C%EC%A7%80%20%EA%B3%BC%EA%B0%90%ED%95%98%EA%B2%8C"
       },
       "top_headlines": [
         {
-          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
+          "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/001/0016140353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -346,37 +763,36 @@
       ]
     },
     {
-      "term": "The KOSPI I received just now",
-      "term_ko": "받은 코스피 이제",
+      "term": "Strengthening Payment and Settlement",
+      "term_ko": "지급결제 힘 실어",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "받은 코스피 이제",
+        "query": "지급결제 힘 실어",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
+              "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
+              "link": "https://n.news.naver.com/mnews/article/001/0016140353?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9B%EC%9D%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%9D%B4%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9B%EC%9D%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%9D%B4%EC%A0%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EA%B8%89%EA%B2%B0%EC%A0%9C%20%ED%9E%98%20%EC%8B%A4%EC%96%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EA%B8%89%EA%B2%B0%EC%A0%9C%20%ED%9E%98%20%EC%8B%A4%EC%96%B4"
       },
       "top_headlines": [
         {
-          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
+          "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/001/0016140353?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -384,37 +800,36 @@
       ]
     },
     {
-      "term": "Just Kevin Wash's mouth",
-      "term_ko": "케빈 워시 입만",
+      "term": "Student enrollment is down, but in the apartment complex...",
+      "term_ko": "학생 줄었는데 아파트엔",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "케빈 워시 입만",
+        "query": "학생 줄었는데 아파트엔",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
+              "title": "학생 줄었는데 아파트엔 교육 준조세…폐지한다던 부담금 3404억 걷혔다...",
+              "link": "https://n.news.naver.com/mnews/article/011/0004631443?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C%20%EC%9E%85%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C%20%EC%9E%85%EB%A7%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%99%EC%83%9D%20%EC%A4%84%EC%97%88%EB%8A%94%EB%8D%B0%20%EC%95%84%ED%8C%8C%ED%8A%B8%EC%97%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%99%EC%83%9D%20%EC%A4%84%EC%97%88%EB%8A%94%EB%8D%B0%20%EC%95%84%ED%8C%8C%ED%8A%B8%EC%97%94"
       },
       "top_headlines": [
         {
-          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
+          "title": "학생 줄었는데 아파트엔 교육 준조세…폐지한다던 부담금 3404억 걷혔다...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/011/0004631443?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -422,37 +837,36 @@
       ]
     },
     {
-      "term": "The Postwar World",
-      "term_ko": "전쟁 이후의 세계",
+      "term": "Deposit interest rate",
+      "term_ko": "여 수신 금리",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "전쟁 이후의 세계",
+        "query": "여 수신 금리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "전쟁 이후의 세계, 투자는 어디로 향하는가",
-              "link": "https://www.abcn.kr/news/articleView.html?idxno=88708"
+              "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
+              "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%9F%81%20%EC%9D%B4%ED%9B%84%EC%9D%98%20%EC%84%B8%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%9F%81%20%EC%9D%B4%ED%9B%84%EC%9D%98%20%EC%84%B8%EA%B3%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AC%20%EC%88%98%EC%8B%A0%20%EA%B8%88%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AC%20%EC%88%98%EC%8B%A0%20%EA%B8%88%EB%A6%AC"
       },
       "top_headlines": [
         {
-          "title": "전쟁 이후의 세계, 투자는 어디로 향하는가",
+          "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
           "summary": "",
-          "link": "https://www.abcn.kr/news/articleView.html?idxno=88708",
+          "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -460,37 +874,36 @@
       ]
     },
     {
-      "term": "It's hard to get down",
-      "term_ko": "쉽게 못 내려올",
+      "term": "Persistent uncertainty",
+      "term_ko": "걷히지 않은 불확실성",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "쉽게 못 내려올",
+        "query": "걷히지 않은 불확실성",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "“전쟁 끝나도, 한국경제 3高서 쉽게 못 내려올 것”",
-              "link": "https://n.news.naver.com/mnews/article/023/0003982235?sid=101"
+              "title": "[사설]미국ㆍ이란 종전 합의, 걷히지 않은 불확실성 대비해야",
+              "link": "https://n.news.naver.com/mnews/article/018/0006307060?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%89%BD%EA%B2%8C%20%EB%AA%BB%20%EB%82%B4%EB%A0%A4%EC%98%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%89%BD%EA%B2%8C%20%EB%AA%BB%20%EB%82%B4%EB%A0%A4%EC%98%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B1%B7%ED%9E%88%EC%A7%80%20%EC%95%8A%EC%9D%80%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B1%B7%ED%9E%88%EC%A7%80%20%EC%95%8A%EC%9D%80%20%EB%B6%88%ED%99%95%EC%8B%A4%EC%84%B1"
       },
       "top_headlines": [
         {
-          "title": "“전쟁 끝나도, 한국경제 3高서 쉽게 못 내려올 것”",
+          "title": "[사설]미국ㆍ이란 종전 합의, 걷히지 않은 불확실성 대비해야",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003982235?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/018/0006307060?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -498,189 +911,36 @@
       ]
     },
     {
-      "term": "Business is slow, but interest rates on loans...",
-      "term_ko": "장사 안되는데 대출금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "장사 안되는데 대출금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%82%AC%20%EC%95%88%EB%90%98%EB%8A%94%EB%8D%B0%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%82%AC%20%EC%95%88%EB%90%98%EB%8A%94%EB%8D%B0%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Surge in Delinquencies Among Self-Employed Individuals",
-      "term_ko": "올라 자영업자 연체급증",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "올라 자영업자 연체급증",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%EB%9D%BC%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%97%B0%EC%B2%B4%EA%B8%89%EC%A6%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%EB%9D%BC%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%97%B0%EC%B2%B4%EA%B8%89%EC%A6%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Seoul Bond Market: Government Bonds",
-      "term_ko": "서울 채권시장 국고채",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울 채권시장 국고채",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-              "link": "https://www.tokenpost.kr/news/economy/369589"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/369589",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Falling interest rates and safe-haven assets",
-      "term_ko": "금리 하락세 안전자산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 하락세 안전자산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-              "link": "https://www.tokenpost.kr/news/economy/369589"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/369589",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Global IPO Race",
-      "term_ko": "전 세계적인 기업공개(IPO) 경쟁",
+      "term": "Triple the benefits",
+      "term_ko": "3배 수혜",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Global IPO Race",
+        "query": "3배 수혜",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104"
+              "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
+              "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Global%20IPO%20Race",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Global%20IPO%20Race"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3%EB%B0%B0%20%EC%88%98%ED%98%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3%EB%B0%B0%20%EC%88%98%ED%98%9C"
       },
       "top_headlines": [
         {
-          "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
+          "title": "스페이스X 상장 후 우주株 판 커진다…벤처 자금 1년새 3배, 수혜·주의...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104",
+          "link": "https://www.g-enews.com/view.php?ud=202606151955545452bd56fbc3c_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -688,37 +948,36 @@
       ]
     },
     {
-      "term": "US-Iran Peace Deal",
-      "term_ko": "미국-이란 평화 협정",
-      "significance_score": 294,
+      "term": "A Closer Look at the Remarks",
+      "term_ko": "발언 재조명",
+      "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "US-Iran Peace Deal",
+        "query": "발언 재조명",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
-              "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375"
+              "title": "\"도지코인(DOGE) 랠리, 피할 수 없다\"...일론 머스크 2년 전 발언 재조명",
+              "link": "http://coinreaders.com/242450"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=US-Iran%20Peace%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=US-Iran%20Peace%20Deal"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%EC%96%B8%20%EC%9E%AC%EC%A1%B0%EB%AA%85",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%EC%96%B8%20%EC%9E%AC%EC%A1%B0%EB%AA%85"
       },
       "top_headlines": [
         {
-          "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
+          "title": "\"도지코인(DOGE) 랠리, 피할 수 없다\"...일론 머스크 2년 전 발언 재조명",
           "summary": "",
-          "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375",
+          "link": "http://coinreaders.com/242450",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -735,10 +994,9 @@
         "query": "수 있을까",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -773,10 +1031,9 @@
         "query": "사전 접수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
@@ -802,37 +1059,36 @@
       ]
     },
     {
-      "term": "decrease of",
-      "term_ko": "만에 감소",
+      "term": "Education-related quasi-taxes",
+      "term_ko": "교육 준조세",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만에 감소",
+        "query": "교육 준조세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
+              "title": "학생 줄었는데 아파트엔 교육 준조세…폐지한다던 부담금 3404억 걷혔다...",
+              "link": "https://n.news.naver.com/mnews/article/011/0004631443?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%90%EC%9C%A1%20%EC%A4%80%EC%A1%B0%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%90%EC%9C%A1%20%EC%A4%80%EC%A1%B0%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
+          "title": "학생 줄었는데 아파트엔 교육 준조세…폐지한다던 부담금 3404억 걷혔다...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
+          "link": "https://n.news.naver.com/mnews/article/011/0004631443?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -840,151 +1096,36 @@
       ]
     },
     {
-      "term": "Preference Enhancement",
-      "term_ko": "선호 강화",
+      "term": "All on the rise",
+      "term_ko": "일제히 오름세",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "선호 강화",
+        "query": "일제히 오름세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ],
           "sample": [
             {
-              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-              "link": "https://www.tokenpost.kr/news/economy/369589"
+              "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
+              "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%ED%98%B8%20%EA%B0%95%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%ED%98%B8%20%EA%B0%95%ED%99%94"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%98%A4%EB%A6%84%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%BC%EC%A0%9C%ED%9E%88%20%EC%98%A4%EB%A6%84%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
+          "title": "주담대 7%대·신용대출 6%대·예금 3%대…여·수신 금리 일제히 오름세",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/369589",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "SpaceX Miss Exposes",
-      "term_ko": "스페이스X 발사 실패로 드러난 문제점",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX Miss Exposes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20Miss%20Exposes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20Miss%20Exposes"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Koreas Weak Hand",
-      "term_ko": "한국의 약점",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Koreas Weak Hand",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Koreas%20Weak%20Hand",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Koreas%20Weak%20Hand"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Trump Lifts Hormuz",
-      "term_ko": "트럼프, 호르무즈 해협 제재 해제",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Lifts Hormuz",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
-              "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Lifts%20Hormuz",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Lifts%20Hormuz"
-      },
-      "top_headlines": [
-        {
-          "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
-          "summary": "",
-          "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375",
+          "link": "https://www.g-enews.com/view.php?ud=20260615152702628a6e8311f64_1",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1001,10 +1142,9 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-16T02:27:17+09:00",
+          "last_updated": "2026-06-16T06:00:32+09:00",
           "fallback_sources": [
-            "trend_log",
-            "default_fallback"
+            "trend_log"
           ]
         }
       },
@@ -1013,81 +1153,33 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
       },
       "top_headlines": []
-    },
-    {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-15T17:28:19.140Z",
+    "generated_at": "2026-06-15T21:01:38.250Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-16T02:27:17+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-16T06:00:32+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
+    "similar_keywords_removed": 0,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 1,
+      "similar": 0,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-16T02:27:17+09:00",
+      "last_updated": "2026-06-16T06:00:32+09:00",
       "fallback_sources": [
-        "trend_log",
-        "default_fallback"
+        "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-16T02:27:17+09:00",
+        "lastUpdated": "2026-06-16T06:00:32+09:00",
         "fallbackSources": [
-          "trend_log",
-          "default_fallback"
+          "trend_log"
         ]
       }
     }
