@@ -1,1095 +1,425 @@
 {
+  "generatedAt": "2026-06-15T20:58:05.009Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-15",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "GoIPO to be held in September",
-      "term_ko": "9월 개최 GoIPO",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "9월 개최 GoIPO",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "씨비에이파트너스, 9월 개최 'GoIPO 나스닥 세미나' 선착순 사전 접수",
-              "link": "https://n.news.naver.com/mnews/article/008/0005372138?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9%EC%9B%94%20%EA%B0%9C%EC%B5%9C%20GoIPO",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9%EC%9B%94%20%EA%B0%9C%EC%B5%9C%20GoIPO"
-      },
-      "top_headlines": [
-        {
-          "title": "씨비에이파트너스, 9월 개최 'GoIPO 나스닥 세미나' 선착순 사전 접수",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005372138?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Goipo to Be Held in September",
+      "term_ko": "9월 개최 GoIPO"
     },
     {
-      "term": "Why AI Still",
-      "term_ko": "왜 여전히 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "왜 여전히 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AMD 목표가 재확인에도 주가 논란…월가는 왜 여전히 AI 성장성에 주목...",
-              "link": "http://coinreaders.com/242398"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%9C%20%EC%97%AC%EC%A0%84%ED%9E%88%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%9C%20%EC%97%AC%EC%A0%84%ED%9E%88%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "AMD 목표가 재확인에도 주가 논란…월가는 왜 여전히 AI 성장성에 주목...",
-          "summary": "",
-          "link": "http://coinreaders.com/242398",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Why Ai Still",
+      "term_ko": "왜 여전히 AI"
     },
     {
-      "term": "C-Lab Outside, 9th Cohort",
-      "term_ko": "C랩 아웃사이드 9기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "C랩 아웃사이드 9기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
-              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=C%EB%9E%A9%20%EC%95%84%EC%9B%83%EC%82%AC%EC%9D%B4%EB%93%9C%209%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=C%EB%9E%A9%20%EC%95%84%EC%9B%83%EC%82%AC%EC%9D%B4%EB%93%9C%209%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
-          "summary": "",
-          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "C-lab Outside, 9th Cohort",
+      "term_ko": "C랩 아웃사이드 9기"
     },
     {
-      "term": "26 years as a regular employee",
-      "term_ko": "상용 근로자 26년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "상용 근로자 26년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9A%A9%20%EA%B7%BC%EB%A1%9C%EC%9E%90%2026%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9A%A9%20%EA%B7%BC%EB%A1%9C%EC%9E%90%2026%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "26 Years As a Regular Employee",
+      "term_ko": "상용 근로자 26년"
     },
     {
-      "term": "The number of people in their 30s decreased by about 190,000",
-      "term_ko": "30대 19만여명 줄어",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "30대 19만여명 줄어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=30%EB%8C%80%2019%EB%A7%8C%EC%97%AC%EB%AA%85%20%EC%A4%84%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=30%EB%8C%80%2019%EB%A7%8C%EC%97%AC%EB%AA%85%20%EC%A4%84%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Number of People in Their 30s Decreased by About 190,000",
+      "term_ko": "30대 19만여명 줄어"
     },
     {
-      "term": "SanDisk's Historic Surge",
-      "term_ko": "샌디스크 역사적 과열",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "샌디스크 역사적 과열",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "샌디스크, 역사적 과열 신호에도 더 오를 수 있을까?",
-              "link": "http://coinreaders.com/242386"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%20%EC%97%AD%EC%82%AC%EC%A0%81%20%EA%B3%BC%EC%97%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%8C%EB%94%94%EC%8A%A4%ED%81%AC%20%EC%97%AD%EC%82%AC%EC%A0%81%20%EA%B3%BC%EC%97%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "샌디스크, 역사적 과열 신호에도 더 오를 수 있을까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242386",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sandisk's Historic Surge",
+      "term_ko": "샌디스크 역사적 과열"
     },
     {
       "term": "Nasdaq Seminar: First Come, First Served",
-      "term_ko": "나스닥 세미나 선착순",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥 세미나 선착순",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "씨비에이파트너스, 9월 개최 'GoIPO 나스닥 세미나' 선착순 사전 접수",
-              "link": "https://n.news.naver.com/mnews/article/008/0005372138?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%B8%EB%AF%B8%EB%82%98%20%EC%84%A0%EC%B0%A9%EC%88%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%B8%EB%AF%B8%EB%82%98%20%EC%84%A0%EC%B0%A9%EC%88%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "씨비에이파트너스, 9월 개최 'GoIPO 나스닥 세미나' 선착순 사전 접수",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005372138?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 세미나 선착순"
     },
     {
       "term": "Leading Future Innovation",
-      "term_ko": "미래 혁신 이끈다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미래 혁신 이끈다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
-              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%9E%98%20%ED%98%81%EC%8B%A0%20%EC%9D%B4%EB%81%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%9E%98%20%ED%98%81%EC%8B%A0%20%EC%9D%B4%EB%81%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "삼성전자, 'C랩 아웃사이드' 9기 공모... 미래 혁신 이끈다",
-          "summary": "",
-          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미래 혁신 이끈다"
     },
     {
-      "term": "A boost from the news of the end of the war",
-      "term_ko": "종전 소식에 탄력",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "종전 소식에 탄력",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A2%85%EC%A0%84%20%EC%86%8C%EC%8B%9D%EC%97%90%20%ED%83%84%EB%A0%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A2%85%EC%A0%84%20%EC%86%8C%EC%8B%9D%EC%97%90%20%ED%83%84%EB%A0%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Boost From the News of the End of the War",
+      "term_ko": "종전 소식에 탄력"
     },
     {
-      "term": "The KOSPI I received just now",
-      "term_ko": "받은 코스피 이제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "받은 코스피 이제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9B%EC%9D%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%9D%B4%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9B%EC%9D%80%20%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%9D%B4%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Kospi I Received Just Now",
+      "term_ko": "받은 코스피 이제"
     },
     {
-      "term": "Just Kevin Wash's mouth",
-      "term_ko": "케빈 워시 입만",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "케빈 워시 입만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C%20%EC%9E%85%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BC%80%EB%B9%88%20%EC%9B%8C%EC%8B%9C%20%EC%9E%85%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "종전 소식에 탄력 받은 코스피… 이제 케빈 워시 입만 본다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855155?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Just Kevin Wash's Mouth",
+      "term_ko": "케빈 워시 입만"
     },
     {
       "term": "The Postwar World",
-      "term_ko": "전쟁 이후의 세계",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전쟁 이후의 세계",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "전쟁 이후의 세계, 투자는 어디로 향하는가",
-              "link": "https://www.abcn.kr/news/articleView.html?idxno=88708"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%9F%81%20%EC%9D%B4%ED%9B%84%EC%9D%98%20%EC%84%B8%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%9F%81%20%EC%9D%B4%ED%9B%84%EC%9D%98%20%EC%84%B8%EA%B3%84"
-      },
-      "top_headlines": [
-        {
-          "title": "전쟁 이후의 세계, 투자는 어디로 향하는가",
-          "summary": "",
-          "link": "https://www.abcn.kr/news/articleView.html?idxno=88708",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "전쟁 이후의 세계"
     },
     {
-      "term": "It's hard to get down",
-      "term_ko": "쉽게 못 내려올",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "쉽게 못 내려올",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“전쟁 끝나도, 한국경제 3高서 쉽게 못 내려올 것”",
-              "link": "https://n.news.naver.com/mnews/article/023/0003982235?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%89%BD%EA%B2%8C%20%EB%AA%BB%20%EB%82%B4%EB%A0%A4%EC%98%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%89%BD%EA%B2%8C%20%EB%AA%BB%20%EB%82%B4%EB%A0%A4%EC%98%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "“전쟁 끝나도, 한국경제 3高서 쉽게 못 내려올 것”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003982235?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It's Hard to Get Down",
+      "term_ko": "쉽게 못 내려올"
     },
     {
-      "term": "Business is slow, but interest rates on loans...",
-      "term_ko": "장사 안되는데 대출금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "장사 안되는데 대출금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%82%AC%20%EC%95%88%EB%90%98%EB%8A%94%EB%8D%B0%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%82%AC%20%EC%95%88%EB%90%98%EB%8A%94%EB%8D%B0%20%EB%8C%80%EC%B6%9C%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Business Is Slow, But Interest Rates on Loans...",
+      "term_ko": "장사 안되는데 대출금리"
     },
     {
-      "term": "Surge in Delinquencies Among Self-Employed Individuals",
-      "term_ko": "올라 자영업자 연체급증",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "올라 자영업자 연체급증",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%AC%EB%9D%BC%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%97%B0%EC%B2%B4%EA%B8%89%EC%A6%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%AC%EB%9D%BC%20%EC%9E%90%EC%98%81%EC%97%85%EC%9E%90%20%EC%97%B0%EC%B2%B4%EA%B8%89%EC%A6%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726977?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Surge in Delinquencies Among Self-employed Individuals",
+      "term_ko": "올라 자영업자 연체급증"
     },
     {
       "term": "Seoul Bond Market: Government Bonds",
-      "term_ko": "서울 채권시장 국고채",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울 채권시장 국고채",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-              "link": "https://www.tokenpost.kr/news/economy/369589"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/369589",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서울 채권시장 국고채"
     },
     {
-      "term": "Falling interest rates and safe-haven assets",
-      "term_ko": "금리 하락세 안전자산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 하락세 안전자산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-              "link": "https://www.tokenpost.kr/news/economy/369589"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%ED%95%98%EB%9D%BD%EC%84%B8%20%EC%95%88%EC%A0%84%EC%9E%90%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/369589",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Falling Interest Rates and Safe-haven Assets",
+      "term_ko": "금리 하락세 안전자산"
     },
     {
-      "term": "Global IPO Race",
-      "term_ko": "전 세계적인 기업공개(IPO) 경쟁",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Global IPO Race",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Global%20IPO%20Race",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Global%20IPO%20Race"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Global Ipo Race",
+      "term_ko": "전 세계적인 기업공개(IPO) 경쟁"
     },
     {
-      "term": "US-Iran Peace Deal",
-      "term_ko": "미국-이란 평화 협정",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "US-Iran Peace Deal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
-              "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=US-Iran%20Peace%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=US-Iran%20Peace%20Deal"
-      },
-      "top_headlines": [
-        {
-          "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
-          "summary": "",
-          "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us-iran Peace Deal",
+      "term_ko": "미국-이란 평화 협정"
     },
     {
-      "term": "Is that possible?",
-      "term_ko": "수 있을까",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수 있을까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "샌디스크, 역사적 과열 신호에도 더 오를 수 있을까?",
-              "link": "http://coinreaders.com/242386"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%20%EC%9E%88%EC%9D%84%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%20%EC%9E%88%EC%9D%84%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "샌디스크, 역사적 과열 신호에도 더 오를 수 있을까?",
-          "summary": "",
-          "link": "http://coinreaders.com/242386",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Is That Possible?",
+      "term_ko": "수 있을까"
     },
     {
       "term": "Pre-registration",
-      "term_ko": "사전 접수",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사전 접수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "씨비에이파트너스, 9월 개최 'GoIPO 나스닥 세미나' 선착순 사전 접수",
-              "link": "https://n.news.naver.com/mnews/article/008/0005372138?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%A0%84%20%EC%A0%91%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%A0%84%20%EC%A0%91%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "씨비에이파트너스, 9월 개최 'GoIPO 나스닥 세미나' 선착순 사전 접수",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005372138?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사전 접수"
     },
     {
-      "term": "decrease of",
-      "term_ko": "만에 감소",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 감소",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-              "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EA%B0%90%EC%86%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003726978?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Decrease of",
+      "term_ko": "만에 감소"
     },
     {
       "term": "Preference Enhancement",
-      "term_ko": "선호 강화",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "선호 강화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-              "link": "https://www.tokenpost.kr/news/economy/369589"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%ED%98%B8%20%EA%B0%95%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%ED%98%B8%20%EA%B0%95%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 채권시장, 국고채 금리 하락세…안전자산 선호 강화",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/369589",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선호 강화"
     },
     {
-      "term": "SpaceX Miss Exposes",
-      "term_ko": "스페이스X 발사 실패로 드러난 문제점",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX Miss Exposes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20Miss%20Exposes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20Miss%20Exposes"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex Miss Exposes",
+      "term_ko": "스페이스X 발사 실패로 드러난 문제점"
     },
     {
       "term": "Koreas Weak Hand",
-      "term_ko": "한국의 약점",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Koreas Weak Hand",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Koreas%20Weak%20Hand",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Koreas%20Weak%20Hand"
-      },
-      "top_headlines": [
-        {
-          "title": "SpaceX miss exposes Korea's weak hand in global IPO race",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285482?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국의 약점"
     },
     {
       "term": "Trump Lifts Hormuz",
-      "term_ko": "트럼프, 호르무즈 해협 제재 해제",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Lifts Hormuz",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
-              "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Lifts%20Hormuz",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Lifts%20Hormuz"
-      },
-      "top_headlines": [
-        {
-          "title": "US-Iran peace deal reached as Trump lifts Hormuz blockade",
-          "summary": "",
-          "link": "https://en.asiatoday.co.kr/view.php?key=20260615000907375",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "트럼프, 호르무즈 해협 제재 해제"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-16T02:27:17+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-15T17:28:19.140Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-16T02:27:17+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Goipo to Be Held in September",
+      "term_ko": "9월 개최 GoIPO"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-16T02:27:17+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-16T02:27:17+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Why Ai Still",
+      "term_ko": "왜 여전히 AI"
+    },
+    {
+      "term": "C-lab Outside, 9th Cohort",
+      "term_ko": "C랩 아웃사이드 9기"
+    },
+    {
+      "term": "26 Years As a Regular Employee",
+      "term_ko": "상용 근로자 26년"
+    },
+    {
+      "term": "The Number of People in Their 30s Decreased by About 190,000",
+      "term_ko": "30대 19만여명 줄어"
+    },
+    {
+      "term": "Sandisk's Historic Surge",
+      "term_ko": "샌디스크 역사적 과열"
+    },
+    {
+      "term": "Nasdaq Seminar: First Come, First Served",
+      "term_ko": "나스닥 세미나 선착순"
+    },
+    {
+      "term": "Leading Future Innovation",
+      "term_ko": "미래 혁신 이끈다"
+    },
+    {
+      "term": "A Boost From the News of the End of the War",
+      "term_ko": "종전 소식에 탄력"
+    },
+    {
+      "term": "The Kospi I Received Just Now",
+      "term_ko": "받은 코스피 이제"
+    },
+    {
+      "term": "Just Kevin Wash's Mouth",
+      "term_ko": "케빈 워시 입만"
+    },
+    {
+      "term": "The Postwar World",
+      "term_ko": "전쟁 이후의 세계"
+    },
+    {
+      "term": "It's Hard to Get Down",
+      "term_ko": "쉽게 못 내려올"
+    },
+    {
+      "term": "Business Is Slow, But Interest Rates on Loans...",
+      "term_ko": "장사 안되는데 대출금리"
+    },
+    {
+      "term": "Surge in Delinquencies Among Self-employed Individuals",
+      "term_ko": "올라 자영업자 연체급증"
+    },
+    {
+      "term": "Seoul Bond Market: Government Bonds",
+      "term_ko": "서울 채권시장 국고채"
+    },
+    {
+      "term": "Falling Interest Rates and Safe-haven Assets",
+      "term_ko": "금리 하락세 안전자산"
+    },
+    {
+      "term": "Global Ipo Race",
+      "term_ko": "전 세계적인 기업공개(IPO) 경쟁"
+    },
+    {
+      "term": "Us-iran Peace Deal",
+      "term_ko": "미국-이란 평화 협정"
+    },
+    {
+      "term": "Is That Possible?",
+      "term_ko": "수 있을까"
+    },
+    {
+      "term": "Pre-registration",
+      "term_ko": "사전 접수"
+    },
+    {
+      "term": "Decrease of",
+      "term_ko": "만에 감소"
+    },
+    {
+      "term": "Preference Enhancement",
+      "term_ko": "선호 강화"
+    },
+    {
+      "term": "Spacex Miss Exposes",
+      "term_ko": "스페이스X 발사 실패로 드러난 문제점"
+    },
+    {
+      "term": "Koreas Weak Hand",
+      "term_ko": "한국의 약점"
+    },
+    {
+      "term": "Trump Lifts Hormuz",
+      "term_ko": "트럼프, 호르무즈 해협 제재 해제"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    }
+  ],
+  "translations": {
+    "Goipo to Be Held in September": {
+      "en": "Goipo to Be Held in September",
+      "ko": "9월 개최 GoIPO",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Why Ai Still": {
+      "en": "Why Ai Still",
+      "ko": "왜 여전히 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "C-lab Outside, 9th Cohort": {
+      "en": "C-lab Outside, 9th Cohort",
+      "ko": "C랩 아웃사이드 9기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "26 Years As a Regular Employee": {
+      "en": "26 Years As a Regular Employee",
+      "ko": "상용 근로자 26년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "The Number of People in Their 30s Decreased by About 190,000": {
+      "en": "The Number of People in Their 30s Decreased by About 190,000",
+      "ko": "30대 19만여명 줄어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Sandisk's Historic Surge": {
+      "en": "Sandisk's Historic Surge",
+      "ko": "샌디스크 역사적 과열",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Nasdaq Seminar: First Come, First Served": {
+      "en": "Nasdaq Seminar: First Come, First Served",
+      "ko": "나스닥 세미나 선착순",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Leading Future Innovation": {
+      "en": "Leading Future Innovation",
+      "ko": "미래 혁신 이끈다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "A Boost From the News of the End of the War": {
+      "en": "A Boost From the News of the End of the War",
+      "ko": "종전 소식에 탄력",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "The Kospi I Received Just Now": {
+      "en": "The Kospi I Received Just Now",
+      "ko": "받은 코스피 이제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Just Kevin Wash's Mouth": {
+      "en": "Just Kevin Wash's Mouth",
+      "ko": "케빈 워시 입만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "The Postwar World": {
+      "en": "The Postwar World",
+      "ko": "전쟁 이후의 세계",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "It's Hard to Get Down": {
+      "en": "It's Hard to Get Down",
+      "ko": "쉽게 못 내려올",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Business Is Slow, But Interest Rates on Loans...": {
+      "en": "Business Is Slow, But Interest Rates on Loans...",
+      "ko": "장사 안되는데 대출금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Surge in Delinquencies Among Self-employed Individuals": {
+      "en": "Surge in Delinquencies Among Self-employed Individuals",
+      "ko": "올라 자영업자 연체급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Seoul Bond Market: Government Bonds": {
+      "en": "Seoul Bond Market: Government Bonds",
+      "ko": "서울 채권시장 국고채",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Falling Interest Rates and Safe-haven Assets": {
+      "en": "Falling Interest Rates and Safe-haven Assets",
+      "ko": "금리 하락세 안전자산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Global Ipo Race": {
+      "en": "Global Ipo Race",
+      "ko": "전 세계적인 기업공개(IPO) 경쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Us-iran Peace Deal": {
+      "en": "Us-iran Peace Deal",
+      "ko": "미국-이란 평화 협정",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Is That Possible?": {
+      "en": "Is That Possible?",
+      "ko": "수 있을까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Pre-registration": {
+      "en": "Pre-registration",
+      "ko": "사전 접수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Decrease of": {
+      "en": "Decrease of",
+      "ko": "만에 감소",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Preference Enhancement": {
+      "en": "Preference Enhancement",
+      "ko": "선호 강화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Spacex Miss Exposes": {
+      "en": "Spacex Miss Exposes",
+      "ko": "스페이스X 발사 실패로 드러난 문제점",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Koreas Weak Hand": {
+      "en": "Koreas Weak Hand",
+      "ko": "한국의 약점",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Trump Lifts Hormuz": {
+      "en": "Trump Lifts Hormuz",
+      "ko": "트럼프, 호르무즈 해협 제재 해제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-15T20:58:05.010Z"
     }
   }
 }
