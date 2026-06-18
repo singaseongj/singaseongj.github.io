@@ -1,51 +1,40 @@
 {
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "window": "12_hours",
-  "total_phrases": 28,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "Interest Rates Held Steady Again",
-      "term_ko": "금리 또 동결",
-      "significance_score": 644,
-      "mentions": 320,
+      "term": "NH Amundi Has Surpassed Bitcoin in Size",
+      "term_ko": "비트코인보다 커졌다 NH아문디",
+      "significance_score": 350,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 또 동결",
+        "query": "비트코인보다 커졌다 NH아문디",
         "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "matches": 1,
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美 연준, ‘워시체제’ 첫 FOMC서 금리 또 동결… 네 차례 연속",
-              "link": "https://n.news.naver.com/mnews/article/366/0001172507?sid=104"
-            },
-            {
-              "title": "美, ‘워시체제’ 첫 FOMC서 금리 또 동결…연내 금리 인상 가능성 시사",
-              "link": "https://www.kukinews.com/article/view/kuk202606180002"
+              "title": "\"韓주식 리스크, 비트코인보다 커졌다\"…NH아문디, 은퇴자산 관리에 '하...",
+              "link": "https://theviewers.co.kr/View.aspx?No=4117134"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EB%98%90%20%EB%8F%99%EA%B2%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EB%98%90%20%EB%8F%99%EA%B2%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%B3%B4%EB%8B%A4%20%EC%BB%A4%EC%A1%8C%EB%8B%A4%20NH%EC%95%84%EB%AC%B8%EB%94%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%EB%B3%B4%EB%8B%A4%20%EC%BB%A4%EC%A1%8C%EB%8B%A4%20NH%EC%95%84%EB%AC%B8%EB%94%94"
       },
       "top_headlines": [
         {
-          "title": "美 연준, ‘워시체제’ 첫 FOMC서 금리 또 동결… 네 차례 연속",
+          "title": "\"韓주식 리스크, 비트코인보다 커졌다\"…NH아문디, 은퇴자산 관리에 '하...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001172507?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "美, ‘워시체제’ 첫 FOMC서 금리 또 동결…연내 금리 인상 가능성 시사",
-          "summary": "",
-          "link": "https://www.kukinews.com/article/view/kuk202606180002",
+          "link": "https://theviewers.co.kr/View.aspx?No=4117134",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -53,36 +42,75 @@
       ]
     },
     {
-      "term": "50% in just a few days after the IPO",
-      "term_ko": "상장 며칠만에 50%",
+      "term": "MG Capital's First Since Its Founding",
+      "term_ko": "MG캐피탈 창사 첫",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "MG캐피탈 창사 첫",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-18T12:47:36+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "MG캐피탈, 창사 첫 외화채 발행…5000만달러 조달",
+              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131720"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MG%EC%BA%90%ED%94%BC%ED%83%88%20%EC%B0%BD%EC%82%AC%20%EC%B2%AB",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MG%EC%BA%90%ED%94%BC%ED%83%88%20%EC%B0%BD%EC%82%AC%20%EC%B2%AB"
+      },
+      "top_headlines": [
+        {
+          "title": "MG캐피탈, 창사 첫 외화채 발행…5000만달러 조달",
+          "summary": "",
+          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131720",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "A mere 0.1%",
+      "term_ko": "비중 고작 0.1%",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "상장 며칠만에 50%",
+        "query": "비중 고작 0.1%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "스페이스X, 상장 며칠만에 '50% 폭등'… 조기 매도한 단타족 \"내가 미쳤...",
-              "link": "https://n.news.naver.com/mnews/article/030/0003438461?sid=104"
+              "title": "프랭클린템플턴 \"스페이스X, 러셀 비중 고작 0.1%…묻어두기식 투자 자...",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4420644"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%81%EC%9E%A5%20%EB%A9%B0%EC%B9%A0%EB%A7%8C%EC%97%90%2050%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%81%EC%9E%A5%20%EB%A9%B0%EC%B9%A0%EB%A7%8C%EC%97%90%2050%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%EC%A4%91%20%EA%B3%A0%EC%9E%91%200.1%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%EC%A4%91%20%EA%B3%A0%EC%9E%91%200.1%25"
       },
       "top_headlines": [
         {
-          "title": "스페이스X, 상장 며칠만에 '50% 폭등'… 조기 매도한 단타족 \"내가 미쳤...",
+          "title": "프랭클린템플턴 \"스페이스X, 러셀 비중 고작 0.1%…묻어두기식 투자 자...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003438461?sid=104",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4420644",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -90,36 +118,37 @@
       ]
     },
     {
-      "term": "U.S. Federal Reserve benchmark interest rate: 3.50–3.75%",
-      "term_ko": "美연준 기준금리 3.50~3.75%",
+      "term": "Useful quantum computers in 5 to 7 years",
+      "term_ko": "유용한 양자컴퓨터 5~7년",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "美연준 기준금리 3.50~3.75%",
+        "query": "유용한 양자컴퓨터 5~7년",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美연준, 기준금리 3.50~3.75% 동결했지만…연내 인상 가능성 시사",
-              "link": "https://n.news.naver.com/mnews/article/020/0003727679?sid=104"
+              "title": "[미국 특징주] 아마존 \"상업적으로 유용한 양자컴퓨터, 5~7년 내 등장\"",
+              "link": "https://www.newspim.com/news/view/20260618000303"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%EC%97%B0%EC%A4%80%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%203.50~3.75%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%EC%97%B0%EC%A4%80%20%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%203.50~3.75%25"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EC%9A%A9%ED%95%9C%20%EC%96%91%EC%9E%90%EC%BB%B4%ED%93%A8%ED%84%B0%205~7%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EC%9A%A9%ED%95%9C%20%EC%96%91%EC%9E%90%EC%BB%B4%ED%93%A8%ED%84%B0%205~7%EB%85%84"
       },
       "top_headlines": [
         {
-          "title": "美연준, 기준금리 3.50~3.75% 동결했지만…연내 인상 가능성 시사",
+          "title": "[미국 특징주] 아마존 \"상업적으로 유용한 양자컴퓨터, 5~7년 내 등장\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003727679?sid=104",
+          "link": "https://www.newspim.com/news/view/20260618000303",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -127,36 +156,37 @@
       ]
     },
     {
-      "term": "U.S. Federal Reserve for the fourth consecutive time",
-      "term_ko": "미국 연준 4연속",
+      "term": "Issuance of $50 million in foreign currency bonds",
+      "term_ko": "외화채 발행 5000만달러",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "미국 연준 4연속",
+        "query": "외화채 발행 5000만달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[속보] 미국 연준, 4연속 기준금리 동결 만장일치 결정",
-              "link": "https://www.etoday.co.kr/news/view/2594642"
+              "title": "MG캐피탈, 창사 첫 외화채 발행…5000만달러 조달",
+              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131720"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%97%B0%EC%A4%80%204%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%97%B0%EC%A4%80%204%EC%97%B0%EC%86%8D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%ED%99%94%EC%B1%84%20%EB%B0%9C%ED%96%89%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%ED%99%94%EC%B1%84%20%EB%B0%9C%ED%96%89%205000%EB%A7%8C%EB%8B%AC%EB%9F%AC"
       },
       "top_headlines": [
         {
-          "title": "[속보] 미국 연준, 4연속 기준금리 동결 만장일치 결정",
+          "title": "MG캐피탈, 창사 첫 외화채 발행…5000만달러 조달",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2594642",
+          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=131720",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -164,36 +194,75 @@
       ]
     },
     {
-      "term": "Taking Aim at Advertising Practices",
-      "term_ko": "광고 관행 정조준",
+      "term": "Breaking the record high, it reached the 9,000 mark",
+      "term_ko": "최고치 경신하며 9000선",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "최고치 경신하며 9000선",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-18T12:47:36+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "코스피, 사상 최고치 경신하며 9000선 '턱밑'...삼성전자·하이닉스 주도",
+              "link": "https://www.redian.org/news/articleView.html?idxno=256830"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B2%BD%EC%8B%A0%ED%95%98%EB%A9%B0%209000%EC%84%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%EC%B9%98%20%EA%B2%BD%EC%8B%A0%ED%95%98%EB%A9%B0%209000%EC%84%A0"
+      },
+      "top_headlines": [
+        {
+          "title": "코스피, 사상 최고치 경신하며 9000선 '턱밑'...삼성전자·하이닉스 주도",
+          "summary": "",
+          "link": "https://www.redian.org/news/articleView.html?idxno=256830",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Franklin Templeton, SpaceX, Russell",
+      "term_ko": "프랭클린템플턴 스페이스X 러셀",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "광고 관행 정조준",
+        "query": "프랭클린템플턴 스페이스X 러셀",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "미 FTC, 아마존에 '매머드급' 벌금 예고...검색 광고 관행 정조준",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19270"
+              "title": "프랭클린템플턴 \"스페이스X, 러셀 비중 고작 0.1%…묻어두기식 투자 자...",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4420644"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%91%EA%B3%A0%20%EA%B4%80%ED%96%89%20%EC%A0%95%EC%A1%B0%EC%A4%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%91%EA%B3%A0%20%EA%B4%80%ED%96%89%20%EC%A0%95%EC%A1%B0%EC%A4%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%84%EB%9E%AD%ED%81%B4%EB%A6%B0%ED%85%9C%ED%94%8C%ED%84%B4%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%9F%AC%EC%85%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%84%EB%9E%AD%ED%81%B4%EB%A6%B0%ED%85%9C%ED%94%8C%ED%84%B4%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%9F%AC%EC%85%80"
       },
       "top_headlines": [
         {
-          "title": "미 FTC, 아마존에 '매머드급' 벌금 예고...검색 광고 관행 정조준",
+          "title": "프랭클린템플턴 \"스페이스X, 러셀 비중 고작 0.1%…묻어두기식 투자 자...",
           "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19270",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4420644",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -201,36 +270,37 @@
       ]
     },
     {
-      "term": "Sold early during the sharp rally",
-      "term_ko": "폭등 조기 매도한",
+      "term": "Amazon, a Notable U.S. Stock",
+      "term_ko": "미국 특징주 아마존",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "폭등 조기 매도한",
+        "query": "미국 특징주 아마존",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "스페이스X, 상장 며칠만에 '50% 폭등'… 조기 매도한 단타족 \"내가 미쳤...",
-              "link": "https://n.news.naver.com/mnews/article/030/0003438461?sid=104"
+              "title": "[미국 특징주] 아마존 \"상업적으로 유용한 양자컴퓨터, 5~7년 내 등장\"",
+              "link": "https://www.newspim.com/news/view/20260618000303"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EB%93%B1%20%EC%A1%B0%EA%B8%B0%20%EB%A7%A4%EB%8F%84%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EB%93%B1%20%EC%A1%B0%EA%B8%B0%20%EB%A7%A4%EB%8F%84%ED%95%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EC%95%84%EB%A7%88%EC%A1%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EC%95%84%EB%A7%88%EC%A1%B4"
       },
       "top_headlines": [
         {
-          "title": "스페이스X, 상장 며칠만에 '50% 폭등'… 조기 매도한 단타족 \"내가 미쳤...",
+          "title": "[미국 특징주] 아마존 \"상업적으로 유용한 양자컴퓨터, 5~7년 내 등장\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/030/0003438461?sid=104",
+          "link": "https://www.newspim.com/news/view/20260618000303",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -238,36 +308,37 @@
       ]
     },
     {
-      "term": "Interest Rates to Remain Unchanged This Year",
-      "term_ko": "금리 동결 연내",
+      "term": "From the Stock Market’s Fundamentals to Household Debt",
+      "term_ko": "증시 체질부터 가계부채까지",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 동결 연내",
+        "query": "증시 체질부터 가계부채까지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "미 연준, '워시의장' 첫 FOMC서 금리 동결…연내 인상 가능성",
-              "link": "https://n.news.naver.com/mnews/article/057/0001954363?sid=104"
+              "title": "증시 체질부터 가계부채까지…금융위·국민경제자문회의, 금융 대전환 ...",
+              "link": "https://n.news.naver.com/mnews/article/123/0002384974?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%20%EC%97%B0%EB%82%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%20%EC%97%B0%EB%82%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%B2%B4%EC%A7%88%EB%B6%80%ED%84%B0%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84%EA%B9%8C%EC%A7%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%B2%B4%EC%A7%88%EB%B6%80%ED%84%B0%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84%EA%B9%8C%EC%A7%80"
       },
       "top_headlines": [
         {
-          "title": "미 연준, '워시의장' 첫 FOMC서 금리 동결…연내 인상 가능성",
+          "title": "증시 체질부터 가계부채까지…금융위·국민경제자문회의, 금융 대전환 ...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/057/0001954363?sid=104",
+          "link": "https://n.news.naver.com/mnews/article/123/0002384974?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -275,36 +346,37 @@
       ]
     },
     {
-      "term": "Four times in a row",
-      "term_ko": "네 차례 연속",
+      "term": "Finance, National Economic Advisory Council, Financial Services Commission",
+      "term_ko": "금융위 국민경제자문회의 금융",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "네 차례 연속",
+        "query": "금융위 국민경제자문회의 금융",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美 연준, ‘워시체제’ 첫 FOMC서 금리 또 동결… 네 차례 연속",
-              "link": "https://n.news.naver.com/mnews/article/366/0001172507?sid=104"
+              "title": "증시 체질부터 가계부채까지…금융위·국민경제자문회의, 금융 대전환 ...",
+              "link": "https://n.news.naver.com/mnews/article/123/0002384974?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%A4%20%EC%B0%A8%EB%A1%80%20%EC%97%B0%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%A4%20%EC%B0%A8%EB%A1%80%20%EC%97%B0%EC%86%8D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%9C%84%20%EA%B5%AD%EB%AF%BC%EA%B2%BD%EC%A0%9C%EC%9E%90%EB%AC%B8%ED%9A%8C%EC%9D%98%20%EA%B8%88%EC%9C%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%9C%84%20%EA%B5%AD%EB%AF%BC%EA%B2%BD%EC%A0%9C%EC%9E%90%EB%AC%B8%ED%9A%8C%EC%9D%98%20%EA%B8%88%EC%9C%B5"
       },
       "top_headlines": [
         {
-          "title": "美 연준, ‘워시체제’ 첫 FOMC서 금리 또 동결… 네 차례 연속",
+          "title": "증시 체질부터 가계부채까지…금융위·국민경제자문회의, 금융 대전환 ...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/366/0001172507?sid=104",
+          "link": "https://n.news.naver.com/mnews/article/123/0002384974?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -312,36 +384,37 @@
       ]
     },
     {
-      "term": "Editorial: Intensified Austerity",
-      "term_ko": "사설 거세진 긴축",
+      "term": "U.S. Federal Reserve Rate Hike",
+      "term_ko": "미 연준 인상",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "사설 거세진 긴축",
+        "query": "미 연준 인상",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설] 거세진 긴축 경보, 한계기업·취약계층 점검 강화해야",
-              "link": "https://n.news.naver.com/mnews/article/081/0003653643?sid=110"
+              "title": "미 연준 '인상 깜빡이'…韓 환율·물가·가계부채 삼중 압박",
+              "link": "https://n.news.naver.com/mnews/article/469/0000937212?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%EA%B1%B0%EC%84%B8%EC%A7%84%20%EA%B8%B4%EC%B6%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%EA%B1%B0%EC%84%B8%EC%A7%84%20%EA%B8%B4%EC%B6%95"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EC%97%B0%EC%A4%80%20%EC%9D%B8%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EC%97%B0%EC%A4%80%20%EC%9D%B8%EC%83%81"
       },
       "top_headlines": [
         {
-          "title": "[사설] 거세진 긴축 경보, 한계기업·취약계층 점검 강화해야",
+          "title": "미 연준 '인상 깜빡이'…韓 환율·물가·가계부채 삼중 압박",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003653643?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/469/0000937212?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -349,36 +422,37 @@
       ]
     },
     {
-      "term": "Companies at Risk, Vulnerable Groups",
-      "term_ko": "경보 한계기업 취약계층",
+      "term": "Flash: South Korean Exchange Rate",
+      "term_ko": "깜빡이 韓 환율",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "경보 한계기업 취약계층",
+        "query": "깜빡이 韓 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설] 거세진 긴축 경보, 한계기업·취약계층 점검 강화해야",
-              "link": "https://n.news.naver.com/mnews/article/081/0003653643?sid=110"
+              "title": "미 연준 '인상 깜빡이'…韓 환율·물가·가계부채 삼중 압박",
+              "link": "https://n.news.naver.com/mnews/article/469/0000937212?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EB%B3%B4%20%ED%95%9C%EA%B3%84%EA%B8%B0%EC%97%85%20%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EB%B3%B4%20%ED%95%9C%EA%B3%84%EA%B8%B0%EC%97%85%20%EC%B7%A8%EC%95%BD%EA%B3%84%EC%B8%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%9C%EB%B9%A1%EC%9D%B4%20%E9%9F%93%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%9C%EB%B9%A1%EC%9D%B4%20%E9%9F%93%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "[사설] 거세진 긴축 경보, 한계기업·취약계층 점검 강화해야",
+          "title": "미 연준 '인상 깜빡이'…韓 환율·물가·가계부채 삼중 압박",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003653643?sid=110",
+          "link": "https://n.news.naver.com/mnews/article/469/0000937212?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -386,36 +460,37 @@
       ]
     },
     {
-      "term": "Hints at a Possible Rate Hike",
-      "term_ko": "인상 가능성 시사",
+      "term": "The Triple Threat of Inflation, Household Debt, and...",
+      "term_ko": "물가 가계부채 삼중",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "인상 가능성 시사",
+        "query": "물가 가계부채 삼중",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美, ‘워시체제’ 첫 FOMC서 금리 또 동결…연내 금리 인상 가능성 시사",
-              "link": "https://www.kukinews.com/article/view/kuk202606180002"
+              "title": "미 연준 '인상 깜빡이'…韓 환율·물가·가계부채 삼중 압박",
+              "link": "https://n.news.naver.com/mnews/article/469/0000937212?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%20%EA%B0%80%EB%8A%A5%EC%84%B1%20%EC%8B%9C%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%20%EA%B0%80%EB%8A%A5%EC%84%B1%20%EC%8B%9C%EC%82%AC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%BC%EA%B0%80%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84%20%EC%82%BC%EC%A4%91",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%BC%EA%B0%80%20%EA%B0%80%EA%B3%84%EB%B6%80%EC%B1%84%20%EC%82%BC%EC%A4%91"
       },
       "top_headlines": [
         {
-          "title": "美, ‘워시체제’ 첫 FOMC서 금리 또 동결…연내 금리 인상 가능성 시사",
+          "title": "미 연준 '인상 깜빡이'…韓 환율·물가·가계부채 삼중 압박",
           "summary": "",
-          "link": "https://www.kukinews.com/article/view/kuk202606180002",
+          "link": "https://n.news.naver.com/mnews/article/469/0000937212?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -423,36 +498,37 @@
       ]
     },
     {
-      "term": "Frozen, but set to rise within the year",
-      "term_ko": "동결했지만 연내 인상",
+      "term": "Not even Trump could stop it",
+      "term_ko": "트럼프도 못 막았다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "동결했지만 연내 인상",
+        "query": "트럼프도 못 막았다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美연준, 기준금리 3.50~3.75% 동결했지만…연내 인상 가능성 시사",
-              "link": "https://n.news.naver.com/mnews/article/020/0003727679?sid=104"
+              "title": "“트럼프도 못 막았다”…침묵 택한 ‘워시 연준’, 긴축 시동거나 [머...",
+              "link": "https://www.ekn.kr/web/view.php?key=20260618024464319"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EA%B2%B0%ED%96%88%EC%A7%80%EB%A7%8C%20%EC%97%B0%EB%82%B4%20%EC%9D%B8%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EA%B2%B0%ED%96%88%EC%A7%80%EB%A7%8C%20%EC%97%B0%EB%82%B4%20%EC%9D%B8%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B8%EB%9F%BC%ED%94%84%EB%8F%84%20%EB%AA%BB%20%EB%A7%89%EC%95%98%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B8%EB%9F%BC%ED%94%84%EB%8F%84%20%EB%AA%BB%20%EB%A7%89%EC%95%98%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "美연준, 기준금리 3.50~3.75% 동결했지만…연내 인상 가능성 시사",
+          "title": "“트럼프도 못 막았다”…침묵 택한 ‘워시 연준’, 긴축 시동거나 [머...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003727679?sid=104",
+          "link": "https://www.ekn.kr/web/view.php?key=20260618024464319",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -460,36 +536,37 @@
       ]
     },
     {
-      "term": "Unanimous Decision to Keep the Base Rate Unchanged",
-      "term_ko": "기준금리 동결 만장일치",
+      "term": "Wash, Who Chose Silence",
+      "term_ko": "침묵 택한 워시",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기준금리 동결 만장일치",
+        "query": "침묵 택한 워시",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[속보] 미국 연준, 4연속 기준금리 동결 만장일치 결정",
-              "link": "https://www.etoday.co.kr/news/view/2594642"
+              "title": "“트럼프도 못 막았다”…침묵 택한 ‘워시 연준’, 긴축 시동거나 [머...",
+              "link": "https://www.ekn.kr/web/view.php?key=20260618024464319"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%20%EB%A7%8C%EC%9E%A5%EC%9D%BC%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%A4%80%EA%B8%88%EB%A6%AC%20%EB%8F%99%EA%B2%B0%20%EB%A7%8C%EC%9E%A5%EC%9D%BC%EC%B9%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%A8%EB%AC%B5%20%ED%83%9D%ED%95%9C%20%EC%9B%8C%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%A8%EB%AC%B5%20%ED%83%9D%ED%95%9C%20%EC%9B%8C%EC%8B%9C"
       },
       "top_headlines": [
         {
-          "title": "[속보] 미국 연준, 4연속 기준금리 동결 만장일치 결정",
+          "title": "“트럼프도 못 막았다”…침묵 택한 ‘워시 연준’, 긴축 시동거나 [머...",
           "summary": "",
-          "link": "https://www.etoday.co.kr/news/view/2594642",
+          "link": "https://www.ekn.kr/web/view.php?key=20260618024464319",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -497,36 +574,75 @@
       ]
     },
     {
-      "term": "Samsung Slides SK",
-      "term_ko": "삼성 슬라이드 SK",
+      "term": "Is the Fed set to begin tightening?",
+      "term_ko": "연준 긴축 시동거나",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "연준 긴축 시동거나",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-18T12:47:36+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "“트럼프도 못 막았다”…침묵 택한 ‘워시 연준’, 긴축 시동거나 [머...",
+              "link": "https://www.ekn.kr/web/view.php?key=20260618024464319"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%EC%A4%80%20%EA%B8%B4%EC%B6%95%20%EC%8B%9C%EB%8F%99%EA%B1%B0%EB%82%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%EC%A4%80%20%EA%B8%B4%EC%B6%95%20%EC%8B%9C%EB%8F%99%EA%B1%B0%EB%82%98"
+      },
+      "top_headlines": [
+        {
+          "title": "“트럼프도 못 막았다”…침묵 택한 ‘워시 연준’, 긴축 시동거나 [머...",
+          "summary": "",
+          "link": "https://www.ekn.kr/web/view.php?key=20260618024464319",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Preliminary US-Iran Peace",
+      "term_ko": "미국-이란 간 예비 평화 협정",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Samsung Slides SK",
+        "query": "Preliminary US-Iran Peace",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Samsung slides, SK hynix recovers after U.S. chip selloff",
-              "link": "https://n.news.naver.com/mnews/article/009/0005695037?sid=104"
+              "title": "US Stock Futures Jump on Reports of Preliminary US-Iran Peace Deal Despit...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Jump-on-Reports-of-Preliminary-US-Iran-Peace-Deal-Despite-Feds-Hawkish-Outlook-1744577"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Slides%20SK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Slides%20SK"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Preliminary%20US-Iran%20Peace",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Preliminary%20US-Iran%20Peace"
       },
       "top_headlines": [
         {
-          "title": "Samsung slides, SK hynix recovers after U.S. chip selloff",
+          "title": "US Stock Futures Jump on Reports of Preliminary US-Iran Peace Deal Despit...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005695037?sid=104",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Jump-on-Reports-of-Preliminary-US-Iran-Peace-Deal-Despite-Feds-Hawkish-Outlook-1744577",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -534,110 +650,37 @@
       ]
     },
     {
-      "term": "IQM Deploys Its",
-      "term_ko": "IQM, 자사의",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "IQM Deploys Its",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "IQM Deploys Its First U.S. Quantum Computer at ORNL",
-              "link": "https://www.itbiznews.com/news/articleView.html?idxno=216471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=IQM%20Deploys%20Its",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=IQM%20Deploys%20Its"
-      },
-      "top_headlines": [
-        {
-          "title": "IQM Deploys Its First U.S. Quantum Computer at ORNL",
-          "summary": "",
-          "link": "https://www.itbiznews.com/news/articleView.html?idxno=216471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Computer At ORNL",
-      "term_ko": "ORNL의 컴퓨터",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Computer At ORNL",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "IQM Deploys Its First U.S. Quantum Computer at ORNL",
-              "link": "https://www.itbiznews.com/news/articleView.html?idxno=216471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Computer%20At%20ORNL",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Computer%20At%20ORNL"
-      },
-      "top_headlines": [
-        {
-          "title": "IQM Deploys Its First U.S. Quantum Computer at ORNL",
-          "summary": "",
-          "link": "https://www.itbiznews.com/news/articleView.html?idxno=216471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "A mammoth fine",
-      "term_ko": "매머드급 벌금",
+      "term": "Set-and-forget investing",
+      "term_ko": "묻어두기식 투자",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "매머드급 벌금",
+        "query": "묻어두기식 투자",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "미 FTC, 아마존에 '매머드급' 벌금 예고...검색 광고 관행 정조준",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19270"
+              "title": "프랭클린템플턴 \"스페이스X, 러셀 비중 고작 0.1%…묻어두기식 투자 자...",
+              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4420644"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%A8%B8%EB%93%9C%EA%B8%89%20%EB%B2%8C%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%A8%B8%EB%93%9C%EA%B8%89%20%EB%B2%8C%EA%B8%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AC%BB%EC%96%B4%EB%91%90%EA%B8%B0%EC%8B%9D%20%ED%88%AC%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AC%BB%EC%96%B4%EB%91%90%EA%B8%B0%EC%8B%9D%20%ED%88%AC%EC%9E%90"
       },
       "top_headlines": [
         {
-          "title": "미 FTC, 아마존에 '매머드급' 벌금 예고...검색 광고 관행 정조준",
+          "title": "프랭클린템플턴 \"스페이스X, 러셀 비중 고작 0.1%…묻어두기식 투자 자...",
           "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19270",
+          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4420644",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -645,36 +688,37 @@
       ]
     },
     {
-      "term": "Inspections Need to Be Strengthened",
-      "term_ko": "점검 강화해야",
+      "term": "My Entrance",
+      "term_ko": "내 등장",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "점검 강화해야",
+        "query": "내 등장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[사설] 거세진 긴축 경보, 한계기업·취약계층 점검 강화해야",
-              "link": "https://n.news.naver.com/mnews/article/081/0003653643?sid=110"
+              "title": "[미국 특징주] 아마존 \"상업적으로 유용한 양자컴퓨터, 5~7년 내 등장\"",
+              "link": "https://www.newspim.com/news/view/20260618000303"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%90%EA%B2%80%20%EA%B0%95%ED%99%94%ED%95%B4%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%90%EA%B2%80%20%EA%B0%95%ED%99%94%ED%95%B4%EC%95%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%20%EB%93%B1%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%20%EB%93%B1%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "[사설] 거세진 긴축 경보, 한계기업·취약계층 점검 강화해야",
+          "title": "[미국 특징주] 아마존 \"상업적으로 유용한 양자컴퓨터, 5~7년 내 등장\"",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003653643?sid=110",
+          "link": "https://www.newspim.com/news/view/20260618000303",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -682,36 +726,113 @@
       ]
     },
     {
-      "term": "Korean Retail Investors",
-      "term_ko": "한국의 개인 투자자들",
+      "term": "Risks in the Korean Stock Market",
+      "term_ko": "韓주식 리스크",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "韓주식 리스크",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-18T12:47:36+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "\"韓주식 리스크, 비트코인보다 커졌다\"…NH아문디, 은퇴자산 관리에 '하...",
+              "link": "https://theviewers.co.kr/View.aspx?No=4117134"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E9%9F%93%EC%A3%BC%EC%8B%9D%20%EB%A6%AC%EC%8A%A4%ED%81%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E9%9F%93%EC%A3%BC%EC%8B%9D%20%EB%A6%AC%EC%8A%A4%ED%81%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "\"韓주식 리스크, 비트코인보다 커졌다\"…NH아문디, 은퇴자산 관리에 '하...",
+          "summary": "",
+          "link": "https://theviewers.co.kr/View.aspx?No=4117134",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "KOSPI All-Time High",
+      "term_ko": "코스피 사상",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "코스피 사상",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-18T12:47:36+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "코스피, 사상 최고치 경신하며 9000선 '턱밑'...삼성전자·하이닉스 주도",
+              "link": "https://www.redian.org/news/articleView.html?idxno=256830"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%82%AC%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%82%AC%EC%83%81"
+      },
+      "top_headlines": [
+        {
+          "title": "코스피, 사상 최고치 경신하며 9000선 '턱밑'...삼성전자·하이닉스 주도",
+          "summary": "",
+          "link": "https://www.redian.org/news/articleView.html?idxno=256830",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Fed Holds Key",
+      "term_ko": "연준, 금리 동결",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Korean Retail Investors",
+        "query": "Fed Holds Key",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Korean retail investors buy over US$ 800 million of SpaceX stocks on firs...",
-              "link": "https://www.arirang.com/news/view?id=297348"
+              "title": "Fed holds key rate steady under new Chair, policymakers project rate incr...",
+              "link": "https://www.arirang.com/news/view?id=297379"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korean%20Retail%20Investors",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korean%20Retail%20Investors"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Holds%20Key",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Holds%20Key"
       },
       "top_headlines": [
         {
-          "title": "Korean retail investors buy over US$ 800 million of SpaceX stocks on firs...",
+          "title": "Fed holds key rate steady under new Chair, policymakers project rate incr...",
           "summary": "",
-          "link": "https://www.arirang.com/news/view?id=297348",
+          "link": "https://www.arirang.com/news/view?id=297379",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -719,36 +840,37 @@
       ]
     },
     {
-      "term": "U.S Chip Selloff",
-      "term_ko": "미국 반도체 매도세",
+      "term": "New Chair Policymakers",
+      "term_ko": "신임 의장 및 정책 입안자들",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "U.S Chip Selloff",
+        "query": "New Chair Policymakers",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Samsung slides, SK hynix recovers after U.S. chip selloff",
-              "link": "https://n.news.naver.com/mnews/article/009/0005695037?sid=104"
+              "title": "Fed holds key rate steady under new Chair, policymakers project rate incr...",
+              "link": "https://www.arirang.com/news/view?id=297379"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Chip%20Selloff",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Chip%20Selloff"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=New%20Chair%20Policymakers",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=New%20Chair%20Policymakers"
       },
       "top_headlines": [
         {
-          "title": "Samsung slides, SK hynix recovers after U.S. chip selloff",
+          "title": "Fed holds key rate steady under new Chair, policymakers project rate incr...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005695037?sid=104",
+          "link": "https://www.arirang.com/news/view?id=297379",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -756,36 +878,37 @@
       ]
     },
     {
-      "term": "Korean Investors Snap",
-      "term_ko": "한국 투자자들, 매수 열풍",
+      "term": "Slow Letter June",
+      "term_ko": "슬로우 레터 6월호",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Korean Investors Snap",
+        "query": "Slow Letter June",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Korean investors snap up W1.2tr of SpaceX shares on debut",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285590?sid=104"
+              "title": "Slow Letter: June 18, 2026.",
+              "link": "https://slownews.kr/161752"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Korean%20Investors%20Snap",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Korean%20Investors%20Snap"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Slow%20Letter%20June",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Slow%20Letter%20June"
       },
       "top_headlines": [
         {
-          "title": "Korean investors snap up W1.2tr of SpaceX shares on debut",
+          "title": "Slow Letter: June 18, 2026.",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285590?sid=104",
+          "link": "https://slownews.kr/161752",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -793,73 +916,75 @@
       ]
     },
     {
-      "term": "First U.S Quantum",
-      "term_ko": "미국 최초의 양자",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "First U.S Quantum",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "IQM Deploys Its First U.S. Quantum Computer at ORNL",
-              "link": "https://www.itbiznews.com/news/articleView.html?idxno=216471"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=First%20U.S%20Quantum",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=First%20U.S%20Quantum"
-      },
-      "top_headlines": [
-        {
-          "title": "IQM Deploys Its First U.S. Quantum Computer at ORNL",
-          "summary": "",
-          "link": "https://www.itbiznews.com/news/articleView.html?idxno=216471",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Hynix Recovers",
-      "term_ko": "하이닉스, 회복세",
+      "term": "Futures Jump",
+      "term_ko": "선물 가격 급등",
       "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Hynix Recovers",
+        "query": "Futures Jump",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "Samsung slides, SK hynix recovers after U.S. chip selloff",
-              "link": "https://n.news.naver.com/mnews/article/009/0005695037?sid=104"
+              "title": "US Stock Futures Jump on Reports of Preliminary US-Iran Peace Deal Despit...",
+              "link": "https://www.econotimes.com/US-Stock-Futures-Jump-on-Reports-of-Preliminary-US-Iran-Peace-Deal-Despite-Feds-Hawkish-Outlook-1744577"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hynix%20Recovers",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hynix%20Recovers"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Futures%20Jump",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Futures%20Jump"
       },
       "top_headlines": [
         {
-          "title": "Samsung slides, SK hynix recovers after U.S. chip selloff",
+          "title": "US Stock Futures Jump on Reports of Preliminary US-Iran Peace Deal Despit...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005695037?sid=104",
+          "link": "https://www.econotimes.com/US-Stock-Futures-Jump-on-Reports-of-Preliminary-US-Iran-Peace-Deal-Despite-Feds-Hawkish-Outlook-1744577",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Rate Steady",
+      "term_ko": "금리 안정세",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Rate Steady",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-18T12:47:36+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "Fed holds key rate steady under new Chair, policymakers project rate incr...",
+              "link": "https://www.arirang.com/news/view?id=297379"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Rate%20Steady",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Rate%20Steady"
+      },
+      "top_headlines": [
+        {
+          "title": "Fed holds key rate steady under new Chair, policymakers project rate incr...",
+          "summary": "",
+          "link": "https://www.arirang.com/news/view?id=297379",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -876,9 +1001,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -898,9 +1024,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -920,9 +1047,10 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-18T05:15:35+09:00",
+          "last_updated": "2026-06-18T12:47:36+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -931,63 +1059,35 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
-    },
-    {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Sharp Rise in the Won-Dollar Exchange Rate",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-17T20:16:41.557Z",
+    "generated_at": "2026-06-18T03:48:36.066Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-18T05:15:35+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-18T12:47:36+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 2,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 2,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-18T05:15:35+09:00",
+      "last_updated": "2026-06-18T12:47:36+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-18T05:15:35+09:00",
+        "lastUpdated": "2026-06-18T12:47:36+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
