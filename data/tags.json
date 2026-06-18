@@ -1,1101 +1,439 @@
 {
+  "generatedAt": "2026-06-18T20:26:35.700Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-18",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "SpaceX (SPCX) Listed for 5 Days",
-      "term_ko": "스페이스XSPCX 상장 5일",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스페이스XSPCX 상장 5일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "스페이스X(SPCX), 상장 5일 만에 러셀 편입...8월 내부자 매물 폭탄 터지...",
-              "link": "http://coinreaders.com/243127"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4XSPCX%20%EC%83%81%EC%9E%A5%205%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4XSPCX%20%EC%83%81%EC%9E%A5%205%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "스페이스X(SPCX), 상장 5일 만에 러셀 편입...8월 내부자 매물 폭탄 터지...",
-          "summary": "",
-          "link": "http://coinreaders.com/243127",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex (spcx) Listed for 5 Days",
+      "term_ko": "스페이스XSPCX 상장 5일"
     },
     {
-      "term": "SEGG Sports Predictions",
-      "term_ko": "SEGG 스포츠 예측",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SEGG 스포츠 예측",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SEGG, ‘스포츠 예측’ 승부수…월드컵 타고 플랫폼 기업 변신 가속",
-              "link": "https://www.tokenpost.kr/news/market/370855"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SEGG%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%EC%98%88%EC%B8%A1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SEGG%20%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%EC%98%88%EC%B8%A1"
-      },
-      "top_headlines": [
-        {
-          "title": "SEGG, ‘스포츠 예측’ 승부수…월드컵 타고 플랫폼 기업 변신 가속",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/370855",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Segg Sports Predictions",
+      "term_ko": "SEGG 스포츠 예측"
     },
     {
-      "term": "Real-time Voice AI",
-      "term_ko": "실시간 음성 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "실시간 음성 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "회의실 넘어 스타디움까지…딥엘, 실시간 음성 AI 확장 위해 믹스헤일로...",
-              "link": "https://www.venturesquare.net/1092081/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%8B%9C%EA%B0%84%20%EC%9D%8C%EC%84%B1%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%8B%9C%EA%B0%84%20%EC%9D%8C%EC%84%B1%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "회의실 넘어 스타디움까지…딥엘, 실시간 음성 AI 확장 위해 믹스헤일로...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1092081/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Real-time Voice Ai",
+      "term_ko": "실시간 음성 AI"
     },
     {
-      "term": "I broke through the Nine Heavens, but AI...",
-      "term_ko": "구천피 뚫었는데 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "구천피 뚫었는데 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "‘구천피’ 뚫었는데… AI 밸류체인만의 축제",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855836?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AC%EC%B2%9C%ED%94%BC%20%EB%9A%AB%EC%97%88%EB%8A%94%EB%8D%B0%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AC%EC%B2%9C%ED%94%BC%20%EB%9A%AB%EC%97%88%EB%8A%94%EB%8D%B0%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "‘구천피’ 뚫었는데… AI 밸류체인만의 축제",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855836?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "I Broke Through the Nine Heavens, But Ai...",
+      "term_ko": "구천피 뚫었는데 AI"
     },
     {
       "term": "Today's Gold Prices: June 19",
-      "term_ko": "오늘의 금값시세6월 19일자",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 금값시세6월 19일자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "오늘의 금값시세(6월 19일자) 금값 하락세 이유는",
-              "link": "https://www.gukjenews.com/news/articleView.html?idxno=3612347"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B86%EC%9B%94%2019%EC%9D%BC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EA%B8%88%EA%B0%92%EC%8B%9C%EC%84%B86%EC%9B%94%2019%EC%9D%BC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 금값시세(6월 19일자) 금값 하락세 이유는",
-          "summary": "",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3612347",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 금값시세6월 19일자"
     },
     {
       "term": "Taking a Gamble on the World Cup",
-      "term_ko": "승부수 월드컵 타고",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "승부수 월드컵 타고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SEGG, ‘스포츠 예측’ 승부수…월드컵 타고 플랫폼 기업 변신 가속",
-              "link": "https://www.tokenpost.kr/news/market/370855"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%B9%EB%B6%80%EC%88%98%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%ED%83%80%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%B9%EB%B6%80%EC%88%98%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%ED%83%80%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "SEGG, ‘스포츠 예측’ 승부수…월드컵 타고 플랫폼 기업 변신 가속",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/370855",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "승부수 월드컵 타고"
     },
     {
       "term": "Transition to a Platform Company",
-      "term_ko": "플랫폼 기업 변신",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "플랫폼 기업 변신",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SEGG, ‘스포츠 예측’ 승부수…월드컵 타고 플랫폼 기업 변신 가속",
-              "link": "https://www.tokenpost.kr/news/market/370855"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%8C%EB%9E%AB%ED%8F%BC%20%EA%B8%B0%EC%97%85%20%EB%B3%80%EC%8B%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%8C%EB%9E%AB%ED%8F%BC%20%EA%B8%B0%EC%97%85%20%EB%B3%80%EC%8B%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "SEGG, ‘스포츠 예측’ 승부수…월드컵 타고 플랫폼 기업 변신 가속",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/370855",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "플랫폼 기업 변신"
     },
     {
       "term": "Insider Selling Spree",
-      "term_ko": "내부자 매물 폭탄",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "내부자 매물 폭탄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "스페이스X(SPCX), 상장 5일 만에 러셀 편입...8월 내부자 매물 폭탄 터지...",
-              "link": "http://coinreaders.com/243127"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%B6%80%EC%9E%90%20%EB%A7%A4%EB%AC%BC%20%ED%8F%AD%ED%83%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%B6%80%EC%9E%90%20%EB%A7%A4%EB%AC%BC%20%ED%8F%AD%ED%83%84"
-      },
-      "top_headlines": [
-        {
-          "title": "스페이스X(SPCX), 상장 5일 만에 러셀 편입...8월 내부자 매물 폭탄 터지...",
-          "summary": "",
-          "link": "http://coinreaders.com/243127",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "내부자 매물 폭탄"
     },
     {
-      "term": "From the conference room to the stadium",
-      "term_ko": "회의실 넘어 스타디움까지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회의실 넘어 스타디움까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "회의실 넘어 스타디움까지…딥엘, 실시간 음성 AI 확장 위해 믹스헤일로...",
-              "link": "https://www.venturesquare.net/1092081/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EC%9D%98%EC%8B%A4%20%EB%84%98%EC%96%B4%20%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EC%9D%98%EC%8B%A4%20%EB%84%98%EC%96%B4%20%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "회의실 넘어 스타디움까지…딥엘, 실시간 음성 AI 확장 위해 믹스헤일로...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1092081/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "From the Conference Room to the Stadium",
+      "term_ko": "회의실 넘어 스타디움까지"
     },
     {
       "term": "Korean Asset Blockchain",
-      "term_ko": "한국 자산 블록체인",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 자산 블록체인",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국 자산, 블록체인 타고 세계로…바이셀스탠다드·미드나잇 글로벌 실...",
-              "link": "https://www.venturesquare.net/1091979/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%9E%90%EC%82%B0%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%9E%90%EC%82%B0%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 자산, 블록체인 타고 세계로…바이셀스탠다드·미드나잇 글로벌 실...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1091979/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 자산 블록체인"
     },
     {
-      "term": "Ride into the World with Baisel Standard",
-      "term_ko": "타고 세계로 바이셀스탠다드",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "타고 세계로 바이셀스탠다드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국 자산, 블록체인 타고 세계로…바이셀스탠다드·미드나잇 글로벌 실...",
-              "link": "https://www.venturesquare.net/1091979/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%83%80%EA%B3%A0%20%EC%84%B8%EA%B3%84%EB%A1%9C%20%EB%B0%94%EC%9D%B4%EC%85%80%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%83%80%EA%B3%A0%20%EC%84%B8%EA%B3%84%EB%A1%9C%20%EB%B0%94%EC%9D%B4%EC%85%80%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 자산, 블록체인 타고 세계로…바이셀스탠다드·미드나잇 글로벌 실...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1091979/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ride Into the World with Baisel Standard",
+      "term_ko": "타고 세계로 바이셀스탠다드"
     },
     {
-      "term": "It’s a shift toward austerity, but only in South Korea",
-      "term_ko": "긴축 전환인데 한국만",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "긴축 전환인데 한국만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 전 세계가 긴축 전환인데 한국만 “긴축 재정은 포퓰리즘”",
-              "link": "https://n.news.naver.com/mnews/article/023/0003982799?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B4%EC%B6%95%20%EC%A0%84%ED%99%98%EC%9D%B8%EB%8D%B0%20%ED%95%9C%EA%B5%AD%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B4%EC%B6%95%20%EC%A0%84%ED%99%98%EC%9D%B8%EB%8D%B0%20%ED%95%9C%EA%B5%AD%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 전 세계가 긴축 전환인데 한국만 “긴축 재정은 포퓰리즘”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003982799?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It’s a Shift Toward Austerity, But Only in South Korea",
+      "term_ko": "긴축 전환인데 한국만"
     },
     {
       "term": "Simultaneous Rise in Real Estate Prices",
-      "term_ko": "부동산 동시 상승",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산 동시 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 주가·부동산 동시 상승, 빚투 경계하고 부동산 공급 늘...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750766"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%8F%99%EC%8B%9C%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%20%EB%8F%99%EC%8B%9C%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 주가·부동산 동시 상승, 빚투 경계하고 부동산 공급 늘...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750766",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부동산 동시 상승"
     },
     {
-      "term": "How far will this power go?",
-      "term_ko": "힘 어디까지 갈까",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "힘 어디까지 갈까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스피 '1만' 눈앞‥\"반도체의 힘\" 어디까지 갈까",
-              "link": "https://n.news.naver.com/mnews/article/214/0001506419?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9E%98%20%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80%20%EA%B0%88%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9E%98%20%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80%20%EA%B0%88%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 '1만' 눈앞‥\"반도체의 힘\" 어디까지 갈까",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/214/0001506419?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "How Far Will This Power Go?",
+      "term_ko": "힘 어디까지 갈까"
     },
     {
-      "term": "Editorial: U.S. by the end of the year",
-      "term_ko": "사설 美 연내",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사설 美 연내",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 美 ‘연내 금리인상’ 시사, 韓銀 인플레 철통 방어를",
-              "link": "https://n.news.naver.com/mnews/article/011/0004632708?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%84%A4%20%E7%BE%8E%20%EC%97%B0%EB%82%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%84%A4%20%E7%BE%8E%20%EC%97%B0%EB%82%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 美 ‘연내 금리인상’ 시사, 韓銀 인플레 철통 방어를",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004632708?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Editorial: U.s. by the End of the Year",
+      "term_ko": "사설 美 연내"
     },
     {
       "term": "Bank of Korea Hints at Interest Rate Hike",
-      "term_ko": "금리인상 시사 韓銀",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리인상 시사 韓銀",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 美 ‘연내 금리인상’ 시사, 韓銀 인플레 철통 방어를",
-              "link": "https://n.news.naver.com/mnews/article/011/0004632708?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EC%8B%9C%EC%82%AC%20%E9%9F%93%E9%8A%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EC%8B%9C%EC%82%AC%20%E9%9F%93%E9%8A%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 美 ‘연내 금리인상’ 시사, 韓銀 인플레 철통 방어를",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004632708?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리인상 시사 韓銀"
     },
     {
       "term": "Man Russell",
-      "term_ko": "만에 러셀",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 러셀",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "스페이스X(SPCX), 상장 5일 만에 러셀 편입...8월 내부자 매물 폭탄 터지...",
-              "link": "http://coinreaders.com/243127"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EB%9F%AC%EC%85%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EB%9F%AC%EC%85%80"
-      },
-      "top_headlines": [
-        {
-          "title": "스페이스X(SPCX), 상장 5일 만에 러셀 편입...8월 내부자 매물 폭탄 터지...",
-          "summary": "",
-          "link": "http://coinreaders.com/243127",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "만에 러셀"
     },
     {
-      "term": "For expansion",
-      "term_ko": "확장 위해",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확장 위해",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "회의실 넘어 스타디움까지…딥엘, 실시간 음성 AI 확장 위해 믹스헤일로...",
-              "link": "https://www.venturesquare.net/1092081/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EC%9E%A5%20%EC%9C%84%ED%95%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EC%9E%A5%20%EC%9C%84%ED%95%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "회의실 넘어 스타디움까지…딥엘, 실시간 음성 AI 확장 위해 믹스헤일로...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1092081/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "For Expansion",
+      "term_ko": "확장 위해"
     },
     {
       "term": "Midnight Global",
-      "term_ko": "미드나잇 글로벌",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미드나잇 글로벌",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한국 자산, 블록체인 타고 세계로…바이셀스탠다드·미드나잇 글로벌 실...",
-              "link": "https://www.venturesquare.net/1091979/"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%93%9C%EB%82%98%EC%9E%87%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%93%9C%EB%82%98%EC%9E%87%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "한국 자산, 블록체인 타고 세계로…바이셀스탠다드·미드나잇 글로벌 실...",
-          "summary": "",
-          "link": "https://www.venturesquare.net/1091979/",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "미드나잇 글로벌"
     },
     {
       "term": "Fiscal Policy and Populism",
-      "term_ko": "재정은 포퓰리즘",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "재정은 포퓰리즘",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[사설] 전 세계가 긴축 전환인데 한국만 “긴축 재정은 포퓰리즘”",
-              "link": "https://n.news.naver.com/mnews/article/023/0003982799?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%AC%EC%A0%95%EC%9D%80%20%ED%8F%AC%ED%93%B0%EB%A6%AC%EC%A6%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%AC%EC%A0%95%EC%9D%80%20%ED%8F%AC%ED%93%B0%EB%A6%AC%EC%A6%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설] 전 세계가 긴축 전환인데 한국만 “긴축 재정은 포퓰리즘”",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/023/0003982799?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "재정은 포퓰리즘"
     },
     {
-      "term": "Be wary of investing with borrowed money, and",
-      "term_ko": "빚투 경계하고",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빚투 경계하고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 주가·부동산 동시 상승, 빚투 경계하고 부동산 공급 늘...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750766"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%84%ED%95%98%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%9A%ED%88%AC%20%EA%B2%BD%EA%B3%84%ED%95%98%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 주가·부동산 동시 상승, 빚투 경계하고 부동산 공급 늘...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=750766",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Be Wary of Investing with Borrowed Money, and",
+      "term_ko": "빚투 경계하고"
     },
     {
       "term": "A Festival Unique to Value Chain",
-      "term_ko": "밸류체인만의 축제",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "밸류체인만의 축제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "‘구천피’ 뚫었는데… AI 밸류체인만의 축제",
-              "link": "https://n.news.naver.com/mnews/article/005/0001855836?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%B8%EB%A5%98%EC%B2%B4%EC%9D%B8%EB%A7%8C%EC%9D%98%20%EC%B6%95%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%B8%EB%A5%98%EC%B2%B4%EC%9D%B8%EB%A7%8C%EC%9D%98%20%EC%B6%95%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "‘구천피’ 뚫었는데… AI 밸류체인만의 축제",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/005/0001855836?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "밸류체인만의 축제"
     },
     {
       "term": "Kospi Breaks Past",
-      "term_ko": "코스피, ○○선을 돌파",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kospi Breaks Past",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Kospi breaks past 9,000 milestone despite the hawkish rate signals",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090042?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kospi%20Breaks%20Past",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kospi%20Breaks%20Past"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi breaks past 9,000 milestone despite the hawkish rate signals",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090042?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스피, ○○선을 돌파"
     },
     {
       "term": "Hawkish Rate Signals",
-      "term_ko": "금리 인상 신호",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hawkish Rate Signals",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Kospi breaks past 9,000 milestone despite the hawkish rate signals",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090042?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hawkish%20Rate%20Signals",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hawkish%20Rate%20Signals"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi breaks past 9,000 milestone despite the hawkish rate signals",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090042?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금리 인상 신호"
     },
     {
       "term": "Should You Invest",
-      "term_ko": "투자해야 할까요?",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Should You Invest",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Should You Invest in SpaceX? Financial Advisers Weigh In.",
-              "link": "https://www.nytimes.com/2026/06/18/business/spacex-stock-investing-advice.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Should%20You%20Invest",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Should%20You%20Invest"
-      },
-      "top_headlines": [
-        {
-          "title": "Should You Invest in SpaceX? Financial Advisers Weigh In.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/18/business/spacex-stock-investing-advice.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자해야 할까요?"
     },
     {
-      "term": "SpaceX Financial Advisers",
-      "term_ko": "스페이스X 재무 자문사",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SpaceX Financial Advisers",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Should You Invest in SpaceX? Financial Advisers Weigh In.",
-              "link": "https://www.nytimes.com/2026/06/18/business/spacex-stock-investing-advice.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20Financial%20Advisers",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20Financial%20Advisers"
-      },
-      "top_headlines": [
-        {
-          "title": "Should You Invest in SpaceX? Financial Advisers Weigh In.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/18/business/spacex-stock-investing-advice.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex Financial Advisers",
+      "term_ko": "스페이스X 재무 자문사"
     },
     {
       "term": "Milestone Despite",
-      "term_ko": "중대한 성과에도 불구하고",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Milestone Despite",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Kospi breaks past 9,000 milestone despite the hawkish rate signals",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090042?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Milestone%20Despite",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Milestone%20Despite"
-      },
-      "top_headlines": [
-        {
-          "title": "Kospi breaks past 9,000 milestone despite the hawkish rate signals",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090042?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "중대한 성과에도 불구하고"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-19T00:25:41+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-18T15:29:06.857Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-19T00:25:41+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Spacex (spcx) Listed for 5 Days",
+      "term_ko": "스페이스XSPCX 상장 5일"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-19T00:25:41+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-19T00:25:41+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "Segg Sports Predictions",
+      "term_ko": "SEGG 스포츠 예측"
+    },
+    {
+      "term": "Real-time Voice Ai",
+      "term_ko": "실시간 음성 AI"
+    },
+    {
+      "term": "I Broke Through the Nine Heavens, But Ai...",
+      "term_ko": "구천피 뚫었는데 AI"
+    },
+    {
+      "term": "Today's Gold Prices: June 19",
+      "term_ko": "오늘의 금값시세6월 19일자"
+    },
+    {
+      "term": "Taking a Gamble on the World Cup",
+      "term_ko": "승부수 월드컵 타고"
+    },
+    {
+      "term": "Transition to a Platform Company",
+      "term_ko": "플랫폼 기업 변신"
+    },
+    {
+      "term": "Insider Selling Spree",
+      "term_ko": "내부자 매물 폭탄"
+    },
+    {
+      "term": "From the Conference Room to the Stadium",
+      "term_ko": "회의실 넘어 스타디움까지"
+    },
+    {
+      "term": "Korean Asset Blockchain",
+      "term_ko": "한국 자산 블록체인"
+    },
+    {
+      "term": "Ride Into the World with Baisel Standard",
+      "term_ko": "타고 세계로 바이셀스탠다드"
+    },
+    {
+      "term": "It’s a Shift Toward Austerity, But Only in South Korea",
+      "term_ko": "긴축 전환인데 한국만"
+    },
+    {
+      "term": "Simultaneous Rise in Real Estate Prices",
+      "term_ko": "부동산 동시 상승"
+    },
+    {
+      "term": "How Far Will This Power Go?",
+      "term_ko": "힘 어디까지 갈까"
+    },
+    {
+      "term": "Editorial: U.s. by the End of the Year",
+      "term_ko": "사설 美 연내"
+    },
+    {
+      "term": "Bank of Korea Hints at Interest Rate Hike",
+      "term_ko": "금리인상 시사 韓銀"
+    },
+    {
+      "term": "Man Russell",
+      "term_ko": "만에 러셀"
+    },
+    {
+      "term": "For Expansion",
+      "term_ko": "확장 위해"
+    },
+    {
+      "term": "Midnight Global",
+      "term_ko": "미드나잇 글로벌"
+    },
+    {
+      "term": "Fiscal Policy and Populism",
+      "term_ko": "재정은 포퓰리즘"
+    },
+    {
+      "term": "Be Wary of Investing with Borrowed Money, and",
+      "term_ko": "빚투 경계하고"
+    },
+    {
+      "term": "A Festival Unique to Value Chain",
+      "term_ko": "밸류체인만의 축제"
+    },
+    {
+      "term": "Kospi Breaks Past",
+      "term_ko": "코스피, ○○선을 돌파"
+    },
+    {
+      "term": "Hawkish Rate Signals",
+      "term_ko": "금리 인상 신호"
+    },
+    {
+      "term": "Should You Invest",
+      "term_ko": "투자해야 할까요?"
+    },
+    {
+      "term": "Spacex Financial Advisers",
+      "term_ko": "스페이스X 재무 자문사"
+    },
+    {
+      "term": "Milestone Despite",
+      "term_ko": "중대한 성과에도 불구하고"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    }
+  ],
+  "translations": {
+    "Spacex (spcx) Listed for 5 Days": {
+      "en": "Spacex (spcx) Listed for 5 Days",
+      "ko": "스페이스XSPCX 상장 5일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Segg Sports Predictions": {
+      "en": "Segg Sports Predictions",
+      "ko": "SEGG 스포츠 예측",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Real-time Voice Ai": {
+      "en": "Real-time Voice Ai",
+      "ko": "실시간 음성 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "I Broke Through the Nine Heavens, But Ai...": {
+      "en": "I Broke Through the Nine Heavens, But Ai...",
+      "ko": "구천피 뚫었는데 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Today's Gold Prices: June 19": {
+      "en": "Today's Gold Prices: June 19",
+      "ko": "오늘의 금값시세6월 19일자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Taking a Gamble on the World Cup": {
+      "en": "Taking a Gamble on the World Cup",
+      "ko": "승부수 월드컵 타고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Transition to a Platform Company": {
+      "en": "Transition to a Platform Company",
+      "ko": "플랫폼 기업 변신",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Insider Selling Spree": {
+      "en": "Insider Selling Spree",
+      "ko": "내부자 매물 폭탄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "From the Conference Room to the Stadium": {
+      "en": "From the Conference Room to the Stadium",
+      "ko": "회의실 넘어 스타디움까지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Korean Asset Blockchain": {
+      "en": "Korean Asset Blockchain",
+      "ko": "한국 자산 블록체인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Ride Into the World with Baisel Standard": {
+      "en": "Ride Into the World with Baisel Standard",
+      "ko": "타고 세계로 바이셀스탠다드",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "It’s a Shift Toward Austerity, But Only in South Korea": {
+      "en": "It’s a Shift Toward Austerity, But Only in South Korea",
+      "ko": "긴축 전환인데 한국만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Simultaneous Rise in Real Estate Prices": {
+      "en": "Simultaneous Rise in Real Estate Prices",
+      "ko": "부동산 동시 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "How Far Will This Power Go?": {
+      "en": "How Far Will This Power Go?",
+      "ko": "힘 어디까지 갈까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Editorial: U.s. by the End of the Year": {
+      "en": "Editorial: U.s. by the End of the Year",
+      "ko": "사설 美 연내",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Bank of Korea Hints at Interest Rate Hike": {
+      "en": "Bank of Korea Hints at Interest Rate Hike",
+      "ko": "금리인상 시사 韓銀",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Man Russell": {
+      "en": "Man Russell",
+      "ko": "만에 러셀",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "For Expansion": {
+      "en": "For Expansion",
+      "ko": "확장 위해",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Midnight Global": {
+      "en": "Midnight Global",
+      "ko": "미드나잇 글로벌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Fiscal Policy and Populism": {
+      "en": "Fiscal Policy and Populism",
+      "ko": "재정은 포퓰리즘",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Be Wary of Investing with Borrowed Money, and": {
+      "en": "Be Wary of Investing with Borrowed Money, and",
+      "ko": "빚투 경계하고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "A Festival Unique to Value Chain": {
+      "en": "A Festival Unique to Value Chain",
+      "ko": "밸류체인만의 축제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Kospi Breaks Past": {
+      "en": "Kospi Breaks Past",
+      "ko": "코스피, ○○선을 돌파",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Hawkish Rate Signals": {
+      "en": "Hawkish Rate Signals",
+      "ko": "금리 인상 신호",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Should You Invest": {
+      "en": "Should You Invest",
+      "ko": "투자해야 할까요?",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Spacex Financial Advisers": {
+      "en": "Spacex Financial Advisers",
+      "ko": "스페이스X 재무 자문사",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Milestone Despite": {
+      "en": "Milestone Despite",
+      "ko": "중대한 성과에도 불구하고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-18T20:26:35.700Z"
     }
   }
 }
