@@ -124,6 +124,24 @@ const KIS_OVERSEAS_WINDOW_DAYS = Number(process.env.KIS_OVERSEAS_WINDOW_DAYS || 
 const KIS_RECENT_FALLBACK_DAYS = Number(process.env.KIS_RECENT_FALLBACK_DAYS || 3);
 const KIS_BUDGET_MS = Number(process.env.KIS_BUDGET_MS || 25000);
 const KIS_MAX_ERRORS = Number(process.env.KIS_MAX_ERRORS || 6);
+const US_LARGE_CAP_SAFE_THRESHOLD = Number(process.env.US_LARGE_CAP_SAFE_THRESHOLD || 1e11);
+const US_AGGRESSIVE_LARGE_CAP_CUTOFF = Number(process.env.US_AGGRESSIVE_LARGE_CAP_CUTOFF || 2e11);
+const FALLBACK_MARKET_CAPS = {
+  AAPL: 3.2e12, MSFT: 3.1e12, NVDA: 2.9e12, AMZN: 2.1e12,
+  GOOGL: 2.1e12, GOOG: 2.1e12, META: 1.4e12, TSLA: 1.0e12,
+  AVGO: 9e11, 'BRK-B': 1.0e12, JPM: 7e11, LLY: 7e11,
+  V: 6e11, UNH: 5e11, XOM: 5e11, MA: 5e11,
+  JNJ: 4e11, PG: 4e11, COST: 4e11, HD: 4e11,
+};
+const FALLBACK_MARKET_CAP_NAME_PATTERNS = [
+  [/\bapple\b/i, FALLBACK_MARKET_CAPS.AAPL],
+  [/\bmicrosoft\b/i, FALLBACK_MARKET_CAPS.MSFT],
+  [/\bnvidia\b/i, FALLBACK_MARKET_CAPS.NVDA],
+  [/\bamazon\b/i, FALLBACK_MARKET_CAPS.AMZN],
+  [/\bmeta\b/i, FALLBACK_MARKET_CAPS.META],
+  [/\btesla\b/i, FALLBACK_MARKET_CAPS.TSLA],
+];
+
 const KIS_OVERSEAS_HINTS = {
   'BRK-B': 'NYS',
   'BRK-A': 'NYS',
@@ -756,11 +774,15 @@ function getMarketMetricsBucket(market) {
   return poolsMetricsRaw?.markets?.[market] || poolsMetricsRaw?.[market] || null;
 }
 
-function topMetricNamesForMarket(market, limit = 40) {
+function metricNamesForMarket(market) {
   const bucket = getMarketMetricsBucket(market);
   if (!bucket || typeof bucket !== 'object') return [];
-  return Object.entries(bucket)
-    .map(([name, metrics]) => ({
+  return Object.keys(bucket).filter(Boolean);
+}
+
+function topMetricNamesForMarket(market, limit = 40) {
+  return metricNamesForMarket(market)
+    .map((name) => ({
       name,
       score: metricScoreForSelection(market, name, 'safe')
     }))
@@ -803,6 +825,38 @@ function isUsMegaIndexMarket(market) {
   return m === 'S&P 500' || m === 'NASDAQ 100';
 }
 
+function fallbackMarketCapForName(market, name) {
+  const metrics = getMetricsForEntry(market, name);
+  const rawSym = metrics?.sym || metrics?.ticker || TICKER_MAP[name] || TICKER_MAP[normalizeKey(name)] || name;
+  const sym = canonSymbol(String(rawSym || '')).replace('.', '-');
+  if (FALLBACK_MARKET_CAPS[sym]) return FALLBACK_MARKET_CAPS[sym];
+  const text = String(name || '');
+  const matched = FALLBACK_MARKET_CAP_NAME_PATTERNS.find(([pattern]) => pattern.test(text));
+  return matched ? matched[1] : 0;
+}
+
+function effectiveMarketCap(market, name, metrics = null) {
+  const direct = Number(metrics?.marketCap);
+  return Number.isFinite(direct) && direct > 0 ? direct : fallbackMarketCapForName(market, name);
+}
+
+function isLargeCapSafeCandidate(market, name) {
+  return isUsMegaIndexMarket(market) && effectiveMarketCap(market, name) >= US_LARGE_CAP_SAFE_THRESHOLD;
+}
+
+function isTooLargeForAggressive(market, name) {
+  return isUsMegaIndexMarket(market) && effectiveMarketCap(market, name) >= US_AGGRESSIVE_LARGE_CAP_CUTOFF;
+}
+
+function largeMetricNamesForMarket(market) {
+  if (!isUsMegaIndexMarket(market)) return [];
+  const preferred = market === 'NASDAQ 100'
+    ? ['Microsoft', 'Apple Inc.', 'Amazon', 'NVIDIA Corporation', 'Meta Platforms, Inc.']
+    : ['Apple Inc.', 'Microsoft', 'Amazon', 'NVIDIA Corporation', 'Meta Platforms, Inc.', 'Berkshire Hathaway (B)'];
+  const metricLarge = metricNamesForMarket(market).filter(name => isLargeCapSafeCandidate(market, name));
+  return [...preferred, ...metricLarge];
+}
+
 function metricScoreForSelection(market, name, bucket = 'safe') {
   const metrics = getMetricsForEntry(market, name);
   if (!metrics) return -Infinity;
@@ -817,7 +871,7 @@ function metricScoreForSelection(market, name, bucket = 'safe') {
   const naverSpike = clamp(Number(metrics.naverSpike) || 0, 0, 1);
   const unified = clamp((Number(metrics.unifiedScoreData?.score) || 0) / 100, 0, 1);
   const adv = normalizeADV(metrics.adv20);
-  const marketCapScore = normalizeMarketCap(Number(metrics.marketCap));
+  const marketCapScore = normalizeMarketCap(effectiveMarketCap(market, name, metrics));
   const sentiment = normalizeSentiment(metrics.sentiment, metrics.posHits, metrics.negHits);
   const ret20 = normalizeFinancialMetric(metrics.ret20, { min: -10, max: 15 });
 
@@ -831,9 +885,10 @@ function metricScoreForSelection(market, name, bucket = 'safe') {
       adv * 0.10
     );
     const momentumComposite = (ret20 * 0.60 + unified * 0.40);
-    const safeStabilityBias = bucket === 'safe' ? marketCapScore * 12 : 0;
+    const safeStabilityBias = bucket === 'safe' ? marketCapScore * 24 : 0;
+    const largeCapAggressivePenalty = bucket === 'aggressive' ? marketCapScore * 18 : 0;
     const bucketBias = bucket === 'aggressive' ? (momentumComposite * 10) : 0;
-    return baseScore * 0.50 + popularityComposite * 35 + momentumComposite * 15 + safeStabilityBias + bucketBias;
+    return baseScore * 0.50 + popularityComposite * 30 + momentumComposite * 15 + safeStabilityBias + bucketBias - largeCapAggressivePenalty;
   }
 
   // Other markets keep a conservative blend.
@@ -1311,13 +1366,21 @@ function looksLikeTickerShape(x) {
 }
 const looksLikeTicker = s => looksLikeTickerShape(canonSymbol(s || ''));
 
-// Gather candidate rows from all supported lists if present
-const rawRows = [
+// Gather authoritative index rows plus Nasdaq Trader rows for supplemental
+// symbol/name resolution. Nasdaq Trader is intentionally not treated as an
+// index constituent source, so it cannot overwrite sector or market membership.
+const rawIndexRows = [
   ...(indexes.sp500 || []),
   ...(indexes.nasdaq100 || []),
   ...(indexes.kospi200 || []),
   ...(indexes.kosdaq100 || []),
+];
+const rawSupplementalRows = [
   ...(indexes.nasdaqTrader || []),
+];
+const rawRows = [
+  ...rawIndexRows.map(row => ({ ...row, _supplemental: false })),
+  ...rawSupplementalRows.map(row => ({ ...row, _supplemental: true })),
 ];
 
 // Build robust maps from index data that may have swapped fields
@@ -1369,8 +1432,10 @@ for (const r of rawRows) {
     sector = null;
   }
 
-  if (company && !looksLikeTicker(company) && !GICS_SECTORS.has(company.toUpperCase())) INDEX_NAME[ticker] = company;
-  if (sector) INDEX_SECTOR[ticker] = sector;
+  if (company && !looksLikeTicker(company) && !GICS_SECTORS.has(company.toUpperCase())) {
+    if (!r._supplemental || !INDEX_NAME[ticker]) INDEX_NAME[ticker] = company;
+  }
+  if (sector && !r._supplemental) INDEX_SECTOR[ticker] = sector;
 }
 
 const INDEX_SYMBOL_SET = new Set([...new Set([...Object.keys(INDEX_NAME), ...Object.keys(INDEX_SECTOR)])]);
@@ -1789,8 +1854,28 @@ async function tryFetchAndEnrich() {
       ? topMetricNamesForMarket(market, Number(process.env.US_METRIC_CANDIDATES || 50))
       : [];
 
-    const combinedSafe = [...poolsSafe, ...metricLeaders];
-    const combinedAggressive = [...poolsAggressive, ...metricLeaders];
+
+    const candidateKey = (entry) => {
+      const name = typeof entry === 'string' ? entry : entry?.name;
+      if (!name) return '';
+      const metrics = getMetricsForEntry(market, name);
+      const ticker = metrics?.sym || metrics?.ticker || TICKER_MAP[name] || TICKER_MAP[normalizeKey(name)] || '';
+      return ticker ? normalizeMetricKey(canonSymbol(ticker)) : normalizeMetricKey(name);
+    };
+    const uniqueCandidates = (items = []) => {
+      const seen = new Set();
+      const out = [];
+      for (const entry of items) {
+        const key = candidateKey(entry);
+        if (!key || seen.has(key)) continue;
+        seen.add(key);
+        out.push(entry);
+      }
+      return out;
+    };
+
+    const combinedSafe = uniqueCandidates([...poolsSafe, ...metricLeaders]);
+    const combinedAggressive = uniqueCandidates([...poolsAggressive, ...metricLeaders]);
 
     const rankByMetricScore = (items = [], bucket = 'safe') => items
       .map((entry, idx) => ({
@@ -1807,12 +1892,19 @@ async function tryFetchAndEnrich() {
         return a.idx - b.idx;
       });
 
-    const rankedSafe = rankByMetricScore(combinedSafe, 'safe');
+    const safeLargeCaps = isUsMegaIndexMarket(market)
+      ? uniqueCandidates([...combinedSafe, ...largeMetricNamesForMarket(market)])
+        .filter(entry => isLargeCapSafeCandidate(market, typeof entry === 'string' ? entry : entry?.name))
+      : [];
+    const rankedSafe = rankByMetricScore(uniqueCandidates([...safeLargeCaps, ...combinedSafe]), 'safe');
     const chosenSafe = rankedSafe.slice(0, 5).map(x => x.entry);
     data[market].safe = chosenSafe.map(n => (typeof n === 'string' ? { name: n } : n));
 
     const safeNameSet = new Set(chosenSafe.map(n => normalizeMetricKey(typeof n === 'string' ? n : n?.name)));
-    const rankedAggr = rankByMetricScore(combinedAggressive.filter(n => !safeNameSet.has(normalizeMetricKey(typeof n === 'string' ? n : n?.name))), 'aggressive');
+    const rankedAggr = rankByMetricScore(uniqueCandidates(combinedAggressive).filter(n => {
+      const nm = typeof n === 'string' ? n : n?.name;
+      return !safeNameSet.has(normalizeMetricKey(nm)) && !isTooLargeForAggressive(market, nm);
+    }), 'aggressive');
     const chosenAggr = rankedAggr.slice(0, 5).map(x => x.entry);
 
     // Rebalance by attractiveness score: if an aggressive pick scores above a safe pick,
@@ -1829,7 +1921,7 @@ async function tryFetchAndEnrich() {
       idx,
       name: toName(entry),
       score: metricScoreForSelection(market, toName(entry), 'safe')
-    })).filter(x => x.name);
+    })).filter(x => x.name && !isTooLargeForAggressive(market, x.name));
 
     for (const ag of aggrWithScore.slice().sort((a, b) => b.score - a.score || a.idx - b.idx)) {
       const lowestSafe = safeWithScore
@@ -1837,6 +1929,7 @@ async function tryFetchAndEnrich() {
         .sort((a, b) => a.score - b.score || a.idx - b.idx)
         .find(s => !normalizeMetricKey(s.name).includes(normalizeMetricKey(ag.name)) && normalizeMetricKey(s.name) !== normalizeMetricKey(ag.name));
       if (!lowestSafe) continue;
+      if (isLargeCapSafeCandidate(market, lowestSafe.name)) continue;
       if (!(Number.isFinite(ag.score) && Number.isFinite(lowestSafe.score) && ag.score > lowestSafe.score)) continue;
 
       const safeIdx = safeWithScore.findIndex(x => normalizeMetricKey(x.name) === normalizeMetricKey(lowestSafe.name));
@@ -1850,9 +1943,18 @@ async function tryFetchAndEnrich() {
 
     const finalSafe = safeWithScore.slice(0, 5).map(x => x.entry);
     const finalSafeSet = new Set(finalSafe.map(x => normalizeMetricKey(toName(x))));
-    const finalAggr = aggrWithScore
+    let finalAggrScored = aggrWithScore
       .filter(x => !finalSafeSet.has(normalizeMetricKey(x.name)))
-      .sort((a, b) => b.score - a.score || a.idx - b.idx)
+      .sort((a, b) => b.score - a.score || a.idx - b.idx);
+    if (finalAggrScored.length < 5) {
+      const already = new Set(finalAggrScored.map(x => normalizeMetricKey(x.name)));
+      const extraAggressive = rankByMetricScore(uniqueCandidates([...poolsAggressive, ...metricNamesForMarket(market)]), 'aggressive')
+        .filter(x => !finalSafeSet.has(normalizeMetricKey(x.name)))
+        .filter(x => !already.has(normalizeMetricKey(x.name)))
+        .filter(x => !isTooLargeForAggressive(market, x.name));
+      finalAggrScored = finalAggrScored.concat(extraAggressive);
+    }
+    const finalAggr = finalAggrScored
       .slice(0, 5)
       .map(x => x.entry);
 

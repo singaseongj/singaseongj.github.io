@@ -550,34 +550,30 @@ let INDEX_RAW = {};
 try {
   INDEX_RAW = JSON.parse(await fsp.readFile('src/maps.indexes.json', 'utf8'));
 } catch {}
-function marketFromIndexKey(key) {
-  const k = String(key || '').toLowerCase();
-  if (k === 'sp500' || k.includes('s&p') || k.includes('sp500')) return 'S&P 500';
-  if (k === 'nasdaq100' || k === 'nasdaqtrader' || k.includes('nasdaq')) return 'NASDAQ 100';
-  if (k.includes('kospi')) return 'KOSPI';
-  if (k.includes('kosdaq')) return 'KOSDAQ';
-  return null;
-}
+const INDEX_MARKET_KEYS = {
+  sp500: 'S&P 500',
+  nasdaq100: 'NASDAQ 100',
+  kospi200: 'KOSPI',
+  kosdaq100: 'KOSDAQ',
+};
 
 const INDEX_ROWS = (() => {
   let rows = [];
-  for (const [k, list] of Object.entries(INDEX_RAW || {})) {
+  for (const [k, market] of Object.entries(INDEX_MARKET_KEYS)) {
+    const list = INDEX_RAW?.[k];
     if (!Array.isArray(list)) continue;
-    const market = marketFromIndexKey(k);
     rows = rows.concat(list.map(row => ({ ...row, _indexKey: k, _market: market })));
   }
   return rows;
 })();
+const SUPPLEMENTAL_SYMBOL_ROWS = Array.isArray(INDEX_RAW?.nasdaqTrader)
+  ? INDEX_RAW.nasdaqTrader.map(row => ({ ...row, _indexKey: 'nasdaqTrader', _market: null, _supplemental: true }))
+  : [];
 
 const INDEX_SECTOR = {};
 const INDEX_NAME = {};
 const INDEX_MARKET = {};
 const INDEX_NAME_TO_SYMBOL = {};
-const INDEX_MARKET_KEYS = Object.fromEntries(
-  Object.keys(INDEX_RAW || {})
-    .map(key => [key, marketFromIndexKey(key)])
-    .filter(([, market]) => market)
-);
 for (const [idxKey, marketName] of Object.entries(INDEX_MARKET_KEYS)) {
   for (const r of (INDEX_RAW?.[idxKey] || [])) {
     const sym = normIndexKey(r.symbol || r.ticker || '');
@@ -678,7 +674,7 @@ function structuralPrior(sym){
 const INDEX_SYMBOL_TO_NAME = {};
 const INDEX_SYMBOL_NAMES = {};
 const INDEX_MARKETCAP = {};
-for (const r of INDEX_ROWS) {
+for (const r of [...INDEX_ROWS, ...SUPPLEMENTAL_SYMBOL_ROWS]) {
   const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
   if (!sym) continue;
   const names = new Set();
@@ -692,7 +688,7 @@ for (const r of INDEX_ROWS) {
     INDEX_SYMBOL_NAMES[sym] ||= new Set();
     for (const n of names) INDEX_SYMBOL_NAMES[sym].add(n);
   }
-  if (r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
+  if (!r._supplemental && r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
 }
 
 const INDEX_NAMES_BY_MARKET = {};
