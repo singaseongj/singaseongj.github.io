@@ -1377,7 +1377,13 @@ const INDEX_SYMBOL_SET = new Set([...new Set([...Object.keys(INDEX_NAME), ...Obj
 
 // Merge your hard-coded TICKER_MAP with index map names so both directions exist.
 const STATIC_MAP = (() => {
-  const merged = { ...TICKER_MAP };
+  const merged = {
+    ...TICKER_MAP,
+    SpaceX: 'SPCX',
+    'Space X': 'SPCX',
+    'Space Exploration Technologies': 'SPCX',
+    'Space Exploration Technologies Corp.': 'SPCX',
+  };
   for (const [sym, nm] of Object.entries(INDEX_NAME)) {
     if (nm) merged[nm] = sym;
   }
