@@ -713,6 +713,10 @@ const MEGA_CAP_FALLBACK = {
   AVGO: 9e11, 'BRK-B': 1.0e12, JPM: 7e11, LLY: 7e11,
   V: 6e11, UNH: 5e11, XOM: 5e11, MA: 5e11,
   JNJ: 4e11, PG: 4e11, COST: 4e11, HD: 4e11,
+  // SpaceX is now represented in the Nasdaq Trader universe as SPCX.
+  // Quote/market-cap providers may lag newly-listed or synthetic symbols,
+  // so keep an order-of-magnitude fallback to let it compete in scoring.
+  SPCX: 3.5e11,
 };
 // Set of tickers that should always be treated as eligible (liquid mega-caps).
 const MEGA_CAP_TICKERS = new Set(Object.keys(MEGA_CAP_FALLBACK));
