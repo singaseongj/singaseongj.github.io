@@ -550,20 +550,18 @@ let INDEX_RAW = {};
 try {
   INDEX_RAW = JSON.parse(await fsp.readFile('src/maps.indexes.json', 'utf8'));
 } catch {}
-function marketFromIndexKey(key) {
-  const k = String(key || '').toLowerCase();
-  if (k === 'sp500' || k.includes('s&p') || k.includes('sp500')) return 'S&P 500';
-  if (k === 'nasdaq100' || k === 'nasdaqtrader' || k.includes('nasdaq')) return 'NASDAQ 100';
-  if (k.includes('kospi')) return 'KOSPI';
-  if (k.includes('kosdaq')) return 'KOSDAQ';
-  return null;
-}
+const INDEX_MARKET_KEYS = {
+  sp500: 'S&P 500',
+  nasdaq100: 'NASDAQ 100',
+  kospi200: 'KOSPI',
+  kosdaq100: 'KOSDAQ',
+};
 
 const INDEX_ROWS = (() => {
   let rows = [];
-  for (const [k, list] of Object.entries(INDEX_RAW || {})) {
+  for (const [k, market] of Object.entries(INDEX_MARKET_KEYS)) {
+    const list = INDEX_RAW?.[k];
     if (!Array.isArray(list)) continue;
-    const market = marketFromIndexKey(k);
     rows = rows.concat(list.map(row => ({ ...row, _indexKey: k, _market: market })));
   }
   return rows;
@@ -573,11 +571,6 @@ const INDEX_SECTOR = {};
 const INDEX_NAME = {};
 const INDEX_MARKET = {};
 const INDEX_NAME_TO_SYMBOL = {};
-const INDEX_MARKET_KEYS = Object.fromEntries(
-  Object.keys(INDEX_RAW || {})
-    .map(key => [key, marketFromIndexKey(key)])
-    .filter(([, market]) => market)
-);
 for (const [idxKey, marketName] of Object.entries(INDEX_MARKET_KEYS)) {
   for (const r of (INDEX_RAW?.[idxKey] || [])) {
     const sym = normIndexKey(r.symbol || r.ticker || '');
@@ -713,10 +706,6 @@ const MEGA_CAP_FALLBACK = {
   AVGO: 9e11, 'BRK-B': 1.0e12, JPM: 7e11, LLY: 7e11,
   V: 6e11, UNH: 5e11, XOM: 5e11, MA: 5e11,
   JNJ: 4e11, PG: 4e11, COST: 4e11, HD: 4e11,
-  // SpaceX is now represented in the Nasdaq Trader universe as SPCX.
-  // Quote/market-cap providers may lag newly-listed or synthetic symbols,
-  // so keep an order-of-magnitude fallback to let it compete in scoring.
-  SPCX: 3.5e11,
 };
 // Set of tickers that should always be treated as eligible (liquid mega-caps).
 const MEGA_CAP_TICKERS = new Set(Object.keys(MEGA_CAP_FALLBACK));

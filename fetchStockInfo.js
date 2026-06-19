@@ -131,7 +131,7 @@ const FALLBACK_MARKET_CAPS = {
   GOOGL: 2.1e12, GOOG: 2.1e12, META: 1.4e12, TSLA: 1.0e12,
   AVGO: 9e11, 'BRK-B': 1.0e12, JPM: 7e11, LLY: 7e11,
   V: 6e11, UNH: 5e11, XOM: 5e11, MA: 5e11,
-  JNJ: 4e11, PG: 4e11, COST: 4e11, HD: 4e11, SPCX: 3.5e11,
+  JNJ: 4e11, PG: 4e11, COST: 4e11, HD: 4e11,
 };
 const FALLBACK_MARKET_CAP_NAME_PATTERNS = [
   [/\bapple\b/i, FALLBACK_MARKET_CAPS.AAPL],
@@ -140,7 +140,6 @@ const FALLBACK_MARKET_CAP_NAME_PATTERNS = [
   [/\bamazon\b/i, FALLBACK_MARKET_CAPS.AMZN],
   [/\bmeta\b/i, FALLBACK_MARKET_CAPS.META],
   [/\btesla\b/i, FALLBACK_MARKET_CAPS.TSLA],
-  [/space exploration technologies|spacex|\bspcx\b/i, FALLBACK_MARKET_CAPS.SPCX],
 ];
 
 const KIS_OVERSEAS_HINTS = {
@@ -1373,7 +1372,6 @@ const rawRows = [
   ...(indexes.nasdaq100 || []),
   ...(indexes.kospi200 || []),
   ...(indexes.kosdaq100 || []),
-  ...(indexes.nasdaqTrader || []),
 ];
 
 // Build robust maps from index data that may have swapped fields
