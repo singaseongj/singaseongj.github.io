@@ -550,10 +550,22 @@ let INDEX_RAW = {};
 try {
   INDEX_RAW = JSON.parse(await fsp.readFile('src/maps.indexes.json', 'utf8'));
 } catch {}
+function marketFromIndexKey(key) {
+  const k = String(key || '').toLowerCase();
+  if (k === 'sp500' || k.includes('s&p') || k.includes('sp500')) return 'S&P 500';
+  if (k === 'nasdaq100' || k === 'nasdaqtrader' || k.includes('nasdaq')) return 'NASDAQ 100';
+  if (k.includes('kospi')) return 'KOSPI';
+  if (k.includes('kosdaq')) return 'KOSDAQ';
+  return null;
+}
+
 const INDEX_ROWS = (() => {
-  const keys = ["sp500", "nasdaq100", "kospi200", "kosdaq100", "nasdaqTrader"];
   let rows = [];
-  for (const k of keys) if (Array.isArray(INDEX_RAW?.[k])) rows = rows.concat(INDEX_RAW[k]);
+  for (const [k, list] of Object.entries(INDEX_RAW || {})) {
+    if (!Array.isArray(list)) continue;
+    const market = marketFromIndexKey(k);
+    rows = rows.concat(list.map(row => ({ ...row, _indexKey: k, _market: market })));
+  }
   return rows;
 })();
 
@@ -561,13 +573,11 @@ const INDEX_SECTOR = {};
 const INDEX_NAME = {};
 const INDEX_MARKET = {};
 const INDEX_NAME_TO_SYMBOL = {};
-const INDEX_MARKET_KEYS = {
-  sp500: 'S&P 500',
-  nasdaq100: 'NASDAQ 100',
-  kospi200: 'KOSPI',
-  kosdaq100: 'KOSDAQ',
-  nasdaqTrader: 'NASDAQ 100',
-};
+const INDEX_MARKET_KEYS = Object.fromEntries(
+  Object.keys(INDEX_RAW || {})
+    .map(key => [key, marketFromIndexKey(key)])
+    .filter(([, market]) => market)
+);
 for (const [idxKey, marketName] of Object.entries(INDEX_MARKET_KEYS)) {
   for (const r of (INDEX_RAW?.[idxKey] || [])) {
     const sym = normIndexKey(r.symbol || r.ticker || '');
@@ -685,13 +695,21 @@ for (const r of INDEX_ROWS) {
   if (r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
 }
 
+const INDEX_NAMES_BY_MARKET = {};
+for (const r of INDEX_ROWS) {
+  if (!r._market) continue;
+  const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
+  if (!sym) continue;
+  const name = r.name || r.companyName || r.nameShort || sym;
+  (INDEX_NAMES_BY_MARKET[r._market] ||= new Map()).set(sym, name);
+}
+
 // Static fallback market caps (USD) for mega-caps whose live fetch may fail.
 // Used when INDEX_MARKETCAP and nf.marketCap are both missing.
 // Update quarterly — precision is not required, just order-of-magnitude correctness.
 const MEGA_CAP_FALLBACK = {
   AAPL: 3.2e12, MSFT: 3.1e12, NVDA: 2.9e12, AMZN: 2.1e12,
   GOOGL: 2.1e12, GOOG: 2.1e12, META: 1.4e12, TSLA: 1.0e12,
-  SPCX: 2.0e12,
   AVGO: 9e11, 'BRK-B': 1.0e12, JPM: 7e11, LLY: 7e11,
   V: 6e11, UNH: 5e11, XOM: 5e11, MA: 5e11,
   JNJ: 4e11, PG: 4e11, COST: 4e11, HD: 4e11,
@@ -869,18 +887,12 @@ function mergeIndexNames(base, idxMap) {
   return Array.from(out);
 }
 
-const TREND_CANDIDATES_BY_MARKET = {
-  'NASDAQ 100': [
-    'SpaceX',
-  ],
-};
-
-function addTrendCandidates(universe) {
-  for (const [market, names] of Object.entries(TREND_CANDIDATES_BY_MARKET)) {
-    const existing = new Set(universe[market] || []);
-    for (const name of names) existing.add(name);
-    universe[market] = Array.from(existing);
-  }
+function mergeMappedUniverseNames(base, market) {
+  const out = new Set(base || []);
+  const mapped = INDEX_NAMES_BY_MARKET[market];
+  if (!mapped) return Array.from(out);
+  for (const [sym, nm] of mapped) out.add(nm || sym);
+  return Array.from(out);
 }
 
 function buildTrendyPools(pools, metricsOut = {}) {
@@ -1168,11 +1180,7 @@ Object.assign(NAME_TO_SYMBOL, {
   '한화에어로스페이스': '012450.KS',
   'BGF리테일': '282330.KS',
   '삼성바이오로직스': '207940.KS',
-  'LG에너지솔루션': '373220.KS',
-  'SpaceX': 'SPCX',
-  'Space X': 'SPCX',
-  'Space Exploration Technologies': 'SPCX',
-  'Space Exploration Technologies Corp.': 'SPCX',
+  'LG에너지솔루션': '373220.KS'
 });
 
 // Reindex NAME_TO_SYMBOL and also merge TICKER_MAP by normalized keys
@@ -1990,7 +1998,9 @@ async function main(){
   universe['NASDAQ 100'] = mergeIndexNames(universe['NASDAQ 100'], N100);
   universe.KOSPI  = mergeIndexNames(universe.KOSPI, K200);
   universe.KOSDAQ = mergeIndexNames(universe.KOSDAQ, KQ100);
-  addTrendCandidates(universe);
+  for (const market of MARKETS) {
+    universe[market] = mergeMappedUniverseNames(universe[market], market);
+  }
 
   const symbolSet = new Set();
   for (const [market, names] of Object.entries(universe)) {
