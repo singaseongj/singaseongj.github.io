@@ -566,6 +566,9 @@ const INDEX_ROWS = (() => {
   }
   return rows;
 })();
+const SUPPLEMENTAL_SYMBOL_ROWS = Array.isArray(INDEX_RAW?.nasdaqTrader)
+  ? INDEX_RAW.nasdaqTrader.map(row => ({ ...row, _indexKey: 'nasdaqTrader', _market: null, _supplemental: true }))
+  : [];
 
 const INDEX_SECTOR = {};
 const INDEX_NAME = {};
@@ -671,7 +674,7 @@ function structuralPrior(sym){
 const INDEX_SYMBOL_TO_NAME = {};
 const INDEX_SYMBOL_NAMES = {};
 const INDEX_MARKETCAP = {};
-for (const r of INDEX_ROWS) {
+for (const r of [...INDEX_ROWS, ...SUPPLEMENTAL_SYMBOL_ROWS]) {
   const sym = String(r.symbol || r.ticker || '').toUpperCase().replace('/', '.').replace('-', '.');
   if (!sym) continue;
   const names = new Set();
@@ -685,7 +688,7 @@ for (const r of INDEX_ROWS) {
     INDEX_SYMBOL_NAMES[sym] ||= new Set();
     for (const n of names) INDEX_SYMBOL_NAMES[sym].add(n);
   }
-  if (r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
+  if (!r._supplemental && r.marketCap) INDEX_MARKETCAP[sym] = r.marketCap;
 }
 
 const INDEX_NAMES_BY_MARKET = {};
