@@ -4,119 +4,78 @@
   "total_phrases": 30,
   "discovered_keywords": [
     {
-      "term": "Single-Stock Leveraged ETF",
-      "term_ko": "단일종목 레버리지 ETF",
-      "significance_score": 700,
-      "mentions": 320,
+      "term": "CEOs of 13 asset management firms",
+      "term_ko": "운용사 13곳 CEO",
+      "significance_score": 364,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "단일종목 레버리지 ETF",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-14",
-              "timestamp": 1781362800000,
-              "value": 16.30434
-            },
-            {
-              "period": "2026-06-15",
-              "timestamp": 1781449200000,
-              "value": 41.30434
-            },
-            {
-              "period": "2026-06-16",
-              "timestamp": 1781535600000,
-              "value": 23.91304
-            },
-            {
-              "period": "2026-06-17",
-              "timestamp": 1781622000000,
-              "value": 46.73913
-            },
-            {
-              "period": "2026-06-18",
-              "timestamp": 1781708400000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-19",
-              "timestamp": 1781794800000,
-              "value": 75
-            },
-            {
-              "period": "2026-06-20",
-              "timestamp": 1781881200000,
-              "value": 23.91304
-            },
-            {
-              "period": "2026-06-21",
-              "timestamp": 1781967600000,
-              "value": 26.08695
-            }
-          ]
-        },
+        "query": "운용사 13곳 CEO",
         "local_headlines": {
-          "matches": 2,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "matches": 1,
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "이찬진 금감원장 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야 했...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=743097"
-            },
-            {
-              "title": "이찬진 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야\"…사실상 정...",
-              "link": "https://n.news.naver.com/mnews/article/666/0000112241?sid=101"
+              "title": "[단신]한국투자증권, 글로벌 운용사 13곳 CEO 초청행사 外",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728591?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EC%9D%BC%EC%A2%85%EB%AA%A9%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EC%9D%BC%EC%A2%85%EB%AA%A9%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80%20ETF"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%B4%EC%9A%A9%EC%82%AC%2013%EA%B3%B3%20CEO",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%B4%EC%9A%A9%EC%82%AC%2013%EA%B3%B3%20CEO"
       },
       "top_headlines": [
         {
-          "title": "이찬진 금감원장 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야 했...",
+          "title": "[단신]한국투자증권, 글로벌 운용사 13곳 CEO 초청행사 外",
           "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=743097",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        },
-        {
-          "title": "이찬진 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야\"…사실상 정...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/666/0000112241?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728591?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 295.6522,
-        "weekly_average_volume": 49.2754,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.019381,
-        "time_weight": 0.022262,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781967600000
-      }
+      ]
+    },
+    {
+      "term": "AI in the Era of 10,000-P MarketView",
+      "term_ko": "마켓뷰1만피 시대엔 AI",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "마켓뷰1만피 시대엔 AI",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-23T01:58:30+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[애널리스트의 마켓뷰]‘1만피’ 시대엔 AI 기업 투자 늘려야",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728590?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%BC%93%EB%B7%B01%EB%A7%8C%ED%94%BC%20%EC%8B%9C%EB%8C%80%EC%97%94%20AI",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%BC%93%EB%B7%B01%EB%A7%8C%ED%94%BC%20%EC%8B%9C%EB%8C%80%EC%97%94%20AI"
+      },
+      "top_headlines": [
+        {
+          "title": "[애널리스트의 마켓뷰]‘1만피’ 시대엔 AI 기업 투자 늘려야",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728590?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "After the listing of SpaceX (SPCX)",
@@ -128,7 +87,7 @@
         "query": "스페이스XSPCX 상장 후",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -165,7 +124,7 @@
         "query": "CEO 작은 쓰나미",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -193,7 +152,7 @@
       ]
     },
     {
-      "term": "Nadella, Microsoft CEO",
+      "term": "Nadella, CEO of Microsoft",
       "term_ko": "나델라 MS CEO",
       "significance_score": 350,
       "mentions": 160,
@@ -202,7 +161,7 @@
         "query": "나델라 MS CEO",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -239,7 +198,7 @@
         "query": "소수 AI 독식",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -267,147 +226,36 @@
       ]
     },
     {
-      "term": "Upper limit of the neutral interest rate at 3.25%",
-      "term_ko": "중립금리 상단 3.25%까지",
+      "term": "Commercial Banks' Delinquency Rate: 0.73%",
+      "term_ko": "시중은행 연체율 0.73%",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "중립금리 상단 3.25%까지",
+        "query": "시중은행 연체율 0.73%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "윤여삼 \"반도체 호황 길어지면 중립금리 상단 3.25%까지 높아질 수도\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421267"
+              "title": "中企 금리인상 직격탄… 시중은행 연체율 0.73% 역대 최대",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728572?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%A6%BD%EA%B8%88%EB%A6%AC%20%EC%83%81%EB%8B%A8%203.25%25%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%A6%BD%EA%B8%88%EB%A6%AC%20%EC%83%81%EB%8B%A8%203.25%25%EA%B9%8C%EC%A7%80"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EC%97%B0%EC%B2%B4%EC%9C%A8%200.73%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%A4%91%EC%9D%80%ED%96%89%20%EC%97%B0%EC%B2%B4%EC%9C%A8%200.73%25"
       },
       "top_headlines": [
         {
-          "title": "윤여삼 \"반도체 호황 길어지면 중립금리 상단 3.25%까지 높아질 수도\"",
+          "title": "中企 금리인상 직격탄… 시중은행 연체율 0.73% 역대 최대",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421267",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "KRW/USD exchange rate over 10 trading days",
-      "term_ko": "원/달러 환율 10거래일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원/달러 환율 10거래일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "원/달러 환율 10거래일 만에 1,530원대 복귀…달러 강세 지속 압박",
-              "link": "https://www.tokenpost.kr/news/economy/371733"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%2F%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%2010%EA%B1%B0%EB%9E%98%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%2F%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%2010%EA%B1%B0%EB%9E%98%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "원/달러 환율 10거래일 만에 1,530원대 복귀…달러 강세 지속 압박",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/371733",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Back to the 1,530 won range",
-      "term_ko": "만에 1530원대 복귀",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 1530원대 복귀",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "원/달러 환율 10거래일 만에 1,530원대 복귀…달러 강세 지속 압박",
-              "link": "https://www.tokenpost.kr/news/economy/371733"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%201530%EC%9B%90%EB%8C%80%20%EB%B3%B5%EA%B7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%201530%EC%9B%90%EB%8C%80%20%EB%B3%B5%EA%B7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "원/달러 환율 10거래일 만에 1,530원대 복귀…달러 강세 지속 압박",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/371733",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Bank Delinquency Rate: 6 Years",
-      "term_ko": "은행 연체율 6년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "은행 연체율 6년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "반도체 훈풍 비껴간 중소기업…은행 연체율 6년 만에 최고",
-              "link": "https://n.news.naver.com/mnews/article/658/0000147427?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%ED%96%89%20%EC%97%B0%EC%B2%B4%EC%9C%A8%206%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%ED%96%89%20%EC%97%B0%EC%B2%B4%EC%9C%A8%206%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "반도체 훈풍 비껴간 중소기업…은행 연체율 6년 만에 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/658/0000147427?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728572?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -424,7 +272,7 @@
         "query": "지수 편입 기대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -461,7 +309,7 @@
         "query": "온다 낙관론 경고",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -498,7 +346,7 @@
         "query": "中 딥시크 탑재",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -535,7 +383,7 @@
         "query": "미-이란 협상 로드맵",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -572,7 +420,7 @@
         "query": "유럽증시 선물 혼조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -600,36 +448,36 @@
       ]
     },
     {
-      "term": "Yoon Yeo-sam and the Semiconductor Boom",
-      "term_ko": "윤여삼 반도체 호황",
+      "term": "The stock market and exports are both doing well, but",
+      "term_ko": "증시도 수출도 좋은데",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "윤여삼 반도체 호황",
+        "query": "증시도 수출도 좋은데",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "윤여삼 \"반도체 호황 길어지면 중립금리 상단 3.25%까지 높아질 수도\"",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421267"
+              "title": "증시도 수출도 좋은데, 환율은 왜 오를까…김영익 교수의 전망",
+              "link": "https://n.news.naver.com/mnews/article/003/0014021235?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A4%EC%97%AC%EC%82%BC%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%98%B8%ED%99%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A4%EC%97%AC%EC%82%BC%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%98%B8%ED%99%A9"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%EB%8F%84%20%EC%88%98%EC%B6%9C%EB%8F%84%20%EC%A2%8B%EC%9D%80%EB%8D%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%EB%8F%84%20%EC%88%98%EC%B6%9C%EB%8F%84%20%EC%A2%8B%EC%9D%80%EB%8D%B0"
       },
       "top_headlines": [
         {
-          "title": "윤여삼 \"반도체 호황 길어지면 중립금리 상단 3.25%까지 높아질 수도\"",
+          "title": "증시도 수출도 좋은데, 환율은 왜 오를까…김영익 교수의 전망",
           "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421267",
+          "link": "https://n.news.naver.com/mnews/article/003/0014021235?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -637,36 +485,36 @@
       ]
     },
     {
-      "term": "The Dollar Remains Strong",
-      "term_ko": "달러 강세 지속",
+      "term": "Why Does the Exchange Rate Rise?",
+      "term_ko": "환율은 왜 오를까",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "달러 강세 지속",
+        "query": "환율은 왜 오를까",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "원/달러 환율 10거래일 만에 1,530원대 복귀…달러 강세 지속 압박",
-              "link": "https://www.tokenpost.kr/news/economy/371733"
+              "title": "증시도 수출도 좋은데, 환율은 왜 오를까…김영익 교수의 전망",
+              "link": "https://n.news.naver.com/mnews/article/003/0014021235?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EA%B0%95%EC%84%B8%20%EC%A7%80%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EA%B0%95%EC%84%B8%20%EC%A7%80%EC%86%8D"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%99%9C%20%EC%98%A4%EB%A5%BC%EA%B9%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%99%9C%20%EC%98%A4%EB%A5%BC%EA%B9%8C"
       },
       "top_headlines": [
         {
-          "title": "원/달러 환율 10거래일 만에 1,530원대 복귀…달러 강세 지속 압박",
+          "title": "증시도 수출도 좋은데, 환율은 왜 오를까…김영익 교수의 전망",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/371733",
+          "link": "https://n.news.naver.com/mnews/article/003/0014021235?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -674,36 +522,36 @@
       ]
     },
     {
-      "term": "We really should have stopped it, even if it meant lying down to do so.",
-      "term_ko": "드러누워서라도 막았어야 사실상",
+      "term": "Finance, Nonghyup Capital, Bond Market",
+      "term_ko": "금융 농협캐피탈 채권시장",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "드러누워서라도 막았어야 사실상",
+        "query": "금융 농협캐피탈 채권시장",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "이찬진 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야\"…사실상 정...",
-              "link": "https://n.news.naver.com/mnews/article/666/0000112241?sid=101"
+              "title": "[금융] 농협캐피탈 채권시장 세미나 / 농협은행 의료기관 대출 지원 / 주...",
+              "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2208224"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%93%9C%EB%9F%AC%EB%88%84%EC%9B%8C%EC%84%9C%EB%9D%BC%EB%8F%84%20%EB%A7%89%EC%95%98%EC%96%B4%EC%95%BC%20%EC%82%AC%EC%8B%A4%EC%83%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%93%9C%EB%9F%AC%EB%88%84%EC%9B%8C%EC%84%9C%EB%9D%BC%EB%8F%84%20%EB%A7%89%EC%95%98%EC%96%B4%EC%95%BC%20%EC%82%AC%EC%8B%A4%EC%83%81"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%20%EB%86%8D%ED%98%91%EC%BA%90%ED%94%BC%ED%83%88%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%20%EB%86%8D%ED%98%91%EC%BA%90%ED%94%BC%ED%83%88%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5"
       },
       "top_headlines": [
         {
-          "title": "이찬진 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야\"…사실상 정...",
+          "title": "[금융] 농협캐피탈 채권시장 세미나 / 농협은행 의료기관 대출 지원 / 주...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/666/0000112241?sid=101",
+          "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2208224",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -711,36 +559,147 @@
       ]
     },
     {
-      "term": "Left Out of the Semiconductor Boom",
-      "term_ko": "반도체 훈풍 비껴간",
+      "term": "Nonghyup Bank Loans for Medical Institutions",
+      "term_ko": "농협은행 의료기관 대출",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "반도체 훈풍 비껴간",
+        "query": "농협은행 의료기관 대출",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "반도체 훈풍 비껴간 중소기업…은행 연체율 6년 만에 최고",
-              "link": "https://n.news.naver.com/mnews/article/658/0000147427?sid=101"
+              "title": "[금융] 농협캐피탈 채권시장 세미나 / 농협은행 의료기관 대출 지원 / 주...",
+              "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2208224"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%9B%88%ED%92%8D%20%EB%B9%84%EA%BB%B4%EA%B0%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%9B%88%ED%92%8D%20%EB%B9%84%EA%BB%B4%EA%B0%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89%20%EC%9D%98%EB%A3%8C%EA%B8%B0%EA%B4%80%20%EB%8C%80%EC%B6%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%8D%ED%98%91%EC%9D%80%ED%96%89%20%EC%9D%98%EB%A3%8C%EA%B8%B0%EA%B4%80%20%EB%8C%80%EC%B6%9C"
       },
       "top_headlines": [
         {
-          "title": "반도체 훈풍 비껴간 중소기업…은행 연체율 6년 만에 최고",
+          "title": "[금융] 농협캐피탈 채권시장 세미나 / 농협은행 의료기관 대출 지원 / 주...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/658/0000147427?sid=101",
+          "link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2208224",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "SMEs Take a Direct Hit from Interest Rate Hikes",
+      "term_ko": "中企 금리인상 직격탄",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "中企 금리인상 직격탄",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-23T01:58:30+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "中企 금리인상 직격탄… 시중은행 연체율 0.73% 역대 최대",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728572?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E4%B8%AD%E4%BC%81%20%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EC%A7%81%EA%B2%A9%ED%83%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E4%B8%AD%E4%BC%81%20%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EC%A7%81%EA%B2%A9%ED%83%84"
+      },
+      "top_headlines": [
+        {
+          "title": "中企 금리인상 직격탄… 시중은행 연체율 0.73% 역대 최대",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728572?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Corporate investment must be increased",
+      "term_ko": "기업 투자 늘려야",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "기업 투자 늘려야",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-23T01:58:30+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[애널리스트의 마켓뷰]‘1만피’ 시대엔 AI 기업 투자 늘려야",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728590?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%97%85%20%ED%88%AC%EC%9E%90%20%EB%8A%98%EB%A0%A4%EC%95%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%97%85%20%ED%88%AC%EC%9E%90%20%EB%8A%98%EB%A0%A4%EC%95%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "[애널리스트의 마켓뷰]‘1만피’ 시대엔 AI 기업 투자 늘려야",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728590?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Former Federal Reserve Chairman Greenspan",
+      "term_ko": "그린스펀 전 연준의장",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "그린스펀 전 연준의장",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-23T01:58:30+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "‘마에스트로’에서 ‘위기의 도화선’으로… 그린스펀 전 연준의장 별...",
+              "link": "https://n.news.naver.com/mnews/article/029/0003033099?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B7%B8%EB%A6%B0%EC%8A%A4%ED%8E%80%20%EC%A0%84%20%EC%97%B0%EC%A4%80%EC%9D%98%EC%9E%A5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B7%B8%EB%A6%B0%EC%8A%A4%ED%8E%80%20%EC%A0%84%20%EC%97%B0%EC%A4%80%EC%9D%98%EC%9E%A5"
+      },
+      "top_headlines": [
+        {
+          "title": "‘마에스트로’에서 ‘위기의 도화선’으로… 그린스펀 전 연준의장 별...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/029/0003033099?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -757,7 +716,7 @@
         "query": "SK Hynix Seeks",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -785,80 +744,6 @@
       ]
     },
     {
-      "term": "AI Boom Lifts",
-      "term_ko": "AI 붐이 상승세를 타고 있다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Boom Lifts",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "AI boom lifts SK hynix above Samsung in market value",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285794?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Boom%20Lifts",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Boom%20Lifts"
-      },
-      "top_headlines": [
-        {
-          "title": "AI boom lifts SK hynix above Samsung in market value",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285794?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "SK Hynix Above",
-      "term_ko": "SK하이닉스 (상단)",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix Above",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "AI boom lifts SK hynix above Samsung in market value",
-              "link": "https://n.news.naver.com/mnews/article/044/0000285794?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Above",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Above"
-      },
-      "top_headlines": [
-        {
-          "title": "AI boom lifts SK hynix above Samsung in market value",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000285794?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "80% over 5 years",
       "term_ko": "5년간 80%",
       "significance_score": 294,
@@ -868,7 +753,7 @@
         "query": "5년간 80%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -905,7 +790,7 @@
         "query": "투심은 강세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -933,119 +818,110 @@
       ]
     },
     {
-      "term": "Lee Chan-jin, Governor of the Financial Supervisory Service",
-      "term_ko": "이찬진 금감원장",
+      "term": "All-time high",
+      "term_ko": "역대 최대",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "이찬진 금감원장",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-14",
-              "timestamp": 1781362800000,
-              "value": 72.5
-            },
-            {
-              "period": "2026-06-15",
-              "timestamp": 1781449200000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-16",
-              "timestamp": 1781535600000,
-              "value": 55
-            },
-            {
-              "period": "2026-06-17",
-              "timestamp": 1781622000000,
-              "value": 22.5
-            }
-          ]
-        },
+        "query": "역대 최대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "이찬진 금감원장 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야 했...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=743097"
+              "title": "中企 금리인상 직격탄… 시중은행 연체율 0.73% 역대 최대",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728572?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%B0%AC%EC%A7%84%20%EA%B8%88%EA%B0%90%EC%9B%90%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%B0%AC%EC%A7%84%20%EA%B8%88%EA%B0%90%EC%9B%90%EC%9E%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%AD%EB%8C%80%20%EC%B5%9C%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "이찬진 금감원장 \"단일종목 레버리지 ETF, 드러누워서라도 막았어야 했...",
+          "title": "中企 금리인상 직격탄… 시중은행 연체율 0.73% 역대 최대",
           "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=743097",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728572?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 77.5,
-        "weekly_average_volume": 38.75,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.049027,
-        "time_weight": 0.007096,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1781622000000
-      }
+      ]
     },
     {
-      "term": "The Best in a Long Time",
-      "term_ko": "만에 최고",
+      "term": "News Brief: Korea Investment & Securities Global",
+      "term_ko": "단신한국투자증권 글로벌",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만에 최고",
+        "query": "단신한국투자증권 글로벌",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
           "sample": [
             {
-              "title": "반도체 훈풍 비껴간 중소기업…은행 연체율 6년 만에 최고",
-              "link": "https://n.news.naver.com/mnews/article/658/0000147427?sid=101"
+              "title": "[단신]한국투자증권, 글로벌 운용사 13곳 CEO 초청행사 外",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728591?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A8%EC%8B%A0%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20%EA%B8%80%EB%A1%9C%EB%B2%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A8%EC%8B%A0%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%20%EA%B8%80%EB%A1%9C%EB%B2%8C"
       },
       "top_headlines": [
         {
-          "title": "반도체 훈풍 비껴간 중소기업…은행 연체율 6년 만에 최고",
+          "title": "[단신]한국투자증권, 글로벌 운용사 13곳 CEO 초청행사 外",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/658/0000147427?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728591?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Invitation Events, etc.",
+      "term_ko": "초청행사 外",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "초청행사 外",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-23T01:58:30+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ],
+          "sample": [
+            {
+              "title": "[단신]한국투자증권, 글로벌 운용사 13곳 CEO 초청행사 外",
+              "link": "https://n.news.naver.com/mnews/article/020/0003728591?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B4%88%EC%B2%AD%ED%96%89%EC%82%AC%20%E5%A4%96",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B4%88%EC%B2%AD%ED%96%89%EC%82%AC%20%E5%A4%96"
+      },
+      "top_headlines": [
+        {
+          "title": "[단신]한국투자증권, 글로벌 운용사 13곳 CEO 초청행사 外",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/020/0003728591?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -1062,7 +938,7 @@
         "query": "AI Premium",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -1099,7 +975,7 @@
         "query": "Nasdaq Listing",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ],
@@ -1136,7 +1012,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1158,7 +1034,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-22T20:54:33+09:00",
+          "last_updated": "2026-06-23T01:58:30+09:00",
           "fallback_sources": [
             "trend_log"
           ]
@@ -1171,17 +1047,24 @@
       "top_headlines": []
     },
     {
-      "term": "Expectations of an interest rate cut",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-23T01:58:30+09:00",
+          "fallback_sources": [
+            "trend_log"
+          ]
+        }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
       },
       "top_headlines": []
     }
@@ -1189,10 +1072,10 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-22T11:55:38.498Z",
+    "generated_at": "2026-06-22T16:59:38.570Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-22T20:54:33+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-23T01:58:30+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 0,
     "removal_breakdown": {
@@ -1202,13 +1085,13 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-22T20:54:33+09:00",
+      "last_updated": "2026-06-23T01:58:30+09:00",
       "fallback_sources": [
         "trend_log"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-22T20:54:33+09:00",
+        "lastUpdated": "2026-06-23T01:58:30+09:00",
         "fallbackSources": [
           "trend_log"
         ]
