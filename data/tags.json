@@ -1,1035 +1,425 @@
 {
+  "generatedAt": "2026-06-23T20:04:33.979Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-23",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Stock Market: Alphabet (GOOGL), Amazon (AMZN)",
-      "term_ko": "증시 알파벳GOOGL 아마존AMZN",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증시 알파벳GOOGL 아마존AMZN",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "반도체 오르면 뭐하나...美 증시, 알파벳(GOOGL)·아마존(AMZN) 추락에 '휘...",
-              "link": "http://coinreaders.com/243985"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EC%8B%9C%20%EC%95%8C%ED%8C%8C%EB%B2%B3GOOGL%20%EC%95%84%EB%A7%88%EC%A1%B4AMZN",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EC%8B%9C%20%EC%95%8C%ED%8C%8C%EB%B2%B3GOOGL%20%EC%95%84%EB%A7%88%EC%A1%B4AMZN"
-      },
-      "top_headlines": [
-        {
-          "title": "반도체 오르면 뭐하나...美 증시, 알파벳(GOOGL)·아마존(AMZN) 추락에 '휘...",
-          "summary": "",
-          "link": "http://coinreaders.com/243985",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Stock Market: Alphabet (googl), Amazon (amzn)",
+      "term_ko": "증시 알파벳GOOGL 아마존AMZN"
     },
     {
-      "term": "AI-Driven Decline",
-      "term_ko": "동반 하락 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "동반 하락 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "나스닥 선물 급락에 비트코인 동반 하락…AI 기대 흔들리나",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/372145"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%99%EB%B0%98%20%ED%95%98%EB%9D%BD%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%99%EB%B0%98%20%ED%95%98%EB%9D%BD%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥 선물 급락에 비트코인 동반 하락…AI 기대 흔들리나",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/372145",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai-driven Decline",
+      "term_ko": "동반 하락 AI"
     },
     {
-      "term": "Despite the decline, the Nasdaq fell 1.2%",
-      "term_ko": "내렸지만 나스닥 1.2%↓하락",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "내렸지만 나스닥 1.2%↓하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "유가하락에 국채금리 내렸지만…나스닥 1.2%↓하락",
-              "link": "https://n.news.naver.com/mnews/article/015/0005302068?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%B4%EB%A0%B8%EC%A7%80%EB%A7%8C%20%EB%82%98%EC%8A%A4%EB%8B%A5%201.2%25%E2%86%93%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%B4%EB%A0%B8%EC%A7%80%EB%A7%8C%20%EB%82%98%EC%8A%A4%EB%8B%A5%201.2%25%E2%86%93%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "유가하락에 국채금리 내렸지만…나스닥 1.2%↓하락",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005302068?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Despite the Decline, the Nasdaq Fell 1.2%",
+      "term_ko": "내렸지만 나스닥 1.2%↓하락"
     },
     {
-      "term": "1.5% early in the session",
-      "term_ko": "장 초반 1.5%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "장 초반 1.5%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미 금리인상 우려 뉴욕증시 하락 출발…나스닥 장 초반 1.5% 급락",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=80288"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%20%EC%B4%88%EB%B0%98%201.5%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%20%EC%B4%88%EB%B0%98%201.5%25"
-      },
-      "top_headlines": [
-        {
-          "title": "미 금리인상 우려 뉴욕증시 하락 출발…나스닥 장 초반 1.5% 급락",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=80288",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "1.5% Early in the Session",
+      "term_ko": "장 초반 1.5%"
     },
     {
       "term": "Highlights of the Fourth Week of June",
-      "term_ko": "6월 4주 주요",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "6월 4주 주요",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "6월 4주 주요 제조업 전망",
-              "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=41026"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=6%EC%9B%94%204%EC%A3%BC%20%EC%A3%BC%EC%9A%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=6%EC%9B%94%204%EC%A3%BC%20%EC%A3%BC%EC%9A%94"
-      },
-      "top_headlines": [
-        {
-          "title": "6월 4주 주요 제조업 전망",
-          "summary": "",
-          "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=41026",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "6월 4주 주요"
     },
     {
-      "term": "Tech Stocks on the U.S. Stock Market",
-      "term_ko": "美 증시 기술주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 증시 기술주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 증시, 기술주 매도 폭탄 속 나스닥 하락...공포 지수 반등 성공할까...",
-              "link": "http://coinreaders.com/244000"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%A6%9D%EC%8B%9C%20%EA%B8%B0%EC%88%A0%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%A6%9D%EC%8B%9C%20%EA%B8%B0%EC%88%A0%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "美 증시, 기술주 매도 폭탄 속 나스닥 하락...공포 지수 반등 성공할까...",
-          "summary": "",
-          "link": "http://coinreaders.com/244000",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tech Stocks on the U.s. Stock Market",
+      "term_ko": "美 증시 기술주"
     },
     {
-      "term": "Amid a sell-off",
-      "term_ko": "매도 폭탄 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매도 폭탄 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 증시, 기술주 매도 폭탄 속 나스닥 하락...공포 지수 반등 성공할까...",
-              "link": "http://coinreaders.com/244000"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%8F%84%20%ED%8F%AD%ED%83%84%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%8F%84%20%ED%8F%AD%ED%83%84%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "美 증시, 기술주 매도 폭탄 속 나스닥 하락...공포 지수 반등 성공할까...",
-          "summary": "",
-          "link": "http://coinreaders.com/244000",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amid a Sell-off",
+      "term_ko": "매도 폭탄 속"
     },
     {
       "term": "Sustained Economic Growth",
-      "term_ko": "지속 상승 경기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지속 상승 경기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "대구·경북, 소비자심리지수 108.4로 지속 상승… 경기 회복 기대감 상승",
-              "link": "https://www.tokenpost.kr/news/economy/372153"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%86%8D%20%EC%83%81%EC%8A%B9%20%EA%B2%BD%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%86%8D%20%EC%83%81%EC%8A%B9%20%EA%B2%BD%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "대구·경북, 소비자심리지수 108.4로 지속 상승… 경기 회복 기대감 상승",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/372153",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "지속 상승 경기"
     },
     {
-      "term": "Concerns Over U.S. Interest Rate Hikes",
-      "term_ko": "미 금리인상 우려",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미 금리인상 우려",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미 금리인상 우려 뉴욕증시 하락 출발…나스닥 장 초반 1.5% 급락",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=80288"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EC%9A%B0%EB%A0%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EA%B8%88%EB%A6%AC%EC%9D%B8%EC%83%81%20%EC%9A%B0%EB%A0%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "미 금리인상 우려 뉴욕증시 하락 출발…나스닥 장 초반 1.5% 급락",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=80288",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Concerns Over U.s. Interest Rate Hikes",
+      "term_ko": "미 금리인상 우려"
     },
     {
       "term": "New York Stock Market Opens Lower",
-      "term_ko": "뉴욕증시 하락 출발",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 하락 출발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "미 금리인상 우려 뉴욕증시 하락 출발…나스닥 장 초반 1.5% 급락",
-              "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=80288"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%95%98%EB%9D%BD%20%EC%B6%9C%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%95%98%EB%9D%BD%20%EC%B6%9C%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "미 금리인상 우려 뉴욕증시 하락 출발…나스닥 장 초반 1.5% 급락",
-          "summary": "",
-          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=80288",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕증시 하락 출발"
     },
     {
       "term": "House Prices Driven Up by Samjeon Nix",
-      "term_ko": "삼전닉스가 키운 집값",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼전닉스가 키운 집값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'삼전닉스'가 키운 집값 기대…주택가격전망 지수 급등",
-              "link": "https://n.news.naver.com/mnews/article/422/0000877759?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%EA%B0%80%20%ED%82%A4%EC%9A%B4%20%EC%A7%91%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%EA%B0%80%20%ED%82%A4%EC%9A%B4%20%EC%A7%91%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "'삼전닉스'가 키운 집값 기대…주택가격전망 지수 급등",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000877759?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "삼전닉스가 키운 집값"
     },
     {
       "term": "Expected Housing Price Outlook Index",
-      "term_ko": "기대 주택가격전망 지수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기대 주택가격전망 지수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "'삼전닉스'가 키운 집값 기대…주택가격전망 지수 급등",
-              "link": "https://n.news.naver.com/mnews/article/422/0000877759?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%20%EC%A3%BC%ED%83%9D%EA%B0%80%EA%B2%A9%EC%A0%84%EB%A7%9D%20%EC%A7%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%20%EC%A3%BC%ED%83%9D%EA%B0%80%EA%B2%A9%EC%A0%84%EB%A7%9D%20%EC%A7%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "'삼전닉스'가 키운 집값 기대…주택가격전망 지수 급등",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/422/0000877759?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기대 주택가격전망 지수"
     },
     {
-      "term": "Hopes Fuel SK",
-      "term_ko": "희망이 SK에 힘을 불어넣다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hopes Fuel SK",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. stock listing hopes fuel SK hynix rally as it builds 100 trillion wo...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090232?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hopes%20Fuel%20SK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hopes%20Fuel%20SK"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. stock listing hopes fuel SK hynix rally as it builds 100 trillion wo...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090232?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Hopes Fuel Sk",
+      "term_ko": "희망이 SK에 힘을 불어넣다"
     },
     {
-      "term": "KOSPI Plunges Nearly",
-      "term_ko": "코스피가 거의",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Plunges Nearly",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Closing Market] KOSPI Plunges Nearly 10% Amid Won Weakens to 1,539 Per D...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271838"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Plunges%20Nearly",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Plunges%20Nearly"
-      },
-      "top_headlines": [
-        {
-          "title": "[Closing Market] KOSPI Plunges Nearly 10% Amid Won Weakens to 1,539 Per D...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271838",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Plunges Nearly",
+      "term_ko": "코스피가 거의"
     },
     {
       "term": "Index Rebound",
-      "term_ko": "지수 반등",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지수 반등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 증시, 기술주 매도 폭탄 속 나스닥 하락...공포 지수 반등 성공할까...",
-              "link": "http://coinreaders.com/244000"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EC%88%98%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EC%88%98%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "美 증시, 기술주 매도 폭탄 속 나스닥 하락...공포 지수 반등 성공할까...",
-          "summary": "",
-          "link": "http://coinreaders.com/244000",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "지수 반등"
     },
     {
-      "term": "If semiconductor prices rise",
-      "term_ko": "반도체 오르면",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 오르면",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "반도체 오르면 뭐하나...美 증시, 알파벳(GOOGL)·아마존(AMZN) 추락에 '휘...",
-              "link": "http://coinreaders.com/243985"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%98%A4%EB%A5%B4%EB%A9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%98%A4%EB%A5%B4%EB%A9%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "반도체 오르면 뭐하나...美 증시, 알파벳(GOOGL)·아마존(AMZN) 추락에 '휘...",
-          "summary": "",
-          "link": "http://coinreaders.com/243985",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "If Semiconductor Prices Rise",
+      "term_ko": "반도체 오르면"
     },
     {
       "term": "Government Bond Yields Amid Falling Oil Prices",
-      "term_ko": "유가하락에 국채금리",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "유가하락에 국채금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "유가하락에 국채금리 내렸지만…나스닥 1.2%↓하락",
-              "link": "https://n.news.naver.com/mnews/article/015/0005302068?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9C%A0%EA%B0%80%ED%95%98%EB%9D%BD%EC%97%90%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9C%A0%EA%B0%80%ED%95%98%EB%9D%BD%EC%97%90%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "유가하락에 국채금리 내렸지만…나스닥 1.2%↓하락",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005302068?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "유가하락에 국채금리"
     },
     {
       "term": "Expectations for Recovery",
-      "term_ko": "회복 기대감",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "회복 기대감",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "대구·경북, 소비자심리지수 108.4로 지속 상승… 경기 회복 기대감 상승",
-              "link": "https://www.tokenpost.kr/news/economy/372153"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9A%8C%EB%B3%B5%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9A%8C%EB%B3%B5%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "대구·경북, 소비자심리지수 108.4로 지속 상승… 경기 회복 기대감 상승",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/372153",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "회복 기대감"
     },
     {
       "term": "Are Expectations Wavering?",
-      "term_ko": "기대 흔들리나",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기대 흔들리나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "나스닥 선물 급락에 비트코인 동반 하락…AI 기대 흔들리나",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/372145"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EB%8C%80%20%ED%9D%94%EB%93%A4%EB%A6%AC%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EB%8C%80%20%ED%9D%94%EB%93%A4%EB%A6%AC%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "나스닥 선물 급락에 비트코인 동반 하락…AI 기대 흔들리나",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/372145",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "기대 흔들리나"
     },
     {
-      "term": "Drive Unnerving Sell-Off",
-      "term_ko": "불안감을 부추기는 매도 물결",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Drive Unnerving Sell-Off",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Tech Stocks Drive ‘Unnerving’ Sell-Off in Global Markets",
-              "link": "https://www.nytimes.com/2026/06/23/business/stock-market-down-tech-ai-asia-sp500-oil-gas.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Drive%20Unnerving%20Sell-Off",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Drive%20Unnerving%20Sell-Off"
-      },
-      "top_headlines": [
-        {
-          "title": "Tech Stocks Drive ‘Unnerving’ Sell-Off in Global Markets",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/23/business/stock-market-down-tech-ai-asia-sp500-oil-gas.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Drive Unnerving Sell-off",
+      "term_ko": "불안감을 부추기는 매도 물결"
     },
     {
       "term": "Hynix Rally",
-      "term_ko": "하이닉스 주가 급등",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hynix Rally",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "U.S. stock listing hopes fuel SK hynix rally as it builds 100 trillion wo...",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090232?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hynix%20Rally",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hynix%20Rally"
-      },
-      "top_headlines": [
-        {
-          "title": "U.S. stock listing hopes fuel SK hynix rally as it builds 100 trillion wo...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090232?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하이닉스 주가 급등"
     },
     {
       "term": "Won Weakens",
-      "term_ko": "원화 약세",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Won Weakens",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Closing Market] KOSPI Plunges Nearly 10% Amid Won Weakens to 1,539 Per D...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271838"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Won%20Weakens",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Won%20Weakens"
-      },
-      "top_headlines": [
-        {
-          "title": "[Closing Market] KOSPI Plunges Nearly 10% Amid Won Weakens to 1,539 Per D...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271838",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "원화 약세"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Sharp Rise in the Won-Dollar Exchange Rate",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Sharp Rise in the Won-dollar Exchange Rate",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "Threat of a U.S. Government Shutdown",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
       "term": "South Korean Stock Market Rebounds",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-23T23:49:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "한국 증시 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-23T14:51:04.523Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-23T23:49:56+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Stock Market: Alphabet (googl), Amazon (amzn)",
+      "term_ko": "증시 알파벳GOOGL 아마존AMZN"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-23T23:49:56+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-23T23:49:56+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Ai-driven Decline",
+      "term_ko": "동반 하락 AI"
+    },
+    {
+      "term": "Despite the Decline, the Nasdaq Fell 1.2%",
+      "term_ko": "내렸지만 나스닥 1.2%↓하락"
+    },
+    {
+      "term": "1.5% Early in the Session",
+      "term_ko": "장 초반 1.5%"
+    },
+    {
+      "term": "Highlights of the Fourth Week of June",
+      "term_ko": "6월 4주 주요"
+    },
+    {
+      "term": "Tech Stocks on the U.s. Stock Market",
+      "term_ko": "美 증시 기술주"
+    },
+    {
+      "term": "Amid a Sell-off",
+      "term_ko": "매도 폭탄 속"
+    },
+    {
+      "term": "Sustained Economic Growth",
+      "term_ko": "지속 상승 경기"
+    },
+    {
+      "term": "Concerns Over U.s. Interest Rate Hikes",
+      "term_ko": "미 금리인상 우려"
+    },
+    {
+      "term": "New York Stock Market Opens Lower",
+      "term_ko": "뉴욕증시 하락 출발"
+    },
+    {
+      "term": "House Prices Driven Up by Samjeon Nix",
+      "term_ko": "삼전닉스가 키운 집값"
+    },
+    {
+      "term": "Expected Housing Price Outlook Index",
+      "term_ko": "기대 주택가격전망 지수"
+    },
+    {
+      "term": "Hopes Fuel Sk",
+      "term_ko": "희망이 SK에 힘을 불어넣다"
+    },
+    {
+      "term": "Kospi Plunges Nearly",
+      "term_ko": "코스피가 거의"
+    },
+    {
+      "term": "Index Rebound",
+      "term_ko": "지수 반등"
+    },
+    {
+      "term": "If Semiconductor Prices Rise",
+      "term_ko": "반도체 오르면"
+    },
+    {
+      "term": "Government Bond Yields Amid Falling Oil Prices",
+      "term_ko": "유가하락에 국채금리"
+    },
+    {
+      "term": "Expectations for Recovery",
+      "term_ko": "회복 기대감"
+    },
+    {
+      "term": "Are Expectations Wavering?",
+      "term_ko": "기대 흔들리나"
+    },
+    {
+      "term": "Drive Unnerving Sell-off",
+      "term_ko": "불안감을 부추기는 매도 물결"
+    },
+    {
+      "term": "Hynix Rally",
+      "term_ko": "하이닉스 주가 급등"
+    },
+    {
+      "term": "Won Weakens",
+      "term_ko": "원화 약세"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Sharp Rise in the Won-dollar Exchange Rate",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "South Korean Stock Market Rebounds",
+      "term_ko": "한국 증시 반등"
+    }
+  ],
+  "translations": {
+    "Stock Market: Alphabet (googl), Amazon (amzn)": {
+      "en": "Stock Market: Alphabet (googl), Amazon (amzn)",
+      "ko": "증시 알파벳GOOGL 아마존AMZN",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Ai-driven Decline": {
+      "en": "Ai-driven Decline",
+      "ko": "동반 하락 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Despite the Decline, the Nasdaq Fell 1.2%": {
+      "en": "Despite the Decline, the Nasdaq Fell 1.2%",
+      "ko": "내렸지만 나스닥 1.2%↓하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "1.5% Early in the Session": {
+      "en": "1.5% Early in the Session",
+      "ko": "장 초반 1.5%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Highlights of the Fourth Week of June": {
+      "en": "Highlights of the Fourth Week of June",
+      "ko": "6월 4주 주요",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Tech Stocks on the U.s. Stock Market": {
+      "en": "Tech Stocks on the U.s. Stock Market",
+      "ko": "美 증시 기술주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Amid a Sell-off": {
+      "en": "Amid a Sell-off",
+      "ko": "매도 폭탄 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Sustained Economic Growth": {
+      "en": "Sustained Economic Growth",
+      "ko": "지속 상승 경기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Concerns Over U.s. Interest Rate Hikes": {
+      "en": "Concerns Over U.s. Interest Rate Hikes",
+      "ko": "미 금리인상 우려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "New York Stock Market Opens Lower": {
+      "en": "New York Stock Market Opens Lower",
+      "ko": "뉴욕증시 하락 출발",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "House Prices Driven Up by Samjeon Nix": {
+      "en": "House Prices Driven Up by Samjeon Nix",
+      "ko": "삼전닉스가 키운 집값",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Expected Housing Price Outlook Index": {
+      "en": "Expected Housing Price Outlook Index",
+      "ko": "기대 주택가격전망 지수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Hopes Fuel Sk": {
+      "en": "Hopes Fuel Sk",
+      "ko": "희망이 SK에 힘을 불어넣다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Kospi Plunges Nearly": {
+      "en": "Kospi Plunges Nearly",
+      "ko": "코스피가 거의",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Index Rebound": {
+      "en": "Index Rebound",
+      "ko": "지수 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "If Semiconductor Prices Rise": {
+      "en": "If Semiconductor Prices Rise",
+      "ko": "반도체 오르면",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Government Bond Yields Amid Falling Oil Prices": {
+      "en": "Government Bond Yields Amid Falling Oil Prices",
+      "ko": "유가하락에 국채금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Expectations for Recovery": {
+      "en": "Expectations for Recovery",
+      "ko": "회복 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Are Expectations Wavering?": {
+      "en": "Are Expectations Wavering?",
+      "ko": "기대 흔들리나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Drive Unnerving Sell-off": {
+      "en": "Drive Unnerving Sell-off",
+      "ko": "불안감을 부추기는 매도 물결",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Hynix Rally": {
+      "en": "Hynix Rally",
+      "ko": "하이닉스 주가 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Won Weakens": {
+      "en": "Won Weakens",
+      "ko": "원화 약세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.979Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.980Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.980Z"
+    },
+    "Expectations for a Bitcoin Etf": {
+      "en": "Expectations for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.980Z"
+    },
+    "Sharp Rise in the Won-dollar Exchange Rate": {
+      "en": "Sharp Rise in the Won-dollar Exchange Rate",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.980Z"
+    },
+    "Threat of a U.s. Government Shutdown": {
+      "en": "Threat of a U.s. Government Shutdown",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.980Z"
+    },
+    "South Korean Stock Market Rebounds": {
+      "en": "South Korean Stock Market Rebounds",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-23T20:04:33.980Z"
     }
   }
 }
