@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-06-23T23:49:34+09:00 (KST)**
+- Generated: **2026-06-24T05:06:47+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -84,7 +84,7 @@
 **해성디에스** (195870.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-13.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%95%B4%EC%84%B1%EB%94%94%EC%97%90%EC%8A%A4
@@ -107,6 +107,20 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
+**셀트리온** (068270.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- Returns: 5d **-8.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
+
+**유한양행** (000100.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.20)**
+- Returns: 5d **-10.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89
+
 **하이트진로** (000080.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
@@ -114,21 +128,21 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
 
-**한화에어로스페이스** (012450.KS)
-
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-9.3%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4
-
-**현대모비스** (012330.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **6.3%**, 20d **8.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4
-
 ### AGGRESSIVE (5)
+
+**HD현대마린솔루션** (443060.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-20.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EB%A7%88%EB%A6%B0%EC%86%94%EB%A3%A8%EC%85%98
+
+**SK스퀘어** (402340.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **22.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=SK%EC%8A%A4%ED%80%98%EC%96%B4
 
 **넷마블** (251270.KS)
 
@@ -137,26 +151,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94
 
-**씨에스윈드** (112610.KS)
+**한일시멘트** (300720.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-25.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-9.2%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%94%A8%EC%97%90%EC%8A%A4%EC%9C%88%EB%93%9C
-
-**아모레퍼시픽** (090430.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-12.9%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD
-
-**종근당** (185750.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-9.5%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%9D%BC%EC%8B%9C%EB%A9%98%ED%8A%B8
 
 **현대글로비스** (086280.KS)
 
@@ -276,7 +276,7 @@
 **Leidos** (LDOS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-7.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Leidos
