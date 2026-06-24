@@ -1,1109 +1,439 @@
 {
+  "generatedAt": "2026-06-24T19:46:54.450Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-24",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "AI MY News",
-      "term_ko": "AI MY 뉴스",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI MY 뉴스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...AI 투자 논란 속 반도체주 반등…...",
-              "link": "https://www.newspim.com/news/view/20260624001249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20MY%20%EB%89%B4%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20MY%20%EB%89%B4%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...AI 투자 논란 속 반도체주 반등…...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260624001249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai My News",
+      "term_ko": "AI MY 뉴스"
     },
     {
-      "term": "U.S. dollar for the 5th day in a row",
-      "term_ko": "미 달러화 5일째",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미 달러화 5일째",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%20%EB%8B%AC%EB%9F%AC%ED%99%94%205%EC%9D%BC%EC%A7%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%20%EB%8B%AC%EB%9F%AC%ED%99%94%205%EC%9D%BC%EC%A7%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Dollar for the 5th Day in a Row",
+      "term_ko": "미 달러화 5일째"
     },
     {
-      "term": "In-house prediction market app",
-      "term_ko": "자체 예측시장 앱",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자체 예측시장 앱",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"페북·인스타로는 부족하다\"...메타(META), 자체 예측시장 앱 출범 준비",
-              "link": "http://coinreaders.com/244256"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EC%B2%B4%20%EC%98%88%EC%B8%A1%EC%8B%9C%EC%9E%A5%20%EC%95%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EC%B2%B4%20%EC%98%88%EC%B8%A1%EC%8B%9C%EC%9E%A5%20%EC%95%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "\"페북·인스타로는 부족하다\"...메타(META), 자체 예측시장 앱 출범 준비",
-          "summary": "",
-          "link": "http://coinreaders.com/244256",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "In-house Prediction Market App",
+      "term_ko": "자체 예측시장 앱"
     },
     {
       "term": "Strong Euro, Weak",
-      "term_ko": "강세 유로 약세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강세 유로 약세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EC%84%B8%20%EC%9C%A0%EB%A1%9C%20%EC%95%BD%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EC%84%B8%20%EC%9C%A0%EB%A1%9C%20%EC%95%BD%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "강세 유로 약세"
     },
     {
-      "term": "U.S. Interest Rates",
-      "term_ko": "속 美 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속 美 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%20%E7%BE%8E%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%20%E7%BE%8E%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Interest Rates",
+      "term_ko": "속 美 금리"
     },
     {
-      "term": "Amid investment controversy",
-      "term_ko": "투자 논란 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자 논란 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...AI 투자 논란 속 반도체주 반등…...",
-              "link": "https://www.newspim.com/news/view/20260624001249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%20%EB%85%BC%EB%9E%80%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%20%EB%85%BC%EB%9E%80%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...AI 투자 논란 속 반도체주 반등…...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260624001249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amid Investment Controversy",
+      "term_ko": "투자 논란 속"
     },
     {
-      "term": "Micron's Earnings on Par with NVIDIA's",
-      "term_ko": "마이크론 실적 엔비디아급",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마이크론 실적 엔비디아급",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "마이크론 실적, 엔비디아급 주목…'위스퍼넘버' 충족할까?",
-              "link": "https://n.news.naver.com/mnews/article/015/0005302513?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0%20%EC%8B%A4%EC%A0%81%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%EA%B8%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0%20%EC%8B%A4%EC%A0%81%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%EA%B8%89"
-      },
-      "top_headlines": [
-        {
-          "title": "마이크론 실적, 엔비디아급 주목…'위스퍼넘버' 충족할까?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005302513?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Micron's Earnings on Par with Nvidia's",
+      "term_ko": "마이크론 실적 엔비디아급"
     },
     {
-      "term": "Will \"Whisper Number\" Live Up to Expectations?",
-      "term_ko": "주목 위스퍼넘버 충족할까",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주목 위스퍼넘버 충족할까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "마이크론 실적, 엔비디아급 주목…'위스퍼넘버' 충족할까?",
-              "link": "https://n.news.naver.com/mnews/article/015/0005302513?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%AA%A9%20%EC%9C%84%EC%8A%A4%ED%8D%BC%EB%84%98%EB%B2%84%20%EC%B6%A9%EC%A1%B1%ED%95%A0%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%AA%A9%20%EC%9C%84%EC%8A%A4%ED%8D%BC%EB%84%98%EB%B2%84%20%EC%B6%A9%EC%A1%B1%ED%95%A0%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "마이크론 실적, 엔비디아급 주목…'위스퍼넘버' 충족할까?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/015/0005302513?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Will \"whisper Number\" Live Up to Expectations?",
+      "term_ko": "주목 위스퍼넘버 충족할까"
     },
     {
-      "term": "A Preview of the E-Daily Newspaper",
-      "term_ko": "미리보는 이데일리 신문",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미리보는 이데일리 신문",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] 정부유출 책임 묻더니 국회·법원 보안 '구멍...",
-              "link": "https://n.news.naver.com/mnews/article/018/0006314138?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] 정부유출 책임 묻더니 국회·법원 보안 '구멍...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006314138?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Preview of the E-daily Newspaper",
+      "term_ko": "미리보는 이데일리 신문"
     },
     {
-      "term": "After holding the government accountable for the leak,",
-      "term_ko": "정부유출 책임 묻더니",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정부유출 책임 묻더니",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] 정부유출 책임 묻더니 국회·법원 보안 '구멍...",
-              "link": "https://n.news.naver.com/mnews/article/018/0006314138?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EB%B6%80%EC%9C%A0%EC%B6%9C%20%EC%B1%85%EC%9E%84%20%EB%AC%BB%EB%8D%94%EB%8B%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EB%B6%80%EC%9C%A0%EC%B6%9C%20%EC%B1%85%EC%9E%84%20%EB%AC%BB%EB%8D%94%EB%8B%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] 정부유출 책임 묻더니 국회·법원 보안 '구멍...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006314138?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "After Holding the Government Accountable for the Leak,",
+      "term_ko": "정부유출 책임 묻더니"
     },
     {
       "term": "National Assembly and Court Security",
-      "term_ko": "국회 법원 보안",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국회 법원 보안",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미리보는 이데일리 신문] 정부유출 책임 묻더니 국회·법원 보안 '구멍...",
-              "link": "https://n.news.naver.com/mnews/article/018/0006314138?sid=102"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%ED%9A%8C%20%EB%B2%95%EC%9B%90%20%EB%B3%B4%EC%95%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%ED%9A%8C%20%EB%B2%95%EC%9B%90%20%EB%B3%B4%EC%95%88"
-      },
-      "top_headlines": [
-        {
-          "title": "[미리보는 이데일리 신문] 정부유출 책임 묻더니 국회·법원 보안 '구멍...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006314138?sid=102",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "국회 법원 보안"
     },
     {
-      "term": "Bank soundness is good",
-      "term_ko": "은행 건전성은 양호",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "은행 건전성은 양호",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "은행 건전성은 양호…취약부문 부실은 경고등",
-              "link": "https://www.news2day.co.kr/article/20260624500245"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%ED%96%89%20%EA%B1%B4%EC%A0%84%EC%84%B1%EC%9D%80%20%EC%96%91%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%ED%96%89%20%EA%B1%B4%EC%A0%84%EC%84%B1%EC%9D%80%20%EC%96%91%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "은행 건전성은 양호…취약부문 부실은 경고등",
-          "summary": "",
-          "link": "https://www.news2day.co.kr/article/20260624500245",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bank Soundness Is Good",
+      "term_ko": "은행 건전성은 양호"
     },
     {
       "term": "Weaknesses in Vulnerable Sectors Are a Warning Sign",
-      "term_ko": "취약부문 부실은 경고등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "취약부문 부실은 경고등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "은행 건전성은 양호…취약부문 부실은 경고등",
-              "link": "https://www.news2day.co.kr/article/20260624500245"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B7%A8%EC%95%BD%EB%B6%80%EB%AC%B8%20%EB%B6%80%EC%8B%A4%EC%9D%80%20%EA%B2%BD%EA%B3%A0%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B7%A8%EC%95%BD%EB%B6%80%EB%AC%B8%20%EB%B6%80%EC%8B%A4%EC%9D%80%20%EA%B2%BD%EA%B3%A0%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "은행 건전성은 양호…취약부문 부실은 경고등",
-          "summary": "",
-          "link": "https://www.news2day.co.kr/article/20260624500245",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "취약부문 부실은 경고등"
     },
     {
       "term": "New York Stock Market Preview: Micron",
-      "term_ko": "뉴욕증시 프리뷰 마이크론",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 프리뷰 마이크론",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 마이크론 실적 앞두고 반도체주 반등…나스닥 선물 상...",
-              "link": "https://www.newspim.com/news/view/20260624001247"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%B7%B0%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 마이크론 실적 앞두고 반도체주 반등…나스닥 선물 상...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260624001247",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕증시 프리뷰 마이크론"
     },
     {
       "term": "Semiconductor Stocks Ahead of Earnings Reports",
-      "term_ko": "실적 앞두고 반도체주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "실적 앞두고 반도체주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 마이크론 실적 앞두고 반도체주 반등…나스닥 선물 상...",
-              "link": "https://www.newspim.com/news/view/20260624001247"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%A4%EC%A0%81%20%EC%95%9E%EB%91%90%EA%B3%A0%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%A4%EC%A0%81%20%EC%95%9E%EB%91%90%EA%B3%A0%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 마이크론 실적 앞두고 반도체주 반등…나스닥 선물 상...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260624001247",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "실적 앞두고 반도체주"
     },
     {
       "term": "Nasdaq Futures Rebound",
-      "term_ko": "반등 나스닥 선물",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반등 나스닥 선물",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시 프리뷰, 마이크론 실적 앞두고 반도체주 반등…나스닥 선물 상...",
-              "link": "https://www.newspim.com/news/view/20260624001247"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%B1%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%A0%EB%AC%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%B1%20%EB%82%98%EC%8A%A4%EB%8B%A5%20%EC%84%A0%EB%AC%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시 프리뷰, 마이크론 실적 앞두고 반도체주 반등…나스닥 선물 상...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260624001247",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반등 나스닥 선물"
     },
     {
-      "term": "SK Hynix Eyes",
-      "term_ko": "SK하이닉스, 주목하다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix Eyes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix eyes Nasdaq listing on July 10",
-              "link": "https://www.arirang.com/news/view?id=297638"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Eyes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Eyes"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix eyes Nasdaq listing on July 10",
-          "summary": "",
-          "link": "https://www.arirang.com/news/view?id=297638",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sk Hynix Eyes",
+      "term_ko": "SK하이닉스, 주목하다"
     },
     {
-      "term": "SK Hynix Lists",
-      "term_ko": "SK하이닉스 상장",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix Lists",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix Lists ADRs on Nasdaq in July",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271946"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Lists",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Lists"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix Lists ADRs on Nasdaq in July",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271946",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sk Hynix Lists",
+      "term_ko": "SK하이닉스 상장"
     },
     {
-      "term": "SK Hynix Aims",
-      "term_ko": "SK하이닉스의 목표",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix Aims",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Aims",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Aims"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sk Hynix Aims",
+      "term_ko": "SK하이닉스의 목표"
     },
     {
-      "term": "Nasdaq ADR Offering",
-      "term_ko": "나스닥 ADR 공모",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nasdaq ADR Offering",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix to raise up to $29.4 bil. via Nasdaq ADR offering",
-              "link": "https://www.koreatimes.co.kr/path/A2026062419090000333"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nasdaq%20ADR%20Offering",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nasdaq%20ADR%20Offering"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix to raise up to $29.4 bil. via Nasdaq ADR offering",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026062419090000333",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nasdaq Adr Offering",
+      "term_ko": "나스닥 ADR 공모"
     },
     {
       "term": "Preparations for Launch",
-      "term_ko": "출범 준비",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "출범 준비",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "\"페북·인스타로는 부족하다\"...메타(META), 자체 예측시장 앱 출범 준비",
-              "link": "http://coinreaders.com/244256"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EB%B2%94%20%EC%A4%80%EB%B9%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EB%B2%94%20%EC%A4%80%EB%B9%84"
-      },
-      "top_headlines": [
-        {
-          "title": "\"페북·인스타로는 부족하다\"...메타(META), 자체 예측시장 앱 출범 준비",
-          "summary": "",
-          "link": "http://coinreaders.com/244256",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "출범 준비"
     },
     {
       "term": "Expected Increase",
-      "term_ko": "인상 기대",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인상 기대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "미 달러화 5일째 강세…유로 약세 속 美 금리 인상 기대",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4421703",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인상 기대"
     },
     {
       "term": "New York Semiconductor Stocks",
-      "term_ko": "뉴욕 반도체주",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕 반도체주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...AI 투자 논란 속 반도체주 반등…...",
-              "link": "https://www.newspim.com/news/view/20260624001249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...AI 투자 논란 속 반도체주 반등…...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260624001249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕 반도체주"
     },
     {
       "term": "Fund Chip Rush",
-      "term_ko": "펀드 칩 러시",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fund Chip Rush",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fund%20Chip%20Rush",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fund%20Chip%20Rush"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "펀드 칩 러시"
     },
     {
-      "term": "ADR Listing",
-      "term_ko": "ADR 상장",
-      "significance_score": 252,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ADR Listing",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ADR%20Listing",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ADR%20Listing"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Adr Listing",
+      "term_ko": "ADR 상장"
     },
     {
-      "term": "Raise 29B",
-      "term_ko": "29B 모금",
-      "significance_score": 238,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Raise 29B",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-              "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Raise%2029B",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Raise%2029B"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix aims to raise $29B in ADR listing to fund chip rush",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/640/0000090288?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Raise 29b",
+      "term_ko": "29B 모금"
     },
     {
       "term": "29.4 Bil",
-      "term_ko": "29.4 빌",
-      "significance_score": 238,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "29.4 Bil",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix to raise up to $29.4 bil. via Nasdaq ADR offering",
-              "link": "https://www.koreatimes.co.kr/path/A2026062419090000333"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=29.4%20Bil",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=29.4%20Bil"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix to raise up to $29.4 bil. via Nasdaq ADR offering",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026062419090000333",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "29.4 빌"
     },
     {
       "term": "Nasdaq Listing",
-      "term_ko": "나스닥 상장",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Nasdaq Listing",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix eyes Nasdaq listing on July 10",
-              "link": "https://www.arirang.com/news/view?id=297638"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nasdaq%20Listing",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nasdaq%20Listing"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix eyes Nasdaq listing on July 10",
-          "summary": "",
-          "link": "https://www.arirang.com/news/view?id=297638",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나스닥 상장"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-24T23:31:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "Expectations of an interest rate cut",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term": "Expectations of an Interest Rate Cut",
+      "term_ko": "금리 인하 기대감"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-24T14:32:55.226Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-24T23:31:44+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ai My News",
+      "term_ko": "AI MY 뉴스"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-24T23:31:44+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-24T23:31:44+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "U.s. Dollar for the 5th Day in a Row",
+      "term_ko": "미 달러화 5일째"
+    },
+    {
+      "term": "In-house Prediction Market App",
+      "term_ko": "자체 예측시장 앱"
+    },
+    {
+      "term": "Strong Euro, Weak",
+      "term_ko": "강세 유로 약세"
+    },
+    {
+      "term": "U.s. Interest Rates",
+      "term_ko": "속 美 금리"
+    },
+    {
+      "term": "Amid Investment Controversy",
+      "term_ko": "투자 논란 속"
+    },
+    {
+      "term": "Micron's Earnings on Par with Nvidia's",
+      "term_ko": "마이크론 실적 엔비디아급"
+    },
+    {
+      "term": "Will \"whisper Number\" Live Up to Expectations?",
+      "term_ko": "주목 위스퍼넘버 충족할까"
+    },
+    {
+      "term": "A Preview of the E-daily Newspaper",
+      "term_ko": "미리보는 이데일리 신문"
+    },
+    {
+      "term": "After Holding the Government Accountable for the Leak,",
+      "term_ko": "정부유출 책임 묻더니"
+    },
+    {
+      "term": "National Assembly and Court Security",
+      "term_ko": "국회 법원 보안"
+    },
+    {
+      "term": "Bank Soundness Is Good",
+      "term_ko": "은행 건전성은 양호"
+    },
+    {
+      "term": "Weaknesses in Vulnerable Sectors Are a Warning Sign",
+      "term_ko": "취약부문 부실은 경고등"
+    },
+    {
+      "term": "New York Stock Market Preview: Micron",
+      "term_ko": "뉴욕증시 프리뷰 마이크론"
+    },
+    {
+      "term": "Semiconductor Stocks Ahead of Earnings Reports",
+      "term_ko": "실적 앞두고 반도체주"
+    },
+    {
+      "term": "Nasdaq Futures Rebound",
+      "term_ko": "반등 나스닥 선물"
+    },
+    {
+      "term": "Sk Hynix Eyes",
+      "term_ko": "SK하이닉스, 주목하다"
+    },
+    {
+      "term": "Sk Hynix Lists",
+      "term_ko": "SK하이닉스 상장"
+    },
+    {
+      "term": "Sk Hynix Aims",
+      "term_ko": "SK하이닉스의 목표"
+    },
+    {
+      "term": "Nasdaq Adr Offering",
+      "term_ko": "나스닥 ADR 공모"
+    },
+    {
+      "term": "Preparations for Launch",
+      "term_ko": "출범 준비"
+    },
+    {
+      "term": "Expected Increase",
+      "term_ko": "인상 기대"
+    },
+    {
+      "term": "New York Semiconductor Stocks",
+      "term_ko": "뉴욕 반도체주"
+    },
+    {
+      "term": "Fund Chip Rush",
+      "term_ko": "펀드 칩 러시"
+    },
+    {
+      "term": "Adr Listing",
+      "term_ko": "ADR 상장"
+    },
+    {
+      "term": "Raise 29b",
+      "term_ko": "29B 모금"
+    },
+    {
+      "term": "29.4 Bil",
+      "term_ko": "29.4 빌"
+    },
+    {
+      "term": "Nasdaq Listing",
+      "term_ko": "나스닥 상장"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Expectations of an Interest Rate Cut",
+      "term_ko": "금리 인하 기대감"
+    }
+  ],
+  "translations": {
+    "Ai My News": {
+      "en": "Ai My News",
+      "ko": "AI MY 뉴스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "U.s. Dollar for the 5th Day in a Row": {
+      "en": "U.s. Dollar for the 5th Day in a Row",
+      "ko": "미 달러화 5일째",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "In-house Prediction Market App": {
+      "en": "In-house Prediction Market App",
+      "ko": "자체 예측시장 앱",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Strong Euro, Weak": {
+      "en": "Strong Euro, Weak",
+      "ko": "강세 유로 약세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "U.s. Interest Rates": {
+      "en": "U.s. Interest Rates",
+      "ko": "속 美 금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Amid Investment Controversy": {
+      "en": "Amid Investment Controversy",
+      "ko": "투자 논란 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Micron's Earnings on Par with Nvidia's": {
+      "en": "Micron's Earnings on Par with Nvidia's",
+      "ko": "마이크론 실적 엔비디아급",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Will \"whisper Number\" Live Up to Expectations?": {
+      "en": "Will \"whisper Number\" Live Up to Expectations?",
+      "ko": "주목 위스퍼넘버 충족할까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "A Preview of the E-daily Newspaper": {
+      "en": "A Preview of the E-daily Newspaper",
+      "ko": "미리보는 이데일리 신문",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "After Holding the Government Accountable for the Leak,": {
+      "en": "After Holding the Government Accountable for the Leak,",
+      "ko": "정부유출 책임 묻더니",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "National Assembly and Court Security": {
+      "en": "National Assembly and Court Security",
+      "ko": "국회 법원 보안",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Bank Soundness Is Good": {
+      "en": "Bank Soundness Is Good",
+      "ko": "은행 건전성은 양호",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Weaknesses in Vulnerable Sectors Are a Warning Sign": {
+      "en": "Weaknesses in Vulnerable Sectors Are a Warning Sign",
+      "ko": "취약부문 부실은 경고등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "New York Stock Market Preview: Micron": {
+      "en": "New York Stock Market Preview: Micron",
+      "ko": "뉴욕증시 프리뷰 마이크론",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Semiconductor Stocks Ahead of Earnings Reports": {
+      "en": "Semiconductor Stocks Ahead of Earnings Reports",
+      "ko": "실적 앞두고 반도체주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Nasdaq Futures Rebound": {
+      "en": "Nasdaq Futures Rebound",
+      "ko": "반등 나스닥 선물",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Sk Hynix Eyes": {
+      "en": "Sk Hynix Eyes",
+      "ko": "SK하이닉스, 주목하다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Sk Hynix Lists": {
+      "en": "Sk Hynix Lists",
+      "ko": "SK하이닉스 상장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Sk Hynix Aims": {
+      "en": "Sk Hynix Aims",
+      "ko": "SK하이닉스의 목표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Nasdaq Adr Offering": {
+      "en": "Nasdaq Adr Offering",
+      "ko": "나스닥 ADR 공모",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Preparations for Launch": {
+      "en": "Preparations for Launch",
+      "ko": "출범 준비",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Expected Increase": {
+      "en": "Expected Increase",
+      "ko": "인상 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "New York Semiconductor Stocks": {
+      "en": "New York Semiconductor Stocks",
+      "ko": "뉴욕 반도체주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Fund Chip Rush": {
+      "en": "Fund Chip Rush",
+      "ko": "펀드 칩 러시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Adr Listing": {
+      "en": "Adr Listing",
+      "ko": "ADR 상장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Raise 29b": {
+      "en": "Raise 29b",
+      "ko": "29B 모금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "29.4 Bil": {
+      "en": "29.4 Bil",
+      "ko": "29.4 빌",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Nasdaq Listing": {
+      "en": "Nasdaq Listing",
+      "ko": "나스닥 상장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
+    },
+    "Expectations of an Interest Rate Cut": {
+      "en": "Expectations of an Interest Rate Cut",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-24T19:46:54.450Z"
     }
   }
 }
