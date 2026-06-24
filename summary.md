@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-06-24T18:29:40+09:00 (KST)**
+- Generated: **2026-06-24T23:31:15+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -23,6 +23,14 @@
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EB%84%A5%EC%8A%A8%EA%B2%8C%EC%9E%84%EC%A6%88
 
+**브이원텍** (251630.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **12.5%**, 20d **8.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D
+
 **안랩** (053800.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -39,23 +47,7 @@
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B2%8C%EC%9E%84%EC%A6%88
 
-**피에스케이** (319660.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
-
 ### AGGRESSIVE (5)
-
-**브이원텍** (251630.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **12.5%**, 20d **8.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D
 
 **셀트리온헬스케어** (091990.KQ)
 
@@ -80,6 +72,14 @@
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%EC%BB%B4%ED%88%AC%EC%8A%A4
+
+**피에스케이** (319660.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
 
 **해성디에스** (195870.KQ)
 
@@ -281,13 +281,13 @@
 
 ### AGGRESSIVE (5)
 
-**American International Group** (AIG)
+**Leidos** (LDOS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.5%**, 20d **5.6%**; volatility (20d): **unknown**
+- Returns: 5d **-6.8%**, 20d **-17.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
-- News search: https://www.google.com/search?q=American%20International%20Group
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Leidos
 
 **Marsh McLennan** (MRSH)
 
@@ -316,7 +316,7 @@
 **Stryker Corporation** (SYK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.7%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **2.4%**, 20d **1.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Health Care**
 - News search: https://www.google.com/search?q=Stryker%20Corporation

@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-06-24T18:29:40+09:00",
+  "generatedAtKST": "2026-06-24T23:31:15+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -62,6 +62,35 @@
     {
       "market": "KOSDAQ",
       "bucket": "safe",
+      "name": "브이원텍",
+      "ticker": "251630.KQ",
+      "sector": "정보기술",
+      "metrics": {
+        "ret5": 12.474437627811861,
+        "ret20": 8.267716535433072,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **12.5%**, 20d **8.3%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **정보기술**",
+        "News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D"
+      ]
+    },
+    {
+      "market": "KOSDAQ",
+      "bucket": "safe",
       "name": "안랩",
       "ticker": "053800.KQ",
       "sector": "정보기술",
@@ -115,64 +144,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **커뮤니케이션서비스**",
         "News search: https://www.google.com/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B2%8C%EC%9E%84%EC%A6%88"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
-      "bucket": "safe",
-      "name": "피에스케이",
-      "ticker": "319660.KQ",
-      "sector": "정보기술",
-      "metrics": {
-        "ret5": 12.14717741935484,
-        "ret20": 6.205250596658711,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **정보기술**",
-        "News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
-      "bucket": "aggressive",
-      "name": "브이원텍",
-      "ticker": "251630.KQ",
-      "sector": "정보기술",
-      "metrics": {
-        "ret5": 12.474437627811861,
-        "ret20": 8.267716535433072,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **12.5%**, 20d **8.3%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **정보기술**",
-        "News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D"
       ]
     },
     {
@@ -260,6 +231,35 @@
         "Earnings window (±10d): **No**",
         "Sector: **커뮤니케이션서비스**",
         "News search: https://www.google.com/search?q=%EC%BB%B4%ED%88%AC%EC%8A%A4"
+      ]
+    },
+    {
+      "market": "KOSDAQ",
+      "bucket": "aggressive",
+      "name": "피에스케이",
+      "ticker": "319660.KQ",
+      "sector": "정보기술",
+      "metrics": {
+        "ret5": 12.14717741935484,
+        "ret20": 6.205250596658711,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **정보기술**",
+        "News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4"
       ]
     },
     {
@@ -951,12 +951,12 @@
     {
       "market": "S&P 500",
       "bucket": "aggressive",
-      "name": "American International Group",
-      "ticker": "AIG",
-      "sector": "Financial Services",
+      "name": "Leidos",
+      "ticker": "LDOS",
+      "sector": "Industrials",
       "metrics": {
-        "ret5": -2.4706136081208676,
-        "ret20": 5.610389214057427,
+        "ret5": -6.840996783939554,
+        "ret20": -17.41336123076454,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -967,14 +967,14 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=American%20International%20Group"
+        "searchUrl": "https://www.google.com/search?q=Leidos"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-2.5%**, 20d **5.6%**; volatility (20d): **unknown**",
+        "Returns: 5d **-6.8%**, 20d **-17.4%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Financial Services**",
-        "News search: https://www.google.com/search?q=American%20International%20Group"
+        "Sector: **Industrials**",
+        "News search: https://www.google.com/search?q=Leidos"
       ]
     },
     {
@@ -1071,8 +1071,8 @@
       "ticker": "SYK",
       "sector": "Health Care",
       "metrics": {
-        "ret5": 0.6689606878813087,
-        "ret20": null,
+        "ret5": 2.4470366514576622,
+        "ret20": 1.654949736671326,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -1087,7 +1087,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.7%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **2.4%**, 20d **1.7%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Health Care**",
         "News search: https://www.google.com/search?q=Stryker%20Corporation"
