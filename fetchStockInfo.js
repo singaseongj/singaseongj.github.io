@@ -490,6 +490,10 @@ function deriveCurrency(ticker) {
   return 'USD';
 }
 
+function isValidPrice(value) {
+  return Number.isFinite(value) && value > 0;
+}
+
 async function attachPrices(data, cache) {
   const tickers = new Set();
   for (const market of Object.keys(data || {})) {
@@ -505,6 +509,7 @@ async function attachPrices(data, cache) {
   if (!list.length) return;
 
   const now = new Date();
+  const previousPrices = await loadPreviousPricesByTicker();
   const cacheRef = cache || {};
   const kisEnabled = hasKisCredentials();
   let cacheDirty = false;
@@ -518,12 +523,15 @@ async function attachPrices(data, cache) {
   for (const q of quotes) {
     if (!q?.symbol) continue;
     const symbol = q.symbol;
-    const current = Number.isFinite(q.regularMarketPrice)
+    const marketPrice = Number(q.regularMarketPrice);
+    const previousClose = Number(q.regularMarketPreviousClose);
+    const current = isValidPrice(marketPrice)
       ? Number(q.regularMarketPrice)
-      : (Number.isFinite(q.regularMarketPreviousClose) ? Number(q.regularMarketPreviousClose) : null);
-    const prevClose = Number.isFinite(q.regularMarketPreviousClose)
+      : (isValidPrice(previousClose) ? previousClose : null);
+    const prevClose = isValidPrice(previousClose)
       ? Number(q.regularMarketPreviousClose)
       : null;
+    if (!isValidPrice(current) && !isValidPrice(prevClose)) continue;
     priceMap[symbol] = {
       currentPrice: current,
       previousClose: prevClose,
@@ -552,8 +560,8 @@ async function attachPrices(data, cache) {
       };
 
       if (isKrxTicker(symbol)) {
-        const needsCurrent = !(existing && Number.isFinite(existing.currentPrice));
-        const needsPrevious = !(existing && Number.isFinite(existing.previousClose));
+        const needsCurrent = !(existing && isValidPrice(existing.currentPrice));
+        const needsPrevious = !(existing && isValidPrice(existing.previousClose));
         const needsAsOf = !(existing && existing.priceAsOf);
         if (!needsCurrent && !needsPrevious && !needsAsOf) continue;
         let snapshot;
@@ -572,28 +580,28 @@ async function attachPrices(data, cache) {
           ensureEntry();
           priceMap[symbol].priceAsOf = priceAsOf;
           priceMap[symbol].currency = 'KRW';
-          if (Number.isFinite(snapshot.current)) {
+          if (isValidPrice(Number(snapshot.current))) {
             priceMap[symbol].currentPrice = Number(snapshot.current);
           }
-          if (Number.isFinite(snapshot.previousClose)) {
+          if (isValidPrice(Number(snapshot.previousClose))) {
             priceMap[symbol].previousClose = Number(snapshot.previousClose);
           }
         }
 
         const entry = priceMap[symbol];
-        const stillNeedsCurrent = !(entry && Number.isFinite(entry.currentPrice));
+        const stillNeedsCurrent = !(entry && isValidPrice(entry.currentPrice));
         const stillNeedsAsOf = !(entry && entry.priceAsOf);
         if (stillNeedsCurrent || stillNeedsAsOf) {
           try {
             const latest = await fetchDomesticPriceOnDate(symbol, now, { windowDays: KIS_DOMESTIC_WINDOW_DAYS });
-            if (latest && Number.isFinite(latest.price)) {
+            if (latest && isValidPrice(Number(latest.price))) {
               ensureEntry();
               const asOf = Number.isFinite(latest.timestamp)
                 ? new Date(latest.timestamp).toISOString()
                 : (priceMap[symbol].priceAsOf || now.toISOString());
               priceMap[symbol].priceAsOf = asOf;
               priceMap[symbol].currency = 'KRW';
-              if (!Number.isFinite(priceMap[symbol].currentPrice)) {
+              if (!isValidPrice(priceMap[symbol].currentPrice)) {
                 priceMap[symbol].currentPrice = Number(latest.price);
               }
             }
@@ -607,8 +615,8 @@ async function attachPrices(data, cache) {
       }
 
       if (!isLikelyUsTicker(symbol)) continue;
-      const needsCurrent = !(existing && Number.isFinite(existing.currentPrice));
-      const needsPrevious = !(existing && Number.isFinite(existing.previousClose));
+      const needsCurrent = !(existing && isValidPrice(existing.currentPrice));
+      const needsPrevious = !(existing && isValidPrice(existing.previousClose));
       const needsAsOf = !(existing && existing.priceAsOf);
       if (!needsCurrent && !needsPrevious && !needsAsOf) continue;
 
@@ -644,26 +652,26 @@ async function attachPrices(data, cache) {
           if (!priceMap[symbol].currency) {
             priceMap[symbol].currency = baseCurrency;
           }
-          if (Number.isFinite(detail.current)) {
+          if (isValidPrice(Number(detail.current))) {
             priceMap[symbol].currentPrice = Number(detail.current);
           }
-          if (Number.isFinite(detail.previousClose)) {
+          if (isValidPrice(Number(detail.previousClose))) {
             priceMap[symbol].previousClose = Number(detail.previousClose);
           }
         }
 
         const entry = priceMap[symbol];
-        const needsDaily = !entry || !Number.isFinite(entry.currentPrice) || !entry.priceAsOf;
+        const needsDaily = !entry || !isValidPrice(entry.currentPrice) || !entry.priceAsOf;
         if (needsDaily) {
           try {
             const latest = await fetchOverseasPriceOnDate(symbol, now, { exchange, symbolCandidates, windowDays: KIS_OVERSEAS_WINDOW_DAYS });
-            if (latest && Number.isFinite(latest.price)) {
+            if (latest && isValidPrice(Number(latest.price))) {
               ensureEntry();
               const asOf = Number.isFinite(latest.timestamp)
                 ? new Date(latest.timestamp).toISOString()
                 : (priceMap[symbol].priceAsOf || now.toISOString());
               priceMap[symbol].priceAsOf = asOf;
-              if (!Number.isFinite(priceMap[symbol].currentPrice)) {
+              if (!isValidPrice(priceMap[symbol].currentPrice)) {
                 priceMap[symbol].currentPrice = Number(latest.price);
               }
             }
@@ -675,8 +683,8 @@ async function attachPrices(data, cache) {
         }
 
         const updated = priceMap[symbol];
-        const satisfiedCurrent = !needsCurrent || Number.isFinite(updated?.currentPrice);
-        const satisfiedPrevious = !needsPrevious || Number.isFinite(updated?.previousClose);
+        const satisfiedCurrent = !needsCurrent || isValidPrice(updated?.currentPrice);
+        const satisfiedPrevious = !needsPrevious || isValidPrice(updated?.previousClose);
         const satisfiedAsOf = !needsAsOf || Boolean(updated?.priceAsOf);
         if (satisfiedCurrent && satisfiedPrevious && satisfiedAsOf) {
           if (exchange && exchange !== cachedExchange) {
@@ -701,8 +709,47 @@ async function attachPrices(data, cache) {
     if (!priceMap[symbol]) {
       priceMap[symbol] = { priceAsOf: now.toISOString(), currency: deriveCurrency(symbol) };
     }
-    if (Number.isFinite(info.price)) priceMap[symbol].price1yAgo = Number(info.price);
+    if (isValidPrice(Number(info.price))) priceMap[symbol].price1yAgo = Number(info.price);
     if (Number.isFinite(info.timestamp)) priceMap[symbol].price1yDate = new Date(info.timestamp).toISOString();
+  }
+
+  const missingCurrent = list.filter(symbol => !isValidPrice(priceMap[symbol]?.currentPrice));
+  if (missingCurrent.length) {
+    const recent = await fetchHistoricalPricesBatch(missingCurrent, now, cache);
+    for (const [symbol, info] of Object.entries(recent)) {
+      if (!info || !isValidPrice(Number(info.price))) continue;
+      if (!priceMap[symbol]) {
+        priceMap[symbol] = { currency: deriveCurrency(symbol) };
+      }
+      priceMap[symbol].currentPrice = Number(info.price);
+      priceMap[symbol].priceAsOf = Number.isFinite(info.timestamp)
+        ? new Date(info.timestamp).toISOString()
+        : now.toISOString();
+      if (!priceMap[symbol].currency) priceMap[symbol].currency = deriveCurrency(symbol);
+    }
+  }
+
+  for (const symbol of list) {
+    const previous = previousPrices[symbol];
+    if (!previous) continue;
+    if (!priceMap[symbol]) {
+      priceMap[symbol] = { currency: previous.priceCurrency || deriveCurrency(symbol) };
+    }
+    if (!isValidPrice(priceMap[symbol].currentPrice) && isValidPrice(previous.currentPrice)) {
+      priceMap[symbol].currentPrice = Number(previous.currentPrice);
+    }
+    if (!isValidPrice(priceMap[symbol].price1yAgo) && isValidPrice(previous.price1yAgo)) {
+      priceMap[symbol].price1yAgo = Number(previous.price1yAgo);
+    }
+    if (!priceMap[symbol].price1yDate && previous.price1yDate) {
+      priceMap[symbol].price1yDate = previous.price1yDate;
+    }
+    if (!priceMap[symbol].priceAsOf && previous.priceAsOf) {
+      priceMap[symbol].priceAsOf = previous.priceAsOf;
+    }
+    if (!priceMap[symbol].currency && previous.priceCurrency) {
+      priceMap[symbol].currency = previous.priceCurrency;
+    }
   }
 
   for (const market of Object.keys(data || {})) {
@@ -713,9 +760,9 @@ async function attachPrices(data, cache) {
         const symbol = entry?.ticker;
         const info = symbol ? priceMap[symbol] : null;
         if (!info) continue;
-        if (Number.isFinite(info.currentPrice)) entry.currentPrice = info.currentPrice;
-        else if (Number.isFinite(info.previousClose)) entry.currentPrice = info.previousClose;
-        if (Number.isFinite(info.price1yAgo)) entry.price1yAgo = info.price1yAgo;
+        if (isValidPrice(info.currentPrice)) entry.currentPrice = info.currentPrice;
+        else if (isValidPrice(info.previousClose)) entry.currentPrice = info.previousClose;
+        if (isValidPrice(info.price1yAgo)) entry.price1yAgo = info.price1yAgo;
         if (info.price1yDate) entry.price1yDate = info.price1yDate;
         if (info.priceAsOf) entry.priceAsOf = info.priceAsOf;
         if (info.currency) entry.priceCurrency = info.currency;
@@ -730,6 +777,34 @@ async function attachPrices(data, cache) {
       console.warn('[CACHE] Failed to persist KIS metadata:', err.message);
     }
   }
+}
+
+async function loadPreviousPricesByTicker() {
+  const out = {};
+  let previous = null;
+  try {
+    previous = JSON.parse(await fs.readFile(OUT_FILE, 'utf8'));
+  } catch {
+    return out;
+  }
+  for (const [market, buckets] of Object.entries(previous || {})) {
+    if (market === 'lastUpdated' || !buckets || typeof buckets !== 'object') continue;
+    for (const bucket of ['safe', 'aggressive']) {
+      const entries = buckets[bucket];
+      if (!Array.isArray(entries)) continue;
+      for (const entry of entries) {
+        if (!entry?.ticker) continue;
+        out[entry.ticker] = {
+          currentPrice: entry.currentPrice,
+          price1yAgo: entry.price1yAgo,
+          price1yDate: entry.price1yDate,
+          priceAsOf: entry.priceAsOf,
+          priceCurrency: entry.priceCurrency
+        };
+      }
+    }
+  }
+  return out;
 }
 
 async function isFreshFile(p) {
