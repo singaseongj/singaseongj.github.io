@@ -1,1116 +1,439 @@
 {
+  "generatedAt": "2026-06-25T20:00:13.172Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-25",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "$60,000 Ahead of the PCE",
-      "term_ko": "PCE 앞두고 6만달러",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "PCE 앞두고 6만달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 100억달러 옵션 만기·미 PCE 앞두고 6만달러 분기점",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/372771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=PCE%20%EC%95%9E%EB%91%90%EA%B3%A0%206%EB%A7%8C%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=PCE%20%EC%95%9E%EB%91%90%EA%B3%A0%206%EB%A7%8C%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 100억달러 옵션 만기·미 PCE 앞두고 6만달러 분기점",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/372771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "$60,000 Ahead of the Pce",
+      "term_ko": "PCE 앞두고 6만달러"
     },
     {
-      "term": "0.5 percentage points, May PCE",
-      "term_ko": "0.5%p 5월 PCE",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "0.5%p 5월 PCE",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 1분기 성장률 2.1%, 잠정치서 0.5%p↑…5월 PCE, 예상치 부합",
-              "link": "https://n.news.naver.com/mnews/article/018/0006315140?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=0.5%25p%205%EC%9B%94%20PCE",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=0.5%25p%205%EC%9B%94%20PCE"
-      },
-      "top_headlines": [
-        {
-          "title": "美 1분기 성장률 2.1%, 잠정치서 0.5%p↑…5월 PCE, 예상치 부합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006315140?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "0.5 Percentage Points, May Pce",
+      "term_ko": "0.5%p 5월 PCE"
     },
     {
-      "term": "Decoding the \"Foreign-Investor Ants\" ETF",
-      "term_ko": "서학개미 ETF 디코딩",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서학개미 ETF 디코딩",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서학개미 ETF 디코딩] ㉕ 현금 부자만 살아남는 '바이백' 생태계",
-              "link": "https://www.newspim.com/news/view/20260625001079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20ETF%20%EB%94%94%EC%BD%94%EB%94%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20ETF%20%EB%94%94%EC%BD%94%EB%94%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "[서학개미 ETF 디코딩] ㉕ 현금 부자만 살아남는 '바이백' 생태계",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260625001079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Decoding the \"foreign-investor Ants\" Etf",
+      "term_ko": "서학개미 ETF 디코딩"
     },
     {
       "term": "$10 Billion in Bitcoin Options",
-      "term_ko": "비트코인 100억달러 옵션",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 100억달러 옵션",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 100억달러 옵션 만기·미 PCE 앞두고 6만달러 분기점",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/372771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20100%EC%96%B5%EB%8B%AC%EB%9F%AC%20%EC%98%B5%EC%85%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20100%EC%96%B5%EB%8B%AC%EB%9F%AC%20%EC%98%B5%EC%85%98"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 100억달러 옵션 만기·미 PCE 앞두고 6만달러 분기점",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/372771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "비트코인 100억달러 옵션"
     },
     {
-      "term": "U.S. First-Quarter Growth Rate",
-      "term_ko": "美 1분기 성장률",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 1분기 성장률",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 1분기 성장률 2.1%, 잠정치서 0.5%p↑…5월 PCE, 예상치 부합",
-              "link": "https://n.news.naver.com/mnews/article/018/0006315140?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%201%EB%B6%84%EA%B8%B0%20%EC%84%B1%EC%9E%A5%EB%A5%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%201%EB%B6%84%EA%B8%B0%20%EC%84%B1%EC%9E%A5%EB%A5%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "美 1분기 성장률 2.1%, 잠정치서 0.5%p↑…5월 PCE, 예상치 부합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006315140?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. First-quarter Growth Rate",
+      "term_ko": "美 1분기 성장률"
     },
     {
-      "term": "Kim Jong-seok's Report: Gold Price Drops from 1.1 Million to 870,000",
-      "term_ko": "김종석의 리포트110만→87만 금값",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김종석의 리포트110만→87만 금값",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[김종석의 리포트]110만→87만…금값 ‘와르르’",
-              "link": "https://n.news.naver.com/mnews/article/449/0000350624?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%A2%85%EC%84%9D%EC%9D%98%20%EB%A6%AC%ED%8F%AC%ED%8A%B8110%EB%A7%8C%E2%86%9287%EB%A7%8C%20%EA%B8%88%EA%B0%92",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%A2%85%EC%84%9D%EC%9D%98%20%EB%A6%AC%ED%8F%AC%ED%8A%B8110%EB%A7%8C%E2%86%9287%EB%A7%8C%20%EA%B8%88%EA%B0%92"
-      },
-      "top_headlines": [
-        {
-          "title": "[김종석의 리포트]110만→87만…금값 ‘와르르’",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/449/0000350624?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kim Jong-seok's Report: Gold Price Drops From 1.1 Million to 870,000",
+      "term_ko": "김종석의 리포트110만→87만 금값"
     },
     {
-      "term": "11.4% over the past 5 months",
-      "term_ko": "5달 새 11.4%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "5달 새 11.4%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-              "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=5%EB%8B%AC%20%EC%83%88%2011.4%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=5%EB%8B%AC%20%EC%83%88%2011.4%25"
-      },
-      "top_headlines": [
-        {
-          "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "11.4% Over the Past 5 Months",
+      "term_ko": "5달 새 11.4%"
     },
     {
-      "term": "12 years and 8 months under a jeonse lease",
-      "term_ko": "전세 12년 8개월",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "전세 12년 8개월",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-              "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%84%EC%84%B8%2012%EB%85%84%208%EA%B0%9C%EC%9B%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%84%EC%84%B8%2012%EB%85%84%208%EA%B0%9C%EC%9B%94"
-      },
-      "top_headlines": [
-        {
-          "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "12 Years and 8 Months Under a Jeonse Lease",
+      "term_ko": "전세 12년 8개월"
     },
     {
       "term": "Micron Earnings on the New York Stock Market",
-      "term_ko": "뉴욕증시 마이크론 실적",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 마이크론 실적",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 마이크론 실적 안도에 반도체주 반등…금리 부담은 관망",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16112382"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0%20%EC%8B%A4%EC%A0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0%20%EC%8B%A4%EC%A0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 마이크론 실적 안도에 반도체주 반등…금리 부담은 관망",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16112382",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕증시 마이크론 실적"
     },
     {
       "term": "Semiconductor Stocks Rebound on Relief",
-      "term_ko": "안도에 반도체주 반등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안도에 반도체주 반등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 마이크론 실적 안도에 반도체주 반등…금리 부담은 관망",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16112382"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%EB%8F%84%EC%97%90%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%EB%8F%84%EC%97%90%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 마이크론 실적 안도에 반도체주 반등…금리 부담은 관망",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16112382",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "안도에 반도체주 반등"
     },
     {
-      "term": "Interest Rate Burden: A Wait-and-See Approach",
-      "term_ko": "금리 부담은 관망",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 부담은 관망",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 마이크론 실적 안도에 반도체주 반등…금리 부담은 관망",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16112382"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EB%B6%80%EB%8B%B4%EC%9D%80%20%EA%B4%80%EB%A7%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EB%B6%80%EB%8B%B4%EC%9D%80%20%EA%B4%80%EB%A7%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 마이크론 실적 안도에 반도체주 반등…금리 부담은 관망",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16112382",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Rate Burden: a Wait-and-see Approach",
+      "term_ko": "금리 부담은 관망"
     },
     {
-      "term": "㉕ Only those with plenty of cash",
-      "term_ko": "㉕ 현금 부자만",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "㉕ 현금 부자만",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서학개미 ETF 디코딩] ㉕ 현금 부자만 살아남는 '바이백' 생태계",
-              "link": "https://www.newspim.com/news/view/20260625001079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E3%89%95%20%ED%98%84%EA%B8%88%20%EB%B6%80%EC%9E%90%EB%A7%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E3%89%95%20%ED%98%84%EA%B8%88%20%EB%B6%80%EC%9E%90%EB%A7%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[서학개미 ETF 디코딩] ㉕ 현금 부자만 살아남는 '바이백' 생태계",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260625001079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "㉕ Only Those with Plenty of Cash",
+      "term_ko": "㉕ 현금 부자만"
     },
     {
       "term": "A Sustainable Buyback Ecosystem",
-      "term_ko": "살아남는 바이백 생태계",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "살아남는 바이백 생태계",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[서학개미 ETF 디코딩] ㉕ 현금 부자만 살아남는 '바이백' 생태계",
-              "link": "https://www.newspim.com/news/view/20260625001079"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%B4%EC%95%84%EB%82%A8%EB%8A%94%20%EB%B0%94%EC%9D%B4%EB%B0%B1%20%EC%83%9D%ED%83%9C%EA%B3%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%B4%EC%95%84%EB%82%A8%EB%8A%94%20%EB%B0%94%EC%9D%B4%EB%B0%B1%20%EC%83%9D%ED%83%9C%EA%B3%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[서학개미 ETF 디코딩] ㉕ 현금 부자만 살아남는 '바이백' 생태계",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260625001079",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "살아남는 바이백 생태계"
     },
     {
       "term": "Sokbodawo Rises, Nasdaq",
-      "term_ko": "속보다우 오르고 나스닥",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속보다우 오르고 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보]다우 오르고 나스닥 밀렸다…미국 증시, 업종별 순환매에 혼조 흐...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584707"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%EB%B3%B4%EB%8B%A4%EC%9A%B0%20%EC%98%A4%EB%A5%B4%EA%B3%A0%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%EB%B3%B4%EB%8B%A4%EC%9A%B0%20%EC%98%A4%EB%A5%B4%EA%B3%A0%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]다우 오르고 나스닥 밀렸다…미국 증시, 업종별 순환매에 혼조 흐...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584707",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "속보다우 오르고 나스닥"
     },
     {
-      "term": "U.S. Stock Market Falls",
-      "term_ko": "밀렸다 미국 증시",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "밀렸다 미국 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보]다우 오르고 나스닥 밀렸다…미국 증시, 업종별 순환매에 혼조 흐...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584707"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%80%EB%A0%B8%EB%8B%A4%20%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%80%EB%A0%B8%EB%8B%A4%20%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]다우 오르고 나스닥 밀렸다…미국 증시, 업종별 순환매에 혼조 흐...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584707",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Stock Market Falls",
+      "term_ko": "밀렸다 미국 증시"
     },
     {
       "term": "Mixed Performance Amid Rotation Trading Across Sectors",
-      "term_ko": "업종별 순환매에 혼조",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "업종별 순환매에 혼조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[속보]다우 오르고 나스닥 밀렸다…미국 증시, 업종별 순환매에 혼조 흐...",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584707"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%85%EC%A2%85%EB%B3%84%20%EC%88%9C%ED%99%98%EB%A7%A4%EC%97%90%20%ED%98%BC%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%85%EC%A2%85%EB%B3%84%20%EC%88%9C%ED%99%98%EB%A7%A4%EC%97%90%20%ED%98%BC%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]다우 오르고 나스닥 밀렸다…미국 증시, 업종별 순환매에 혼조 흐...",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584707",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "업종별 순환매에 혼조"
     },
     {
-      "term": "At Gwanghwamun / Jo Eun-ah: Samsung SIX Leverage Backlash",
-      "term_ko": "광화문에서/조은아삼전닉스 레버리지 역풍",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "광화문에서/조은아삼전닉스 레버리지 역풍",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[광화문에서/조은아]‘삼전닉스 레버리지’ 역풍… 지금이라도 보완 필...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003729541?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%91%ED%99%94%EB%AC%B8%EC%97%90%EC%84%9C%2F%EC%A1%B0%EC%9D%80%EC%95%84%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80%20%EC%97%AD%ED%92%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%91%ED%99%94%EB%AC%B8%EC%97%90%EC%84%9C%2F%EC%A1%B0%EC%9D%80%EC%95%84%EC%82%BC%EC%A0%84%EB%8B%89%EC%8A%A4%20%EB%A0%88%EB%B2%84%EB%A6%AC%EC%A7%80%20%EC%97%AD%ED%92%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "[광화문에서/조은아]‘삼전닉스 레버리지’ 역풍… 지금이라도 보완 필...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003729541?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "At Gwanghwamun / Jo Eun-ah: Samsung Six Leverage Backlash",
+      "term_ko": "광화문에서/조은아삼전닉스 레버리지 역풍"
     },
     {
-      "term": "ABL Bio Bets",
-      "term_ko": "ABL 바이오에 대한 투자",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "ABL Bio Bets",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[BIO USA 2026] ABL Bio bets on Neok Bio to create US-Style value through ...",
-              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32187"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=ABL%20Bio%20Bets",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=ABL%20Bio%20Bets"
-      },
-      "top_headlines": [
-        {
-          "title": "[BIO USA 2026] ABL Bio bets on Neok Bio to create US-Style value through ...",
-          "summary": "",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32187",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Abl Bio Bets",
+      "term_ko": "ABL 바이오에 대한 투자"
     },
     {
-      "term": "Create US-Style Value",
-      "term_ko": "미국식 가치 창출",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Create US-Style Value",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[BIO USA 2026] ABL Bio bets on Neok Bio to create US-Style value through ...",
-              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32187"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Create%20US-Style%20Value",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Create%20US-Style%20Value"
-      },
-      "top_headlines": [
-        {
-          "title": "[BIO USA 2026] ABL Bio bets on Neok Bio to create US-Style value through ...",
-          "summary": "",
-          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32187",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Create Us-style Value",
+      "term_ko": "미국식 가치 창출"
     },
     {
-      "term": "Make corrections even now",
-      "term_ko": "지금이라도 보완",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "지금이라도 보완",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[광화문에서/조은아]‘삼전닉스 레버리지’ 역풍… 지금이라도 보완 필...",
-              "link": "https://n.news.naver.com/mnews/article/020/0003729541?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%80%EA%B8%88%EC%9D%B4%EB%9D%BC%EB%8F%84%20%EB%B3%B4%EC%99%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%80%EA%B8%88%EC%9D%B4%EB%9D%BC%EB%8F%84%20%EB%B3%B4%EC%99%84"
-      },
-      "top_headlines": [
-        {
-          "title": "[광화문에서/조은아]‘삼전닉스 레버리지’ 역풍… 지금이라도 보완 필...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003729541?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Make Corrections Even Now",
+      "term_ko": "지금이라도 보완"
     },
     {
-      "term": "Maturity: Not yet",
-      "term_ko": "만기 미",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만기 미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "비트코인, 100억달러 옵션 만기·미 PCE 앞두고 6만달러 분기점",
-              "link": "https://www.tokenpost.kr/news/cryptocurrency/372771"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EA%B8%B0%20%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EA%B8%B0%20%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인, 100억달러 옵션 만기·미 PCE 앞두고 6만달러 분기점",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/cryptocurrency/372771",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Maturity: Not Yet",
+      "term_ko": "만기 미"
     },
     {
-      "term": "In line with expectations",
-      "term_ko": "예상치 부합",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "예상치 부합",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "美 1분기 성장률 2.1%, 잠정치서 0.5%p↑…5월 PCE, 예상치 부합",
-              "link": "https://n.news.naver.com/mnews/article/018/0006315140?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%88%EC%83%81%EC%B9%98%20%EB%B6%80%ED%95%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%88%EC%83%81%EC%B9%98%20%EB%B6%80%ED%95%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "美 1분기 성장률 2.1%, 잠정치서 0.5%p↑…5월 PCE, 예상치 부합",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006315140?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "In Line with Expectations",
+      "term_ko": "예상치 부합"
     },
     {
       "term": "Running in Dongtan",
-      "term_ko": "뛴 동탄",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뛴 동탄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-              "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9B%B4%20%EB%8F%99%ED%83%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9B%B4%20%EB%8F%99%ED%83%84"
-      },
-      "top_headlines": [
-        {
-          "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뛴 동탄"
     },
     {
       "term": "The Best in a Long Time",
-      "term_ko": "만에 최고",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 최고",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-              "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%B5%9C%EA%B3%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "5달 새 11.4% 뛴 동탄 아파트...서울 전세, 12년 8개월 만에 최고",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/052/0002371144?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "만에 최고"
     },
     {
       "term": "Taylor Swift Wedding",
-      "term_ko": "테일러 스위프트의 결혼식",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Taylor Swift Wedding",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "The Taylor Swift Wedding and a Hot New York Summer",
-              "link": "https://www.nytimes.com/2026/06/25/business/dealbook/taylor-travis-wedding-new-york.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Taylor%20Swift%20Wedding",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Taylor%20Swift%20Wedding"
-      },
-      "top_headlines": [
-        {
-          "title": "The Taylor Swift Wedding and a Hot New York Summer",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/25/business/dealbook/taylor-travis-wedding-new-york.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "테일러 스위프트의 결혼식"
     },
     {
       "term": "A Hot New",
-      "term_ko": "화제의 신작",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "A Hot New",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "The Taylor Swift Wedding and a Hot New York Summer",
-              "link": "https://www.nytimes.com/2026/06/25/business/dealbook/taylor-travis-wedding-new-york.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=A%20Hot%20New",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=A%20Hot%20New"
-      },
-      "top_headlines": [
-        {
-          "title": "The Taylor Swift Wedding and a Hot New York Summer",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/25/business/dealbook/taylor-travis-wedding-new-york.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "화제의 신작"
     },
     {
       "term": "News Today Micron",
-      "term_ko": "오늘의 뉴스: 마이크론",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "News Today Micron",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[News Today] Micron beats market expectations",
-              "link": "https://n.news.naver.com/mnews/article/056/0012206362?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=News%20Today%20Micron",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=News%20Today%20Micron"
-      },
-      "top_headlines": [
-        {
-          "title": "[News Today] Micron beats market expectations",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/056/0012206362?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 뉴스: 마이크론"
     },
     {
       "term": "York Summer",
-      "term_ko": "요크의 여름",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "York Summer",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "The Taylor Swift Wedding and a Hot New York Summer",
-              "link": "https://www.nytimes.com/2026/06/25/business/dealbook/taylor-travis-wedding-new-york.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=York%20Summer",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=York%20Summer"
-      },
-      "top_headlines": [
-        {
-          "title": "The Taylor Swift Wedding and a Hot New York Summer",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/25/business/dealbook/taylor-travis-wedding-new-york.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "요크의 여름"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-25T23:34:15+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-25T14:35:18.188Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-25T23:34:15+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "$60,000 Ahead of the Pce",
+      "term_ko": "PCE 앞두고 6만달러"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-25T23:34:15+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-25T23:34:15+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "0.5 Percentage Points, May Pce",
+      "term_ko": "0.5%p 5월 PCE"
+    },
+    {
+      "term": "Decoding the \"foreign-investor Ants\" Etf",
+      "term_ko": "서학개미 ETF 디코딩"
+    },
+    {
+      "term": "$10 Billion in Bitcoin Options",
+      "term_ko": "비트코인 100억달러 옵션"
+    },
+    {
+      "term": "U.s. First-quarter Growth Rate",
+      "term_ko": "美 1분기 성장률"
+    },
+    {
+      "term": "Kim Jong-seok's Report: Gold Price Drops From 1.1 Million to 870,000",
+      "term_ko": "김종석의 리포트110만→87만 금값"
+    },
+    {
+      "term": "11.4% Over the Past 5 Months",
+      "term_ko": "5달 새 11.4%"
+    },
+    {
+      "term": "12 Years and 8 Months Under a Jeonse Lease",
+      "term_ko": "전세 12년 8개월"
+    },
+    {
+      "term": "Micron Earnings on the New York Stock Market",
+      "term_ko": "뉴욕증시 마이크론 실적"
+    },
+    {
+      "term": "Semiconductor Stocks Rebound on Relief",
+      "term_ko": "안도에 반도체주 반등"
+    },
+    {
+      "term": "Interest Rate Burden: a Wait-and-see Approach",
+      "term_ko": "금리 부담은 관망"
+    },
+    {
+      "term": "㉕ Only Those with Plenty of Cash",
+      "term_ko": "㉕ 현금 부자만"
+    },
+    {
+      "term": "A Sustainable Buyback Ecosystem",
+      "term_ko": "살아남는 바이백 생태계"
+    },
+    {
+      "term": "Sokbodawo Rises, Nasdaq",
+      "term_ko": "속보다우 오르고 나스닥"
+    },
+    {
+      "term": "U.s. Stock Market Falls",
+      "term_ko": "밀렸다 미국 증시"
+    },
+    {
+      "term": "Mixed Performance Amid Rotation Trading Across Sectors",
+      "term_ko": "업종별 순환매에 혼조"
+    },
+    {
+      "term": "At Gwanghwamun / Jo Eun-ah: Samsung Six Leverage Backlash",
+      "term_ko": "광화문에서/조은아삼전닉스 레버리지 역풍"
+    },
+    {
+      "term": "Abl Bio Bets",
+      "term_ko": "ABL 바이오에 대한 투자"
+    },
+    {
+      "term": "Create Us-style Value",
+      "term_ko": "미국식 가치 창출"
+    },
+    {
+      "term": "Make Corrections Even Now",
+      "term_ko": "지금이라도 보완"
+    },
+    {
+      "term": "Maturity: Not Yet",
+      "term_ko": "만기 미"
+    },
+    {
+      "term": "In Line with Expectations",
+      "term_ko": "예상치 부합"
+    },
+    {
+      "term": "Running in Dongtan",
+      "term_ko": "뛴 동탄"
+    },
+    {
+      "term": "The Best in a Long Time",
+      "term_ko": "만에 최고"
+    },
+    {
+      "term": "Taylor Swift Wedding",
+      "term_ko": "테일러 스위프트의 결혼식"
+    },
+    {
+      "term": "A Hot New",
+      "term_ko": "화제의 신작"
+    },
+    {
+      "term": "News Today Micron",
+      "term_ko": "오늘의 뉴스: 마이크론"
+    },
+    {
+      "term": "York Summer",
+      "term_ko": "요크의 여름"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    }
+  ],
+  "translations": {
+    "$60,000 Ahead of the Pce": {
+      "en": "$60,000 Ahead of the Pce",
+      "ko": "PCE 앞두고 6만달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "0.5 Percentage Points, May Pce": {
+      "en": "0.5 Percentage Points, May Pce",
+      "ko": "0.5%p 5월 PCE",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Decoding the \"foreign-investor Ants\" Etf": {
+      "en": "Decoding the \"foreign-investor Ants\" Etf",
+      "ko": "서학개미 ETF 디코딩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "$10 Billion in Bitcoin Options": {
+      "en": "$10 Billion in Bitcoin Options",
+      "ko": "비트코인 100억달러 옵션",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "U.s. First-quarter Growth Rate": {
+      "en": "U.s. First-quarter Growth Rate",
+      "ko": "美 1분기 성장률",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Kim Jong-seok's Report: Gold Price Drops From 1.1 Million to 870,000": {
+      "en": "Kim Jong-seok's Report: Gold Price Drops From 1.1 Million to 870,000",
+      "ko": "김종석의 리포트110만→87만 금값",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "11.4% Over the Past 5 Months": {
+      "en": "11.4% Over the Past 5 Months",
+      "ko": "5달 새 11.4%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "12 Years and 8 Months Under a Jeonse Lease": {
+      "en": "12 Years and 8 Months Under a Jeonse Lease",
+      "ko": "전세 12년 8개월",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Micron Earnings on the New York Stock Market": {
+      "en": "Micron Earnings on the New York Stock Market",
+      "ko": "뉴욕증시 마이크론 실적",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Semiconductor Stocks Rebound on Relief": {
+      "en": "Semiconductor Stocks Rebound on Relief",
+      "ko": "안도에 반도체주 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Interest Rate Burden: a Wait-and-see Approach": {
+      "en": "Interest Rate Burden: a Wait-and-see Approach",
+      "ko": "금리 부담은 관망",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "㉕ Only Those with Plenty of Cash": {
+      "en": "㉕ Only Those with Plenty of Cash",
+      "ko": "㉕ 현금 부자만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "A Sustainable Buyback Ecosystem": {
+      "en": "A Sustainable Buyback Ecosystem",
+      "ko": "살아남는 바이백 생태계",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Sokbodawo Rises, Nasdaq": {
+      "en": "Sokbodawo Rises, Nasdaq",
+      "ko": "속보다우 오르고 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "U.s. Stock Market Falls": {
+      "en": "U.s. Stock Market Falls",
+      "ko": "밀렸다 미국 증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Mixed Performance Amid Rotation Trading Across Sectors": {
+      "en": "Mixed Performance Amid Rotation Trading Across Sectors",
+      "ko": "업종별 순환매에 혼조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "At Gwanghwamun / Jo Eun-ah: Samsung Six Leverage Backlash": {
+      "en": "At Gwanghwamun / Jo Eun-ah: Samsung Six Leverage Backlash",
+      "ko": "광화문에서/조은아삼전닉스 레버리지 역풍",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Abl Bio Bets": {
+      "en": "Abl Bio Bets",
+      "ko": "ABL 바이오에 대한 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Create Us-style Value": {
+      "en": "Create Us-style Value",
+      "ko": "미국식 가치 창출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Make Corrections Even Now": {
+      "en": "Make Corrections Even Now",
+      "ko": "지금이라도 보완",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Maturity: Not Yet": {
+      "en": "Maturity: Not Yet",
+      "ko": "만기 미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "In Line with Expectations": {
+      "en": "In Line with Expectations",
+      "ko": "예상치 부합",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Running in Dongtan": {
+      "en": "Running in Dongtan",
+      "ko": "뛴 동탄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "The Best in a Long Time": {
+      "en": "The Best in a Long Time",
+      "ko": "만에 최고",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Taylor Swift Wedding": {
+      "en": "Taylor Swift Wedding",
+      "ko": "테일러 스위프트의 결혼식",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "A Hot New": {
+      "en": "A Hot New",
+      "ko": "화제의 신작",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "News Today Micron": {
+      "en": "News Today Micron",
+      "ko": "오늘의 뉴스: 마이크론",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "York Summer": {
+      "en": "York Summer",
+      "ko": "요크의 여름",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-25T20:00:13.172Z"
     }
   }
 }
