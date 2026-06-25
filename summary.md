@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-06-25T23:33:54+09:00 (KST)**
+- Generated: **2026-06-26T05:02:20+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -130,12 +130,12 @@
 
 ### AGGRESSIVE (5)
 
-**CJ제일제당** (097950.KS)
+**HD현대마린솔루션** (443060.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.9%**, 20d **-13.0%**; volatility (20d): **unknown**
+- Returns: 5d **-5.2%**, 20d **-6.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=CJ%EC%A0%9C%EC%9D%BC%EC%A0%9C%EB%8B%B9
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EB%A7%88%EB%A6%B0%EC%86%94%EB%A3%A8%EC%85%98
 
 **JB금융지주** (175330.KS)
 
@@ -284,7 +284,7 @@
 **Kimberly-Clark** (KMB)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **7.1%**, 20d **8.4%**; volatility (20d): **unknown**
+- Returns: 5d **6.5%**, 20d **7.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Kimberly-Clark
@@ -300,7 +300,7 @@
 **Micron Technology** (MU)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **11.8%**, 20d **25.6%**; volatility (20d): **unknown**
+- Returns: 5d **16.3%**, 20d **30.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Micron%20Technology
