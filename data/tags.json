@@ -1,1065 +1,425 @@
 {
+  "generatedAt": "2026-06-26T09:24:39.746Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-26",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Bitcoin (BTC) at $59,000",
-      "term_ko": "비트코인BTC 5만 9000달러",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인BTC 5만 9000달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 5만 9,000달러 붕괴...7월 반등 멀어지나",
-              "link": "http://coinreaders.com/244636"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%205%EB%A7%8C%209000%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%205%EB%A7%8C%209000%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 5만 9,000달러 붕괴...7월 반등 멀어지나",
-          "summary": "",
-          "link": "http://coinreaders.com/244636",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bitcoin (btc) at $59,000",
+      "term_ko": "비트코인BTC 5만 9000달러"
     },
     {
       "term": "Two Bond Issuers' Commercial Paper",
-      "term_ko": "채권 2곳 CP",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "채권 2곳 CP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금투협, 하반기 채권·CP 최종호가수익률 보고회사 선정…채권 2곳·CP 1...",
-              "link": "http://www.metroseoul.co.kr/article/20260626500076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B1%84%EA%B6%8C%202%EA%B3%B3%20CP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B1%84%EA%B6%8C%202%EA%B3%B3%20CP"
-      },
-      "top_headlines": [
-        {
-          "title": "금투협, 하반기 채권·CP 최종호가수익률 보고회사 선정…채권 2곳·CP 1...",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260626500076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "채권 2곳 CP"
     },
     {
-      "term": "Buoyed by Micron MU's surge",
-      "term_ko": "마이크론MU 폭등 힘입어",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마이크론MU 폭등 힘입어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"애플(AAPL) 쇼크도 삼켰다\"...다우지수, 마이크론(MU) 폭등 힘입어 '신고...",
-              "link": "http://coinreaders.com/244632"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0MU%20%ED%8F%AD%EB%93%B1%20%ED%9E%98%EC%9E%85%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0MU%20%ED%8F%AD%EB%93%B1%20%ED%9E%98%EC%9E%85%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "\"애플(AAPL) 쇼크도 삼켰다\"...다우지수, 마이크론(MU) 폭등 힘입어 '신고...",
-          "summary": "",
-          "link": "http://coinreaders.com/244632",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Buoyed by Micron Mu's Surge",
+      "term_ko": "마이크론MU 폭등 힘입어"
     },
     {
-      "term": "KOSPI Plummets by Over 8%",
-      "term_ko": "코스피 8%대 급락",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 8%대 급락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피 8%대 급락…사흘 만에 서킷브레이커 재발동",
-              "link": "https://www.hidomin.com/news/articleView.html?idxno=710953"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%208%25%EB%8C%80%20%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%208%25%EB%8C%80%20%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 8%대 급락…사흘 만에 서킷브레이커 재발동",
-          "summary": "",
-          "link": "https://www.hidomin.com/news/articleView.html?idxno=710953",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Plummets by Over 8%",
+      "term_ko": "코스피 8%대 급락"
     },
     {
-      "term": "Heungkuk Securities and 9 other companies",
-      "term_ko": "흥국증권 등 10개사",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "흥국증권 등 10개사",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금투협, '채권수익률 보고사'에 리딩투자·흥국증권 등 10개사 선정",
-              "link": "https://n.news.naver.com/mnews/article/003/0014030229?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9D%A5%EA%B5%AD%EC%A6%9D%EA%B6%8C%20%EB%93%B1%2010%EA%B0%9C%EC%82%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9D%A5%EA%B5%AD%EC%A6%9D%EA%B6%8C%20%EB%93%B1%2010%EA%B0%9C%EC%82%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "금투협, '채권수익률 보고사'에 리딩투자·흥국증권 등 10개사 선정",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/003/0014030229?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Heungkuk Securities and 9 Other Companies",
+      "term_ko": "흥국증권 등 10개사"
     },
     {
-      "term": "Rebound: 4.32% annually",
-      "term_ko": "반등 연 4.32%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반등 연 4.32%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시장금리 상승 속 주담대도 한 달 만에 '반등'…연 4.32%, 0.01%p↑",
-              "link": "https://www.youthdaily.co.kr/news/article.html?no=221727"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%B1%20%EC%97%B0%204.32%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%B1%20%EC%97%B0%204.32%25"
-      },
-      "top_headlines": [
-        {
-          "title": "시장금리 상승 속 주담대도 한 달 만에 '반등'…연 4.32%, 0.01%p↑",
-          "summary": "",
-          "link": "https://www.youthdaily.co.kr/news/article.html?no=221727",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Rebound: 4.32% Annually",
+      "term_ko": "반등 연 4.32%"
     },
     {
-      "term": "Deposit interest rate up 0.01 percentage points from the previous month",
-      "term_ko": "수신금리 전월比 0.01%p",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수신금리 전월比 0.01%p",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "수신금리 전월比 0.01%p↑…가계대출 0.03%p 상승",
-              "link": "https://n.news.naver.com/mnews/article/123/0002385465?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%EC%8B%A0%EA%B8%88%EB%A6%AC%20%EC%A0%84%EC%9B%94%E6%AF%94%200.01%25p",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%EC%8B%A0%EA%B8%88%EB%A6%AC%20%EC%A0%84%EC%9B%94%E6%AF%94%200.01%25p"
-      },
-      "top_headlines": [
-        {
-          "title": "수신금리 전월比 0.01%p↑…가계대출 0.03%p 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002385465?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Deposit Interest Rate Up 0.01 Percentage Points From the Previous Month",
+      "term_ko": "수신금리 전월比 0.01%p"
     },
     {
-      "term": "Household loans rose by 0.03 percentage points",
-      "term_ko": "가계대출 0.03%p 상승",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "가계대출 0.03%p 상승",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "수신금리 전월比 0.01%p↑…가계대출 0.03%p 상승",
-              "link": "https://n.news.naver.com/mnews/article/123/0002385465?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%200.03%25p%20%EC%83%81%EC%8A%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%200.03%25p%20%EC%83%81%EC%8A%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "수신금리 전월比 0.01%p↑…가계대출 0.03%p 상승",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/123/0002385465?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Household Loans Rose by 0.03 Percentage Points",
+      "term_ko": "가계대출 0.03%p 상승"
     },
     {
-      "term": "Tesla Sunrun RenewHome",
-      "term_ko": "테슬라 선런 리뉴홈",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "테슬라 선런 리뉴홈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "테슬라·선런·리뉴홈 삼각 동맹...미국 가정을 16GW 발전소로 만든다",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19388"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%85%8C%EC%8A%AC%EB%9D%BC%20%EC%84%A0%EB%9F%B0%20%EB%A6%AC%EB%89%B4%ED%99%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%85%8C%EC%8A%AC%EB%9D%BC%20%EC%84%A0%EB%9F%B0%20%EB%A6%AC%EB%89%B4%ED%99%88"
-      },
-      "top_headlines": [
-        {
-          "title": "테슬라·선런·리뉴홈 삼각 동맹...미국 가정을 16GW 발전소로 만든다",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19388",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Tesla Sunrun Renewhome",
+      "term_ko": "테슬라 선런 리뉴홈"
     },
     {
       "term": "Circuit Breaker Triggered After Three Days",
-      "term_ko": "사흘 만에 서킷브레이커",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사흘 만에 서킷브레이커",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피 8%대 급락…사흘 만에 서킷브레이커 재발동",
-              "link": "https://www.hidomin.com/news/articleView.html?idxno=710953"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%ED%9D%98%20%EB%A7%8C%EC%97%90%20%EC%84%9C%ED%82%B7%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%ED%9D%98%20%EB%A7%8C%EC%97%90%20%EC%84%9C%ED%82%B7%EB%B8%8C%EB%A0%88%EC%9D%B4%EC%BB%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 8%대 급락…사흘 만에 서킷브레이커 재발동",
-          "summary": "",
-          "link": "https://www.hidomin.com/news/articleView.html?idxno=710953",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사흘 만에 서킷브레이커"
     },
     {
-      "term": "Choi Jong-ho Selected as Head of the Profitability Reporting Company",
-      "term_ko": "최종호가수익률 보고회사 선정",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최종호가수익률 보고회사 선정",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금투협, 하반기 채권·CP 최종호가수익률 보고회사 선정…채권 2곳·CP 1...",
-              "link": "http://www.metroseoul.co.kr/article/20260626500076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EC%A2%85%ED%98%B8%EA%B0%80%EC%88%98%EC%9D%B5%EB%A5%A0%20%EB%B3%B4%EA%B3%A0%ED%9A%8C%EC%82%AC%20%EC%84%A0%EC%A0%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EC%A2%85%ED%98%B8%EA%B0%80%EC%88%98%EC%9D%B5%EB%A5%A0%20%EB%B3%B4%EA%B3%A0%ED%9A%8C%EC%82%AC%20%EC%84%A0%EC%A0%95"
-      },
-      "top_headlines": [
-        {
-          "title": "금투협, 하반기 채권·CP 최종호가수익률 보고회사 선정…채권 2곳·CP 1...",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260626500076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Choi Jong-ho Selected As Head of the Profitability Reporting Company",
+      "term_ko": "최종호가수익률 보고회사 선정"
     },
     {
-      "term": "Can you trust money?",
-      "term_ko": "화폐 믿을 수",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "화폐 믿을 수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“화폐 믿을 수 없다더니”…‘킹달러’의 화려한 부활 [머니+]",
-              "link": "https://www.ekn.kr/web/view.php?key=20260626027476727"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%94%ED%8F%90%20%EB%AF%BF%EC%9D%84%20%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%94%ED%8F%90%20%EB%AF%BF%EC%9D%84%20%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "“화폐 믿을 수 없다더니”…‘킹달러’의 화려한 부활 [머니+]",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260626027476727",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Can You Trust Money?",
+      "term_ko": "화폐 믿을 수"
     },
     {
-      "term": "They said it wouldn't happen, but the \"King Dollar\" is in full swing",
-      "term_ko": "없다더니 킹달러의 화려한",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "없다더니 킹달러의 화려한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“화폐 믿을 수 없다더니”…‘킹달러’의 화려한 부활 [머니+]",
-              "link": "https://www.ekn.kr/web/view.php?key=20260626027476727"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%86%EB%8B%A4%EB%8D%94%EB%8B%88%20%ED%82%B9%EB%8B%AC%EB%9F%AC%EC%9D%98%20%ED%99%94%EB%A0%A4%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%86%EB%8B%A4%EB%8D%94%EB%8B%88%20%ED%82%B9%EB%8B%AC%EB%9F%AC%EC%9D%98%20%ED%99%94%EB%A0%A4%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "“화폐 믿을 수 없다더니”…‘킹달러’의 화려한 부활 [머니+]",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260626027476727",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "They Said It Wouldn't Happen, But the \"king Dollar\" Is in Full Swing",
+      "term_ko": "없다더니 킹달러의 화려한"
     },
     {
-      "term": "Amid rising market interest rates",
-      "term_ko": "시장금리 상승 속",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "시장금리 상승 속",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시장금리 상승 속 주담대도 한 달 만에 '반등'…연 4.32%, 0.01%p↑",
-              "link": "https://www.youthdaily.co.kr/news/article.html?no=221727"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%20%EC%86%8D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8B%9C%EC%9E%A5%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%20%EC%86%8D"
-      },
-      "top_headlines": [
-        {
-          "title": "시장금리 상승 속 주담대도 한 달 만에 '반등'…연 4.32%, 0.01%p↑",
-          "summary": "",
-          "link": "https://www.youthdaily.co.kr/news/article.html?no=221727",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amid Rising Market Interest Rates",
+      "term_ko": "시장금리 상승 속"
     },
     {
-      "term": "Mortgage payments are also due in a month",
-      "term_ko": "주담대도 한 달",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "주담대도 한 달",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "시장금리 상승 속 주담대도 한 달 만에 '반등'…연 4.32%, 0.01%p↑",
-              "link": "https://www.youthdaily.co.kr/news/article.html?no=221727"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BC%EB%8B%B4%EB%8C%80%EB%8F%84%20%ED%95%9C%20%EB%8B%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BC%EB%8B%B4%EB%8C%80%EB%8F%84%20%ED%95%9C%20%EB%8B%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "시장금리 상승 속 주담대도 한 달 만에 '반등'…연 4.32%, 0.01%p↑",
-          "summary": "",
-          "link": "https://www.youthdaily.co.kr/news/article.html?no=221727",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mortgage Payments Are Also Due in a Month",
+      "term_ko": "주담대도 한 달"
     },
     {
-      "term": "Samsung Elec SK",
-      "term_ko": "삼성전자 SK",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Elec SK",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix slip on weak U.S. sentiment",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699116?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Elec%20SK",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Elec%20SK"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix slip on weak U.S. sentiment",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699116?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Elec Sk",
+      "term_ko": "삼성전자 SK"
     },
     {
-      "term": "KOSPI Drops Sharply",
-      "term_ko": "코스피 급락",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI Drops Sharply",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Opening Market] KOSPI Drops Sharply Under Inflation Pressure Amid Won-Do...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272035"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20Drops%20Sharply",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20Drops%20Sharply"
-      },
-      "top_headlines": [
-        {
-          "title": "[Opening Market] KOSPI Drops Sharply Under Inflation Pressure Amid Won-Do...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272035",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Drops Sharply",
+      "term_ko": "코스피 급락"
     },
     {
       "term": "Is a Rebound Slipping Away?",
-      "term_ko": "반등 멀어지나",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반등 멀어지나",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 5만 9,000달러 붕괴...7월 반등 멀어지나",
-              "link": "http://coinreaders.com/244636"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%B1%20%EB%A9%80%EC%96%B4%EC%A7%80%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%B1%20%EB%A9%80%EC%96%B4%EC%A7%80%EB%82%98"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 5만 9,000달러 붕괴...7월 반등 멀어지나",
-          "summary": "",
-          "link": "http://coinreaders.com/244636",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반등 멀어지나"
     },
     {
       "term": "Korea Financial Investment Association: Second Half",
-      "term_ko": "금투협 하반기",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금투협 하반기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금투협, 하반기 채권·CP 최종호가수익률 보고회사 선정…채권 2곳·CP 1...",
-              "link": "http://www.metroseoul.co.kr/article/20260626500076"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%ED%88%AC%ED%98%91%20%ED%95%98%EB%B0%98%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%ED%88%AC%ED%98%91%20%ED%95%98%EB%B0%98%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "금투협, 하반기 채권·CP 최종호가수익률 보고회사 선정…채권 2곳·CP 1...",
-          "summary": "",
-          "link": "http://www.metroseoul.co.kr/article/20260626500076",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "금투협 하반기"
     },
     {
       "term": "Easter Money",
-      "term_ko": "부활 머니",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부활 머니",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“화폐 믿을 수 없다더니”…‘킹달러’의 화려한 부활 [머니+]",
-              "link": "https://www.ekn.kr/web/view.php?key=20260626027476727"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%ED%99%9C%20%EB%A8%B8%EB%8B%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%ED%99%9C%20%EB%A8%B8%EB%8B%88"
-      },
-      "top_headlines": [
-        {
-          "title": "“화폐 믿을 수 없다더니”…‘킹달러’의 화려한 부활 [머니+]",
-          "summary": "",
-          "link": "https://www.ekn.kr/web/view.php?key=20260626027476727",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부활 머니"
     },
     {
-      "term": "Weak U.S Sentiment",
-      "term_ko": "미국의 약한 시장 심리",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Weak U.S Sentiment",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix slip on weak U.S. sentiment",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699116?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Weak%20U.S%20Sentiment",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Weak%20U.S%20Sentiment"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix slip on weak U.S. sentiment",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699116?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Weak U.s Sentiment",
+      "term_ko": "미국의 약한 시장 심리"
     },
     {
       "term": "Slow Letter June",
-      "term_ko": "슬로우 레터 6월호",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Slow Letter June",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Slow Letter: June 26, 2026.",
-              "link": "https://slownews.kr/162249"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Slow%20Letter%20June",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Slow%20Letter%20June"
-      },
-      "top_headlines": [
-        {
-          "title": "Slow Letter: June 26, 2026.",
-          "summary": "",
-          "link": "https://slownews.kr/162249",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "슬로우 레터 6월호"
     },
     {
       "term": "Hynix Slip",
-      "term_ko": "하이닉스 실수",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Hynix Slip",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung Elec, SK hynix slip on weak U.S. sentiment",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699116?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Hynix%20Slip",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Hynix%20Slip"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung Elec, SK hynix slip on weak U.S. sentiment",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699116?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하이닉스 실수"
     },
     {
       "term": "Inflation Pressure",
-      "term_ko": "인플레이션 압력",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Inflation Pressure",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[Opening Market] KOSPI Drops Sharply Under Inflation Pressure Amid Won-Do...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272035"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Inflation%20Pressure",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Inflation%20Pressure"
-      },
-      "top_headlines": [
-        {
-          "title": "[Opening Market] KOSPI Drops Sharply Under Inflation Pressure Amid Won-Do...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272035",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "인플레이션 압력"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Sharp Rise in the Won-Dollar Exchange Rate",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-26T12:34:04+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Sharp Rise in the Won-dollar Exchange Rate",
+      "term_ko": "원달러 환율 급등"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-26T03:35:11.382Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-26T12:34:04+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Bitcoin (btc) at $59,000",
+      "term_ko": "비트코인BTC 5만 9000달러"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-26T12:34:04+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-26T12:34:04+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Two Bond Issuers' Commercial Paper",
+      "term_ko": "채권 2곳 CP"
+    },
+    {
+      "term": "Buoyed by Micron Mu's Surge",
+      "term_ko": "마이크론MU 폭등 힘입어"
+    },
+    {
+      "term": "Kospi Plummets by Over 8%",
+      "term_ko": "코스피 8%대 급락"
+    },
+    {
+      "term": "Heungkuk Securities and 9 Other Companies",
+      "term_ko": "흥국증권 등 10개사"
+    },
+    {
+      "term": "Rebound: 4.32% Annually",
+      "term_ko": "반등 연 4.32%"
+    },
+    {
+      "term": "Deposit Interest Rate Up 0.01 Percentage Points From the Previous Month",
+      "term_ko": "수신금리 전월比 0.01%p"
+    },
+    {
+      "term": "Household Loans Rose by 0.03 Percentage Points",
+      "term_ko": "가계대출 0.03%p 상승"
+    },
+    {
+      "term": "Tesla Sunrun Renewhome",
+      "term_ko": "테슬라 선런 리뉴홈"
+    },
+    {
+      "term": "Circuit Breaker Triggered After Three Days",
+      "term_ko": "사흘 만에 서킷브레이커"
+    },
+    {
+      "term": "Choi Jong-ho Selected As Head of the Profitability Reporting Company",
+      "term_ko": "최종호가수익률 보고회사 선정"
+    },
+    {
+      "term": "Can You Trust Money?",
+      "term_ko": "화폐 믿을 수"
+    },
+    {
+      "term": "They Said It Wouldn't Happen, But the \"king Dollar\" Is in Full Swing",
+      "term_ko": "없다더니 킹달러의 화려한"
+    },
+    {
+      "term": "Amid Rising Market Interest Rates",
+      "term_ko": "시장금리 상승 속"
+    },
+    {
+      "term": "Mortgage Payments Are Also Due in a Month",
+      "term_ko": "주담대도 한 달"
+    },
+    {
+      "term": "Samsung Elec Sk",
+      "term_ko": "삼성전자 SK"
+    },
+    {
+      "term": "Kospi Drops Sharply",
+      "term_ko": "코스피 급락"
+    },
+    {
+      "term": "Is a Rebound Slipping Away?",
+      "term_ko": "반등 멀어지나"
+    },
+    {
+      "term": "Korea Financial Investment Association: Second Half",
+      "term_ko": "금투협 하반기"
+    },
+    {
+      "term": "Easter Money",
+      "term_ko": "부활 머니"
+    },
+    {
+      "term": "Weak U.s Sentiment",
+      "term_ko": "미국의 약한 시장 심리"
+    },
+    {
+      "term": "Slow Letter June",
+      "term_ko": "슬로우 레터 6월호"
+    },
+    {
+      "term": "Hynix Slip",
+      "term_ko": "하이닉스 실수"
+    },
+    {
+      "term": "Inflation Pressure",
+      "term_ko": "인플레이션 압력"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Sharp Rise in the Won-dollar Exchange Rate",
+      "term_ko": "원달러 환율 급등"
+    }
+  ],
+  "translations": {
+    "Bitcoin (btc) at $59,000": {
+      "en": "Bitcoin (btc) at $59,000",
+      "ko": "비트코인BTC 5만 9000달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Two Bond Issuers' Commercial Paper": {
+      "en": "Two Bond Issuers' Commercial Paper",
+      "ko": "채권 2곳 CP",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Buoyed by Micron Mu's Surge": {
+      "en": "Buoyed by Micron Mu's Surge",
+      "ko": "마이크론MU 폭등 힘입어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Kospi Plummets by Over 8%": {
+      "en": "Kospi Plummets by Over 8%",
+      "ko": "코스피 8%대 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Heungkuk Securities and 9 Other Companies": {
+      "en": "Heungkuk Securities and 9 Other Companies",
+      "ko": "흥국증권 등 10개사",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Rebound: 4.32% Annually": {
+      "en": "Rebound: 4.32% Annually",
+      "ko": "반등 연 4.32%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Deposit Interest Rate Up 0.01 Percentage Points From the Previous Month": {
+      "en": "Deposit Interest Rate Up 0.01 Percentage Points From the Previous Month",
+      "ko": "수신금리 전월比 0.01%p",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Household Loans Rose by 0.03 Percentage Points": {
+      "en": "Household Loans Rose by 0.03 Percentage Points",
+      "ko": "가계대출 0.03%p 상승",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Tesla Sunrun Renewhome": {
+      "en": "Tesla Sunrun Renewhome",
+      "ko": "테슬라 선런 리뉴홈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.746Z"
+    },
+    "Circuit Breaker Triggered After Three Days": {
+      "en": "Circuit Breaker Triggered After Three Days",
+      "ko": "사흘 만에 서킷브레이커",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Choi Jong-ho Selected As Head of the Profitability Reporting Company": {
+      "en": "Choi Jong-ho Selected As Head of the Profitability Reporting Company",
+      "ko": "최종호가수익률 보고회사 선정",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Can You Trust Money?": {
+      "en": "Can You Trust Money?",
+      "ko": "화폐 믿을 수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "They Said It Wouldn't Happen, But the \"king Dollar\" Is in Full Swing": {
+      "en": "They Said It Wouldn't Happen, But the \"king Dollar\" Is in Full Swing",
+      "ko": "없다더니 킹달러의 화려한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Amid Rising Market Interest Rates": {
+      "en": "Amid Rising Market Interest Rates",
+      "ko": "시장금리 상승 속",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Mortgage Payments Are Also Due in a Month": {
+      "en": "Mortgage Payments Are Also Due in a Month",
+      "ko": "주담대도 한 달",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Samsung Elec Sk": {
+      "en": "Samsung Elec Sk",
+      "ko": "삼성전자 SK",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Kospi Drops Sharply": {
+      "en": "Kospi Drops Sharply",
+      "ko": "코스피 급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Is a Rebound Slipping Away?": {
+      "en": "Is a Rebound Slipping Away?",
+      "ko": "반등 멀어지나",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Korea Financial Investment Association: Second Half": {
+      "en": "Korea Financial Investment Association: Second Half",
+      "ko": "금투협 하반기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Easter Money": {
+      "en": "Easter Money",
+      "ko": "부활 머니",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Weak U.s Sentiment": {
+      "en": "Weak U.s Sentiment",
+      "ko": "미국의 약한 시장 심리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Slow Letter June": {
+      "en": "Slow Letter June",
+      "ko": "슬로우 레터 6월호",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Hynix Slip": {
+      "en": "Hynix Slip",
+      "ko": "하이닉스 실수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Inflation Pressure": {
+      "en": "Inflation Pressure",
+      "ko": "인플레이션 압력",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Expectations for a Bitcoin Etf": {
+      "en": "Expectations for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
+    },
+    "Sharp Rise in the Won-dollar Exchange Rate": {
+      "en": "Sharp Rise in the Won-dollar Exchange Rate",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-26T09:24:39.747Z"
     }
   }
 }
