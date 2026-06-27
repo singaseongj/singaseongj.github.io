@@ -1,7 +1,7 @@
 {
   "date": "2026-06-27",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
       "term": "KOSPI 200% Rally",
@@ -13,9 +13,10 @@
         "query": "코스피KOSPI 200% 랠리",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -50,9 +51,10 @@
         "query": "AMD 270% 폭등",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -78,6 +80,120 @@
       ]
     },
     {
+      "term": "The AI Boom Bubble",
+      "term_ko": "AI 붐 거품",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI 붐 거품",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-27T17:38:41+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
+              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EB%B6%90%20%EA%B1%B0%ED%92%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EB%B6%90%20%EA%B1%B0%ED%92%88"
+      },
+      "top_headlines": [
+        {
+          "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
+          "summary": "",
+          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "No. 1 in Net Purchases by Foreign Investors",
+      "term_ko": "서학개미 순매수 1위",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "서학개미 순매수 1위",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-27T17:38:41+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
+              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%88%9C%EB%A7%A4%EC%88%98%201%EC%9C%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%88%9C%EB%A7%A4%EC%88%98%201%EC%9C%84"
+      },
+      "top_headlines": [
+        {
+          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "SpaceX, the 7th of next month",
+      "term_ko": "스페이스X 내달 7일",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "스페이스X 내달 7일",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-27T17:38:41+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
+              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%B4%EB%8B%AC%207%EC%9D%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%B4%EB%8B%AC%207%EC%9D%BC"
+      },
+      "top_headlines": [
+        {
+          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
       "term": "U.S. Stock Market: 2 Weeks",
       "term_ko": "美 증시 2주",
       "significance_score": 336,
@@ -87,9 +203,10 @@
         "query": "美 증시 2주",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -115,36 +232,37 @@
       ]
     },
     {
-      "term": "9th Day of the Iran Ceasefire",
-      "term_ko": "이란 휴전 9일",
+      "term": "Household Debt Hits 4 Trillion Due to 'All-In' Borrowing",
+      "term_ko": "영끌에 가계대출 4조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "이란 휴전 9일",
+        "query": "영끌에 가계대출 4조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美·이란 휴전 9일 만에 재충돌···호르무즈 정상화 기대에 제동",
-              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422035"
+              "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
+              "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%9E%80%20%ED%9C%B4%EC%A0%84%209%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%9E%80%20%ED%9C%B4%EC%A0%84%209%EC%9D%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EB%81%8C%EC%97%90%20%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%204%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EB%81%8C%EC%97%90%20%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%204%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "美·이란 휴전 9일 만에 재충돌···호르무즈 정상화 기대에 제동",
+          "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
           "summary": "",
-          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422035",
+          "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -152,36 +270,37 @@
       ]
     },
     {
-      "term": "Gold Prices: 24K Gold",
-      "term_ko": "금시세 금값 24K",
+      "term": "Key Domestic Financial Events: June 29–July 3",
+      "term_ko": "국내 주요 금융일정6.29~7.3",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금시세 금값 24K",
+        "query": "국내 주요 금융일정6.29~7.3",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[금시세] 금값 24K 순금 한 돈 88만원",
-              "link": "https://www.gametoc.co.kr/news/articleView.html?idxno=109551"
+              "title": "이번주 국내 주요 금융일정(6.29~7.3)",
+              "link": "https://www.newspim.com/news/view/20260626000900"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%8B%9C%EC%84%B8%20%EA%B8%88%EA%B0%92%2024K",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%8B%9C%EC%84%B8%20%EA%B8%88%EA%B0%92%2024K"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.29~7.3",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.29~7.3"
       },
       "top_headlines": [
         {
-          "title": "[금시세] 금값 24K 순금 한 돈 88만원",
+          "title": "이번주 국내 주요 금융일정(6.29~7.3)",
           "summary": "",
-          "link": "https://www.gametoc.co.kr/news/articleView.html?idxno=109551",
+          "link": "https://www.newspim.com/news/view/20260626000900",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -189,36 +308,37 @@
       ]
     },
     {
-      "term": "880,000 won per don",
-      "term_ko": "한 돈 88만원",
+      "term": "They said the maximum was 8% per year, but...",
+      "term_ko": "최고 연 8%라더니",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "한 돈 88만원",
+        "query": "최고 연 8%라더니",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "[금시세] 금값 24K 순금 한 돈 88만원",
-              "link": "https://www.gametoc.co.kr/news/articleView.html?idxno=109551"
+              "title": "“최고 연 8%라더니”…청년미래적금, 우대금리 문턱에 청년들 ‘한숨’...",
+              "link": "https://n.news.naver.com/mnews/article/138/0002232302?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%20%EB%8F%88%2088%EB%A7%8C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%20%EB%8F%88%2088%EB%A7%8C%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%208%25%EB%9D%BC%EB%8D%94%EB%8B%88",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%208%25%EB%9D%BC%EB%8D%94%EB%8B%88"
       },
       "top_headlines": [
         {
-          "title": "[금시세] 금값 24K 순금 한 돈 88만원",
+          "title": "“최고 연 8%라더니”…청년미래적금, 우대금리 문턱에 청년들 ‘한숨’...",
           "summary": "",
-          "link": "https://www.gametoc.co.kr/news/articleView.html?idxno=109551",
+          "link": "https://n.news.naver.com/mnews/article/138/0002232302?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -226,44 +346,7 @@
       ]
     },
     {
-      "term": "Market Expected to Reach the 9,500 Level Next Week",
-      "term_ko": "장세 다음주 9500선까지",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "장세 다음주 9500선까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“코스피 롤러코스터 장세”…다음주 9500선까지 오른다는데",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699516?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A5%EC%84%B8%20%EB%8B%A4%EC%9D%8C%EC%A3%BC%209500%EC%84%A0%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A5%EC%84%B8%20%EB%8B%A4%EC%9D%8C%EC%A3%BC%209500%EC%84%A0%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "“코스피 롤러코스터 장세”…다음주 9500선까지 오른다는데",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699516?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Shaken by Overheating Concerns",
+      "term": "Shaken by Concerns Over Overheating",
       "term_ko": "과열 부담에 흔들",
       "significance_score": 322,
       "mentions": 160,
@@ -272,9 +355,10 @@
         "query": "과열 부담에 흔들",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -300,7 +384,7 @@
       ]
     },
     {
-      "term": "How Far Will the Domino Effect of the Plunge Go?",
+      "term": "How Far Will the Domino Effect of Plunges Go?",
       "term_ko": "폭락 도미노 어디까지",
       "significance_score": 322,
       "mentions": 160,
@@ -309,9 +393,10 @@
         "query": "폭락 도미노 어디까지",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -346,9 +431,10 @@
         "query": "뉴욕증시 기술주 매도세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -383,9 +469,10 @@
         "query": "확산 속 연쇄",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -411,36 +498,37 @@
       ]
     },
     {
-      "term": "Another Clash in the Strait of Hormuz",
-      "term_ko": "만에 재충돌 호르무즈",
+      "term": "It's no use earning foreign currency.",
+      "term_ko": "외화 벌어와도 소용없네",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만에 재충돌 호르무즈",
+        "query": "외화 벌어와도 소용없네",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美·이란 휴전 9일 만에 재충돌···호르무즈 정상화 기대에 제동",
-              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422035"
+              "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
+              "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%20%EC%9E%AC%EC%B6%A9%EB%8F%8C%20%ED%98%B8%EB%A5%B4%EB%AC%B4%EC%A6%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%20%EC%9E%AC%EC%B6%A9%EB%8F%8C%20%ED%98%B8%EB%A5%B4%EB%AC%B4%EC%A6%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%ED%99%94%20%EB%B2%8C%EC%96%B4%EC%99%80%EB%8F%84%20%EC%86%8C%EC%9A%A9%EC%97%86%EB%84%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%ED%99%94%20%EB%B2%8C%EC%96%B4%EC%99%80%EB%8F%84%20%EC%86%8C%EC%9A%A9%EC%97%86%EB%84%A4"
       },
       "top_headlines": [
         {
-          "title": "美·이란 휴전 9일 만에 재충돌···호르무즈 정상화 기대에 제동",
+          "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
           "summary": "",
-          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422035",
+          "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -448,36 +536,37 @@
       ]
     },
     {
-      "term": "A Setback to Hopes for Normalization",
-      "term_ko": "정상화 기대에 제동",
+      "term": "Lee Ho-yeon's D-Tox Debt Investment",
+      "term_ko": "이호연의 D톡스 빚투",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "정상화 기대에 제동",
+        "query": "이호연의 D톡스 빚투",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "美·이란 휴전 9일 만에 재충돌···호르무즈 정상화 기대에 제동",
-              "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422035"
+              "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
+              "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%83%81%ED%99%94%20%EA%B8%B0%EB%8C%80%EC%97%90%20%EC%A0%9C%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%83%81%ED%99%94%20%EA%B8%B0%EB%8C%80%EC%97%90%20%EC%A0%9C%EB%8F%99"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%98%B8%EC%97%B0%EC%9D%98%20D%ED%86%A1%EC%8A%A4%20%EB%B9%9A%ED%88%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%98%B8%EC%97%B0%EC%9D%98%20D%ED%86%A1%EC%8A%A4%20%EB%B9%9A%ED%88%AC"
       },
       "top_headlines": [
         {
-          "title": "美·이란 휴전 9일 만에 재충돌···호르무즈 정상화 기대에 제동",
+          "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
           "summary": "",
-          "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=422035",
+          "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -485,36 +574,37 @@
       ]
     },
     {
-      "term": "Investing in China Again",
-      "term_ko": "중국 투자 다시",
+      "term": "Blowoff Before Collapse",
+      "term_ko": "붕괴 전 블로오프",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "중국 투자 다시",
+        "query": "붕괴 전 블로오프",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "중국 투자, 다시 기회의 창 열리나",
-              "link": "https://www.dongponews.net/news/articleView.html?idxno=58998"
+              "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
+              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EA%B5%AD%20%ED%88%AC%EC%9E%90%20%EB%8B%A4%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EA%B5%AD%20%ED%88%AC%EC%9E%90%20%EB%8B%A4%EC%8B%9C"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%95%EA%B4%B4%20%EC%A0%84%20%EB%B8%94%EB%A1%9C%EC%98%A4%ED%94%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%95%EA%B4%B4%20%EC%A0%84%20%EB%B8%94%EB%A1%9C%EC%98%A4%ED%94%84"
       },
       "top_headlines": [
         {
-          "title": "중국 투자, 다시 기회의 창 열리나",
+          "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
           "summary": "",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=58998",
+          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -522,36 +612,37 @@
       ]
     },
     {
-      "term": "Is a window of opportunity opening?",
-      "term_ko": "기회의 창 열리나",
+      "term": "It will end spectacularly",
+      "term_ko": "국면으로 화려하게 끝날",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "기회의 창 열리나",
+        "query": "국면으로 화려하게 끝날",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "중국 투자, 다시 기회의 창 열리나",
-              "link": "https://www.dongponews.net/news/articleView.html?idxno=58998"
+              "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
+              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%ED%9A%8C%EC%9D%98%20%EC%B0%BD%20%EC%97%B4%EB%A6%AC%EB%82%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%ED%9A%8C%EC%9D%98%20%EC%B0%BD%20%EC%97%B4%EB%A6%AC%EB%82%98"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%A9%B4%EC%9C%BC%EB%A1%9C%20%ED%99%94%EB%A0%A4%ED%95%98%EA%B2%8C%20%EB%81%9D%EB%82%A0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%A9%B4%EC%9C%BC%EB%A1%9C%20%ED%99%94%EB%A0%A4%ED%95%98%EA%B2%8C%20%EB%81%9D%EB%82%A0"
       },
       "top_headlines": [
         {
-          "title": "중국 투자, 다시 기회의 창 열리나",
+          "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
           "summary": "",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=58998",
+          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -559,110 +650,37 @@
       ]
     },
     {
-      "term": "None. Middle-income households can afford it.",
-      "term_ko": "없네 중위소득 매수가능",
-      "significance_score": 322,
+      "term": "To be included in the Nasdaq 100",
+      "term_ko": "나스닥100 편입된다",
+      "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "없네 중위소득 매수가능",
+        "query": "나스닥100 편입된다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“월급 680만원인데 턱도 없네”…중위소득 매수가능 서울 아파트 ‘고...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699519?sid=101"
+              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
+              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%86%EB%84%A4%20%EC%A4%91%EC%9C%84%EC%86%8C%EB%93%9D%20%EB%A7%A4%EC%88%98%EA%B0%80%EB%8A%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%86%EB%84%A4%20%EC%A4%91%EC%9C%84%EC%86%8C%EB%93%9D%20%EB%A7%A4%EC%88%98%EA%B0%80%EB%8A%A5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5100%20%ED%8E%B8%EC%9E%85%EB%90%9C%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5100%20%ED%8E%B8%EC%9E%85%EB%90%9C%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "“월급 680만원인데 턱도 없네”…중위소득 매수가능 서울 아파트 ‘고...",
+          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699519?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "South Korea and the U.S. Raise Interest Rates in Tandem",
-      "term_ko": "한미 나란히 금리",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한미 나란히 금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한미 나란히 금리 인상각?…오건영 \"핵심-위성 포트폴리오 짜라\"[경제적...",
-              "link": "https://n.news.naver.com/mnews/article/079/0004162361?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EB%AF%B8%20%EB%82%98%EB%9E%80%ED%9E%88%20%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EB%AF%B8%20%EB%82%98%EB%9E%80%ED%9E%88%20%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "한미 나란히 금리 인상각?…오건영 \"핵심-위성 포트폴리오 짜라\"[경제적...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/079/0004162361?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "In-sang-gak Oh Geon-young: Core-Satellite",
-      "term_ko": "인상각 오건영 핵심-위성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인상각 오건영 핵심-위성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "한미 나란히 금리 인상각?…오건영 \"핵심-위성 포트폴리오 짜라\"[경제적...",
-              "link": "https://n.news.naver.com/mnews/article/079/0004162361?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%83%81%EA%B0%81%20%EC%98%A4%EA%B1%B4%EC%98%81%20%ED%95%B5%EC%8B%AC-%EC%9C%84%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%83%81%EA%B0%81%20%EC%98%A4%EA%B1%B4%EC%98%81%20%ED%95%B5%EC%8B%AC-%EC%9C%84%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "한미 나란히 금리 인상각?…오건영 \"핵심-위성 포트폴리오 짜라\"[경제적...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/079/0004162361?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -679,9 +697,10 @@
         "query": "뒤 4%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -716,9 +735,10 @@
         "query": "배경은 개미",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -744,7 +764,7 @@
       ]
     },
     {
-      "term": "Big Tech Variables",
+      "term": "Big Tech as a Variable",
       "term_ko": "빅테크 변수",
       "significance_score": 280,
       "mentions": 160,
@@ -753,9 +773,10 @@
         "query": "빅테크 변수",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -790,9 +811,10 @@
         "query": "폭락 적신호",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -818,175 +840,42 @@
       ]
     },
     {
-      "term": "Apartments in Seoul",
-      "term_ko": "서울 아파트",
-      "significance_score": 280,
-      "mentions": 524,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서울 아파트",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-19",
-              "timestamp": 1781794800000,
-              "value": 85.61797
-            },
-            {
-              "period": "2026-06-20",
-              "timestamp": 1781881200000,
-              "value": 87.19101
-            },
-            {
-              "period": "2026-06-21",
-              "timestamp": 1781967600000,
-              "value": 95.95505
-            },
-            {
-              "period": "2026-06-22",
-              "timestamp": 1782054000000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-23",
-              "timestamp": 1782140400000,
-              "value": 91.01123
-            },
-            {
-              "period": "2026-06-24",
-              "timestamp": 1782226800000,
-              "value": 79.77528
-            },
-            {
-              "period": "2026-06-25",
-              "timestamp": 1782313200000,
-              "value": 86.29213
-            },
-            {
-              "period": "2026-06-26",
-              "timestamp": 1782399600000,
-              "value": 70.78651
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "“월급 680만원인데 턱도 없네”…중위소득 매수가능 서울 아파트 ‘고...",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699519?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%95%84%ED%8C%8C%ED%8A%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "“월급 680만원인데 턱도 없네”…중위소득 매수가능 서울 아파트 ‘고...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699519?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 523.8202,
-        "weekly_average_volume": 87.3034,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.013038,
-        "time_weight": 0.027782,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1782399600000
-      }
-    },
-    {
-      "term": "The KOSPI Roller Coaster",
-      "term_ko": "코스피 롤러코스터",
+      "term": "Soaring Exchange Rates",
+      "term_ko": "치솟는 환율",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스피 롤러코스터",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-26",
-              "timestamp": 1782399600000,
-              "value": 100
-            }
-          ]
-        },
+        "query": "치솟는 환율",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
-              "title": "“코스피 롤러코스터 장세”…다음주 9500선까지 오른다는데",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699516?sid=101"
+              "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
+              "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%98%EC%86%9F%EB%8A%94%20%ED%99%98%EC%9C%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%98%EC%86%9F%EB%8A%94%20%ED%99%98%EC%9C%A8"
       },
       "top_headlines": [
         {
-          "title": "“코스피 롤러코스터 장세”…다음주 9500선까지 오른다는데",
+          "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699516?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.027782,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1782399600000
-      }
+      ]
     },
     {
       "term": "Wall Street Ends",
@@ -998,9 +887,10 @@
         "query": "Wall Street Ends",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1035,9 +925,10 @@
         "query": "Fed Rate Outlook",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ],
           "sample": [
             {
@@ -1063,80 +954,6 @@
       ]
     },
     {
-      "term": "A.I.s Rough Summer",
-      "term_ko": "AI의 힘든 여름",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "A.I.s Rough Summer",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Investors Pile On as A.I.’s Rough Summer Continues",
-              "link": "https://www.nytimes.com/2026/06/26/business/dealbook/ai-openai-ipo-slump.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=A.I.s%20Rough%20Summer",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=A.I.s%20Rough%20Summer"
-      },
-      "top_headlines": [
-        {
-          "title": "Investors Pile On as A.I.’s Rough Summer Continues",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/26/business/dealbook/ai-openai-ipo-slump.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Investors Pile",
-      "term_ko": "투자자들이 몰려들다",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investors Pile",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T11:58:44+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "Investors Pile On as A.I.’s Rough Summer Continues",
-              "link": "https://www.nytimes.com/2026/06/26/business/dealbook/ai-openai-ipo-slump.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investors%20Pile",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investors%20Pile"
-      },
-      "top_headlines": [
-        {
-          "title": "Investors Pile On as A.I.’s Rough Summer Continues",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/26/business/dealbook/ai-openai-ipo-slump.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
       "term": "AI chip demand surge",
       "term_ko": "AI 칩 수요 급증",
       "significance_score": 120,
@@ -1146,9 +963,10 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1168,9 +986,10 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-06-27T11:58:44+09:00",
+          "last_updated": "2026-06-27T17:38:41+09:00",
           "fallback_sources": [
-            "trend_log"
+            "trend_log",
+            "default_fallback"
           ]
         }
       },
@@ -1179,33 +998,81 @@
         "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
       },
       "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-27T17:38:41+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Expectations for a Bitcoin ETF",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-27T17:38:41+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-06-27T02:59:47.199Z",
+    "generated_at": "2026-06-27T08:39:45.875Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-27T11:58:44+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-06-27T17:38:41+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-06-27T11:58:44+09:00",
+      "last_updated": "2026-06-27T17:38:41+09:00",
       "fallback_sources": [
-        "trend_log"
+        "trend_log",
+        "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-06-27T11:58:44+09:00",
+        "lastUpdated": "2026-06-27T17:38:41+09:00",
         "fallbackSources": [
-          "trend_log"
+          "trend_log",
+          "default_fallback"
         ]
       }
     }
