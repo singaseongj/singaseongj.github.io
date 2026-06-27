@@ -1,1080 +1,425 @@
 {
+  "generatedAt": "2026-06-27T13:31:41.537Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-27",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "KOSPI 200% Rally",
-      "term_ko": "코스피KOSPI 200% 랠리",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피KOSPI 200% 랠리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피(KOSPI), 200% 랠리 배경은 개미 광풍?...미국 빅테크 변수 터지자...",
-              "link": "http://coinreaders.com/244828"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BCKOSPI%20200%25%20%EB%9E%A0%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BCKOSPI%20200%25%20%EB%9E%A0%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피(KOSPI), 200% 랠리 배경은 개미 광풍?...미국 빅테크 변수 터지자...",
-          "summary": "",
-          "link": "http://coinreaders.com/244828",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi 200% Rally",
+      "term_ko": "코스피KOSPI 200% 랠리"
     },
     {
-      "term": "AMD Soars 270%",
-      "term_ko": "AMD 270% 폭등",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AMD 270% 폭등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AMD, 270% 폭등 뒤 4% 급락...인공지능(AI) 과열 부담에 '흔들'",
-              "link": "http://coinreaders.com/244825"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AMD%20270%25%20%ED%8F%AD%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AMD%20270%25%20%ED%8F%AD%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "AMD, 270% 폭등 뒤 4% 급락...인공지능(AI) 과열 부담에 '흔들'",
-          "summary": "",
-          "link": "http://coinreaders.com/244825",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Amd Soars 270%",
+      "term_ko": "AMD 270% 폭등"
     },
     {
-      "term": "The AI Boom Bubble",
-      "term_ko": "AI 붐 거품",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI 붐 거품",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20%EB%B6%90%20%EA%B1%B0%ED%92%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20%EB%B6%90%20%EA%B1%B0%ED%92%88"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
-          "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Ai Boom Bubble",
+      "term_ko": "AI 붐 거품"
     },
     {
       "term": "No. 1 in Net Purchases by Foreign Investors",
-      "term_ko": "서학개미 순매수 1위",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서학개미 순매수 1위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%88%9C%EB%A7%A4%EC%88%98%201%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%88%9C%EB%A7%A4%EC%88%98%201%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서학개미 순매수 1위"
     },
     {
-      "term": "SpaceX, the 7th of next month",
-      "term_ko": "스페이스X 내달 7일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스페이스X 내달 7일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%B4%EB%8B%AC%207%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%B4%EB%8B%AC%207%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex, the 7th of Next Month",
+      "term_ko": "스페이스X 내달 7일"
     },
     {
-      "term": "U.S. Stock Market: 2 Weeks",
-      "term_ko": "美 증시 2주",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 증시 2주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 증시, 2주 저점 추락...반도체發 폭락 도미노, 어디까지 가나?",
-              "link": "http://coinreaders.com/244812"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EC%A6%9D%EC%8B%9C%202%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EC%A6%9D%EC%8B%9C%202%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "美 증시, 2주 저점 추락...반도체發 폭락 도미노, 어디까지 가나?",
-          "summary": "",
-          "link": "http://coinreaders.com/244812",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Stock Market: 2 Weeks",
+      "term_ko": "美 증시 2주"
     },
     {
-      "term": "Household Debt Hits 4 Trillion Due to 'All-In' Borrowing",
-      "term_ko": "영끌에 가계대출 4조",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "영끌에 가계대출 4조",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
-              "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%81%EB%81%8C%EC%97%90%20%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%204%EC%A1%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%81%EB%81%8C%EC%97%90%20%EA%B0%80%EA%B3%84%EB%8C%80%EC%B6%9C%204%EC%A1%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Household Debt Hits 4 Trillion Due to 'all-in' Borrowing",
+      "term_ko": "영끌에 가계대출 4조"
     },
     {
-      "term": "Key Domestic Financial Events: June 29–July 3",
-      "term_ko": "국내 주요 금융일정6.29~7.3",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국내 주요 금융일정6.29~7.3",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "이번주 국내 주요 금융일정(6.29~7.3)",
-              "link": "https://www.newspim.com/news/view/20260626000900"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.29~7.3",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%82%B4%20%EC%A3%BC%EC%9A%94%20%EA%B8%88%EC%9C%B5%EC%9D%BC%EC%A0%956.29~7.3"
-      },
-      "top_headlines": [
-        {
-          "title": "이번주 국내 주요 금융일정(6.29~7.3)",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260626000900",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Key Domestic Financial Events: June 29–july 3",
+      "term_ko": "국내 주요 금융일정6.29~7.3"
     },
     {
-      "term": "They said the maximum was 8% per year, but...",
-      "term_ko": "최고 연 8%라더니",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고 연 8%라더니",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“최고 연 8%라더니”…청년미래적금, 우대금리 문턱에 청년들 ‘한숨’...",
-              "link": "https://n.news.naver.com/mnews/article/138/0002232302?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%208%25%EB%9D%BC%EB%8D%94%EB%8B%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%20%EC%97%B0%208%25%EB%9D%BC%EB%8D%94%EB%8B%88"
-      },
-      "top_headlines": [
-        {
-          "title": "“최고 연 8%라더니”…청년미래적금, 우대금리 문턱에 청년들 ‘한숨’...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002232302?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "They Said the Maximum Was 8% Per Year, But...",
+      "term_ko": "최고 연 8%라더니"
     },
     {
       "term": "Shaken by Concerns Over Overheating",
-      "term_ko": "과열 부담에 흔들",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "과열 부담에 흔들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AMD, 270% 폭등 뒤 4% 급락...인공지능(AI) 과열 부담에 '흔들'",
-              "link": "http://coinreaders.com/244825"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%BC%EC%97%B4%20%EB%B6%80%EB%8B%B4%EC%97%90%20%ED%9D%94%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%BC%EC%97%B4%20%EB%B6%80%EB%8B%B4%EC%97%90%20%ED%9D%94%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "AMD, 270% 폭등 뒤 4% 급락...인공지능(AI) 과열 부담에 '흔들'",
-          "summary": "",
-          "link": "http://coinreaders.com/244825",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "과열 부담에 흔들"
     },
     {
       "term": "How Far Will the Domino Effect of Plunges Go?",
-      "term_ko": "폭락 도미노 어디까지",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "폭락 도미노 어디까지",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "美 증시, 2주 저점 추락...반도체發 폭락 도미노, 어디까지 가나?",
-              "link": "http://coinreaders.com/244812"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EB%9D%BD%20%EB%8F%84%EB%AF%B8%EB%85%B8%20%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EB%9D%BD%20%EB%8F%84%EB%AF%B8%EB%85%B8%20%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80"
-      },
-      "top_headlines": [
-        {
-          "title": "美 증시, 2주 저점 추락...반도체發 폭락 도미노, 어디까지 가나?",
-          "summary": "",
-          "link": "http://coinreaders.com/244812",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "폭락 도미노 어디까지"
     },
     {
       "term": "Selling Pressure on Tech Stocks in the New York Stock Market",
-      "term_ko": "뉴욕증시 기술주 매도세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 기술주 매도세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 기술주 매도세 확산 속 연쇄 폭락 '적신호'",
-              "link": "http://coinreaders.com/244743"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EA%B8%B0%EC%88%A0%EC%A3%BC%20%EB%A7%A4%EB%8F%84%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20%EA%B8%B0%EC%88%A0%EC%A3%BC%20%EB%A7%A4%EB%8F%84%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 기술주 매도세 확산 속 연쇄 폭락 '적신호'",
-          "summary": "",
-          "link": "http://coinreaders.com/244743",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕증시 기술주 매도세"
     },
     {
       "term": "A Chain Reaction Amid the Spread",
-      "term_ko": "확산 속 연쇄",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "확산 속 연쇄",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 기술주 매도세 확산 속 연쇄 폭락 '적신호'",
-              "link": "http://coinreaders.com/244743"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EC%82%B0%20%EC%86%8D%20%EC%97%B0%EC%87%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EC%82%B0%20%EC%86%8D%20%EC%97%B0%EC%87%84"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 기술주 매도세 확산 속 연쇄 폭락 '적신호'",
-          "summary": "",
-          "link": "http://coinreaders.com/244743",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "확산 속 연쇄"
     },
     {
-      "term": "It's no use earning foreign currency.",
-      "term_ko": "외화 벌어와도 소용없네",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "외화 벌어와도 소용없네",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
-              "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%99%B8%ED%99%94%20%EB%B2%8C%EC%96%B4%EC%99%80%EB%8F%84%20%EC%86%8C%EC%9A%A9%EC%97%86%EB%84%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%99%B8%ED%99%94%20%EB%B2%8C%EC%96%B4%EC%99%80%EB%8F%84%20%EC%86%8C%EC%9A%A9%EC%97%86%EB%84%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It's No Use Earning Foreign Currency.",
+      "term_ko": "외화 벌어와도 소용없네"
     },
     {
-      "term": "Lee Ho-yeon's D-Tox Debt Investment",
-      "term_ko": "이호연의 D톡스 빚투",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이호연의 D톡스 빚투",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
-              "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%ED%98%B8%EC%97%B0%EC%9D%98%20D%ED%86%A1%EC%8A%A4%20%EB%B9%9A%ED%88%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%ED%98%B8%EC%97%B0%EC%9D%98%20D%ED%86%A1%EC%8A%A4%20%EB%B9%9A%ED%88%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "[이호연의 D톡스] 빚투·영끌에 가계대출 4조 넘게 늘어…신용대출이 주...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/138/0002232303?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lee Ho-yeon's D-tox Debt Investment",
+      "term_ko": "이호연의 D톡스 빚투"
     },
     {
       "term": "Blowoff Before Collapse",
-      "term_ko": "붕괴 전 블로오프",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "붕괴 전 블로오프",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%95%EA%B4%B4%20%EC%A0%84%20%EB%B8%94%EB%A1%9C%EC%98%A4%ED%94%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%95%EA%B4%B4%20%EC%A0%84%20%EB%B8%94%EB%A1%9C%EC%98%A4%ED%94%84"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
-          "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "붕괴 전 블로오프"
     },
     {
-      "term": "It will end spectacularly",
-      "term_ko": "국면으로 화려하게 끝날",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "국면으로 화려하게 끝날",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
-              "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B5%AD%EB%A9%B4%EC%9C%BC%EB%A1%9C%20%ED%99%94%EB%A0%A4%ED%95%98%EA%B2%8C%20%EB%81%9D%EB%82%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B5%AD%EB%A9%B4%EC%9C%BC%EB%A1%9C%20%ED%99%94%EB%A0%A4%ED%95%98%EA%B2%8C%20%EB%81%9D%EB%82%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "AI 붐, 거품 붕괴 전 '블로오프 국면'으로 화려하게 끝날 듯",
-          "summary": "",
-          "link": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=52986",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It Will End Spectacularly",
+      "term_ko": "국면으로 화려하게 끝날"
     },
     {
-      "term": "To be included in the Nasdaq 100",
-      "term_ko": "나스닥100 편입된다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥100 편입된다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5100%20%ED%8E%B8%EC%9E%85%EB%90%9C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5100%20%ED%8E%B8%EC%9E%85%EB%90%9C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "To Be Included in the Nasdaq 100",
+      "term_ko": "나스닥100 편입된다"
     },
     {
-      "term": "the remaining 4%",
-      "term_ko": "뒤 4%",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뒤 4%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "AMD, 270% 폭등 뒤 4% 급락...인공지능(AI) 과열 부담에 '흔들'",
-              "link": "http://coinreaders.com/244825"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%92%A4%204%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%92%A4%204%25"
-      },
-      "top_headlines": [
-        {
-          "title": "AMD, 270% 폭등 뒤 4% 급락...인공지능(AI) 과열 부담에 '흔들'",
-          "summary": "",
-          "link": "http://coinreaders.com/244825",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Remaining 4%",
+      "term_ko": "뒤 4%"
     },
     {
-      "term": "The background is an ant",
-      "term_ko": "배경은 개미",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "배경은 개미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피(KOSPI), 200% 랠리 배경은 개미 광풍?...미국 빅테크 변수 터지자...",
-              "link": "http://coinreaders.com/244828"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%B0%EA%B2%BD%EC%9D%80%20%EA%B0%9C%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%B0%EA%B2%BD%EC%9D%80%20%EA%B0%9C%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피(KOSPI), 200% 랠리 배경은 개미 광풍?...미국 빅테크 변수 터지자...",
-          "summary": "",
-          "link": "http://coinreaders.com/244828",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Background Is an Ant",
+      "term_ko": "배경은 개미"
     },
     {
-      "term": "Big Tech as a Variable",
-      "term_ko": "빅테크 변수",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빅테크 변수",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "코스피(KOSPI), 200% 랠리 배경은 개미 광풍?...미국 빅테크 변수 터지자...",
-              "link": "http://coinreaders.com/244828"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%85%ED%85%8C%ED%81%AC%20%EB%B3%80%EC%88%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%85%ED%85%8C%ED%81%AC%20%EB%B3%80%EC%88%98"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피(KOSPI), 200% 랠리 배경은 개미 광풍?...미국 빅테크 변수 터지자...",
-          "summary": "",
-          "link": "http://coinreaders.com/244828",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Big Tech As a Variable",
+      "term_ko": "빅테크 변수"
     },
     {
       "term": "Warning Signs of a Sharp Drop",
-      "term_ko": "폭락 적신호",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "폭락 적신호",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 기술주 매도세 확산 속 연쇄 폭락 '적신호'",
-              "link": "http://coinreaders.com/244743"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AD%EB%9D%BD%20%EC%A0%81%EC%8B%A0%ED%98%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AD%EB%9D%BD%20%EC%A0%81%EC%8B%A0%ED%98%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 기술주 매도세 확산 속 연쇄 폭락 '적신호'",
-          "summary": "",
-          "link": "http://coinreaders.com/244743",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "폭락 적신호"
     },
     {
       "term": "Soaring Exchange Rates",
-      "term_ko": "치솟는 환율",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "치솟는 환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
-              "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B9%98%EC%86%9F%EB%8A%94%20%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B9%98%EC%86%9F%EB%8A%94%20%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "삼전닉스 역대급 실적으로 외화 벌어와도 소용없네…치솟는 환율 어디까...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005782192?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "치솟는 환율"
     },
     {
       "term": "Wall Street Ends",
-      "term_ko": "월스트리트 장 마감",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wall Street Ends",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Ends Lower as AI Stocks Drag Markets, Fed Rate Outlook Shifts",
-              "link": "https://www.econotimes.com/Wall-Street-Ends-Lower-as-AI-Stocks-Drag-Markets-Fed-Rate-Outlook-Shifts-1745301"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wall%20Street%20Ends",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wall%20Street%20Ends"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Ends Lower as AI Stocks Drag Markets, Fed Rate Outlook Shifts",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Ends-Lower-as-AI-Stocks-Drag-Markets-Fed-Rate-Outlook-Shifts-1745301",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "월스트리트 장 마감"
     },
     {
       "term": "Fed Rate Outlook",
-      "term_ko": "연준 금리 전망",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Fed Rate Outlook",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Wall Street Ends Lower as AI Stocks Drag Markets, Fed Rate Outlook Shifts",
-              "link": "https://www.econotimes.com/Wall-Street-Ends-Lower-as-AI-Stocks-Drag-Markets-Fed-Rate-Outlook-Shifts-1745301"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fed%20Rate%20Outlook",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fed%20Rate%20Outlook"
-      },
-      "top_headlines": [
-        {
-          "title": "Wall Street Ends Lower as AI Stocks Drag Markets, Fed Rate Outlook Shifts",
-          "summary": "",
-          "link": "https://www.econotimes.com/Wall-Street-Ends-Lower-as-AI-Stocks-Drag-Markets-Fed-Rate-Outlook-Shifts-1745301",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "연준 금리 전망"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-27T17:38:41+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-27T08:39:45.875Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-27T17:38:41+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Kospi 200% Rally",
+      "term_ko": "코스피KOSPI 200% 랠리"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-27T17:38:41+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-27T17:38:41+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Amd Soars 270%",
+      "term_ko": "AMD 270% 폭등"
+    },
+    {
+      "term": "The Ai Boom Bubble",
+      "term_ko": "AI 붐 거품"
+    },
+    {
+      "term": "No. 1 in Net Purchases by Foreign Investors",
+      "term_ko": "서학개미 순매수 1위"
+    },
+    {
+      "term": "Spacex, the 7th of Next Month",
+      "term_ko": "스페이스X 내달 7일"
+    },
+    {
+      "term": "U.s. Stock Market: 2 Weeks",
+      "term_ko": "美 증시 2주"
+    },
+    {
+      "term": "Household Debt Hits 4 Trillion Due to 'all-in' Borrowing",
+      "term_ko": "영끌에 가계대출 4조"
+    },
+    {
+      "term": "Key Domestic Financial Events: June 29–july 3",
+      "term_ko": "국내 주요 금융일정6.29~7.3"
+    },
+    {
+      "term": "They Said the Maximum Was 8% Per Year, But...",
+      "term_ko": "최고 연 8%라더니"
+    },
+    {
+      "term": "Shaken by Concerns Over Overheating",
+      "term_ko": "과열 부담에 흔들"
+    },
+    {
+      "term": "How Far Will the Domino Effect of Plunges Go?",
+      "term_ko": "폭락 도미노 어디까지"
+    },
+    {
+      "term": "Selling Pressure on Tech Stocks in the New York Stock Market",
+      "term_ko": "뉴욕증시 기술주 매도세"
+    },
+    {
+      "term": "A Chain Reaction Amid the Spread",
+      "term_ko": "확산 속 연쇄"
+    },
+    {
+      "term": "It's No Use Earning Foreign Currency.",
+      "term_ko": "외화 벌어와도 소용없네"
+    },
+    {
+      "term": "Lee Ho-yeon's D-tox Debt Investment",
+      "term_ko": "이호연의 D톡스 빚투"
+    },
+    {
+      "term": "Blowoff Before Collapse",
+      "term_ko": "붕괴 전 블로오프"
+    },
+    {
+      "term": "It Will End Spectacularly",
+      "term_ko": "국면으로 화려하게 끝날"
+    },
+    {
+      "term": "To Be Included in the Nasdaq 100",
+      "term_ko": "나스닥100 편입된다"
+    },
+    {
+      "term": "The Remaining 4%",
+      "term_ko": "뒤 4%"
+    },
+    {
+      "term": "The Background Is an Ant",
+      "term_ko": "배경은 개미"
+    },
+    {
+      "term": "Big Tech As a Variable",
+      "term_ko": "빅테크 변수"
+    },
+    {
+      "term": "Warning Signs of a Sharp Drop",
+      "term_ko": "폭락 적신호"
+    },
+    {
+      "term": "Soaring Exchange Rates",
+      "term_ko": "치솟는 환율"
+    },
+    {
+      "term": "Wall Street Ends",
+      "term_ko": "월스트리트 장 마감"
+    },
+    {
+      "term": "Fed Rate Outlook",
+      "term_ko": "연준 금리 전망"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Kospi 200% Rally": {
+      "en": "Kospi 200% Rally",
+      "ko": "코스피KOSPI 200% 랠리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Amd Soars 270%": {
+      "en": "Amd Soars 270%",
+      "ko": "AMD 270% 폭등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "The Ai Boom Bubble": {
+      "en": "The Ai Boom Bubble",
+      "ko": "AI 붐 거품",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "No. 1 in Net Purchases by Foreign Investors": {
+      "en": "No. 1 in Net Purchases by Foreign Investors",
+      "ko": "서학개미 순매수 1위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Spacex, the 7th of Next Month": {
+      "en": "Spacex, the 7th of Next Month",
+      "ko": "스페이스X 내달 7일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "U.s. Stock Market: 2 Weeks": {
+      "en": "U.s. Stock Market: 2 Weeks",
+      "ko": "美 증시 2주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Household Debt Hits 4 Trillion Due to 'all-in' Borrowing": {
+      "en": "Household Debt Hits 4 Trillion Due to 'all-in' Borrowing",
+      "ko": "영끌에 가계대출 4조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Key Domestic Financial Events: June 29–july 3": {
+      "en": "Key Domestic Financial Events: June 29–july 3",
+      "ko": "국내 주요 금융일정6.29~7.3",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "They Said the Maximum Was 8% Per Year, But...": {
+      "en": "They Said the Maximum Was 8% Per Year, But...",
+      "ko": "최고 연 8%라더니",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Shaken by Concerns Over Overheating": {
+      "en": "Shaken by Concerns Over Overheating",
+      "ko": "과열 부담에 흔들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "How Far Will the Domino Effect of Plunges Go?": {
+      "en": "How Far Will the Domino Effect of Plunges Go?",
+      "ko": "폭락 도미노 어디까지",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Selling Pressure on Tech Stocks in the New York Stock Market": {
+      "en": "Selling Pressure on Tech Stocks in the New York Stock Market",
+      "ko": "뉴욕증시 기술주 매도세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "A Chain Reaction Amid the Spread": {
+      "en": "A Chain Reaction Amid the Spread",
+      "ko": "확산 속 연쇄",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "It's No Use Earning Foreign Currency.": {
+      "en": "It's No Use Earning Foreign Currency.",
+      "ko": "외화 벌어와도 소용없네",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Lee Ho-yeon's D-tox Debt Investment": {
+      "en": "Lee Ho-yeon's D-tox Debt Investment",
+      "ko": "이호연의 D톡스 빚투",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Blowoff Before Collapse": {
+      "en": "Blowoff Before Collapse",
+      "ko": "붕괴 전 블로오프",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "It Will End Spectacularly": {
+      "en": "It Will End Spectacularly",
+      "ko": "국면으로 화려하게 끝날",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "To Be Included in the Nasdaq 100": {
+      "en": "To Be Included in the Nasdaq 100",
+      "ko": "나스닥100 편입된다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "The Remaining 4%": {
+      "en": "The Remaining 4%",
+      "ko": "뒤 4%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "The Background Is an Ant": {
+      "en": "The Background Is an Ant",
+      "ko": "배경은 개미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.537Z"
+    },
+    "Big Tech As a Variable": {
+      "en": "Big Tech As a Variable",
+      "ko": "빅테크 변수",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Warning Signs of a Sharp Drop": {
+      "en": "Warning Signs of a Sharp Drop",
+      "ko": "폭락 적신호",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Soaring Exchange Rates": {
+      "en": "Soaring Exchange Rates",
+      "ko": "치솟는 환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Wall Street Ends": {
+      "en": "Wall Street Ends",
+      "ko": "월스트리트 장 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Fed Rate Outlook": {
+      "en": "Fed Rate Outlook",
+      "ko": "연준 금리 전망",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
+    },
+    "Expectations for a Bitcoin Etf": {
+      "en": "Expectations for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-27T13:31:41.538Z"
     }
   }
 }
