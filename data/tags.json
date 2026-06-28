@@ -1,1072 +1,439 @@
 {
+  "generatedAt": "2026-06-28T08:51:43.727Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-28",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "AI Surged 9-Fold",
-      "term_ko": "9배 뛰었다 AI",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "9배 뛰었다 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "1년 만에 9배 뛰었다! AI 폭발이 가져온 마이크론의 놀라운 수익률!",
-              "link": "http://coinreaders.com/244893"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=9%EB%B0%B0%20%EB%9B%B0%EC%97%88%EB%8B%A4%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=9%EB%B0%B0%20%EB%9B%B0%EC%97%88%EB%8B%A4%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "1년 만에 9배 뛰었다! AI 폭발이 가져온 마이크론의 놀라운 수익률!",
-          "summary": "",
-          "link": "http://coinreaders.com/244893",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Surged 9-fold",
+      "term_ko": "9배 뛰었다 AI"
     },
     {
-      "term": "3.75% per year, SC First Bank",
-      "term_ko": "연 3.75% SC제일은행",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "연 3.75% SC제일은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "12개월 최고 연 3.75%…SC제일은행 'e-그린세이브예금' [이주의 은행 예...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062510110444591b5a221379_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B0%203.75%25%20SC%EC%A0%9C%EC%9D%BC%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B0%203.75%25%20SC%EC%A0%9C%EC%9D%BC%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "12개월 최고 연 3.75%…SC제일은행 'e-그린세이브예금' [이주의 은행 예...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062510110444591b5a221379_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "3.75% Per Year, Sc First Bank",
+      "term_ko": "연 3.75% SC제일은행"
     },
     {
-      "term": "SpaceX (SPCX) Listed",
-      "term_ko": "스페이스XSPCX 상장 한",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스페이스XSPCX 상장 한",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "스페이스X(SPCX), 상장 한 달만에 나스닥 편입...8,000억 달러 몰린 배경...",
-              "link": "http://coinreaders.com/244851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4XSPCX%20%EC%83%81%EC%9E%A5%20%ED%95%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4XSPCX%20%EC%83%81%EC%9E%A5%20%ED%95%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "스페이스X(SPCX), 상장 한 달만에 나스닥 편입...8,000억 달러 몰린 배경...",
-          "summary": "",
-          "link": "http://coinreaders.com/244851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex (spcx) Listed",
+      "term_ko": "스페이스XSPCX 상장 한"
     },
     {
-      "term": "Featured Stocks: SpaceX, Nasdaq 100",
-      "term_ko": "특징주 스페이스X 나스닥100",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "특징주 스페이스X 나스닥100",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] 스페이스X, 나스닥100 편입 확정...패시브 자금 유입 본격...",
-              "link": "https://www.newspim.com/news/view/20260627000088"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%98%EC%8A%A4%EB%8B%A5100",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%98%EC%8A%A4%EB%8B%A5100"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] 스페이스X, 나스닥100 편입 확정...패시브 자금 유입 본격...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260627000088",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Featured Stocks: Spacex, Nasdaq 100",
+      "term_ko": "특징주 스페이스X 나스닥100"
     },
     {
       "term": "No. 1 in Net Purchases by Foreign Investors",
-      "term_ko": "서학개미 순매수 1위",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "서학개미 순매수 1위",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%88%9C%EB%A7%A4%EC%88%98%201%EC%9C%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%ED%95%99%EA%B0%9C%EB%AF%B8%20%EC%88%9C%EB%A7%A4%EC%88%98%201%EC%9C%84"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "서학개미 순매수 1위"
     },
     {
-      "term": "SpaceX, the 7th of next month",
-      "term_ko": "스페이스X 내달 7일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "스페이스X 내달 7일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%B4%EB%8B%AC%207%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4X%20%EB%82%B4%EB%8B%AC%207%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Spacex, the 7th of Next Month",
+      "term_ko": "스페이스X 내달 7일"
     },
     {
-      "term": "12-Month High",
-      "term_ko": "12개월 최고 연",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "12개월 최고 연",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062510145824661b5a221379_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=12%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=12%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062510145824661b5a221379_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "12-month High",
+      "term_ko": "12개월 최고 연"
     },
     {
       "term": "8.00% K Bank My Kids",
-      "term_ko": "8.00% 케이뱅크 마이키즈",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "8.00% 케이뱅크 마이키즈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062510145824661b5a221379_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=8.00%25%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EB%A7%88%EC%9D%B4%ED%82%A4%EC%A6%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=8.00%25%20%EC%BC%80%EC%9D%B4%EB%B1%85%ED%81%AC%20%EB%A7%88%EC%9D%B4%ED%82%A4%EC%A6%88"
-      },
-      "top_headlines": [
-        {
-          "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062510145824661b5a221379_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "8.00% 케이뱅크 마이키즈"
     },
     {
-      "term": "Highest annual rate over 24 months",
-      "term_ko": "24개월 최고 연",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "24개월 최고 연",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "24개월 최고 연 3.49%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062510131210761b5a221379_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=24%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=24%EA%B0%9C%EC%9B%94%20%EC%B5%9C%EA%B3%A0%20%EC%97%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "24개월 최고 연 3.49%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062510131210761b5a221379_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Highest Annual Rate Over 24 Months",
+      "term_ko": "24개월 최고 연"
     },
     {
       "term": "3.49% Gwangju Bank Mizwool Compound Interest Time Deposit",
-      "term_ko": "3.49% 광주은행 미즈월복리정기예금",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "3.49% 광주은행 미즈월복리정기예금",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "24개월 최고 연 3.49%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062510131210761b5a221379_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=3.49%25%20%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89%20%EB%AF%B8%EC%A6%88%EC%9B%94%EB%B3%B5%EB%A6%AC%EC%A0%95%EA%B8%B0%EC%98%88%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=3.49%25%20%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89%20%EB%AF%B8%EC%A6%88%EC%9B%94%EB%B3%B5%EB%A6%AC%EC%A0%95%EA%B8%B0%EC%98%88%EA%B8%88"
-      },
-      "top_headlines": [
-        {
-          "title": "24개월 최고 연 3.49%…광주은행 '미즈월복리정기예금' [이주의 은행 예...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062510131210761b5a221379_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "3.49% 광주은행 미즈월복리정기예금"
     },
     {
       "term": "Five Major Issues, Including Instability",
-      "term_ko": "불안정성 등 5대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불안정성 등 5대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "현대硏 \"경기 여건 전환기...주식시장 불안정성 등 5대 리스크 관리해야...",
-              "link": "http://www.efnews.co.kr/news/articleView.html?idxno=130580"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EC%95%88%EC%A0%95%EC%84%B1%20%EB%93%B1%205%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EC%95%88%EC%A0%95%EC%84%B1%20%EB%93%B1%205%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "현대硏 \"경기 여건 전환기...주식시장 불안정성 등 5대 리스크 관리해야...",
-          "summary": "",
-          "link": "http://www.efnews.co.kr/news/articleView.html?idxno=130580",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "불안정성 등 5대"
     },
     {
-      "term": "Four shots near Renge Port",
-      "term_ko": "렝게항 인근 4발",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "렝게항 인근 4발",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오후 뉴스브리핑] 이란 렝게항 인근 4발 피격…미군, 이란 내 추가 타격...",
-              "link": "https://www.tokenpost.kr/news/briefing/373392"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A0%9D%EA%B2%8C%ED%95%AD%20%EC%9D%B8%EA%B7%BC%204%EB%B0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A0%9D%EA%B2%8C%ED%95%AD%20%EC%9D%B8%EA%B7%BC%204%EB%B0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[오후 뉴스브리핑] 이란 렝게항 인근 4발 피격…미군, 이란 내 추가 타격...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/briefing/373392",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Four Shots Near Renge Port",
+      "term_ko": "렝게항 인근 4발"
     },
     {
       "term": "Token Quotes: Number One",
-      "term_ko": "토큰명언 첫 번째",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "토큰명언 첫 번째",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[토큰명언] \"첫 번째 손실이 최고의 손실이다\" ㅡ Day 103",
-              "link": "https://www.tokenpost.kr/news/insights/373341"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%ED%81%B0%EB%AA%85%EC%96%B8%20%EC%B2%AB%20%EB%B2%88%EC%A7%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%ED%81%B0%EB%AA%85%EC%96%B8%20%EC%B2%AB%20%EB%B2%88%EC%A7%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[토큰명언] \"첫 번째 손실이 최고의 손실이다\" ㅡ Day 103",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/373341",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "토큰명언 첫 번째"
     },
     {
-      "term": "A loss is the best kind of loss.",
-      "term_ko": "손실이 최고의 손실이다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "손실이 최고의 손실이다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[토큰명언] \"첫 번째 손실이 최고의 손실이다\" ㅡ Day 103",
-              "link": "https://www.tokenpost.kr/news/insights/373341"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%90%EC%8B%A4%EC%9D%B4%20%EC%B5%9C%EA%B3%A0%EC%9D%98%20%EC%86%90%EC%8B%A4%EC%9D%B4%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%90%EC%8B%A4%EC%9D%B4%20%EC%B5%9C%EA%B3%A0%EC%9D%98%20%EC%86%90%EC%8B%A4%EC%9D%B4%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[토큰명언] \"첫 번째 손실이 최고의 손실이다\" ㅡ Day 103",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/373341",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Loss Is the Best Kind of Loss.",
+      "term_ko": "손실이 최고의 손실이다"
     },
     {
-      "term": "Warning Signs of Volatility on the KOSPI",
-      "term_ko": "코스피 변동성 경고등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 변동성 경고등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스피 변동성 경고등…반도체 실적이 분수령 [주간증시전망]",
-              "link": "https://n.news.naver.com/mnews/article/014/0005540518?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%B3%80%EB%8F%99%EC%84%B1%20%EA%B2%BD%EA%B3%A0%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%B3%80%EB%8F%99%EC%84%B1%20%EA%B2%BD%EA%B3%A0%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 변동성 경고등…반도체 실적이 분수령 [주간증시전망]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005540518?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Warning Signs of Volatility on the Kospi",
+      "term_ko": "코스피 변동성 경고등"
     },
     {
       "term": "Semiconductor Earnings Mark a Turning Point",
-      "term_ko": "반도체 실적이 분수령",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 실적이 분수령",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "코스피 변동성 경고등…반도체 실적이 분수령 [주간증시전망]",
-              "link": "https://n.news.naver.com/mnews/article/014/0005540518?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%8B%A4%EC%A0%81%EC%9D%B4%20%EB%B6%84%EC%88%98%EB%A0%B9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EC%8B%A4%EC%A0%81%EC%9D%B4%20%EB%B6%84%EC%88%98%EB%A0%B9"
-      },
-      "top_headlines": [
-        {
-          "title": "코스피 변동성 경고등…반도체 실적이 분수령 [주간증시전망]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/014/0005540518?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반도체 실적이 분수령"
     },
     {
       "term": "Bank of the Week for Savings Accounts",
-      "term_ko": "적금 이주의 은행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "적금 이주의 은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062510145824661b5a221379_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%81%EA%B8%88%20%EC%9D%B4%EC%A3%BC%EC%9D%98%20%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%81%EA%B8%88%20%EC%9D%B4%EC%A3%BC%EC%9D%98%20%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "12개월 최고 연 8.00%…케이뱅크 '마이키즈 적금' [이주의 은행 적금금리...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062510145824661b5a221379_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "적금 이주의 은행"
     },
     {
       "term": "Hyundai Research Institute: Economic Conditions",
-      "term_ko": "현대硏 경기 여건",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "현대硏 경기 여건",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "현대硏 \"경기 여건 전환기...주식시장 불안정성 등 5대 리스크 관리해야...",
-              "link": "http://www.efnews.co.kr/news/articleView.html?idxno=130580"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%98%84%EB%8C%80%E7%A1%8F%20%EA%B2%BD%EA%B8%B0%20%EC%97%AC%EA%B1%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%98%84%EB%8C%80%E7%A1%8F%20%EA%B2%BD%EA%B8%B0%20%EC%97%AC%EA%B1%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "현대硏 \"경기 여건 전환기...주식시장 불안정성 등 5대 리스크 관리해야...",
-          "summary": "",
-          "link": "http://www.efnews.co.kr/news/articleView.html?idxno=130580",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "현대硏 경기 여건"
     },
     {
       "term": "Afternoon News Briefing: Iran",
-      "term_ko": "오후 뉴스브리핑 이란",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오후 뉴스브리핑 이란",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오후 뉴스브리핑] 이란 렝게항 인근 4발 피격…미군, 이란 내 추가 타격...",
-              "link": "https://www.tokenpost.kr/news/briefing/373392"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%ED%9B%84%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EC%9D%B4%EB%9E%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%ED%9B%84%20%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91%20%EC%9D%B4%EB%9E%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[오후 뉴스브리핑] 이란 렝게항 인근 4발 피격…미군, 이란 내 추가 타격...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/briefing/373392",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오후 뉴스브리핑 이란"
     },
     {
-      "term": "e-GreenSave Savings Account: Bank of the Week",
-      "term_ko": "e-그린세이브예금 이주의 은행",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "e-그린세이브예금 이주의 은행",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "12개월 최고 연 3.75%…SC제일은행 'e-그린세이브예금' [이주의 은행 예...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062510110444591b5a221379_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=e-%EA%B7%B8%EB%A6%B0%EC%84%B8%EC%9D%B4%EB%B8%8C%EC%98%88%EA%B8%88%20%EC%9D%B4%EC%A3%BC%EC%9D%98%20%EC%9D%80%ED%96%89",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=e-%EA%B7%B8%EB%A6%B0%EC%84%B8%EC%9D%B4%EB%B8%8C%EC%98%88%EA%B8%88%20%EC%9D%B4%EC%A3%BC%EC%9D%98%20%EC%9D%80%ED%96%89"
-      },
-      "top_headlines": [
-        {
-          "title": "12개월 최고 연 3.75%…SC제일은행 'e-그린세이브예금' [이주의 은행 예...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062510110444591b5a221379_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "E-greensave Savings Account: Bank of the Week",
+      "term_ko": "e-그린세이브예금 이주의 은행"
     },
     {
-      "term": "To be included in the Nasdaq 100",
-      "term_ko": "나스닥100 편입된다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "나스닥100 편입된다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-              "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%82%98%EC%8A%A4%EB%8B%A5100%20%ED%8E%B8%EC%9E%85%EB%90%9C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%82%98%EC%8A%A4%EB%8B%A5100%20%ED%8E%B8%EC%9E%85%EB%90%9C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "서학개미 순매수 1위 스페이스X, 내달 7일 나스닥100 편입된다",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/018/0006316327?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "To Be Included in the Nasdaq 100",
+      "term_ko": "나스닥100 편입된다"
     },
     {
       "term": "Amazing Returns",
-      "term_ko": "놀라운 수익률",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "놀라운 수익률",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "1년 만에 9배 뛰었다! AI 폭발이 가져온 마이크론의 놀라운 수익률!",
-              "link": "http://coinreaders.com/244893"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%86%80%EB%9D%BC%EC%9A%B4%20%EC%88%98%EC%9D%B5%EB%A5%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%86%80%EB%9D%BC%EC%9A%B4%20%EC%88%98%EC%9D%B5%EB%A5%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "1년 만에 9배 뛰었다! AI 폭발이 가져온 마이크론의 놀라운 수익률!",
-          "summary": "",
-          "link": "http://coinreaders.com/244893",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "놀라운 수익률"
     },
     {
       "term": "Capital Inflows",
-      "term_ko": "자금 유입",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "자금 유입",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] 스페이스X, 나스닥100 편입 확정...패시브 자금 유입 본격...",
-              "link": "https://www.newspim.com/news/view/20260627000088"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%90%EA%B8%88%20%EC%9C%A0%EC%9E%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%90%EA%B8%88%20%EC%9C%A0%EC%9E%85"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] 스페이스X, 나스닥100 편입 확정...패시브 자금 유입 본격...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260627000088",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "자금 유입"
     },
     {
       "term": "Nasdaq After a Month",
-      "term_ko": "달만에 나스닥",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달만에 나스닥",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "스페이스X(SPCX), 상장 한 달만에 나스닥 편입...8,000억 달러 몰린 배경...",
-              "link": "http://coinreaders.com/244851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%A7%8C%EC%97%90%20%EB%82%98%EC%8A%A4%EB%8B%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%A7%8C%EC%97%90%20%EB%82%98%EC%8A%A4%EB%8B%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "스페이스X(SPCX), 상장 한 달만에 나스닥 편입...8,000억 달러 몰린 배경...",
-          "summary": "",
-          "link": "http://coinreaders.com/244851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달만에 나스닥"
     },
     {
-      "term": "Flooded with dollars",
-      "term_ko": "달러 몰린",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달러 몰린",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "스페이스X(SPCX), 상장 한 달만에 나스닥 편입...8,000억 달러 몰린 배경...",
-              "link": "http://coinreaders.com/244851"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%EB%9F%AC%20%EB%AA%B0%EB%A6%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%EB%9F%AC%20%EB%AA%B0%EB%A6%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "스페이스X(SPCX), 상장 한 달만에 나스닥 편입...8,000억 달러 몰린 배경...",
-          "summary": "",
-          "link": "http://coinreaders.com/244851",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Flooded with Dollars",
+      "term_ko": "달러 몰린"
     },
     {
-      "term": "U.S. soldier hit by gunfire",
-      "term_ko": "피격 미군",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "피격 미군",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ],
-          "sample": [
-            {
-              "title": "[오후 뉴스브리핑] 이란 렝게항 인근 4발 피격…미군, 이란 내 추가 타격...",
-              "link": "https://www.tokenpost.kr/news/briefing/373392"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%94%BC%EA%B2%A9%20%EB%AF%B8%EA%B5%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%94%BC%EA%B2%A9%20%EB%AF%B8%EA%B5%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[오후 뉴스브리핑] 이란 렝게항 인근 4발 피격…미군, 이란 내 추가 타격...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/briefing/373392",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Soldier Hit by Gunfire",
+      "term_ko": "피격 미군"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-28T12:40:46+09:00",
-          "fallback_sources": [
-            "trend_log"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Expectations of an interest rate cut",
-      "term_ko": "금리 인하 기대감",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 인하 기대감"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%ED%95%98%20%EA%B8%B0%EB%8C%80%EA%B0%90"
-      },
-      "top_headlines": []
+      "term": "Expectations of an Interest Rate Cut",
+      "term_ko": "금리 인하 기대감"
     },
     {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 0,
-      "mentions": 0,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대"
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-28T03:41:50.231Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-28T12:40:46+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ai Surged 9-fold",
+      "term_ko": "9배 뛰었다 AI"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-28T12:40:46+09:00",
-      "fallback_sources": [
-        "trend_log"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-28T12:40:46+09:00",
-        "fallbackSources": [
-          "trend_log"
-        ]
-      }
+    {
+      "term": "3.75% Per Year, Sc First Bank",
+      "term_ko": "연 3.75% SC제일은행"
+    },
+    {
+      "term": "Spacex (spcx) Listed",
+      "term_ko": "스페이스XSPCX 상장 한"
+    },
+    {
+      "term": "Featured Stocks: Spacex, Nasdaq 100",
+      "term_ko": "특징주 스페이스X 나스닥100"
+    },
+    {
+      "term": "No. 1 in Net Purchases by Foreign Investors",
+      "term_ko": "서학개미 순매수 1위"
+    },
+    {
+      "term": "Spacex, the 7th of Next Month",
+      "term_ko": "스페이스X 내달 7일"
+    },
+    {
+      "term": "12-month High",
+      "term_ko": "12개월 최고 연"
+    },
+    {
+      "term": "8.00% K Bank My Kids",
+      "term_ko": "8.00% 케이뱅크 마이키즈"
+    },
+    {
+      "term": "Highest Annual Rate Over 24 Months",
+      "term_ko": "24개월 최고 연"
+    },
+    {
+      "term": "3.49% Gwangju Bank Mizwool Compound Interest Time Deposit",
+      "term_ko": "3.49% 광주은행 미즈월복리정기예금"
+    },
+    {
+      "term": "Five Major Issues, Including Instability",
+      "term_ko": "불안정성 등 5대"
+    },
+    {
+      "term": "Four Shots Near Renge Port",
+      "term_ko": "렝게항 인근 4발"
+    },
+    {
+      "term": "Token Quotes: Number One",
+      "term_ko": "토큰명언 첫 번째"
+    },
+    {
+      "term": "A Loss Is the Best Kind of Loss.",
+      "term_ko": "손실이 최고의 손실이다"
+    },
+    {
+      "term": "Warning Signs of Volatility on the Kospi",
+      "term_ko": "코스피 변동성 경고등"
+    },
+    {
+      "term": "Semiconductor Earnings Mark a Turning Point",
+      "term_ko": "반도체 실적이 분수령"
+    },
+    {
+      "term": "Bank of the Week for Savings Accounts",
+      "term_ko": "적금 이주의 은행"
+    },
+    {
+      "term": "Hyundai Research Institute: Economic Conditions",
+      "term_ko": "현대硏 경기 여건"
+    },
+    {
+      "term": "Afternoon News Briefing: Iran",
+      "term_ko": "오후 뉴스브리핑 이란"
+    },
+    {
+      "term": "E-greensave Savings Account: Bank of the Week",
+      "term_ko": "e-그린세이브예금 이주의 은행"
+    },
+    {
+      "term": "To Be Included in the Nasdaq 100",
+      "term_ko": "나스닥100 편입된다"
+    },
+    {
+      "term": "Amazing Returns",
+      "term_ko": "놀라운 수익률"
+    },
+    {
+      "term": "Capital Inflows",
+      "term_ko": "자금 유입"
+    },
+    {
+      "term": "Nasdaq After a Month",
+      "term_ko": "달만에 나스닥"
+    },
+    {
+      "term": "Flooded with Dollars",
+      "term_ko": "달러 몰린"
+    },
+    {
+      "term": "U.s. Soldier Hit by Gunfire",
+      "term_ko": "피격 미군"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Expectations of an Interest Rate Cut",
+      "term_ko": "금리 인하 기대감"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "Ai Surged 9-fold": {
+      "en": "Ai Surged 9-fold",
+      "ko": "9배 뛰었다 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "3.75% Per Year, Sc First Bank": {
+      "en": "3.75% Per Year, Sc First Bank",
+      "ko": "연 3.75% SC제일은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "Spacex (spcx) Listed": {
+      "en": "Spacex (spcx) Listed",
+      "ko": "스페이스XSPCX 상장 한",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "Featured Stocks: Spacex, Nasdaq 100": {
+      "en": "Featured Stocks: Spacex, Nasdaq 100",
+      "ko": "특징주 스페이스X 나스닥100",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "No. 1 in Net Purchases by Foreign Investors": {
+      "en": "No. 1 in Net Purchases by Foreign Investors",
+      "ko": "서학개미 순매수 1위",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "Spacex, the 7th of Next Month": {
+      "en": "Spacex, the 7th of Next Month",
+      "ko": "스페이스X 내달 7일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "12-month High": {
+      "en": "12-month High",
+      "ko": "12개월 최고 연",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "8.00% K Bank My Kids": {
+      "en": "8.00% K Bank My Kids",
+      "ko": "8.00% 케이뱅크 마이키즈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.727Z"
+    },
+    "Highest Annual Rate Over 24 Months": {
+      "en": "Highest Annual Rate Over 24 Months",
+      "ko": "24개월 최고 연",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "3.49% Gwangju Bank Mizwool Compound Interest Time Deposit": {
+      "en": "3.49% Gwangju Bank Mizwool Compound Interest Time Deposit",
+      "ko": "3.49% 광주은행 미즈월복리정기예금",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Five Major Issues, Including Instability": {
+      "en": "Five Major Issues, Including Instability",
+      "ko": "불안정성 등 5대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Four Shots Near Renge Port": {
+      "en": "Four Shots Near Renge Port",
+      "ko": "렝게항 인근 4발",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Token Quotes: Number One": {
+      "en": "Token Quotes: Number One",
+      "ko": "토큰명언 첫 번째",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "A Loss Is the Best Kind of Loss.": {
+      "en": "A Loss Is the Best Kind of Loss.",
+      "ko": "손실이 최고의 손실이다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Warning Signs of Volatility on the Kospi": {
+      "en": "Warning Signs of Volatility on the Kospi",
+      "ko": "코스피 변동성 경고등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Semiconductor Earnings Mark a Turning Point": {
+      "en": "Semiconductor Earnings Mark a Turning Point",
+      "ko": "반도체 실적이 분수령",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Bank of the Week for Savings Accounts": {
+      "en": "Bank of the Week for Savings Accounts",
+      "ko": "적금 이주의 은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Hyundai Research Institute: Economic Conditions": {
+      "en": "Hyundai Research Institute: Economic Conditions",
+      "ko": "현대硏 경기 여건",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Afternoon News Briefing: Iran": {
+      "en": "Afternoon News Briefing: Iran",
+      "ko": "오후 뉴스브리핑 이란",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "E-greensave Savings Account: Bank of the Week": {
+      "en": "E-greensave Savings Account: Bank of the Week",
+      "ko": "e-그린세이브예금 이주의 은행",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "To Be Included in the Nasdaq 100": {
+      "en": "To Be Included in the Nasdaq 100",
+      "ko": "나스닥100 편입된다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Amazing Returns": {
+      "en": "Amazing Returns",
+      "ko": "놀라운 수익률",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Capital Inflows": {
+      "en": "Capital Inflows",
+      "ko": "자금 유입",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Nasdaq After a Month": {
+      "en": "Nasdaq After a Month",
+      "ko": "달만에 나스닥",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Flooded with Dollars": {
+      "en": "Flooded with Dollars",
+      "ko": "달러 몰린",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "U.s. Soldier Hit by Gunfire": {
+      "en": "U.s. Soldier Hit by Gunfire",
+      "ko": "피격 미군",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Expectations of an Interest Rate Cut": {
+      "en": "Expectations of an Interest Rate Cut",
+      "ko": "금리 인하 기대감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
+    },
+    "Expectations for a Bitcoin Etf": {
+      "en": "Expectations for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T08:51:43.728Z"
     }
   }
 }
