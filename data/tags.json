@@ -1,1146 +1,425 @@
 {
+  "generatedAt": "2026-06-28T19:20:30.882Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-06-28",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "The ETF That's a Huge Hit",
-      "term_ko": "담아 대박난 ETF",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "담아 대박난 ETF",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"테슬라도 안오르면 퇴출\"…알짜만 담아 대박난 ETF",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699749?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%B4%EC%95%84%20%EB%8C%80%EB%B0%95%EB%82%9C%20ETF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%B4%EC%95%84%20%EB%8C%80%EB%B0%95%EB%82%9C%20ETF"
-      },
-      "top_headlines": [
-        {
-          "title": "\"테슬라도 안오르면 퇴출\"…알짜만 담아 대박난 ETF",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699749?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Etf That's a Huge Hit",
+      "term_ko": "담아 대박난 ETF"
     },
     {
-      "term": "Q2 Won-Dollar Exchange Rate",
-      "term_ko": "2분기 원 달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2분기 원 달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2분기 원·달러 환율 평균 1500원 웃돌 듯",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=552290"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2%EB%B6%84%EA%B8%B0%20%EC%9B%90%20%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2%EB%B6%84%EA%B8%B0%20%EC%9B%90%20%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "2분기 원·달러 환율 평균 1500원 웃돌 듯",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=552290",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Q2 Won-dollar Exchange Rate",
+      "term_ko": "2분기 원 달러"
     },
     {
-      "term": "Average exchange rate of 1,500 won",
-      "term_ko": "환율 평균 1500원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "환율 평균 1500원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2분기 원·달러 환율 평균 1500원 웃돌 듯",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=552290"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%98%EC%9C%A8%20%ED%8F%89%EA%B7%A0%201500%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%98%EC%9C%A8%20%ED%8F%89%EA%B7%A0%201500%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "2분기 원·달러 환율 평균 1500원 웃돌 듯",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=552290",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Average Exchange Rate of 1,500 Won",
+      "term_ko": "환율 평균 1500원"
     },
     {
-      "term": "The Government's \"Three Highs\" Crisis",
-      "term_ko": "정부 3高 위기",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정부 3高 위기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "정부, ‘3高 위기’ 돌파 위한 하반기 경제성장전략 준비...청년·지방·...",
-              "link": "https://www.m-economynews.com/news/article.html?no=68224"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EB%B6%80%203%E9%AB%98%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EB%B6%80%203%E9%AB%98%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "정부, ‘3高 위기’ 돌파 위한 하반기 경제성장전략 준비...청년·지방·...",
-          "summary": "",
-          "link": "https://www.m-economynews.com/news/article.html?no=68224",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Government's \"three Highs\" Crisis",
+      "term_ko": "정부 3高 위기"
     },
     {
-      "term": "Government's \"Three Highs\" for the Second Half of the Year",
-      "term_ko": "정부 하반기 3高",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정부 하반기 3高",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=743696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EB%B6%80%20%ED%95%98%EB%B0%98%EA%B8%B0%203%E9%AB%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EB%B6%80%20%ED%95%98%EB%B0%98%EA%B8%B0%203%E9%AB%98"
-      },
-      "top_headlines": [
-        {
-          "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=743696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Government's \"three Highs\" for the Second Half of the Year",
+      "term_ko": "정부 하반기 3高"
     },
     {
       "term": "Tech Stocks Amid the Boom",
-      "term_ko": "열풍 속 기술주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "열풍 속 기술주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "매그니피센트7, 역사상 최악의 폭락...AI 열풍 속 기술주 '휘청'",
-              "link": "http://coinreaders.com/244947"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%B4%ED%92%8D%20%EC%86%8D%20%EA%B8%B0%EC%88%A0%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%B4%ED%92%8D%20%EC%86%8D%20%EA%B8%B0%EC%88%A0%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "매그니피센트7, 역사상 최악의 폭락...AI 열풍 속 기술주 '휘청'",
-          "summary": "",
-          "link": "http://coinreaders.com/244947",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "열풍 속 기술주"
     },
     {
-      "term": "A roller coaster that shakes your body",
-      "term_ko": "몸통 흔드는 롤러코스터",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "몸통 흔드는 롤러코스터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 꼬리가 몸통 흔드는 롤러코스터 한국 증시, 단일 종목 'E...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=751602"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%B8%ED%86%B5%20%ED%9D%94%EB%93%9C%EB%8A%94%20%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%B8%ED%86%B5%20%ED%9D%94%EB%93%9C%EB%8A%94%20%EB%A1%A4%EB%9F%AC%EC%BD%94%EC%8A%A4%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 꼬리가 몸통 흔드는 롤러코스터 한국 증시, 단일 종목 'E...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=751602",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "A Roller Coaster That Shakes Your Body",
+      "term_ko": "몸통 흔드는 롤러코스터"
     },
     {
       "term": "South Korean Stock Market: Single",
-      "term_ko": "한국 증시 단일",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 단일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[박근종 칼럼] 꼬리가 몸통 흔드는 롤러코스터 한국 증시, 단일 종목 'E...",
-              "link": "https://www.mhns.co.kr/news/articleView.html?idxno=751602"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%8B%A8%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%8B%A8%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[박근종 칼럼] 꼬리가 몸통 흔드는 롤러코스터 한국 증시, 단일 종목 'E...",
-          "summary": "",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=751602",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "한국 증시 단일"
     },
     {
       "term": "If Tesla Doesn't Rise, It'll Be Delisted",
-      "term_ko": "테슬라도 안오르면 퇴출",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "테슬라도 안오르면 퇴출",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "\"테슬라도 안오르면 퇴출\"…알짜만 담아 대박난 ETF",
-              "link": "https://n.news.naver.com/mnews/article/009/0005699749?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%85%8C%EC%8A%AC%EB%9D%BC%EB%8F%84%20%EC%95%88%EC%98%A4%EB%A5%B4%EB%A9%B4%20%ED%87%B4%EC%B6%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%85%8C%EC%8A%AC%EB%9D%BC%EB%8F%84%20%EC%95%88%EC%98%A4%EB%A5%B4%EB%A9%B4%20%ED%87%B4%EC%B6%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "\"테슬라도 안오르면 퇴출\"…알짜만 담아 대박난 ETF",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/009/0005699749?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "테슬라도 안오르면 퇴출"
     },
     {
-      "term": "Kim Seong-wook, CEO of iM Capital",
-      "term_ko": "김성욱 iM캐피탈 대표",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "김성욱 iM캐피탈 대표",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "김성욱 iM캐피탈 대표, 오토금융 중심 자산 증대에 수익성 성장세 지속...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062820384034248a55064dd1_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B9%80%EC%84%B1%EC%9A%B1%20iM%EC%BA%90%ED%94%BC%ED%83%88%20%EB%8C%80%ED%91%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B9%80%EC%84%B1%EC%9A%B1%20iM%EC%BA%90%ED%94%BC%ED%83%88%20%EB%8C%80%ED%91%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "김성욱 iM캐피탈 대표, 오토금융 중심 자산 증대에 수익성 성장세 지속...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062820384034248a55064dd1_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kim Seong-wook, Ceo of Im Capital",
+      "term_ko": "김성욱 iM캐피탈 대표"
     },
     {
-      "term": "Auto Finance-Centric Assets",
-      "term_ko": "오토금융 중심 자산",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오토금융 중심 자산",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "김성욱 iM캐피탈 대표, 오토금융 중심 자산 증대에 수익성 성장세 지속...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062820384034248a55064dd1_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%ED%86%A0%EA%B8%88%EC%9C%B5%20%EC%A4%91%EC%8B%AC%20%EC%9E%90%EC%82%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%ED%86%A0%EA%B8%88%EC%9C%B5%20%EC%A4%91%EC%8B%AC%20%EC%9E%90%EC%82%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "김성욱 iM캐피탈 대표, 오토금융 중심 자산 증대에 수익성 성장세 지속...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062820384034248a55064dd1_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Auto Finance-centric Assets",
+      "term_ko": "오토금융 중심 자산"
     },
     {
       "term": "Revenue Growth and Profitability Growth",
-      "term_ko": "증대에 수익성 성장세",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "증대에 수익성 성장세",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "김성욱 iM캐피탈 대표, 오토금융 중심 자산 증대에 수익성 성장세 지속...",
-              "link": "http://www.fntimes.com/html/view.php?ud=2026062820384034248a55064dd1_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EB%8C%80%EC%97%90%20%EC%88%98%EC%9D%B5%EC%84%B1%20%EC%84%B1%EC%9E%A5%EC%84%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EB%8C%80%EC%97%90%20%EC%88%98%EC%9D%B5%EC%84%B1%20%EC%84%B1%EC%9E%A5%EC%84%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "김성욱 iM캐피탈 대표, 오토금융 중심 자산 증대에 수익성 성장세 지속...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=2026062820384034248a55064dd1_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "증대에 수익성 성장세"
     },
     {
-      "term": "The Second Half: A Time for Breakthroughs",
-      "term_ko": "돌파 위한 하반기",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "돌파 위한 하반기",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "정부, ‘3高 위기’ 돌파 위한 하반기 경제성장전략 준비...청년·지방·...",
-              "link": "https://www.m-economynews.com/news/article.html?no=68224"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8F%8C%ED%8C%8C%20%EC%9C%84%ED%95%9C%20%ED%95%98%EB%B0%98%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8F%8C%ED%8C%8C%20%EC%9C%84%ED%95%9C%20%ED%95%98%EB%B0%98%EA%B8%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "정부, ‘3高 위기’ 돌파 위한 하반기 경제성장전략 준비...청년·지방·...",
-          "summary": "",
-          "link": "https://www.m-economynews.com/news/article.html?no=68224",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Second Half: a Time for Breakthroughs",
+      "term_ko": "돌파 위한 하반기"
     },
     {
-      "term": "All-Out Response to High Exchange Rates",
-      "term_ko": "총력 대응 고환율",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "총력 대응 고환율",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=743696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B4%9D%EB%A0%A5%20%EB%8C%80%EC%9D%91%20%EA%B3%A0%ED%99%98%EC%9C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B4%9D%EB%A0%A5%20%EB%8C%80%EC%9D%91%20%EA%B3%A0%ED%99%98%EC%9C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=743696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "All-out Response to High Exchange Rates",
+      "term_ko": "총력 대응 고환율"
     },
     {
-      "term": "Direct Mid-Game Support",
-      "term_ko": "직격 중기 지원",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "직격 중기 지원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=743696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%81%EA%B2%A9%20%EC%A4%91%EA%B8%B0%20%EC%A7%80%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%81%EA%B2%A9%20%EC%A4%91%EA%B8%B0%20%EC%A7%80%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=743696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Direct Mid-game Support",
+      "term_ko": "직격 중기 지원"
     },
     {
-      "term": "Samsung Join ADR",
-      "term_ko": "삼성, ADR에 합류",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Join ADR",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Will Samsung join ADR wave among Asian chipmakers?",
-              "link": "https://www.koreatimes.co.kr/path/A2026062810270005712"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Join%20ADR",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Join%20ADR"
-      },
-      "top_headlines": [
-        {
-          "title": "Will Samsung join ADR wave among Asian chipmakers?",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026062810270005712",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Join Adr",
+      "term_ko": "삼성, ADR에 합류"
     },
     {
-      "term": "As if to rise above",
-      "term_ko": "웃돌 듯",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "웃돌 듯",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "2분기 원·달러 환율 평균 1500원 웃돌 듯",
-              "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=552290"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%83%EB%8F%8C%20%EB%93%AF",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%83%EB%8F%8C%20%EB%93%AF"
-      },
-      "top_headlines": [
-        {
-          "title": "2분기 원·달러 환율 평균 1500원 웃돌 듯",
-          "summary": "",
-          "link": "https://www.idaegu.co.kr/news/articleView.html?idxno=552290",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "As If to Rise Above",
+      "term_ko": "웃돌 듯"
     },
     {
       "term": "Retail Investors Amid the Plunge",
-      "term_ko": "급락에 개미들",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "급락에 개미들",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "“하이닉스 제가 사서 떨어지나요” 이유 모를 급락에 개미들 ‘패닉’...",
-              "link": "https://n.news.naver.com/mnews/article/081/0003656490?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%9D%BD%EC%97%90%20%EA%B0%9C%EB%AF%B8%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%9D%BD%EC%97%90%20%EA%B0%9C%EB%AF%B8%EB%93%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "“하이닉스 제가 사서 떨어지나요” 이유 모를 급락에 개미들 ‘패닉’...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/081/0003656490?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "급락에 개미들"
     },
     {
       "term": "Youth Employment",
-      "term_ko": "청년 일자리",
-      "significance_score": 280,
-      "mentions": 480,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "청년 일자리",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-20",
-              "timestamp": 1781881200000,
-              "value": 63.7931
-            },
-            {
-              "period": "2026-06-21",
-              "timestamp": 1781967600000,
-              "value": 48.27586
-            },
-            {
-              "period": "2026-06-22",
-              "timestamp": 1782054000000,
-              "value": 100
-            },
-            {
-              "period": "2026-06-23",
-              "timestamp": 1782140400000,
-              "value": 81.03448
-            },
-            {
-              "period": "2026-06-24",
-              "timestamp": 1782226800000,
-              "value": 82.75862
-            },
-            {
-              "period": "2026-06-25",
-              "timestamp": 1782313200000,
-              "value": 99.13793
-            },
-            {
-              "period": "2026-06-26",
-              "timestamp": 1782399600000,
-              "value": 71.55172
-            },
-            {
-              "period": "2026-06-27",
-              "timestamp": 1782486000000,
-              "value": 45.68965
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-              "link": "https://www.econovill.com/news/articleView.html?idxno=743696"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%AD%EB%85%84%20%EC%9D%BC%EC%9E%90%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%AD%EB%85%84%20%EC%9D%BC%EC%9E%90%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "정부, 하반기 '3高' 총력 대응…'고환율 직격' 중기 지원·청년 일자리 ...",
-          "summary": "",
-          "link": "https://www.econovill.com/news/articleView.html?idxno=743696",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 480.1724,
-        "weekly_average_volume": 80.0287,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.165911,
-        "decay_factor": 0.013848,
-        "time_weight": 0.021363,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1782486000000
-      }
+      "term_ko": "청년 일자리"
     },
     {
-      "term": "Trump Cut A",
-      "term_ko": "트럼프는 A를 삭감했다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trump Cut A",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Trump Cut a Billion-Dollar Mining Deal. His Sons Stand to Profit.",
-              "link": "https://www.nytimes.com/2026/06/28/world/europe/trump-lutnick-sons-kazakhstan.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trump%20Cut%20A",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trump%20Cut%20A"
-      },
-      "top_headlines": [
-        {
-          "title": "Trump Cut a Billion-Dollar Mining Deal. His Sons Stand to Profit.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/28/world/europe/trump-lutnick-sons-kazakhstan.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Trump Cut a",
+      "term_ko": "트럼프는 A를 삭감했다"
     },
     {
-      "term": "Billion-Dollar Mining Deal",
-      "term_ko": "10억 달러 규모의 광산 거래",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Billion-Dollar Mining Deal",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Trump Cut a Billion-Dollar Mining Deal. His Sons Stand to Profit.",
-              "link": "https://www.nytimes.com/2026/06/28/world/europe/trump-lutnick-sons-kazakhstan.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Billion-Dollar%20Mining%20Deal",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Billion-Dollar%20Mining%20Deal"
-      },
-      "top_headlines": [
-        {
-          "title": "Trump Cut a Billion-Dollar Mining Deal. His Sons Stand to Profit.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/28/world/europe/trump-lutnick-sons-kazakhstan.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Billion-dollar Mining Deal",
+      "term_ko": "10억 달러 규모의 광산 거래"
     },
     {
       "term": "His Sons Stand",
-      "term_ko": "그의 아들들이 서 있다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "His Sons Stand",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Trump Cut a Billion-Dollar Mining Deal. His Sons Stand to Profit.",
-              "link": "https://www.nytimes.com/2026/06/28/world/europe/trump-lutnick-sons-kazakhstan.html?partner=naver"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=His%20Sons%20Stand",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=His%20Sons%20Stand"
-      },
-      "top_headlines": [
-        {
-          "title": "Trump Cut a Billion-Dollar Mining Deal. His Sons Stand to Profit.",
-          "summary": "",
-          "link": "https://www.nytimes.com/2026/06/28/world/europe/trump-lutnick-sons-kazakhstan.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "그의 아들들이 서 있다"
     },
     {
       "term": "Samsung Eyes Record",
-      "term_ko": "삼성, 신기록 달성 전망",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung Eyes Record",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung eyes record investment spanning affiliates, regions",
-              "link": "https://n.news.naver.com/mnews/article/044/0000286079?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20Eyes%20Record",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20Eyes%20Record"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung eyes record investment spanning affiliates, regions",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000286079?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "삼성, 신기록 달성 전망"
     },
     {
       "term": "Investment Spanning Affiliates",
-      "term_ko": "계열사 전반에 걸친 투자",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Investment Spanning Affiliates",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung eyes record investment spanning affiliates, regions",
-              "link": "https://n.news.naver.com/mnews/article/044/0000286079?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Investment%20Spanning%20Affiliates",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Investment%20Spanning%20Affiliates"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung eyes record investment spanning affiliates, regions",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000286079?sid=104",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "계열사 전반에 걸친 투자"
     },
     {
       "term": "Wave Among Asian",
-      "term_ko": "아시아의 물결",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Wave Among Asian",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Will Samsung join ADR wave among Asian chipmakers?",
-              "link": "https://www.koreatimes.co.kr/path/A2026062810270005712"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Wave%20Among%20Asian",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Wave%20Among%20Asian"
-      },
-      "top_headlines": [
-        {
-          "title": "Will Samsung join ADR wave among Asian chipmakers?",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026062810270005712",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "아시아의 물결"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-06-28T22:47:36+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-06-28T13:48:44.571Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-06-28T22:47:36+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "The Etf That's a Huge Hit",
+      "term_ko": "담아 대박난 ETF"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-06-28T22:47:36+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-06-28T22:47:36+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Q2 Won-dollar Exchange Rate",
+      "term_ko": "2분기 원 달러"
+    },
+    {
+      "term": "Average Exchange Rate of 1,500 Won",
+      "term_ko": "환율 평균 1500원"
+    },
+    {
+      "term": "The Government's \"three Highs\" Crisis",
+      "term_ko": "정부 3高 위기"
+    },
+    {
+      "term": "Government's \"three Highs\" for the Second Half of the Year",
+      "term_ko": "정부 하반기 3高"
+    },
+    {
+      "term": "Tech Stocks Amid the Boom",
+      "term_ko": "열풍 속 기술주"
+    },
+    {
+      "term": "A Roller Coaster That Shakes Your Body",
+      "term_ko": "몸통 흔드는 롤러코스터"
+    },
+    {
+      "term": "South Korean Stock Market: Single",
+      "term_ko": "한국 증시 단일"
+    },
+    {
+      "term": "If Tesla Doesn't Rise, It'll Be Delisted",
+      "term_ko": "테슬라도 안오르면 퇴출"
+    },
+    {
+      "term": "Kim Seong-wook, Ceo of Im Capital",
+      "term_ko": "김성욱 iM캐피탈 대표"
+    },
+    {
+      "term": "Auto Finance-centric Assets",
+      "term_ko": "오토금융 중심 자산"
+    },
+    {
+      "term": "Revenue Growth and Profitability Growth",
+      "term_ko": "증대에 수익성 성장세"
+    },
+    {
+      "term": "The Second Half: a Time for Breakthroughs",
+      "term_ko": "돌파 위한 하반기"
+    },
+    {
+      "term": "All-out Response to High Exchange Rates",
+      "term_ko": "총력 대응 고환율"
+    },
+    {
+      "term": "Direct Mid-game Support",
+      "term_ko": "직격 중기 지원"
+    },
+    {
+      "term": "Samsung Join Adr",
+      "term_ko": "삼성, ADR에 합류"
+    },
+    {
+      "term": "As If to Rise Above",
+      "term_ko": "웃돌 듯"
+    },
+    {
+      "term": "Retail Investors Amid the Plunge",
+      "term_ko": "급락에 개미들"
+    },
+    {
+      "term": "Youth Employment",
+      "term_ko": "청년 일자리"
+    },
+    {
+      "term": "Trump Cut a",
+      "term_ko": "트럼프는 A를 삭감했다"
+    },
+    {
+      "term": "Billion-dollar Mining Deal",
+      "term_ko": "10억 달러 규모의 광산 거래"
+    },
+    {
+      "term": "His Sons Stand",
+      "term_ko": "그의 아들들이 서 있다"
+    },
+    {
+      "term": "Samsung Eyes Record",
+      "term_ko": "삼성, 신기록 달성 전망"
+    },
+    {
+      "term": "Investment Spanning Affiliates",
+      "term_ko": "계열사 전반에 걸친 투자"
+    },
+    {
+      "term": "Wave Among Asian",
+      "term_ko": "아시아의 물결"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    }
+  ],
+  "translations": {
+    "The Etf That's a Huge Hit": {
+      "en": "The Etf That's a Huge Hit",
+      "ko": "담아 대박난 ETF",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Q2 Won-dollar Exchange Rate": {
+      "en": "Q2 Won-dollar Exchange Rate",
+      "ko": "2분기 원 달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Average Exchange Rate of 1,500 Won": {
+      "en": "Average Exchange Rate of 1,500 Won",
+      "ko": "환율 평균 1500원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "The Government's \"three Highs\" Crisis": {
+      "en": "The Government's \"three Highs\" Crisis",
+      "ko": "정부 3高 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Government's \"three Highs\" for the Second Half of the Year": {
+      "en": "Government's \"three Highs\" for the Second Half of the Year",
+      "ko": "정부 하반기 3高",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Tech Stocks Amid the Boom": {
+      "en": "Tech Stocks Amid the Boom",
+      "ko": "열풍 속 기술주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "A Roller Coaster That Shakes Your Body": {
+      "en": "A Roller Coaster That Shakes Your Body",
+      "ko": "몸통 흔드는 롤러코스터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "South Korean Stock Market: Single": {
+      "en": "South Korean Stock Market: Single",
+      "ko": "한국 증시 단일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "If Tesla Doesn't Rise, It'll Be Delisted": {
+      "en": "If Tesla Doesn't Rise, It'll Be Delisted",
+      "ko": "테슬라도 안오르면 퇴출",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Kim Seong-wook, Ceo of Im Capital": {
+      "en": "Kim Seong-wook, Ceo of Im Capital",
+      "ko": "김성욱 iM캐피탈 대표",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Auto Finance-centric Assets": {
+      "en": "Auto Finance-centric Assets",
+      "ko": "오토금융 중심 자산",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Revenue Growth and Profitability Growth": {
+      "en": "Revenue Growth and Profitability Growth",
+      "ko": "증대에 수익성 성장세",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "The Second Half: a Time for Breakthroughs": {
+      "en": "The Second Half: a Time for Breakthroughs",
+      "ko": "돌파 위한 하반기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "All-out Response to High Exchange Rates": {
+      "en": "All-out Response to High Exchange Rates",
+      "ko": "총력 대응 고환율",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Direct Mid-game Support": {
+      "en": "Direct Mid-game Support",
+      "ko": "직격 중기 지원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Samsung Join Adr": {
+      "en": "Samsung Join Adr",
+      "ko": "삼성, ADR에 합류",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "As If to Rise Above": {
+      "en": "As If to Rise Above",
+      "ko": "웃돌 듯",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Retail Investors Amid the Plunge": {
+      "en": "Retail Investors Amid the Plunge",
+      "ko": "급락에 개미들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Youth Employment": {
+      "en": "Youth Employment",
+      "ko": "청년 일자리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Trump Cut a": {
+      "en": "Trump Cut a",
+      "ko": "트럼프는 A를 삭감했다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Billion-dollar Mining Deal": {
+      "en": "Billion-dollar Mining Deal",
+      "ko": "10억 달러 규모의 광산 거래",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "His Sons Stand": {
+      "en": "His Sons Stand",
+      "ko": "그의 아들들이 서 있다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Samsung Eyes Record": {
+      "en": "Samsung Eyes Record",
+      "ko": "삼성, 신기록 달성 전망",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Investment Spanning Affiliates": {
+      "en": "Investment Spanning Affiliates",
+      "ko": "계열사 전반에 걸친 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Wave Among Asian": {
+      "en": "Wave Among Asian",
+      "ko": "아시아의 물결",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
+    },
+    "Expectations for a Bitcoin Etf": {
+      "en": "Expectations for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-06-28T19:20:30.882Z"
     }
   }
 }
