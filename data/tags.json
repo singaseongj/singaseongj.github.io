@@ -1,439 +1,1143 @@
 {
-  "generatedAt": "2026-06-29T10:56:06.468Z",
-  "timezone": "Asia/Seoul",
   "date": "2026-06-29",
   "window": "12_hours",
-  "total_phrases": 30,
-  "markets": [
-    "KOSPI",
-    "KOSDAQ",
-    "S&P 500",
-    "NASDAQ 100"
-  ],
-  "keywords": [
-    {
-      "term": "South Korea's June Cpi",
-      "term_ko": "한국 6월 CPI"
-    },
-    {
-      "term": "Kb Financial Group: 6.9 Trillion This Year",
-      "term_ko": "KB금융 올해 6조9천억"
-    },
-    {
-      "term": "Gc Green Cross Wellbeing's Next-generation Fat-dissolving Injection",
-      "term_ko": "GC녹십자웰빙 차세대 지방분해주사"
-    },
-    {
-      "term": "Astronomical on the Ai Triad",
-      "term_ko": "AI 삼각축에 천문학적"
-    },
-    {
-      "term": "Kosdaq Hits 900 Mark on Sharp Rise",
-      "term_ko": "급등으로 코스닥 900선"
-    },
-    {
-      "term": "3% Range for the Third Consecutive Month",
-      "term_ko": "달 연속 3%대"
-    },
-    {
-      "term": "6.9 Trillion Won in Funding... Support for Young People, Low-income Households, and Vulnerable Groups",
-      "term_ko": "6.9조원 공급..청년.서민.취약계층 지원"
-    },
-    {
-      "term": "Stock Market Fears Over the Middle East",
-      "term_ko": "증시 중동 공포"
-    },
-    {
-      "term": "Reeling From the Plunge in U.s. Tech Stocks",
-      "term_ko": "美기술주 폭락에 휘청"
-    },
-    {
-      "term": "Mounja Brings a Breath of Fresh Air to Green Cross Wellbeing",
-      "term_ko": "마운자로 훈풍 녹십자웰빙"
-    },
-    {
-      "term": "Conquering Obesity with Fat-dissolving Injections",
-      "term_ko": "지방분해주사로 비만 영토"
-    },
-    {
-      "term": "Alphatau Brain-specific",
-      "term_ko": "알파타우 뇌 전용"
-    },
-    {
-      "term": "Using Insertion Devices",
-      "term_ko": "삽입 장치 활용"
-    },
-    {
-      "term": "Alpha-dart Malignant Brain Tumor",
-      "term_ko": "알파다트 악성 뇌종양"
-    },
-    {
-      "term": "Strengthening the Contouring Business",
-      "term_ko": "컨투어링 사업 강화"
-    },
-    {
-      "term": "Desired Project Scale",
-      "term_ko": "규모 희망 프로젝트"
-    },
-    {
-      "term": "Amount Following the President's Remarks",
-      "term_ko": "금액 대통령 발언후"
-    },
-    {
-      "term": "Announcement by Lee Jae-yong and Choi Tae-won",
-      "term_ko": "이재용 최태원 발표"
-    },
-    {
-      "term": "Loan Interest Rates and Statutory Fees",
-      "term_ko": "대출 금리 법정비용"
-    },
-    {
-      "term": "Us-iran Ceasefire Hopes",
-      "term_ko": "미국-이란 간 휴전 기대"
-    },
-    {
-      "term": "Kospi 2.29%",
-      "term_ko": "코스피 2.29%"
-    },
-    {
-      "term": "3.2% Increase",
-      "term_ko": "상승률 3.2%"
-    },
-    {
-      "term": "Successful Treatment",
-      "term_ko": "치료 성공"
-    },
-    {
-      "term": "Pharmaceutical and Biotech Stocks",
-      "term_ko": "제약 바이오주"
-    },
-    {
-      "term": "Lift Oil Dollar",
-      "term_ko": "석유 달러의 가치를 높이다"
-    },
-    {
-      "term": "Pct Late Mon",
-      "term_ko": "월요일 늦은 시간 (Pct)"
-    },
-    {
-      "term": "Tech Losses Iran",
-      "term_ko": "기술 분야 손실: 이란"
-    },
-    {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
-    },
-    {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
-    },
-    {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "금리 인하 기대감 고조"
-    }
-  ],
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "South Korea's June Cpi",
-      "term_ko": "한국 6월 CPI"
-    },
-    {
-      "term": "Kb Financial Group: 6.9 Trillion This Year",
-      "term_ko": "KB금융 올해 6조9천억"
-    },
-    {
-      "term": "Gc Green Cross Wellbeing's Next-generation Fat-dissolving Injection",
-      "term_ko": "GC녹십자웰빙 차세대 지방분해주사"
-    },
-    {
-      "term": "Astronomical on the Ai Triad",
-      "term_ko": "AI 삼각축에 천문학적"
-    },
-    {
-      "term": "Kosdaq Hits 900 Mark on Sharp Rise",
-      "term_ko": "급등으로 코스닥 900선"
-    },
-    {
-      "term": "3% Range for the Third Consecutive Month",
-      "term_ko": "달 연속 3%대"
-    },
-    {
-      "term": "6.9 Trillion Won in Funding... Support for Young People, Low-income Households, and Vulnerable Groups",
-      "term_ko": "6.9조원 공급..청년.서민.취약계층 지원"
-    },
-    {
-      "term": "Stock Market Fears Over the Middle East",
-      "term_ko": "증시 중동 공포"
-    },
-    {
-      "term": "Reeling From the Plunge in U.s. Tech Stocks",
-      "term_ko": "美기술주 폭락에 휘청"
-    },
-    {
-      "term": "Mounja Brings a Breath of Fresh Air to Green Cross Wellbeing",
-      "term_ko": "마운자로 훈풍 녹십자웰빙"
-    },
-    {
-      "term": "Conquering Obesity with Fat-dissolving Injections",
-      "term_ko": "지방분해주사로 비만 영토"
-    },
-    {
-      "term": "Alphatau Brain-specific",
-      "term_ko": "알파타우 뇌 전용"
-    },
-    {
-      "term": "Using Insertion Devices",
-      "term_ko": "삽입 장치 활용"
-    },
-    {
-      "term": "Alpha-dart Malignant Brain Tumor",
-      "term_ko": "알파다트 악성 뇌종양"
-    },
-    {
-      "term": "Strengthening the Contouring Business",
-      "term_ko": "컨투어링 사업 강화"
-    },
-    {
-      "term": "Desired Project Scale",
-      "term_ko": "규모 희망 프로젝트"
-    },
-    {
-      "term": "Amount Following the President's Remarks",
-      "term_ko": "금액 대통령 발언후"
-    },
-    {
-      "term": "Announcement by Lee Jae-yong and Choi Tae-won",
-      "term_ko": "이재용 최태원 발표"
-    },
-    {
-      "term": "Loan Interest Rates and Statutory Fees",
-      "term_ko": "대출 금리 법정비용"
-    },
-    {
-      "term": "Us-iran Ceasefire Hopes",
-      "term_ko": "미국-이란 간 휴전 기대"
-    },
-    {
-      "term": "Kospi 2.29%",
-      "term_ko": "코스피 2.29%"
-    },
-    {
-      "term": "3.2% Increase",
-      "term_ko": "상승률 3.2%"
-    },
-    {
-      "term": "Successful Treatment",
-      "term_ko": "치료 성공"
-    },
-    {
-      "term": "Pharmaceutical and Biotech Stocks",
-      "term_ko": "제약 바이오주"
-    },
-    {
-      "term": "Lift Oil Dollar",
-      "term_ko": "석유 달러의 가치를 높이다"
-    },
-    {
-      "term": "Pct Late Mon",
-      "term_ko": "월요일 늦은 시간 (Pct)"
+      "term": "End Tad Lower",
+      "term_ko": "",
+      "significance_score": 798,
+      "mentions": 480,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "End Tad Lower",
+        "local_headlines": {
+          "matches": 3,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "(2nd LD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165676?sid=104"
+            },
+            {
+              "title": "(LEAD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165529?sid=104"
+            },
+            {
+              "title": "Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165473?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=End%20Tad%20Lower",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=End%20Tad%20Lower"
+      },
+      "top_headlines": [
+        {
+          "title": "(2nd LD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165676?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "(LEAD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165529?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165473?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
       "term": "Tech Losses Iran",
-      "term_ko": "기술 분야 손실: 이란"
+      "term_ko": "기술 분야 손실: 이란",
+      "significance_score": 798,
+      "mentions": 480,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Tech Losses Iran",
+        "local_headlines": {
+          "matches": 3,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "(2nd LD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165676?sid=104"
+            },
+            {
+              "title": "(LEAD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165529?sid=104"
+            },
+            {
+              "title": "Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165473?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Losses%20Iran",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Losses%20Iran"
+      },
+      "top_headlines": [
+        {
+          "title": "(2nd LD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165676?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "(LEAD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165529?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        },
+        {
+          "title": "Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165473?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Ai Chip Demand Surge",
-      "term_ko": "AI 칩 수요 급증"
+      "term": "Strategy: GC Green Cross Wellbeing U.S. Phase 3 Trial",
+      "term_ko": "공략 GC녹십자웰빙 美3상",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "공략 GC녹십자웰빙 美3상",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "'1회투여로 복부·옆구리·팔뚝지방세포 공략' GC녹십자웰빙, 美3상 앞둔...",
+              "link": "https://www.catchnews.kr/news/articleView.html?idxno=125522"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%EB%9E%B5%20GC%EB%85%B9%EC%8B%AD%EC%9E%90%EC%9B%B0%EB%B9%99%20%E7%BE%8E3%EC%83%81",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%EB%9E%B5%20GC%EB%85%B9%EC%8B%AD%EC%9E%90%EC%9B%B0%EB%B9%99%20%E7%BE%8E3%EC%83%81"
+      },
+      "top_headlines": [
+        {
+          "title": "'1회투여로 복부·옆구리·팔뚝지방세포 공략' GC녹십자웰빙, 美3상 앞둔...",
+          "summary": "",
+          "link": "https://www.catchnews.kr/news/articleView.html?idxno=125522",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Kospi Rebounds on Foreign Buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+      "term": "KB Financial Group: 6.9 trillion won this year",
+      "term_ko": "KB금융 올해 6.9조원",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KB금융 올해 6.9조원",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KB금융, 올해 6.9조원 포용금융 지원…청년·서민·소상공인 재기 돕는다",
+              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=132372"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KB%EA%B8%88%EC%9C%B5%20%EC%98%AC%ED%95%B4%206.9%EC%A1%B0%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KB%EA%B8%88%EC%9C%B5%20%EC%98%AC%ED%95%B4%206.9%EC%A1%B0%EC%9B%90"
+      },
+      "top_headlines": [
+        {
+          "title": "KB금융, 올해 6.9조원 포용금융 지원…청년·서민·소상공인 재기 돕는다",
+          "summary": "",
+          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=132372",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
     },
     {
-      "term": "Interest Rate Cut Expectations Rise",
-      "term_ko": "금리 인하 기대감 고조"
+      "term": "DQN Hanwha Life Insurance: 3 Months",
+      "term_ko": "DQN 한화생명 3개월",
+      "significance_score": 364,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "DQN 한화생명 3개월",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[DQN] 한화생명, 3개월 새 약관대출 35% 급증…생활자금·투자수요 확대...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026062916115144839efc5ce4ae_18"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=DQN%20%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85%203%EA%B0%9C%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=DQN%20%ED%95%9C%ED%99%94%EC%83%9D%EB%AA%85%203%EA%B0%9C%EC%9B%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[DQN] 한화생명, 3개월 새 약관대출 35% 급증…생활자금·투자수요 확대...",
+          "summary": "",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026062916115144839efc5ce4ae_18",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Pharmaceutical Industry News: June",
+      "term_ko": "제약업계 소식 6월",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "제약업계 소식 6월",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[제약업계 소식] 6월 29일",
+              "link": "http://www.doctorstimes.com/news/articleView.html?idxno=238792"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%9C%EC%95%BD%EC%97%85%EA%B3%84%20%EC%86%8C%EC%8B%9D%206%EC%9B%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%9C%EC%95%BD%EC%97%85%EA%B3%84%20%EC%86%8C%EC%8B%9D%206%EC%9B%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[제약업계 소식] 6월 29일",
+          "summary": "",
+          "link": "http://www.doctorstimes.com/news/articleView.html?idxno=238792",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "A single dose for the side of the abdomen",
+      "term_ko": "1회투여로 복부 옆구리",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "1회투여로 복부 옆구리",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "'1회투여로 복부·옆구리·팔뚝지방세포 공략' GC녹십자웰빙, 美3상 앞둔...",
+              "link": "https://www.catchnews.kr/news/articleView.html?idxno=125522"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=1%ED%9A%8C%ED%88%AC%EC%97%AC%EB%A1%9C%20%EB%B3%B5%EB%B6%80%20%EC%98%86%EA%B5%AC%EB%A6%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=1%ED%9A%8C%ED%88%AC%EC%97%AC%EB%A1%9C%20%EB%B3%B5%EB%B6%80%20%EC%98%86%EA%B5%AC%EB%A6%AC"
+      },
+      "top_headlines": [
+        {
+          "title": "'1회투여로 복부·옆구리·팔뚝지방세포 공략' GC녹십자웰빙, 美3상 앞둔...",
+          "summary": "",
+          "link": "https://www.catchnews.kr/news/articleView.html?idxno=125522",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Annual interest rate of 5.9%",
+      "term_ko": "금리 연 5.9%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "금리 연 5.9%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "중·저신용자 위한 '중금리 생활안정대출' 출시…최저 금리 연 5.9%",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1714363"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%97%B0%205.9%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%97%B0%205.9%25"
+      },
+      "top_headlines": [
+        {
+          "title": "중·저신용자 위한 '중금리 생활안정대출' 출시…최저 금리 연 5.9%",
+          "summary": "",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1714363",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "New loans under the revised terms: 35%",
+      "term_ko": "새 약관대출 35%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "새 약관대출 35%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[DQN] 한화생명, 3개월 새 약관대출 35% 급증…생활자금·투자수요 확대...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026062916115144839efc5ce4ae_18"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%88%20%EC%95%BD%EA%B4%80%EB%8C%80%EC%B6%9C%2035%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%88%20%EC%95%BD%EA%B4%80%EB%8C%80%EC%B6%9C%2035%25"
+      },
+      "top_headlines": [
+        {
+          "title": "[DQN] 한화생명, 3개월 새 약관대출 35% 급증…생활자금·투자수요 확대...",
+          "summary": "",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026062916115144839efc5ce4ae_18",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Meanwhile, the KOSDAQ rose 8%",
+      "term_ko": "틈에 코스닥 8%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "틈에 코스닥 8%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "코스피 내린 틈에…코스닥 8% 급등, 역대 두번째 상승률",
+              "link": "https://n.news.naver.com/mnews/article/029/0003034304?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8B%88%EC%97%90%20%EC%BD%94%EC%8A%A4%EB%8B%A5%208%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8B%88%EC%97%90%20%EC%BD%94%EC%8A%A4%EB%8B%A5%208%25"
+      },
+      "top_headlines": [
+        {
+          "title": "코스피 내린 틈에…코스닥 8% 급등, 역대 두번째 상승률",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/029/0003034304?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Youth Supported by Inclusive Finance",
+      "term_ko": "포용금융 지원 청년",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "포용금융 지원 청년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KB금융, 올해 6.9조원 포용금융 지원…청년·서민·소상공인 재기 돕는다",
+              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=132372"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8F%AC%EC%9A%A9%EA%B8%88%EC%9C%B5%20%EC%A7%80%EC%9B%90%20%EC%B2%AD%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8F%AC%EC%9A%A9%EA%B8%88%EC%9C%B5%20%EC%A7%80%EC%9B%90%20%EC%B2%AD%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "KB금융, 올해 6.9조원 포용금융 지원…청년·서민·소상공인 재기 돕는다",
+          "summary": "",
+          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=132372",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Helping Low-Income Individuals and Small Business Owners Get Back on Their Feet",
+      "term_ko": "서민 소상공인 재기",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "서민 소상공인 재기",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "KB금융, 올해 6.9조원 포용금융 지원…청년·서민·소상공인 재기 돕는다",
+              "link": "http://www.newslock.co.kr/news/articleView.html?idxno=132372"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EB%AF%BC%20%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EC%9E%AC%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EB%AF%BC%20%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%20%EC%9E%AC%EA%B8%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "KB금융, 올해 6.9조원 포용금융 지원…청년·서민·소상공인 재기 돕는다",
+          "summary": "",
+          "link": "http://www.newslock.co.kr/news/articleView.html?idxno=132372",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "For people with low credit scores",
+      "term_ko": "중 저신용자 위한",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "중 저신용자 위한",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "중·저신용자 위한 '중금리 생활안정대출' 출시…최저 금리 연 5.9%",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1714363"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%20%EC%A0%80%EC%8B%A0%EC%9A%A9%EC%9E%90%20%EC%9C%84%ED%95%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%20%EC%A0%80%EC%8B%A0%EC%9A%A9%EC%9E%90%20%EC%9C%84%ED%95%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "중·저신용자 위한 '중금리 생활안정대출' 출시…최저 금리 연 5.9%",
+          "summary": "",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1714363",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Launch of the Mid-Rate Living Stability Loan",
+      "term_ko": "중금리 생활안정대출 출시",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "중금리 생활안정대출 출시",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "중·저신용자 위한 '중금리 생활안정대출' 출시…최저 금리 연 5.9%",
+              "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1714363"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EA%B8%88%EB%A6%AC%20%EC%83%9D%ED%99%9C%EC%95%88%EC%A0%95%EB%8C%80%EC%B6%9C%20%EC%B6%9C%EC%8B%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EA%B8%88%EB%A6%AC%20%EC%83%9D%ED%99%9C%EC%95%88%EC%A0%95%EB%8C%80%EC%B6%9C%20%EC%B6%9C%EC%8B%9C"
+      },
+      "top_headlines": [
+        {
+          "title": "중·저신용자 위한 '중금리 생활안정대출' 출시…최저 금리 연 5.9%",
+          "summary": "",
+          "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1714363",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Surge in Demand for Living Expense Investments",
+      "term_ko": "급증 생활자금 투자수요",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "급증 생활자금 투자수요",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[DQN] 한화생명, 3개월 새 약관대출 35% 급증…생활자금·투자수요 확대...",
+              "link": "http://www.fntimes.com/html/view.php?ud=2026062916115144839efc5ce4ae_18"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EC%A6%9D%20%EC%83%9D%ED%99%9C%EC%9E%90%EA%B8%88%20%ED%88%AC%EC%9E%90%EC%88%98%EC%9A%94",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EC%A6%9D%20%EC%83%9D%ED%99%9C%EC%9E%90%EA%B8%88%20%ED%88%AC%EC%9E%90%EC%88%98%EC%9A%94"
+      },
+      "top_headlines": [
+        {
+          "title": "[DQN] 한화생명, 3개월 새 약관대출 35% 급증…생활자금·투자수요 확대...",
+          "summary": "",
+          "link": "http://www.fntimes.com/html/view.php?ud=2026062916115144839efc5ce4ae_18",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "A Reporter's Perspective on Bitcoin",
+      "term_ko": "기자의 눈 비트코인",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "기자의 눈 비트코인",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[기자의 눈] 비트코인 죽어야 블록체인 산다",
+              "link": "http://www.00news.co.kr/news/articleView.html?idxno=104766"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EC%9E%90%EC%9D%98%20%EB%88%88%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EC%9E%90%EC%9D%98%20%EB%88%88%20%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "[기자의 눈] 비트코인 죽어야 블록체인 산다",
+          "summary": "",
+          "link": "http://www.00news.co.kr/news/articleView.html?idxno=104766",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Blockchain Must Die to Live",
+      "term_ko": "죽어야 블록체인 산다",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "죽어야 블록체인 산다",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[기자의 눈] 비트코인 죽어야 블록체인 산다",
+              "link": "http://www.00news.co.kr/news/articleView.html?idxno=104766"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A3%BD%EC%96%B4%EC%95%BC%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EC%82%B0%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A3%BD%EC%96%B4%EC%95%BC%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%20%EC%82%B0%EB%8B%A4"
+      },
+      "top_headlines": [
+        {
+          "title": "[기자의 눈] 비트코인 죽어야 블록체인 산다",
+          "summary": "",
+          "link": "http://www.00news.co.kr/news/articleView.html?idxno=104766",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Saemaul Credit Union: Love for the Market",
+      "term_ko": "새마을금고 시장愛 온",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "새마을금고 시장愛 온",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "새마을금고, '시장愛 온' 체크카드 출시 外",
+              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=31151"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%88%EB%A7%88%EC%9D%84%EA%B8%88%EA%B3%A0%20%EC%8B%9C%EC%9E%A5%E6%84%9B%20%EC%98%A8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%88%EB%A7%88%EC%9D%84%EA%B8%88%EA%B3%A0%20%EC%8B%9C%EC%9E%A5%E6%84%9B%20%EC%98%A8"
+      },
+      "top_headlines": [
+        {
+          "title": "새마을금고, '시장愛 온' 체크카드 출시 外",
+          "summary": "",
+          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=31151",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Launch of a Debit Card and More",
+      "term_ko": "체크카드 출시 外",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "체크카드 출시 外",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "새마을금고, '시장愛 온' 체크카드 출시 外",
+              "link": "https://www.rcast.co.kr/news/articleView.html?idxno=31151"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B2%B4%ED%81%AC%EC%B9%B4%EB%93%9C%20%EC%B6%9C%EC%8B%9C%20%E5%A4%96",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B2%B4%ED%81%AC%EC%B9%B4%EB%93%9C%20%EC%B6%9C%EC%8B%9C%20%E5%A4%96"
+      },
+      "top_headlines": [
+        {
+          "title": "새마을금고, '시장愛 온' 체크카드 출시 外",
+          "summary": "",
+          "link": "https://www.rcast.co.kr/news/articleView.html?idxno=31151",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Second-Largest Surge on Record",
+      "term_ko": "급등 역대 두번째",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "급등 역대 두번째",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "코스피 내린 틈에…코스닥 8% 급등, 역대 두번째 상승률",
+              "link": "https://n.news.naver.com/mnews/article/029/0003034304?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%89%EB%93%B1%20%EC%97%AD%EB%8C%80%20%EB%91%90%EB%B2%88%EC%A7%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%89%EB%93%B1%20%EC%97%AD%EB%8C%80%20%EB%91%90%EB%B2%88%EC%A7%B8"
+      },
+      "top_headlines": [
+        {
+          "title": "코스피 내린 틈에…코스닥 8% 급등, 역대 두번째 상승률",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/029/0003034304?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Extend Koreas GLP‑1",
+      "term_ko": "한국의 GLP-1 확대",
+      "significance_score": 308,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Extend Koreas GLP‑1",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "GC Wellbeing Bets on Raziel Fat Shot to Extend Korea's GLP‑1 Boom",
+              "link": "http://www.kdfnews.com/news/articleView.html?idxno=184689"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Extend%20Koreas%20GLP%E2%80%911",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Extend%20Koreas%20GLP%E2%80%911"
+      },
+      "top_headlines": [
+        {
+          "title": "GC Wellbeing Bets on Raziel Fat Shot to Extend Korea's GLP‑1 Boom",
+          "summary": "",
+          "link": "http://www.kdfnews.com/news/articleView.html?idxno=184689",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "GC Wellbeing Bets",
+      "term_ko": "GC 웰빙 베팅",
+      "significance_score": 294,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "GC Wellbeing Bets",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "GC Wellbeing Bets on Raziel Fat Shot to Extend Korea's GLP‑1 Boom",
+              "link": "http://www.kdfnews.com/news/articleView.html?idxno=184689"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=GC%20Wellbeing%20Bets",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=GC%20Wellbeing%20Bets"
+      },
+      "top_headlines": [
+        {
+          "title": "GC Wellbeing Bets on Raziel Fat Shot to Extend Korea's GLP‑1 Boom",
+          "summary": "",
+          "link": "http://www.kdfnews.com/news/articleView.html?idxno=184689",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "KOSPI down",
+      "term_ko": "코스피 내린",
+      "significance_score": 280,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "코스피 내린",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "코스피 내린 틈에…코스닥 8% 급등, 역대 두번째 상승률",
+              "link": "https://n.news.naver.com/mnews/article/029/0003034304?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%82%B4%EB%A6%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EB%82%B4%EB%A6%B0"
+      },
+      "top_headlines": [
+        {
+          "title": "코스피 내린 틈에…코스닥 8% 급등, 역대 두번째 상승률",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/029/0003034304?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Raziel Fat Shot",
+      "term_ko": "라지엘 팻 샷",
+      "significance_score": 266,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Raziel Fat Shot",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "GC Wellbeing Bets on Raziel Fat Shot to Extend Korea's GLP‑1 Boom",
+              "link": "http://www.kdfnews.com/news/articleView.html?idxno=184689"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Raziel%20Fat%20Shot",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Raziel%20Fat%20Shot"
+      },
+      "top_headlines": [
+        {
+          "title": "GC Wellbeing Bets on Raziel Fat Shot to Extend Korea's GLP‑1 Boom",
+          "summary": "",
+          "link": "http://www.kdfnews.com/news/articleView.html?idxno=184689",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "LD Seoul",
+      "term_ko": "LD 서울",
+      "significance_score": 252,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "LD Seoul",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "(2nd LD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165676?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20Seoul",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20Seoul"
+      },
+      "top_headlines": [
+        {
+          "title": "(2nd LD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165676?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "LEAD Seoul",
+      "term_ko": "LEAD 서울",
+      "significance_score": 252,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "LEAD Seoul",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "(LEAD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+              "link": "https://n.news.naver.com/mnews/article/001/0016165529?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LEAD%20Seoul",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LEAD%20Seoul"
+      },
+      "top_headlines": [
+        {
+          "title": "(LEAD) Seoul shares end tad lower on tech losses, Iran uncertainty",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016165529?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-06-29T19:58:33+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
     }
   ],
-  "translations": {
-    "South Korea's June Cpi": {
-      "en": "South Korea's June Cpi",
-      "ko": "한국 6월 CPI",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
+  "metadata": {
+    "collection_method": "local_headline_analysis",
+    "sample_size": 30,
+    "generated_at": "2026-06-29T10:59:39.836Z",
+    "keyword_limit": 30,
+    "lookback_hours": 12,
+    "keyword_source": "market news updated 2026-06-29T19:58:33+09:00 (12 stories analysed)",
+    "fallback_keyword_source": "data/finance_keywords.json",
+    "similar_keywords_removed": 1,
+    "removal_breakdown": {
+      "exact_match": 0,
+      "similar": 1,
+      "too_generic": 0
     },
-    "Kb Financial Group: 6.9 Trillion This Year": {
-      "en": "Kb Financial Group: 6.9 Trillion This Year",
-      "ko": "KB금융 올해 6조9천억",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Gc Green Cross Wellbeing's Next-generation Fat-dissolving Injection": {
-      "en": "Gc Green Cross Wellbeing's Next-generation Fat-dissolving Injection",
-      "ko": "GC녹십자웰빙 차세대 지방분해주사",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Astronomical on the Ai Triad": {
-      "en": "Astronomical on the Ai Triad",
-      "ko": "AI 삼각축에 천문학적",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Kosdaq Hits 900 Mark on Sharp Rise": {
-      "en": "Kosdaq Hits 900 Mark on Sharp Rise",
-      "ko": "급등으로 코스닥 900선",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "3% Range for the Third Consecutive Month": {
-      "en": "3% Range for the Third Consecutive Month",
-      "ko": "달 연속 3%대",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "6.9 Trillion Won in Funding... Support for Young People, Low-income Households, and Vulnerable Groups": {
-      "en": "6.9 Trillion Won in Funding... Support for Young People, Low-income Households, and Vulnerable Groups",
-      "ko": "6.9조원 공급..청년.서민.취약계층 지원",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Stock Market Fears Over the Middle East": {
-      "en": "Stock Market Fears Over the Middle East",
-      "ko": "증시 중동 공포",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Reeling From the Plunge in U.s. Tech Stocks": {
-      "en": "Reeling From the Plunge in U.s. Tech Stocks",
-      "ko": "美기술주 폭락에 휘청",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Mounja Brings a Breath of Fresh Air to Green Cross Wellbeing": {
-      "en": "Mounja Brings a Breath of Fresh Air to Green Cross Wellbeing",
-      "ko": "마운자로 훈풍 녹십자웰빙",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Conquering Obesity with Fat-dissolving Injections": {
-      "en": "Conquering Obesity with Fat-dissolving Injections",
-      "ko": "지방분해주사로 비만 영토",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Alphatau Brain-specific": {
-      "en": "Alphatau Brain-specific",
-      "ko": "알파타우 뇌 전용",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Using Insertion Devices": {
-      "en": "Using Insertion Devices",
-      "ko": "삽입 장치 활용",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Alpha-dart Malignant Brain Tumor": {
-      "en": "Alpha-dart Malignant Brain Tumor",
-      "ko": "알파다트 악성 뇌종양",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Strengthening the Contouring Business": {
-      "en": "Strengthening the Contouring Business",
-      "ko": "컨투어링 사업 강화",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Desired Project Scale": {
-      "en": "Desired Project Scale",
-      "ko": "규모 희망 프로젝트",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Amount Following the President's Remarks": {
-      "en": "Amount Following the President's Remarks",
-      "ko": "금액 대통령 발언후",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Announcement by Lee Jae-yong and Choi Tae-won": {
-      "en": "Announcement by Lee Jae-yong and Choi Tae-won",
-      "ko": "이재용 최태원 발표",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Loan Interest Rates and Statutory Fees": {
-      "en": "Loan Interest Rates and Statutory Fees",
-      "ko": "대출 금리 법정비용",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Us-iran Ceasefire Hopes": {
-      "en": "Us-iran Ceasefire Hopes",
-      "ko": "미국-이란 간 휴전 기대",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Kospi 2.29%": {
-      "en": "Kospi 2.29%",
-      "ko": "코스피 2.29%",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "3.2% Increase": {
-      "en": "3.2% Increase",
-      "ko": "상승률 3.2%",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Successful Treatment": {
-      "en": "Successful Treatment",
-      "ko": "치료 성공",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Pharmaceutical and Biotech Stocks": {
-      "en": "Pharmaceutical and Biotech Stocks",
-      "ko": "제약 바이오주",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Lift Oil Dollar": {
-      "en": "Lift Oil Dollar",
-      "ko": "석유 달러의 가치를 높이다",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Pct Late Mon": {
-      "en": "Pct Late Mon",
-      "ko": "월요일 늦은 시간 (Pct)",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Tech Losses Iran": {
-      "en": "Tech Losses Iran",
-      "ko": "기술 분야 손실: 이란",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Ai Chip Demand Surge": {
-      "en": "Ai Chip Demand Surge",
-      "ko": "AI 칩 수요 급증",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Kospi Rebounds on Foreign Buying": {
-      "en": "Kospi Rebounds on Foreign Buying",
-      "ko": "외국인 매수세에 힘입어 코스피 반등",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
-    },
-    "Interest Rate Cut Expectations Rise": {
-      "en": "Interest Rate Cut Expectations Rise",
-      "ko": "금리 인하 기대감 고조",
-      "translator": "pre-collected",
-      "cachedAt": "2026-06-29T10:56:06.468Z"
+    "local_headlines": {
+      "headline_count": 12,
+      "last_updated": "2026-06-29T19:58:33+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
+      "window": {
+        "headlineCount": 12,
+        "lastUpdated": "2026-06-29T19:58:33+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
+      }
     }
   }
 }
