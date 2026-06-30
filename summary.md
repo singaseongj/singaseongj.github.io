@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-06-30T23:19:29+09:00 (KST)**
+- Generated: **2026-07-01T04:58:26+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -95,10 +95,17 @@
 
 **LG** (003550.KS)
 
-- News (7d): **2** (blogs: 10) — momentum: **low**, sentiment: **positive (+1.00)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **4.0%**, 20d **-4.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=LG
+
+**LG화학** (051910.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.9%**, 20d **-23.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
 **SK하이닉스** (000660.KS)
 
@@ -109,7 +116,7 @@
 
 **대한항공** (003490.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-4.4%**, 20d **-0.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
@@ -120,13 +127,6 @@
 - Returns: 5d **7.7%**, 20d **-4.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
-
-**셀트리온** (068270.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **8.0%**, 20d **-5.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
 ### AGGRESSIVE (5)
 
@@ -315,7 +315,7 @@
 **Southwest Airlines** (LUV)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.9%**, 20d **20.1%**; volatility (20d): **unknown**
+- Returns: 5d **4.3%**, 20d **20.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Southwest%20Airlines
