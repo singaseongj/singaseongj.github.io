@@ -1,1036 +1,425 @@
 {
+  "generatedAt": "2026-07-01T19:55:18.279Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-07-01",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Bitcoin (BTC) Sailor Dumps Shares",
-      "term_ko": "비트코인BTC 세일러 투매",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인BTC 세일러 투매",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 세일러 투매 공포 다음은 마운트곡스 물량 폭탄...집단 ...",
-              "link": "http://coinreaders.com/245534"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%20%EC%84%B8%EC%9D%BC%EB%9F%AC%20%ED%88%AC%EB%A7%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%20%EC%84%B8%EC%9D%BC%EB%9F%AC%20%ED%88%AC%EB%A7%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 세일러 투매 공포 다음은 마운트곡스 물량 폭탄...집단 ...",
-          "summary": "",
-          "link": "http://coinreaders.com/245534",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Bitcoin (btc) Sailor Dumps Shares",
+      "term_ko": "비트코인BTC 세일러 투매"
     },
     {
-      "term": "ADP Data Shows Slowdown in New York Stock Market",
-      "term_ko": "뉴욕증시 ADP 둔화",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 ADP 둔화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, ADP 둔화·금리 상승에 엔비디아 압박",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16119976"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20ADP%20%EB%91%94%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20ADP%20%EB%91%94%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, ADP 둔화·금리 상승에 엔비디아 압박",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16119976",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Adp Data Shows Slowdown in New York Stock Market",
+      "term_ko": "뉴욕증시 ADP 둔화"
     },
     {
-      "term": "Lazard AI Max",
-      "term_ko": "라자드 AI 최대",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "라자드 AI 최대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "라자드 \"AI 최대 수혜는 반도체…밸류에이션 부담 커졌다\"",
-              "link": "https://www.asiatime.co.kr/article/20260701500434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9D%BC%EC%9E%90%EB%93%9C%20AI%20%EC%B5%9C%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9D%BC%EC%9E%90%EB%93%9C%20AI%20%EC%B5%9C%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "라자드 \"AI 최대 수혜는 반도체…밸류에이션 부담 커졌다\"",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260701500434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Lazard Ai Max",
+      "term_ko": "라자드 AI 최대"
     },
     {
       "term": "New York Stock Market Falls in the Third Quarter",
-      "term_ko": "뉴욕증시 3분기 하락",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 3분기 하락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, 3분기 '하락' 출발 경고...매파 연준·중동 위기에 '휘청'",
-              "link": "http://coinreaders.com/245561"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%203%EB%B6%84%EA%B8%B0%20%ED%95%98%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%203%EB%B6%84%EA%B8%B0%20%ED%95%98%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, 3분기 '하락' 출발 경고...매파 연준·중동 위기에 '휘청'",
-          "summary": "",
-          "link": "http://coinreaders.com/245561",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뉴욕증시 3분기 하락"
     },
     {
       "term": "Dow Jones at 52,000",
-      "term_ko": "다우존스 5만 2000선",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "다우존스 5만 2000선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "다우존스, 5만 2000선 찍고 급제동...상반기 랠리 지속 희망 안 꺾였다",
-              "link": "http://coinreaders.com/245536"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%205%EB%A7%8C%202000%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%A4%EC%9A%B0%EC%A1%B4%EC%8A%A4%205%EB%A7%8C%202000%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "다우존스, 5만 2000선 찍고 급제동...상반기 랠리 지속 희망 안 꺾였다",
-          "summary": "",
-          "link": "http://coinreaders.com/245536",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "다우존스 5만 2000선"
     },
     {
-      "term": "GDP growth rate of 2.7%",
-      "term_ko": "비명 성장률 2.7%",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비명 성장률 2.7%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[K-Economy 진단] 거시의 환희, 미시의 비명…'성장률 2.7%' 착시에 갇힌...",
-              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272336"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%EB%AA%85%20%EC%84%B1%EC%9E%A5%EB%A5%A0%202.7%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%EB%AA%85%20%EC%84%B1%EC%9E%A5%EB%A5%A0%202.7%25"
-      },
-      "top_headlines": [
-        {
-          "title": "[K-Economy 진단] 거시의 환희, 미시의 비명…'성장률 2.7%' 착시에 갇힌...",
-          "summary": "",
-          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272336",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Gdp Growth Rate of 2.7%",
+      "term_ko": "비명 성장률 2.7%"
     },
     {
       "term": "Nasdaq Down About 0.8%",
-      "term_ko": "하락 나스닥 0.8%대",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "하락 나스닥 0.8%대",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[속보]미국 증시, 차익실현에 일제히 하락…나스닥 0.8%대 약세",
-              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=586028"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%9D%BD%20%EB%82%98%EC%8A%A4%EB%8B%A5%200.8%25%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%9D%BD%20%EB%82%98%EC%8A%A4%EB%8B%A5%200.8%25%EB%8C%80"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보]미국 증시, 차익실현에 일제히 하락…나스닥 0.8%대 약세",
-          "summary": "",
-          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=586028",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "하락 나스닥 0.8%대"
     },
     {
       "term": "Hoping the Rally Continues",
-      "term_ko": "랠리 지속 희망",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "랠리 지속 희망",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "다우존스, 5만 2000선 찍고 급제동...상반기 랠리 지속 희망 안 꺾였다",
-              "link": "http://coinreaders.com/245536"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9E%A0%EB%A6%AC%20%EC%A7%80%EC%86%8D%20%ED%9D%AC%EB%A7%9D",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9E%A0%EB%A6%AC%20%EC%A7%80%EC%86%8D%20%ED%9D%AC%EB%A7%9D"
-      },
-      "top_headlines": [
-        {
-          "title": "다우존스, 5만 2000선 찍고 급제동...상반기 랠리 지속 희망 안 꺾였다",
-          "summary": "",
-          "link": "http://coinreaders.com/245536",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "랠리 지속 희망"
     },
     {
-      "term": "After \"Fear,\" it's Mt. Gox",
-      "term_ko": "공포 다음은 마운트곡스",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "공포 다음은 마운트곡스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 세일러 투매 공포 다음은 마운트곡스 물량 폭탄...집단 ...",
-              "link": "http://coinreaders.com/245534"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%ED%8F%AC%20%EB%8B%A4%EC%9D%8C%EC%9D%80%20%EB%A7%88%EC%9A%B4%ED%8A%B8%EA%B3%A1%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%ED%8F%AC%20%EB%8B%A4%EC%9D%8C%EC%9D%80%20%EB%A7%88%EC%9A%B4%ED%8A%B8%EA%B3%A1%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 세일러 투매 공포 다음은 마운트곡스 물량 폭탄...집단 ...",
-          "summary": "",
-          "link": "http://coinreaders.com/245534",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "After \"fear,\" It's Mt. Gox",
+      "term_ko": "공포 다음은 마운트곡스"
     },
     {
-      "term": "NVIDIA Amid Rising Interest Rates",
-      "term_ko": "금리 상승에 엔비디아",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리 상승에 엔비디아",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "뉴욕증시, ADP 둔화·금리 상승에 엔비디아 압박",
-              "link": "https://www.topstarnews.net/news/articleView.html?idxno=16119976"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%83%81%EC%8A%B9%EC%97%90%20%EC%97%94%EB%B9%84%EB%94%94%EC%95%84"
-      },
-      "top_headlines": [
-        {
-          "title": "뉴욕증시, ADP 둔화·금리 상승에 엔비디아 압박",
-          "summary": "",
-          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16119976",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Nvidia Amid Rising Interest Rates",
+      "term_ko": "금리 상승에 엔비디아"
     },
     {
-      "term": "Driven by AI semiconductors",
-      "term_ko": "인공지능 반도체가 이끈",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인공지능 반도체가 이끈",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "인공지능 반도체가 이끈 글로벌 증시 반등, 이란 전쟁 충격에도 시총 7...",
-              "link": "https://www.tokenpost.kr/news/market/374258"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EB%B0%98%EB%8F%84%EC%B2%B4%EA%B0%80%20%EC%9D%B4%EB%81%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EB%B0%98%EB%8F%84%EC%B2%B4%EA%B0%80%20%EC%9D%B4%EB%81%88"
-      },
-      "top_headlines": [
-        {
-          "title": "인공지능 반도체가 이끈 글로벌 증시 반등, 이란 전쟁 충격에도 시총 7...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/374258",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Driven by Ai Semiconductors",
+      "term_ko": "인공지능 반도체가 이끈"
     },
     {
       "term": "Global Stock Markets Rebound",
-      "term_ko": "글로벌 증시 반등",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "글로벌 증시 반등",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "인공지능 반도체가 이끈 글로벌 증시 반등, 이란 전쟁 충격에도 시총 7...",
-              "link": "https://www.tokenpost.kr/news/market/374258"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "인공지능 반도체가 이끈 글로벌 증시 반등, 이란 전쟁 충격에도 시총 7...",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/market/374258",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "글로벌 증시 반등"
     },
     {
       "term": "Beneficiaries: Semiconductor Valuations",
-      "term_ko": "수혜는 반도체 밸류에이션",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "수혜는 반도체 밸류에이션",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "라자드 \"AI 최대 수혜는 반도체…밸류에이션 부담 커졌다\"",
-              "link": "https://www.asiatime.co.kr/article/20260701500434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%88%98%ED%98%9C%EB%8A%94%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%B0%B8%EB%A5%98%EC%97%90%EC%9D%B4%EC%85%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%88%98%ED%98%9C%EB%8A%94%20%EB%B0%98%EB%8F%84%EC%B2%B4%20%EB%B0%B8%EB%A5%98%EC%97%90%EC%9D%B4%EC%85%98"
-      },
-      "top_headlines": [
-        {
-          "title": "라자드 \"AI 최대 수혜는 반도체…밸류에이션 부담 커졌다\"",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260701500434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "수혜는 반도체 밸류에이션"
     },
     {
-      "term": "SK Hynix Finishes",
-      "term_ko": "SK하이닉스, 마감",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "SK Hynix Finishes",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix finishes filing for US depositary share offering",
-              "link": "https://www.koreatimes.co.kr/path/A2026070118570004969"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Finishes",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Finishes"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix finishes filing for US depositary share offering",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026070118570004969",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sk Hynix Finishes",
+      "term_ko": "SK하이닉스, 마감"
     },
     {
-      "term": "US Depositary Share",
-      "term_ko": "미국 예탁증권",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "US Depositary Share",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "SK hynix finishes filing for US depositary share offering",
-              "link": "https://www.koreatimes.co.kr/path/A2026070118570004969"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=US%20Depositary%20Share",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=US%20Depositary%20Share"
-      },
-      "top_headlines": [
-        {
-          "title": "SK hynix finishes filing for US depositary share offering",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026070118570004969",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Us Depositary Share",
+      "term_ko": "미국 예탁증권"
     },
     {
-      "term": "Strong Dollar—Super Yen Weakness—Sell Korea—24-Hour Foreign Exchange Market",
-      "term_ko": "강달러-슈퍼엔저-셀코리아-24시간 환시장",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "강달러-슈퍼엔저-셀코리아-24시간 환시장",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[사설]환율 ‘4중 파도’… 강달러-슈퍼엔저-셀코리아-24시간 환시장",
-              "link": "https://n.news.naver.com/mnews/article/020/0003730873?sid=110"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EB%8B%AC%EB%9F%AC-%EC%8A%88%ED%8D%BC%EC%97%94%EC%A0%80-%EC%85%80%EC%BD%94%EB%A6%AC%EC%95%84-24%EC%8B%9C%EA%B0%84%20%ED%99%98%EC%8B%9C%EC%9E%A5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EB%8B%AC%EB%9F%AC-%EC%8A%88%ED%8D%BC%EC%97%94%EC%A0%80-%EC%85%80%EC%BD%94%EB%A6%AC%EC%95%84-24%EC%8B%9C%EA%B0%84%20%ED%99%98%EC%8B%9C%EC%9E%A5"
-      },
-      "top_headlines": [
-        {
-          "title": "[사설]환율 ‘4중 파도’… 강달러-슈퍼엔저-셀코리아-24시간 환시장",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003730873?sid=110",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Strong Dollar—super Yen Weakness—sell Korea—24-hour Foreign Exchange Market",
+      "term_ko": "강달러-슈퍼엔저-셀코리아-24시간 환시장"
     },
     {
-      "term": "It didn't break",
-      "term_ko": "안 꺾였다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "안 꺾였다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "다우존스, 5만 2000선 찍고 급제동...상반기 랠리 지속 희망 안 꺾였다",
-              "link": "http://coinreaders.com/245536"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%95%88%20%EA%BA%BE%EC%98%80%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%95%88%20%EA%BA%BE%EC%98%80%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "다우존스, 5만 2000선 찍고 급제동...상반기 랠리 지속 희망 안 꺾였다",
-          "summary": "",
-          "link": "http://coinreaders.com/245536",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It Didn't Break",
+      "term_ko": "안 꺾였다"
     },
     {
-      "term": "The burden has grown",
-      "term_ko": "부담 커졌다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부담 커졌다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "라자드 \"AI 최대 수혜는 반도체…밸류에이션 부담 커졌다\"",
-              "link": "https://www.asiatime.co.kr/article/20260701500434"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8B%B4%20%EC%BB%A4%EC%A1%8C%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8B%B4%20%EC%BB%A4%EC%A1%8C%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "라자드 \"AI 최대 수혜는 반도체…밸류에이션 부담 커졌다\"",
-          "summary": "",
-          "link": "https://www.asiatime.co.kr/article/20260701500434",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "The Burden Has Grown",
+      "term_ko": "부담 커졌다"
     },
     {
       "term": "Regain Investors Trust",
-      "term_ko": "투자자들의 신뢰를 되찾다",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Regain Investors Trust",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "30 years on, Kosdaq struggles to regain investors' trust",
-              "link": "https://www.koreatimes.co.kr/path/A2026070109470002663"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Regain%20Investors%20Trust",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Regain%20Investors%20Trust"
-      },
-      "top_headlines": [
-        {
-          "title": "30 years on, Kosdaq struggles to regain investors' trust",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026070109470002663",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "투자자들의 신뢰를 되찾다"
     },
     {
       "term": "Kosdaq Struggles",
-      "term_ko": "코스닥, 부진한 행보",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Kosdaq Struggles",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "30 years on, Kosdaq struggles to regain investors' trust",
-              "link": "https://www.koreatimes.co.kr/path/A2026070109470002663"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Kosdaq%20Struggles",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Kosdaq%20Struggles"
-      },
-      "top_headlines": [
-        {
-          "title": "30 years on, Kosdaq struggles to regain investors' trust",
-          "summary": "",
-          "link": "https://www.koreatimes.co.kr/path/A2026070109470002663",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "코스닥, 부진한 행보"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
     },
     {
-      "term": "Sharp Rise in the Won-Dollar Exchange Rate",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
+      "term": "Sharp Rise in the Won-dollar Exchange Rate",
+      "term_ko": "원달러 환율 급등"
     },
     {
-      "term": "Threat of a U.S. Government Shutdown",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
     },
     {
       "term": "South Korean Stock Market Rebounds",
-      "term_ko": "한국 증시 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "한국 증시 반등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%9C%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EB%B0%98%EB%93%B1"
-      },
-      "top_headlines": []
+      "term_ko": "한국 증시 반등"
     },
     {
       "term": "Expansion of Semiconductor Investment",
-      "term_ko": "반도체 투자 확대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 투자 확대",
-        "search_trends": {
-          "source": "naver_datalab_search",
-          "time_unit": "date",
-          "bucket_size_hours": 24,
-          "rows": [
-            {
-              "period": "2026-06-29",
-              "timestamp": 1782658800000,
-              "value": 100
-            }
-          ]
-        },
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%ED%88%AC%EC%9E%90%20%ED%99%95%EB%8C%80"
-      },
-      "top_headlines": [],
-      "search_scores": {
-        "time_unit": "date",
-        "bucket_size_hours": 24,
-        "short_window_hours": 24,
-        "medium_window_hours": 72,
-        "long_window_hours": 168,
-        "recent_hour_volume": 0,
-        "weekly_search_volume": 100,
-        "weekly_average_volume": 100,
-        "day_score": 0,
-        "week_score": 0,
-        "correction_factor": 0.115911,
-        "decay_factor": 0.041087,
-        "time_weight": 0.013955,
-        "raw_score": 0,
-        "scaled_score": 0,
-        "total_score": 0,
-        "last_observation": 1782658800000
-      }
+      "term_ko": "반도체 투자 확대"
     },
     {
-      "term": "The Race for AI Chips",
-      "term_ko": "인공지능 칩 경쟁",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인공지능 칩 경쟁",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T23:38:22+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EC%B9%A9%20%EA%B2%BD%EC%9F%81"
-      },
-      "top_headlines": []
+      "term": "The Race for Ai Chips",
+      "term_ko": "인공지능 칩 경쟁"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-07-01T14:39:32.036Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-07-01T23:38:22+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Bitcoin (btc) Sailor Dumps Shares",
+      "term_ko": "비트코인BTC 세일러 투매"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-07-01T23:38:22+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-07-01T23:38:22+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Adp Data Shows Slowdown in New York Stock Market",
+      "term_ko": "뉴욕증시 ADP 둔화"
+    },
+    {
+      "term": "Lazard Ai Max",
+      "term_ko": "라자드 AI 최대"
+    },
+    {
+      "term": "New York Stock Market Falls in the Third Quarter",
+      "term_ko": "뉴욕증시 3분기 하락"
+    },
+    {
+      "term": "Dow Jones at 52,000",
+      "term_ko": "다우존스 5만 2000선"
+    },
+    {
+      "term": "Gdp Growth Rate of 2.7%",
+      "term_ko": "비명 성장률 2.7%"
+    },
+    {
+      "term": "Nasdaq Down About 0.8%",
+      "term_ko": "하락 나스닥 0.8%대"
+    },
+    {
+      "term": "Hoping the Rally Continues",
+      "term_ko": "랠리 지속 희망"
+    },
+    {
+      "term": "After \"fear,\" It's Mt. Gox",
+      "term_ko": "공포 다음은 마운트곡스"
+    },
+    {
+      "term": "Nvidia Amid Rising Interest Rates",
+      "term_ko": "금리 상승에 엔비디아"
+    },
+    {
+      "term": "Driven by Ai Semiconductors",
+      "term_ko": "인공지능 반도체가 이끈"
+    },
+    {
+      "term": "Global Stock Markets Rebound",
+      "term_ko": "글로벌 증시 반등"
+    },
+    {
+      "term": "Beneficiaries: Semiconductor Valuations",
+      "term_ko": "수혜는 반도체 밸류에이션"
+    },
+    {
+      "term": "Sk Hynix Finishes",
+      "term_ko": "SK하이닉스, 마감"
+    },
+    {
+      "term": "Us Depositary Share",
+      "term_ko": "미국 예탁증권"
+    },
+    {
+      "term": "Strong Dollar—super Yen Weakness—sell Korea—24-hour Foreign Exchange Market",
+      "term_ko": "강달러-슈퍼엔저-셀코리아-24시간 환시장"
+    },
+    {
+      "term": "It Didn't Break",
+      "term_ko": "안 꺾였다"
+    },
+    {
+      "term": "The Burden Has Grown",
+      "term_ko": "부담 커졌다"
+    },
+    {
+      "term": "Regain Investors Trust",
+      "term_ko": "투자자들의 신뢰를 되찾다"
+    },
+    {
+      "term": "Kosdaq Struggles",
+      "term_ko": "코스닥, 부진한 행보"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Sharp Rise in the Won-dollar Exchange Rate",
+      "term_ko": "원달러 환율 급등"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "South Korean Stock Market Rebounds",
+      "term_ko": "한국 증시 반등"
+    },
+    {
+      "term": "Expansion of Semiconductor Investment",
+      "term_ko": "반도체 투자 확대"
+    },
+    {
+      "term": "The Race for Ai Chips",
+      "term_ko": "인공지능 칩 경쟁"
+    }
+  ],
+  "translations": {
+    "Bitcoin (btc) Sailor Dumps Shares": {
+      "en": "Bitcoin (btc) Sailor Dumps Shares",
+      "ko": "비트코인BTC 세일러 투매",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Adp Data Shows Slowdown in New York Stock Market": {
+      "en": "Adp Data Shows Slowdown in New York Stock Market",
+      "ko": "뉴욕증시 ADP 둔화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Lazard Ai Max": {
+      "en": "Lazard Ai Max",
+      "ko": "라자드 AI 최대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "New York Stock Market Falls in the Third Quarter": {
+      "en": "New York Stock Market Falls in the Third Quarter",
+      "ko": "뉴욕증시 3분기 하락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Dow Jones at 52,000": {
+      "en": "Dow Jones at 52,000",
+      "ko": "다우존스 5만 2000선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Gdp Growth Rate of 2.7%": {
+      "en": "Gdp Growth Rate of 2.7%",
+      "ko": "비명 성장률 2.7%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Nasdaq Down About 0.8%": {
+      "en": "Nasdaq Down About 0.8%",
+      "ko": "하락 나스닥 0.8%대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Hoping the Rally Continues": {
+      "en": "Hoping the Rally Continues",
+      "ko": "랠리 지속 희망",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "After \"fear,\" It's Mt. Gox": {
+      "en": "After \"fear,\" It's Mt. Gox",
+      "ko": "공포 다음은 마운트곡스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Nvidia Amid Rising Interest Rates": {
+      "en": "Nvidia Amid Rising Interest Rates",
+      "ko": "금리 상승에 엔비디아",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Driven by Ai Semiconductors": {
+      "en": "Driven by Ai Semiconductors",
+      "ko": "인공지능 반도체가 이끈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Global Stock Markets Rebound": {
+      "en": "Global Stock Markets Rebound",
+      "ko": "글로벌 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Beneficiaries: Semiconductor Valuations": {
+      "en": "Beneficiaries: Semiconductor Valuations",
+      "ko": "수혜는 반도체 밸류에이션",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Sk Hynix Finishes": {
+      "en": "Sk Hynix Finishes",
+      "ko": "SK하이닉스, 마감",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Us Depositary Share": {
+      "en": "Us Depositary Share",
+      "ko": "미국 예탁증권",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Strong Dollar—super Yen Weakness—sell Korea—24-hour Foreign Exchange Market": {
+      "en": "Strong Dollar—super Yen Weakness—sell Korea—24-hour Foreign Exchange Market",
+      "ko": "강달러-슈퍼엔저-셀코리아-24시간 환시장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "It Didn't Break": {
+      "en": "It Didn't Break",
+      "ko": "안 꺾였다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "The Burden Has Grown": {
+      "en": "The Burden Has Grown",
+      "ko": "부담 커졌다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Regain Investors Trust": {
+      "en": "Regain Investors Trust",
+      "ko": "투자자들의 신뢰를 되찾다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Kosdaq Struggles": {
+      "en": "Kosdaq Struggles",
+      "ko": "코스닥, 부진한 행보",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Expectations for a Bitcoin Etf": {
+      "en": "Expectations for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Sharp Rise in the Won-dollar Exchange Rate": {
+      "en": "Sharp Rise in the Won-dollar Exchange Rate",
+      "ko": "원달러 환율 급등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Threat of a U.s. Government Shutdown": {
+      "en": "Threat of a U.s. Government Shutdown",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "South Korean Stock Market Rebounds": {
+      "en": "South Korean Stock Market Rebounds",
+      "ko": "한국 증시 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "Expansion of Semiconductor Investment": {
+      "en": "Expansion of Semiconductor Investment",
+      "ko": "반도체 투자 확대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
+    },
+    "The Race for Ai Chips": {
+      "en": "The Race for Ai Chips",
+      "ko": "인공지능 칩 경쟁",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T19:55:18.279Z"
     }
   }
 }
