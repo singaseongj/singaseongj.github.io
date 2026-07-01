@@ -1,1095 +1,425 @@
 {
+  "generatedAt": "2026-07-01T09:44:56.345Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-07-01",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "S&P 500 Futures AI",
-      "term_ko": "S&P500 선물 AI",
-      "significance_score": 364,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "S&P500 선물 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, AI·반도체 강세에도 약보합…美 국채금리↓",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4422837"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=S%26P500%20%EC%84%A0%EB%AC%BC%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=S%26P500%20%EC%84%A0%EB%AC%BC%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, AI·반도체 강세에도 약보합…美 국채금리↓",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4422837",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "S&p 500 Futures Ai",
+      "term_ko": "S&P500 선물 AI"
     },
     {
-      "term": "Michael Burry AI",
-      "term_ko": "마이클 버리 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "마이클 버리 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "엔비디아·테슬라 이어 캐터필러까지… 마이클 버리, AI 인프라株 공매...",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19439"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%9D%B4%ED%81%B4%20%EB%B2%84%EB%A6%AC%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%9D%B4%ED%81%B4%20%EB%B2%84%EB%A6%AC%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "엔비디아·테슬라 이어 캐터필러까지… 마이클 버리, AI 인프라株 공매...",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19439",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Michael Burry Ai",
+      "term_ko": "마이클 버리 AI"
     },
     {
-      "term": "Featured U.S. Stock: NASA",
-      "term_ko": "미국 특징주 NASA",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 특징주 NASA",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] NASA, 달 무인 착륙선 사업에 파이어플라이·인튜이티브 ...",
-              "link": "https://www.newspim.com/news/view/20260701000403"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%ED%8A%B9%EC%A7%95%EC%A3%BC%20NASA",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%ED%8A%B9%EC%A7%95%EC%A3%BC%20NASA"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] NASA, 달 무인 착륙선 사업에 파이어플라이·인튜이티브 ...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000403",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Featured U.s. Stock: Nasa",
+      "term_ko": "미국 특징주 NASA"
     },
     {
-      "term": "Featured Stocks: Apple, Tim Cook, EU",
-      "term_ko": "특징주 애플 팀쿡-EU",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "특징주 애플 팀쿡-EU",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] 애플 팀쿡-EU 기술담당 집행위원, '시리 AI' 분쟁 완화 위...",
-              "link": "https://www.newspim.com/news/view/20260701000291"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EC%95%A0%ED%94%8C%20%ED%8C%80%EC%BF%A1-EU",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EC%95%A0%ED%94%8C%20%ED%8C%80%EC%BF%A1-EU"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] 애플 팀쿡-EU 기술담당 집행위원, '시리 AI' 분쟁 완화 위...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000291",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Featured Stocks: Apple, Tim Cook, Eu",
+      "term_ko": "특징주 애플 팀쿡-EU"
     },
     {
-      "term": "Executive Committee Member Siri AI",
-      "term_ko": "집행위원 시리 AI",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "집행위원 시리 AI",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] 애플 팀쿡-EU 기술담당 집행위원, '시리 AI' 분쟁 완화 위...",
-              "link": "https://www.newspim.com/news/view/20260701000291"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A7%91%ED%96%89%EC%9C%84%EC%9B%90%20%EC%8B%9C%EB%A6%AC%20AI",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A7%91%ED%96%89%EC%9C%84%EC%9B%90%20%EC%8B%9C%EB%A6%AC%20AI"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] 애플 팀쿡-EU 기술담당 집행위원, '시리 AI' 분쟁 완화 위...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000291",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Executive Committee Member Siri Ai",
+      "term_ko": "집행위원 시리 AI"
     },
     {
-      "term": "Samsung C&T Global PPP",
-      "term_ko": "삼성물산 글로벌 PPP",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "삼성물산 글로벌 PPP",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "삼성물산, 글로벌 PPP 시장 공략..日 인프로니아와 맞손",
-              "link": "http://www.4th.kr/news/articleView.html?idxno=2114023"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20PPP",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20PPP"
-      },
-      "top_headlines": [
-        {
-          "title": "삼성물산, 글로벌 PPP 시장 공략..日 인프로니아와 맞손",
-          "summary": "",
-          "link": "http://www.4th.kr/news/articleView.html?idxno=2114023",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung C&t Global Ppp",
+      "term_ko": "삼성물산 글로벌 PPP"
     },
     {
-      "term": "Economic News Sponsored by KB Financial Group",
-      "term_ko": "경제소식 KB금융 후원",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "경제소식 KB금융 후원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[경제소식] KB금융 후원 '로보컵 2026 인천' 2일 개최",
-              "link": "http://www.4th.kr/news/articleView.html?idxno=2114025"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%EC%86%8C%EC%8B%9D%20KB%EA%B8%88%EC%9C%B5%20%ED%9B%84%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%EC%86%8C%EC%8B%9D%20KB%EA%B8%88%EC%9C%B5%20%ED%9B%84%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[경제소식] KB금융 후원 '로보컵 2026 인천' 2일 개최",
-          "summary": "",
-          "link": "http://www.4th.kr/news/articleView.html?idxno=2114025",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Economic News Sponsored by Kb Financial Group",
+      "term_ko": "경제소식 KB금융 후원"
     },
     {
-      "term": "Won/dollar exchange rate: 1,559 won",
-      "term_ko": "원/달러 환율 1559원",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원/달러 환율 1559원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "원/달러 환율 1559원 돌파…17년 만의 최고치에 금값도 '들썩'",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=723595"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%2F%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%201559%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%2F%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%201559%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "원/달러 환율 1559원 돌파…17년 만의 최고치에 금값도 '들썩'",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=723595",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Won/dollar Exchange Rate: 1,559 Won",
+      "term_ko": "원/달러 환율 1559원"
     },
     {
-      "term": "How can I make 3.6 million won a month?",
-      "term_ko": "월 360만원을 어떻게",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "월 360만원을 어떻게",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "월 360만원을 어떻게 내나…“더 이상은 못 버티겠다” 영끌족 곡소리 ...",
-              "link": "https://n.news.naver.com/mnews/article/011/0004636902?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%20360%EB%A7%8C%EC%9B%90%EC%9D%84%20%EC%96%B4%EB%96%BB%EA%B2%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%20360%EB%A7%8C%EC%9B%90%EC%9D%84%20%EC%96%B4%EB%96%BB%EA%B2%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "월 360만원을 어떻게 내나…“더 이상은 못 버티겠다” 영끌족 곡소리 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004636902?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "How Can I Make 3.6 Million Won a Month?",
+      "term_ko": "월 360만원을 어떻게"
     },
     {
-      "term": "To be held in Incheon on the 2nd",
-      "term_ko": "인천 2일 개최",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인천 2일 개최",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[경제소식] KB금융 후원 '로보컵 2026 인천' 2일 개최",
-              "link": "http://www.4th.kr/news/articleView.html?idxno=2114025"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%B2%9C%202%EC%9D%BC%20%EA%B0%9C%EC%B5%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%B2%9C%202%EC%9D%BC%20%EA%B0%9C%EC%B5%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "[경제소식] KB금융 후원 '로보컵 2026 인천' 2일 개최",
-          "summary": "",
-          "link": "http://www.4th.kr/news/articleView.html?idxno=2114025",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "To Be Held in Incheon on the 2nd",
+      "term_ko": "인천 2일 개최"
     },
     {
-      "term": "Following NVIDIA Tesla",
-      "term_ko": "엔비디아 테슬라 이어",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "엔비디아 테슬라 이어",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "엔비디아·테슬라 이어 캐터필러까지… 마이클 버리, AI 인프라株 공매...",
-              "link": "http://www.impacton.net/news/articleView.html?idxno=19439"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%85%8C%EC%8A%AC%EB%9D%BC%20%EC%9D%B4%EC%96%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%20%ED%85%8C%EC%8A%AC%EB%9D%BC%20%EC%9D%B4%EC%96%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "엔비디아·테슬라 이어 캐터필러까지… 마이클 버리, AI 인프라株 공매...",
-          "summary": "",
-          "link": "http://www.impacton.net/news/articleView.html?idxno=19439",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Following Nvidia Tesla",
+      "term_ko": "엔비디아 테슬라 이어"
     },
     {
-      "term": "Michael, a U.S. Featured Student",
-      "term_ko": "미국 특징주 마이클",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 특징주 마이클",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] 마이클 버리, 캐터필러 공매도 선언…\"韓 투자 발표가 AI...",
-              "link": "https://www.newspim.com/news/view/20260701000426"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EB%A7%88%EC%9D%B4%ED%81%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%ED%8A%B9%EC%A7%95%EC%A3%BC%20%EB%A7%88%EC%9D%B4%ED%81%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] 마이클 버리, 캐터필러 공매도 선언…\"韓 투자 발표가 AI...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000426",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Michael, a U.s. Featured Student",
+      "term_ko": "미국 특징주 마이클"
     },
     {
       "term": "Declaration on Investment in Korea",
-      "term_ko": "선언 韓 투자",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "선언 韓 투자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] 마이클 버리, 캐터필러 공매도 선언…\"韓 투자 발표가 AI...",
-              "link": "https://www.newspim.com/news/view/20260701000426"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%A0%EC%96%B8%20%E9%9F%93%20%ED%88%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%A0%EC%96%B8%20%E9%9F%93%20%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] 마이클 버리, 캐터필러 공매도 선언…\"韓 투자 발표가 AI...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000426",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "선언 韓 투자"
     },
     {
       "term": "Unmanned Lunar Lander",
-      "term_ko": "달 무인 착륙선",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "달 무인 착륙선",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] NASA, 달 무인 착륙선 사업에 파이어플라이·인튜이티브 ...",
-              "link": "https://www.newspim.com/news/view/20260701000403"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%8B%AC%20%EB%AC%B4%EC%9D%B8%20%EC%B0%A9%EB%A5%99%EC%84%A0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%8B%AC%20%EB%AC%B4%EC%9D%B8%20%EC%B0%A9%EB%A5%99%EC%84%A0"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] NASA, 달 무인 착륙선 사업에 파이어플라이·인튜이티브 ...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000403",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "달 무인 착륙선"
     },
     {
       "term": "Firefly Intuitive in Business",
-      "term_ko": "사업에 파이어플라이 인튜이티브",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "사업에 파이어플라이 인튜이티브",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] NASA, 달 무인 착륙선 사업에 파이어플라이·인튜이티브 ...",
-              "link": "https://www.newspim.com/news/view/20260701000403"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%82%AC%EC%97%85%EC%97%90%20%ED%8C%8C%EC%9D%B4%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%20%EC%9D%B8%ED%8A%9C%EC%9D%B4%ED%8B%B0%EB%B8%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%82%AC%EC%97%85%EC%97%90%20%ED%8C%8C%EC%9D%B4%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%20%EC%9D%B8%ED%8A%9C%EC%9D%B4%ED%8B%B0%EB%B8%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] NASA, 달 무인 착륙선 사업에 파이어플라이·인튜이티브 ...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000403",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "사업에 파이어플라이 인튜이티브"
     },
     {
-      "term": "Cursed SpaceX High",
-      "term_ko": "저주 스페이스엑스 고점",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "저주 스페이스엑스 고점",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "또 적중한 크레이머의 저주! 스페이스엑스 고점 대비 급락에 서학개미들...",
-              "link": "http://coinreaders.com/245435"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%80%EC%A3%BC%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%97%91%EC%8A%A4%20%EA%B3%A0%EC%A0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%80%EC%A3%BC%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%97%91%EC%8A%A4%20%EA%B3%A0%EC%A0%90"
-      },
-      "top_headlines": [
-        {
-          "title": "또 적중한 크레이머의 저주! 스페이스엑스 고점 대비 급락에 서학개미들...",
-          "summary": "",
-          "link": "http://coinreaders.com/245435",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cursed Spacex High",
+      "term_ko": "저주 스페이스엑스 고점"
     },
     {
       "term": "Gold Prices Also Surge to Record Highs",
-      "term_ko": "최고치에 금값도 들썩",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최고치에 금값도 들썩",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "원/달러 환율 1559원 돌파…17년 만의 최고치에 금값도 '들썩'",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=723595"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B3%A0%EC%B9%98%EC%97%90%20%EA%B8%88%EA%B0%92%EB%8F%84%20%EB%93%A4%EC%8D%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B3%A0%EC%B9%98%EC%97%90%20%EA%B8%88%EA%B0%92%EB%8F%84%20%EB%93%A4%EC%8D%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "원/달러 환율 1559원 돌파…17년 만의 최고치에 금값도 '들썩'",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=723595",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "최고치에 금값도 들썩"
     },
     {
-      "term": "\"I can't take it anymore\"—the \"all-in\" crowd",
-      "term_ko": "못 버티겠다 영끌족",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "못 버티겠다 영끌족",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "월 360만원을 어떻게 내나…“더 이상은 못 버티겠다” 영끌족 곡소리 ...",
-              "link": "https://n.news.naver.com/mnews/article/011/0004636902?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AA%BB%20%EB%B2%84%ED%8B%B0%EA%B2%A0%EB%8B%A4%20%EC%98%81%EB%81%8C%EC%A1%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AA%BB%20%EB%B2%84%ED%8B%B0%EA%B2%A0%EB%8B%A4%20%EC%98%81%EB%81%8C%EC%A1%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "월 360만원을 어떻게 내나…“더 이상은 못 버티겠다” 영끌족 곡소리 ...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/011/0004636902?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "\"i Can't Take It Anymore\"—the \"all-in\" Crowd",
+      "term_ko": "못 버티겠다 영끌족"
     },
     {
       "term": "Slightly Lower Despite Strength in the Semiconductor Sector",
-      "term_ko": "반도체 강세에도 약보합",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "반도체 강세에도 약보합",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, AI·반도체 강세에도 약보합…美 국채금리↓",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4422837"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EA%B0%95%EC%84%B8%EC%97%90%EB%8F%84%20%EC%95%BD%EB%B3%B4%ED%95%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%20%EA%B0%95%EC%84%B8%EC%97%90%EB%8F%84%20%EC%95%BD%EB%B3%B4%ED%95%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, AI·반도체 강세에도 약보합…美 국채금리↓",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4422837",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "반도체 강세에도 약보합"
     },
     {
-      "term": "Op-Ed: Wall Street Has Already",
-      "term_ko": "기고 월스트리트는 이미",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "기고 월스트리트는 이미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[기고] 월스트리트는 이미 이더리움 위에 있었다",
-              "link": "https://www.tokenpost.kr/news/insights/374151"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%B0%EA%B3%A0%20%EC%9B%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8%EB%8A%94%20%EC%9D%B4%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%B0%EA%B3%A0%20%EC%9B%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8%EB%8A%94%20%EC%9D%B4%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "[기고] 월스트리트는 이미 이더리움 위에 있었다",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/374151",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Op-ed: Wall Street Has Already",
+      "term_ko": "기고 월스트리트는 이미"
     },
     {
-      "term": "It was built on Ethereum",
-      "term_ko": "이더리움 위에 있었다",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이더리움 위에 있었다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[기고] 월스트리트는 이미 이더리움 위에 있었다",
-              "link": "https://www.tokenpost.kr/news/insights/374151"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%20%EC%9C%84%EC%97%90%20%EC%9E%88%EC%97%88%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80%20%EC%9C%84%EC%97%90%20%EC%9E%88%EC%97%88%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[기고] 월스트리트는 이미 이더리움 위에 있었다",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/374151",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "It Was Built on Ethereum",
+      "term_ko": "이더리움 위에 있었다"
     },
     {
-      "term": "Samsung SK Hynix",
-      "term_ko": "삼성, SK하이닉스",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Samsung SK Hynix",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung, SK hynix Face a KRW 250 Trillion Question: Reward Shareholders o...",
-              "link": "http://www.fntimes.com/html/view.php?ud=202607010840128827141825007d_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Samsung%20SK%20Hynix",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Samsung%20SK%20Hynix"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung, SK hynix Face a KRW 250 Trillion Question: Reward Shareholders o...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202607010840128827141825007d_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Samsung Sk Hynix",
+      "term_ko": "삼성, SK하이닉스"
     },
     {
-      "term": "Face A KRW",
-      "term_ko": "A면 KRW",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Face A KRW",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung, SK hynix Face a KRW 250 Trillion Question: Reward Shareholders o...",
-              "link": "http://www.fntimes.com/html/view.php?ud=202607010840128827141825007d_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Face%20A%20KRW",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Face%20A%20KRW"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung, SK hynix Face a KRW 250 Trillion Question: Reward Shareholders o...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202607010840128827141825007d_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Face a Krw",
+      "term_ko": "A면 KRW"
     },
     {
       "term": "Conflict Mitigation",
-      "term_ko": "분쟁 완화",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "분쟁 완화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[미국 특징주] 애플 팀쿡-EU 기술담당 집행위원, '시리 AI' 분쟁 완화 위...",
-              "link": "https://www.newspim.com/news/view/20260701000291"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%84%EC%9F%81%20%EC%99%84%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%84%EC%9F%81%20%EC%99%84%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "[미국 특징주] 애플 팀쿡-EU 기술담당 집행위원, '시리 AI' 분쟁 완화 위...",
-          "summary": "",
-          "link": "https://www.newspim.com/news/view/20260701000291",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "분쟁 완화"
     },
     {
-      "term": "U.S. Treasury yields",
-      "term_ko": "美 국채금리",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "美 국채금리",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "S&P500 선물, AI·반도체 강세에도 약보합…美 국채금리↓",
-              "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4422837"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%E7%BE%8E%20%EA%B5%AD%EC%B1%84%EA%B8%88%EB%A6%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "S&P500 선물, AI·반도체 강세에도 약보합…美 국채금리↓",
-          "summary": "",
-          "link": "https://news.einfomax.co.kr/news/articleView.html?idxno=4422837",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Treasury Yields",
+      "term_ko": "美 국채금리"
     },
     {
       "term": "Trillion Question Reward",
-      "term_ko": "1조 질문 보상",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Trillion Question Reward",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Samsung, SK hynix Face a KRW 250 Trillion Question: Reward Shareholders o...",
-              "link": "http://www.fntimes.com/html/view.php?ud=202607010840128827141825007d_18"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Trillion%20Question%20Reward",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Trillion%20Question%20Reward"
-      },
-      "top_headlines": [
-        {
-          "title": "Samsung, SK hynix Face a KRW 250 Trillion Question: Reward Shareholders o...",
-          "summary": "",
-          "link": "http://www.fntimes.com/html/view.php?ud=202607010840128827141825007d_18",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "1조 질문 보상"
     },
     {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-01T12:41:00+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-07-01T03:42:06.747Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-07-01T12:41:00+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "S&p 500 Futures Ai",
+      "term_ko": "S&P500 선물 AI"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-07-01T12:41:00+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-07-01T12:41:00+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Michael Burry Ai",
+      "term_ko": "마이클 버리 AI"
+    },
+    {
+      "term": "Featured U.s. Stock: Nasa",
+      "term_ko": "미국 특징주 NASA"
+    },
+    {
+      "term": "Featured Stocks: Apple, Tim Cook, Eu",
+      "term_ko": "특징주 애플 팀쿡-EU"
+    },
+    {
+      "term": "Executive Committee Member Siri Ai",
+      "term_ko": "집행위원 시리 AI"
+    },
+    {
+      "term": "Samsung C&t Global Ppp",
+      "term_ko": "삼성물산 글로벌 PPP"
+    },
+    {
+      "term": "Economic News Sponsored by Kb Financial Group",
+      "term_ko": "경제소식 KB금융 후원"
+    },
+    {
+      "term": "Won/dollar Exchange Rate: 1,559 Won",
+      "term_ko": "원/달러 환율 1559원"
+    },
+    {
+      "term": "How Can I Make 3.6 Million Won a Month?",
+      "term_ko": "월 360만원을 어떻게"
+    },
+    {
+      "term": "To Be Held in Incheon on the 2nd",
+      "term_ko": "인천 2일 개최"
+    },
+    {
+      "term": "Following Nvidia Tesla",
+      "term_ko": "엔비디아 테슬라 이어"
+    },
+    {
+      "term": "Michael, a U.s. Featured Student",
+      "term_ko": "미국 특징주 마이클"
+    },
+    {
+      "term": "Declaration on Investment in Korea",
+      "term_ko": "선언 韓 투자"
+    },
+    {
+      "term": "Unmanned Lunar Lander",
+      "term_ko": "달 무인 착륙선"
+    },
+    {
+      "term": "Firefly Intuitive in Business",
+      "term_ko": "사업에 파이어플라이 인튜이티브"
+    },
+    {
+      "term": "Cursed Spacex High",
+      "term_ko": "저주 스페이스엑스 고점"
+    },
+    {
+      "term": "Gold Prices Also Surge to Record Highs",
+      "term_ko": "최고치에 금값도 들썩"
+    },
+    {
+      "term": "\"i Can't Take It Anymore\"—the \"all-in\" Crowd",
+      "term_ko": "못 버티겠다 영끌족"
+    },
+    {
+      "term": "Slightly Lower Despite Strength in the Semiconductor Sector",
+      "term_ko": "반도체 강세에도 약보합"
+    },
+    {
+      "term": "Op-ed: Wall Street Has Already",
+      "term_ko": "기고 월스트리트는 이미"
+    },
+    {
+      "term": "It Was Built on Ethereum",
+      "term_ko": "이더리움 위에 있었다"
+    },
+    {
+      "term": "Samsung Sk Hynix",
+      "term_ko": "삼성, SK하이닉스"
+    },
+    {
+      "term": "Face a Krw",
+      "term_ko": "A면 KRW"
+    },
+    {
+      "term": "Conflict Mitigation",
+      "term_ko": "분쟁 완화"
+    },
+    {
+      "term": "U.s. Treasury Yields",
+      "term_ko": "美 국채금리"
+    },
+    {
+      "term": "Trillion Question Reward",
+      "term_ko": "1조 질문 보상"
+    },
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    }
+  ],
+  "translations": {
+    "S&p 500 Futures Ai": {
+      "en": "S&p 500 Futures Ai",
+      "ko": "S&P500 선물 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Michael Burry Ai": {
+      "en": "Michael Burry Ai",
+      "ko": "마이클 버리 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Featured U.s. Stock: Nasa": {
+      "en": "Featured U.s. Stock: Nasa",
+      "ko": "미국 특징주 NASA",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Featured Stocks: Apple, Tim Cook, Eu": {
+      "en": "Featured Stocks: Apple, Tim Cook, Eu",
+      "ko": "특징주 애플 팀쿡-EU",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Executive Committee Member Siri Ai": {
+      "en": "Executive Committee Member Siri Ai",
+      "ko": "집행위원 시리 AI",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Samsung C&t Global Ppp": {
+      "en": "Samsung C&t Global Ppp",
+      "ko": "삼성물산 글로벌 PPP",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Economic News Sponsored by Kb Financial Group": {
+      "en": "Economic News Sponsored by Kb Financial Group",
+      "ko": "경제소식 KB금융 후원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Won/dollar Exchange Rate: 1,559 Won": {
+      "en": "Won/dollar Exchange Rate: 1,559 Won",
+      "ko": "원/달러 환율 1559원",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "How Can I Make 3.6 Million Won a Month?": {
+      "en": "How Can I Make 3.6 Million Won a Month?",
+      "ko": "월 360만원을 어떻게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "To Be Held in Incheon on the 2nd": {
+      "en": "To Be Held in Incheon on the 2nd",
+      "ko": "인천 2일 개최",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Following Nvidia Tesla": {
+      "en": "Following Nvidia Tesla",
+      "ko": "엔비디아 테슬라 이어",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Michael, a U.s. Featured Student": {
+      "en": "Michael, a U.s. Featured Student",
+      "ko": "미국 특징주 마이클",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Declaration on Investment in Korea": {
+      "en": "Declaration on Investment in Korea",
+      "ko": "선언 韓 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Unmanned Lunar Lander": {
+      "en": "Unmanned Lunar Lander",
+      "ko": "달 무인 착륙선",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Firefly Intuitive in Business": {
+      "en": "Firefly Intuitive in Business",
+      "ko": "사업에 파이어플라이 인튜이티브",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Cursed Spacex High": {
+      "en": "Cursed Spacex High",
+      "ko": "저주 스페이스엑스 고점",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Gold Prices Also Surge to Record Highs": {
+      "en": "Gold Prices Also Surge to Record Highs",
+      "ko": "최고치에 금값도 들썩",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "\"i Can't Take It Anymore\"—the \"all-in\" Crowd": {
+      "en": "\"i Can't Take It Anymore\"—the \"all-in\" Crowd",
+      "ko": "못 버티겠다 영끌족",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Slightly Lower Despite Strength in the Semiconductor Sector": {
+      "en": "Slightly Lower Despite Strength in the Semiconductor Sector",
+      "ko": "반도체 강세에도 약보합",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Op-ed: Wall Street Has Already": {
+      "en": "Op-ed: Wall Street Has Already",
+      "ko": "기고 월스트리트는 이미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "It Was Built on Ethereum": {
+      "en": "It Was Built on Ethereum",
+      "ko": "이더리움 위에 있었다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Samsung Sk Hynix": {
+      "en": "Samsung Sk Hynix",
+      "ko": "삼성, SK하이닉스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Face a Krw": {
+      "en": "Face a Krw",
+      "ko": "A면 KRW",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Conflict Mitigation": {
+      "en": "Conflict Mitigation",
+      "ko": "분쟁 완화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "U.s. Treasury Yields": {
+      "en": "U.s. Treasury Yields",
+      "ko": "美 국채금리",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Trillion Question Reward": {
+      "en": "Trillion Question Reward",
+      "ko": "1조 질문 보상",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-01T09:44:56.345Z"
     }
   }
 }
