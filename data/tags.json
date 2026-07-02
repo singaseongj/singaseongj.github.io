@@ -1,1082 +1,439 @@
 {
+  "generatedAt": "2026-07-02T13:57:23.747Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-07-02",
   "window": "12_hours",
   "total_phrases": 30,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "New York Stock Market: AI Computing",
-      "term_ko": "뉴욕증시 AI 컴퓨팅",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뉴욕증시 AI 컴퓨팅",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
-              "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20AI%20%EC%BB%B4%ED%93%A8%ED%8C%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20AI%20%EC%BB%B4%ED%93%A8%ED%8C%85"
-      },
-      "top_headlines": [
-        {
-          "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "New York Stock Market: Ai Computing",
+      "term_ko": "뉴욕증시 AI 컴퓨팅"
     },
     {
       "term": "Semiconductor Stocks, Despite Reports of Excess Capacity",
-      "term_ko": "용량 남아돈다는데 반도체주",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "용량 남아돈다는데 반도체주",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
-              "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%A9%EB%9F%89%20%EB%82%A8%EC%95%84%EB%8F%88%EB%8B%A4%EB%8A%94%EB%8D%B0%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%A9%EB%9F%89%20%EB%82%A8%EC%95%84%EB%8F%88%EB%8B%A4%EB%8A%94%EB%8D%B0%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "용량 남아돈다는데 반도체주"
     },
     {
-      "term": "KOSDAQ Also Triggers Sell-Side Circuit Breaker",
-      "term_ko": "코스닥도 매도 사이드카",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스닥도 매도 사이드카",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
-              "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%EB%8B%A5%EB%8F%84%20%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%EB%8B%A5%EB%8F%84%20%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kosdaq Also Triggers Sell-side Circuit Breaker",
+      "term_ko": "코스닥도 매도 사이드카"
     },
     {
       "term": "Overseas Investors in the Booming Japanese Stock Market",
-      "term_ko": "뜨거워진 日증시에 해외",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "뜨거워진 日증시에 해외",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-              "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9C%A8%EA%B1%B0%EC%9B%8C%EC%A7%84%20%E6%97%A5%EC%A6%9D%EC%8B%9C%EC%97%90%20%ED%95%B4%EC%99%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9C%A8%EA%B1%B0%EC%9B%8C%EC%A7%84%20%E6%97%A5%EC%A6%9D%EC%8B%9C%EC%97%90%20%ED%95%B4%EC%99%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "뜨거워진 日증시에 해외"
     },
     {
-      "term": "Investors, retail investors in their home countries",
-      "term_ko": "투자자 자국 개미",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "투자자 자국 개미",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-              "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%EC%9E%90%20%EC%9E%90%EA%B5%AD%20%EA%B0%9C%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%EC%9E%90%20%EC%9E%90%EA%B5%AD%20%EA%B0%9C%EB%AF%B8"
-      },
-      "top_headlines": [
-        {
-          "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Investors, Retail Investors in Their Home Countries",
+      "term_ko": "투자자 자국 개미"
     },
     {
-      "term": "KOSPI, KOSDAQ Intraday",
-      "term_ko": "코스피 코스닥 장중",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "코스피 코스닥 장중",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
-              "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%BD%94%EC%8A%A4%EB%8B%A5%20%EC%9E%A5%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%BD%94%EC%8A%A4%EB%8B%A5%20%EC%9E%A5%EC%A4%91"
-      },
-      "top_headlines": [
-        {
-          "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi, Kosdaq Intraday",
+      "term_ko": "코스피 코스닥 장중"
     },
     {
-      "term": "Sell-side circuit breaker triggered",
-      "term_ko": "매도 사이드카 발동",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "매도 사이드카 발동",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
-              "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4%20%EB%B0%9C%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4%20%EB%B0%9C%EB%8F%99"
-      },
-      "top_headlines": [
-        {
-          "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Sell-side Circuit Breaker Triggered",
+      "term_ko": "매도 사이드카 발동"
     },
     {
-      "term": "MBC News",
-      "term_ko": "MBC 뉴스",
-      "significance_score": 308,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "MBC 뉴스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 증시 - MBC 뉴스",
-              "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MBC%20%EB%89%B4%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MBC%20%EB%89%B4%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증시 - MBC 뉴스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Mbc News",
+      "term_ko": "MBC 뉴스"
     },
     {
-      "term": "OpenAI Reportedly Considers",
-      "term_ko": "보도에 따르면 OpenAI는 …을 검토 중인 것으로 알려졌다",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "OpenAI Reportedly Considers",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=OpenAI%20Reportedly%20Considers",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=OpenAI%20Reportedly%20Considers"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Openai Reportedly Considers",
+      "term_ko": "보도에 따르면 OpenAI는 …을 검토 중인 것으로 알려졌다"
     },
     {
-      "term": "AI Lab Would",
-      "term_ko": "AI 연구소는",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Lab Would",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Lab%20Would",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Lab%20Would"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Lab Would",
+      "term_ko": "AI 연구소는"
     },
     {
       "term": "Stock Market Open, Part 2",
-      "term_ko": "출발증시 2부",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "출발증시 2부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "출발증시 2부 - 한국경제TV",
-              "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTN0Z1poSkluVXlMQVJKSGVWY0x1alpyRzl3QnE2QnlzLUJoV2d3TEd3WGhidUZveXZIcnlkWkdzVmduMFZDdExRaC1JYmlYeXdHdGxLaWx3bzYzR2VuVE9NbUk3VElwTVVMekRLY0lkMkpKMzJ5ZWxWUnhaNGpTUjRhQ1pfbWhpcHg2bk56bXo4V1NUM1pZSkNodDBJbkItSW9j?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EB%B0%9C%EC%A6%9D%EC%8B%9C%202%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EB%B0%9C%EC%A6%9D%EC%8B%9C%202%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "출발증시 2부 - 한국경제TV",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTN0Z1poSkluVXlMQVJKSGVWY0x1alpyRzl3QnE2QnlzLUJoV2d3TEd3WGhidUZveXZIcnlkWkdzVmduMFZDdExRaC1JYmlYeXdHdGxLaWx3bzYzR2VuVE9NbUk3VElwTVVMekRLY0lkMkpKMzJ5ZWxWUnhaNGpTUjRhQ1pfbWhpcHg2bk56bXo4V1NUM1pZSkNodDBJbkItSW9j?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "출발증시 2부"
     },
     {
       "term": "Warsh&#x2019s Throwaway Comment",
-      "term_ko": "워시의 무심코 던진 말",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Warsh&#x2019s Throwaway Comment",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Warsh&#x2019;s throwaway comment injects life into the debasement trade, for one day at least",
-              "link": "https://www.marketwatch.com/story/warshs-throwaway-comment-injects-life-into-the-debasement-trade-for-one-day-at-least-1c70d477?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Warsh%26%23x2019s%20Throwaway%20Comment",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Warsh%26%23x2019s%20Throwaway%20Comment"
-      },
-      "top_headlines": [
-        {
-          "title": "Warsh&#x2019;s throwaway comment injects life into the debasement trade, for one day at least",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/warshs-throwaway-comment-injects-life-into-the-debasement-trade-for-one-day-at-least-1c70d477?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "워시의 무심코 던진 말"
     },
     {
       "term": "Napa Valley #x2018dream",
-      "term_ko": "나파 밸리 #x2018꿈",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Napa Valley #x2018dream",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Napa%20Valley%20%23x2018dream",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Napa%20Valley%20%23x2018dream"
-      },
-      "top_headlines": [
-        {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "나파 밸리 #x2018꿈"
     },
     {
       "term": "4.7 Billion European",
-      "term_ko": "47억 명의 유럽인",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4.7 Billion European",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
-              "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4.7%20Billion%20European",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4.7%20Billion%20European"
-      },
-      "top_headlines": [
-        {
-          "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "47억 명의 유럽인"
     },
     {
       "term": "Handing 5% Stake",
-      "term_ko": "지분 5% 양도",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Handing 5% Stake",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Handing%205%25%20Stake",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Handing%205%25%20Stake"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "지분 5% 양도"
     },
     {
       "term": "Government Here&#x2019s Why",
-      "term_ko": "정부: 그 이유는 다음과 같습니다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Government Here&#x2019s Why",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Government%20Here%26%23x2019s%20Why",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Government%20Here%26%23x2019s%20Why"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "정부: 그 이유는 다음과 같습니다"
     },
     {
-      "term": "Opening A #x2018Trump",
-      "term_ko": "‘트럼프’ 개장",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Opening A #x2018Trump",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-              "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Opening%20A%20%23x2018Trump",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Opening%20A%20%23x2018Trump"
-      },
-      "top_headlines": [
-        {
-          "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Opening a #x2018trump",
+      "term_ko": "‘트럼프’ 개장"
     },
     {
       "term": "Both Major Stock Markets Plunge Simultaneously",
-      "term_ko": "양대증시 동반급락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "양대증시 동반급락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
-              "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%91%EB%8C%80%EC%A6%9D%EC%8B%9C%20%EB%8F%99%EB%B0%98%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%91%EB%8C%80%EC%A6%9D%EC%8B%9C%20%EB%8F%99%EB%B0%98%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "양대증시 동반급락"
     },
     {
       "term": "Today's Stock Market",
-      "term_ko": "오늘의 증시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 증시 - MBC 뉴스",
-              "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증시 - MBC 뉴스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "오늘의 증시"
     },
     {
-      "term": "They all gathered together",
-      "term_ko": "함께 몰렸다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "함께 몰렸다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-              "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A8%EA%BB%98%20%EB%AA%B0%EB%A0%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A8%EA%BB%98%20%EB%AA%B0%EB%A0%B8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "They All Gathered Together",
+      "term_ko": "함께 몰렸다"
     },
     {
       "term": "Tamera Mowry Lists",
-      "term_ko": "타메라 모우리 매물 목록",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Tamera Mowry Lists",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tamera%20Mowry%20Lists",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tamera%20Mowry%20Lists"
-      },
-      "top_headlines": [
-        {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "타메라 모우리 매물 목록"
     },
     {
       "term": "Bay Area House",
-      "term_ko": "베이 에어리어 하우스",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Bay Area House",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bay%20Area%20House",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bay%20Area%20House"
-      },
-      "top_headlines": [
-        {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "베이 에어리어 하우스"
     },
     {
       "term": "Google Loses Final",
-      "term_ko": "구글, 결승전에서 패배",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Google Loses Final",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
-              "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Google%20Loses%20Final",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Google%20Loses%20Final"
-      },
-      "top_headlines": [
-        {
-          "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "구글, 결승전에서 패배"
     },
     {
       "term": "Consider That Move",
-      "term_ko": "그 행동을 한번 생각해 보세요",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Consider That Move",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Consider%20That%20Move",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Consider%20That%20Move"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "그 행동을 한번 생각해 보세요"
     },
     {
       "term": "Cat Food How",
-      "term_ko": "고양이 사료는 어떻게",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Cat Food How",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-              "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Cat%20Food%20How",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Cat%20Food%20How"
-      },
-      "top_headlines": [
-        {
-          "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "고양이 사료는 어떻게"
     },
     {
       "term": "General Mills Plans",
-      "term_ko": "제너럴 밀스의 계획",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "General Mills Plans",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-              "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=General%20Mills%20Plans",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=General%20Mills%20Plans"
-      },
-      "top_headlines": [
-        {
-          "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "제너럴 밀스의 계획"
     },
     {
-      "term": "Combat A Tough",
-      "term_ko": "힘든 전투",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Combat A Tough",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-              "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Combat%20A%20Tough",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Combat%20A%20Tough"
-      },
-      "top_headlines": [
-        {
-          "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Combat a Tough",
+      "term_ko": "힘든 전투"
     },
     {
       "term": "Your Children Here",
-      "term_ko": "여기 있는 여러분의 자녀들",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Your Children Here",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-              "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Your%20Children%20Here",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Your%20Children%20Here"
-      },
-      "top_headlines": [
-        {
-          "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "여기 있는 여러분의 자녀들"
     },
     {
       "term": "Risk You Need",
-      "term_ko": "꼭 필요한 위험",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Risk You Need",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-              "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Risk%20You%20Need",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Risk%20You%20Need"
-      },
-      "top_headlines": [
-        {
-          "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "꼭 필요한 위험"
     },
     {
       "term": "2.7 Million",
-      "term_ko": "270만",
-      "significance_score": 238,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "2.7 Million",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.7%20Million",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.7%20Million"
-      },
-      "top_headlines": [
-        {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "270만"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-07-02T09:38:42.845Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-07-02T18:18:56+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 0,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "New York Stock Market: Ai Computing",
+      "term_ko": "뉴욕증시 AI 컴퓨팅"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-07-02T18:18:56+09:00",
-      "fallback_sources": [],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-07-02T18:18:56+09:00",
-        "fallbackSources": []
-      }
+    {
+      "term": "Semiconductor Stocks, Despite Reports of Excess Capacity",
+      "term_ko": "용량 남아돈다는데 반도체주"
+    },
+    {
+      "term": "Kosdaq Also Triggers Sell-side Circuit Breaker",
+      "term_ko": "코스닥도 매도 사이드카"
+    },
+    {
+      "term": "Overseas Investors in the Booming Japanese Stock Market",
+      "term_ko": "뜨거워진 日증시에 해외"
+    },
+    {
+      "term": "Investors, Retail Investors in Their Home Countries",
+      "term_ko": "투자자 자국 개미"
+    },
+    {
+      "term": "Kospi, Kosdaq Intraday",
+      "term_ko": "코스피 코스닥 장중"
+    },
+    {
+      "term": "Sell-side Circuit Breaker Triggered",
+      "term_ko": "매도 사이드카 발동"
+    },
+    {
+      "term": "Mbc News",
+      "term_ko": "MBC 뉴스"
+    },
+    {
+      "term": "Openai Reportedly Considers",
+      "term_ko": "보도에 따르면 OpenAI는 …을 검토 중인 것으로 알려졌다"
+    },
+    {
+      "term": "Ai Lab Would",
+      "term_ko": "AI 연구소는"
+    },
+    {
+      "term": "Stock Market Open, Part 2",
+      "term_ko": "출발증시 2부"
+    },
+    {
+      "term": "Warsh&#x2019s Throwaway Comment",
+      "term_ko": "워시의 무심코 던진 말"
+    },
+    {
+      "term": "Napa Valley #x2018dream",
+      "term_ko": "나파 밸리 #x2018꿈"
+    },
+    {
+      "term": "4.7 Billion European",
+      "term_ko": "47억 명의 유럽인"
+    },
+    {
+      "term": "Handing 5% Stake",
+      "term_ko": "지분 5% 양도"
+    },
+    {
+      "term": "Government Here&#x2019s Why",
+      "term_ko": "정부: 그 이유는 다음과 같습니다"
+    },
+    {
+      "term": "Opening a #x2018trump",
+      "term_ko": "‘트럼프’ 개장"
+    },
+    {
+      "term": "Both Major Stock Markets Plunge Simultaneously",
+      "term_ko": "양대증시 동반급락"
+    },
+    {
+      "term": "Today's Stock Market",
+      "term_ko": "오늘의 증시"
+    },
+    {
+      "term": "They All Gathered Together",
+      "term_ko": "함께 몰렸다"
+    },
+    {
+      "term": "Tamera Mowry Lists",
+      "term_ko": "타메라 모우리 매물 목록"
+    },
+    {
+      "term": "Bay Area House",
+      "term_ko": "베이 에어리어 하우스"
+    },
+    {
+      "term": "Google Loses Final",
+      "term_ko": "구글, 결승전에서 패배"
+    },
+    {
+      "term": "Consider That Move",
+      "term_ko": "그 행동을 한번 생각해 보세요"
+    },
+    {
+      "term": "Cat Food How",
+      "term_ko": "고양이 사료는 어떻게"
+    },
+    {
+      "term": "General Mills Plans",
+      "term_ko": "제너럴 밀스의 계획"
+    },
+    {
+      "term": "Combat a Tough",
+      "term_ko": "힘든 전투"
+    },
+    {
+      "term": "Your Children Here",
+      "term_ko": "여기 있는 여러분의 자녀들"
+    },
+    {
+      "term": "Risk You Need",
+      "term_ko": "꼭 필요한 위험"
+    },
+    {
+      "term": "2.7 Million",
+      "term_ko": "270만"
+    }
+  ],
+  "translations": {
+    "New York Stock Market: Ai Computing": {
+      "en": "New York Stock Market: Ai Computing",
+      "ko": "뉴욕증시 AI 컴퓨팅",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Semiconductor Stocks, Despite Reports of Excess Capacity": {
+      "en": "Semiconductor Stocks, Despite Reports of Excess Capacity",
+      "ko": "용량 남아돈다는데 반도체주",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Kosdaq Also Triggers Sell-side Circuit Breaker": {
+      "en": "Kosdaq Also Triggers Sell-side Circuit Breaker",
+      "ko": "코스닥도 매도 사이드카",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Overseas Investors in the Booming Japanese Stock Market": {
+      "en": "Overseas Investors in the Booming Japanese Stock Market",
+      "ko": "뜨거워진 日증시에 해외",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Investors, Retail Investors in Their Home Countries": {
+      "en": "Investors, Retail Investors in Their Home Countries",
+      "ko": "투자자 자국 개미",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Kospi, Kosdaq Intraday": {
+      "en": "Kospi, Kosdaq Intraday",
+      "ko": "코스피 코스닥 장중",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Sell-side Circuit Breaker Triggered": {
+      "en": "Sell-side Circuit Breaker Triggered",
+      "ko": "매도 사이드카 발동",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Mbc News": {
+      "en": "Mbc News",
+      "ko": "MBC 뉴스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Openai Reportedly Considers": {
+      "en": "Openai Reportedly Considers",
+      "ko": "보도에 따르면 OpenAI는 …을 검토 중인 것으로 알려졌다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Ai Lab Would": {
+      "en": "Ai Lab Would",
+      "ko": "AI 연구소는",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Stock Market Open, Part 2": {
+      "en": "Stock Market Open, Part 2",
+      "ko": "출발증시 2부",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Warsh&#x2019s Throwaway Comment": {
+      "en": "Warsh&#x2019s Throwaway Comment",
+      "ko": "워시의 무심코 던진 말",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Napa Valley #x2018dream": {
+      "en": "Napa Valley #x2018dream",
+      "ko": "나파 밸리 #x2018꿈",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "4.7 Billion European": {
+      "en": "4.7 Billion European",
+      "ko": "47억 명의 유럽인",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Handing 5% Stake": {
+      "en": "Handing 5% Stake",
+      "ko": "지분 5% 양도",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Government Here&#x2019s Why": {
+      "en": "Government Here&#x2019s Why",
+      "ko": "정부: 그 이유는 다음과 같습니다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Opening a #x2018trump": {
+      "en": "Opening a #x2018trump",
+      "ko": "‘트럼프’ 개장",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Both Major Stock Markets Plunge Simultaneously": {
+      "en": "Both Major Stock Markets Plunge Simultaneously",
+      "ko": "양대증시 동반급락",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Today's Stock Market": {
+      "en": "Today's Stock Market",
+      "ko": "오늘의 증시",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "They All Gathered Together": {
+      "en": "They All Gathered Together",
+      "ko": "함께 몰렸다",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Tamera Mowry Lists": {
+      "en": "Tamera Mowry Lists",
+      "ko": "타메라 모우리 매물 목록",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Bay Area House": {
+      "en": "Bay Area House",
+      "ko": "베이 에어리어 하우스",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Google Loses Final": {
+      "en": "Google Loses Final",
+      "ko": "구글, 결승전에서 패배",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Consider That Move": {
+      "en": "Consider That Move",
+      "ko": "그 행동을 한번 생각해 보세요",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Cat Food How": {
+      "en": "Cat Food How",
+      "ko": "고양이 사료는 어떻게",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "General Mills Plans": {
+      "en": "General Mills Plans",
+      "ko": "제너럴 밀스의 계획",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Combat a Tough": {
+      "en": "Combat a Tough",
+      "ko": "힘든 전투",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Your Children Here": {
+      "en": "Your Children Here",
+      "ko": "여기 있는 여러분의 자녀들",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "Risk You Need": {
+      "en": "Risk You Need",
+      "ko": "꼭 필요한 위험",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
+    },
+    "2.7 Million": {
+      "en": "2.7 Million",
+      "ko": "270만",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-02T13:57:23.747Z"
     }
   }
 }
