@@ -1,37 +1,40 @@
 {
   "date": "2026-07-02",
   "window": "12_hours",
-  "total_phrases": 30,
+  "total_phrases": 29,
   "discovered_keywords": [
     {
-      "term": "New York Stock Market: AI Computing",
-      "term_ko": "뉴욕증시 AI 컴퓨팅",
-      "significance_score": 350,
+      "term": "1,600 won amid high inflation stemming from the Middle East",
+      "term_ko": "중동발 고물가에 1600원",
+      "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뉴욕증시 AI 컴퓨팅",
+        "query": "중동발 고물가에 1600원",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
-              "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5"
+              "title": "[사설] 중동발 고물가에 1600원 넘보는 환율, 재정 확장 신중해야",
+              "link": "https://n.news.naver.com/mnews/article/022/0004140162?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20AI%20%EC%BB%B4%ED%93%A8%ED%8C%85",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%89%B4%EC%9A%95%EC%A6%9D%EC%8B%9C%20AI%20%EC%BB%B4%ED%93%A8%ED%8C%85"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EB%8F%99%EB%B0%9C%20%EA%B3%A0%EB%AC%BC%EA%B0%80%EC%97%90%201600%EC%9B%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EB%8F%99%EB%B0%9C%20%EA%B3%A0%EB%AC%BC%EA%B0%80%EC%97%90%201600%EC%9B%90"
       },
       "top_headlines": [
         {
-          "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
+          "title": "[사설] 중동발 고물가에 1600원 넘보는 환율, 재정 확장 신중해야",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5",
+          "link": "https://n.news.naver.com/mnews/article/022/0004140162?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -39,34 +42,113 @@
       ]
     },
     {
-      "term": "Semiconductor Stocks, Despite Reports of Excess Capacity",
-      "term_ko": "용량 남아돈다는데 반도체주",
+      "term": "Consumer Price Index Rises 3.4%",
+      "term_ko": "공포 생활물가 3.4%",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "공포 생활물가 3.4%",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "[경제 진단] 고개 든 '스테그플레이션' 공포… 생활물가 3.4% 폭등과 한은...",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272408"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%B5%ED%8F%AC%20%EC%83%9D%ED%99%9C%EB%AC%BC%EA%B0%80%203.4%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%B5%ED%8F%AC%20%EC%83%9D%ED%99%9C%EB%AC%BC%EA%B0%80%203.4%25"
+      },
+      "top_headlines": [
+        {
+          "title": "[경제 진단] 고개 든 '스테그플레이션' 공포… 생활물가 3.4% 폭등과 한은...",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272408",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "KOSPI Breaks Below the 8,000 Mark",
+      "term_ko": "코스피 8000선 붕괴",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "코스피 8000선 붕괴",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "코스피 8,000선 붕괴…반도체주 급락에 매도세 확산",
+              "link": "https://www.tokenpost.kr/news/market/374585"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%208000%EC%84%A0%20%EB%B6%95%EA%B4%B4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%208000%EC%84%A0%20%EB%B6%95%EA%B4%B4"
+      },
+      "top_headlines": [
+        {
+          "title": "코스피 8,000선 붕괴…반도체주 급락에 매도세 확산",
+          "summary": "",
+          "link": "https://www.tokenpost.kr/news/market/374585",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Who's Next to Fall?",
+      "term_ko": "추가 하락 누구",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "용량 남아돈다는데 반도체주",
+        "query": "추가 하락 누구",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
-              "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5"
+              "title": "비트코인(BTC), 6만 1,000달러서 후퇴...바닥 vs 추가 하락, 누구 예측 적...",
+              "link": "http://coinreaders.com/245737"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9A%A9%EB%9F%89%20%EB%82%A8%EC%95%84%EB%8F%88%EB%8B%A4%EB%8A%94%EB%8D%B0%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9A%A9%EB%9F%89%20%EB%82%A8%EC%95%84%EB%8F%88%EB%8B%A4%EB%8A%94%EB%8D%B0%20%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%94%EA%B0%80%20%ED%95%98%EB%9D%BD%20%EB%88%84%EA%B5%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%94%EA%B0%80%20%ED%95%98%EB%9D%BD%20%EB%88%84%EA%B5%AC"
       },
       "top_headlines": [
         {
-          "title": "[뉴욕증시] AI 컴퓨팅 용량 남아돈다는데…반도체주 급락 - 연합인포맥스",
+          "title": "비트코인(BTC), 6만 1,000달러서 후퇴...바닥 vs 추가 하락, 누구 예측 적...",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54Y2k3Sjc1RnNjYnJuY2RjdHJRRHAtZVhFWnZKOHV2NVo1VDdUWEJOaFdPTlg0WG9JbFBSM0V6a3pJUTZDcUxWSFFhcDViYkJPU1h2TTZOT2lFdkNJOU4xTDIxd1A3Z1Nlc3loVWpESUI?oc=5",
+          "link": "http://coinreaders.com/245737",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -74,34 +156,37 @@
       ]
     },
     {
-      "term": "KOSDAQ Also Triggers Sell-Side Circuit Breaker",
-      "term_ko": "코스닥도 매도 사이드카",
+      "term": "Exchange Rate and Fiscal Policy",
+      "term_ko": "넘보는 환율 재정",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스닥도 매도 사이드카",
+        "query": "넘보는 환율 재정",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
-              "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5"
+              "title": "[사설] 중동발 고물가에 1600원 넘보는 환율, 재정 확장 신중해야",
+              "link": "https://n.news.naver.com/mnews/article/022/0004140162?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%EB%8B%A5%EB%8F%84%20%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%EB%8B%A5%EB%8F%84%20%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%84%98%EB%B3%B4%EB%8A%94%20%ED%99%98%EC%9C%A8%20%EC%9E%AC%EC%A0%95",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%84%98%EB%B3%B4%EB%8A%94%20%ED%99%98%EC%9C%A8%20%EC%9E%AC%EC%A0%95"
       },
       "top_headlines": [
         {
-          "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
+          "title": "[사설] 중동발 고물가에 1600원 넘보는 환율, 재정 확장 신중해야",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5",
+          "link": "https://n.news.naver.com/mnews/article/022/0004140162?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -109,34 +194,37 @@
       ]
     },
     {
-      "term": "Overseas Investors in the Booming Japanese Stock Market",
-      "term_ko": "뜨거워진 日증시에 해외",
+      "term": "I'm going to Manspi in the second half of the year",
+      "term_ko": "하반기 만스피 간다",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "뜨거워진 日증시에 해외",
+        "query": "하반기 만스피 간다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-              "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5"
+              "title": "“하반기 만스피 간다…뭐타고? 반도체!”…증권가 전망",
+              "link": "https://n.news.naver.com/mnews/article/021/0002802024?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%9C%A8%EA%B1%B0%EC%9B%8C%EC%A7%84%20%E6%97%A5%EC%A6%9D%EC%8B%9C%EC%97%90%20%ED%95%B4%EC%99%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%9C%A8%EA%B1%B0%EC%9B%8C%EC%A7%84%20%E6%97%A5%EC%A6%9D%EC%8B%9C%EC%97%90%20%ED%95%B4%EC%99%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%98%EB%B0%98%EA%B8%B0%20%EB%A7%8C%EC%8A%A4%ED%94%BC%20%EA%B0%84%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%98%EB%B0%98%EA%B8%B0%20%EB%A7%8C%EC%8A%A4%ED%94%BC%20%EA%B0%84%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
+          "title": "“하반기 만스피 간다…뭐타고? 반도체!”…증권가 전망",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5",
+          "link": "https://n.news.naver.com/mnews/article/021/0002802024?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -144,34 +232,37 @@
       ]
     },
     {
-      "term": "Investors, retail investors in their home countries",
-      "term_ko": "투자자 자국 개미",
+      "term": "Economic Outlook",
+      "term_ko": "경제 진단 고개",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "투자자 자국 개미",
+        "query": "경제 진단 고개",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-              "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5"
+              "title": "[경제 진단] 고개 든 '스테그플레이션' 공포… 생활물가 3.4% 폭등과 한은...",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272408"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%88%AC%EC%9E%90%EC%9E%90%20%EC%9E%90%EA%B5%AD%20%EA%B0%9C%EB%AF%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%88%AC%EC%9E%90%EC%9E%90%20%EC%9E%90%EA%B5%AD%20%EA%B0%9C%EB%AF%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B2%BD%EC%A0%9C%20%EC%A7%84%EB%8B%A8%20%EA%B3%A0%EA%B0%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B2%BD%EC%A0%9C%20%EC%A7%84%EB%8B%A8%20%EA%B3%A0%EA%B0%9C"
       },
       "top_headlines": [
         {
-          "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
+          "title": "[경제 진단] 고개 든 '스테그플레이션' 공포… 생활물가 3.4% 폭등과 한은...",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272408",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -179,34 +270,37 @@
       ]
     },
     {
-      "term": "KOSPI, KOSDAQ Intraday",
-      "term_ko": "코스피 코스닥 장중",
+      "term": "Selling Pressure Amid Sharp Drop in Semiconductor Stocks",
+      "term_ko": "반도체주 급락에 매도세",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "코스피 코스닥 장중",
+        "query": "반도체주 급락에 매도세",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
-              "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5"
+              "title": "코스피 8,000선 붕괴…반도체주 급락에 매도세 확산",
+              "link": "https://www.tokenpost.kr/news/market/374585"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%BD%94%EC%8A%A4%EB%8B%A5%20%EC%9E%A5%EC%A4%91",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BD%94%EC%8A%A4%ED%94%BC%20%EC%BD%94%EC%8A%A4%EB%8B%A5%20%EC%9E%A5%EC%A4%91"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EA%B8%89%EB%9D%BD%EC%97%90%20%EB%A7%A4%EB%8F%84%EC%84%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%8F%84%EC%B2%B4%EC%A3%BC%20%EA%B8%89%EB%9D%BD%EC%97%90%20%EB%A7%A4%EB%8F%84%EC%84%B8"
       },
       "top_headlines": [
         {
-          "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
+          "title": "코스피 8,000선 붕괴…반도체주 급락에 매도세 확산",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5",
+          "link": "https://www.tokenpost.kr/news/market/374585",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -214,34 +308,37 @@
       ]
     },
     {
-      "term": "Sell-side circuit breaker triggered",
-      "term_ko": "매도 사이드카 발동",
+      "term": "E-Daily Newspaper Preview: Korean Soccer",
+      "term_ko": "미리보는 이데일리 신문韓축구",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "매도 사이드카 발동",
+        "query": "미리보는 이데일리 신문韓축구",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
-              "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5"
+              "title": "[미리보는 이데일리 신문]韓축구, 월드컵서 받은 ‘냉엄한 감사보고서’",
+              "link": "https://n.news.naver.com/mnews/article/018/0006321192?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4%20%EB%B0%9C%EB%8F%99",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%A4%EB%8F%84%20%EC%82%AC%EC%9D%B4%EB%93%9C%EC%B9%B4%20%EB%B0%9C%EB%8F%99"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8%E9%9F%93%EC%B6%95%EA%B5%AC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EB%A6%AC%EB%B3%B4%EB%8A%94%20%EC%9D%B4%EB%8D%B0%EC%9D%BC%EB%A6%AC%20%EC%8B%A0%EB%AC%B8%E9%9F%93%EC%B6%95%EA%B5%AC"
       },
       "top_headlines": [
         {
-          "title": "[증시 인사이트] 급락장에 코스피·코스닥 장중 매도 사이드카 발동 - v.daum.net",
+          "title": "[미리보는 이데일리 신문]韓축구, 월드컵서 받은 ‘냉엄한 감사보고서’",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QcGRZQVhseThwUUpHZ2cyY2NDYUcyYUV0VXBQQ2FzcFRjZy13M0xlMG1WMWlYejdDRXN2RkJlRmYyclBqMmFYaEJiRXZkUlU?oc=5",
+          "link": "https://n.news.naver.com/mnews/article/018/0006321192?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -249,34 +346,37 @@
       ]
     },
     {
-      "term": "MBC News",
-      "term_ko": "MBC 뉴스",
-      "significance_score": 308,
+      "term": "The harsh reality faced at the World Cup",
+      "term_ko": "월드컵서 받은 냉엄한",
+      "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "MBC 뉴스",
+        "query": "월드컵서 받은 냉엄한",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "오늘의 증시 - MBC 뉴스",
-              "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5"
+              "title": "[미리보는 이데일리 신문]韓축구, 월드컵서 받은 ‘냉엄한 감사보고서’",
+              "link": "https://n.news.naver.com/mnews/article/018/0006321192?sid=102"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=MBC%20%EB%89%B4%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=MBC%20%EB%89%B4%EC%8A%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EB%93%9C%EC%BB%B5%EC%84%9C%20%EB%B0%9B%EC%9D%80%20%EB%83%89%EC%97%84%ED%95%9C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EB%93%9C%EC%BB%B5%EC%84%9C%20%EB%B0%9B%EC%9D%80%20%EB%83%89%EC%97%84%ED%95%9C"
       },
       "top_headlines": [
         {
-          "title": "오늘의 증시 - MBC 뉴스",
+          "title": "[미리보는 이데일리 신문]韓축구, 월드컵서 받은 ‘냉엄한 감사보고서’",
           "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5",
+          "link": "https://n.news.naver.com/mnews/article/018/0006321192?sid=102",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -284,34 +384,37 @@
       ]
     },
     {
-      "term": "OpenAI Reportedly Considers",
-      "term_ko": "보도에 따르면 OpenAI는 …을 검토 중인 것으로 알려졌다",
+      "term": "SK Hynix Seeks",
+      "term_ko": "SK하이닉스, ~을 모색 중",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "OpenAI Reportedly Considers",
+        "query": "SK Hynix Seeks",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
+              "title": "SK Hynix Seeks Fair Value With Nasdaq ADR",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272396"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=OpenAI%20Reportedly%20Considers",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=OpenAI%20Reportedly%20Considers"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SK%20Hynix%20Seeks",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SK%20Hynix%20Seeks"
       },
       "top_headlines": [
         {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
+          "title": "SK Hynix Seeks Fair Value With Nasdaq ADR",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272396",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -319,104 +422,37 @@
       ]
     },
     {
-      "term": "AI Lab Would",
-      "term_ko": "AI 연구소는",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI Lab Would",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20Lab%20Would",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20Lab%20Would"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Stock Market Open, Part 2",
-      "term_ko": "출발증시 2부",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "출발증시 2부",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "출발증시 2부 - 한국경제TV",
-              "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTN0Z1poSkluVXlMQVJKSGVWY0x1alpyRzl3QnE2QnlzLUJoV2d3TEd3WGhidUZveXZIcnlkWkdzVmduMFZDdExRaC1JYmlYeXdHdGxLaWx3bzYzR2VuVE9NbUk3VElwTVVMekRLY0lkMkpKMzJ5ZWxWUnhaNGpTUjRhQ1pfbWhpcHg2bk56bXo4V1NUM1pZSkNodDBJbkItSW9j?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B6%9C%EB%B0%9C%EC%A6%9D%EC%8B%9C%202%EB%B6%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B6%9C%EB%B0%9C%EC%A6%9D%EC%8B%9C%202%EB%B6%80"
-      },
-      "top_headlines": [
-        {
-          "title": "출발증시 2부 - 한국경제TV",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOTN0Z1poSkluVXlMQVJKSGVWY0x1alpyRzl3QnE2QnlzLUJoV2d3TEd3WGhidUZveXZIcnlkWkdzVmduMFZDdExRaC1JYmlYeXdHdGxLaWx3bzYzR2VuVE9NbUk3VElwTVVMekRLY0lkMkpKMzJ5ZWxWUnhaNGpTUjRhQ1pfbWhpcHg2bk56bXo4V1NUM1pZSkNodDBJbkItSW9j?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Warsh&#x2019s Throwaway Comment",
-      "term_ko": "워시의 무심코 던진 말",
+      "term": "Be Cautious About Expansion",
+      "term_ko": "확장 신중해야",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Warsh&#x2019s Throwaway Comment",
+        "query": "확장 신중해야",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "Warsh&#x2019;s throwaway comment injects life into the debasement trade, for one day at least",
-              "link": "https://www.marketwatch.com/story/warshs-throwaway-comment-injects-life-into-the-debasement-trade-for-one-day-at-least-1c70d477?mod=mw_rss_topstories"
+              "title": "[사설] 중동발 고물가에 1600원 넘보는 환율, 재정 확장 신중해야",
+              "link": "https://n.news.naver.com/mnews/article/022/0004140162?sid=110"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Warsh%26%23x2019s%20Throwaway%20Comment",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Warsh%26%23x2019s%20Throwaway%20Comment"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%95%EC%9E%A5%20%EC%8B%A0%EC%A4%91%ED%95%B4%EC%95%BC",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%95%EC%9E%A5%20%EC%8B%A0%EC%A4%91%ED%95%B4%EC%95%BC"
       },
       "top_headlines": [
         {
-          "title": "Warsh&#x2019;s throwaway comment injects life into the debasement trade, for one day at least",
+          "title": "[사설] 중동발 고물가에 1600원 넘보는 환율, 재정 확장 신중해야",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/warshs-throwaway-comment-injects-life-into-the-debasement-trade-for-one-day-at-least-1c70d477?mod=mw_rss_topstories",
+          "link": "https://n.news.naver.com/mnews/article/022/0004140162?sid=110",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -424,34 +460,37 @@
       ]
     },
     {
-      "term": "Napa Valley #x2018dream",
-      "term_ko": "나파 밸리 #x2018꿈",
+      "term": "Stagflation",
+      "term_ko": "든 스테그플레이션",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Napa Valley #x2018dream",
+        "query": "든 스테그플레이션",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
+              "title": "[경제 진단] 고개 든 '스테그플레이션' 공포… 생활물가 3.4% 폭등과 한은...",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272408"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Napa%20Valley%20%23x2018dream",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Napa%20Valley%20%23x2018dream"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%93%A0%20%EC%8A%A4%ED%85%8C%EA%B7%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%85%98",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%93%A0%20%EC%8A%A4%ED%85%8C%EA%B7%B8%ED%94%8C%EB%A0%88%EC%9D%B4%EC%85%98"
       },
       "top_headlines": [
         {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
+          "title": "[경제 진단] 고개 든 '스테그플레이션' 공포… 생활물가 3.4% 폭등과 한은...",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272408",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -459,279 +498,37 @@
       ]
     },
     {
-      "term": "4.7 Billion European",
-      "term_ko": "47억 명의 유럽인",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "4.7 Billion European",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
-              "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=4.7%20Billion%20European",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=4.7%20Billion%20European"
-      },
-      "top_headlines": [
-        {
-          "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Handing 5% Stake",
-      "term_ko": "지분 5% 양도",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Handing 5% Stake",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Handing%205%25%20Stake",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Handing%205%25%20Stake"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Government Here&#x2019s Why",
-      "term_ko": "정부: 그 이유는 다음과 같습니다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Government Here&#x2019s Why",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Government%20Here%26%23x2019s%20Why",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Government%20Here%26%23x2019s%20Why"
-      },
-      "top_headlines": [
-        {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Opening A #x2018Trump",
-      "term_ko": "‘트럼프’ 개장",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Opening A #x2018Trump",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-              "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Opening%20A%20%23x2018Trump",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Opening%20A%20%23x2018Trump"
-      },
-      "top_headlines": [
-        {
-          "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Both Major Stock Markets Plunge Simultaneously",
-      "term_ko": "양대증시 동반급락",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "양대증시 동반급락",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
-              "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%96%91%EB%8C%80%EC%A6%9D%EC%8B%9C%20%EB%8F%99%EB%B0%98%EA%B8%89%EB%9D%BD",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%96%91%EB%8C%80%EC%A6%9D%EC%8B%9C%20%EB%8F%99%EB%B0%98%EA%B8%89%EB%9D%BD"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 코스닥도 매도 사이드카…양대증시 동반급락 - 머니투데이 - 머니투데이",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MWURvZXJMQ3FfaVRjRHVqYnBEdko0ZFN0WnNsMERLUUdhZldrTzQ4c3hYT0JBbGlFNnlJQWNJbEhzNUMwYWYzbWt6aFdPV0w0NG82ZTlpMEM3T3VVQlhVYms0RnBfLW1x0gFuQVVfeXFMTzNOSGFydVdFZzlFWlN1Mmt6TFVSR0RsMmoyMWRUV0kxVzRvUUJKU2JXWEstSmhSdGFPeUJtWGlfY1pBZW4zSDF6aEROUHVaeTA4SUlMSmVIOW5ZVHFMOUYwRGgzTTdDQ09yZGJVM1E?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Today's Stock Market",
-      "term_ko": "오늘의 증시",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "오늘의 증시",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "오늘의 증시 - MBC 뉴스",
-              "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EC%8B%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%98%A4%EB%8A%98%EC%9D%98%20%EC%A6%9D%EC%8B%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "오늘의 증시 - MBC 뉴스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBrUVkxZHN4RmpLbWRPSy1YRmZ2NklIYkJUcjNtVVJQU0xERllCbGJMeUR6MmVnNVJDU1pTNUhqRUxxUkNlelpBR2F6dDhIdVpwcDJSa016d3RTVkRwUkczREtlWUtpSzBNb2dJMWdIVVJJcW5xVkdGbg?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "They all gathered together",
-      "term_ko": "함께 몰렸다",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "함께 몰렸다",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-              "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%95%A8%EA%BB%98%20%EB%AA%B0%EB%A0%B8%EB%8B%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%95%A8%EA%BB%98%20%EB%AA%B0%EB%A0%B8%EB%8B%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "뜨거워진 日증시에…해외 투자자·자국 개미 함께 몰렸다 - 연합뉴스",
-          "summary": "",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wV3BjSVVfWHF5dmNwRFBoWGhfbXBRcGxTZU93VS1EeUZJNkVqVEhLV1ZpVGV0akJab19sZlJQaGJCdzVFbzJ1bUhtVVZUWlV0R2NPZDd2WnNnZzjSAWBBVV95cUxOQ3pFYjNYVjV4bG9zQktrZEFmTmJ3ZzRMQWpIYk5xWnJDZnBKTGpLZzhIV3dzZFZqVEwtNFExWnBJNXNEeDgzWHhhZzQwVXZSclpqTDZXX0RCdkZHNGc5c24?oc=5",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Tamera Mowry Lists",
-      "term_ko": "타메라 모우리 매물 목록",
+      "term": "Mirae Threatens Legal",
+      "term_ko": "미래, 법적 조치 경고",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Tamera Mowry Lists",
+        "query": "Mirae Threatens Legal",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
+              "title": "Mirae threatens legal action against Bloomberg as SpaceX share snub myste...",
+              "link": "https://n.news.naver.com/mnews/article/640/0000090643?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tamera%20Mowry%20Lists",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tamera%20Mowry%20Lists"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Mirae%20Threatens%20Legal",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Mirae%20Threatens%20Legal"
       },
       "top_headlines": [
         {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
+          "title": "Mirae threatens legal action against Bloomberg as SpaceX share snub myste...",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
+          "link": "https://n.news.naver.com/mnews/article/640/0000090643?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -739,34 +536,37 @@
       ]
     },
     {
-      "term": "Bay Area House",
-      "term_ko": "베이 에어리어 하우스",
+      "term": "SpaceX Share Snub",
+      "term_ko": "스페이스X 주가 외면",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Bay Area House",
+        "query": "SpaceX Share Snub",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
+              "title": "Mirae threatens legal action against Bloomberg as SpaceX share snub myste...",
+              "link": "https://n.news.naver.com/mnews/article/640/0000090643?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Bay%20Area%20House",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Bay%20Area%20House"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=SpaceX%20Share%20Snub",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=SpaceX%20Share%20Snub"
       },
       "top_headlines": [
         {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
+          "title": "Mirae threatens legal action against Bloomberg as SpaceX share snub myste...",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
+          "link": "https://n.news.naver.com/mnews/article/640/0000090643?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -774,34 +574,37 @@
       ]
     },
     {
-      "term": "Google Loses Final",
-      "term_ko": "구글, 결승전에서 패배",
+      "term": "Platform Technologies Could",
+      "term_ko": "플랫폼 기술은 다음과 같은 가능성을 지닐 수 있다",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Google Loses Final",
+        "query": "Platform Technologies Could",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
-              "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories"
+              "title": "Platform technologies could drive Korean biotech rebound in H2: analyst",
+              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32289"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Google%20Loses%20Final",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Google%20Loses%20Final"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Platform%20Technologies%20Could",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Platform%20Technologies%20Could"
       },
       "top_headlines": [
         {
-          "title": "After eight years, Google loses final appeal against $4.7 billion European Union fine",
+          "title": "Platform technologies could drive Korean biotech rebound in H2: analyst",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/after-eight-years-google-loses-final-appeal-against-4-7-billion-european-union-fine-46b7459a?mod=mw_rss_topstories",
+          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32289",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -809,34 +612,37 @@
       ]
     },
     {
-      "term": "Consider That Move",
-      "term_ko": "그 행동을 한번 생각해 보세요",
+      "term": "Drive Korean Biotech",
+      "term_ko": "한국 바이오테크 주도",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Consider That Move",
+        "query": "Drive Korean Biotech",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
-              "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories"
+              "title": "Platform technologies could drive Korean biotech rebound in H2: analyst",
+              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32289"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Consider%20That%20Move",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Consider%20That%20Move"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Drive%20Korean%20Biotech",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Drive%20Korean%20Biotech"
       },
       "top_headlines": [
         {
-          "title": "OpenAI reportedly considers handing 5% stake to the government. Here&#x2019;s why the AI lab would consider that move.",
+          "title": "Platform technologies could drive Korean biotech rebound in H2: analyst",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/openai-reportedly-considers-handing-5-stake-to-the-government-heres-why-the-ai-lab-would-consider-that-move-8c2871cb?mod=mw_rss_topstories",
+          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32289",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -844,34 +650,37 @@
       ]
     },
     {
-      "term": "Cat Food How",
-      "term_ko": "고양이 사료는 어떻게",
-      "significance_score": 266,
+      "term": "LD Seoul",
+      "term_ko": "LD 서울",
+      "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Cat Food How",
+        "query": "LD Seoul",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-              "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories"
+              "title": "(2nd LD) Seoul shares plunge nearly 8 pct on tech sell-off amid renewed A...",
+              "link": "https://n.news.naver.com/mnews/article/001/0016173460?sid=104"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Cat%20Food%20How",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Cat%20Food%20How"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=LD%20Seoul",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=LD%20Seoul"
       },
       "top_headlines": [
         {
-          "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
+          "title": "(2nd LD) Seoul shares plunge nearly 8 pct on tech sell-off amid renewed A...",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories",
+          "link": "https://n.news.naver.com/mnews/article/001/0016173460?sid=104",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -879,34 +688,37 @@
       ]
     },
     {
-      "term": "General Mills Plans",
-      "term_ko": "제너럴 밀스의 계획",
-      "significance_score": 266,
+      "term": "Nasdaq ADR",
+      "term_ko": "나스닥 ADR",
+      "significance_score": 252,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "General Mills Plans",
+        "query": "Nasdaq ADR",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-              "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories"
+              "title": "SK Hynix Seeks Fair Value With Nasdaq ADR",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272396"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=General%20Mills%20Plans",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=General%20Mills%20Plans"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nasdaq%20ADR",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nasdaq%20ADR"
       },
       "top_headlines": [
         {
-          "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
+          "title": "SK Hynix Seeks Fair Value With Nasdaq ADR",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272396",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -914,168 +726,324 @@
       ]
     },
     {
-      "term": "Combat A Tough",
-      "term_ko": "힘든 전투",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Combat A Tough",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-              "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Combat%20A%20Tough",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Combat%20A%20Tough"
-      },
-      "top_headlines": [
-        {
-          "title": "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/protein-packed-cheerios-and-cat-food-how-general-mills-plans-to-combat-a-tough-spending-backdrop-90734fed?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Your Children Here",
-      "term_ko": "여기 있는 여러분의 자녀들",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Your Children Here",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-              "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Your%20Children%20Here",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Your%20Children%20Here"
-      },
-      "top_headlines": [
-        {
-          "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Risk You Need",
-      "term_ko": "꼭 필요한 위험",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Risk You Need",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
-          "sample": [
-            {
-              "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-              "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Risk%20You%20Need",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Risk%20You%20Need"
-      },
-      "top_headlines": [
-        {
-          "title": "Opening a &#x2018;Trump account&#x2019; for your children? Here is the risk you need to reckon with first.",
-          "summary": "",
-          "link": "https://www.marketwatch.com/story/opening-a-trump-account-for-your-children-here-is-the-risk-you-need-to-recognize-first-fe206bc0?mod=mw_rss_topstories",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "2.7 Million",
-      "term_ko": "270만",
+      "term": "H2 Analyst",
+      "term_ko": "H2 애널리스트",
       "significance_score": 238,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "2.7 Million",
+        "query": "H2 Analyst",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-02T18:18:56+09:00",
-          "fallback_sources": [],
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
           "sample": [
             {
-              "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
-              "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories"
+              "title": "Platform technologies could drive Korean biotech rebound in H2: analyst",
+              "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32289"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=2.7%20Million",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=2.7%20Million"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=H2%20Analyst",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=H2%20Analyst"
       },
       "top_headlines": [
         {
-          "title": "Tamera Mowry lists Bay Area house for $2.7 million as she prepares to build Napa Valley &#x2018;dream home&#x2019;",
+          "title": "Platform technologies could drive Korean biotech rebound in H2: analyst",
           "summary": "",
-          "link": "https://www.marketwatch.com/story/tamera-mowry-lists-bay-area-house-for-2-7-million-as-she-prepares-to-build-napa-valley-dream-home-feee7691?mod=mw_rss_topstories",
+          "link": "https://www.koreabiomed.com/news/articleView.html?idxno=32289",
           "timeAgo": null,
           "pubDate": null,
           "source": null
         }
       ]
+    },
+    {
+      "term": "Plunge Nearly",
+      "term_ko": "거의 급강하",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Plunge Nearly",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "(2nd LD) Seoul shares plunge nearly 8 pct on tech sell-off amid renewed A...",
+              "link": "https://n.news.naver.com/mnews/article/001/0016173460?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Plunge%20Nearly",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Plunge%20Nearly"
+      },
+      "top_headlines": [
+        {
+          "title": "(2nd LD) Seoul shares plunge nearly 8 pct on tech sell-off amid renewed A...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016173460?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Tech Sell-off",
+      "term_ko": "기술주 매도세",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Tech Sell-off",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "(2nd LD) Seoul shares plunge nearly 8 pct on tech sell-off amid renewed A...",
+              "link": "https://n.news.naver.com/mnews/article/001/0016173460?sid=104"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Tech%20Sell-off",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Tech%20Sell-off"
+      },
+      "top_headlines": [
+        {
+          "title": "(2nd LD) Seoul shares plunge nearly 8 pct on tech sell-off amid renewed A...",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/001/0016173460?sid=104",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Fair Value",
+      "term_ko": "공정가치",
+      "significance_score": 224,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Fair Value",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "SK Hynix Seeks Fair Value With Nasdaq ADR",
+              "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272396"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Fair%20Value",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Fair%20Value"
+      },
+      "top_headlines": [
+        {
+          "title": "SK Hynix Seeks Fair Value With Nasdaq ADR",
+          "summary": "",
+          "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=272396",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "AI chip demand surge",
+      "term_ko": "AI 칩 수요 급증",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "AI chip demand surge",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "KOSPI rebounds on foreign buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "KOSPI rebounds on foreign buying",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Interest rate cut expectations rise",
+      "term_ko": "금리 인하 기대감 고조",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "Interest rate cut expectations rise",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Expectations for a Bitcoin ETF",
+      "term_ko": "비트코인 ETF 기대",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "비트코인 ETF 기대",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Sharp Rise in the Won-Dollar Exchange Rate",
+      "term_ko": "원달러 환율 급등",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "원달러 환율 급등",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
+      },
+      "top_headlines": []
+    },
+    {
+      "term": "Threat of a U.S. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기",
+      "significance_score": 120,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "미국 정부 셧다운 위기",
+        "local_headlines": {
+          "matches": 0,
+          "last_updated": "2026-07-02T22:59:50+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
+      },
+      "top_headlines": []
     }
   ],
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-07-02T09:38:42.845Z",
+    "generated_at": "2026-07-02T14:01:01.132Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-07-02T18:18:56+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-07-02T22:59:50+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 0,
+    "similar_keywords_removed": 1,
     "removal_breakdown": {
       "exact_match": 0,
-      "similar": 0,
+      "similar": 1,
       "too_generic": 0
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-07-02T18:18:56+09:00",
-      "fallback_sources": [],
+      "last_updated": "2026-07-02T22:59:50+09:00",
+      "fallback_sources": [
+        "trend_log",
+        "default_fallback"
+      ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-07-02T18:18:56+09:00",
-        "fallbackSources": []
+        "lastUpdated": "2026-07-02T22:59:50+09:00",
+        "fallbackSources": [
+          "trend_log",
+          "default_fallback"
+        ]
       }
     }
   }
