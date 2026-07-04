@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-03",
+  "date": "2026-07-04",
   "window": "12_hours",
   "total_phrases": 29,
   "discovered_keywords": [
@@ -13,7 +13,7 @@
         "query": "비트코인BTC 고용 둔화",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -42,37 +42,192 @@
       ]
     },
     {
-      "term": "The FOMC Amid a Wait-and-See Stance",
-      "term_ko": "관망 속 FOMC",
+      "term": "Gold and Silver ETFs",
+      "term_ko": "금 은 ETF",
       "significance_score": 350,
-      "mentions": 160,
+      "mentions": 200,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "관망 속 FOMC",
+        "query": "금 은 ETF",
+        "search_trends": {
+          "source": "naver_datalab_search",
+          "time_unit": "date",
+          "bucket_size_hours": 24,
+          "rows": [
+            {
+              "period": "2026-06-26",
+              "timestamp": 1782399600000,
+              "value": 83.33333
+            },
+            {
+              "period": "2026-07-01",
+              "timestamp": 1782831600000,
+              "value": 100
+            },
+            {
+              "period": "2026-07-03",
+              "timestamp": 1783004400000,
+              "value": 100
+            }
+          ]
+        },
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "비트코인 6만달러 회복…금리 관망 속 FOMC 의사록 촉각",
-              "link": "https://n.news.naver.com/mnews/article/008/0005381323?sid=101"
+              "title": "금리 인상 멀어지자…금·은 ETF '반등 시작'",
+              "link": "https://n.news.naver.com/mnews/article/277/0005785405?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B4%80%EB%A7%9D%20%EC%86%8D%20FOMC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B4%80%EB%A7%9D%20%EC%86%8D%20FOMC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%20%EC%9D%80%20ETF",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%20%EC%9D%80%20ETF"
       },
       "top_headlines": [
         {
-          "title": "비트코인 6만달러 회복…금리 관망 속 FOMC 의사록 촉각",
+          "title": "금리 인상 멀어지자…금·은 ETF '반등 시작'",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005381323?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/277/0005785405?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ],
+      "search_scores": {
+        "time_unit": "date",
+        "bucket_size_hours": 24,
+        "short_window_hours": 24,
+        "medium_window_hours": 72,
+        "long_window_hours": 168,
+        "recent_hour_volume": 0,
+        "weekly_search_volume": 200,
+        "weekly_average_volume": 100,
+        "day_score": 0,
+        "week_score": 0,
+        "correction_factor": 0.115911,
+        "decay_factor": 0.025413,
+        "time_weight": 0.02793,
+        "raw_score": 0,
+        "scaled_score": 0,
+        "total_score": 0,
+        "last_observation": 1783004400000
+      }
+    },
+    {
+      "term": "IRPs Flocking to Securities Firms",
+      "term_ko": "증권사로 몰리는 IRP",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "증권사로 몰리는 IRP",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-04T11:47:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "증권사로 몰리는 IRP…은행들 ETF로 고객 잡기 나섰다",
+              "link": "https://n.news.naver.com/mnews/article/011/0004638081?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A6%9D%EA%B6%8C%EC%82%AC%EB%A1%9C%20%EB%AA%B0%EB%A6%AC%EB%8A%94%20IRP",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A6%9D%EA%B6%8C%EC%82%AC%EB%A1%9C%20%EB%AA%B0%EB%A6%AC%EB%8A%94%20IRP"
+      },
+      "top_headlines": [
+        {
+          "title": "증권사로 몰리는 IRP…은행들 ETF로 고객 잡기 나섰다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/011/0004638081?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Banks Attract Customers with ETFs",
+      "term_ko": "은행들 ETF로 고객",
+      "significance_score": 350,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "은행들 ETF로 고객",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-04T11:47:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "증권사로 몰리는 IRP…은행들 ETF로 고객 잡기 나섰다",
+              "link": "https://n.news.naver.com/mnews/article/011/0004638081?sid=101"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%80%ED%96%89%EB%93%A4%20ETF%EB%A1%9C%20%EA%B3%A0%EA%B0%9D",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%80%ED%96%89%EB%93%A4%20ETF%EB%A1%9C%20%EA%B3%A0%EA%B0%9D"
+      },
+      "top_headlines": [
+        {
+          "title": "증권사로 몰리는 IRP…은행들 ETF로 고객 잡기 나섰다",
+          "summary": "",
+          "link": "https://n.news.naver.com/mnews/article/011/0004638081?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "35 Years of Big Tech Fatigue",
+      "term_ko": "빅테크 피로감에 35년",
+      "significance_score": 336,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "빅테크 피로감에 35년",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-04T11:47:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
+              "link": "http://coinreaders.com/246033"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%85%ED%85%8C%ED%81%AC%20%ED%94%BC%EB%A1%9C%EA%B0%90%EC%97%90%2035%EB%85%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%85%ED%85%8C%ED%81%AC%20%ED%94%BC%EB%A1%9C%EA%B0%90%EC%97%90%2035%EB%85%84"
+      },
+      "top_headlines": [
+        {
+          "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
+          "summary": "",
+          "link": "http://coinreaders.com/246033",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -89,7 +244,7 @@
         "query": "미국 증시 오늘3일",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -127,7 +282,7 @@
         "query": "속 6만 2000달러",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -156,37 +311,37 @@
       ]
     },
     {
-      "term": "Bitcoin Recovers to $60,000",
-      "term_ko": "비트코인 6만달러 회복",
+      "term": "Meta Also Adopts Samsung's 2-nanometer Process",
+      "term_ko": "메타도 삼성 2나노",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "비트코인 6만달러 회복",
+        "query": "메타도 삼성 2나노",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "비트코인 6만달러 회복…금리 관망 속 FOMC 의사록 촉각",
-              "link": "https://n.news.naver.com/mnews/article/008/0005381323?sid=101"
+              "title": "메타도 삼성 2나노 택했다…파운드리 수주 50조 전망",
+              "link": "https://n.news.naver.com/mnews/article/011/0004638079?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%206%EB%A7%8C%EB%8B%AC%EB%9F%AC%20%ED%9A%8C%EB%B3%B5",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%206%EB%A7%8C%EB%8B%AC%EB%9F%AC%20%ED%9A%8C%EB%B3%B5"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A9%94%ED%83%80%EB%8F%84%20%EC%82%BC%EC%84%B1%202%EB%82%98%EB%85%B8",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A9%94%ED%83%80%EB%8F%84%20%EC%82%BC%EC%84%B1%202%EB%82%98%EB%85%B8"
       },
       "top_headlines": [
         {
-          "title": "비트코인 6만달러 회복…금리 관망 속 FOMC 의사록 촉각",
+          "title": "메타도 삼성 2나노 택했다…파운드리 수주 50조 전망",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005381323?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/011/0004638079?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -194,37 +349,75 @@
       ]
     },
     {
-      "term": "The Aftermath: The Next 30 Years",
-      "term_ko": "후폭풍 이제부터 30년",
+      "term": "50 trillion in foundry orders",
+      "term_ko": "파운드리 수주 50조",
       "significance_score": 336,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "후폭풍 이제부터 30년",
+        "query": "파운드리 수주 50조",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[티조챗] '홈플러스 후폭풍' 이제부터…30년 대형마트는 왜 2000억에 무너...",
-              "link": "https://n.news.naver.com/mnews/article/448/0000624233?sid=101"
+              "title": "메타도 삼성 2나노 택했다…파운드리 수주 50조 전망",
+              "link": "https://n.news.naver.com/mnews/article/011/0004638079?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%9B%84%ED%8F%AD%ED%92%8D%20%EC%9D%B4%EC%A0%9C%EB%B6%80%ED%84%B0%2030%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%9B%84%ED%8F%AD%ED%92%8D%20%EC%9D%B4%EC%A0%9C%EB%B6%80%ED%84%B0%2030%EB%85%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8C%8C%EC%9A%B4%EB%93%9C%EB%A6%AC%20%EC%88%98%EC%A3%BC%2050%EC%A1%B0",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8C%8C%EC%9A%B4%EB%93%9C%EB%A6%AC%20%EC%88%98%EC%A3%BC%2050%EC%A1%B0"
       },
       "top_headlines": [
         {
-          "title": "[티조챗] '홈플러스 후폭풍' 이제부터…30년 대형마트는 왜 2000억에 무너...",
+          "title": "메타도 삼성 2나노 택했다…파운드리 수주 50조 전망",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000624233?sid=101",
+          "link": "https://n.news.naver.com/mnews/article/011/0004638079?sid=101",
+          "timeAgo": null,
+          "pubDate": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "term": "Should the bull market continue?",
+      "term_ko": "불장 더 갈까",
+      "significance_score": 322,
+      "mentions": 160,
+      "evaluation": {
+        "source": "naver_datalab_search",
+        "query": "불장 더 갈까",
+        "local_headlines": {
+          "matches": 1,
+          "last_updated": "2026-07-04T11:47:39+09:00",
+          "fallback_sources": [
+            "trend_log",
+            "default_fallback"
+          ],
+          "sample": [
+            {
+              "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
+              "link": "http://coinreaders.com/246033"
+            }
+          ]
+        }
+      },
+      "search": {
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EC%9E%A5%20%EB%8D%94%20%EA%B0%88%EA%B9%8C",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EC%9E%A5%20%EB%8D%94%20%EA%B0%88%EA%B9%8C"
+      },
+      "top_headlines": [
+        {
+          "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
+          "summary": "",
+          "link": "http://coinreaders.com/246033",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -241,7 +434,7 @@
         "query": "캐시 우드 美",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -279,7 +472,7 @@
         "query": "고용지표 왜곡 가능성",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -308,37 +501,37 @@
       ]
     },
     {
-      "term": "Cash to Replace My Salary",
-      "term_ko": "월급 대체할 현금",
+      "term": "Gold prices have recently hit a record high",
+      "term_ko": "금시세금값는 최근 최대",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "월급 대체할 현금",
+        "query": "금시세금값는 최근 최대",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "연 6~7% 수익으로 월급 대체할 현금 만드는 ‘인컴’투자[은퇴 레시피]",
-              "link": "https://n.news.naver.com/mnews/article/020/0003731453?sid=101"
+              "title": "오늘 금시세(금값)는?…최근 최대 분기 하락폭 보이기도, 새 주간 흐름 ...",
+              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=586534"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%94%EA%B8%89%20%EB%8C%80%EC%B2%B4%ED%95%A0%20%ED%98%84%EA%B8%88",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%94%EA%B8%89%20%EB%8C%80%EC%B2%B4%ED%95%A0%20%ED%98%84%EA%B8%88"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%8B%9C%EC%84%B8%EA%B8%88%EA%B0%92%EB%8A%94%20%EC%B5%9C%EA%B7%BC%20%EC%B5%9C%EB%8C%80",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%8B%9C%EC%84%B8%EA%B8%88%EA%B0%92%EB%8A%94%20%EC%B5%9C%EA%B7%BC%20%EC%B5%9C%EB%8C%80"
       },
       "top_headlines": [
         {
-          "title": "연 6~7% 수익으로 월급 대체할 현금 만드는 ‘인컴’투자[은퇴 레시피]",
+          "title": "오늘 금시세(금값)는?…최근 최대 분기 하락폭 보이기도, 새 주간 흐름 ...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003731453?sid=101",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=586534",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -346,37 +539,37 @@
       ]
     },
     {
-      "term": "A Recipe for Building Income and Planning for Retirement",
-      "term_ko": "만드는 인컴투자은퇴 레시피",
+      "term": "New Weekly Trends",
+      "term_ko": "새 주간 흐름",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "만드는 인컴투자은퇴 레시피",
+        "query": "새 주간 흐름",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "연 6~7% 수익으로 월급 대체할 현금 만드는 ‘인컴’투자[은퇴 레시피]",
-              "link": "https://n.news.naver.com/mnews/article/020/0003731453?sid=101"
+              "title": "오늘 금시세(금값)는?…최근 최대 분기 하락폭 보이기도, 새 주간 흐름 ...",
+              "link": "https://www.cbci.co.kr/news/articleView.html?idxno=586534"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EB%93%9C%EB%8A%94%20%EC%9D%B8%EC%BB%B4%ED%88%AC%EC%9E%90%EC%9D%80%ED%87%B4%20%EB%A0%88%EC%8B%9C%ED%94%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EB%93%9C%EB%8A%94%20%EC%9D%B8%EC%BB%B4%ED%88%AC%EC%9E%90%EC%9D%80%ED%87%B4%20%EB%A0%88%EC%8B%9C%ED%94%BC"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%83%88%20%EC%A3%BC%EA%B0%84%20%ED%9D%90%EB%A6%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%83%88%20%EC%A3%BC%EA%B0%84%20%ED%9D%90%EB%A6%84"
       },
       "top_headlines": [
         {
-          "title": "연 6~7% 수익으로 월급 대체할 현금 만드는 ‘인컴’투자[은퇴 레시피]",
+          "title": "오늘 금시세(금값)는?…최근 최대 분기 하락폭 보이기도, 새 주간 흐름 ...",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/020/0003731453?sid=101",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=586534",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -384,37 +577,37 @@
       ]
     },
     {
-      "term": "Seoul Bond Market: Government Bonds",
-      "term_ko": "서울 채권시장 국고채",
+      "term": "As the prospect of an interest rate hike recedes",
+      "term_ko": "금리 인상 멀어지자",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "서울 채권시장 국고채",
+        "query": "금리 인상 멀어지자",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "서울 채권시장, 국고채 금리 혼조세 마감…중장기물 상승 주목",
-              "link": "https://www.tokenpost.kr/news/economy/374916"
+              "title": "금리 인상 멀어지자…금·은 ETF '반등 시작'",
+              "link": "https://n.news.naver.com/mnews/article/277/0005785405?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%84%9C%EC%9A%B8%20%EC%B1%84%EA%B6%8C%EC%8B%9C%EC%9E%A5%20%EA%B5%AD%EA%B3%A0%EC%B1%84"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EB%A9%80%EC%96%B4%EC%A7%80%EC%9E%90",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%EC%9D%B8%EC%83%81%20%EB%A9%80%EC%96%B4%EC%A7%80%EC%9E%90"
       },
       "top_headlines": [
         {
-          "title": "서울 채권시장, 국고채 금리 혼조세 마감…중장기물 상승 주목",
+          "title": "금리 인상 멀어지자…금·은 ETF '반등 시작'",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/374916",
+          "link": "https://n.news.naver.com/mnews/article/277/0005785405?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -422,37 +615,37 @@
       ]
     },
     {
-      "term": "Interest Rates Close Mixed",
-      "term_ko": "금리 혼조세 마감",
+      "term": "A Breath of Fresh Air for Gangbuk Development",
+      "term_ko": "강북 개발 숨통",
       "significance_score": 322,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "금리 혼조세 마감",
+        "query": "강북 개발 숨통",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "서울 채권시장, 국고채 금리 혼조세 마감…중장기물 상승 주목",
-              "link": "https://www.tokenpost.kr/news/economy/374916"
+              "title": "서울, 공공기여 절반으로…강북 개발 숨통 트인다",
+              "link": "https://n.news.naver.com/mnews/article/011/0004638082?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%20%ED%98%BC%EC%A1%B0%EC%84%B8%20%EB%A7%88%EA%B0%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%20%ED%98%BC%EC%A1%B0%EC%84%B8%20%EB%A7%88%EA%B0%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%95%EB%B6%81%20%EA%B0%9C%EB%B0%9C%20%EC%88%A8%ED%86%B5",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%95%EB%B6%81%20%EA%B0%9C%EB%B0%9C%20%EC%88%A8%ED%86%B5"
       },
       "top_headlines": [
         {
-          "title": "서울 채권시장, 국고채 금리 혼조세 마감…중장기물 상승 주목",
+          "title": "서울, 공공기여 절반으로…강북 개발 숨통 트인다",
           "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/374916",
+          "link": "https://n.news.naver.com/mnews/article/011/0004638082?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -460,75 +653,37 @@
       ]
     },
     {
-      "term": "Rise in Medium- to Long-Term Bonds Draws Attention",
-      "term_ko": "중장기물 상승 주목",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "중장기물 상승 주목",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "서울 채권시장, 국고채 금리 혼조세 마감…중장기물 상승 주목",
-              "link": "https://www.tokenpost.kr/news/economy/374916"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A4%91%EC%9E%A5%EA%B8%B0%EB%AC%BC%20%EC%83%81%EC%8A%B9%20%EC%A3%BC%EB%AA%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A4%91%EC%9E%A5%EA%B8%B0%EB%AC%BC%20%EC%83%81%EC%8A%B9%20%EC%A3%BC%EB%AA%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "서울 채권시장, 국고채 금리 혼조세 마감…중장기물 상승 주목",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/economy/374916",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Will SK Hynixs",
-      "term_ko": "SK 하이닉스는",
+      "term": "22% of the total",
+      "term_ko": "만에 22%",
       "significance_score": 294,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Will SK Hynixs",
+        "query": "만에 22%",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "Will SK hynix's Nasdaq debut save troubled won?",
-              "link": "https://n.news.naver.com/mnews/article/044/0000286362?sid=104"
+              "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
+              "link": "http://coinreaders.com/246033"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Will%20SK%20Hynixs",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Will%20SK%20Hynixs"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%2022%25",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%2022%25"
       },
       "top_headlines": [
         {
-          "title": "Will SK hynix's Nasdaq debut save troubled won?",
+          "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000286362?sid=104",
+          "link": "http://coinreaders.com/246033",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -545,7 +700,7 @@
         "query": "불신 왜",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -574,37 +729,37 @@
       ]
     },
     {
-      "term": "Debt and Human Capital",
-      "term_ko": "부채와 인적자본",
+      "term": "The Rebound Begins",
+      "term_ko": "반등 시작",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "부채와 인적자본",
+        "query": "반등 시작",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "\"부채와 인적자본, 그리고 법치의 위기\", 미국 300주년을 가르는 변수들",
-              "link": "https://www.g-enews.com/view.php?ud=202607031855588410fbbec65dfb_1"
+              "title": "금리 인상 멀어지자…금·은 ETF '반등 시작'",
+              "link": "https://n.news.naver.com/mnews/article/277/0005785405?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EC%B1%84%EC%99%80%20%EC%9D%B8%EC%A0%81%EC%9E%90%EB%B3%B8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EC%B1%84%EC%99%80%20%EC%9D%B8%EC%A0%81%EC%9E%90%EB%B3%B8"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%98%EB%93%B1%20%EC%8B%9C%EC%9E%91",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%98%EB%93%B1%20%EC%8B%9C%EC%9E%91"
       },
       "top_headlines": [
         {
-          "title": "\"부채와 인적자본, 그리고 법치의 위기\", 미국 300주년을 가르는 변수들",
+          "title": "금리 인상 멀어지자…금·은 ETF '반등 시작'",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202607031855588410fbbec65dfb_1",
+          "link": "https://n.news.naver.com/mnews/article/277/0005785405?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -612,37 +767,37 @@
       ]
     },
     {
-      "term": "Dividing Variables",
-      "term_ko": "가르는 변수들",
+      "term": "The Final Golden Moment",
+      "term_ko": "마지막 골든타임",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "가르는 변수들",
+        "query": "마지막 골든타임",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "\"부채와 인적자본, 그리고 법치의 위기\", 미국 300주년을 가르는 변수들",
-              "link": "https://www.g-enews.com/view.php?ud=202607031855588410fbbec65dfb_1"
+              "title": "회생 무산된 홈플러스…14일이 마지막 골든타임",
+              "link": "https://n.news.naver.com/mnews/article/011/0004638085?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B0%80%EB%A5%B4%EB%8A%94%20%EB%B3%80%EC%88%98%EB%93%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B0%80%EB%A5%B4%EB%8A%94%20%EB%B3%80%EC%88%98%EB%93%A4"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%88%EC%A7%80%EB%A7%89%20%EA%B3%A8%EB%93%A0%ED%83%80%EC%9E%84",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%88%EC%A7%80%EB%A7%89%20%EA%B3%A8%EB%93%A0%ED%83%80%EC%9E%84"
       },
       "top_headlines": [
         {
-          "title": "\"부채와 인적자본, 그리고 법치의 위기\", 미국 300주년을 가르는 변수들",
+          "title": "회생 무산된 홈플러스…14일이 마지막 골든타임",
           "summary": "",
-          "link": "https://www.g-enews.com/view.php?ud=202607031855588410fbbec65dfb_1",
+          "link": "https://n.news.naver.com/mnews/article/011/0004638085?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -650,37 +805,37 @@
       ]
     },
     {
-      "term": "Announcement: Korea Securities Depository",
-      "term_ko": "인사 한국예탁결제원",
+      "term": "Set out to catch it",
+      "term_ko": "잡기 나섰다",
       "significance_score": 280,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "인사 한국예탁결제원",
+        "query": "잡기 나섰다",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "[인사] 한국예탁결제원",
-              "link": "https://www.cnbnews.com/news/articleView.html?idxno=1006940"
+              "title": "증권사로 몰리는 IRP…은행들 ETF로 고객 잡기 나섰다",
+              "link": "https://n.news.naver.com/mnews/article/011/0004638081?sid=101"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%82%AC%20%ED%95%9C%EA%B5%AD%EC%98%88%ED%83%81%EA%B2%B0%EC%A0%9C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%82%AC%20%ED%95%9C%EA%B5%AD%EC%98%88%ED%83%81%EA%B2%B0%EC%A0%9C%EC%9B%90"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9E%A1%EA%B8%B0%20%EB%82%98%EC%84%B0%EB%8B%A4",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9E%A1%EA%B8%B0%20%EB%82%98%EC%84%B0%EB%8B%A4"
       },
       "top_headlines": [
         {
-          "title": "[인사] 한국예탁결제원",
+          "title": "증권사로 몰리는 IRP…은행들 ETF로 고객 잡기 나섰다",
           "summary": "",
-          "link": "https://www.cnbnews.com/news/articleView.html?idxno=1006940",
+          "link": "https://n.news.naver.com/mnews/article/011/0004638081?sid=101",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -688,113 +843,37 @@
       ]
     },
     {
-      "term": "Minutes Tactile",
-      "term_ko": "의사록 촉각",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "의사록 촉각",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인 6만달러 회복…금리 관망 속 FOMC 의사록 촉각",
-              "link": "https://n.news.naver.com/mnews/article/008/0005381323?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%98%EC%82%AC%EB%A1%9D%20%EC%B4%89%EA%B0%81",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%98%EC%82%AC%EB%A1%9D%20%EC%B4%89%EA%B0%81"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인 6만달러 회복…금리 관망 속 FOMC 의사록 촉각",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/008/0005381323?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "TijoChat Homeplus",
-      "term_ko": "티조챗 홈플러스",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "티조챗 홈플러스",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[티조챗] '홈플러스 후폭풍' 이제부터…30년 대형마트는 왜 2000억에 무너...",
-              "link": "https://n.news.naver.com/mnews/article/448/0000624233?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%8B%B0%EC%A1%B0%EC%B1%97%20%ED%99%88%ED%94%8C%EB%9F%AC%EC%8A%A4",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%8B%B0%EC%A1%B0%EC%B1%97%20%ED%99%88%ED%94%8C%EB%9F%AC%EC%8A%A4"
-      },
-      "top_headlines": [
-        {
-          "title": "[티조챗] '홈플러스 후폭풍' 이제부터…30년 대형마트는 왜 2000억에 무너...",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/448/0000624233?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Nasdaq Debut Save",
-      "term_ko": "나스닥 상장 저장",
+      "term": "NatureCell Unveils JointStems",
+      "term_ko": "네이처셀, ‘조인트스템스’ 공개",
       "significance_score": 266,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Nasdaq Debut Save",
+        "query": "NatureCell Unveils JointStems",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "Will SK hynix's Nasdaq debut save troubled won?",
-              "link": "https://n.news.naver.com/mnews/article/044/0000286362?sid=104"
+              "title": "NatureCell Unveils JointStem's U.S. Roadmap",
+              "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Nasdaq%20Debut%20Save",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Nasdaq%20Debut%20Save"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NatureCell%20Unveils%20JointStems",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NatureCell%20Unveils%20JointStems"
       },
       "top_headlines": [
         {
-          "title": "Will SK hynix's Nasdaq debut save troubled won?",
+          "title": "NatureCell Unveils JointStem's U.S. Roadmap",
           "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000286362?sid=104",
+          "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -802,75 +881,37 @@
       ]
     },
     {
-      "term": "Biggest Losses",
-      "term_ko": "가장 큰 손실",
+      "term": "U.S Roadmap",
+      "term_ko": "미국 로드맵",
       "significance_score": 224,
       "mentions": 160,
       "evaluation": {
         "source": "naver_datalab_search",
-        "query": "Biggest Losses",
+        "query": "U.S Roadmap",
         "local_headlines": {
           "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
           ],
           "sample": [
             {
-              "title": "The Hottest Stock Markets Lead to the Biggest Losses",
-              "link": "https://www.nytimes.com/2026/07/03/business/stocks-investing-markets.html?partner=naver"
+              "title": "NatureCell Unveils JointStem's U.S. Roadmap",
+              "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397"
             }
           ]
         }
       },
       "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Biggest%20Losses",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Biggest%20Losses"
+        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Roadmap",
+        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Roadmap"
       },
       "top_headlines": [
         {
-          "title": "The Hottest Stock Markets Lead to the Biggest Losses",
+          "title": "NatureCell Unveils JointStem's U.S. Roadmap",
           "summary": "",
-          "link": "https://www.nytimes.com/2026/07/03/business/stocks-investing-markets.html?partner=naver",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Troubled Won",
-      "term_ko": "곤경에 처한 원",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Troubled Won",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T04:23:56+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "Will SK hynix's Nasdaq debut save troubled won?",
-              "link": "https://n.news.naver.com/mnews/article/044/0000286362?sid=104"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Troubled%20Won",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Troubled%20Won"
-      },
-      "top_headlines": [
-        {
-          "title": "Will SK hynix's Nasdaq debut save troubled won?",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/044/0000286362?sid=104",
+          "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397",
           "timeAgo": null,
           "pubDate": null,
           "source": null
@@ -887,7 +928,7 @@
         "query": "AI chip demand surge",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -910,7 +951,7 @@
         "query": "KOSPI rebounds on foreign buying",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -933,7 +974,7 @@
         "query": "Interest rate cut expectations rise",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -956,7 +997,7 @@
         "query": "비트코인 ETF 기대",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -979,7 +1020,7 @@
         "query": "원달러 환율 급등",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1002,7 +1043,7 @@
         "query": "미국 정부 셧다운 위기",
         "local_headlines": {
           "matches": 0,
-          "last_updated": "2026-07-04T04:23:56+09:00",
+          "last_updated": "2026-07-04T11:47:39+09:00",
           "fallback_sources": [
             "trend_log",
             "default_fallback"
@@ -1019,10 +1060,10 @@
   "metadata": {
     "collection_method": "local_headline_analysis",
     "sample_size": 30,
-    "generated_at": "2026-07-03T19:25:00.674Z",
+    "generated_at": "2026-07-04T02:48:43.989Z",
     "keyword_limit": 30,
     "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-07-04T04:23:56+09:00 (12 stories analysed)",
+    "keyword_source": "market news updated 2026-07-04T11:47:39+09:00 (12 stories analysed)",
     "fallback_keyword_source": "data/finance_keywords.json",
     "similar_keywords_removed": 1,
     "removal_breakdown": {
@@ -1032,14 +1073,14 @@
     },
     "local_headlines": {
       "headline_count": 12,
-      "last_updated": "2026-07-04T04:23:56+09:00",
+      "last_updated": "2026-07-04T11:47:39+09:00",
       "fallback_sources": [
         "trend_log",
         "default_fallback"
       ],
       "window": {
         "headlineCount": 12,
-        "lastUpdated": "2026-07-04T04:23:56+09:00",
+        "lastUpdated": "2026-07-04T11:47:39+09:00",
         "fallbackSources": [
           "trend_log",
           "default_fallback"
