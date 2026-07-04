@@ -845,7 +845,7 @@
       const errorEl = document.getElementById('aiSelectedError');
       if (!listEl || !errorEl) return;
       try {
-        const res = await fetch('aiselected.JSON?_=' + Date.now(), { cache: 'no-store' });
+        const res = await fetch('aiselected.json?_=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         renderAiSelected(await res.json());
       } catch (err) {
