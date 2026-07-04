@@ -28,6 +28,13 @@ const translationInFlight = new Map();
 const DEEPL_API_KEY = (process.env.DEEPL_API_KEY || process.env.DEEPL_AUTH_KEY || '').trim();
 const DEEPL_API_URL = (process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v2/translate').trim();
 
+const GPT_API_KEY = (process.env.GPT_API || process.env.OPENAI_API_KEY || '').trim();
+const GPT_API_URL = (process.env.GPT_API_URL || 'https://api.openai.com/v1/chat/completions').trim();
+const GPT_MODEL = (process.env.GPT_MODEL || 'gpt-4o-mini').trim();
+const GPT_KEYWORD_LIMIT = Math.max(1, Number(process.env.GPT_KEYWORD_LIMIT || 10));
+const GPT_REQUEST_TIMEOUT_MS = Math.max(1000, Number(process.env.GPT_REQUEST_TIMEOUT_MS || 20000));
+const MARKET_NEWS_FILE = process.env.MARKET_NEWS_FILE || path.join('data', 'market-news.json');
+
 async function callDeepLTranslate(text, { targetLang = 'KO', sourceLang } = {}) {
   if (!DEEPL_API_KEY || !DEEPL_API_URL) {
     return { text, translated: false };
@@ -210,13 +217,100 @@ function dedupeKeywords(list) {
   const seen = new Set();
   const out = [];
   for (const item of list) {
-    if (!item || !item.term) continue;
-    const key = item.term;
+    const normalized = normalizeKeywordEntry(item);
+    if (!normalized || !normalized.term) continue;
+    const key = formatTagDisplay(normalized.term).toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);
-    out.push(item);
+    out.push(normalized);
   }
   return out;
+}
+
+function stripJsonFence(text) {
+  return String(text || '')
+    .replace(/^```(?:json)?\s*/i, '')
+    .replace(/\s*```$/i, '')
+    .trim();
+}
+
+function parseJsonObjectFromText(text) {
+  const cleaned = stripJsonFence(text);
+  try {
+    return JSON.parse(cleaned);
+  } catch {}
+  const start = cleaned.indexOf('{');
+  const end = cleaned.lastIndexOf('}');
+  if (start >= 0 && end > start) {
+    return JSON.parse(cleaned.slice(start, end + 1));
+  }
+  throw new Error('GPT response did not contain valid JSON');
+}
+
+function loadMarketNewsContext(filePath = MARKET_NEWS_FILE, limit = 20) {
+  const data = readJsonSafe(filePath);
+  if (!data) return [];
+  const items = Array.isArray(data) ? data : (Array.isArray(data.items) ? data.items : []);
+  return items.slice(0, limit).map((item) => {
+    if (typeof item === 'string') return item;
+    return [item.title, item.summary, item.publisher].filter(Boolean).join(' — ');
+  }).filter(Boolean);
+}
+
+async function collectGptKeywords({ seedKeywords = [], limit = GPT_KEYWORD_LIMIT } = {}) {
+  if (!GPT_API_KEY || !GPT_API_URL) return [];
+
+  const seeds = dedupeKeywords(seedKeywords).slice(0, 30);
+  const headlines = loadMarketNewsContext();
+  const promptPayload = {
+    markets: KEYWORD_MARKET_QUERIES.map((m) => m.market),
+    seed_keywords: seeds,
+    recent_headlines: headlines,
+    required_schema: { keywords: [{ term: 'English market keyword', term_ko: 'Korean translation' }] },
+  };
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), GPT_REQUEST_TIMEOUT_MS);
+  try {
+    const res = await fetch(GPT_API_URL, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${GPT_API_KEY}`,
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        model: GPT_MODEL,
+        messages: [
+          {
+            role: 'system',
+            content: 'You create concise stock-market trend keywords. Return only valid JSON matching the requested schema.',
+          },
+          {
+            role: 'user',
+            content: `Create ${limit} high-signal market keywords for today. Use 1-5 words per term. Prefer specific investable themes over generic words. Each item must include English term and Korean term_ko. Input JSON: ${JSON.stringify(promptPayload)}`,
+          },
+        ],
+        temperature: 0.2,
+        max_tokens: 900,
+        response_format: { type: 'json_object' },
+      }),
+      signal: controller.signal,
+    });
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      throw new Error(`GPT API failed (${res.status}): ${text}`);
+    }
+    const data = await res.json();
+    const content = data?.choices?.[0]?.message?.content || '';
+    const parsed = parseJsonObjectFromText(content);
+    return dedupeKeywords(Array.isArray(parsed?.keywords) ? parsed.keywords : []).slice(0, limit);
+  } catch (err) {
+    console.warn(`[marketKeywords] GPT keyword generation failed: ${err?.message || err}`);
+    return [];
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 async function collectSignificantPhrases({ preCollected = null, snapshotPath = TAG_OUTPUT_FILE } = {}) {
@@ -263,7 +357,8 @@ function buildTranslationMap(keywords) {
 
 async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, preCollected = null } = {}) {
   const collected = await collectSignificantPhrases({ preCollected, snapshotPath: outputPath });
-  const keywords = dedupeKeywords(collected.keywords || []);
+  const gptKeywords = await collectGptKeywords({ seedKeywords: collected.keywords || [], limit: GPT_KEYWORD_LIMIT });
+  const keywords = dedupeKeywords([...gptKeywords, ...(collected.keywords || [])]).slice(0, Math.max(GPT_KEYWORD_LIMIT, collected.keywords?.length || 0));
   const now = new Date();
   const base = {
     generatedAt: now.toISOString(),
@@ -274,6 +369,7 @@ async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, pr
     markets: KEYWORD_MARKET_QUERIES.map((m) => m.market),
     keywords,
     discovered_keywords: keywords,
+    top_keywords: keywords,
   };
   base.translations = buildTranslationMap(keywords);
 
@@ -354,5 +450,6 @@ module.exports = {
   writeSignificantPhrasesJson,
   collectKoreanFirstKeywords,
   writeKoreanFirstTagsJson,
-  naverSearch
+  naverSearch,
+  collectGptKeywords
 };
