@@ -15,7 +15,8 @@
             "blog": 0,
             "naver": 0.66
           }
-        }
+        },
+        "priceCurrency": "KRW"
       },
       {
         "name": "에스엠",
@@ -104,10 +105,52 @@
     ],
     "aggressive": [
       {
-        "name": "가온칩스",
-        "sector": "정보기술",
-        "ticker": "399720.KQ",
-        "searchUrl": "https://www.google.com/search?q=%EA%B0%80%EC%98%A8%EC%B9%A9%EC%8A%A4",
+        "name": "데브시스터즈",
+        "sector": "커뮤니케이션서비스",
+        "ticker": "194480.KQ",
+        "searchUrl": "https://www.google.com/search?q=%EB%8D%B0%EB%B8%8C%EC%8B%9C%EC%8A%A4%ED%84%B0%EC%A6%88",
+        "score": 86,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0.37
+          }
+        },
+        "currentPrice": 17240,
+        "price1yAgo": 44300,
+        "price1yDate": "2025-07-04T00:00:00.000Z",
+        "priceAsOf": "2026-07-03T00:00:00.000Z",
+        "priceCurrency": "KRW"
+      },
+      {
+        "name": "레이크머티리얼즈",
+        "sector": "소재",
+        "ticker": "281740.KQ",
+        "searchUrl": "https://www.google.com/search?q=%EB%A0%88%EC%9D%B4%ED%81%AC%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88",
+        "score": 87,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0.33
+          }
+        },
+        "currentPrice": 13790,
+        "price1yAgo": 12270,
+        "price1yDate": "2025-07-04T00:00:00.000Z",
+        "priceAsOf": "2026-07-03T00:00:00.000Z",
+        "priceCurrency": "KRW"
+      },
+      {
+        "name": "에코프로",
+        "sector": "산업재",
+        "ticker": "086520.KQ",
+        "searchUrl": "https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C",
         "score": 88,
         "reasons": {
           "reputationScore": 0,
@@ -115,53 +158,11 @@
           "signals": {
             "sentiment": 0,
             "blog": 0,
-            "naver": 0.54
+            "naver": 0.39
           }
         },
-        "currentPrice": 37450,
-        "price1yAgo": 46150,
-        "price1yDate": "2025-07-04T00:00:00.000Z",
-        "priceAsOf": "2026-07-03T00:00:00.000Z",
-        "priceCurrency": "KRW"
-      },
-      {
-        "name": "스튜디오드래곤",
-        "sector": "커뮤니케이션서비스",
-        "ticker": "253450.KQ",
-        "searchUrl": "https://www.google.com/search?q=%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%EB%93%9C%EB%9E%98%EA%B3%A4",
-        "score": 87,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0.45
-          }
-        },
-        "currentPrice": 21800,
-        "price1yAgo": 48350,
-        "price1yDate": "2025-07-04T00:00:00.000Z",
-        "priceAsOf": "2026-07-03T00:00:00.000Z",
-        "priceCurrency": "KRW"
-      },
-      {
-        "name": "정보기술",
-        "sector": "정보기술",
-        "ticker": "403870.KQ",
-        "searchUrl": "https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0",
-        "score": 87,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0.46
-          }
-        },
-        "currentPrice": 48500,
-        "price1yAgo": 27100,
+        "currentPrice": 87300,
+        "price1yAgo": 46850,
         "price1yDate": "2025-07-04T00:00:00.000Z",
         "priceAsOf": "2026-07-03T00:00:00.000Z",
         "priceCurrency": "KRW"
@@ -213,17 +214,38 @@
   "KOSPI": {
     "safe": [
       {
+        "name": "HD현대일렉트릭",
+        "sector": null,
+        "ticker": "267260.KS",
+        "searchUrl": "https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD",
+        "score": 92,
+        "reasons": {
+          "reputationScore": 0.5,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0.11,
+            "blog": 1,
+            "naver": 0.52
+          }
+        },
+        "currentPrice": 945000,
+        "price1yAgo": 432000,
+        "price1yDate": "2025-07-04T00:00:00.000Z",
+        "priceAsOf": "2026-07-03T00:00:00.000Z",
+        "priceCurrency": "KRW"
+      },
+      {
         "name": "SK하이닉스",
         "sector": null,
         "ticker": "000660.KS",
         "searchUrl": "https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
-        "score": 90,
+        "score": 94,
         "reasons": {
-          "reputationScore": 0,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
-            "sentiment": 0.14,
-            "blog": 0,
+            "sentiment": 0.45,
+            "blog": 1,
             "naver": 0.71
           }
         },
@@ -234,22 +256,22 @@
         "priceCurrency": "KRW"
       },
       {
-        "name": "기아",
+        "name": "삼성전기",
         "sector": null,
-        "ticker": "000270.KS",
-        "searchUrl": "https://www.google.com/search?q=%EA%B8%B0%EC%95%84",
-        "score": 88,
+        "ticker": "009150.KS",
+        "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0",
+        "score": 93,
         "reasons": {
-          "reputationScore": 0,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
-            "sentiment": 0.03,
-            "blog": 0,
-            "naver": 0.63
+            "sentiment": 0.15,
+            "blog": 1,
+            "naver": 0.48
           }
         },
-        "currentPrice": 152000,
-        "price1yAgo": 99100,
+        "currentPrice": 1989000,
+        "price1yAgo": 138600,
         "price1yDate": "2025-07-04T00:00:00.000Z",
         "priceAsOf": "2026-07-03T00:00:00.000Z",
         "priceCurrency": "KRW"
@@ -259,13 +281,13 @@
         "sector": null,
         "ticker": "005930.KS",
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90",
-        "score": 89,
+        "score": 94,
         "reasons": {
-          "reputationScore": 0,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
-            "sentiment": 0.14,
-            "blog": 0,
+            "sentiment": 0.45,
+            "blog": 1,
             "naver": 0.71
           }
         },
@@ -280,13 +302,13 @@
         "sector": null,
         "ticker": "068270.KS",
         "searchUrl": "https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8",
-        "score": 88,
+        "score": 92,
         "reasons": {
-          "reputationScore": 0,
+          "reputationScore": 0.5,
           "topKeywords": [],
           "signals": {
-            "sentiment": 0.03,
-            "blog": 0,
+            "sentiment": 0.1,
+            "blog": 1,
             "naver": 0.69
           }
         },
@@ -295,36 +317,36 @@
         "price1yDate": "2025-07-04T00:00:00.000Z",
         "priceAsOf": "2026-07-03T00:00:00.000Z",
         "priceCurrency": "KRW"
-      },
+      }
+    ],
+    "aggressive": [
       {
-        "name": "카카오",
+        "name": "BNK금융지주",
         "sector": null,
-        "ticker": "035720.KS",
-        "searchUrl": "https://www.google.com/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4",
-        "score": 87,
+        "ticker": "138930.KS",
+        "searchUrl": "https://www.google.com/search?q=BNK%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC",
+        "score": 90,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
           "signals": {
             "sentiment": 0,
             "blog": 0,
-            "naver": 0
+            "naver": 0.69
           }
         },
-        "currentPrice": 35500,
-        "price1yAgo": 58400,
+        "currentPrice": 18780,
+        "price1yAgo": 13400,
         "price1yDate": "2025-07-04T00:00:00.000Z",
         "priceAsOf": "2026-07-03T00:00:00.000Z",
         "priceCurrency": "KRW"
-      }
-    ],
-    "aggressive": [
+      },
       {
         "name": "iM금융지주",
         "sector": null,
         "ticker": "139130.KS",
         "searchUrl": "https://www.google.com/search?q=iM%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC",
-        "score": 88,
+        "score": 89,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -341,10 +363,10 @@
         "priceCurrency": "KRW"
       },
       {
-        "name": "KB금융",
+        "name": "JB금융지주",
         "sector": null,
-        "ticker": "105560.KS",
-        "searchUrl": "https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5",
+        "ticker": "175330.KS",
+        "searchUrl": "https://www.google.com/search?q=JB%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC",
         "score": 88,
         "reasons": {
           "reputationScore": 0,
@@ -352,11 +374,11 @@
           "signals": {
             "sentiment": 0,
             "blog": 0,
-            "naver": 1
+            "naver": 0.39
           }
         },
-        "currentPrice": 170100,
-        "price1yAgo": 112100,
+        "currentPrice": 26150,
+        "price1yAgo": 21600,
         "price1yDate": "2025-07-04T00:00:00.000Z",
         "priceAsOf": "2026-07-03T00:00:00.000Z",
         "priceCurrency": "KRW"
@@ -366,7 +388,7 @@
         "sector": null,
         "ticker": "138040.KS",
         "searchUrl": "https://www.google.com/search?q=%EB%A9%94%EB%A6%AC%EC%B8%A0%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC",
-        "score": 89,
+        "score": 91,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
@@ -383,43 +405,22 @@
         "priceCurrency": "KRW"
       },
       {
-        "name": "한일시멘트",
+        "name": "후성",
         "sector": null,
-        "ticker": "300720.KS",
-        "searchUrl": "https://www.google.com/search?q=%ED%95%9C%EC%9D%BC%EC%8B%9C%EB%A9%98%ED%8A%B8",
-        "score": 87,
+        "ticker": "093370.KS",
+        "searchUrl": "https://www.google.com/search?q=%ED%9B%84%EC%84%B1",
+        "score": 88,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
           "signals": {
             "sentiment": 0,
             "blog": 0,
-            "naver": 0.29
+            "naver": 0.28
           }
         },
-        "currentPrice": 14120,
-        "price1yAgo": 18340,
-        "price1yDate": "2025-07-04T00:00:00.000Z",
-        "priceAsOf": "2026-07-03T00:00:00.000Z",
-        "priceCurrency": "KRW"
-      },
-      {
-        "name": "효성중공업",
-        "sector": null,
-        "ticker": "298040.KS",
-        "searchUrl": "https://www.google.com/search?q=%ED%9A%A8%EC%84%B1%EC%A4%91%EA%B3%B5%EC%97%85",
-        "score": 87,
-        "reasons": {
-          "reputationScore": 0,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 0,
-            "blog": 0,
-            "naver": 0.54
-          }
-        },
-        "currentPrice": 3323000,
-        "price1yAgo": 889000,
+        "currentPrice": 14490,
+        "price1yAgo": 4905,
         "price1yDate": "2025-07-04T00:00:00.000Z",
         "priceAsOf": "2026-07-03T00:00:00.000Z",
         "priceCurrency": "KRW"
@@ -433,20 +434,20 @@
         "sector": "Technology",
         "ticker": "AAPL",
         "searchUrl": "https://www.google.com/search?q=Apple%20Inc.",
-        "score": 92,
+        "score": 89,
         "reasons": {
-          "reputationScore": 0.5,
+          "reputationScore": 0,
           "topKeywords": [],
           "signals": {
-            "sentiment": -0.33,
-            "blog": 1,
+            "sentiment": -0.1,
+            "blog": 0,
             "naver": 0.43
           }
         },
         "currentPrice": 308.63,
         "price1yAgo": 213.5500030517578,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -467,7 +468,7 @@
         "currentPrice": 582.9,
         "price1yAgo": 719.010009765625,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -488,7 +489,7 @@
         "currentPrice": 393.45,
         "price1yAgo": 315.3500061035156,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       }
     ],
@@ -511,7 +512,7 @@
         "currentPrice": 374.15,
         "price1yAgo": 298.239990234375,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -532,7 +533,7 @@
         "currentPrice": 137.2,
         "price1yAgo": 416.9700012207031,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -553,7 +554,7 @@
         "currentPrice": 97.6,
         "price1yAgo": 63.08000183105469,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       }
     ]
@@ -561,45 +562,45 @@
   "S&P 500": {
     "safe": [
       {
-        "name": "Accenture",
-        "sector": "Technology",
-        "ticker": "ACN",
-        "searchUrl": "https://www.google.com/search?q=Accenture",
-        "score": 92,
-        "reasons": {
-          "reputationScore": 0.5,
-          "topKeywords": [],
-          "signals": {
-            "sentiment": 1,
-            "blog": 1,
-            "naver": 0.7
-          }
-        },
-        "currentPrice": 137.35,
-        "price1yAgo": 304.7799987792969,
-        "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
-        "priceCurrency": "USD"
-      },
-      {
         "name": "Apple Inc.",
         "sector": "Technology",
         "ticker": "AAPL",
         "searchUrl": "https://www.google.com/search?q=Apple%20Inc.",
-        "score": 92,
+        "score": 88,
         "reasons": {
-          "reputationScore": 0.5,
+          "reputationScore": 0,
           "topKeywords": [],
           "signals": {
-            "sentiment": -0.33,
-            "blog": 1,
+            "sentiment": -0.1,
+            "blog": 0,
             "naver": 0.4
           }
         },
         "currentPrice": 308.63,
         "price1yAgo": 213.5500030517578,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
+        "priceCurrency": "USD"
+      },
+      {
+        "name": "Johnson & Johnson",
+        "sector": "Health Care",
+        "ticker": "JNJ",
+        "searchUrl": "https://www.google.com/search?q=Johnson%20%26%20Johnson",
+        "score": 87,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0.42
+          }
+        },
+        "currentPrice": 263.04,
+        "price1yAgo": 156.00999450683594,
+        "price1yDate": "2025-07-03T13:30:00.000Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -620,30 +621,72 @@
         "currentPrice": 582.9,
         "price1yAgo": 719.010009765625,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
-      }
-    ],
-    "aggressive": [
+      },
       {
-        "name": "Apollo Global Management",
-        "sector": "Financial Services",
-        "ticker": "APO",
-        "searchUrl": "https://www.google.com/search?q=Apollo%20Global%20Management",
-        "score": 90,
+        "name": "Procter & Gamble",
+        "sector": "Consumer Staples",
+        "ticker": "PG",
+        "searchUrl": "https://www.google.com/search?q=Procter%20%26%20Gamble",
+        "score": 89,
         "reasons": {
           "reputationScore": 0,
           "topKeywords": [],
           "signals": {
             "sentiment": 0,
             "blog": 0,
-            "naver": 0.93
+            "naver": 0.48
           }
         },
-        "currentPrice": 118.61,
-        "price1yAgo": 144.47000122070312,
+        "currentPrice": 151.41,
+        "price1yAgo": 160.8300018310547,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
+        "priceCurrency": "USD"
+      },
+      {
+        "name": "Tesla, Inc.",
+        "sector": "Consumer Discretionary",
+        "ticker": "TSLA",
+        "searchUrl": "https://www.google.com/search?q=Tesla%2C%20Inc.",
+        "score": 88,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0,
+            "blog": 0,
+            "naver": 0.29
+          }
+        },
+        "currentPrice": 393.45,
+        "price1yAgo": 315.3500061035156,
+        "price1yDate": "2025-07-03T13:30:00.000Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
+        "priceCurrency": "USD"
+      }
+    ],
+    "aggressive": [
+      {
+        "name": "Accenture",
+        "sector": "Technology",
+        "ticker": "ACN",
+        "searchUrl": "https://www.google.com/search?q=Accenture",
+        "score": 90,
+        "reasons": {
+          "reputationScore": 0,
+          "topKeywords": [],
+          "signals": {
+            "sentiment": 0.3,
+            "blog": 0,
+            "naver": 0.7
+          }
+        },
+        "currentPrice": 137.35,
+        "price1yAgo": 304.7799987792969,
+        "price1yDate": "2025-07-03T13:30:00.000Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -664,7 +707,7 @@
         "currentPrice": 797.42,
         "price1yAgo": 517.22998046875,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -685,7 +728,7 @@
         "currentPrice": 137.2,
         "price1yAgo": 416.9700012207031,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -706,7 +749,7 @@
         "currentPrice": 178.54,
         "price1yAgo": 215.0800018310547,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       },
       {
@@ -727,10 +770,10 @@
         "currentPrice": 47.1,
         "price1yAgo": 37.59000015258789,
         "price1yDate": "2025-07-03T13:30:00.000Z",
-        "priceAsOf": "2026-07-04T02:45:08.643Z",
+        "priceAsOf": "2026-07-04T08:38:41.422Z",
         "priceCurrency": "USD"
       }
     ]
   },
-  "lastUpdated": "2026-07-04T11:47:21+09:00"
+  "lastUpdated": "2026-07-04T17:39:45+09:00"
 }
