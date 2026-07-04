@@ -9,6 +9,9 @@ const PROMPT = `Fetch 10 currently trendy publicly traded companies: 5 from the 
 
 Use recent market attention, news momentum, trading interest, sector trend, or investor discussion as the basis for “trendy.”
 
+
+Put korean market compant names in Korean, and produce "reason trendy" also in Korean.
+
 Return only valid JSON. Do not include markdown, explanations, or comments.
 
 JSON format:
