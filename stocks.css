@@ -176,6 +176,75 @@ tr:hover {
   font-size: 0.85em;
 }
 
+
+.ai-selected {
+  margin-top: 30px;
+}
+
+.ai-selected > h2 {
+  margin-top: 0;
+}
+
+.ai-selected-group li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  padding: 0.25rem 0;
+}
+
+.ai-selected-group a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ai-selected-group a:hover,
+.ai-selected-group a:focus-visible {
+  text-decoration: underline;
+}
+
+.ai-company {
+  color: #374151;
+  font-size: 0.9em;
+}
+
+.ai-reason-toggle {
+  width: 1.35rem;
+  height: 1.35rem;
+  min-width: 1.35rem;
+  padding: 0;
+  margin: 0 0 0 0.15rem;
+  border-radius: 999px;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ai-reason-toggle:hover,
+.ai-reason-toggle:focus-visible {
+  background: #d97706;
+}
+
+.ai-reason-popover {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.35rem);
+  z-index: 20;
+  width: min(28rem, calc(100vw - 4rem));
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  background: #fffbeb;
+  color: #78350f;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .tooltip {
   display: block;
   color: #6b7280;
