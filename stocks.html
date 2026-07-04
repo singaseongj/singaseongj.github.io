@@ -801,6 +801,11 @@
       return `<button type="button" class="ai-reason-toggle" aria-label="Show reason for ${safeTicker}" aria-expanded="false" data-reason="${safeReason}">?</button>`;
     }
 
+    const aiSelectedCategoryLabels = {
+      korean_market: '국내 증시',
+      new_york_market: '미국 증시'
+    };
+
     function renderAiSelected(data) {
       const listEl = document.getElementById('aiSelectedList');
       const errorEl = document.getElementById('aiSelectedError');
@@ -816,20 +821,20 @@
 
       listEl.innerHTML = groups.map(([category, items]) => {
         const rows = items.slice(0, 10).map(item => {
-          const company = String(item?.company_name || item?.ticker || '').trim();
+          const company = String(item?.company_name || '').trim();
           const ticker = String(item?.ticker || '').trim();
           const exchange = String(item?.exchange || '').trim();
           const searchUrl = buildCompanySearchUrl(company);
-          const tickerLabel = escapeHtml(ticker || company);
-          const tickerHtml = searchUrl
-            ? `<a href="${escapeHtml(searchUrl)}" target="_blank" rel="noopener noreferrer">${tickerLabel}</a>`
-            : tickerLabel;
-          const companyHtml = company && company !== ticker ? `<span class="ai-company">${escapeHtml(company)}</span>` : '';
+          const companyLabel = escapeHtml(company || translations[currentLang].noPicks);
+          const companyHtml = searchUrl
+            ? `<a class="ai-company" href="${escapeHtml(searchUrl)}" target="_blank" rel="noopener noreferrer">${companyLabel}</a>`
+            : `<span class="ai-company">${companyLabel}</span>`;
           const exchangeHtml = exchange ? `<span class="sector">${escapeHtml(exchange)}</span>` : '';
           const reasonHtml = buildAiReasonButton(item?.reason_trendy, ticker || company);
-          return `<li>${tickerHtml}${companyHtml}${exchangeHtml}${reasonHtml}</li>`;
+          return `<li>${companyHtml}${exchangeHtml}${reasonHtml}</li>`;
         }).join('') || `<li class="empty">${translations[currentLang].noPicks}</li>`;
-        return `<div class="portfolio-group ai-selected-group"><h3>${escapeHtml(category)}</h3><ul>${rows}</ul></div>`;
+        const categoryLabel = aiSelectedCategoryLabels[category] || category;
+        return `<div class="portfolio-group ai-selected-group"><h3>${escapeHtml(categoryLabel)}</h3><ul>${rows}</ul></div>`;
       }).join('');
       errorEl.style.display = 'none';
       attachAiReasonHandlers();
