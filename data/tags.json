@@ -1,1050 +1,543 @@
 {
+  "generatedAt": "2026-07-04T13:25:55.625Z",
+  "timezone": "Asia/Seoul",
   "date": "2026-07-04",
   "window": "12_hours",
   "total_phrases": 29,
-  "discovered_keywords": [
+  "markets": [
+    "KOSPI",
+    "KOSDAQ",
+    "S&P 500",
+    "NASDAQ 100"
+  ],
+  "keywords": [
     {
-      "term": "Bitcoin (BTC) Hiring Slows",
-      "term_ko": "비트코인BTC 고용 둔화",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인BTC 고용 둔화",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 고용 둔화 속 6만 2,000달러 일시 돌파...고래 매수 속 대...",
-              "link": "http://coinreaders.com/245978"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%20%EA%B3%A0%EC%9A%A9%20%EB%91%94%ED%99%94",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8BTC%20%EA%B3%A0%EC%9A%A9%20%EB%91%94%ED%99%94"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 고용 둔화 속 6만 2,000달러 일시 돌파...고래 매수 속 대...",
-          "summary": "",
-          "link": "http://coinreaders.com/245978",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
     {
-      "term": "ETF Investments by Financial Institutions",
-      "term_ko": "금융사 ETF 투자",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금융사 ETF 투자",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금융사 ETF 투자 \"금리만 보면 낭패\"…이제 '이것' 집중해야 [주末머니]",
-              "link": "https://n.news.naver.com/mnews/article/277/0005785461?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EC%9C%B5%EC%82%AC%20ETF%20%ED%88%AC%EC%9E%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EC%9C%B5%EC%82%AC%20ETF%20%ED%88%AC%EC%9E%90"
-      },
-      "top_headlines": [
-        {
-          "title": "금융사 ETF 투자 \"금리만 보면 낭패\"…이제 '이것' 집중해야 [주末머니]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005785461?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
     },
     {
-      "term": "TokenPost PRO (Korean Version)",
-      "term_ko": "토큰포스트 PRO 한국형",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "토큰포스트 PRO 한국형",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "토큰포스트 PRO, ‘한국형 디지털 자산 데이터 터미널’로 업그레이드",
-              "link": "https://www.tokenpost.kr/news/insights/375014"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%86%A0%ED%81%B0%ED%8F%AC%EC%8A%A4%ED%8A%B8%20PRO%20%ED%95%9C%EA%B5%AD%ED%98%95",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%86%A0%ED%81%B0%ED%8F%AC%EC%8A%A4%ED%8A%B8%20PRO%20%ED%95%9C%EA%B5%AD%ED%98%95"
-      },
-      "top_headlines": [
-        {
-          "title": "토큰포스트 PRO, ‘한국형 디지털 자산 데이터 터미널’로 업그레이드",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/375014",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
     },
     {
-      "term": "Promissory Notes and IMA",
-      "term_ko": "발행어음 및 IMA",
-      "significance_score": 350,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "발행어음 및 IMA",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "종합금융투자사업자 발행어음 및 IMA 활성화에 따른 과제",
-              "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55871"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C%20%EB%B0%8F%20IMA",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B0%9C%ED%96%89%EC%96%B4%EC%9D%8C%20%EB%B0%8F%20IMA"
-      },
-      "top_headlines": [
-        {
-          "title": "종합금융투자사업자 발행어음 및 IMA 활성화에 따른 과제",
-          "summary": "",
-          "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55871",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "Naturecell's U.s. Roadmap",
+      "term_ko": "네이처셀의 미국 로드맵"
+    },
+    {
+      "term": "Sk Hynix Adr Listing Fees",
+      "term_ko": "SK hynix ADR 상장 수수료"
+    },
+    {
+      "term": "Big Tech Fatigue Impact",
+      "term_ko": "빅테크 피로감 영향"
+    },
+    {
+      "term": "High Exchange Rate Concerns",
+      "term_ko": "높은 환율 우려"
+    },
+    {
+      "term": "Korean Etf Investment Trends",
+      "term_ko": "한국 ETF 투자 동향"
+    },
+    {
+      "term": "Bitcoin (btc) Hiring Slows",
+      "term_ko": "비트코인BTC 고용 둔화"
+    },
+    {
+      "term": "Etf Investments by Financial Institutions",
+      "term_ko": "금융사 ETF 투자"
+    },
+    {
+      "term": "Tokenpost Pro (korean Version)",
+      "term_ko": "토큰포스트 PRO 한국형"
+    },
+    {
+      "term": "Promissory Notes and Ima",
+      "term_ko": "발행어음 및 IMA"
     },
     {
       "term": "35 Years of Big Tech Fatigue",
-      "term_ko": "빅테크 피로감에 35년",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "빅테크 피로감에 35년",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
-              "link": "http://coinreaders.com/246033"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%85%ED%85%8C%ED%81%AC%20%ED%94%BC%EB%A1%9C%EA%B0%90%EC%97%90%2035%EB%85%84",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%85%ED%85%8C%ED%81%AC%20%ED%94%BC%EB%A1%9C%EA%B0%90%EC%97%90%2035%EB%85%84"
-      },
-      "top_headlines": [
-        {
-          "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
-          "summary": "",
-          "link": "http://coinreaders.com/246033",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "빅테크 피로감에 35년"
     },
     {
-      "term": "U.S. Stock Market Today, the 3rd",
-      "term_ko": "미국 증시 오늘3일",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 증시 오늘3일",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[속보] 미국 증시 오늘(3일) 휴장",
-              "link": "https://www.ggilbo.com/news/articleView.html?idxno=1167287"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%98%A4%EB%8A%983%EC%9D%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A6%9D%EC%8B%9C%20%EC%98%A4%EB%8A%983%EC%9D%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "[속보] 미국 증시 오늘(3일) 휴장",
-          "summary": "",
-          "link": "https://www.ggilbo.com/news/articleView.html?idxno=1167287",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "U.s. Stock Market Today, the 3rd",
+      "term_ko": "미국 증시 오늘3일"
     },
     {
       "term": "$62,000",
-      "term_ko": "속 6만 2000달러",
-      "significance_score": 336,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "속 6만 2000달러",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "비트코인(BTC), 고용 둔화 속 6만 2,000달러 일시 돌파...고래 매수 속 대...",
-              "link": "http://coinreaders.com/245978"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%86%8D%206%EB%A7%8C%202000%EB%8B%AC%EB%9F%AC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%86%8D%206%EB%A7%8C%202000%EB%8B%AC%EB%9F%AC"
-      },
-      "top_headlines": [
-        {
-          "title": "비트코인(BTC), 고용 둔화 속 6만 2,000달러 일시 돌파...고래 매수 속 대...",
-          "summary": "",
-          "link": "http://coinreaders.com/245978",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "속 6만 2000달러"
     },
     {
-      "term": "Should we keep riding this bull market?",
-      "term_ko": "불장 더 갈까",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불장 더 갈까",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
-              "link": "http://coinreaders.com/246033"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EC%9E%A5%20%EB%8D%94%20%EA%B0%88%EA%B9%8C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EC%9E%A5%20%EB%8D%94%20%EA%B0%88%EA%B9%8C"
-      },
-      "top_headlines": [
-        {
-          "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
-          "summary": "",
-          "link": "http://coinreaders.com/246033",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Should We Keep Riding This Bull Market?",
+      "term_ko": "불장 더 갈까"
     },
     {
-      "term": "Cathie Wood, U.S.",
-      "term_ko": "캐시 우드 美",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "캐시 우드 美",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "캐시 우드 \"美 고용지표, 왜곡 가능성 있다\"...월가 불신 왜?",
-              "link": "http://coinreaders.com/246006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%BA%90%EC%8B%9C%20%EC%9A%B0%EB%93%9C%20%E7%BE%8E",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%BA%90%EC%8B%9C%20%EC%9A%B0%EB%93%9C%20%E7%BE%8E"
-      },
-      "top_headlines": [
-        {
-          "title": "캐시 우드 \"美 고용지표, 왜곡 가능성 있다\"...월가 불신 왜?",
-          "summary": "",
-          "link": "http://coinreaders.com/246006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Cathie Wood, U.s.",
+      "term_ko": "캐시 우드 美"
     },
     {
       "term": "Potential for Distortion of Employment Indicators",
-      "term_ko": "고용지표 왜곡 가능성",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "고용지표 왜곡 가능성",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "캐시 우드 \"美 고용지표, 왜곡 가능성 있다\"...월가 불신 왜?",
-              "link": "http://coinreaders.com/246006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B3%A0%EC%9A%A9%EC%A7%80%ED%91%9C%20%EC%99%9C%EA%B3%A1%20%EA%B0%80%EB%8A%A5%EC%84%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B3%A0%EC%9A%A9%EC%A7%80%ED%91%9C%20%EC%99%9C%EA%B3%A1%20%EA%B0%80%EB%8A%A5%EC%84%B1"
-      },
-      "top_headlines": [
-        {
-          "title": "캐시 우드 \"美 고용지표, 왜곡 가능성 있다\"...월가 불신 왜?",
-          "summary": "",
-          "link": "http://coinreaders.com/246006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "고용지표 왜곡 가능성"
     },
     {
-      "term": "If you only look at interest rates, you're in for a rude awakening",
-      "term_ko": "금리만 보면 낭패",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "금리만 보면 낭패",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금융사 ETF 투자 \"금리만 보면 낭패\"…이제 '이것' 집중해야 [주末머니]",
-              "link": "https://n.news.naver.com/mnews/article/277/0005785461?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EA%B8%88%EB%A6%AC%EB%A7%8C%20%EB%B3%B4%EB%A9%B4%20%EB%82%AD%ED%8C%A8",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EA%B8%88%EB%A6%AC%EB%A7%8C%20%EB%B3%B4%EB%A9%B4%20%EB%82%AD%ED%8C%A8"
-      },
-      "top_headlines": [
-        {
-          "title": "금융사 ETF 투자 \"금리만 보면 낭패\"…이제 '이것' 집중해야 [주末머니]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005785461?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "If You Only Look at Interest Rates, You're in for a Rude Awakening",
+      "term_ko": "금리만 보면 낭패"
     },
     {
-      "term": "Now I need to focus on this",
-      "term_ko": "이제 이것 집중해야",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "이제 이것 집중해야",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "금융사 ETF 투자 \"금리만 보면 낭패\"…이제 '이것' 집중해야 [주末머니]",
-              "link": "https://n.news.naver.com/mnews/article/277/0005785461?sid=101"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B4%EC%A0%9C%20%EC%9D%B4%EA%B2%83%20%EC%A7%91%EC%A4%91%ED%95%B4%EC%95%BC",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B4%EC%A0%9C%20%EC%9D%B4%EA%B2%83%20%EC%A7%91%EC%A4%91%ED%95%B4%EC%95%BC"
-      },
-      "top_headlines": [
-        {
-          "title": "금융사 ETF 투자 \"금리만 보면 낭패\"…이제 '이것' 집중해야 [주末머니]",
-          "summary": "",
-          "link": "https://n.news.naver.com/mnews/article/277/0005785461?sid=101",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Now I Need to Focus on This",
+      "term_ko": "이제 이것 집중해야"
     },
     {
       "term": "Policy Note: Exchange Rate Hits Record High",
-      "term_ko": "정책노트 환율은 최고치",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "정책노트 환율은 최고치",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[정책노트] 환율은 최고치, 정책은 한계…정부의 다음 카드는?",
-              "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=723792"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%A0%95%EC%B1%85%EB%85%B8%ED%8A%B8%20%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%B5%9C%EA%B3%A0%EC%B9%98",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%A0%95%EC%B1%85%EB%85%B8%ED%8A%B8%20%ED%99%98%EC%9C%A8%EC%9D%80%20%EC%B5%9C%EA%B3%A0%EC%B9%98"
-      },
-      "top_headlines": [
-        {
-          "title": "[정책노트] 환율은 최고치, 정책은 한계…정부의 다음 카드는?",
-          "summary": "",
-          "link": "http://www.the-biz.co.kr/news/articleView.html?idxno=723792",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "정책노트 환율은 최고치"
     },
     {
       "term": "Digital Asset Data",
-      "term_ko": "디지털 자산 데이터",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "디지털 자산 데이터",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "토큰포스트 PRO, ‘한국형 디지털 자산 데이터 터미널’로 업그레이드",
-              "link": "https://www.tokenpost.kr/news/insights/375014"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%94%94%EC%A7%80%ED%84%B8%20%EC%9E%90%EC%82%B0%20%EB%8D%B0%EC%9D%B4%ED%84%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%94%94%EC%A7%80%ED%84%B8%20%EC%9E%90%EC%82%B0%20%EB%8D%B0%EC%9D%B4%ED%84%B0"
-      },
-      "top_headlines": [
-        {
-          "title": "토큰포스트 PRO, ‘한국형 디지털 자산 데이터 터미널’로 업그레이드",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/375014",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "디지털 자산 데이터"
     },
     {
       "term": "Challenges Associated with Activation",
-      "term_ko": "활성화에 따른 과제",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "활성화에 따른 과제",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "종합금융투자사업자 발행어음 및 IMA 활성화에 따른 과제",
-              "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55871"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%99%9C%EC%84%B1%ED%99%94%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EA%B3%BC%EC%A0%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%99%9C%EC%84%B1%ED%99%94%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EA%B3%BC%EC%A0%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "종합금융투자사업자 발행어음 및 IMA 활성화에 따른 과제",
-          "summary": "",
-          "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55871",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "활성화에 따른 과제"
     },
     {
-      "term": "Recently, in the construction industry and",
-      "term_ko": "최근 건설업 및",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "최근 건설업 및",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "최근 건설업 및 부동산업 건전성 현황 및 시사점",
-              "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55870"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%B5%9C%EA%B7%BC%20%EA%B1%B4%EC%84%A4%EC%97%85%20%EB%B0%8F",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%B5%9C%EA%B7%BC%20%EA%B1%B4%EC%84%A4%EC%97%85%20%EB%B0%8F"
-      },
-      "top_headlines": [
-        {
-          "title": "최근 건설업 및 부동산업 건전성 현황 및 시사점",
-          "summary": "",
-          "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55870",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "Recently, in the Construction Industry and",
+      "term_ko": "최근 건설업 및"
     },
     {
       "term": "Current Status of Real Estate Market Soundness",
-      "term_ko": "부동산업 건전성 현황",
-      "significance_score": 322,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "부동산업 건전성 현황",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "최근 건설업 및 부동산업 건전성 현황 및 시사점",
-              "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55870"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%80%EB%8F%99%EC%82%B0%EC%97%85%20%EA%B1%B4%EC%A0%84%EC%84%B1%20%ED%98%84%ED%99%A9",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%80%EB%8F%99%EC%82%B0%EC%97%85%20%EA%B1%B4%EC%A0%84%EC%84%B1%20%ED%98%84%ED%99%A9"
-      },
-      "top_headlines": [
-        {
-          "title": "최근 건설업 및 부동산업 건전성 현황 및 시사점",
-          "summary": "",
-          "link": "http://www.ifs.or.kr/bbs/board.php?bo_table=News&wr_id=55870",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term_ko": "부동산업 건전성 현황"
     },
     {
-      "term": "22% of the total",
-      "term_ko": "만에 22%",
-      "significance_score": 294,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "만에 22%",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
-              "link": "http://coinreaders.com/246033"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%A7%8C%EC%97%90%2022%25",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%A7%8C%EC%97%90%2022%25"
-      },
-      "top_headlines": [
-        {
-          "title": "러셀 2000, 빅테크 피로감에 35년 만에 22% 상승...중소형주 불장 더 갈까",
-          "summary": "",
-          "link": "http://coinreaders.com/246033",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
+      "term": "22% of the Total",
+      "term_ko": "만에 22%"
     },
     {
       "term": "Why the Distrust?",
-      "term_ko": "불신 왜",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "불신 왜",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "캐시 우드 \"美 고용지표, 왜곡 가능성 있다\"...월가 불신 왜?",
-              "link": "http://coinreaders.com/246006"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B6%88%EC%8B%A0%20%EC%99%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B6%88%EC%8B%A0%20%EC%99%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "캐시 우드 \"美 고용지표, 왜곡 가능성 있다\"...월가 불신 왜?",
-          "summary": "",
-          "link": "http://coinreaders.com/246006",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Announcement: Korea Securities Depository",
-      "term_ko": "인사 한국예탁결제원",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "인사 한국예탁결제원",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "[인사] 한국예탁결제원",
-              "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=848268"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9D%B8%EC%82%AC%20%ED%95%9C%EA%B5%AD%EC%98%88%ED%83%81%EA%B2%B0%EC%A0%9C%EC%9B%90",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9D%B8%EC%82%AC%20%ED%95%9C%EA%B5%AD%EC%98%88%ED%83%81%EA%B2%B0%EC%A0%9C%EC%9B%90"
-      },
-      "top_headlines": [
-        {
-          "title": "[인사] 한국예탁결제원",
-          "summary": "",
-          "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=848268",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "Upgrade to Terminal",
-      "term_ko": "터미널로 업그레이드",
-      "significance_score": 280,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "터미널로 업그레이드",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "토큰포스트 PRO, ‘한국형 디지털 자산 데이터 터미널’로 업그레이드",
-              "link": "https://www.tokenpost.kr/news/insights/375014"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%ED%84%B0%EB%AF%B8%EB%84%90%EB%A1%9C%20%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%ED%84%B0%EB%AF%B8%EB%84%90%EB%A1%9C%20%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C"
-      },
-      "top_headlines": [
-        {
-          "title": "토큰포스트 PRO, ‘한국형 디지털 자산 데이터 터미널’로 업그레이드",
-          "summary": "",
-          "link": "https://www.tokenpost.kr/news/insights/375014",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "NatureCell Unveils JointStems",
-      "term_ko": "네이처셀, ‘조인트스템스’ 공개",
-      "significance_score": 266,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "NatureCell Unveils JointStems",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "NatureCell Unveils JointStem's U.S. Roadmap",
-              "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=NatureCell%20Unveils%20JointStems",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=NatureCell%20Unveils%20JointStems"
-      },
-      "top_headlines": [
-        {
-          "title": "NatureCell Unveils JointStem's U.S. Roadmap",
-          "summary": "",
-          "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "U.S Roadmap",
-      "term_ko": "미국 로드맵",
-      "significance_score": 224,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "U.S Roadmap",
-        "local_headlines": {
-          "matches": 1,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ],
-          "sample": [
-            {
-              "title": "NatureCell Unveils JointStem's U.S. Roadmap",
-              "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397"
-            }
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=U.S%20Roadmap",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=U.S%20Roadmap"
-      },
-      "top_headlines": [
-        {
-          "title": "NatureCell Unveils JointStem's U.S. Roadmap",
-          "summary": "",
-          "link": "https://www.hitnews.co.kr/news/articleView.html?idxno=77397",
-          "timeAgo": null,
-          "pubDate": null,
-          "source": null
-        }
-      ]
-    },
-    {
-      "term": "AI chip demand surge",
-      "term_ko": "AI 칩 수요 급증",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "AI chip demand surge",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=AI%20chip%20demand%20surge",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=AI%20chip%20demand%20surge"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "KOSPI rebounds on foreign buying",
-      "term_ko": "외국인 매수세에 힘입어 코스피 반등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "KOSPI rebounds on foreign buying",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=KOSPI%20rebounds%20on%20foreign%20buying",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=KOSPI%20rebounds%20on%20foreign%20buying"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Interest rate cut expectations rise",
-      "term_ko": "금리 인하 기대감 고조",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "Interest rate cut expectations rise",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=Interest%20rate%20cut%20expectations%20rise",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=Interest%20rate%20cut%20expectations%20rise"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Expectations for a Bitcoin ETF",
-      "term_ko": "비트코인 ETF 기대",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "비트코인 ETF 기대",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8%20ETF%20%EA%B8%B0%EB%8C%80"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Sharp Rise in the Won-Dollar Exchange Rate",
-      "term_ko": "원달러 환율 급등",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "원달러 환율 급등",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EC%9B%90%EB%8B%AC%EB%9F%AC%20%ED%99%98%EC%9C%A8%20%EA%B8%89%EB%93%B1"
-      },
-      "top_headlines": []
-    },
-    {
-      "term": "Threat of a U.S. Government Shutdown",
-      "term_ko": "미국 정부 셧다운 위기",
-      "significance_score": 120,
-      "mentions": 160,
-      "evaluation": {
-        "source": "naver_datalab_search",
-        "query": "미국 정부 셧다운 위기",
-        "local_headlines": {
-          "matches": 0,
-          "last_updated": "2026-07-04T17:40:02+09:00",
-          "fallback_sources": [
-            "trend_log",
-            "default_fallback"
-          ]
-        }
-      },
-      "search": {
-        "google_trends": "https://trends.google.com/trends/explore?geo=KR&q=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0",
-        "naver_datalab": "https://datalab.naver.com/keyword/trendResult.naver?keyword=%EB%AF%B8%EA%B5%AD%20%EC%A0%95%EB%B6%80%20%EC%85%A7%EB%8B%A4%EC%9A%B4%20%EC%9C%84%EA%B8%B0"
-      },
-      "top_headlines": []
+      "term_ko": "불신 왜"
     }
   ],
-  "metadata": {
-    "collection_method": "local_headline_analysis",
-    "sample_size": 30,
-    "generated_at": "2026-07-04T08:41:22.717Z",
-    "keyword_limit": 30,
-    "lookback_hours": 12,
-    "keyword_source": "market news updated 2026-07-04T17:40:02+09:00 (12 stories analysed)",
-    "fallback_keyword_source": "data/finance_keywords.json",
-    "similar_keywords_removed": 1,
-    "removal_breakdown": {
-      "exact_match": 0,
-      "similar": 1,
-      "too_generic": 0
+  "discovered_keywords": [
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
     },
-    "local_headlines": {
-      "headline_count": 12,
-      "last_updated": "2026-07-04T17:40:02+09:00",
-      "fallback_sources": [
-        "trend_log",
-        "default_fallback"
-      ],
-      "window": {
-        "headlineCount": 12,
-        "lastUpdated": "2026-07-04T17:40:02+09:00",
-        "fallbackSources": [
-          "trend_log",
-          "default_fallback"
-        ]
-      }
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "Naturecell's U.s. Roadmap",
+      "term_ko": "네이처셀의 미국 로드맵"
+    },
+    {
+      "term": "Sk Hynix Adr Listing Fees",
+      "term_ko": "SK hynix ADR 상장 수수료"
+    },
+    {
+      "term": "Big Tech Fatigue Impact",
+      "term_ko": "빅테크 피로감 영향"
+    },
+    {
+      "term": "High Exchange Rate Concerns",
+      "term_ko": "높은 환율 우려"
+    },
+    {
+      "term": "Korean Etf Investment Trends",
+      "term_ko": "한국 ETF 투자 동향"
+    },
+    {
+      "term": "Bitcoin (btc) Hiring Slows",
+      "term_ko": "비트코인BTC 고용 둔화"
+    },
+    {
+      "term": "Etf Investments by Financial Institutions",
+      "term_ko": "금융사 ETF 투자"
+    },
+    {
+      "term": "Tokenpost Pro (korean Version)",
+      "term_ko": "토큰포스트 PRO 한국형"
+    },
+    {
+      "term": "Promissory Notes and Ima",
+      "term_ko": "발행어음 및 IMA"
+    },
+    {
+      "term": "35 Years of Big Tech Fatigue",
+      "term_ko": "빅테크 피로감에 35년"
+    },
+    {
+      "term": "U.s. Stock Market Today, the 3rd",
+      "term_ko": "미국 증시 오늘3일"
+    },
+    {
+      "term": "$62,000",
+      "term_ko": "속 6만 2000달러"
+    },
+    {
+      "term": "Should We Keep Riding This Bull Market?",
+      "term_ko": "불장 더 갈까"
+    },
+    {
+      "term": "Cathie Wood, U.s.",
+      "term_ko": "캐시 우드 美"
+    },
+    {
+      "term": "Potential for Distortion of Employment Indicators",
+      "term_ko": "고용지표 왜곡 가능성"
+    },
+    {
+      "term": "If You Only Look at Interest Rates, You're in for a Rude Awakening",
+      "term_ko": "금리만 보면 낭패"
+    },
+    {
+      "term": "Now I Need to Focus on This",
+      "term_ko": "이제 이것 집중해야"
+    },
+    {
+      "term": "Policy Note: Exchange Rate Hits Record High",
+      "term_ko": "정책노트 환율은 최고치"
+    },
+    {
+      "term": "Digital Asset Data",
+      "term_ko": "디지털 자산 데이터"
+    },
+    {
+      "term": "Challenges Associated with Activation",
+      "term_ko": "활성화에 따른 과제"
+    },
+    {
+      "term": "Recently, in the Construction Industry and",
+      "term_ko": "최근 건설업 및"
+    },
+    {
+      "term": "Current Status of Real Estate Market Soundness",
+      "term_ko": "부동산업 건전성 현황"
+    },
+    {
+      "term": "22% of the Total",
+      "term_ko": "만에 22%"
+    },
+    {
+      "term": "Why the Distrust?",
+      "term_ko": "불신 왜"
+    }
+  ],
+  "top_keywords": [
+    {
+      "term": "Ai Chip Demand Surge",
+      "term_ko": "AI 칩 수요 급증"
+    },
+    {
+      "term": "Kospi Rebounds on Foreign Buying",
+      "term_ko": "외국인 매수세에 힘입어 코스피 반등"
+    },
+    {
+      "term": "Interest Rate Cut Expectations Rise",
+      "term_ko": "금리 인하 기대감 고조"
+    },
+    {
+      "term": "Expectations for a Bitcoin Etf",
+      "term_ko": "비트코인 ETF 기대"
+    },
+    {
+      "term": "Threat of a U.s. Government Shutdown",
+      "term_ko": "미국 정부 셧다운 위기"
+    },
+    {
+      "term": "Naturecell's U.s. Roadmap",
+      "term_ko": "네이처셀의 미국 로드맵"
+    },
+    {
+      "term": "Sk Hynix Adr Listing Fees",
+      "term_ko": "SK hynix ADR 상장 수수료"
+    },
+    {
+      "term": "Big Tech Fatigue Impact",
+      "term_ko": "빅테크 피로감 영향"
+    },
+    {
+      "term": "High Exchange Rate Concerns",
+      "term_ko": "높은 환율 우려"
+    },
+    {
+      "term": "Korean Etf Investment Trends",
+      "term_ko": "한국 ETF 투자 동향"
+    },
+    {
+      "term": "Bitcoin (btc) Hiring Slows",
+      "term_ko": "비트코인BTC 고용 둔화"
+    },
+    {
+      "term": "Etf Investments by Financial Institutions",
+      "term_ko": "금융사 ETF 투자"
+    },
+    {
+      "term": "Tokenpost Pro (korean Version)",
+      "term_ko": "토큰포스트 PRO 한국형"
+    },
+    {
+      "term": "Promissory Notes and Ima",
+      "term_ko": "발행어음 및 IMA"
+    },
+    {
+      "term": "35 Years of Big Tech Fatigue",
+      "term_ko": "빅테크 피로감에 35년"
+    },
+    {
+      "term": "U.s. Stock Market Today, the 3rd",
+      "term_ko": "미국 증시 오늘3일"
+    },
+    {
+      "term": "$62,000",
+      "term_ko": "속 6만 2000달러"
+    },
+    {
+      "term": "Should We Keep Riding This Bull Market?",
+      "term_ko": "불장 더 갈까"
+    },
+    {
+      "term": "Cathie Wood, U.s.",
+      "term_ko": "캐시 우드 美"
+    },
+    {
+      "term": "Potential for Distortion of Employment Indicators",
+      "term_ko": "고용지표 왜곡 가능성"
+    },
+    {
+      "term": "If You Only Look at Interest Rates, You're in for a Rude Awakening",
+      "term_ko": "금리만 보면 낭패"
+    },
+    {
+      "term": "Now I Need to Focus on This",
+      "term_ko": "이제 이것 집중해야"
+    },
+    {
+      "term": "Policy Note: Exchange Rate Hits Record High",
+      "term_ko": "정책노트 환율은 최고치"
+    },
+    {
+      "term": "Digital Asset Data",
+      "term_ko": "디지털 자산 데이터"
+    },
+    {
+      "term": "Challenges Associated with Activation",
+      "term_ko": "활성화에 따른 과제"
+    },
+    {
+      "term": "Recently, in the Construction Industry and",
+      "term_ko": "최근 건설업 및"
+    },
+    {
+      "term": "Current Status of Real Estate Market Soundness",
+      "term_ko": "부동산업 건전성 현황"
+    },
+    {
+      "term": "22% of the Total",
+      "term_ko": "만에 22%"
+    },
+    {
+      "term": "Why the Distrust?",
+      "term_ko": "불신 왜"
+    }
+  ],
+  "translations": {
+    "Ai Chip Demand Surge": {
+      "en": "Ai Chip Demand Surge",
+      "ko": "AI 칩 수요 급증",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.625Z"
+    },
+    "Kospi Rebounds on Foreign Buying": {
+      "en": "Kospi Rebounds on Foreign Buying",
+      "ko": "외국인 매수세에 힘입어 코스피 반등",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Interest Rate Cut Expectations Rise": {
+      "en": "Interest Rate Cut Expectations Rise",
+      "ko": "금리 인하 기대감 고조",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Expectations for a Bitcoin Etf": {
+      "en": "Expectations for a Bitcoin Etf",
+      "ko": "비트코인 ETF 기대",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Threat of a U.s. Government Shutdown": {
+      "en": "Threat of a U.s. Government Shutdown",
+      "ko": "미국 정부 셧다운 위기",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Naturecell's U.s. Roadmap": {
+      "en": "Naturecell's U.s. Roadmap",
+      "ko": "네이처셀의 미국 로드맵",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Sk Hynix Adr Listing Fees": {
+      "en": "Sk Hynix Adr Listing Fees",
+      "ko": "SK hynix ADR 상장 수수료",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Big Tech Fatigue Impact": {
+      "en": "Big Tech Fatigue Impact",
+      "ko": "빅테크 피로감 영향",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "High Exchange Rate Concerns": {
+      "en": "High Exchange Rate Concerns",
+      "ko": "높은 환율 우려",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Korean Etf Investment Trends": {
+      "en": "Korean Etf Investment Trends",
+      "ko": "한국 ETF 투자 동향",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Bitcoin (btc) Hiring Slows": {
+      "en": "Bitcoin (btc) Hiring Slows",
+      "ko": "비트코인BTC 고용 둔화",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Etf Investments by Financial Institutions": {
+      "en": "Etf Investments by Financial Institutions",
+      "ko": "금융사 ETF 투자",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Tokenpost Pro (korean Version)": {
+      "en": "Tokenpost Pro (korean Version)",
+      "ko": "토큰포스트 PRO 한국형",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Promissory Notes and Ima": {
+      "en": "Promissory Notes and Ima",
+      "ko": "발행어음 및 IMA",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "35 Years of Big Tech Fatigue": {
+      "en": "35 Years of Big Tech Fatigue",
+      "ko": "빅테크 피로감에 35년",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "U.s. Stock Market Today, the 3rd": {
+      "en": "U.s. Stock Market Today, the 3rd",
+      "ko": "미국 증시 오늘3일",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "$62,000": {
+      "en": "$62,000",
+      "ko": "속 6만 2000달러",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Should We Keep Riding This Bull Market?": {
+      "en": "Should We Keep Riding This Bull Market?",
+      "ko": "불장 더 갈까",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Cathie Wood, U.s.": {
+      "en": "Cathie Wood, U.s.",
+      "ko": "캐시 우드 美",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Potential for Distortion of Employment Indicators": {
+      "en": "Potential for Distortion of Employment Indicators",
+      "ko": "고용지표 왜곡 가능성",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "If You Only Look at Interest Rates, You're in for a Rude Awakening": {
+      "en": "If You Only Look at Interest Rates, You're in for a Rude Awakening",
+      "ko": "금리만 보면 낭패",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Now I Need to Focus on This": {
+      "en": "Now I Need to Focus on This",
+      "ko": "이제 이것 집중해야",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Policy Note: Exchange Rate Hits Record High": {
+      "en": "Policy Note: Exchange Rate Hits Record High",
+      "ko": "정책노트 환율은 최고치",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Digital Asset Data": {
+      "en": "Digital Asset Data",
+      "ko": "디지털 자산 데이터",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Challenges Associated with Activation": {
+      "en": "Challenges Associated with Activation",
+      "ko": "활성화에 따른 과제",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Recently, in the Construction Industry and": {
+      "en": "Recently, in the Construction Industry and",
+      "ko": "최근 건설업 및",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Current Status of Real Estate Market Soundness": {
+      "en": "Current Status of Real Estate Market Soundness",
+      "ko": "부동산업 건전성 현황",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "22% of the Total": {
+      "en": "22% of the Total",
+      "ko": "만에 22%",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
+    },
+    "Why the Distrust?": {
+      "en": "Why the Distrust?",
+      "ko": "불신 왜",
+      "translator": "pre-collected",
+      "cachedAt": "2026-07-04T13:25:55.626Z"
     }
   }
 }
