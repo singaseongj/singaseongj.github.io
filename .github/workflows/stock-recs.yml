@@ -420,6 +420,17 @@ jobs:
           git status --porcelain -- stocks/fx_rates || true
           git --no-pager diff -- stocks/fx_rates | sed -n '1,80p' || true
 
+      - name: Build AI-selected recommendations
+        shell: bash
+        env:
+          GPT_API: ${{ secrets.GPT_API }}
+        run: |
+          set -Eeuo pipefail
+          node airecommendations.js
+          test -s aiselected.json
+          jq -e '.korean_market | length == 5' aiselected.json
+          jq -e '.new_york_market | length == 5' aiselected.json
+
       - name: "Verify generated files (brief)"
         run: |
           test -f recommendations.json
@@ -517,6 +528,7 @@ jobs:
             stocks/fx_rates/fx_rates.json
             stocks/fx_rates/fx_history*.json
             stocks/fx_rates/index.html
+            aiselected.json
             data/tags.json
             data/keyword_trends.csv
             data/finance_keywords.json
