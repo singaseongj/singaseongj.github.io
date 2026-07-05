@@ -288,7 +288,7 @@ async function collectGptKeywords({ seedKeywords = [], limit = GPT_KEYWORD_LIMIT
           },
           {
             role: 'user',
-            content: `Create ${limit} high-signal market keywords for today. Use 1-5 words per term. Prefer specific investable themes over generic words. Each item must include English term and Korean term_ko. Input JSON: ${JSON.stringify(promptPayload)}`,
+            content: `Create ${limit} high-signal market keywords for today. Use 1-5 words per term. Prefer specific investable themes over generic words. Avoid repeating seed_keywords unless they are still among today's strongest themes. Each item must include English term and Korean term_ko. Input JSON: ${JSON.stringify(promptPayload)}`,
           },
         ],
         temperature: 0.2,
@@ -311,6 +311,37 @@ async function collectGptKeywords({ seedKeywords = [], limit = GPT_KEYWORD_LIMIT
   } finally {
     clearTimeout(timeout);
   }
+}
+
+function mergeKeywordEntries({ gptKeywords = [], existingKeywords = [] } = {}) {
+  const merged = [];
+  const seen = new Set();
+  const existingSeen = new Set(
+    dedupeKeywords(existingKeywords)
+      .map((item) => formatTagDisplay(item.term).toLowerCase())
+      .filter(Boolean)
+  );
+  const push = (item) => {
+    const normalized = normalizeKeywordEntry(item);
+    if (!normalized || !normalized.term) return false;
+    const key = formatTagDisplay(normalized.term).toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    merged.push(normalized);
+    return true;
+  };
+
+  let addedFromGpt = 0;
+  for (const item of gptKeywords) {
+    const normalized = normalizeKeywordEntry(item);
+    const key = normalized?.term ? formatTagDisplay(normalized.term).toLowerCase() : '';
+    if (push(normalized) && key && !existingSeen.has(key)) addedFromGpt += 1;
+  }
+  for (const item of existingKeywords) {
+    push(item);
+  }
+
+  return { keywords: merged, addedFromGpt };
 }
 
 async function collectSignificantPhrases({ preCollected = null, snapshotPath = TAG_OUTPUT_FILE } = {}) {
@@ -358,9 +389,14 @@ function buildTranslationMap(keywords) {
 async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, preCollected = null } = {}) {
   const collected = await collectSignificantPhrases({ preCollected, snapshotPath: outputPath });
   const gptKeywords = await collectGptKeywords({ seedKeywords: collected.keywords || [], limit: GPT_KEYWORD_LIMIT });
-  const keywords = dedupeKeywords([...gptKeywords, ...(collected.keywords || [])]).slice(0, Math.max(GPT_KEYWORD_LIMIT, collected.keywords?.length || 0));
+  const { keywords, addedFromGpt } = mergeKeywordEntries({
+    gptKeywords,
+    existingKeywords: collected.keywords || [],
+  });
+  const existingSnapshot = outputPath ? (readJsonSafe(outputPath) || {}) : {};
   const now = new Date();
   const base = {
+    ...existingSnapshot,
     generatedAt: now.toISOString(),
     timezone: 'Asia/Seoul',
     date: now.toISOString().slice(0, 10),
@@ -370,6 +406,14 @@ async function buildMarketKeywordSnapshot({ outputPath = KEYWORD_OUTPUT_FILE, pr
     keywords,
     discovered_keywords: keywords,
     top_keywords: keywords,
+    gptKeywordMeta: {
+      generatedAt: now.toISOString(),
+      requested: GPT_KEYWORD_LIMIT,
+      received: gptKeywords.length,
+      added: addedFromGpt,
+      model: GPT_API_KEY ? GPT_MODEL : null,
+      apiAvailable: Boolean(GPT_API_KEY && GPT_API_URL),
+    },
   };
   base.translations = buildTranslationMap(keywords);
 
