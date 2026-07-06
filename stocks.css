@@ -194,6 +194,25 @@ tr:hover {
   padding: 0.25rem 0;
 }
 
+.ai-selected-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.ai-selected-columns ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ai-rank {
+  flex: 0 0 1.8rem;
+  color: #111827;
+  font-weight: 800;
+  text-align: right;
+}
+
 .ai-selected-group a {
   color: #2563eb;
   font-weight: 700;
@@ -336,5 +355,10 @@ tr:hover {
 
   #marketSnapshot, #portfolioRecommendations, #marketNews {
     padding: 15px;
+  }
+
+  .ai-selected-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
