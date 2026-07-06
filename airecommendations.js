@@ -9,8 +9,7 @@ const BASE_PROMPT = `Fetch 20 currently trendy publicly traded companies: 10 fro
 
 Use recent market attention, news momentum, trading interest, sector trend, or investor discussion as the basis for “trendy.” Rank each market from 1 to 10, where 1 is the trendiest company in that market.
 
-
-Put Korean market company names in Korean, and produce "reason trendy" also in Korean.
+Put Korean market company names in Korean. For both Korean market and New York market entries, write every reason_trendy value in Korean.
 
 Return only valid JSON. Do not include markdown, explanations, or comments.
 
