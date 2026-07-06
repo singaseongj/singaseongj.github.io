@@ -5,12 +5,12 @@ const API_KEY = process.env.GPT_API;
 const MODEL = process.env.GPT_MODEL || 'gpt-4o-mini';
 const ENDPOINT = process.env.GPT_API_ENDPOINT || 'https://api.openai.com/v1/chat/completions';
 
-const BASE_PROMPT = `Fetch 10 currently trendy publicly traded companies: 5 from the Korean stock market and 5 from the New York stock market. 
+const BASE_PROMPT = `Fetch 20 currently trendy publicly traded companies: 10 from the Korean stock market and 10 from the New York stock market.
 
-Use recent market attention, news momentum, trading interest, sector trend, or investor discussion as the basis for “trendy.”
+Use recent market attention, news momentum, trading interest, sector trend, or investor discussion as the basis for “trendy.” Rank each market from 1 to 10, where 1 is the trendiest company in that market.
 
 
-Put korean market compant names in Korean, and produce "reason trendy" also in Korean.
+Put Korean market company names in Korean, and produce "reason trendy" also in Korean.
 
 Return only valid JSON. Do not include markdown, explanations, or comments.
 
@@ -20,6 +20,7 @@ JSON format:
 {
   "korean_market": [
     {
+      "rank": 1,
       "company_name": "",
       "ticker": "",
       "exchange": "",
@@ -28,6 +29,7 @@ JSON format:
   ],
   "new_york_market": [
     {
+      "rank": 1,
       "company_name": "",
       "ticker": "",
       "exchange": "",
@@ -55,12 +57,21 @@ function stripCodeFence(text) {
     .trim();
 }
 
-function assertMarketItems(items, marketName) {
-  if (!Array.isArray(items) || items.length !== 5) {
-    throw new Error(`${marketName} must contain exactly 5 companies`);
+function assertMarketItems(items, marketName, { allowPartial = false } = {}) {
+  const validLength = allowPartial
+    ? Array.isArray(items) && items.length > 0 && items.length <= 10
+    : Array.isArray(items) && items.length === 10;
+  if (!validLength) {
+    throw new Error(`${marketName} must contain ${allowPartial ? '1 to 10' : 'exactly 10'} companies`);
   }
 
   for (const [index, item] of items.entries()) {
+    if (item?.rank !== undefined) {
+      const rank = Number(item.rank);
+      if (!Number.isInteger(rank) || rank !== index + 1) {
+        throw new Error(`${marketName}[${index}].rank must be ${index + 1}`);
+      }
+    }
     for (const key of ['company_name', 'ticker', 'exchange', 'reason_trendy']) {
       if (typeof item?.[key] !== 'string' || !item[key].trim()) {
         throw new Error(`${marketName}[${index}].${key} must be a non-empty string`);
@@ -69,22 +80,24 @@ function assertMarketItems(items, marketName) {
   }
 }
 
-function validateSelection(selection) {
+function validateSelection(selection, options = {}) {
   if (!selection || typeof selection !== 'object' || Array.isArray(selection)) {
     throw new Error('AI response must be a JSON object');
   }
 
-  assertMarketItems(selection.korean_market, 'korean_market');
-  assertMarketItems(selection.new_york_market, 'new_york_market');
+  assertMarketItems(selection.korean_market, 'korean_market', options);
+  assertMarketItems(selection.new_york_market, 'new_york_market', options);
 
   return {
-    korean_market: selection.korean_market.map(({ company_name, ticker, exchange, reason_trendy }) => ({
+    korean_market: selection.korean_market.map(({ company_name, ticker, exchange, reason_trendy }, index) => ({
+      rank: index + 1,
       company_name: company_name.trim(),
       ticker: ticker.trim(),
       exchange: exchange.trim(),
       reason_trendy: reason_trendy.trim(),
     })),
-    new_york_market: selection.new_york_market.map(({ company_name, ticker, exchange, reason_trendy }) => ({
+    new_york_market: selection.new_york_market.map(({ company_name, ticker, exchange, reason_trendy }, index) => ({
+      rank: index + 1,
       company_name: company_name.trim(),
       ticker: ticker.trim(),
       exchange: exchange.trim(),
@@ -95,7 +108,7 @@ function validateSelection(selection) {
 
 async function readExistingSelection() {
   try {
-    return validateSelection(JSON.parse(await readFile(OUTPUT_FILE, 'utf8')));
+    return validateSelection(JSON.parse(await readFile(OUTPUT_FILE, 'utf8')), { allowPartial: true });
   } catch (error) {
     if (error?.code === 'ENOENT') return null;
     throw new Error(`Could not read existing ${OUTPUT_FILE}: ${error.message || error}`);
@@ -115,10 +128,10 @@ function mergeMarketSelections(freshItems, existingItems) {
     if (seen.has(tickerKey)) continue;
     seen.add(tickerKey);
     merged.push(item);
-    if (merged.length === 5) break;
+    if (merged.length === 10) break;
   }
 
-  return merged;
+  return merged.map((item, index) => ({ ...item, rank: index + 1 }));
 }
 
 function mergeSelections(freshSelection, existingSelection) {
