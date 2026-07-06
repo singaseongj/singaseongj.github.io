@@ -430,8 +430,8 @@ jobs:
           set -Eeuo pipefail
           node airecommendations.js
           test -s aiselected.json
-          jq -e '.korean_market | length == 5' aiselected.json
-          jq -e '.new_york_market | length == 5' aiselected.json
+          jq -e '.korean_market | length == 10' aiselected.json
+          jq -e '.new_york_market | length == 10' aiselected.json
 
       - name: "Verify generated files (brief)"
         run: |
