@@ -1,11 +1,11 @@
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 
 const OUTPUT_FILE = 'aiselected.json';
 const API_KEY = process.env.GPT_API;
 const MODEL = process.env.GPT_MODEL || 'gpt-4o-mini';
 const ENDPOINT = process.env.GPT_API_ENDPOINT || 'https://api.openai.com/v1/chat/completions';
 
-const PROMPT = `Fetch 10 currently trendy publicly traded companies: 5 from the Korean stock market and 5 from the New York stock market. 
+const BASE_PROMPT = `Fetch 10 currently trendy publicly traded companies: 5 from the Korean stock market and 5 from the New York stock market. 
 
 Use recent market attention, news momentum, trading interest, sector trend, or investor discussion as the basis for “trendy.”
 
@@ -13,6 +13,8 @@ Use recent market attention, news momentum, trading interest, sector trend, or i
 Put korean market compant names in Korean, and produce "reason trendy" also in Korean.
 
 Return only valid JSON. Do not include markdown, explanations, or comments.
+
+If existing selections are provided, prioritize companies whose tickers are not already listed there. If there are not enough genuinely trendy alternatives, include the best current picks and keep the JSON format unchanged.
 
 JSON format:
 {
@@ -33,6 +35,12 @@ JSON format:
     }
   ]
 }`;
+
+function buildPrompt(existingSelection) {
+  if (!existingSelection) return BASE_PROMPT;
+
+  return `${BASE_PROMPT}\n\nExisting selections to avoid repeating when similarly trendy alternatives are available:\n${JSON.stringify(existingSelection, null, 2)}`;
+}
 
 function requireApiKey() {
   if (!API_KEY || !API_KEY.trim()) {
@@ -85,7 +93,44 @@ function validateSelection(selection) {
   };
 }
 
-async function requestAiSelection() {
+async function readExistingSelection() {
+  try {
+    return validateSelection(JSON.parse(await readFile(OUTPUT_FILE, 'utf8')));
+  } catch (error) {
+    if (error?.code === 'ENOENT') return null;
+    throw new Error(`Could not read existing ${OUTPUT_FILE}: ${error.message || error}`);
+  }
+}
+
+function normalizeTicker(ticker) {
+  return ticker.trim().toUpperCase();
+}
+
+function mergeMarketSelections(freshItems, existingItems) {
+  const merged = [];
+  const seen = new Set();
+
+  for (const item of [...freshItems, ...existingItems]) {
+    const tickerKey = normalizeTicker(item.ticker);
+    if (seen.has(tickerKey)) continue;
+    seen.add(tickerKey);
+    merged.push(item);
+    if (merged.length === 5) break;
+  }
+
+  return merged;
+}
+
+function mergeSelections(freshSelection, existingSelection) {
+  if (!existingSelection) return freshSelection;
+
+  return {
+    korean_market: mergeMarketSelections(freshSelection.korean_market, existingSelection.korean_market),
+    new_york_market: mergeMarketSelections(freshSelection.new_york_market, existingSelection.new_york_market),
+  };
+}
+
+async function requestAiSelection(existingSelection) {
   const response = await fetch(ENDPOINT, {
     method: 'POST',
     headers: {
@@ -101,7 +146,7 @@ async function requestAiSelection() {
           role: 'system',
           content: 'You return current market-trend stock selections as strict JSON only.',
         },
-        { role: 'user', content: PROMPT },
+        { role: 'user', content: buildPrompt(existingSelection) },
       ],
     }),
   });
@@ -122,7 +167,9 @@ async function requestAiSelection() {
 
 async function main() {
   requireApiKey();
-  const selection = await requestAiSelection();
+  const existingSelection = await readExistingSelection();
+  const freshSelection = await requestAiSelection(existingSelection);
+  const selection = mergeSelections(freshSelection, existingSelection);
   await writeFile(OUTPUT_FILE, `${JSON.stringify(selection, null, 2)}\n`, 'utf8');
   console.log(`Wrote ${OUTPUT_FILE} with ${selection.korean_market.length + selection.new_york_market.length} AI-selected companies.`);
 }
