@@ -29,8 +29,8 @@ const DEEPL_API_KEY = (process.env.DEEPL_API_KEY || process.env.DEEPL_AUTH_KEY |
 const DEEPL_API_URL = (process.env.DEEPL_API_URL || 'https://api-free.deepl.com/v2/translate').trim();
 
 const GPT_API_KEY = (process.env.GPT_API || process.env.OPENAI_API_KEY || '').trim();
-const GPT_API_URL = (process.env.GPT_API_URL || 'https://api.openai.com/v1/chat/completions').trim();
-const GPT_MODEL = (process.env.GPT_MODEL || 'gpt-5.5').trim();
+const GPT_API_URL = (process.env.GPT_API_URL || 'https://api.openai.com/v1/responses').trim();
+const GPT_MODEL = (process.env.GPT_MODEL || 'gpt-5.2').trim();
 const GPT_KEYWORD_LIMIT = Math.max(1, Number(process.env.GPT_KEYWORD_LIMIT || 10));
 const GPT_REQUEST_TIMEOUT_MS = Math.max(1000, Number(process.env.GPT_REQUEST_TIMEOUT_MS || 20000));
 const MARKET_NEWS_FILE = process.env.MARKET_NEWS_FILE || path.join('data', 'market-news.json');
