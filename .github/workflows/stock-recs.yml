@@ -13,10 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
 
     environment:
-      name: production
-      url: https://singaseongj.github.io
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     concurrency:
       group: daily-stock-report
@@ -674,11 +676,14 @@ jobs:
         if: always()
         run: git log -1 --name-only --pretty=fuller || true
 
-      - name: Deploy to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v4.1.0
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./
-          # force_orphan: true  # uncomment if you want a clean history on gh-pages
+          path: ./
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
