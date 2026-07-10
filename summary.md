@@ -1,11 +1,19 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-07-10T23:25:35+09:00 (KST)**
+- Generated: **2026-07-11T04:29:17+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
+
+**CJ ENM** (035760.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **커뮤니케이션서비스**
+- News search: https://www.google.com/search?q=CJ%20ENM
 
 **가온칩스** (399720.KQ)
 
@@ -18,7 +26,7 @@
 **네이처셀** (007390.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.9%**, 20d **-21.3%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%84%A4%EC%9D%B4%EC%B2%98%EC%85%80
@@ -26,26 +34,18 @@
 **라이콤** (054300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.1%**, 20d **16.3%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%9D%BC%EC%9D%B4%EC%BD%A4
 
-**에이치엘비** (045660.KQ)
+**헬스케어** (028300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.7%**, 20d **-5.9%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EC%97%90%EC%9D%B4%EC%B9%98%EC%97%98%EB%B9%84
-
-**케이아이엔엑스** (093320.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **15.3%**, 20d **9.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%95%84%EC%9D%B4%EC%97%94%EC%97%91%EC%8A%A4
+- News search: https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4
 
 ### AGGRESSIVE (5)
 
@@ -73,6 +73,14 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%94%EC%BC%90
 
+**카카오게임즈** (293490.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **커뮤니케이션서비스**
+- News search: https://www.google.com/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B2%8C%EC%9E%84%EC%A6%88
+
 **피에스케이** (319660.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -81,52 +89,44 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
 
-**휴메딕스** (200670.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **-4.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
-
 ## KOSPI
 
 ### SAFE (5)
 
+**HD현대일렉트릭** (267260.KS)
+
+- News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.11)**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD
+
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.40)**
-- Returns: 5d **-10.1%**, 20d **1.4%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
 **두산** (000150.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.6%**, 20d **-27.1%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.45)**
-- Returns: 5d **-7.9%**, 20d **-11.6%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 **셀트리온** (068270.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **-4.6%**, 20d **1.3%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
-
-**한화에어로스페이스** (012450.KS)
-
-- News (7d): **19** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **10.9%**, 20d **12.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4
 
 ### AGGRESSIVE (5)
 
@@ -154,7 +154,7 @@
 **현대글로비스** (086280.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.7%**, 20d **-8.1%**; volatility (20d): **unknown**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EA%B8%80%EB%A1%9C%EB%B9%84%EC%8A%A4
 
@@ -250,15 +250,15 @@
 **JPMorgan Chase** (JPM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **9.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
+- Returns: 5d **0.6%**, 20d **8.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **Yes**
 - Sector: **Financials**
 - News search: https://www.google.com/search?q=JPMorgan%20Chase
 
 **Microsoft** (MSFT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.6%**, 20d **-3.3%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **-3.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Microsoft
@@ -266,41 +266,41 @@
 **Nvidia** (NVDA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.1%**, 20d **3.1%**; volatility (20d): **unknown**
+- Returns: 5d **7.7%**, 20d **4.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
 
 ### AGGRESSIVE (4)
 
-**Agilent Technologies** (A)
+**Ameren** (AEE)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **0.5%**; volatility (20d): **unknown**
+- Returns: 5d **-1.1%**, 20d **1.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Agilent%20Technologies
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=Ameren
 
-**Charter Communications** (CHTR)
+**Arista Networks** (ANET)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.3%**, 20d **-4.7%**; volatility (20d): **unknown**
+- Returns: 5d **1.4%**, 20d **9.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Charter%20Communications
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Arista%20Networks
 
-**Leidos** (LDOS)
+**Invesco** (IVZ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.2%**, 20d **-12.5%**; volatility (20d): **unknown**
+- Returns: 5d **7.4%**, 20d **5.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Leidos
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Invesco
 
 **Waters Corporation** (WAT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.4%**, 20d **4.0%**; volatility (20d): **unknown**
+- Returns: 5d **-0.3%**, 20d **4.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Health Care**
 - News search: https://www.google.com/search?q=Waters%20Corporation
