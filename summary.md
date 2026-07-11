@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-07-11T22:19:21+09:00 (KST)**
+- Generated: **2026-07-12T04:04:30+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -15,13 +15,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
 
-**에이치엘비** (045660.KQ)
+**라이콤** (054300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.7%**, 20d **-5.9%**; volatility (20d): **unknown**
+- Returns: 5d **3.1%**, 20d **16.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EC%97%90%EC%9D%B4%EC%B9%98%EC%97%98%EB%B9%84
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EB%9D%BC%EC%9D%B4%EC%BD%A4
 
 **케이아이엔엑스** (093320.KQ)
 
@@ -57,14 +57,6 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EB%84%A4%EC%9D%B4%EC%B2%98%EC%85%80
 
-**레이크머티리얼즈** (281740.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.0%**, 20d **-22.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EB%A0%88%EC%9D%B4%ED%81%AC%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88
-
 **엑세스바이오** (950130.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -81,6 +73,14 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%94%EC%BC%90
 
+**정보기술** (218410.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **5.8%**, 20d **-5.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
+
 **휴메딕스** (200670.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -92,6 +92,13 @@
 ## KOSPI
 
 ### SAFE (5)
+
+**HD현대일렉트릭** (267260.KS)
+
+- News (7d): **9** (blogs: 10) — momentum: **high**, sentiment: **slightly positive (0.11)**
+- Returns: 5d **-9.9%**, 20d **-24.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD
 
 **SK하이닉스** (000660.KS)
 
@@ -106,13 +113,6 @@
 - Returns: 5d **-3.6%**, 20d **-27.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
-
-**미래에셋증권** (006800.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.25)**
-- Returns: 5d **-1.3%**, 20d **-19.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%A6%9D%EA%B6%8C
 
 **삼성전자** (005930.KS)
 
@@ -167,7 +167,15 @@
 
 ## NASDAQ 100
 
-### SAFE (4)
+### SAFE (5)
+
+**Amazon** (AMZN)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Amazon
 
 **Apple Inc.** (AAPL)
 
@@ -239,19 +247,19 @@
 
 ### SAFE (5)
 
-**Apple Inc.** (AAPL)
+**Amazon** (AMZN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.2%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **1.1%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Apple%20Inc.
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Amazon
 
 **JPMorgan Chase** (JPM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **0.6%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
+- Earnings window (±10d): **Yes**
 - Sector: **Financials**
 - News search: https://www.google.com/search?q=JPMorgan%20Chase
 
