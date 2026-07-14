@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-07-14T17:04:50+09:00 (KST)**
+- Generated: **2026-07-14T22:33:58+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -15,37 +15,37 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
 
-**에코프로비엠** (247540.KQ)
+**HLB제약** (047920.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-6.3%**, 20d **-37.3%**; volatility (20d): **unknown**
+- Returns: 5d **-45.8%**, 20d **-45.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=HLB%EC%A0%9C%EC%95%BD
 
-**테크윙** (089030.KQ)
+**에이치엘비** (045660.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **17.9%**, 20d **-19.1%**; volatility (20d): **unknown**
+- Returns: 5d **-1.7%**, 20d **-10.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%97%90%EC%9D%B4%EC%B9%98%EC%97%98%EB%B9%84
+
+**피에스케이** (319660.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://www.google.com/search?q=%ED%85%8C%ED%81%AC%EC%9C%99
+- News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
 
 **헬스케어** (028300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-48.4%**, 20d **-44.8%**; volatility (20d): **unknown**
+- Returns: 5d **-4.8%**, 20d **-22.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4
-
-**현대바이오** (048410.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-10.3%**, 20d **-30.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%94%EC%9D%B4%EC%98%A4
 
 ### AGGRESSIVE (5)
 
@@ -81,13 +81,13 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%98%A4%EB%A1%9C%EC%8A%A4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
 
-**휴젤** (145020.KQ)
+**정보기술** (218410.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.5%**, 20d **-5.2%**; volatility (20d): **unknown**
+- Returns: 5d **5.8%**, 20d **-5.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%9C%B4%EC%A0%A4
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
 
 ## KOSPI
 
@@ -266,20 +266,12 @@
 **Nvidia** (NVDA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.1%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **3.5%**, 20d **1.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
 
 ### AGGRESSIVE (4)
-
-**Ameren** (AEE)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.1%**, 20d **1.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Utilities**
-- News search: https://www.google.com/search?q=Ameren
 
 **Devon Energy** (DVN)
 
@@ -292,10 +284,18 @@
 **General Mills** (GIS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.3%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-3.4%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=General%20Mills
+
+**Healthpeak Properties** (DOC)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.0%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=Healthpeak%20Properties
 
 **Leidos** (LDOS)
 
