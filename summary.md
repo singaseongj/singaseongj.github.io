@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-07-17T17:10:56+09:00 (KST)**
+- Generated: **2026-07-17T22:27:59+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -10,26 +10,18 @@
 **CJ ENM** (035760.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-14.0%**, 20d **-20.3%**; volatility (20d): **unknown**
+- Returns: 5d **-3.7%**, 20d **15.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=CJ%20ENM
 
-**SFA반도체** (036540.KQ)
+**HLB제약** (047920.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **12.7%**, 20d **-21.9%**; volatility (20d): **unknown**
+- Returns: 5d **-23.4%**, 20d **-27.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=SFA%EB%B0%98%EB%8F%84%EC%B2%B4
-
-**리노공업** (058470.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.3%**, 20d **-21.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=HLB%EC%A0%9C%EC%95%BD
 
 **미래생명자원** (100790.KQ)
 
@@ -46,6 +38,14 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%94%EC%BC%90
+
+**케이씨티** (036030.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.3%**, 20d **8.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%94%A8%ED%8B%B0
 
 ### AGGRESSIVE (5)
 
@@ -65,6 +65,14 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8B%B0%ED%8C%9C
 
+**정보기술** (181710.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-1.3%**, 20d **-8.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%A0%95%EB%B3%B4%EA%B8%B0%EC%88%A0
+
 **코미코** (183300.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -80,14 +88,6 @@
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%ED%81%B4%EB%9E%98%EC%8B%9C%EC%8A%A4
-
-**휴메딕스** (200670.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **-4.9%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
 
 ## KOSPI
 
@@ -229,14 +229,6 @@
 
 ### SAFE (5)
 
-**Accenture** (ACN)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-6.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Information Technology**
-- News search: https://www.google.com/search?q=Accenture
-
 **Amazon** (AMZN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -252,6 +244,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Apple%20Inc.
+
+**Meta Platforms** (META)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.0%**, 20d **7.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Meta%20Platforms
 
 **Microsoft** (MSFT)
 
@@ -271,13 +271,13 @@
 
 ### AGGRESSIVE (5)
 
-**Abbott Laboratories** (ABT)
+**Accenture** (ACN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.7%**, 20d **2.3%**; volatility (20d): **unknown**
+- Returns: 5d **0.8%**, 20d **-6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Abbott%20Laboratories
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Accenture
 
 **Entergy** (ETR)
 
