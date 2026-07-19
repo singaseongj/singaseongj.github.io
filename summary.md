@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-07-19T22:18:09+09:00 (KST)**
+- Generated: **2026-07-20T04:08:08+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -23,14 +23,6 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%84%9C%EB%B6%80T%26D
 
-**아프리카TV** (067160.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.4%**, 20d **-2.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **커뮤니케이션서비스**
-- News search: https://www.google.com/search?q=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4TV
-
 **에코프로비엠** (247540.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -38,6 +30,14 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0
+
+**테크윙** (089030.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **24.7%**, 20d **-18.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%ED%85%8C%ED%81%AC%EC%9C%99
 
 **현대바이오** (048410.KQ)
 
@@ -93,6 +93,13 @@
 
 ### SAFE (5)
 
+**LG화학** (051910.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.6%**, 20d **-23.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
+
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
@@ -114,28 +121,14 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
-**유한양행** (000100.KS)
+**셀트리온** (068270.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.20)**
-- Returns: 5d **5.0%**, 20d **-9.5%**; volatility (20d): **unknown**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- Returns: 5d **1.6%**, 20d **1.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89
-
-**하이트진로** (000080.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-3.2%**, 20d **-4.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
+- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
 ### AGGRESSIVE (5)
-
-**BGF리테일** (282330.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.2%**, 20d **7.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=BGF%EB%A6%AC%ED%85%8C%EC%9D%BC
 
 **JB금융지주** (175330.KS)
 
@@ -151,12 +144,19 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94
 
-**포스코퓨처엠** (003670.KS)
+**한일시멘트** (300720.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **-26.9%**; volatility (20d): **unknown**
+- Returns: 5d **1.4%**, 20d **-2.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%8F%AC%EC%8A%A4%EC%BD%94%ED%93%A8%EC%B2%98%EC%97%A0
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%9D%BC%EC%8B%9C%EB%A9%98%ED%8A%B8
+
+**한화시스템** (272210.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-17.8%**, 20d **-33.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%8B%9C%EC%8A%A4%ED%85%9C
 
 **현대글로비스** (086280.KS)
 
