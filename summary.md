@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-07-21T17:29:40+09:00 (KST)**
+- Generated: **2026-07-21T22:49:17+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -14,14 +14,6 @@
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=CJ%20ENM
-
-**NHN KCP** (060250.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.3%**, 20d **-9.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=NHN%20KCP
 
 **미래생명자원** (100790.KQ)
 
@@ -46,6 +38,14 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%95%84%EC%9D%B4%EC%97%94%EC%97%91%EC%8A%A4
+
+**피에스케이** (319660.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
 
 ### AGGRESSIVE (5)
 
@@ -273,7 +273,7 @@
 **Casey's** (CASY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **2.1%**, 20d **4.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Casey's
@@ -305,7 +305,7 @@
 **Newmont** (NEM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.2%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-4.3%**, 20d **-10.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Newmont
