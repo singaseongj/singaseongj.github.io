@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-07-22T17:29:31+09:00 (KST)**
+- Generated: **2026-07-22T22:52:43+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -14,6 +14,14 @@
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=CJ%20ENM
+
+**리노공업** (058470.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **6.5%**, 20d **0.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EB%A6%AC%EB%85%B8%EA%B3%B5%EC%97%85
 
 **미래생명자원** (100790.KQ)
 
@@ -39,14 +47,6 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%98%A4%EC%8A%A4%ED%85%9C%EC%9E%84%ED%94%8C%EB%9E%80%ED%8A%B8
 
-**케이아이엔엑스** (093320.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.4%**, 20d **13.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%BC%80%EC%9D%B4%EC%95%84%EC%9D%B4%EC%97%94%EC%97%91%EC%8A%A4
-
 ### AGGRESSIVE (5)
 
 **덕산네오룩스** (213420.KQ)
@@ -57,14 +57,6 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%8D%95%EC%82%B0%EB%84%A4%EC%98%A4%EB%A3%A9%EC%8A%A4
 
-**레이크머티리얼즈** (281740.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **-21.1%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EB%A0%88%EC%9D%B4%ED%81%AC%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88
-
 **브이원텍** (251630.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -72,6 +64,14 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D
+
+**씨아이에스** (222080.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.9%**, 20d **-23.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%94%A8%EC%95%84%EC%9D%B4%EC%97%90%EC%8A%A4
 
 **오로스테크놀로지** (322310.KQ)
 
@@ -100,13 +100,6 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98
 
-**LG화학** (051910.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-1.2%**, 20d **-13.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
-
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
@@ -127,6 +120,13 @@
 - Returns: 5d **-1.6%**, 20d **6.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
+
+**한화** (000880.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.30)**
+- Returns: 5d **2.8%**, 20d **-14.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94
 
 ### AGGRESSIVE (5)
 
@@ -151,12 +151,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94
 
-**하이브** (352820.KS)
+**한일시멘트** (300720.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.1%**, 20d **2.3%**; volatility (20d): **unknown**
+- Returns: 5d **-5.9%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%EB%B8%8C
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%9D%BC%EC%8B%9C%EB%A9%98%ED%8A%B8
 
 **현대글로비스** (086280.KS)
 
@@ -299,7 +299,7 @@
 **Stryker Corporation** (SYK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **3.2%**; volatility (20d): **unknown**
+- Returns: 5d **-1.4%**, 20d **0.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Health Care**
 - News search: https://www.google.com/search?q=Stryker%20Corporation
