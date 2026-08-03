@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-03T18:50:04+09:00 (KST)**
+- Generated: **2026-08-03T23:45:30+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -231,13 +231,13 @@
 
 ### SAFE (5)
 
-**Accenture** (ACN)
+**Alphabet Inc.** (GOOGL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-6.2%**; volatility (20d): **unknown**
+- Returns: 5d **4.1%**, 20d **5.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Information Technology**
-- News search: https://www.google.com/search?q=Accenture
+- Sector: **Communication Services**
+- News search: https://www.google.com/search?q=Alphabet%20Inc.
 
 **Amazon** (AMZN)
 
@@ -273,10 +273,18 @@
 
 ### AGGRESSIVE (4)
 
+**Accenture** (ACN)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.8%**, 20d **-6.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Accenture
+
 **Casey's** (CASY)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.1%**, 20d **9.2%**; volatility (20d): **unknown**
+- Returns: 5d **1.6%**, 20d **7.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Consumer Staples**
 - News search: https://www.google.com/search?q=Casey's
@@ -284,7 +292,7 @@
 **Charter Communications** (CHTR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **17.6%**, 20d **5.7%**; volatility (20d): **unknown**
+- Returns: 5d **11.9%**, 20d **8.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Communication Services**
 - News search: https://www.google.com/search?q=Charter%20Communications
@@ -292,16 +300,8 @@
 **Gilead Sciences** (GILD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **-0.7%**; volatility (20d): **unknown**
+- Returns: 5d **-1.0%**, 20d **-0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Gilead%20Sciences
-
-**Tyler Technologies** (TYL)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.2%**, 20d **-2.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Information Technology**
-- News search: https://www.google.com/search?q=Tyler%20Technologies
 
