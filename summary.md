@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-06T17:42:22+09:00 (KST)**
+- Generated: **2026-08-06T23:08:25+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -57,14 +57,6 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%94%EC%BC%90
 
-**이녹스첨단소재** (272290.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **20.1%**, 20d **-0.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%9D%B4%EB%85%B9%EC%8A%A4%EC%B2%A8%EB%8B%A8%EC%86%8C%EC%9E%AC
-
 **정보기술** (181710.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -89,23 +81,31 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
 
+**휴젤** (145020.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **24.3%**, 20d **16.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%ED%9C%B4%EC%A0%A4
+
 ## KOSPI
 
 ### SAFE (5)
 
-**HD현대일렉트릭** (267260.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **30.5%**, 20d **-6.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A6%AD
-
 **LG에너지솔루션** (373220.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
 - Returns: 5d **7.8%**, 20d **9.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98
+
+**LG화학** (051910.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **6.3%**, 20d **2.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
 **SK하이닉스** (000660.KS)
 
@@ -123,7 +123,7 @@
 
 **셀트리온** (068270.KS)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
 - Returns: 5d **2.6%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
@@ -167,7 +167,7 @@
 
 ## NASDAQ 100
 
-### SAFE (4)
+### SAFE (5)
 
 **Amazon** (AMZN)
 
@@ -200,6 +200,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Microsoft
+
+**Nvidia** (NVDA)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.5%**, 20d **1.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Technology**
+- News search: https://www.google.com/search?q=Nvidia
 
 ### AGGRESSIVE (3)
 
