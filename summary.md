@@ -1,11 +1,19 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-08T15:51:44+09:00 (KST)**
+- Generated: **2026-08-08T21:47:36+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
+
+**3S** (060310.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **7.4%**, 20d **-5.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=3S
 
 **CJ ENM** (035760.KQ)
 
@@ -22,14 +30,6 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%83%81%EC%83%81%EC%9D%B8
-
-**성일하이텍** (365340.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.4%**, 20d **-4.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%84%B1%EC%9D%BC%ED%95%98%EC%9D%B4%ED%85%8D
 
 **오스템임플란트** (048260.KQ)
 
