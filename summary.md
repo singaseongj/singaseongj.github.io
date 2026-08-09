@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-09T15:56:47+09:00 (KST)**
+- Generated: **2026-08-09T21:49:34+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -23,13 +23,13 @@
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%84%9C%EB%B6%80T%26D
 
-**아프리카TV** (067160.KQ)
+**안랩** (053800.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.4%**, 20d **-2.0%**; volatility (20d): **unknown**
+- Returns: 5d **10.8%**, 20d **9.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **커뮤니케이션서비스**
-- News search: https://www.google.com/search?q=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4TV
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%95%88%EB%9E%A9
 
 **에코프로비엠** (247540.KQ)
 
