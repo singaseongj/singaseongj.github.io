@@ -1,6 +1,35 @@
 {
-  "generatedAtKST": "2026-08-09T21:49:34+09:00",
+  "generatedAtKST": "2026-08-10T03:42:06+09:00",
   "companies": [
+    {
+      "market": "KOSDAQ",
+      "bucket": "safe",
+      "name": "CJ ENM",
+      "ticker": "035760.KQ",
+      "sector": "커뮤니케이션서비스",
+      "metrics": {
+        "ret5": 13.078149920255184,
+        "ret20": 4.1116005873715125,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=CJ%20ENM"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **13.1%**, 20d **4.1%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **커뮤니케이션서비스**",
+        "News search: https://www.google.com/search?q=CJ%20ENM"
+      ]
+    },
     {
       "market": "KOSDAQ",
       "bucket": "safe",
@@ -62,12 +91,12 @@
     {
       "market": "KOSDAQ",
       "bucket": "safe",
-      "name": "안랩",
-      "ticker": "053800.KQ",
-      "sector": "정보기술",
+      "name": "아프리카TV",
+      "ticker": "067160.KQ",
+      "sector": "커뮤니케이션서비스",
       "metrics": {
-        "ret5": 10.754716981132075,
-        "ret20": 9.514925373134329,
+        "ret5": -1.3924050632911391,
+        "ret20": -2.0125786163522013,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -78,14 +107,14 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%95%88%EB%9E%A9"
+        "searchUrl": "https://www.google.com/search?q=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4TV"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **10.8%**, 20d **9.5%**; volatility (20d): **unknown**",
+        "Returns: 5d **-1.4%**, 20d **-2.0%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **정보기술**",
-        "News search: https://www.google.com/search?q=%EC%95%88%EB%9E%A9"
+        "Sector: **커뮤니케이션서비스**",
+        "News search: https://www.google.com/search?q=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4TV"
       ]
     },
     {
@@ -115,35 +144,6 @@
         "Earnings window (±10d): **No**",
         "Sector: **소재**",
         "News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
-      "bucket": "safe",
-      "name": "현대바이오",
-      "ticker": "048410.KQ",
-      "sector": "헬스케어",
-      "metrics": {
-        "ret5": 15.084745762711865,
-        "ret20": -0.43988269794721413,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%94%EC%9D%B4%EC%98%A4"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **15.1%**, 20d **-0.4%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **헬스케어**",
-        "News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EB%B0%94%EC%9D%B4%EC%98%A4"
       ]
     },
     {
@@ -294,6 +294,34 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
+      "name": "LG에너지솔루션",
+      "ticker": "373220.KS",
+      "sector": null,
+      "metrics": {
+        "ret5": 9.75609756097561,
+        "ret20": 14.832535885167463,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.050000000000000024,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98"
+      },
+      "bullets": [
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
+        "Returns: 5d **9.8%**, 20d **14.8%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
       "name": "LG화학",
       "ticker": "051910.KS",
       "sector": null,
@@ -350,34 +378,6 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "롯데케미칼",
-      "ticker": "011170.KS",
-      "sector": null,
-      "metrics": {
-        "ret5": 7.964601769911504,
-        "ret20": -0.48939641109298526,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 20,
-        "blogs": 10,
-        "sentiment": 0.5000000000000001,
-        "momentum": "very high"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%BC%80%EB%AF%B8%EC%B9%BC"
-      },
-      "bullets": [
-        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.50)**",
-        "Returns: 5d **8.0%**, 20d **-0.5%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%BC%80%EB%AF%B8%EC%B9%BC"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
       "name": "삼성전자",
       "ticker": "005930.KS",
       "sector": null,
@@ -406,29 +406,29 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "한화솔루션",
-      "ticker": "009830.KS",
+      "name": "셀트리온",
+      "ticker": "068270.KS",
       "sector": null,
       "metrics": {
-        "ret5": 28.627450980392155,
-        "ret20": 6.493506493506493,
+        "ret5": 6.748794858061061,
+        "ret20": 15.135759676487579,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
         "count": 20,
         "blogs": 10,
-        "sentiment": 0.15000000000000002,
+        "sentiment": 0.10000000000000002,
         "momentum": "very high"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%86%94%EB%A3%A8%EC%85%98"
+        "searchUrl": "https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8"
       },
       "bullets": [
-        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**",
-        "Returns: 5d **28.6%**, 20d **6.5%**; volatility (20d): **unknown**",
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**",
+        "Returns: 5d **6.7%**, 20d **15.1%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=%ED%95%9C%ED%99%94%EC%86%94%EB%A3%A8%EC%85%98"
+        "News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8"
       ]
     },
     {
@@ -462,12 +462,12 @@
     {
       "market": "KOSPI",
       "bucket": "aggressive",
-      "name": "넷마블",
-      "ticker": "251270.KS",
+      "name": "아모레퍼시픽",
+      "ticker": "090430.KS",
       "sector": null,
       "metrics": {
-        "ret5": 6.7885117493472595,
-        "ret20": 6.928104575163399,
+        "ret5": 7.230769230769231,
+        "ret20": 19.862424763542563,
         "volBand": "unknown",
         "earningsWindow": false
       },
@@ -478,13 +478,13 @@
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94"
+        "searchUrl": "https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD"
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **6.8%**, 20d **6.9%**; volatility (20d): **unknown**",
+        "Returns: 5d **7.2%**, 20d **19.9%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94"
+        "News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD"
       ]
     },
     {
