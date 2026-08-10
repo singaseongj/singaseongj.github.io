@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-10T16:38:36+09:00 (KST)**
+- Generated: **2026-08-10T22:12:14+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -31,13 +31,13 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%98%A4%EC%8A%A4%ED%85%9C%EC%9E%84%ED%94%8C%EB%9E%80%ED%8A%B8
 
-**이엔에프테크놀로지** (102710.KQ)
+**카페24** (042000.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.1%**, 20d **-9.8%**; volatility (20d): **unknown**
+- Returns: 5d **-3.5%**, 20d **-11.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%9D%B4%EC%97%94%EC%97%90%ED%94%84%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80
+- News search: https://www.google.com/search?q=%EC%B9%B4%ED%8E%9824
 
 **컴투스** (078340.KQ)
 
@@ -100,6 +100,13 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
+**두산** (000150.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.4%**, 20d **-10.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
+
 **삼성전자** (005930.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
@@ -120,13 +127,6 @@
 - Returns: 5d **6.3%**, 20d **11.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4
-
-**한샘** (009240.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-10.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
 
 ### AGGRESSIVE (5)
 
