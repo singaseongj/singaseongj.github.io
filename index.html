@@ -73,6 +73,11 @@
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; font-weight: 500; }
         .nav-links a:hover { color: var(--primary-color); }
+        .nav-links .guestbook-link {
+            background: var(--gradient-primary); color: #ffffff; padding: 0.5rem 1rem;
+            border-radius: 999px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+        }
+        .nav-links .guestbook-link:hover { color: #ffffff; box-shadow: 0 6px 16px rgba(124, 58, 237, 0.3); }
 
         /* Hero Section */
         header { margin-top: 80px; padding: 100px 0 80px; text-align: center; position: relative; }
@@ -231,6 +236,7 @@
             <div class="logo">Singaseong Apps</div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
+                <li><a href="https://singaseong.uk/visitors" class="guestbook-link">📋 방명록</a></li>
             </ul>
         </div>
     </nav>
@@ -280,9 +286,6 @@
                 </a>
                 <a href="/singaseongjumps/" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
                     🐔 Singaseong Jumps
-                </a>
-                <a href="https://singaseong.uk/visitors" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
-                    📋 방명록
                 </a>
             </div>
 
