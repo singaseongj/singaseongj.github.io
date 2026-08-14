@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-14T16:25:49+09:00 (KST)**
+- Generated: **2026-08-14T22:04:49+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -42,7 +42,7 @@
 **펄어비스** (263750.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-12.2%**, 20d **-8.5%**; volatility (20d): **unknown**
+- Returns: 5d **6.3%**, 20d **-13.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **커뮤니케이션서비스**
 - News search: https://www.google.com/search?q=%ED%8E%84%EC%96%B4%EB%B9%84%EC%8A%A4
@@ -144,12 +144,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=KB%EA%B8%88%EC%9C%B5
 
-**메리츠금융지주** (138040.KS)
+**미스토홀딩스** (081660.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.6%**, 20d **-1.4%**; volatility (20d): **unknown**
+- Returns: 5d **3.3%**, 20d **-11.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%A9%94%EB%A6%AC%EC%B8%A0%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
+- News search: https://www.google.com/search?q=%EB%AF%B8%EC%8A%A4%ED%86%A0%ED%99%80%EB%94%A9%EC%8A%A4
 
 **한화생명** (088350.KS)
 
