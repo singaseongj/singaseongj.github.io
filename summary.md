@@ -1,11 +1,19 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-15T15:37:58+09:00 (KST)**
+- Generated: **2026-08-15T21:43:50+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
+
+**HLB생명과학** (067630.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **26.4%**, 20d **32.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=HLB%EC%83%9D%EB%AA%85%EA%B3%BC%ED%95%99
 
 **넥슨게임즈** (225570.KQ)
 
@@ -18,18 +26,10 @@
 **서부T&D** (006730.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.2%**, 20d **7.3%**; volatility (20d): **unknown**
+- Returns: 5d **-9.1%**, 20d **2.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **산업재**
 - News search: https://www.google.com/search?q=%EC%84%9C%EB%B6%80T%26D
-
-**에코프로비엠** (247540.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **9.1%**, 20d **3.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0
 
 **정보기술** (181710.KQ)
 
@@ -49,13 +49,13 @@
 
 ### AGGRESSIVE (5)
 
-**가온칩스** (399720.KQ)
+**브이원텍** (251630.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **8.6%**, 20d **-3.0%**; volatility (20d): **unknown**
+- Returns: 5d **12.5%**, 20d **8.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EA%B0%80%EC%98%A8%EC%B9%A9%EC%8A%A4
+- News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D
 
 **성일하이텍** (365340.KQ)
 
@@ -64,14 +64,6 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%84%B1%EC%9D%BC%ED%95%98%EC%9D%B4%ED%85%8D
-
-**원텍** (336570.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.5%**, 20d **-0.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EC%9B%90%ED%85%8D
 
 **정보기술** (403870.KQ)
 
@@ -89,23 +81,38 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
 
+**휴메딕스** (200670.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.8%**, 20d **4.8%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
+
 ## KOSPI
 
 ### SAFE (5)
 
+**SK** (034730.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-10.1%**, 20d **-17.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=SK
+
 **SK하이닉스** (000660.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **15.7%**, 20d **-10.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
-**삼성전자** (005930.KS)
+**두산** (000150.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
-- Returns: 5d **18.8%**, 20d **7.6%**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **7.1%**, 20d **6.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
+- News search: https://www.google.com/search?q=%EB%91%90%EC%82%B0
 
 **삼양식품** (003230.KS)
 
@@ -116,17 +123,10 @@
 
 **유한양행** (000100.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.20)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **3.8%**, 20d **18.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89
-
-**하이트진로** (000080.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-0.8%**, 20d **6.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
 
 ### AGGRESSIVE (5)
 
@@ -242,7 +242,7 @@
 **Broadcom** (AVGO)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.1%**, 20d **6.0%**; volatility (20d): **unknown**
+- Returns: 5d **3.1%**, 20d **-0.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Broadcom
