@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-08-22T21:44:38+09:00 (KST)**
+- Generated: **2026-08-23T03:36:32+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,13 +93,6 @@
 
 ### SAFE (5)
 
-**LG화학** (051910.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-8.3%**, 20d **-7.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
-
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.10)**
@@ -120,6 +113,13 @@
 - Returns: 5d **-4.8%**, 20d **11.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
+
+**유한양행** (000100.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.2%**, 20d **15.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89
 
 **카카오** (035720.KS)
 
