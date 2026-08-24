@@ -66,18 +66,14 @@
             max-width: 1200px; margin: 0 auto; padding: 0 2rem;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .logo {
+        .logo, .nav-links .guestbook-link {
             font-size: 1.5rem; font-weight: 700; background: var(--gradient-primary);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; font-weight: 500; }
         .nav-links a:hover { color: var(--primary-color); }
-        .nav-links .guestbook-link {
-            background: var(--gradient-primary); color: #ffffff; padding: 0.5rem 1rem;
-            border-radius: 999px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
-        }
-        .nav-links .guestbook-link:hover { color: #ffffff; box-shadow: 0 6px 16px rgba(124, 58, 237, 0.3); }
+        .nav-links .guestbook-link:hover { opacity: 0.8; }
 
         /* Hero Section */
         header { margin-top: 80px; padding: 100px 0 80px; text-align: center; position: relative; }
@@ -233,11 +229,9 @@
     <nav>
         <div class="nav-container">
             <div class="logo">Singaseong Apps</div>
-            <!--임시 삭제
             <ul class="nav-links">
                 <li><a href="https://singaseong.uk/visitors" class="guestbook-link">방명록</a></li>
             </ul>
-            -->
         </div>
     </nav>
     <header>
