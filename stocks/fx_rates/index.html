@@ -521,7 +521,23 @@
       }
       const d = new Date(t);
       if (Number.isNaN(d.getTime())) return null;
-      return { t: d.toISOString(), v: Number(p.v) };
+      const value = Number(p.v);
+      if (!Number.isFinite(value)) return null;
+      return { t: d.toISOString(), v: value };
+    }
+
+    function restorePreviousNonZeroPrice(points) {
+      let previousNonZero = null;
+      const restored = [];
+      for (const point of points) {
+        if (point.v !== 0) {
+          previousNonZero = point.v;
+          restored.push(point);
+        } else if (previousNonZero !== null) {
+          restored.push({ ...point, v: previousNonZero });
+        }
+      }
+      return restored;
     }
 
     function filterByRange(points, range) {
@@ -969,8 +985,10 @@
               deduped.push(point);
             }
           }
-          combined[key] = deduped;
-          console.log(`${key} 데이터 포인트 수:`, deduped.length);
+          // A zero price is invalid. Keep the timestamp but carry forward the
+          // most recent valid price so charts and tooltips can never show zero.
+          combined[key] = restorePreviousNonZeroPrice(deduped);
+          console.log(`${key} 데이터 포인트 수:`, combined[key].length);
         }
 
         const loadedYears = [];
