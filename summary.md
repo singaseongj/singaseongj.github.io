@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-09-25T01:35:33+09:00 (KST)**
+- Generated: **2026-09-25T06:13:24+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -39,13 +39,13 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%9C%A0%EC%A7%84%ED%85%8C%ED%81%AC
 
-**카페24** (042000.KQ)
+**테크윙** (089030.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **17.0%**, 20d **6.7%**; volatility (20d): **unknown**
+- Returns: 5d **7.8%**, 20d **-0.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
-- News search: https://www.google.com/search?q=%EC%B9%B4%ED%8E%9824
+- News search: https://www.google.com/search?q=%ED%85%8C%ED%81%AC%EC%9C%99
 
 ### AGGRESSIVE (5)
 
@@ -177,13 +177,13 @@
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Amazon
 
-**Apple Inc.** (AAPL)
+**Broadcom** (AVGO)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
+- Returns: 5d **3.1%**, 20d **-0.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Apple%20Inc.
+- News search: https://www.google.com/search?q=Broadcom
 
 **Meta Platforms** (META)
 
@@ -247,13 +247,13 @@
 - Sector: **Consumer Discretionary**
 - News search: https://www.google.com/search?q=Amazon
 
-**Apple Inc.** (AAPL)
+**Broadcom** (AVGO)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
+- Returns: 5d **3.1%**, 20d **-0.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
-- News search: https://www.google.com/search?q=Apple%20Inc.
+- News search: https://www.google.com/search?q=Broadcom
 
 **Meta Platforms** (META)
 
@@ -289,6 +289,14 @@
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Cboe%20Global%20Markets
 
+**Hilton Worldwide** (HLT)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.2%**, 20d **-6.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Hilton%20Worldwide
+
 **Home Depot (The)** (HD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -300,23 +308,15 @@
 **Rockwell Automation** (ROK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.4%**, 20d **0.1%**; volatility (20d): **unknown**
+- Returns: 5d **5.6%**, 20d **0.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Rockwell%20Automation
 
-**Verisk Analytics** (VRSK)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.1%**, 20d **-9.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Industrials**
-- News search: https://www.google.com/search?q=Verisk%20Analytics
-
 **Visa Inc.** (V)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-1.2%**, 20d **-4.8%**; volatility (20d): **unknown**
+- Returns: 5d **-0.5%**, 20d **-4.1%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Visa%20Inc.
