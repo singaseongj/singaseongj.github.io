@@ -130,6 +130,10 @@
             text-transform: uppercase; letter-spacing: 1px;
         }
         .game-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4); }
+        .game-btn-icon {
+            width: 2rem; height: 2rem; object-fit: contain; flex: 0 0 auto;
+            filter: drop-shadow(0 2px 2px rgba(30, 27, 75, 0.25));
+        }
 
         #gameCanvas { border-radius: 8px; cursor: pointer; }
 
@@ -281,6 +285,10 @@
                 </a>
                 <a href="/singaseongjumps/" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
                     🐔 Singaseong Jumps
+                </a>
+                <a href="https://singaseong.uk/seek-sonny" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;" aria-label="Play Seek Sonny">
+                    <img src="assets/seek-sonny-icon.svg" class="game-btn-icon" alt="" aria-hidden="true">
+                    Seek Sonny
                 </a>
                 <!--임시 삭제
                 <a href="https://singaseong.uk/visitors" class="game-btn" style="margin: 0.5rem; text-decoration: none; display: inline-block;">
