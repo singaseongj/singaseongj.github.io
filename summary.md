@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-10-01T21:30:06+09:00 (KST)**
+- Generated: **2026-10-02T07:25:20+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -250,7 +250,7 @@
 **JPMorgan Chase** (JPM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.0%**, 20d **-6.8%**; volatility (20d): **unknown**
+- Returns: 5d **-1.6%**, 20d **-6.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financials**
 - News search: https://www.google.com/search?q=JPMorgan%20Chase
@@ -258,7 +258,7 @@
 **Microsoft** (MSFT)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.5%**, 20d **2.4%**; volatility (20d): **unknown**
+- Returns: 5d **3.0%**, 20d **3.2%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Microsoft
@@ -266,7 +266,7 @@
 **Nvidia** (NVDA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.3%**, 20d **5.0%**; volatility (20d): **unknown**
+- Returns: 5d **2.8%**, 20d **2.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
@@ -289,11 +289,11 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Fair%20Isaac
 
-**Wells Fargo** (WFC)
+**Mastercard** (MA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.3%**, 20d **-8.0%**; volatility (20d): **unknown**
+- Returns: 5d **-2.8%**, 20d **-6.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financials**
-- News search: https://www.google.com/search?q=Wells%20Fargo
+- Sector: **Financial Services**
+- News search: https://www.google.com/search?q=Mastercard
 
