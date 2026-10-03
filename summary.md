@@ -1,19 +1,11 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-10-03T20:09:46+09:00 (KST)**
+- Generated: **2026-10-04T00:48:17+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
-
-**HLB제약** (047920.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **35.3%**, 20d **35.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=HLB%EC%A0%9C%EC%95%BD
 
 **SFA반도체** (036540.KQ)
 
@@ -39,10 +31,18 @@
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%9D%B4%EC%B9%98%EC%97%98%EB%B9%84
 
+**에코프로비엠** (247540.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **10.2%**, 20d **8.7%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0
+
 **카페24** (042000.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **14.8%**, 20d **29.1%**; volatility (20d): **unknown**
+- Returns: 5d **-3.5%**, 20d **-11.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%B9%B4%ED%8E%9824
@@ -56,6 +56,14 @@
 - Earnings window (±10d): **No**
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%8D%95%EC%82%B0%EB%84%A4%EC%98%A4%EB%A3%A9%EC%8A%A4
+
+**성일하이텍** (365340.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-8.4%**, 20d **-4.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **소재**
+- News search: https://www.google.com/search?q=%EC%84%B1%EC%9D%BC%ED%95%98%EC%9D%B4%ED%85%8D
 
 **씨아이에스** (222080.KQ)
 
@@ -80,14 +88,6 @@
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%BD%94%EB%AF%B8%EC%BD%94
-
-**휴메딕스** (200670.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.0%**, 20d **-0.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
 
 ## KOSPI
 
@@ -167,7 +167,7 @@
 
 ## NASDAQ 100
 
-### SAFE (4)
+### SAFE (5)
 
 **Amazon** (AMZN)
 
@@ -200,6 +200,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
+
+**Tesla, Inc.** (TSLA)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **7.9%**, 20d **9.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Tesla%2C%20Inc.
 
 ### AGGRESSIVE (3)
 
@@ -273,14 +281,6 @@
 
 ### AGGRESSIVE (3)
 
-**Accenture** (ACN)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.8%**, 20d **-6.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Accenture
-
 **Equity Residential** (EQR)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -289,11 +289,19 @@
 - Sector: **Real Estate**
 - News search: https://www.google.com/search?q=Equity%20Residential
 
-**Marsh McLennan** (MRSH)
+**Kimco Realty** (KIM)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.6%**, 20d **-9.8%**; volatility (20d): **unknown**
+- Returns: 5d **-0.9%**, 20d **-7.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financials**
-- News search: https://www.google.com/search?q=Marsh%20McLennan
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=Kimco%20Realty
+
+**Nike, Inc.** (NKE)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-5.3%**, 20d **-12.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Nike%2C%20Inc.
 
