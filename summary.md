@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-10-09T21:38:30+09:00 (KST)**
+- Generated: **2026-10-10T07:19:39+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -100,20 +100,6 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98
 
-**LG화학** (051910.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **14.1%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
-
-**NH투자증권** (005940.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
-- Returns: 5d **4.6%**, 20d **-1.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=NH%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C
-
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
@@ -128,6 +114,20 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
+**유한양행** (000100.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.20)**
+- Returns: 5d **0.4%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89
+
+**하이트진로** (000080.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **0.2%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
+
 ### AGGRESSIVE (5)
 
 **HD현대마린솔루션** (443060.KS)
@@ -137,12 +137,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EB%A7%88%EB%A6%B0%EC%86%94%EB%A3%A8%EC%85%98
 
-**넷마블** (251270.KS)
+**아모레퍼시픽** (090430.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.8%**, 20d **0.5%**; volatility (20d): **unknown**
+- Returns: 5d **-1.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94
+- News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD
 
 **풍산** (103140.KS)
 
@@ -167,7 +167,15 @@
 
 ## NASDAQ 100
 
-### SAFE (4)
+### SAFE (5)
+
+**Amazon** (AMZN)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Amazon
 
 **Apple Inc.** (AAPL)
 
@@ -305,11 +313,11 @@
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Marsh%20McLennan
 
-**Workday, Inc.** (WDAY)
+**Rollins, Inc.** (ROL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **-3.4%**; volatility (20d): **unknown**
+- Returns: 5d **6.0%**, 20d **-7.9%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Workday%2C%20Inc.
+- Sector: **Industrials**
+- News search: https://www.google.com/search?q=Rollins%2C%20Inc.
 
