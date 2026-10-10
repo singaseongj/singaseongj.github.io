@@ -166,3 +166,16 @@ The script responds with JSON containing the `daily` and `total` fields.
 - Add a dark mode toggle for better readability at night
 - Provide filters to sort recommendations by sector
 - Show small charts next to each index for quick visual trends
+
+The stock page shows a Korean keyword cloud. Each word opens the same Korean
+Google News search (or supplied `search.ko` link) in a new tab. The page uses Korean
+without a language selector. `node src/build.js` also writes `keyword.json` from
+`data/tags.json`; `node src/keywordCloud.js` refreshes only that snapshot.
+
+`stock-recs.yml` generates the tags with its existing `GPT_API` secret before
+building and committing `keyword.json` and `stocks.html`. Local builds reuse the
+cached Korean tags and do not need another GPT request. The cloud includes up to
+30 distinct Korean keywords. Sizes use positive weights, scores, or counts when
+available; otherwise they follow source order, rather than claiming measured
+frequencies. Verify snapshot generation and clickable word rendering with
+`node tests/keyword_cloud.test.js`.

@@ -462,6 +462,15 @@ jobs:
           jq -e '.keywords | type == "array" and length > 0' data/tags.json
           jq -e '.discovered_keywords | type == "array" and length > 0' data/tags.json
 
+      # Reuse GPT_API-generated Korean tags; no additional model request is needed.
+      - name: Build Korean keyword cloud and stock page
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          node src/build.js
+          test -s keyword.json
+          jq -e '.language == "ko" and (.keywords | length > 0)' keyword.json
+
       - name: Refresh finance keyword dictionary
         run: |
           set -Eeuo pipefail
@@ -528,6 +537,8 @@ jobs:
             stocks/fx_rates/fx_history*.json
             stocks/fx_rates/index.html
             aiselected.json
+            keyword.json
+            stocks.html
             data/tags.json
             data/keyword_trends.csv
             data/finance_keywords.json

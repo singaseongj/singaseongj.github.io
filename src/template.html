@@ -58,75 +58,31 @@
     margin-bottom: 0.75rem;
     font-size: 1.3rem;
   }
-  .keyword-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 0.5rem;
-  }
-  .keyword-list li {
-    padding: 0.65rem 0.75rem;
-    border-radius: 6px;
-    background: #fff;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  .keyword-cloud {
     display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-  .keyword-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
     flex-wrap: wrap;
-  }
-  .keyword-text {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #2c3e50;
-  }
-  .keyword-actions {
-    display: inline-flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-  }
-  .keyword-btn {
-    display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.25rem 0.65rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    gap: 0.65rem 1rem;
+    padding: 1rem 0;
+    min-height: 180px;
+  }
+  .keyword-word {
+    font-size: var(--word-size);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #0f766e;
     text-decoration: none;
-    color: #fff;
-    background: #2563eb;
-    border: 1px solid #1d4ed8;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    overflow-wrap: anywhere;
+    max-width: 100%;
   }
-  .keyword-btn:hover,
-  .keyword-btn:focus-visible {
-    background: #1e40af;
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
-  }
-  .keyword-btn[data-lang="ko"] {
-    background: #0f766e;
-    border-color: #0f5e55;
-  }
-  .keyword-btn[data-lang="ko"]:hover,
-  .keyword-btn[data-lang="ko"]:focus-visible {
-    background: #0d5f59;
-    box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.25);
-  }
-  .keyword-markets {
-    font-size: 0.85rem;
-    color: #576574;
-  }
-  @media (min-width: 768px) {
-    .keyword-list {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .keyword-word:nth-child(3n + 2) { color: #2563eb; }
+  .keyword-word:nth-child(3n) { color: #7c3aed; }
+  .keyword-word:hover { text-decoration: underline; }
+  .keyword-word:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 3px;
   }
   </style>
 </head>
@@ -134,7 +90,7 @@
   <nav><a href="index.html" aria-label="Home">&#x21A9; Home</a></nav>
   <h1 data-i18n="title">데일리 주식 리포트 자동화</h1>
   <p class="dashboard-link"><a href="stocks/rationale.html">매력점수 계산식</a></p>
-  <p class="dashboard-link"><a data-i18n="dashboardLink" href="stocks/index.html">👉 Stock News Summary Dashboard</a></p>
+  <p class="dashboard-link"><a data-i18n="dashboardLink" href="stocks/index.html">👉 주식 시장 요약 대시보드</a></p>
   <p id="currentDate"><span id="datePrefix" data-i18n="today">오늘:</span> {{CURRENT_DATE}}</p>
   
   <div id="debugInfo" class="debug" style="display: none;">
@@ -167,7 +123,7 @@
     <section id="keywordHighlights" class="keyword-box" aria-labelledby="keywordTitle">
       <h3 id="keywordTitle" data-i18n="keywordTitle">오늘의 키워드</h3>
       <div id="keywordUpdated" class="last-updated"></div>
-      <ul id="keywordList" class="keyword-list"></ul>
+      <div id="keywordCloud" class="keyword-cloud" role="group" aria-label="한국어 뉴스 키워드 워드클라우드"></div>
       <div id="keywordError" class="error" role="alert" style="display:none;"></div>
     </section>
 
@@ -216,56 +172,18 @@
         pickNote: '안전주는 시가총액과 인기도를 반영한 대형주, 공격주는 시가총액을 제외한 키워드와 인기도를 기반으로 한 종목입니다.',
         updated: '업데이트: ',
         visitsToday: '오늘 방문: {daily} | 총 방문: {total}',
-        noPicks: 'No picks available',
+        noPicks: '추천 종목이 없습니다',
         scoreSuffix: '매력점수 / 최근가격 / 1년 전',
         priceNow: '현재가',
         priceYearAgo: '1년 전',
         priceUnavailable: '데이터 없음'
-      },
-      en: {
-        title: 'Daily Stock Report Automation',
-        today: 'Today:',
-        summary: 'This page analyzes KOSPI, KOSDAQ, S&P 500 and NASDAQ 100 markets to provide recommended stocks.',
-        kospiDesc: 'Domestic large-cap stocks',
-        kosdaqDesc: 'High growth potential small and mid-caps',
-        // nyseDesc: 'Index reflecting all NYSE listings', // removed: site no longer covers NYSE
-        spDesc: 'Major U.S. large-cap index',
-        nasdaqDesc: 'Tech-heavy index of 100 non-financial NASDAQ stocks',
-        disclaimer: 'Information on this page is for reference only and accuracy is not guaranteed. Investment decisions are your responsibility.',
-        marketNews: 'Latest Market News',
-        keywordTitle: "Today's Keyword",
-        keywordError: 'Failed to load keywords.',
-        keywordMarkets: 'Markets',
-        portfolioRecs: 'Portfolio Recommendations',
-        aiSelectedTitle: 'AI Selected Trend Recommendations',
-        aiSelectedError: 'Failed to load AI selected recommendations.',
-        dashboardLink: '👉 Stock News Summary Dashboard',
-        refreshing: 'Refreshing...',
-        refreshData: 'Refresh Data',
-        marketDataError: 'Failed to load market data.',
-        newsError: 'Failed to load news.',
-        recsError: 'Failed to load recommendations.',
-        safe: 'Safe Picks',
-        aggressive: 'Aggressive Picks',
-        pickNote: 'Safe Picks emphasise consistent performance and lower volatility; Aggressive Picks highlight higher momentum and volume.',
-        updated: 'Updated: ',
-        visitsToday: 'Visits today: {daily} | Total: {total}',
-        noPicks: 'No picks available',
-        scoreSuffix: 'Attractiveness / Recent / 1y bf price',
-        priceNow: 'Price',
-        priceYearAgo: '1Y Ago',
-        priceUnavailable: 'no data'
       }
     };
 
-    let currentLang = (navigator.language || 'en').startsWith('ko') ? 'ko' : 'en';
+    const currentLang = 'ko';
     let visitData = null;
     let keywordSnapshot = null;
     let keywordLoadFailed = false;
-    let tagKoLookup = null;
-    let tagKoLookupPromise = null;
-    let tagsDataCache = null;
-    let tagsDataPromise = null;
 
     function escapeHtml(str) {
       return String(str || '')
@@ -316,101 +234,6 @@
       return `${nowText} / ${pastText}`;
     }
 
-    function normalizeTermKey(term) {
-      return String(term || '').trim().toLowerCase();
-    }
-
-    function buildTagKoLookup(snapshot) {
-      const map = new Map();
-      if (!snapshot || typeof snapshot !== 'object') {
-        return map;
-      }
-      const add = (en, ko) => {
-        const key = normalizeTermKey(en);
-        const value = String(ko || '').trim();
-        if (!key || !value) return;
-        map.set(key, value);
-      };
-      if (Array.isArray(snapshot.discovered_keywords)) {
-        snapshot.discovered_keywords.forEach(item => {
-          const en = item?.term || '';
-          const ko = item?.term_ko || '';
-          add(en, ko);
-        });
-      }
-      if (Array.isArray(snapshot.keywords)) {
-        snapshot.keywords.forEach(item => {
-          const en = item?.term || '';
-          const ko = item?.term_ko || '';
-          add(en, ko);
-        });
-      }
-      if (snapshot.translations && typeof snapshot.translations === 'object') {
-        for (const [en, value] of Object.entries(snapshot.translations)) {
-          if (!value) continue;
-          if (typeof value === 'string') {
-            add(en, value);
-          } else {
-            add(en, value.ko || value.en || '');
-          }
-        }
-      }
-      return map;
-    }
-
-    async function fetchTagsData() {
-      if (tagsDataCache) return tagsDataCache;
-      if (tagsDataPromise) return tagsDataPromise;
-
-      const cacheBust = Date.now();
-      const candidates = ['data/tags.json', 'tags.json'];
-
-      tagsDataPromise = (async () => {
-        for (const path of candidates) {
-          try {
-            const url = `${path}${path.includes('?') ? '&' : '?'}_=${cacheBust}`;
-            const res = await fetch(url, { cache: 'no-store' });
-            if (!res.ok) throw new Error('HTTP ' + res.status);
-            const data = await res.json();
-            tagsDataCache = data;
-            return data;
-          } catch (err) {
-            console.warn('Failed to load tags data from', path, err);
-          }
-        }
-        throw new Error('Unable to load tags data');
-      })();
-
-      try {
-        return await tagsDataPromise;
-      } finally {
-        tagsDataPromise = null;
-      }
-    }
-
-    function extractKeywordsFromTags(data, limit = 10) {
-      if (!data || typeof data !== 'object') return [];
-      const pool = [];
-      if (Array.isArray(data.keywords)) pool.push(...data.keywords);
-      if (Array.isArray(data.discovered_keywords)) pool.push(...data.discovered_keywords);
-      if (Array.isArray(data.top_keywords)) pool.push(...data.top_keywords);
-
-      const seen = new Set();
-      const result = [];
-      for (const item of pool) {
-        if (!item || typeof item !== 'object') continue;
-        const term = typeof item.term === 'string' ? item.term.trim() : '';
-        const termKo = typeof item.term_ko === 'string' ? item.term_ko.trim() : '';
-        const koKey = termKo ? termKo.toLowerCase() : '';
-        const dedupeKey = normalizeTermKey(term) || koKey;
-        if (!dedupeKey || seen.has(dedupeKey)) continue;
-        seen.add(dedupeKey);
-        result.push({ term, term_ko: termKo });
-        if (result.length >= limit) break;
-      }
-      return result;
-    }
-
     function buildUpdatedLabelsFromTags(data) {
       if (!data || typeof data !== 'object') {
         return { ko: '', en: '' };
@@ -441,45 +264,6 @@
       return { ko: '', en: '' };
     }
 
-    async function loadTagKoLookup() {
-      if (tagKoLookup) return tagKoLookup;
-      if (tagKoLookupPromise) return tagKoLookupPromise;
-      tagKoLookupPromise = fetchTagsData()
-        .then(data => {
-          tagKoLookup = buildTagKoLookup(data);
-          return tagKoLookup;
-        })
-        .catch(err => {
-          console.warn('tags.json load failed', err);
-          tagKoLookup = new Map();
-          return tagKoLookup;
-        })
-        .finally(() => {
-          tagKoLookupPromise = null;
-          renderKeywordBox();
-        });
-      return tagKoLookupPromise;
-    }
-
-    function lookupKoTerm(term) {
-      const key = normalizeTermKey(term);
-      if (!key) return '';
-      if (tagKoLookup && tagKoLookup.has(key)) {
-        return tagKoLookup.get(key);
-      }
-      return '';
-    }
-
-    function getKoTermForEntry(entry) {
-      if (!entry) return '';
-      const direct = typeof entry.term_ko === 'string' ? entry.term_ko.trim() : '';
-      if (direct) return direct;
-      const enSource = typeof entry.term === 'string' ? entry.term.trim() : '';
-      const lookup = lookupKoTerm(enSource);
-      if (lookup) return lookup;
-      return '';
-    }
-
     function buildNewsSearchUrl(term, lang = 'en') {
       const query = String(term || '').trim();
       if (!query) return '';
@@ -489,37 +273,21 @@
       return `https://www.google.com/search?q=${encodeURIComponent(query)}&tbm=nws&hl=${hl}&gl=${gl}&ceid=${encodeURIComponent(ceid)}`;
     }
 
-    function buildKeywordItem(entry, lang) {
-      if (!entry) return '';
-
-      const enTerm = typeof entry?.term === 'string' ? entry.term.trim() : '';
-      const koTerm = String(getKoTermForEntry(entry) || '').trim();
-      const display = lang === 'ko'
-        ? (koTerm || enTerm)
-        : (enTerm || koTerm);
-      const label = escapeHtml(display || '');
-      const koQuery = koTerm || enTerm;
-      const enQuery = enTerm || koTerm;
-      const koUrl = entry?.search?.ko || (koQuery ? buildNewsSearchUrl(koQuery, 'ko') : '');
-      const enUrl = entry?.search?.en || (enQuery ? buildNewsSearchUrl(enQuery, 'en') : '');
-
-      const buttons = [];
-      if (koUrl) {
-        buttons.push(`<a class="keyword-btn" data-lang="ko" href="${escapeHtml(koUrl)}" target="_blank" rel="noopener noreferrer">한국어</a>`);
-      }
-      if (enUrl) {
-        buttons.push(`<a class="keyword-btn" data-lang="en" href="${escapeHtml(enUrl)}" target="_blank" rel="noopener noreferrer">English</a>`);
-      }
-
-      const actionsHtml = buttons.length ? `<div class="keyword-actions">${buttons.join('')}</div>` : '';
-      return `<li><div class="keyword-header"><span class="keyword-text">${label}</span>${actionsHtml}</div></li>`;
-    }
-
-    function buildKeywordListHtml(entries, lang) {
-      if (!Array.isArray(entries) || !entries.length) {
-        return '';
-      }
-      return entries.map(entry => buildKeywordItem(entry, lang)).filter(Boolean).join('');
+    function buildKeywordCloudHtml(entries) {
+      const koreanEntries = entries.filter(entry => /[가-힣]/.test(entry?.term_ko || ''));
+      const weights = koreanEntries.map(entry => Number(entry.weight) > 0 && Number.isFinite(Number(entry.weight)) ? Number(entry.weight) : 1);
+      const min = Math.min(...weights);
+      const max = Math.max(...weights);
+      return koreanEntries.map((entry, index) => {
+        const term = entry.term_ko.trim();
+        const size = max === min ? 1.5 : 1 + 1.4 * (weights[index] - min) / (max - min);
+        let url = buildNewsSearchUrl(term, 'ko');
+        try {
+          const supplied = new URL(entry.search?.ko);
+          if (['https:', 'http:'].includes(supplied.protocol)) url = supplied.href;
+        } catch {}
+        return `<a class="keyword-word" style="--word-size:${size.toFixed(2)}rem" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(term)} 뉴스 검색">${escapeHtml(term)}</a>`;
+      }).join('');
     }
 
     function applyTranslations() {
@@ -692,7 +460,7 @@
   }
 
     function renderKeywordBox() {
-      const listEl = document.getElementById('keywordList');
+      const listEl = document.getElementById('keywordCloud');
       const errorEl = document.getElementById('keywordError');
       const updatedEl = document.getElementById('keywordUpdated');
       if (!listEl || !errorEl) return;
@@ -710,14 +478,14 @@
       }
 
       const keywords = Array.isArray(keywordSnapshot.keywords)
-        ? keywordSnapshot.keywords.slice(0, 10)
+        ? keywordSnapshot.keywords.slice(0, 30)
         : [];
       if (!keywords.length) {
-        listEl.innerHTML = `<li class="empty">${translations[currentLang].keywordError}</li>`;
+        listEl.innerHTML = `<p class="empty">${translations.ko.keywordError}</p>`;
         errorEl.style.display = 'none';
       } else {
-        const items = buildKeywordListHtml(keywords, currentLang);
-        listEl.innerHTML = items || `<li class="empty">${translations[currentLang].keywordError}</li>`;
+        const items = buildKeywordCloudHtml(keywords);
+        listEl.innerHTML = items || `<p class="empty">${translations.ko.keywordError}</p>`;
         errorEl.style.display = 'none';
       }
 
@@ -769,22 +537,20 @@
     async function loadKeywordHighlights() {
       keywordLoadFailed = false;
       try {
-        const tagsData = await fetchTagsData();
-        const keywords = extractKeywordsFromTags(tagsData, 10);
-        if (!keywords.length) throw new Error('No keywords available');
+        const response = await fetch(`keyword.json?_=${Date.now()}`, { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const snapshot = await response.json();
+        const keywords = Array.isArray(snapshot.keywords)
+          ? snapshot.keywords.filter(entry => /[가-힣]/.test(entry?.term_ko || '')) : [];
+        if (!keywords.length) throw new Error('No Korean keywords available');
         keywordSnapshot = {
           keywords,
-          updatedAt: buildUpdatedLabelsFromTags(tagsData)
+          updatedAt: buildUpdatedLabelsFromTags(snapshot)
         };
       } catch (err) {
-        console.warn('Unable to load tags keywords', err);
+        console.warn('Unable to load keyword.json', err);
         keywordSnapshot = null;
         keywordLoadFailed = true;
-      }
-      try {
-        await loadTagKoLookup();
-      } catch (e) {
-        console.warn('Unable to load tag translations', e);
       }
       renderKeywordBox();
     }
@@ -1039,29 +805,7 @@
       updateCurrentDate();
       console.log('📊 데일리 주식 리포트 페이지 로드 완료');
       // 페이지가 초기화되면 자동으로 데이터를 새로 불러옵니다.
-      loadTagKoLookup().catch(() => {});
       refreshAllData();
-
-      document.getElementById('btnKo').addEventListener('click', function() {
-        currentLang = 'ko';
-        applyTranslations();
-        updateCurrentDate();
-        renderNewsUpdated();
-        renderKeywordBox();
-        if (lastRecommendations) render(lastRecommendations);
-        loadAiSelectedRecommendations();
-        updateVisitCounts();
-      });
-      document.getElementById('btnEn').addEventListener('click', function() {
-        currentLang = 'en';
-        applyTranslations();
-        updateCurrentDate();
-        renderNewsUpdated();
-        renderKeywordBox();
-        if (lastRecommendations) render(lastRecommendations);
-        loadAiSelectedRecommendations();
-        updateVisitCounts();
-      });
 
       // 에러 발생 시 표시할 수 있는 기능
       window.addEventListener('error', function(e) {
@@ -1099,10 +843,6 @@
       }
     });
   </script>
-  <div id="languageToggle" style="text-align:center;margin-top:20px;">
-    <button id="btnKo">한국어</button> |
-    <button id="btnEn">English</button>
-  </div>
   <div id="visitCounts" style="text-align:center;margin-top:20px;font-size:0.8rem;color:#64748b;"></div>
   <!-- FX ticker (below view count) -->
   <div id="fx-ticker" class="fx-ticker">
