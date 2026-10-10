@@ -1,5 +1,6 @@
 // src/build.js
 import fs from 'fs/promises';
+import { writeKeywordSnapshot } from './keywordCloud.js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -18,6 +19,7 @@ function fail(msg, err){
 
 async function main(){
   log('Start build');
+  await writeKeywordSnapshot(ROOT);
 
   const tpl = await fs.readFile(TEMPLATE, 'utf8').catch(e=>fail(`Cannot read template: ${TEMPLATE}`, e));
 
