@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-10-17T19:12:12+09:00 (KST)**
+- Generated: **2026-10-18T00:01:56+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,12 +93,26 @@
 
 ### SAFE (5)
 
+**LG이노텍** (011070.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- Returns: 5d **-28.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=LG%EC%9D%B4%EB%85%B8%ED%85%8D
+
 **SK하이닉스** (000660.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-24.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
+
+**롯데케미칼** (011170.KS)
+
+- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.40)**
+- Returns: 5d **1.3%**, 20d **-4.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%BC%80%EB%AF%B8%EC%B9%BC
 
 **삼성전자** (005930.KS)
 
@@ -107,26 +121,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
-**셀트리온** (068270.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **8.0%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
-
 **유한양행** (000100.KS)
 
 - News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.20)**
 - Returns: 5d **10.0%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%9C%A0%ED%95%9C%EC%96%91%ED%96%89
-
-**하이트진로** (000080.KS)
-
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **6.1%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
 
 ### AGGRESSIVE (5)
 
@@ -151,12 +151,12 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%AF%B8%EC%9B%90%EC%97%90%EC%8A%A4%EC%94%A8
 
-**코스맥스** (192820.KS)
+**한진칼** (180640.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-3.6%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-10.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%EB%A7%A5%EC%8A%A4
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%A7%84%EC%B9%BC
 
 **현대오토에버** (307950.KS)
 
@@ -234,7 +234,7 @@
 **Apple Inc.** (AAPL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.0%**, 20d **2.2%**; volatility (20d): **unknown**
+- Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Apple%20Inc.
@@ -281,6 +281,14 @@
 - Sector: **Materials**
 - News search: https://www.google.com/search?q=Amcor%20plc%20Ordinary%20Shares
 
+**American Tower** (AMT)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-3.0%**, 20d **-2.6%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Real Estate**
+- News search: https://www.google.com/search?q=American%20Tower
+
 **Jabil Inc. Common Stock** (JBL)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -296,12 +304,4 @@
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Marsh%20McLennan
-
-**Vici Properties** (VICI)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.1%**, 20d **-0.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Real Estate**
-- News search: https://www.google.com/search?q=Vici%20Properties
 
