@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026-10-20T12:26:15+09:00",
+  "generatedAtKST": "2026-10-20T20:00:11+09:00",
   "companies": [
     {
       "market": "KOSDAQ",
@@ -149,35 +149,6 @@
     {
       "market": "KOSDAQ",
       "bucket": "aggressive",
-      "name": "네이처셀",
-      "ticker": "007390.KQ",
-      "sector": "헬스케어",
-      "metrics": {
-        "ret5": 0.2136752136752137,
-        "ret20": null,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EB%84%A4%EC%9D%B4%EC%B2%98%EC%85%80"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.2%**, 20d **n/a**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **헬스케어**",
-        "News search: https://www.google.com/search?q=%EB%84%A4%EC%9D%B4%EC%B2%98%EC%85%80"
-      ]
-    },
-    {
-      "market": "KOSDAQ",
-      "bucket": "aggressive",
       "name": "덕산네오룩스",
       "ticker": "213420.KQ",
       "sector": "소재",
@@ -202,6 +173,35 @@
         "Earnings window (±10d): **No**",
         "Sector: **소재**",
         "News search: https://www.google.com/search?q=%EB%8D%95%EC%82%B0%EB%84%A4%EC%98%A4%EB%A3%A9%EC%8A%A4"
+      ]
+    },
+    {
+      "market": "KOSDAQ",
+      "bucket": "aggressive",
+      "name": "브이원텍",
+      "ticker": "251630.KQ",
+      "sector": "정보기술",
+      "metrics": {
+        "ret5": 12.474437627811861,
+        "ret20": 8.267716535433072,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **12.5%**, 20d **8.3%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **정보기술**",
+        "News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D"
       ]
     },
     {
@@ -294,57 +294,29 @@
     {
       "market": "KOSPI",
       "bucket": "safe",
-      "name": "DN오토모티브",
-      "ticker": "007340.KS",
+      "name": "LG에너지솔루션",
+      "ticker": "373220.KS",
       "sector": null,
       "metrics": {
-        "ret5": -2.6548672566371683,
+        "ret5": 0.975609756097561,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.050000000000000024,
+        "momentum": "very high"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=DN%EC%98%A4%ED%86%A0%EB%AA%A8%ED%8B%B0%EB%B8%8C"
+        "searchUrl": "https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98"
       },
       "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-2.7%**, 20d **n/a**; volatility (20d): **unknown**",
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**",
+        "Returns: 5d **1.0%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=DN%EC%98%A4%ED%86%A0%EB%AA%A8%ED%8B%B0%EB%B8%8C"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "safe",
-      "name": "LG화학",
-      "ticker": "051910.KS",
-      "sector": null,
-      "metrics": {
-        "ret5": -0.9541984732824428,
-        "ret20": null,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=LG%ED%99%94%ED%95%99"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-1.0%**, 20d **n/a**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99"
+        "News search: https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98"
       ]
     },
     {
@@ -354,23 +326,23 @@
       "ticker": "000660.KS",
       "sector": null,
       "metrics": {
-        "ret5": -14.067914067914067,
+        "ret5": -15.246015246015245,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
+        "count": 20,
+        "blogs": 10,
+        "sentiment": -0.05,
+        "momentum": "very high"
       },
       "links": {
         "searchUrl": "https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4"
       },
       "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-14.1%**, 20d **n/a**; volatility (20d): **unknown**",
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**",
+        "Returns: 5d **-15.2%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4"
       ]
@@ -388,16 +360,16 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.4000000000000001,
+        "momentum": "very high"
       },
       "links": {
         "searchUrl": "https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%A6%9D%EA%B6%8C"
       },
       "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **positive (+0.40)**",
         "Returns: 5d **6.7%**, 20d **-0.1%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%EB%AF%B8%EB%9E%98%EC%97%90%EC%85%8B%EC%A6%9D%EA%B6%8C"
@@ -410,25 +382,53 @@
       "ticker": "005930.KS",
       "sector": null,
       "metrics": {
-        "ret5": -7.219827586206897,
+        "ret5": -8.836206896551724,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 0,
-        "blogs": 0,
+        "count": 20,
+        "blogs": 10,
         "sentiment": 0,
-        "momentum": "none"
+        "momentum": "very high"
       },
       "links": {
         "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90"
       },
       "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-7.2%**, 20d **n/a**; volatility (20d): **unknown**",
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-8.8%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "safe",
+      "name": "셀트리온",
+      "ticker": "068270.KS",
+      "sector": null,
+      "metrics": {
+        "ret5": 9.84974958263773,
+        "ret20": null,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 20,
+        "blogs": 10,
+        "sentiment": 0.15000000000000002,
+        "momentum": "very high"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8"
+      },
+      "bullets": [
+        "News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**",
+        "Returns: 5d **9.8%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8"
       ]
     },
     {
@@ -438,7 +438,7 @@
       "ticker": "097950.KS",
       "sector": null,
       "metrics": {
-        "ret5": 0.8205689277899343,
+        "ret5": 1.2582056892778994,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
@@ -454,7 +454,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **0.8%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **1.3%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=CJ%EC%A0%9C%EC%9D%BC%EC%A0%9C%EB%8B%B9"
       ]
@@ -466,7 +466,7 @@
       "ticker": "375500.KS",
       "sector": null,
       "metrics": {
-        "ret5": -7.827476038338658,
+        "ret5": -8.466453674121405,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
@@ -482,9 +482,37 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-7.8%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-8.5%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=DL%EC%9D%B4%EC%95%A4%EC%94%A8"
+      ]
+    },
+    {
+      "market": "KOSPI",
+      "bucket": "aggressive",
+      "name": "삼성바이오로직스",
+      "ticker": "207940.KS",
+      "sector": null,
+      "metrics": {
+        "ret5": -2.815533980582524,
+        "ret20": -6.185567010309279,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EB%B0%94%EC%9D%B4%EC%98%A4%EB%A1%9C%EC%A7%81%EC%8A%A4"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-2.8%**, 20d **-6.2%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EB%B0%94%EC%9D%B4%EC%98%A4%EB%A1%9C%EC%A7%81%EC%8A%A4"
       ]
     },
     {
@@ -494,7 +522,7 @@
       "ticker": "450080.KS",
       "sector": null,
       "metrics": {
-        "ret5": 1.0218978102189782,
+        "ret5": -2.335766423357664,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
@@ -510,37 +538,9 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.0%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **-2.3%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%A8%B8%ED%8B%B0"
-      ]
-    },
-    {
-      "market": "KOSPI",
-      "bucket": "aggressive",
-      "name": "오리온",
-      "ticker": "271560.KS",
-      "sector": null,
-      "metrics": {
-        "ret5": 4.507042253521127,
-        "ret20": null,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
-        "count": 0,
-        "blogs": 0,
-        "sentiment": 0,
-        "momentum": "none"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8"
-      },
-      "bullets": [
-        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **4.5%**, 20d **n/a**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "News search: https://www.google.com/search?q=%EC%98%A4%EB%A6%AC%EC%98%A8"
       ]
     },
     {
@@ -550,7 +550,7 @@
       "ticker": "185750.KS",
       "sector": null,
       "metrics": {
-        "ret5": 1.669195751138088,
+        "ret5": 1.5174506828528074,
         "ret20": null,
         "volBand": "unknown",
         "earningsWindow": false
@@ -566,7 +566,7 @@
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **1.7%**, 20d **n/a**; volatility (20d): **unknown**",
+        "Returns: 5d **1.5%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9"
       ]
@@ -584,16 +584,16 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 6,
-        "blogs": 10,
-        "sentiment": -0.3333333333333333,
-        "momentum": "medium"
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
       },
       "links": {
         "searchUrl": "https://www.google.com/search?q=Apple%20Inc."
       },
       "bullets": [
-        "News (7d): **6** (blogs: 10) — momentum: **medium**, sentiment: **negative (-0.33)**",
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
         "Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
         "Sector: **Technology**",
@@ -787,49 +787,20 @@
         "earningsWindow": false
       },
       "news": {
-        "count": 6,
-        "blogs": 10,
-        "sentiment": -0.3333333333333333,
-        "momentum": "medium"
-      },
-      "links": {
-        "searchUrl": "https://www.google.com/search?q=Apple%20Inc."
-      },
-      "bullets": [
-        "News (7d): **6** (blogs: 10) — momentum: **medium**, sentiment: **negative (-0.33)**",
-        "Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**",
-        "Earnings window (±10d): **No**",
-        "Sector: **Technology**",
-        "News search: https://www.google.com/search?q=Apple%20Inc."
-      ]
-    },
-    {
-      "market": "S&P 500",
-      "bucket": "safe",
-      "name": "Costco",
-      "ticker": "COST",
-      "sector": "Consumer Staples",
-      "metrics": {
-        "ret5": -4.529594443951793,
-        "ret20": 2.3730212648795854,
-        "volBand": "unknown",
-        "earningsWindow": false
-      },
-      "news": {
         "count": 0,
         "blogs": 0,
         "sentiment": 0,
         "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Costco"
+        "searchUrl": "https://www.google.com/search?q=Apple%20Inc."
       },
       "bullets": [
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
-        "Returns: 5d **-4.5%**, 20d **2.4%**; volatility (20d): **unknown**",
+        "Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Consumer Staples**",
-        "News search: https://www.google.com/search?q=Costco"
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=Apple%20Inc."
       ]
     },
     {
@@ -864,6 +835,35 @@
     {
       "market": "S&P 500",
       "bucket": "safe",
+      "name": "Microsoft",
+      "ticker": "MSFT",
+      "sector": "Technology",
+      "metrics": {
+        "ret5": 0.20169046334134172,
+        "ret20": -1.266464056519003,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Microsoft"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **0.2%**, 20d **-1.3%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Technology**",
+        "News search: https://www.google.com/search?q=Microsoft"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "safe",
       "name": "Nvidia",
       "ticker": "NVDA",
       "sector": "Technology",
@@ -892,31 +892,89 @@
     },
     {
       "market": "S&P 500",
-      "bucket": "aggressive",
-      "name": "Accenture",
-      "ticker": "ACN",
-      "sector": "Technology",
+      "bucket": "safe",
+      "name": "Tesla, Inc.",
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
       "metrics": {
-        "ret5": 0.8116024468384813,
-        "ret20": -6.160585723654197,
+        "ret5": 7.9345516181901345,
+        "ret20": 9.578735186841246,
         "volBand": "unknown",
         "earningsWindow": false
       },
       "news": {
-        "count": 2,
-        "blogs": 10,
-        "sentiment": 0.5,
-        "momentum": "low"
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
       },
       "links": {
-        "searchUrl": "https://www.google.com/search?q=Accenture"
+        "searchUrl": "https://www.google.com/search?q=Tesla%2C%20Inc."
       },
       "bullets": [
-        "News (7d): **2** (blogs: 10) — momentum: **low**, sentiment: **positive (+0.50)**",
-        "Returns: 5d **0.8%**, 20d **-6.2%**; volatility (20d): **unknown**",
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **7.9%**, 20d **9.6%**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Technology**",
-        "News search: https://www.google.com/search?q=Accenture"
+        "Sector: **Consumer Discretionary**",
+        "News search: https://www.google.com/search?q=Tesla%2C%20Inc."
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Costco",
+      "ticker": "COST",
+      "sector": "Consumer Staples",
+      "metrics": {
+        "ret5": -4.529594443951793,
+        "ret20": 2.3730212648795854,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Costco"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-4.5%**, 20d **2.4%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Consumer Staples**",
+        "News search: https://www.google.com/search?q=Costco"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Danaher Corporation",
+      "ticker": "DHR",
+      "sector": "Healthcare",
+      "metrics": {
+        "ret5": -3.027433340238525,
+        "ret20": 0.4951196037247931,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Danaher%20Corporation"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **-3.0%**, 20d **0.5%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Healthcare**",
+        "News search: https://www.google.com/search?q=Danaher%20Corporation"
       ]
     },
     {
@@ -953,7 +1011,7 @@
       "bucket": "aggressive",
       "name": "Marsh McLennan",
       "ticker": "MRSH",
-      "sector": "Financials",
+      "sector": "Financial Services",
       "metrics": {
         "ret5": 0.8282517343636454,
         "ret20": null,
@@ -973,8 +1031,37 @@
         "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
         "Returns: 5d **0.8%**, 20d **n/a**; volatility (20d): **unknown**",
         "Earnings window (±10d): **No**",
-        "Sector: **Financials**",
+        "Sector: **Financial Services**",
         "News search: https://www.google.com/search?q=Marsh%20McLennan"
+      ]
+    },
+    {
+      "market": "S&P 500",
+      "bucket": "aggressive",
+      "name": "Ventas",
+      "ticker": "VTR",
+      "sector": "Real Estate",
+      "metrics": {
+        "ret5": 1.161121869850056,
+        "ret20": -2.8955494408967812,
+        "volBand": "unknown",
+        "earningsWindow": false
+      },
+      "news": {
+        "count": 0,
+        "blogs": 0,
+        "sentiment": 0,
+        "momentum": "none"
+      },
+      "links": {
+        "searchUrl": "https://www.google.com/search?q=Ventas"
+      },
+      "bullets": [
+        "News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**",
+        "Returns: 5d **1.2%**, 20d **-2.9%**; volatility (20d): **unknown**",
+        "Earnings window (±10d): **No**",
+        "Sector: **Real Estate**",
+        "News search: https://www.google.com/search?q=Ventas"
       ]
     }
   ]
