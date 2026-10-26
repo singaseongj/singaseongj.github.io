@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-10-26T05:28:00+09:00 (KST)**
+- Generated: **2026-10-26T12:15:00+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -93,40 +93,40 @@
 
 ### SAFE (5)
 
-**LG에너지솔루션** (373220.KS)
+**LG화학** (051910.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **-5.0%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-18.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98
+- News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.4%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-0.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
-**대한항공** (003490.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.4%**, 20d **-0.6%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
-
 **삼성전자** (005930.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
-- Returns: 5d **0.0%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-2.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
-**셀트리온** (068270.KS)
+**카카오** (035720.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.15)**
-- Returns: 5d **0.2%**, 20d **n/a**; volatility (20d): **unknown**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-8.3%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
+- News search: https://www.google.com/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4
+
+**한샘** (009240.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **0.8%**, 20d **-10.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%95%9C%EC%83%98
 
 ### AGGRESSIVE (5)
 
@@ -144,24 +144,24 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EB%84%B7%EB%A7%88%EB%B8%94
 
-**롯데웰푸드** (280360.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.1%**, 20d **n/a**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%A1%AF%EB%8D%B0%EC%9B%B0%ED%91%B8%EB%93%9C
-
 **종근당** (185750.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-2.6%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-6.8%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
+
+**현대글로비스** (086280.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **9.0%**, 20d **25.0%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EA%B8%80%EB%A1%9C%EB%B9%84%EC%8A%A4
 
 **현대오토에버** (307950.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.9%**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **-13.5%**, 20d **n/a**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%ED%98%84%EB%8C%80%EC%98%A4%ED%86%A0%EC%97%90%EB%B2%84
 
@@ -171,19 +171,19 @@
 
 **Apple Inc.** (AAPL)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- News (7d): **6** (blogs: 10) — momentum: **medium**, sentiment: **negative (-0.33)**
 - Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Apple%20Inc.
 
-**Meta Platforms** (META)
+**Costco** (COST)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.0%**, 20d **7.5%**; volatility (20d): **unknown**
+- Returns: 5d **-4.5%**, 20d **2.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Meta%20Platforms
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Costco
 
 **Microsoft** (MSFT)
 
@@ -201,7 +201,7 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
 
-### AGGRESSIVE (3)
+### AGGRESSIVE (4)
 
 **Gilead Sciences** (GILD)
 
@@ -210,6 +210,14 @@
 - Earnings window (±10d): **No**
 - Sector: **Healthcare**
 - News search: https://www.google.com/search?q=Gilead%20Sciences
+
+**Lululemon Athletica** (LULU)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **3.8%**, 20d **-0.4%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Lululemon%20Athletica
 
 **O'Reilly Automotive** (ORLY)
 
@@ -229,23 +237,23 @@
 
 ## S&P 500
 
-### SAFE (5)
+### SAFE (4)
 
 **Apple Inc.** (AAPL)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- News (7d): **6** (blogs: 10) — momentum: **medium**, sentiment: **negative (-0.33)**
 - Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Apple%20Inc.
 
-**Meta Platforms** (META)
+**Costco** (COST)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.0%**, 20d **7.5%**; volatility (20d): **unknown**
+- Returns: 5d **-4.5%**, 20d **2.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Communication Services**
-- News search: https://www.google.com/search?q=Meta%20Platforms
+- Sector: **Consumer Staples**
+- News search: https://www.google.com/search?q=Costco
 
 **Microsoft** (MSFT)
 
@@ -263,52 +271,36 @@
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
 
-**Procter & Gamble** (PG)
+### AGGRESSIVE (4)
+
+**AES Corporation** (AES)
+
+- News (7d): **2** (blogs: 10) — momentum: **low**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.2%**, 20d **2.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=AES%20Corporation
+
+**American Water Works** (AWK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.0%**, 20d **10.1%**; volatility (20d): **unknown**
+- Returns: 5d **-0.6%**, 20d **3.7%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Consumer Staples**
-- News search: https://www.google.com/search?q=Procter%20%26%20Gamble
-
-### AGGRESSIVE (5)
-
-**EOG Resources** (EOG)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.8%**, 20d **1.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Energy**
-- News search: https://www.google.com/search?q=EOG%20Resources
-
-**Gilead Sciences** (GILD)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.1%**, 20d **3.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Healthcare**
-- News search: https://www.google.com/search?q=Gilead%20Sciences
-
-**Hilton Worldwide** (HLT)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.3%**, 20d **11.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Hilton%20Worldwide
+- Sector: **Utilities**
+- News search: https://www.google.com/search?q=American%20Water%20Works
 
 **Marsh McLennan** (MRSH)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **8.1%**, 20d **12.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **Financial Services**
+- Sector: **Financials**
 - News search: https://www.google.com/search?q=Marsh%20McLennan
 
 **Verisk Analytics** (VRSK)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.6%**, 20d **15.8%**; volatility (20d): **unknown**
+- Returns: 5d **-1.2%**, 20d **-2.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Industrials**
 - News search: https://www.google.com/search?q=Verisk%20Analytics
