@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-10-29T21:21:16+09:00 (KST)**
+- Generated: **2026-10-30T07:30:47+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -84,7 +84,7 @@
 **해성디에스** (195870.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Returns: 5d **12.0%**, 20d **-18.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%ED%95%B4%EC%84%B1%EB%94%94%EC%97%90%EC%8A%A4
@@ -144,19 +144,19 @@
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=HD%ED%98%84%EB%8C%80%EB%A7%88%EB%A6%B0%EC%86%94%EB%A3%A8%EC%85%98
 
+**HL만도** (204320.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.2%**, 20d **-16.1%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=HL%EB%A7%8C%EB%8F%84
+
 **JB금융지주** (175330.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-2.1%**, 20d **-17.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=JB%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC
-
-**종근당** (185750.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-4.1%**, 20d **-3.0%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EC%A2%85%EA%B7%BC%EB%8B%B9
 
 **코오롱인더** (120110.KS)
 
@@ -292,7 +292,7 @@
 **Insulet Corporation** (PODD)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **5.0%**, 20d **14.1%**; volatility (20d): **unknown**
+- Returns: 5d **3.0%**, 20d **16.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Health Care**
 - News search: https://www.google.com/search?q=Insulet%20Corporation
