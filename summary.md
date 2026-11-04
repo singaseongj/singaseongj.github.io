@@ -1,11 +1,19 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-11-04T22:50:48+09:00 (KST)**
+- Generated: **2026-11-05T08:18:00+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
 
 ### SAFE (5)
+
+**3S** (060310.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.4%**, 20d **5.3%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=3S
 
 **CJ ENM** (035760.KQ)
 
@@ -31,31 +39,15 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EC%95%88%EB%9E%A9
 
-**케어젠** (214370.KQ)
+**카페24** (042000.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **10.4%**, 20d **6.2%**; volatility (20d): **unknown**
+- Returns: 5d **-3.5%**, 20d **-11.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%EC%BC%80%EC%96%B4%EC%A0%A0
-
-**휴젤** (145020.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **1.4%**, 20d **1.4%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **헬스케어**
-- News search: https://www.google.com/search?q=%ED%9C%B4%EC%A0%A4
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EC%B9%B4%ED%8E%9824
 
 ### AGGRESSIVE (5)
-
-**넥슨게임즈** (225570.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.1%**, 20d **-13.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **커뮤니케이션서비스**
-- News search: https://www.google.com/search?q=%EB%84%A5%EC%8A%A8%EA%B2%8C%EC%9E%84%EC%A6%88
 
 **루닛** (328130.KQ)
 
@@ -73,14 +65,6 @@
 - Sector: **정보기술**
 - News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D
 
-**스튜디오드래곤** (253450.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-10.0%**, 20d **-2.8%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **커뮤니케이션서비스**
-- News search: https://www.google.com/search?q=%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%EB%93%9C%EB%9E%98%EA%B3%A4
-
 **에스티팜** (237690.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -88,6 +72,22 @@
 - Earnings window (±10d): **No**
 - Sector: **헬스케어**
 - News search: https://www.google.com/search?q=%EC%97%90%EC%8A%A4%ED%8B%B0%ED%8C%9C
+
+**엑세스바이오** (950130.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **n/a**, 20d **n/a**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%EC%97%91%EC%84%B8%EC%8A%A4%EB%B0%94%EC%9D%B4%EC%98%A4
+
+**휴메딕스** (200670.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **-5.7%**, 20d **-14.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **헬스케어**
+- News search: https://www.google.com/search?q=%ED%9C%B4%EB%A9%94%EB%94%95%EC%8A%A4
 
 ## KOSPI
 
@@ -291,7 +291,7 @@
 **Mastercard** (MA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **6.1%**, 20d **14.2%**; volatility (20d): **unknown**
+- Returns: 5d **10.2%**, 20d **18.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Mastercard
@@ -299,7 +299,7 @@
 **Visa Inc.** (V)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **4.6%**, 20d **13.4%**; volatility (20d): **unknown**
+- Returns: 5d **9.0%**, 20d **17.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Financial Services**
 - News search: https://www.google.com/search?q=Visa%20Inc.
