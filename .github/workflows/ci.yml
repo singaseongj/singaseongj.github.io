@@ -24,5 +24,4 @@ jobs:
       - name: Run tests
         run: |
           node --version
-          # Node's built-in test runner (Node>=18). Falls back gracefully.
-          node --test tests/*.test.js || echo "No tests or tests failed — continuing"
+          node --test tests/*.test.js

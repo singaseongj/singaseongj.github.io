@@ -1,0 +1,39 @@
+name: Daily pull request merge
+
+on:
+  schedule:
+    # 00:00 UTC is 09:00 Asia/Seoul. Scheduled runs can be delayed by GitHub.
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Check eligibility without merging
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+  statuses: read
+
+concurrency:
+  group: daily-pr-merge
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # Only load trusted default-branch code, never code from a pull request.
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Check and merge eligible pull requests
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+        run: bash .github/scripts/daily-merge-prs.sh
