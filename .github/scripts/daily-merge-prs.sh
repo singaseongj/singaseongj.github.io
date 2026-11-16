@@ -27,6 +27,12 @@ failed=0
 while IFS= read -r number; do
   # Refresh immediately before each merge, since earlier merges change the base.
   pr=$(gh pr view "$number" --repo "$GH_REPO" --json state,isDraft,baseRefName,headRefOid,mergeStateStatus,reviewDecision,reviews,statusCheckRollup,labels)
+  # GitHub recalculates mergeability asynchronously after the base changes.
+  for attempt in 1 2 3; do
+    [[ "$(jq -r .mergeStateStatus <<< "$pr")" == UNKNOWN ]] || break
+    sleep 5
+    pr=$(gh pr view "$number" --repo "$GH_REPO" --json state,isDraft,baseRefName,headRefOid,mergeStateStatus,reviewDecision,reviews,statusCheckRollup,labels)
+  done
   if ! jq -e '
     .state == "OPEN" and .isDraft == false and .baseRefName == "main"
     and .mergeStateStatus == "CLEAN"
@@ -41,7 +47,8 @@ while IFS= read -r number; do
       elif .__typename == "StatusContext" then .state == "SUCCESS"
       else false end))
   ' <<< "$pr" >/dev/null; then
-    report "Skipped #$number: draft, checks, reviews, labels, or merge state do not permit merging."
+    detail=$(jq -c '{state,isDraft,mergeStateStatus,reviewDecision,checks:[.statusCheckRollup[] | {name,context,status,conclusion,state}],labels:[.labels[].name]}' <<< "$pr")
+    report "Skipped #$number: eligibility conditions not met. $detail"
     continue
   fi
 
