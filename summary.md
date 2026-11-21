@@ -1,6 +1,6 @@
 # Stock News Summary (no-LLM)
 
-- Generated: **2026-11-21T08:45:20+09:00 (KST)**
+- Generated: **2026-11-21T14:39:37+09:00 (KST)**
 - Sources: recommendations.json, pools-metrics.json, data/news-features.json
 
 ## KOSDAQ
@@ -49,14 +49,6 @@
 
 ### AGGRESSIVE (5)
 
-**넥슨게임즈** (225570.KQ)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-10.4%**, 20d **-27.2%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **커뮤니케이션서비스**
-- News search: https://www.google.com/search?q=%EB%84%A5%EC%8A%A8%EA%B2%8C%EC%9E%84%EC%A6%88
-
 **덕산네오룩스** (213420.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
@@ -65,13 +57,13 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EB%8D%95%EC%82%B0%EB%84%A4%EC%98%A4%EB%A3%A9%EC%8A%A4
 
-**레이크머티리얼즈** (281740.KQ)
+**브이원텍** (251630.KQ)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-12.1%**, 20d **-11.5%**; volatility (20d): **unknown**
+- Returns: 5d **12.5%**, 20d **8.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- Sector: **소재**
-- News search: https://www.google.com/search?q=%EB%A0%88%EC%9D%B4%ED%81%AC%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC%EC%A6%88
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%EB%B8%8C%EC%9D%B4%EC%9B%90%ED%85%8D
 
 **에스티팜** (237690.KQ)
 
@@ -89,53 +81,61 @@
 - Sector: **소재**
 - News search: https://www.google.com/search?q=%EC%97%94%EC%BC%90
 
+**피에스케이** (319660.KQ)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **12.1%**, 20d **6.2%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **정보기술**
+- News search: https://www.google.com/search?q=%ED%94%BC%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4
+
 ## KOSPI
 
 ### SAFE (5)
 
 **LG화학** (051910.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.05)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-12.5%**, 20d **-11.4%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=LG%ED%99%94%ED%95%99
 
 **SK하이닉스** (000660.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.15)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-8.5%**, 20d **-12.8%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4
 
-**대한항공** (003490.KS)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-0.5%**, 20d **21.7%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5
-
 **삼성전자** (005930.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly negative (-0.05)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-11.1%**, 20d **-15.0%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90
 
 **셀트리온** (068270.KS)
 
-- News (7d): **20** (blogs: 10) — momentum: **very high**, sentiment: **slightly positive (0.10)**
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
 - Returns: 5d **-0.5%**, 20d **9.6%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - News search: https://www.google.com/search?q=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8
 
-### AGGRESSIVE (5)
-
-**포스코퓨처엠** (003670.KS)
+**하이트진로** (000080.KS)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **-7.9%**, 20d **-0.8%**; volatility (20d): **unknown**
+- Returns: 5d **2.9%**, 20d **4.5%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
-- News search: https://www.google.com/search?q=%ED%8F%AC%EC%8A%A4%EC%BD%94%ED%93%A8%EC%B2%98%EC%97%A0
+- News search: https://www.google.com/search?q=%ED%95%98%EC%9D%B4%ED%8A%B8%EC%A7%84%EB%A1%9C
+
+### AGGRESSIVE (5)
+
+**아모레퍼시픽** (090430.KS)
+
+- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **1.5%**, 20d **-6.9%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- News search: https://www.google.com/search?q=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD
 
 **한미약품** (128940.KS)
 
@@ -169,9 +169,17 @@
 
 ### SAFE (4)
 
-**Apple Inc.** (AAPL)
+**Amazon** (AMZN)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
+- Sector: **Consumer Discretionary**
+- News search: https://www.google.com/search?q=Amazon
+
+**Apple Inc.** (AAPL)
+
+- News (7d): **6** (blogs: 10) — momentum: **medium**, sentiment: **negative (-0.33)**
 - Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -184,14 +192,6 @@
 - Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Broadcom
-
-**Microsoft** (MSFT)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **0.2%**, 20d **-1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Technology**
-- News search: https://www.google.com/search?q=Microsoft
 
 **Nvidia** (NVDA)
 
@@ -229,19 +229,11 @@
 
 ## S&P 500
 
-### SAFE (5)
-
-**Amazon** (AMZN)
-
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **2.4%**, 20d **-0.5%**; volatility (20d): **unknown**
-- Earnings window (±10d): **No**
-- Sector: **Consumer Discretionary**
-- News search: https://www.google.com/search?q=Amazon
+### SAFE (4)
 
 **Apple Inc.** (AAPL)
 
-- News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
+- News (7d): **6** (blogs: 10) — momentum: **medium**, sentiment: **negative (-0.33)**
 - Returns: 5d **2.0%**, 20d **10.3%**; volatility (20d): **unknown**
 - Earnings window (±10d): **No**
 - Sector: **Technology**
@@ -266,8 +258,8 @@
 **Nvidia** (NVDA)
 
 - News (7d): **0**  — momentum: **none**, sentiment: **slightly positive (0.00)**
-- Returns: 5d **3.5%**, 20d **1.3%**; volatility (20d): **unknown**
-- Earnings window (±10d): **Yes**
+- Returns: 5d **-22.9%**, 20d **-40.5%**; volatility (20d): **unknown**
+- Earnings window (±10d): **No**
 - Sector: **Technology**
 - News search: https://www.google.com/search?q=Nvidia
 
