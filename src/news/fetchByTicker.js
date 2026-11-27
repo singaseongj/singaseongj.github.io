@@ -9,6 +9,7 @@ import { parse } from 'node-html-parser';
 import { fetchKotraRecent } from "./kotraOverseas.js";
 import { getCompanyNameByYahooSymbol } from "../data/krxDirectory.js";
 import { tokenBucket, circuitBreaker } from "./helpers/rate.js";
+import { cachedNewsJson } from "./helpers/jsonCache.js";
 import { computeReputation } from './reputation.js';
 // for CLI-only cache builders
 import { fetchNaverTrends, buildBasketsFromUniverse } from '../trends/naverDatalab.js';
@@ -885,24 +886,8 @@ async function guardedCall(name, fn){
 }
 
 function looksLikeXmlOrHtml(s){ const t=String(s||'').trim(); return !!t && t.startsWith('<'); }
-function cacheKey(url){ return path.join(CACHE_DIR, `news-${Buffer.from(url).toString('base64url')}.json`); }
-
-async function cachedJson(url, fetcher, ttlMs=NEWS_TTL_MS, allowStale=ALLOW_STALE_NEWS){
-  const key = cacheKey(url);
-  let cached; let age=Infinity;
-  try {
-    const st=fs.statSync(key); age=Date.now()-st.mtimeMs;
-    cached = JSON.parse(fs.readFileSync(key,'utf8'));
-    if (age < ttlMs) return cached;
-  } catch {}
-  try {
-    const data = await fetcher(url);
-    try { fs.mkdirSync(CACHE_DIR,{recursive:true}); fs.writeFileSync(key, JSON.stringify(data)); } catch {}
-    return data;
-  } catch (e){
-    if (allowStale && cached) return cached;
-    throw e;
-  }
+function cachedJson(url, fetcher, ttlMs=NEWS_TTL_MS, allowStale=ALLOW_STALE_NEWS){
+  return cachedNewsJson(url, fetcher, { ttlMs, allowStale });
 }
 async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
   const ctrl = new AbortController();
@@ -914,7 +899,7 @@ async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
   } catch (e){
     const host = (()=>{ try { return new URL(url).host; } catch { return 'unknown-host'; }})();
     const code = e?.cause?.code || e.name || 'ERR_FETCH';
-    throw new Error(`fetch failed (${host}): ${e.message} [${code}]`);
+    throw new Error(`fetch failed (${host}) [${code}]`);
   }
   const readTimer = setTimeout(()=>ctrl.abort(new Error('timeout')), timeoutMs);
   try {
@@ -931,7 +916,7 @@ async function safeGetJson(url, headers={}, timeoutMs=REQ_TIMEOUT_MS){
     if (looksLikeXmlOrHtml(txt)) throw new Error(`non-JSON payload (${ct||'unknown'})`);
     return JSON.parse(txt);
   } catch(e){
-    if (e instanceof SyntaxError) throw new Error(`JSON parse failed (${e.message})`);
+    if (e instanceof SyntaxError) throw new Error('JSON parse failed');
     throw e;
   } finally {
     clearTimeout(readTimer);
